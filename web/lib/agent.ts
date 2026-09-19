@@ -1,4 +1,3 @@
-import MiniSearch from "minisearch";
 import { z } from "zod";
 
 import { getIndex, getRecord } from "@/lib/data";
@@ -17,8 +16,9 @@ export type { Need } from "@/lib/needs";
  *
  * A researcher describes the analysis they want to run. The agent reads the request for
  * what it needs (a survival endpoint, recorded treatment response, imaging, and so on),
- * searches the corpus, checks each candidate's measured capabilities against those
- * needs, and returns a short ranked list with the reasons and the blockers.
+ * reads it for the subject it names, checks each record filed under that subject
+ * against those needs, and returns a short ranked list with the reasons and the
+ * blockers.
  *
  * Two stages. Retrieval and the capability checks are deterministic and always run,
  * because "vital status is populated for every case and informative for none" is a
@@ -30,16 +30,17 @@ export type { Need } from "@/lib/needs";
  *
  * THE CLAIM INVARIANT, which every part of this site obeys and which is written down
  * only here. Every function that produces a label, a verdict, a ranking or a link a
- * visitor will read takes an ABSOLUTE threshold on a measured quantity, and has a
- * NO-CLAIM return that some real input reaches. Not a position in a sorted list, not a
+ * visitor will read takes an ABSOLUTE bar on a measured quantity, and has a NO-CLAIM
+ * return that some real input reaches. Not a position in a sorted list, not a
  * comparison against whatever else this query happened to return, not the mere presence
  * of a field: a stated bar, applied to something measured, with "nothing here qualifies"
  * as an outcome the code can actually produce and a test actually pins. Ranking by
  * position makes the first row a recommendation however bad it is; scoring against the
  * best hit of the moment makes every query produce a perfect match; both are ways of
- * claiming something the data does not say. The threshold constants below, the
- * verdicts, the router's name matching in lib/intent.ts and the provenance anchors in
- * lib/anchors.ts all conform to this rather than restating it.
+ * claiming something the data does not say. Here the bar is membership: the request
+ * must name a subject the corpus files records under, and a record must be filed under
+ * it. The verdicts below, the router's name matching in lib/intent.ts and the
+ * provenance anchors in lib/anchors.ts conform to this rather than restating it.
  */
 
 export type Verdict = "best" | "good" | "caution";
@@ -73,135 +74,106 @@ export interface AgentAnswer {
 // retrieval
 // ------------------------------------------------------------------------------------
 
-type Doc = { id: string; title: string; short: string; text: string };
-let _search: MiniSearch<Doc> | null = null;
-
-function search(): MiniSearch<Doc> {
-  if (_search) return _search;
-  const ms = new MiniSearch<Doc>({
-    fields: ["title", "short", "text"],
-    storeFields: ["id"],
-    idField: "id",
-    searchOptions: { boost: { title: 3, short: 2 }, prefix: true, fuzzy: 0.15 },
-  });
-  ms.addAll(
-    getIndex().map((r) => ({
-      id: r.id,
-      title: r.title,
-      short: r.short_title ?? "",
-      text: [r.summary ?? "", r.cancer_types.join(" "), r.primary_sites.join(" "), r.search_text ?? ""].join(" "),
-    })),
-  );
-  _search = ms;
-  return ms;
+/**
+ * One spelling of a subject, reduced to the form both sides are compared in: lower
+ * case, punctuation as spaces, the ICD-O qualifier "NOS" dropped, and plurals folded
+ * into the singular, so "Nevi and Melanomas" and "melanoma" meet and "Diffuse Large
+ * B-Cell Lymphoma, NOS" is the subject a researcher types as "diffuse large B-cell
+ * lymphoma".
+ */
+function normalizeSubject(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .split(" ")
+    .filter((w) => w && w !== "nos")
+    .map((w) => (w.length > 4 && w.endsWith("s") && !/(?:ss|us|is)$/.test(w) ? w.slice(0, -1) : w))
+    .join(" ");
 }
 
-/**
- * Words that name a subject somewhere in the corpus but identify nothing, because a
- * large share of the records carry them: every dataset here is about a cancer of some
- * primary site. Measured from the shipped index, where "cancer" appears in the subject
- * fields of 122 of 602 records, "cell" and "carcinoma" in 90 each, "neoplasms" in 73.
- */
-const GENERIC_SUBJECT = new Set([
-  "academia", "cancer", "cancers", "carcinoma", "carcinomas", "cell", "cells",
-  "diagnosis", "disease", "diseases", "mixed", "neoplasm", "neoplasms", "other", "parts",
-  "primary", "reported", "systems", "tissue", "tumor", "tumors", "tumour", "tumours",
-  "type", "types", "unknown", "unspecified",
-]);
+let _subjects: Map<string, string[]> | null = null;
 
-/**
- * How a disease names itself. The corpus files each record under an ICD-O category
- * ("Mesothelial Neoplasms", "Paragangliomas and Glomus Tumors"), so the word a
- * researcher would actually type is often only in the title. Reading the titles for
- * this shape recovers those names - mesothelioma, pheochromocytoma, ependymoma,
- * craniopharyngioma, thymoma, histiocytosis and nine others in the shipped corpus -
- * without admitting the method and programme words that share those titles.
- */
-const DISEASE_MORPHOLOGY = /(?:omas?|emias?|osis|oses)$/;
-
-let _subjects: Set<string> | null = null;
-
-/** Every word the corpus itself uses to name a cancer type, a primary site or a disease. */
-function subjectVocabulary(): Set<string> {
+/** Every cancer type and primary site the corpus files a record under, whole. */
+function subjectIndex(): Map<string, string[]> {
   if (_subjects) return _subjects;
-  const words = new Set<string>();
-  const add = (text: string, min: number, shaped: boolean) => {
-    for (const w of text.toLowerCase().split(/[^a-z0-9]+/)) {
-      if (w.length >= min && !GENERIC_SUBJECT.has(w) && (!shaped || DISEASE_MORPHOLOGY.test(w))) words.add(w);
-    }
-  };
+  const filed = new Map<string, string[]>();
   for (const row of getIndex()) {
-    add([...row.cancer_types, ...row.primary_sites].join(" "), 4, false);
-    add(`${row.title} ${row.short_title ?? ""}`, 5, true);
+    for (const value of [...row.cancer_types, ...row.primary_sites]) {
+      const subject = normalizeSubject(value);
+      if (!subject) continue;
+      const ids = filed.get(subject) ?? [];
+      ids.push(row.id);
+      filed.set(subject, ids);
+    }
   }
-  _subjects = words;
-  return words;
+  _subjects = filed;
+  return filed;
+}
+
+/** Whether `phrase` occurs in `text` as a run of whole words. */
+function containsPhrase(text: string, phrase: string): boolean {
+  return ` ${text} `.includes(` ${phrase} `);
 }
 
 /**
- * What the request is about: the words in it that name a disease or a body site the
- * corpus holds.
+ * The subjects the request names: complete cancer types or primary sites, as the corpus
+ * spells them, found whole in the wording.
  *
- * Retrieval reads these words and no others, because they are the only words in a
- * request that a dataset can be measured against. The rest of a request is already
- * answered elsewhere and would only add noise here: a measurement ("proteomics",
- * "survival") is read as a need and checked against the record's measured fields, and
- * a name ("TCGA-BRCA", an award number, "bulk download") is resolved by the router.
- * Scoring on the leftovers is what made a texture-analysis collection an answer to a
- * question about cervical cancer, on the strength of the word "analysis".
+ * A subject is never taken apart. "Diffuse Large B-Cell Lymphoma" is a subject; "large"
+ * is a word inside one, and a request for "a large open cohort" names no subject at all.
+ * Splitting these values into words is what let a plain modifier stand for a disease and
+ * put a myeloma cohort under "show me multiple datasets like this one". When one named
+ * subject sits inside another - "lung" and "adenocarcinoma" inside "lung adenocarcinoma"
+ * - only the most specific is kept, because that is what the researcher asked for.
  */
-function subjectWordsIn(query: string): string[] {
-  const vocab = subjectVocabulary();
-  const seen = new Set<string>();
-  for (const w of query.toLowerCase().split(/[^a-z0-9]+/)) {
-    if (vocab.has(w)) seen.add(w);
-  }
-  return [...seen];
+function subjectsNamedIn(query: string): string[] {
+  const text = normalizeSubject(query);
+  const named = [...subjectIndex().keys()].filter((subject) => containsPhrase(text, subject));
+  return named.filter((s) => !named.some((other) => other !== s && containsPhrase(other, s)));
 }
 
 /**
- * The retrieval score a record must reach on the subject of the request to be shown.
- *
- * MiniSearch scores are unbounded and sum over the subject words that matched, so this
- * is an absolute quantity: no record clearing the floor means an empty shortlist, which
- * is the honest answer and the one the page then prints. Calibrated against the shipped
- * corpus, where the two populations are far apart: a record that carries the named
- * subject in its own title or subject fields scores 21 or more ("ovary" 21.2 at the
- * weakest, "melanoma" 24.9 to 30.2, "neuroblastoma" 32.1 to 35.1, "leukemia myeloid
- * acute" 199 to 236), while a record reached only through a prefix or fuzzy variant of
- * the word scores 10 or less. 18 sits in the gap. Recalibrate by searching the subjects
- * the corpus holds against a rebuilt index and putting the floor beneath the weakest
- * record that names one and above the strongest that merely resembles it.
+ * The records filed under a subject the request named, or under a more specific form of
+ * it: "glioblastoma" reaches the cohorts filed as "Glioblastoma Multiforme", because
+ * that is the same subject spelled more exactly, while nothing reaches a record on the
+ * strength of a word that is not itself a subject.
  */
-const MIN_TEXT_RELEVANCE = 18;
+function recordsFiledUnder(subjects: string[]): Set<string> {
+  const ids = new Set<string>();
+  for (const [subject, filed] of subjectIndex()) {
+    if (subjects.some((named) => containsPhrase(subject, named))) for (const id of filed) ids.add(id);
+  }
+  return ids;
+}
 
 type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unknown: Need[] };
 
 /**
  * The candidates worth ranking.
  *
- * A dataset is ranked only when the request names a subject the corpus holds and this
- * record matches it above the floor. A request that names no such subject - a question
- * about the method, a request for the files, a bare award number - produces nothing
- * here and is answered by the route cards beside the shortlist.
+ * A dataset is ranked only when the request names a subject the corpus holds and the
+ * record is filed under it. That membership is the absolute bar this module applies
+ * before it labels anything: it is a fact about the record, not a score relative to
+ * whatever else the query happened to return, and a request naming no such subject - a
+ * question about the method, a request for the files, a bare award number, a request
+ * stated only as capabilities - reaches no record at all and is answered by the route
+ * cards beside the shortlist and by the honest sentence in `answer`.
  *
- * The needs read from the wording decide the order and the verdict among those
- * candidates; they cannot admit one on their own, because "survival" is a word a
- * question about the method uses as readily as a request for data.
+ * The needs read from the wording then decide the order and the verdict among records
+ * that are equally on the subject; they cannot admit one on their own, because
+ * "survival" is a word a question about the method uses as readily as a request for
+ * data. Ordering below that runs on measured facts - a reviewed showcase record, then
+ * reviewed research questions, then cohort size - and never on the strength of a word.
  */
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
-  const subject = subjectWordsIn(query);
-  if (subject.length === 0) return { needs, scored: [] };
-  const relevance = new Map<string, number>();
-  for (const h of search().search(subject.join(" "))) {
-    if (h.score >= MIN_TEXT_RELEVANCE) relevance.set(h.id as string, h.score);
-  }
-  if (relevance.size === 0) return { needs, scored: [] };
+  const subjects = subjectsNamedIn(query);
+  if (subjects.length === 0) return { needs, scored: [] };
+  const filed = recordsFiledUnder(subjects);
+  if (filed.size === 0) return { needs, scored: [] };
   const scored: Scored[] = getIndex()
-    .filter((row) => relevance.has(row.id))
+    .filter((row) => filed.has(row.id))
     .map((row) => {
-      const rel = relevance.get(row.id)!;
       const met: Need[] = [];
       const failed: Need[] = [];
       const unknown: Need[] = [];
@@ -211,15 +183,10 @@ function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] 
         else if (v === false) failed.push(n);
         else unknown.push(n);
       }
-      // Subject relevance is weighted above any single capability, because a researcher
-      // who names a disease is not negotiating about it: a gastric cohort meeting two of
-      // three needs should outrank a leukaemia cohort meeting three. The term rises with
-      // relevance but approaches 3.5, so a record cannot buy its way past a failed need
-      // by carrying the same word more often.
-      let score = (3.5 * rel) / (rel + MIN_TEXT_RELEVANCE) + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
+      let score = met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
       if (row.is_showcase) score += 0.4;
       if (row.n_research_questions > 0) score += 0.2;
-      if (row.n_cases && row.n_cases >= 200) score += 0.2;
+      score += Math.min((row.n_cases ?? row.n_samples ?? 0) / 1000, 1) * 0.3;
       return { row, score, met, failed, unknown };
     });
   scored.sort((a, b) => b.score - a.score);

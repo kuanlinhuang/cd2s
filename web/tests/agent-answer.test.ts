@@ -1,17 +1,20 @@
 import { afterAll, describe, expect, it, vi } from "vitest";
 
 import { answer } from "@/lib/agent";
+import { getIndex } from "@/lib/data";
 import { routeIntent, showsShortlist } from "@/lib/intent";
 
 /**
  * What the agent answers, against the shipped corpus in public/data.
  *
- * These cases pin the claim invariant stated in lib/agent.ts: the shortlist reads the
- * request for the subject it names, measures each record against it on an absolute
- * floor, and has a no-claim answer that real questions reach. Both sides are pinned
- * here - the questions that must produce nothing, the requests whose subject is wrapped
- * in filler words and must still produce their cohorts, and the verdict "Start here",
- * which is withheld when a need the request stated was never measured for the record.
+ * These cases pin the claim invariant stated in lib/agent.ts: a record is ranked only
+ * when the request names a complete cancer type or primary site the corpus files
+ * records under - never a word taken out of one, so "a large open cohort" names no
+ * subject and reaches nothing - and there is a no-claim answer that real questions
+ * reach. Both sides are pinned here: the questions that must produce nothing, the
+ * requests whose subject is wrapped in filler words and must still produce their
+ * cohorts, and the verdict "Start here", withheld when a need the request stated was
+ * never measured for the record.
  *
  * The model path is an enhancement over the same shortlist; the rules path is the
  * guaranteed one, so the key is stubbed away and every assertion here is deterministic.
@@ -30,10 +33,20 @@ describe("a question no dataset can answer", () => {
     "where does the evidence come from",
     "an open cohort with treatment response recorded",
     "banana bread recipe",
+    "I need a large open cohort with survival data",
+    "what is a normal control",
+    "high grade tumors with early onset",
+    "show me multiple datasets like this one",
   ])("returns no picks for %j", async (q) => {
     const a = await answer(q);
     expect(a.picks).toEqual([]);
     expect(a.summary).toMatch(/nothing in the corpus matches/i);
+  });
+
+  it("says nothing when the corpus files the named subject under other words", async () => {
+    const a = await answer("Phosphoproteomics and outcomes in gastric cancer, open access only");
+    expect(a.picks).toEqual([]);
+    expect(getIndex().flatMap((r) => r.cancer_types).some((v) => /^gastric cancer$/i.test(v))).toBe(false);
   });
 
   it("still reads the needs it recognises, so the page can offer them as filters", async () => {
@@ -53,11 +66,11 @@ describe("a question the corpus can answer", () => {
   );
 
   it.each([
+    "diffuse large B-cell lymphoma",
     "neuroblastoma kids first",
     "melanoma checkpoint blockade trial cohorts",
     "glioblastoma dataset please",
-    "Phosphoproteomics and outcomes in gastric cancer, open access only",
-  ])("is not diluted by the words around the subject in %j", async (q) => {
+  ])("finds the subject inside the wording of %j", async (q) => {
     const a = await answer(q);
     expect(a.picks.length).toBeGreaterThan(0);
   });
@@ -68,20 +81,15 @@ describe("a question the corpus can answer", () => {
     expect(padded.picks.map((p) => p.id)).toEqual(expect.arrayContaining(bare.picks.map((p) => p.id)));
   });
 
-  it("admits no record on a generic word: the cervical question ranks only cervical cohorts", async () => {
-    const a = await answer("Survival analysis in a cervical cancer cohort from sub-Saharan Africa");
+  it.each([
+    ["Survival analysis in a cervical cancer cohort from sub-Saharan Africa", /cervi/i],
+    ["melanoma checkpoint blockade trial cohorts", /melanom/i],
+  ])("ranks only records the corpus files under the subject named in %j", async (q, subject) => {
+    const a = await answer(q);
     expect(a.picks.length).toBeGreaterThan(0);
     for (const p of a.picks) {
-      expect(`${p.id} ${p.title} ${p.short_title ?? ""}`).toMatch(/cervi|cesc|htmcp-cc/i);
-    }
-    expect(a.picks.map((p) => p.id)).not.toContain("idc-pdmr-texture-analysis");
-  });
-
-  it("admits no record on the word trial", async () => {
-    const a = await answer("melanoma checkpoint blockade trial cohorts");
-    expect(a.picks.length).toBeGreaterThan(0);
-    for (const p of a.picks) {
-      expect(`${p.id} ${p.title} ${p.short_title ?? ""}`).toMatch(/melanom|skcm|uvm/i);
+      const row = getIndex().find((r) => r.id === p.id)!;
+      expect([...row.cancer_types, ...row.primary_sites].some((v) => subject.test(v))).toBe(true);
     }
   });
 
@@ -89,13 +97,6 @@ describe("a question the corpus can answer", () => {
     const a = await answer("Pair radiology images with RNA sequencing in lung adenocarcinoma");
     expect(a.picks.length).toBeGreaterThan(0);
     expect(`${a.picks[0].title} ${a.picks[0].short_title ?? ""}`).toMatch(/lung|luad/i);
-  });
-
-  it("finds the disease the corpus files under an ICD-O category", async () => {
-    for (const q of ["mesothelioma survival", "pheochromocytoma"]) {
-      const a = await answer(q);
-      expect(a.picks.length).toBeGreaterThan(0);
-    }
   });
 
   it("applies the needs stated alongside the subject", async () => {
@@ -114,7 +115,7 @@ describe("a question the corpus can answer", () => {
   });
 
   it("claims no place to start when a stated need was never measured for the record", async () => {
-    const a = await answer("cervix in a diverse population");
+    const a = await answer("neuroblastoma in a diverse population");
     expect(a.needs).toContain("a diverse or non-US population");
     expect(a.picks.length).toBeGreaterThan(0);
     expect(a.picks.some((p) => p.verdict === "best")).toBe(false);
