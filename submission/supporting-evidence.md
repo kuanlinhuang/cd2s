@@ -19,7 +19,7 @@ Reproduce end to end: `cds ingest all && cds merge && cds trace-index && cds enr
 ## What the prototype contains
 
 602 dataset records across 5 repositories and 29 distinct measurement types · clinical field
-completeness measured for 385 of them in one shared vocabulary · 233 with a survival endpoint
+completeness measured for 385 of them in one shared vocabulary · 206 with a survival endpoint
 that can actually be derived · 20 deeply curated showcase pages, 14 of them less-known
 resources · 69 reviewed research questions · 778 verified reuse studies (accession located in
 methods, results, a table or a figure) · 736 NCI awards resolved through NIH RePORTER ·

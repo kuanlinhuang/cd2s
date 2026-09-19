@@ -253,7 +253,11 @@ export function fitVerdicts(r: DatasetRecord): FitVerdict[] {
     const label = "Overall survival";
     const vital = vars.get("demographic.vital_status");
     const vitalPct = informative(vital) ?? informativeShare(r.cohort.demographics.vital_status);
-    if (L.has_survival_endpoint === true) {
+    // The question is overall survival specifically, so the endpoint list has to contain
+    // it. A cohort whose only endpoint is progression-free was reading as "overall
+    // survival: supported" while its vital status was "unknown" for every case.
+    const hasOverallSurvival = L.survival_endpoints.some((e) => /overall survival/i.test(e));
+    if (L.has_survival_endpoint === true && hasOverallSurvival) {
       const bits = [
         L.median_followup_months ? `median follow-up ${(L.median_followup_months / 12).toFixed(1)} years` : null,
         L.n_cases_with_followup ? `${L.n_cases_with_followup.toLocaleString("en-US")} cases with follow-up` : null,
@@ -270,17 +274,22 @@ export function fitVerdicts(r: DatasetRecord): FitVerdict[] {
         pct: vitalPct,
         evidence: L.evidence,
       });
-    } else if (L.has_survival_endpoint === false) {
+    } else if (L.has_survival_endpoint !== null) {
+      // No trailing period: the renderer adds one, and two read as a typo.
+      const otherEndpoints = L.survival_endpoints.length
+        ? `; the cohort does carry ${L.survival_endpoints.join(" and ")}`
+        : "";
       out.push({
         key: "survival",
         label,
         status: vitalPct !== null && vitalPct > 0 ? "limited" : "blocked",
         reason:
-          vitalPct === null
-            ? "no usable survival endpoint: vital status or follow-up time is missing"
+          (vitalPct === null
+            ? "no usable overall-survival endpoint: vital status or follow-up time is missing"
             : vitalPct === 0
               ? "vital status is recorded for every case and informative for none"
-              : `vital status is informative for ${pctText(vitalPct)} of cases, but too few events or no time to event`,
+              : `vital status is informative for ${pctText(vitalPct)} of cases, but too few events or no time to event`) +
+          otherEndpoints,
         fields: ["demographic.vital_status", "demographic.days_to_death", "diagnoses.days_to_last_follow_up"],
         pct: vitalPct,
         evidence: L.evidence.length ? L.evidence : (vital?.evidence ?? r.cohort.demographics.evidence),
@@ -307,10 +316,30 @@ export function fitVerdicts(r: DatasetRecord): FitVerdict[] {
   // 2. progression or recurrence -------------------------------------------------
   {
     const label = "Progression or recurrence";
+    // A measured progression or recurrence endpoint is direct evidence that the analysis
+    // runs, and it is stronger than the yes/no field: the field says the event was
+    // recorded, the endpoint says a time to it was too.
+    const progressionEndpoints = L.survival_endpoints.filter((e) =>
+      /recurrence-free|progression-free|disease-free/i.test(e),
+    );
     const g =
       grade(vars, ["diagnoses.progression_or_recurrence", "follow_ups.progression_or_recurrence"], informative, 30, 5, "informative") ??
       tableOnly(vars, "htan:FollowUp", "follow-up");
-    out.push(g ? { key: "progression", label, ...g } : unknown("progression", label, notMeasured));
+    if (progressionEndpoints.length > 0) {
+      out.push({
+        key: "progression",
+        label,
+        status: "supported",
+        reason: `a time to event is derivable: ${progressionEndpoints.join(", ")}${
+          g && g.pct !== null ? `; progression_or_recurrence is informative for ${pctText(g.pct)} of cases` : ""
+        }`,
+        fields: g?.fields ?? ["diagnoses.days_to_recurrence"],
+        pct: g?.pct ?? null,
+        evidence: L.evidence.length ? L.evidence : (g?.evidence ?? []),
+      });
+    } else {
+      out.push(g ? { key: "progression", label, ...g } : unknown("progression", label, notMeasured));
+    }
   }
 
   // 3. treatment response ----------------------------------------------------------

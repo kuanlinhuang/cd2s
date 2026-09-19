@@ -682,21 +682,23 @@ def _longitudinal(
     deaths = sum(
         n for v, n in counts["vital_status"].items() if v.strip().lower().startswith("dead")
     )
-    informative_vital = sum(n for v, n in counts["vital_status"].items() if not cl.is_non_answer(v))
     times = sorted(t / _DAYS_PER_MONTH for t in followup_days)
 
-    endpoints: list[str] = []
-    if informative_vital >= 20 and deaths >= 10 and times:
-        endpoints.append("overall survival")
     recurrences = [t for t in numbers["days_to_recurrence"] if t >= 0]
-    if len(recurrences) >= 10:
-        endpoints.append("recurrence-free interval")
+    endpoints: list[str] = []
+    if cl.has_time_to_event(n_with_time=len(times), n_events=deaths):
+        endpoints.append(cl.OVERALL_SURVIVAL)
+    if cl.has_time_to_event(n_with_time=len(recurrences), n_events=len(recurrences)):
+        endpoints.append(cl.RECURRENCE_FREE)
 
     progression_informative = sum(
         n for v, n in counts["progression_or_recurrence"].items() if not cl.is_non_answer(v)
     )
     return LongitudinalCoverage(
-        has_followup=bool(times) or None,
+        # Follow-up means the cohort was followed, not specifically that a survival time
+        # exists: a cohort with a recurrence time for 88% of cases and no vital-status
+        # time has longitudinal follow-up, and the browse facet should say so.
+        has_followup=bool(times or recurrences) or None,
         has_survival_endpoint=bool(endpoints),
         survival_endpoints=endpoints,
         median_followup_months=round(statistics.median(times), 1) if times else None,

@@ -145,7 +145,8 @@ Four things are new.
 
 **Measured fitness rather than declared contents.** We compute per-field informativeness from
 each repository's own records, in one shared vocabulary, so that a proteomic cohort and a
-genomic one are graded by the same rule. It covers 385 of our 602 records today - every GDC
+genomic one are graded by the same rule, down to when an endpoint counts as derivable. It
+covers 385 of our 602 records today - every GDC
 project, 126 of 130 Proteomic Data Commons cohorts and 166 of 228 cBioPortal studies - and it
 is what reveals that an 18,004-case cohort supports no survival analysis. It is a small
 technical step that nobody is currently taking.

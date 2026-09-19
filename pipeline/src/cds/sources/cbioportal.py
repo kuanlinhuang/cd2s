@@ -646,15 +646,14 @@ def _longitudinal(
     response-bearing attribute holds RECIST-style values.
     """
     os_values = times.get("OS_MONTHS", ([], 0))[0]
-    os_events, os_informative = _event_share(counts.get("OS_STATUS") or counts.get("VITAL_STATUS"))
+    os_events, _ = _event_share(counts.get("OS_STATUS") or counts.get("VITAL_STATUS"))
     endpoints: list[str] = []
-    if os_values and os_informative >= 20 and os_events >= 10:
-        endpoints.append("overall survival")
+    if cl.has_time_to_event(n_with_time=len(os_values), n_events=os_events):
+        endpoints.append(cl.OVERALL_SURVIVAL)
     for aid in ("PFS_MONTHS", "DFS_MONTHS", "RFS_MONTHS"):
         values = times.get(aid, ([], 0))[0]
-        status_id = aid.replace("_MONTHS", "_STATUS")
-        events, informative = _event_share(counts.get(status_id))
-        if values and informative >= 20 and events >= 10:
+        events, _ = _event_share(counts.get(aid.replace("_MONTHS", "_STATUS")))
+        if cl.has_time_to_event(n_with_time=len(values), n_events=events):
             endpoints.append(TIME_ATTRIBUTES[aid][0])
 
     response_values: list[str] = []

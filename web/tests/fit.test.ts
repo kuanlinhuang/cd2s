@@ -184,3 +184,45 @@ describe("the summary sentence", () => {
     expect(fitSummary(fitVerdicts(record())).sentence).toMatch(/has not been measured/);
   });
 });
+
+describe("overall survival is not any survival endpoint", () => {
+  const withEndpoints = (endpoints: string[], vitalValues: Record<string, number> = {}) =>
+    record({
+      cohort: {
+        n_cases: 101,
+        demographics: { sex: {}, race: {}, ethnicity: {}, vital_status: vitalValues, evidence: [] },
+        evidence: [],
+      },
+      longitudinal: {
+        ...record().longitudinal,
+        has_survival_endpoint: endpoints.length > 0,
+        survival_endpoints: endpoints,
+        n_cases_with_followup: 87,
+        median_followup_months: 95.2,
+      },
+    } as never);
+
+  it("does not claim overall survival when only progression is measurable", () => {
+    // WCDT-MCRPC: vital status is "unknown" for all 101 cases, and its endpoints are
+    // recurrence-free and progression-free. The page said overall survival was supported.
+    const r = withEndpoints(["recurrence-free interval", "progression-free interval"], {
+      unknown: 101,
+    });
+    const survival = fitVerdicts(r).find((v) => v.key === "survival")!;
+    expect(survival.status).not.toBe("supported");
+    expect(survival.reason).toMatch(/recurrence-free interval and progression-free interval/);
+    expect(survival.reason.endsWith(".")).toBe(false);
+  });
+
+  it("supports progression when a time to the event is derivable", () => {
+    const r = withEndpoints(["progression-free interval"]);
+    const progression = fitVerdicts(r).find((v) => v.key === "progression")!;
+    expect(progression.status).toBe("supported");
+    expect(progression.reason).toMatch(/time to event is derivable/);
+  });
+
+  it("supports overall survival when that is the endpoint", () => {
+    const r = withEndpoints(["overall survival"], { Dead: 40, Alive: 61 });
+    expect(statusOf(r, "survival")).toBe("supported");
+  });
+});

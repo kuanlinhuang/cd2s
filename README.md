@@ -52,7 +52,7 @@ a snapshot of the build described there.
 | --- | --- |
 | Dataset records | 602 across 5 repositories, 29 measurement types |
 | Clinical fields measured | 385 records, in one harmonized vocabulary |
-| Survival endpoint derivable | 233 records, measured rather than asserted |
+| Survival endpoint derivable | 206 records, measured rather than asserted |
 | Deeply curated pages | 20 (14 of them less-known resources) |
 | Verified reuse studies | 778 (accession in methods, results, a table or a figure) |
 | NCI awards linked | 736, resolved through NIH RePORTER |
@@ -183,6 +183,13 @@ nominated a pan-tissue DNA methylation clock as the marker paper for eleven TCGA
 once.
 An inference claimed by more than one dataset is therefore withdrawn from all of them, and the
 record records why.
+
+**An endpoint needs a time.** Overall survival is reported as possible only where a time to
+event is derivable for at least 20 cases and at least 10 events are observed - the thresholds
+of the executed audit workbook, applied by one shared function so the three measured
+repositories cannot drift apart.
+A cohort whose only endpoint is progression-free is not a cohort that supports overall
+survival, and the page says which of the two it has.
 
 **"Underexplored" is a measurement.** Raw reuse counts are not comparable across datasets of
 different size, age and access tier, so we model expected reuse and report the residual.

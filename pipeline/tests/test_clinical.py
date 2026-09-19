@@ -241,3 +241,37 @@ def _treatment_vars(rows, n_cases):
     from datetime import UTC, datetime
 
     return pdc._treatment_variables(rows, n_cases, datetime.now(UTC), "PDC000000")
+
+
+class TestTimeToEvent:
+    """One rule for every repository.
+
+    An adapter that claimed an endpoint whenever any case was recorded as dead put
+    "overall survival: supported" on five GDC projects for which no follow-up time was
+    derivable for a single case - an analysis that cannot be started, advertised as
+    possible.
+    """
+
+    def test_needs_both_a_time_and_events(self):
+        assert cl.has_time_to_event(n_with_time=100, n_events=40)
+        assert not cl.has_time_to_event(n_with_time=0, n_events=40)
+        assert not cl.has_time_to_event(n_with_time=100, n_events=0)
+
+    def test_thresholds_are_the_workbook_thresholds(self):
+        assert cl.has_time_to_event(n_with_time=cl.MIN_CASES_WITH_TIME, n_events=cl.MIN_EVENTS)
+        assert not cl.has_time_to_event(
+            n_with_time=cl.MIN_CASES_WITH_TIME - 1, n_events=cl.MIN_EVENTS
+        )
+        assert not cl.has_time_to_event(
+            n_with_time=cl.MIN_CASES_WITH_TIME, n_events=cl.MIN_EVENTS - 1
+        )
+
+    def test_every_adapter_uses_it(self):
+        """Three copies of a threshold are three thresholds that will disagree."""
+        import inspect
+
+        from cds.sources import cbioportal, gdc, pdc
+
+        for module in (gdc, pdc, cbioportal):
+            source = inspect.getsource(module)
+            assert "has_time_to_event" in source, f"{module.__name__} has its own rule"

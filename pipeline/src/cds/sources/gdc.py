@@ -429,13 +429,17 @@ def fetch_continuous_profile(
     dist["n_with_multiple_followups"] = float(n_multi_followup)
     dist["n_with_treatment_timing"] = float(n_treat_timing)
 
+    # One rule for every repository (cds.clinical): a time for enough cases, and enough
+    # observed events. Claiming overall survival because some case is recorded as dead,
+    # with no derivable time for anyone, advertised an analysis that cannot be started.
+    n_events = max(n_dead, len(deaths))
     endpoints: list[str] = []
-    if n_dead > 0 or deaths:
-        endpoints.append("overall survival")
-    if recurrences:
-        endpoints.append("recurrence-free interval")
-    if progressions:
-        endpoints.append("progression-free interval")
+    if cl.has_time_to_event(n_with_time=len(followups), n_events=n_events):
+        endpoints.append(cl.OVERALL_SURVIVAL)
+    if cl.has_time_to_event(n_with_time=len(recurrences), n_events=len(recurrences)):
+        endpoints.append(cl.RECURRENCE_FREE)
+    if cl.has_time_to_event(n_with_time=len(progressions), n_events=len(progressions)):
+        endpoints.append(cl.PROGRESSION_FREE)
 
     ev = [
         _ev(

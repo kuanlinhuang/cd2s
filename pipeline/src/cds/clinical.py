@@ -359,6 +359,43 @@ def from_populated_count(
     )
 
 
+# --------------------------------------------------------------------------------------
+# when an endpoint is real
+# --------------------------------------------------------------------------------------
+
+#: Cases that must carry a time before a time-to-event model is worth starting.
+MIN_CASES_WITH_TIME = 20
+
+#: Events that must be observed. Below this the confidence interval on any estimate is
+#: wider than the difference anyone is looking for.
+MIN_EVENTS = 10
+
+#: The canonical endpoint names, so a page and an export cannot disagree about them.
+OVERALL_SURVIVAL = "overall survival"
+RECURRENCE_FREE = "recurrence-free interval"
+PROGRESSION_FREE = "progression-free interval"
+DISEASE_FREE = "disease-free interval"
+
+#: Endpoints that answer "did the disease come back", as opposed to "did the patient die".
+PROGRESSION_ENDPOINTS = (RECURRENCE_FREE, PROGRESSION_FREE, DISEASE_FREE)
+
+
+def has_time_to_event(*, n_with_time: int, n_events: int) -> bool:
+    """Whether a time-to-event analysis is possible at all.
+
+    One rule, applied by every adapter, because the alternative is three rules that
+    disagree. It is the rule the executed audit workbook applies, stated in terms of what
+    the analysis needs rather than of any repository's field names: a time for enough
+    cases, and enough observed events.
+
+    The failure this prevents is specific. An adapter that claimed an endpoint whenever
+    any case was recorded as dead put "overall survival: supported" on five GDC projects
+    for which no follow-up time is derivable for a single case - a survival analysis that
+    cannot be started, advertised as possible.
+    """
+    return n_with_time >= MIN_CASES_WITH_TIME and n_events >= MIN_EVENTS
+
+
 def by_harmonized(variables: Iterable[ClinicalVariable]) -> dict[str, ClinicalVariable]:
     """Best measured variable per harmonized name, preferring the one with more coverage."""
     out: dict[str, ClinicalVariable] = {}

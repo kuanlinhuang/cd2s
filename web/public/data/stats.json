@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T04:14:30.257636+00:00",
+  "generated_at": "2026-09-19T04:23:46.515073+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -32,7 +32,7 @@
   },
   "n_repositories": 5,
   "n_distinct_modalities": 29,
-  "n_with_survival": 233,
+  "n_with_survival": 206,
   "n_with_treatment_response": 62,
   "n_reuse_assessed": 142,
   "n_without_citable_accession": 364,
