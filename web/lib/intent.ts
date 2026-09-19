@@ -1,5 +1,4 @@
 import { getIndex } from "@/lib/data";
-import { readNeeds } from "@/lib/needs";
 import type { IndexRow } from "@/lib/types";
 
 /**
@@ -9,7 +8,8 @@ import type { IndexRow } from "@/lib/types";
  * analysis?" The front door receives every kind. This router reads the wording and
  * adds the page that answers the other kinds - an award's funding network, a dataset
  * named outright, a comparison of two, the reuse page, the exact Methods section, or
- * the software page - and decides whether the dataset shortlist should run at all.
+ * the software page. The routes are offered alongside the dataset shortlist, never
+ * instead of it.
  *
  * Deterministic and cheap: regular expressions and a title lookup. It chooses pages;
  * it never states a fact about a dataset, so it cannot state a wrong one.
@@ -26,8 +26,6 @@ export interface RouteCard {
 
 export interface Intent {
   routes: RouteCard[];
-  /** Whether the dataset shortlist should run for this query. */
-  shortlist: boolean;
 }
 
 const AWARD = /\b[A-Z]\d{2}[A-Z]{2}\d{6}\b/g;
@@ -86,46 +84,9 @@ function namedDatasets(query: string, index: IndexRow[]): NameHit[] {
   return hits;
 }
 
-const _vocabulary = new WeakMap<IndexRow[], Set<string>>();
-
-/**
- * Words that name a disease or a site anywhere in the corpus. Measurements are not
- * listed here because `readNeeds` already recognises them; the two together decide
- * whether a lookup-shaped question still has something to search for.
- */
-function vocabulary(index: IndexRow[]): Set<string> {
-  const cached = _vocabulary.get(index);
-  if (cached) return cached;
-  const words = new Set<string>();
-  const add = (s: string) =>
-    s
-      .toLowerCase()
-      .split(/[^a-z0-9]+/)
-      .filter((w) => w.length >= 4)
-      .forEach((w) => words.add(w));
-  for (const row of index) {
-    row.cancer_types.forEach(add);
-    row.primary_sites.forEach(add);
-  }
-  for (const generic of ["cancer", "cancers", "tumor", "tumour", "tumors", "tumours", "types", "type", "other", "reported", "mixed", "unknown", "cell", "cells", "disease", "primary"]) {
-    words.delete(generic);
-  }
-  _vocabulary.set(index, words);
-  return words;
-}
-
-function mentionsSubject(query: string, index: IndexRow[]): boolean {
-  const vocab = vocabulary(index);
-  return query
-    .toLowerCase()
-    .split(/[^a-z0-9]+/)
-    .some((w) => vocab.has(w));
-}
-
 export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): Intent {
   const query = rawQuery.trim().slice(0, 600);
   const routes: RouteCard[] = [];
-  let rest = query;
 
   for (const num of new Set(query.toUpperCase().match(AWARD) ?? [])) {
     routes.push({
@@ -134,32 +95,36 @@ export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): I
       label: `Funding to findings for ${num}`,
       detail: "The datasets this NCI award paid for and the articles that analysed them.",
     });
-    rest = rest.replace(new RegExp(num, "gi"), " ");
   }
 
-  const named = namedDatasets(query, index);
-  if (named.length >= 2) {
-    const ids = named.slice(0, 4).map((h) => h.row.id);
+  // Grouped by the name the visitor typed, because one name can belong to several
+  // records. Two distinct names is a comparison; one name on several records is an
+  // ambiguous single subject, so each record is offered as a candidate instead.
+  const byName = new Map<string, IndexRow[]>();
+  for (const hit of namedDatasets(query, index)) {
+    const key = normalizeName(hit.token);
+    const rows = byName.get(key) ?? [];
+    rows.push(hit.row);
+    byName.set(key, rows);
+  }
+  if (byName.size >= 2) {
+    const rows = [...byName.values()].map((r) => r[0]).slice(0, 4);
     routes.push({
       kind: "compare",
-      href: `/compare?ids=${ids.join(",")}`,
-      label: `Compare ${named
-        .slice(0, 4)
-        .map((h) => h.row.short_title ?? h.row.title)
-        .join(", ")} side by side`,
+      href: `/compare?ids=${rows.map((r) => r.id).join(",")}`,
+      label: `Compare ${rows.map((r) => r.short_title ?? r.title).join(", ")} side by side`,
       detail: "Only the rows where they differ, with the measurement unique to each starred.",
     });
-  } else if (named.length === 1) {
-    const { row } = named[0];
-    routes.push({
-      kind: "dataset",
-      href: `/datasets/${row.id}`,
-      label: row.title,
-      detail: row.one_liner ?? "Can it answer your question, what it cannot tell you, who has used it, how to start.",
-    });
-  }
-  for (const h of named) {
-    rest = rest.replace(new RegExp(h.token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"), " ");
+  } else if (byName.size === 1) {
+    const rows = [...byName.values()][0];
+    for (const row of rows.slice(0, 4)) {
+      routes.push({
+        kind: "dataset",
+        href: `/datasets/${row.id}`,
+        label: rows.length > 1 && row.short_title ? `${row.title} (${row.short_title})` : row.title,
+        detail: row.one_liner ?? "Can it answer your question, what it cannot tell you, who has used it, how to start.",
+      });
+    }
   }
 
   if (UNDEREXPLORED.test(query)) {
@@ -169,7 +134,6 @@ export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): I
       label: "Underexplored datasets",
       detail: "Where every dataset stands on reuse, and the ones reused far less than comparable datasets.",
     });
-    rest = rest.replace(new RegExp(UNDEREXPLORED.source, "gi"), " ");
   }
 
   if (METHOD_OPENER.test(query)) {
@@ -191,19 +155,7 @@ export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): I
       label: "For software",
       detail: "JSON records, agent briefs, Croissant, JSON-LD, and the search and agent endpoints.",
     });
-    rest = rest.replace(new RegExp(SOFTWARE.source, "gi"), " ");
   }
 
-  // The shortlist runs unless the query is only a lookup - an award, a dataset name, a
-  // how or why question, or a request for files - with no disease, site, measurement
-  // or analysis need left over to search for. "Why is a dataset underexplored" is a
-  // question about the method; "underexplored datasets" is a request for a shortlist.
-  const isQuestion = METHOD_OPENER.test(query);
-  const lookupOnly =
-    routes.length > 0 && routes.every((r) => r.kind !== "underexplored" || isQuestion);
-  const hasNeed = readNeeds(rest).length > 0;
-  const hasSubject = mentionsSubject(rest, index);
-  const shortlist = !lookupOnly || hasNeed || hasSubject;
-
-  return { routes, shortlist };
+  return { routes };
 }

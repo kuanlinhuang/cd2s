@@ -396,9 +396,11 @@ export default function MethodsPage() {
           <p>
             Alongside, a deterministic router recognises what a shortlist cannot answer: an
             award number goes to its funding network, a dataset named outright goes to its
-            page, two names go to a comparison, a how or why question goes to the section of
-            this page that answers it, and a request for files goes to the software page.
-            The router chooses pages; it never states a fact about a dataset.
+            page, two distinct names go to a comparison, a how or why question goes to the
+            section of this page that answers it, and a request for files goes to the
+            software page. These destinations are offered in addition to the shortlist,
+            never instead of it, and the router chooses pages; it never states a fact about
+            a dataset.
           </p>
           <p>
             When the server is configured with a language model through OpenRouter
@@ -406,8 +408,9 @@ export default function MethodsPage() {
             rewrites the reasons in the researcher&rsquo;s own terms, using only the measured
             facts it is given. Without one, the same shortlist is returned with rule-based
             wording. The answer page says which happened, and the API response carries it as{" "}
-            <code>mode</code> and <code>model</code>. Every line of the answer links to the
-            section of the dataset page that carries its evidence.
+            <code>mode</code> and <code>model</code>. Each line drawn from a measured field links to
+            the section of the dataset page that carries it; a line whose wording does not
+            identify one carries no source link rather than a guessed one.
           </p>
         </div>
       </section>

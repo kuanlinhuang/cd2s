@@ -116,12 +116,11 @@ export default function AskAnswer({ q, needLinks }: { q: string; needLinks: Need
               </div>
 
               <div className="mt-2 grid gap-3 text-[13px] sm:grid-cols-2">
-                <Bullets id={p.id} heading="Why it fits" items={p.why} column="why" empty={null} />
+                <Bullets id={p.id} heading="Why it fits" items={p.why} empty={null} />
                 <Bullets
                   id={p.id}
                   heading="Check first"
                   items={p.watch_out}
-                  column="watch_out"
                   empty="No blockers found for what you described."
                 />
               </div>
@@ -180,13 +179,11 @@ function Bullets({
   id,
   heading,
   items,
-  column,
   empty,
 }: {
   id: string;
   heading: string;
   items: string[];
-  column: "why" | "watch_out";
   empty: string | null;
 }) {
   return (
@@ -196,19 +193,27 @@ function Bullets({
         empty && <p className="mt-0.5 t-muted">{empty}</p>
       ) : (
         <ul className="mt-0.5 list-disc pl-4">
-          {items.map((w, i) => (
-            <li key={i}>
-              {w}{" "}
-              <Link
-                href={`/datasets/${id}${bulletAnchor(w, column)}`}
-                className="whitespace-nowrap text-[11px] underline"
-                style={{ color: "var(--accent)" }}
-                aria-label={`Where this came from: ${w}`}
-              >
-                source
-              </Link>
-            </li>
-          ))}
+          {items.map((w, i) => {
+            const anchor = bulletAnchor(w);
+            return (
+              <li key={i}>
+                {w}
+                {anchor && (
+                  <>
+                    {" "}
+                    <Link
+                      href={`/datasets/${id}${anchor}`}
+                      className="whitespace-nowrap text-[11px] underline"
+                      style={{ color: "var(--accent)" }}
+                      aria-label={`Where this came from: ${w}`}
+                    >
+                      source
+                    </Link>
+                  </>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

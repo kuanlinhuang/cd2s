@@ -10,8 +10,8 @@ import { routeIntent } from "@/lib/intent";
 
 /**
  * The answer page. The question stays at the top, the router's destinations come next,
- * and the dataset shortlist follows when the question calls for one. Server-rendered
- * per request because the question is in the URL.
+ * and the dataset shortlist follows every question. Server-rendered per request because
+ * the question is in the URL.
  */
 
 export const dynamic = "force-dynamic";
@@ -92,20 +92,9 @@ export default async function AskPage({
         </ul>
       )}
 
-      {intent.shortlist ? (
-        <div className="mt-5">
-          <AskAnswer key={q} q={q} needLinks={needLinks} />
-        </div>
-      ) : (
-        <p className="mt-4 text-[13px] t-muted">
-          That reads as a lookup, so no dataset shortlist was searched. Add a cancer type or a
-          measurement to find datasets, or browse{" "}
-          <Link href="/datasets" className="underline">
-            all {num(index.length)}
-          </Link>
-          .
-        </p>
-      )}
+      <div className="mt-5">
+        <AskAnswer key={q} q={q} needLinks={needLinks} />
+      </div>
     </>
   );
 }

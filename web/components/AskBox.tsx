@@ -16,14 +16,6 @@ export const EXAMPLES = [
   "Phosphoproteomics and outcomes in gastric cancer, open access only",
 ];
 
-/** The same examples, short enough for two per row on a phone. */
-const SHORT = [
-  "Cervical cancer survival, Africa",
-  "Pediatric AML treatment response",
-  "Radiology paired with RNA-seq, lung",
-  "Phosphoproteomics, open access",
-];
-
 export default function AskBox({
   initial = "",
   examples = false,
@@ -75,7 +67,7 @@ export default function AskBox({
       <div className="mt-2 flex flex-wrap items-center gap-2">
         {examples && (
           <div className="flex flex-wrap gap-1.5">
-            {EXAMPLES.map((ex, i) => (
+            {EXAMPLES.map((ex) => (
               <button
                 key={ex}
                 type="button"
@@ -83,8 +75,7 @@ export default function AskBox({
                 className="rounded-full border px-2.5 py-0.5 text-[12px] hover:border-[var(--accent)] t-muted"
                 style={{ borderColor: "var(--border)" }}
               >
-                <span className="hidden sm:inline">{ex}</span>
-                <span className="sm:hidden">{SHORT[i]}</span>
+                {ex}
               </button>
             ))}
           </div>

@@ -16,12 +16,6 @@ const NAV = [
   { href: "/methods", label: "How this was built" },
 ];
 
-/** Pages behind the "How this was built" entrance, listed in the phone menu so nothing is more than two taps away. */
-const MORE = [
-  { href: "/agents", label: "For software" },
-  { href: "/network", label: "Funding to findings" },
-];
-
 function isActive(pathname: string, href: string) {
   return pathname === href || (href === "/datasets" && pathname.startsWith("/datasets/"));
 }
@@ -109,20 +103,6 @@ export default function SiteHeader() {
             className="grid grid-cols-2 gap-1 border-t py-2 md:hidden"
           >
             <NavLinks pathname={pathname} mobile onNavigate={() => setMenuOpen(false)} />
-            <div className="col-span-2 mt-1 border-t pt-2 text-[11px] uppercase tracking-wide t-faint px-3">
-              Also
-            </div>
-            {MORE.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={pathname === item.href ? "page" : undefined}
-                onClick={() => setMenuOpen(false)}
-                className="rounded-md px-3 py-2.5 text-[13px] t-muted"
-              >
-                {item.label}
-              </Link>
-            ))}
           </nav>
         )}
       </div>
