@@ -24,6 +24,10 @@ For every dataset it ingests:
 
 - **Measures** clinical field completeness from the repository's own records, separating
   *absent* from *populated but uninformative* from *informative*
+- **Answers** "can it answer your question?" up front: six analysis verdicts (overall
+  survival, progression, treatment response, therapeutic agents, stage adjustment, race)
+  derived from that completeness with the thresholds of the executed audit workbook, and
+  an explicit *not measured* status that is never folded into *not supported*
 - **States** the research questions the data support and the limitations that rule analyses out
 - **Traces** reuse with graded evidence, distinguishing articles that analyzed the data from
   articles that cited the paper
@@ -85,6 +89,24 @@ cd ../web && npm install && npm run build && npm start
 Every HTTP response is cached on disk keyed by request, so a rebuild is deterministic and can
 run offline from the cache.
 
+Two environment variables carry the public origin. `CDS_SITE_URL` is read by `cds export`
+and baked into every agent brief, JSON-LD document and `llms.txt`; `NEXT_PUBLIC_SITE_URL`
+is read by the site build for the sitemap, Open Graph metadata and the starter snippets.
+Set both to the deployed host before exporting and building.
+
+## Deploying
+
+The site is a static Next.js build plus three small server routes, so it deploys to Vercel
+with the project root set to `web/`. The generated data in `web/public/data` is committed,
+so a clean checkout builds without running the pipeline.
+
+| Variable | Where | Purpose |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Vercel project | absolute URLs in the sitemap, metadata and snippets |
+| `OPENROUTER_API_KEY` | Vercel project | lets a language model rank and explain the dataset agent's shortlist; without it the agent runs on rules and says so |
+| `OPENROUTER_MODEL` | Vercel project, optional | overrides the default `deepseek/deepseek-v4-flash` |
+| `CDS_SITE_URL` | local shell, before `cds export` | the same origin, baked into the agent packages |
+
 The site's dataset agent (the "describe your analysis" box on the home page and
 `/api/v1/agent`) works without any key: retrieval and the capability checks are deterministic.
 Set `OPENROUTER_API_KEY` in the site's environment to have a language model rank and explain the
@@ -95,6 +117,7 @@ shortlist through OpenRouter. The default model is `deepseek/deepseek-v4-flash`;
 
 See [`/agents`](web/app/agents/page.tsx) on the running site, or the generated files:
 
+- `/api/v1/datasets/{id}` - the full record plus `analysis_fit`, the six verdicts
 - `/data/index.json` - capability-filterable index (`/data/search.json` carries the same
   free text separately, so the browse page can load it after first paint)
 - `/data/datasets/{id}.json` - full record with evidence on every claim
@@ -130,4 +153,6 @@ every record carries the source and retrieval date of each claim.
 ## Status
 
 Working prototype. Curated interpretation covers 20 of 602 records; every other page states
-plainly that its interpretation has not been reviewed. Public deployment is pending.
+plainly that its interpretation has not been reviewed. Clinical field completeness, and so
+the six analysis verdicts, is measured for the 93 GDC projects; other repositories show
+*not measured* until their clinical tables are probed the same way.
