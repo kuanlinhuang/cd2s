@@ -4,14 +4,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+/**
+ * A route earns a header slot only if a first-time researcher would use it before
+ * asking a question. Compare, the funding network, the underexplored list and the
+ * software page all need something in hand first, so the agent, the browse page and
+ * the dataset pages route to them instead.
+ */
 const NAV = [
   { href: "/datasets", label: "Datasets" },
-  { href: "/questions", label: "By question" },
-  { href: "/underexplored", label: "Underexplored" },
-  { href: "/compare", label: "Compare" },
-  { href: "/network", label: "Network" },
-  { href: "/agents", label: "For agents" },
-  { href: "/methods", label: "Methods" },
+  { href: "/questions", label: "Research questions" },
+  { href: "/methods", label: "How this was built" },
+];
+
+/** Pages behind the "How this was built" entrance, listed in the phone menu so nothing is more than two taps away. */
+const MORE = [
+  { href: "/agents", label: "For software" },
+  { href: "/network", label: "Funding to findings" },
 ];
 
 function isActive(pathname: string, href: string) {
@@ -101,6 +109,20 @@ export default function SiteHeader() {
             className="grid grid-cols-2 gap-1 border-t py-2 md:hidden"
           >
             <NavLinks pathname={pathname} mobile onNavigate={() => setMenuOpen(false)} />
+            <div className="col-span-2 mt-1 border-t pt-2 text-[11px] uppercase tracking-wide t-faint px-3">
+              Also
+            </div>
+            {MORE.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={pathname === item.href ? "page" : undefined}
+                onClick={() => setMenuOpen(false)}
+                className="rounded-md px-3 py-2.5 text-[13px] t-muted"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
         )}
       </div>

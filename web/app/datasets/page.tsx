@@ -27,9 +27,9 @@ export default async function DatasetsPage({
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Datasets</h1>
         <p className="mt-2 max-w-2xl text-[14px] t-muted">
-          {stats.n_datasets.toLocaleString()} records from {stats.n_repositories}{" "}
-          repositories. The filters describe what you can <em>do</em> with a dataset,
-          measured from how complete its fields are rather than from what it claims.
+          {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
+          repositories. Filters describe what you can do with a dataset, measured from its
+          own fields.
         </p>
       </div>
       <DatasetBrowser

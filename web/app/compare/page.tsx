@@ -44,24 +44,22 @@ export default async function ComparePage({
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Compare datasets</h1>
         <p className="mt-3 max-w-3xl text-[14px] t-muted">
-          Choosing between cohorts usually comes down to two or three differences. This
-          view hides what they share and stars the measurements unique to each. Pick up
-          to four datasets on the{" "}
-          <Link href="/datasets" className="underline">
-            browse page
-          </Link>
-          .
+          Rows where the datasets agree are hidden; a measurement only one of them has is
+          starred. Up to four.
         </p>
       </div>
 
       {rows.length === 0 ? (
         <EmptyState>
-          No datasets selected. Tick the boxes on the{" "}
+          Nothing to compare yet.{" "}
+          <Link href="/" className="underline">
+            Ask a question
+          </Link>{" "}
+          and choose &ldquo;Compare these&rdquo;, or tick datasets on the{" "}
           <Link href="/datasets" className="underline">
             browse page
-          </Link>{" "}
-          and choose &ldquo;Compare side by side&rdquo;, or pass ids directly as{" "}
-          <code className="font-mono text-[12px]">?ids=a,b,c</code>.
+          </Link>
+          .
         </EmptyState>
       ) : rows.length === 1 ? (
         <EmptyState>

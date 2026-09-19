@@ -26,6 +26,8 @@ describe("reading the request", () => {
     ["a pediatric leukaemia cohort", "pediatric"],
     ["disparities in outcomes for Black patients", "population"],
     ["proteogenomic integration across layers", "multimodal"],
+    ["underexplored proteomics datasets", "underexplored"],
+    ["a cohort few people have worked on", "underexplored"],
   ])("reads %j as needing %s", (query, key) => {
     expect(keys(query)).toContain(key);
   });

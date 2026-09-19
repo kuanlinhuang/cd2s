@@ -13,6 +13,7 @@ import {
   getStats,
 } from "@/lib/data";
 import { FIT_RULES } from "@/lib/fit";
+import { agentModel } from "@/lib/agent";
 import { num, shortDate } from "@/lib/format";
 
 const COEFFICIENT_LABELS: Record<string, string> = {
@@ -146,11 +147,11 @@ export default function MethodsPage() {
   return (
     <>
       <div className="pt-10 pb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Methods</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">How this was built</h1>
         <p className="mt-3 max-w-3xl text-[14px] t-muted">
-          This page makes the rest of the site checkable. It records where each kind of
-          claim comes from, how reuse is graded, how the reuse gap index is fitted, and,
-          at the end, where the approach is weak.
+          Every number on this site is measured from a repository&rsquo;s own records and
+          linked to its source. This page records how, and where the method is weak. Built
+          for the NCI Office of Data Sharing Impact Prize, Track 1.
         </p>
         <p className="mt-2 text-[12px] t-faint">
           Corpus built {shortDate(stats.generated_at)} with pipeline v
@@ -158,6 +159,57 @@ export default function MethodsPage() {
           {num(stats.n_grants_linked)} awards linked.
         </p>
       </div>
+
+      {/* ----------------------------------------------------------------- index */}
+      <section id="index" className="py-6 border-t">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-[13px]">
+          <Card>
+            <h2 className="font-medium">Methods</h2>
+            <p className="mt-1 t-muted">
+              <a href="#sources" className="underline">Sources</a> &middot;{" "}
+              <a href="#clinical" className="underline">clinical completeness</a> &middot;{" "}
+              <a href="#fit" className="underline">six verdicts</a> &middot;{" "}
+              <a href="#reuse" className="underline">grading reuse</a> &middot;{" "}
+              <a href="#dating" className="underline">dating</a> &middot;{" "}
+              <a href="#reuse-gap" className="underline">reuse gap</a> &middot;{" "}
+              <a href="#merging" className="underline">merging</a> &middot;{" "}
+              <a href="#limitations" className="underline">where this is weak</a> &middot;{" "}
+              <a href="#reproduce" className="underline">reproducing</a>
+            </p>
+          </Card>
+          <Card>
+            <h2 className="font-medium">
+              <Link href="/agents" className="underline">For software</Link>
+            </h2>
+            <p className="mt-1 t-muted">
+              JSON records, agent briefs, Croissant, JSON-LD, and the search and agent
+              endpoints. No key, no rate limit.
+            </p>
+          </Card>
+          <Card>
+            <h2 className="font-medium">
+              <Link href="/network" className="underline">Funding to findings</Link>
+            </h2>
+            <p className="mt-1 t-muted">
+              Pick an NCI award and see the datasets it paid for and the articles that
+              analysed them.
+            </p>
+          </Card>
+          <Card>
+            <h2 className="font-medium">
+              <a href="#agent" className="underline">How the ask box works</a>
+            </h2>
+            <p className="mt-1 t-muted">
+              Deterministic checks against measured fields first. A language model, when
+              one is configured, only writes the wording.
+            </p>
+          </Card>
+        </div>
+        <p className="mt-3 text-[12px] t-faint">
+          Curated text and structured metadata are CC BY 4.0; pipeline code is MIT. Upstream
+          dataset metadata keeps its original terms.
+        </p>
+      </section>
 
       {/* ------------------------------------------------------------- principle */}
       <section id="principle" className="py-8 border-t">
@@ -326,6 +378,38 @@ export default function MethodsPage() {
           of cases. Those verdicts stay &ldquo;not measured&rdquo; until the table&rsquo;s
           coverage has been probed, and reach &ldquo;limited&rdquo; at most when it has.
         </p>
+      </section>
+
+      {/* ------------------------------------------------------------------ agent */}
+      <section id="agent" className="py-8 border-t">
+        <h2 className="text-lg font-semibold tracking-tight">How the ask box works</h2>
+        <div className="prose-cds mt-3 text-[14px]">
+          <p>
+            A question goes through two stages, and only the second involves a language
+            model. First, the wording is read for what the analysis needs: a survival
+            endpoint, recorded treatment response, imaging, a pediatric cohort, open access,
+            and so on. Each need is checked against the measured flags on every record. A
+            flag that was never measured stays unknown; it is never read as &ldquo;no&rdquo;.
+            The candidates that match the topic and meet the most needs form a shortlist,
+            with the reasons and the blockers written from the measured fields.
+          </p>
+          <p>
+            Alongside, a deterministic router recognises what a shortlist cannot answer: an
+            award number goes to its funding network, a dataset named outright goes to its
+            page, two names go to a comparison, a how or why question goes to the section of
+            this page that answers it, and a request for files goes to the software page.
+            The router chooses pages; it never states a fact about a dataset.
+          </p>
+          <p>
+            When the server is configured with a language model through OpenRouter
+            ({agentModel()} unless configured otherwise), the model ranks the shortlist and
+            rewrites the reasons in the researcher&rsquo;s own terms, using only the measured
+            facts it is given. Without one, the same shortlist is returned with rule-based
+            wording. The answer page says which happened, and the API response carries it as{" "}
+            <code>mode</code> and <code>model</code>. Every line of the answer links to the
+            section of the dataset page that carries its evidence.
+          </p>
+        </div>
       </section>
 
       {/* ------------------------------------------------------------------ reuse */}
@@ -627,6 +711,34 @@ RGI    = y - fitted`}</code>
             specification ship with the data as{" "}
             <a href="/data/reuse_gap_model.json"><code>reuse_gap_model.json</code></a>, so
             the label can be recomputed or contested rather than taken on trust.
+          </p>
+        </div>
+      </section>
+
+      {/* --------------------------------------------------------------- funding */}
+      <section id="funding" className="py-8 border-t">
+        <h2 className="text-lg font-semibold tracking-tight">Funding to data to findings</h2>
+        <div className="prose-cds mt-3 text-[14px]">
+          <p>
+            <strong>Where the links come from.</strong> Awards are resolved through NIH
+            RePORTER from each dataset&rsquo;s publications. Articles are the record&rsquo;s
+            original publication plus the reuse exemplars it ships, at most ten per dataset.
+            When a dataset&rsquo;s own paper lists an award, the award funded data generation;
+            when a later study that analysed the data lists it, the award funded reuse; an
+            award that funds a centre or harmonisation effort is infrastructure.
+          </p>
+          <p>
+            <strong>What a shared node means.</strong> An award touching two datasets paid
+            for both. An article touching two datasets combined them. Those cross-links are
+            the reason to draw this as a{" "}
+            <Link href="/network">network</Link> rather than a list.
+          </p>
+          <p>
+            <strong>What is missing.</strong> Datasets with no citable accession have no
+            traceable articles, and datasets whose publications RePORTER does not index have
+            no awards. Absence is a gap in the record, not proof that nothing was funded or
+            published. Only an award marked as generating the data is ever named as a
+            dataset&rsquo;s funder on this site.
           </p>
         </div>
       </section>
