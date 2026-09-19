@@ -147,49 +147,5 @@ export function readNeeds(query: string): Need[] {
   return NEEDS.filter((n) => n.test.test(query));
 }
 
-/**
- * Words that carry no topic, so their presence should not make a dataset relevant.
- *
- * Two kinds: ordinary function words, and the words that describe a dataset or its
- * files in general rather than a subject - "cohort", "open", "records", "bulk",
- * "download", and "cancer" itself, which every record in this corpus is about. The
- * second kind matters more, because almost every page contains them and a query that
- * leans on them would rank by page length: "bulk download JSON" asks for the files,
- * and the one cohort whose title happens to say "bulk" is not an answer to it, just as
- * a breast screening collection is not an answer to a question about gastric cancer.
- */
-const STOPWORDS = new Set([
-  "a", "access", "all", "an", "and", "any", "api", "are", "as", "at", "available", "be",
-  "bulk", "by", "can", "cancer", "cancers", "cohort", "cohorts", "croissant", "data",
-  "dataset", "datasets", "do", "does", "download", "downloads", "endpoint", "file",
-  "files", "find", "for", "from", "get", "have", "how", "i", "in", "into", "is", "it",
-  "its", "json", "large", "like", "looking", "me", "my", "need", "neoplasm", "neoplasms",
-  "of", "on", "open", "or", "patients", "public", "records", "samples", "show", "small",
-  "some", "study", "studies", "that", "the", "their", "then", "there", "this", "to",
-  "tumor", "tumors", "tumour", "tumours", "use", "using", "want", "was", "were", "what",
-  "which", "with", "would",
-]);
-
-/**
- * What the request is *about*, with the words that already became needs removed.
- *
- * Those words are counted once as a capability check, which is the reliable measurement.
- * Leaving them in the text query counted them a second time, and because well-curated
- * pages discuss survival and treatment at length it made every well-annotated cohort
- * look textually relevant to every clinical question: "proteogenomic gastric cancer
- * survival with treatment records" ranked a paediatric leukaemia trial above the gastric
- * cohort that answers it.
- *
- * Returns null when nothing but capability words is left. There is then no topic, and
- * text relevance is not used at all rather than being read out of noise.
- */
-export function topicOf(query: string, needs: Need[]): string | null {
-  const words = query.split(/[^A-Za-z0-9+-]+/).filter(Boolean);
-  const kept = words.filter(
-    (w) => !STOPWORDS.has(w.toLowerCase()) && !needs.some((n) => n.test.test(w)),
-  );
-  return kept.some((w) => w.length >= 3) ? kept.join(" ") : null;
-}
-
 /** Every need the agent knows how to check, for tests and for documentation. */
 export const NEED_KEYS = NEEDS.map((n) => n.key);

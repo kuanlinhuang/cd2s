@@ -12,7 +12,9 @@ import type { IndexRow } from "@/lib/types";
  * instead of it.
  *
  * Deterministic and cheap: regular expressions and a title lookup. It chooses pages;
- * it never states a fact about a dataset, so it cannot state a wrong one.
+ * it never states a fact about a dataset, so it cannot state a wrong one. It offers no
+ * route at all for a question it does not recognise, which is this module's no-claim
+ * return under the claim invariant written down in lib/agent.ts.
  */
 
 export type RouteKind = "award" | "dataset" | "compare" | "underexplored" | "method" | "software";
@@ -54,11 +56,21 @@ export function normalizeName(s: string): string {
 type NameHit = { row: IndexRow; token: string };
 
 /**
+ * The shortest a name may be, in letters and digits, before it is allowed to identify a
+ * dataset. Below it the match is a coincidence rather than a name: the shipped corpus
+ * holds ids and short titles as short as "HTA1", and three characters would let "AML"
+ * inside a sentence about acute myeloid leukaemia route the visitor to one cohort.
+ */
+const MIN_NAME_LENGTH = 4;
+
+/**
  * Datasets named in the query by short title, id or full title.
  *
  * Names are matched against whole words and runs of up to three words, so "TCGA-BRCA",
  * "tcga brca" and "gdc-tcga-brca" all name one dataset while "brca" inside a sentence
- * about BRCA1 does not. A name must normalise to at least four characters.
+ * about BRCA1 does not. A query that names nothing resolves to nothing; a name several
+ * records hold resolves to all of them, never to whichever the index happened to sort
+ * first.
  */
 function namedDatasets(query: string, index: IndexRow[]): NameHit[] {
   const words = query.split(/[\s,;/]+/).filter(Boolean);
@@ -66,7 +78,7 @@ function namedDatasets(query: string, index: IndexRow[]): NameHit[] {
   for (let i = 0; i < words.length; i++) {
     for (let len = 1; len <= 3 && i + len <= words.length; len++) {
       const p = normalizeName(words.slice(i, i + len).join(" "));
-      if (p.length >= 4) phrases.add(p);
+      if (p.length >= MIN_NAME_LENGTH) phrases.add(p);
     }
   }
   if (phrases.size === 0) return [];
@@ -75,7 +87,7 @@ function namedDatasets(query: string, index: IndexRow[]): NameHit[] {
     for (const token of [row.short_title, row.id, row.title]) {
       if (!token) continue;
       const n = normalizeName(token);
-      if (n.length >= 4 && phrases.has(n)) {
+      if (n.length >= MIN_NAME_LENGTH && phrases.has(n)) {
         hits.push({ row, token });
         break;
       }

@@ -4,12 +4,12 @@ import { z } from "zod";
 import { getIndex, getRecord } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { modalityLabel, num } from "@/lib/format";
-import { type Need, readNeeds, topicOf } from "@/lib/needs";
+import { type Need, readNeeds } from "@/lib/needs";
 import type { IndexRow } from "@/lib/types";
 
 // The need definitions live in lib/needs.ts so the browser can share them; the agent's
 // public surface is unchanged.
-export { NEED_KEYS, NEED_PHRASES, readNeeds, topicOf } from "@/lib/needs";
+export { NEED_KEYS, NEED_PHRASES, readNeeds } from "@/lib/needs";
 export type { Need } from "@/lib/needs";
 
 /**
@@ -27,6 +27,19 @@ export type { Need } from "@/lib/needs";
  * then ranks the shortlist and writes the explanation in the researcher's own terms.
  * Without a key, the same shortlist is returned with rule-based explanations, and the
  * response says so.
+ *
+ * THE CLAIM INVARIANT, which every part of this site obeys and which is written down
+ * only here. Every function that produces a label, a verdict, a ranking or a link a
+ * visitor will read takes an ABSOLUTE threshold on a measured quantity, and has a
+ * NO-CLAIM return that some real input reaches. Not a position in a sorted list, not a
+ * comparison against whatever else this query happened to return, not the mere presence
+ * of a field: a stated bar, applied to something measured, with "nothing here qualifies"
+ * as an outcome the code can actually produce and a test actually pins. Ranking by
+ * position makes the first row a recommendation however bad it is; scoring against the
+ * best hit of the moment makes every query produce a perfect match; both are ways of
+ * claiming something the data does not say. The threshold constants below, the
+ * verdicts, the router's name matching in lib/intent.ts and the provenance anchors in
+ * lib/anchors.ts all conform to this rather than restating it.
  */
 
 export type Verdict = "best" | "good" | "caution";
@@ -84,23 +97,81 @@ function search(): MiniSearch<Doc> {
 }
 
 /**
- * How strongly a record's own text must match one word of the topic to be a candidate.
+ * Words that name a subject somewhere in the corpus but identify nothing, because a
+ * large share of the records carry them: every dataset here is about a cancer of some
+ * primary site. Measured from the shipped index, where "cancer" appears in the subject
+ * fields of 122 of 602 records, "cell" and "carcinoma" in 90 each, "neoplasms" in 73.
+ */
+const GENERIC_SUBJECT = new Set([
+  "academia", "cancer", "cancers", "carcinoma", "carcinomas", "cell", "cells",
+  "diagnosis", "disease", "diseases", "mixed", "neoplasm", "neoplasms", "other", "parts",
+  "primary", "reported", "systems", "tissue", "tumor", "tumors", "tumour", "tumours",
+  "type", "types", "unknown", "unspecified",
+]);
+
+/**
+ * How a disease names itself. The corpus files each record under an ICD-O category
+ * ("Mesothelial Neoplasms", "Paragangliomas and Glomus Tumors"), so the word a
+ * researcher would actually type is often only in the title. Reading the titles for
+ * this shape recovers those names - mesothelioma, pheochromocytoma, ependymoma,
+ * craniopharyngioma, thymoma, histiocytosis and nine others in the shipped corpus -
+ * without admitting the method and programme words that share those titles.
+ */
+const DISEASE_MORPHOLOGY = /(?:omas?|emias?|osis|oses)$/;
+
+let _subjects: Set<string> | null = null;
+
+/** Every word the corpus itself uses to name a cancer type, a primary site or a disease. */
+function subjectVocabulary(): Set<string> {
+  if (_subjects) return _subjects;
+  const words = new Set<string>();
+  const add = (text: string, min: number, shaped: boolean) => {
+    for (const w of text.toLowerCase().split(/[^a-z0-9]+/)) {
+      if (w.length >= min && !GENERIC_SUBJECT.has(w) && (!shaped || DISEASE_MORPHOLOGY.test(w))) words.add(w);
+    }
+  };
+  for (const row of getIndex()) {
+    add([...row.cancer_types, ...row.primary_sites].join(" "), 4, false);
+    add(`${row.title} ${row.short_title ?? ""}`, 5, true);
+  }
+  _subjects = words;
+  return words;
+}
+
+/**
+ * What the request is about: the words in it that name a disease or a body site the
+ * corpus holds.
  *
- * MiniSearch scores are unbounded and sum over the words that matched, so the measure
- * is a record's strongest single-word score: an absolute quantity, unlike relevance
- * read against the best hit, which is 1.0 for the best match of anything at all however
- * badly everything scored. It is read word by word rather than from the score for the
- * whole topic, because a sum over the topic divided by its length punishes a record for
- * words the corpus does not contain: "neuroblastoma kids first" would score half of
- * "neuroblastoma" and the cohort named in it would drop out.
+ * Retrieval reads these words and no others, because they are the only words in a
+ * request that a dataset can be measured against. The rest of a request is already
+ * answered elsewhere and would only add noise here: a measurement ("proteomics",
+ * "survival") is read as a need and checked against the record's measured fields, and
+ * a name ("TCGA-BRCA", an award number, "bulk download") is resolved by the router.
+ * Scoring on the leftovers is what made a texture-analysis collection an answer to a
+ * question about cervical cancer, on the strength of the word "analysis".
+ */
+function subjectWordsIn(query: string): string[] {
+  const vocab = subjectVocabulary();
+  const seen = new Set<string>();
+  for (const w of query.toLowerCase().split(/[^a-z0-9]+/)) {
+    if (vocab.has(w)) seen.add(w);
+  }
+  return [...seen];
+}
+
+/**
+ * The retrieval score a record must reach on the subject of the request to be shown.
  *
- * Calibrated against the shipped corpus. Words left over from a question about the site
- * itself score 12 or less ("reuse" 2.2, "download" 4.2, "recorded" 6.8, "measured"
- * 10.3, "come" 12.0), while a disease, site or programme this corpus holds scores 23 or
- * more ("kids" 23.9, "cervix" 25.3, "lymphoma" 27.3, "melanoma" 30.2, "neuroblastoma"
- * 35.1). 18 sits in the empty band between the two. To recalibrate after the corpus
- * changes, search both families of wording against the rebuilt index and put the floor
- * between the highest incidental score and the lowest score for a subject it holds.
+ * MiniSearch scores are unbounded and sum over the subject words that matched, so this
+ * is an absolute quantity: no record clearing the floor means an empty shortlist, which
+ * is the honest answer and the one the page then prints. Calibrated against the shipped
+ * corpus, where the two populations are far apart: a record that carries the named
+ * subject in its own title or subject fields scores 21 or more ("ovary" 21.2 at the
+ * weakest, "melanoma" 24.9 to 30.2, "neuroblastoma" 32.1 to 35.1, "leukemia myeloid
+ * acute" 199 to 236), while a record reached only through a prefix or fuzzy variant of
+ * the word scores 10 or less. 18 sits in the gap. Recalibrate by searching the subjects
+ * the corpus holds against a rebuilt index and putting the floor beneath the weakest
+ * record that names one and above the strongest that merely resembles it.
  */
 const MIN_TEXT_RELEVANCE = 18;
 
@@ -109,11 +180,10 @@ type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unkno
 /**
  * The candidates worth ranking.
  *
- * A dataset is ranked only when the request's own words match it in absolute terms.
- * Nothing clearing the floor means an empty shortlist, which is the honest answer: a
- * question about how the site works, or a request for its files, is answered by the
- * route cards beside the shortlist, not by being told to start with a cohort that
- * happened to be the least irrelevant record in the corpus.
+ * A dataset is ranked only when the request names a subject the corpus holds and this
+ * record matches it above the floor. A request that names no such subject - a question
+ * about the method, a request for the files, a bare award number - produces nothing
+ * here and is answered by the route cards beside the shortlist.
  *
  * The needs read from the wording decide the order and the verdict among those
  * candidates; they cannot admit one on their own, because "survival" is a word a
@@ -121,27 +191,17 @@ type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unkno
  */
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
-  const topic = topicOf(query, needs);
-  const words = topic ? topic.split(/\s+/).filter(Boolean) : [];
-  const candidates = new Set<string>();
-  for (const word of words) {
-    for (const h of search().search(word)) {
-      if (h.score >= MIN_TEXT_RELEVANCE) candidates.add(h.id as string);
-    }
+  const subject = subjectWordsIn(query);
+  if (subject.length === 0) return { needs, scored: [] };
+  const relevance = new Map<string, number>();
+  for (const h of search().search(subject.join(" "))) {
+    if (h.score >= MIN_TEXT_RELEVANCE) relevance.set(h.id as string, h.score);
   }
-  if (candidates.size === 0) return { needs, scored: [] };
-  // Admission asks whether any one word matches this record strongly; the order then
-  // asks how much of the whole request it matches, so a record carrying one generic
-  // word of the topic cannot outrank one that matches the subject as well.
-  const whole = new Map<string, number>();
-  for (const h of search().search(topic!)) {
-    if (candidates.has(h.id as string)) whole.set(h.id as string, h.score);
-  }
-  const strongest = Math.max(...whole.values());
+  if (relevance.size === 0) return { needs, scored: [] };
   const scored: Scored[] = getIndex()
-    .filter((row) => candidates.has(row.id))
+    .filter((row) => relevance.has(row.id))
     .map((row) => {
-      const text = (whole.get(row.id) ?? 0) / strongest;
+      const rel = relevance.get(row.id)!;
       const met: Need[] = [];
       const failed: Need[] = [];
       const unknown: Need[] = [];
@@ -151,12 +211,12 @@ function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] 
         else if (v === false) failed.push(n);
         else unknown.push(n);
       }
-      // Among candidates that all cleared the floor, relevance is read against the
-      // strongest of them, because a researcher who names a disease is not negotiating
-      // about it: a gastric cohort meeting two of three needs should outrank a
-      // leukaemia cohort meeting three. It is never decisive on its own - failing a
-      // stated need still costs more than the best possible text match.
-      let score = text * 3.5 + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
+      // Subject relevance is weighted above any single capability, because a researcher
+      // who names a disease is not negotiating about it: a gastric cohort meeting two of
+      // three needs should outrank a leukaemia cohort meeting three. The term rises with
+      // relevance but approaches 3.5, so a record cannot buy its way past a failed need
+      // by carrying the same word more often.
+      let score = (3.5 * rel) / (rel + MIN_TEXT_RELEVANCE) + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
       if (row.is_showcase) score += 0.4;
       if (row.n_research_questions > 0) score += 0.2;
       if (row.n_cases && row.n_cases >= 200) score += 0.2;
@@ -164,6 +224,21 @@ function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] 
     });
   scored.sort((a, b) => b.score - a.score);
   return { needs, scored: scored.slice(0, k) };
+}
+
+/**
+ * What the card claims about a candidate.
+ *
+ * "Start here" is a recommendation, so it takes more than leading the list: every need
+ * the request stated must be measured for this record and met by it. A need the record
+ * fails makes it "check first"; a need nobody has measured for it leaves it "good fit",
+ * because the page cannot recommend a dataset on a field that was never read. When no
+ * candidate clears that bar the shortlist still shows what it found and no row claims
+ * to be the place to start.
+ */
+function verdictFor(s: Scored, rank: number): Verdict {
+  if (s.failed.length > 0) return "caution";
+  return rank === 0 && s.unknown.length === 0 ? "best" : "good";
 }
 
 function rulesPick(s: Scored, rank: number): AgentPick {
@@ -187,7 +262,7 @@ function rulesPick(s: Scored, rank: number): AgentPick {
   if (r.has_citable_accession === false) watch.push("no citable accession, so prior reuse cannot be traced");
   // A reviewer's blocking limitation is surfaced under "check first" but does not by
   // itself demote a dataset that meets every stated need: it is why the page exists.
-  const verdict: Verdict = s.failed.length > 0 ? "caution" : rank === 0 ? "best" : "good";
+  const verdict = verdictFor(s, rank);
   return {
     id: r.id,
     title: r.title,
@@ -375,7 +450,8 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
           const s = byId.get(p.id);
           if (!s || seen.has(p.id)) continue;
           seen.add(p.id);
-          picks.push({ ...rulesPick(s, 1), verdict: p.verdict, why: p.why, watch_out: p.watch_out });
+          const claimed = p.verdict === "best" && verdictFor(s, 0) !== "best" ? verdictFor(s, 0) : p.verdict;
+          picks.push({ ...rulesPick(s, 1), verdict: claimed, why: p.why, watch_out: p.watch_out });
         }
         if (picks.length > 0) {
           return { query, mode: "llm", model: agentModel(), note: null, needs: needLabels, summary: ranked.summary, picks };
@@ -396,7 +472,7 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
         ? `Start with ${best.title}. ${best.why[0] ? sentence(best.why[0]) : ""}${
             best.watch_out[0] ? ` Check first: ${sentence(best.watch_out[0])}` : ""
           }`
-        : `No dataset meets every need as stated. ${picks[0].title} is the closest; ${picks[0].watch_out[0] ?? "read its limitations"}.`;
+        : `Nothing here is a clear place to start. ${picks[0].title} is the closest; ${picks[0].watch_out[0] ?? "read its limitations"}.`;
   return {
     query,
     mode: "rules",

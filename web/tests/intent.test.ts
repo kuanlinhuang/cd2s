@@ -106,6 +106,19 @@ describe("routing a question", () => {
     ]);
   });
 
+  it("resolves a name two records share to both of them, never to whichever sorted first", () => {
+    const routes = routeIntent("acute myeloid leukemia").routes.filter((r) => r.kind === "dataset");
+    expect(routes).not.toHaveLength(1);
+    expect(routes.map((r) => r.href)).toEqual(
+      expect.arrayContaining(["/datasets/gdc-target-aml", "/datasets/gdc-tcga-laml"]),
+    );
+    expect(routeIntent("acute myeloid leukemia").routes.some((r) => r.kind === "compare")).toBe(false);
+  });
+
+  it("names nothing when the wording names no dataset", () => {
+    expect(routeIntent("banana bread recipe").routes).toEqual([]);
+  });
+
   it.each([
     ["how is reuse measured", "/methods#reuse"],
     ["what does not measured mean", "/methods#fit"],
@@ -152,6 +165,7 @@ describe("linking a line of the answer to its evidence", () => {
   it.each([
     "Tumor stage is not populated for any case in the GDC harmonized clinical records.",
     "A large, well-annotated cohort with treatment records.",
+    "Start with this cohort: it pairs phosphoproteomics with recorded outcomes in gastric cancer.",
   ])("gives free prose no anchor rather than a guessed one: %j", (text) => {
     expect(bulletAnchor(text)).toBeNull();
   });

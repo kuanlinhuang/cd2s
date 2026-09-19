@@ -6,14 +6,12 @@ import { routeIntent, showsShortlist } from "@/lib/intent";
 /**
  * What the agent answers, against the shipped corpus in public/data.
  *
- * The shortlist runs for every question now that the router offers its destinations
- * alongside it, so a question the corpus cannot answer must say so rather than name a
- * confident "start here" dataset. Relative relevance cannot make that call: it scores a
- * query against its own best hit, so any wording produces a perfect match. A record is
- * ranked only when one word of the request matches it strongly in absolute terms, and
- * these cases pin both sides of that floor - including requests that carry filler or
- * qualifier words around the subject, which a measure read over the whole topic would
- * dilute below it.
+ * These cases pin the claim invariant stated in lib/agent.ts: the shortlist reads the
+ * request for the subject it names, measures each record against it on an absolute
+ * floor, and has a no-claim answer that real questions reach. Both sides are pinned
+ * here - the questions that must produce nothing, the requests whose subject is wrapped
+ * in filler words and must still produce their cohorts, and the verdict "Start here",
+ * which is withheld when a need the request stated was never measured for the record.
  *
  * The model path is an enhancement over the same shortlist; the rules path is the
  * guaranteed one, so the key is stubbed away and every assertion here is deterministic.
@@ -31,6 +29,7 @@ describe("a question no dataset can answer", () => {
     "R01CA097096",
     "where does the evidence come from",
     "an open cohort with treatment response recorded",
+    "banana bread recipe",
   ])("returns no picks for %j", async (q) => {
     const a = await answer(q);
     expect(a.picks).toEqual([]);
@@ -69,10 +68,34 @@ describe("a question the corpus can answer", () => {
     expect(padded.picks.map((p) => p.id)).toEqual(expect.arrayContaining(bare.picks.map((p) => p.id)));
   });
 
+  it("admits no record on a generic word: the cervical question ranks only cervical cohorts", async () => {
+    const a = await answer("Survival analysis in a cervical cancer cohort from sub-Saharan Africa");
+    expect(a.picks.length).toBeGreaterThan(0);
+    for (const p of a.picks) {
+      expect(`${p.id} ${p.title} ${p.short_title ?? ""}`).toMatch(/cervi|cesc|htmcp-cc/i);
+    }
+    expect(a.picks.map((p) => p.id)).not.toContain("idc-pdmr-texture-analysis");
+  });
+
+  it("admits no record on the word trial", async () => {
+    const a = await answer("melanoma checkpoint blockade trial cohorts");
+    expect(a.picks.length).toBeGreaterThan(0);
+    for (const p of a.picks) {
+      expect(`${p.id} ${p.title} ${p.short_title ?? ""}`).toMatch(/melanom|skcm|uvm/i);
+    }
+  });
+
   it("leads with the subject, not with a record carrying one generic word of the request", async () => {
     const a = await answer("Pair radiology images with RNA sequencing in lung adenocarcinoma");
     expect(a.picks.length).toBeGreaterThan(0);
     expect(`${a.picks[0].title} ${a.picks[0].short_title ?? ""}`).toMatch(/lung|luad/i);
+  });
+
+  it("finds the disease the corpus files under an ICD-O category", async () => {
+    for (const q of ["mesothelioma survival", "pheochromocytoma"]) {
+      const a = await answer(q);
+      expect(a.picks.length).toBeGreaterThan(0);
+    }
   });
 
   it("applies the needs stated alongside the subject", async () => {
@@ -88,6 +111,19 @@ describe("a question the corpus can answer", () => {
     expect(a.picks.length).toBeGreaterThan(0);
     expect(a.summary).not.toMatch(/nothing in the corpus matches/i);
     expect(a.picks.every((p) => p.watch_out.length > 0)).toBe(true);
+  });
+
+  it("claims no place to start when a stated need was never measured for the record", async () => {
+    const a = await answer("cervix in a diverse population");
+    expect(a.needs).toContain("a diverse or non-US population");
+    expect(a.picks.length).toBeGreaterThan(0);
+    expect(a.picks.some((p) => p.verdict === "best")).toBe(false);
+    expect(a.summary).toMatch(/nothing here is a clear place to start/i);
+  });
+
+  it("claims no place to start when the leading candidate fails a stated need", async () => {
+    const a = await answer("Ovary with proteomics, methylation, single-cell and radiology imaging");
+    expect(a.picks.some((p) => p.verdict === "best")).toBe(false);
   });
 
   it("never returns the same dataset twice", async () => {
