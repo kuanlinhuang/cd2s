@@ -9,7 +9,7 @@
   "name": "cbio-aml-stjude-2024",
   "alternateName": "Pediatric Acute Myeloid Leukemia (St. Jude, Nat Genet 2024)",
   "description": "Molecular profiling of 887 pediatric acute myeloid leukemia cases and their matched normals using RNA-Seq, WES, and WGS.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-aml-stjude-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-aml-stjude-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

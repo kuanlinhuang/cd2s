@@ -9,7 +9,7 @@
   "name": "cbio-mbn-msk-2024",
   "alternateName": "Diffuse Large B-Cell Lymphoma (MSK, Haematologica 2024)",
   "description": "Targeted sequencing of 396 diffuse large B-cell lymphoma samples and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mbn-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbn-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

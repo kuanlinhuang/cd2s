@@ -9,7 +9,7 @@
   "name": "idc-breast-diagnosis",
   "alternateName": "BREAST-DIAGNOSIS",
   "description": "The Breast-Diagnosis collection contains cases that are high-risk normals, DCIS, fibroids and lobular carcinomas. Each case has 3 or more distinct MR pulse sequences from a Phillips 1.5 T (usual sequences are labeled T2, STIR and BLISS but may occasionally include other pulse sequences and digital mammogram of tumor specimen). Multiple time point studies on the same patient are possible. Please see the BREAST-DIAGNOSIS page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-breast-diagnosis",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-breast-diagnosis",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "BREAST-DIAGNOSIS",
   "version": "as-retrieved",

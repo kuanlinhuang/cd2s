@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
   "name": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphotyrosine",
   "alternateName": [
     "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphotyrosine"
   ],
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphotyrosine",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000667"
   ],
@@ -37,7 +37,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -49,7 +49,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-pct-swath-kidney",
   "alternateName": "PCT SWATH Kidney",
   "description": "PCT SWATH Kidney",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-pct-swath-kidney",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-pct-swath-kidney",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PCT SWATH Kidney",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-therapeutic-targets-in-breast-cancer-xenografts",
   "alternateName": "Therapeutic Targets in Breast Cancer Xenografts",
   "description": "Therapeutic Targets in Breast Cancer Xenografts",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-therapeutic-targets-in-breast-cancer-xenografts",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-therapeutic-targets-in-breast-cancer-xenografts",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
   "version": "as-retrieved",

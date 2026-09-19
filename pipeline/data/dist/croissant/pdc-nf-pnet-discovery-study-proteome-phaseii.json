@@ -9,7 +9,7 @@
   "name": "pdc-nf-pnet-discovery-study-proteome-phaseii",
   "alternateName": "NF-PNET Discovery Study - Proteome - PhaseII",
   "description": "NF-PNET Discovery Study - Proteome - PhaseII",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-nf-pnet-discovery-study-proteome-phaseii",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-nf-pnet-discovery-study-proteome-phaseii",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NF-PNET Discovery Study - Proteome - PhaseII",
   "version": "as-retrieved",

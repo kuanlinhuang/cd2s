@@ -9,7 +9,7 @@
   "name": "pdc-cptac-gbm-confirmatory-study",
   "alternateName": "CPTAC GBM Confirmatory Study",
   "description": "CPTAC GBM Confirmatory Study",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-gbm-confirmatory-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-gbm-confirmatory-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC GBM Confirmatory Study",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-prad-mskcc-2014",
   "alternateName": "Prostate Adenocarcinoma (MSK, PNAS 2014)",
   "description": "Genome-wide copy number profiling in 104 primary prostate cancer tumor/normal pairs. <a href=\"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54691\">Raw data via GEO (GSE54691)</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-prad-mskcc-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

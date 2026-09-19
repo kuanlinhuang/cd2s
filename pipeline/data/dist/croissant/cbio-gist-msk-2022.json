@@ -9,7 +9,7 @@
   "name": "cbio-gist-msk-2022",
   "alternateName": "Gastrointestinal Stromal Tumor (MSK, NPJ Precis Oncol 2023)",
   "description": "Paired analysis of 499  Gastrointestinal stromal tumor/normal pairs via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-gist-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gist-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

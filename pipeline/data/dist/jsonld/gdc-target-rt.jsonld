@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-rt",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-rt",
   "name": "Rhabdoid Tumor",
   "alternateName": [
     "TARGET-RT"
   ],
   "description": "Rhabdoid Tumor",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-rt",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-rt",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-RT",
     "gdc_program:TARGET",
@@ -49,7 +49,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -61,7 +61,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-target-rt.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-rt.json",
       "encodingFormat": "application/json"
     }
   ],

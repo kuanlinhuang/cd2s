@@ -9,7 +9,7 @@
   "name": "pdc-hbv-related-hepatocellular-carcinoma",
   "alternateName": "HBV-Related Hepatocellular Carcinoma",
   "description": "HBV-Related Hepatocellular Carcinoma",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
   "version": "as-retrieved",

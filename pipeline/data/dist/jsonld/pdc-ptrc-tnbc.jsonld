@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ptrc-tnbc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-tnbc",
   "name": "PTRC TNBC",
   "alternateName": [
     "PTRC TNBC - Phosphoproteome",
     "PTRC TNBC - Proteome"
   ],
   "description": "PTRC TNBC",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ptrc-tnbc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-tnbc",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000409",
     "https://pdc.cancer.gov/pdc/study/PDC000408"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-ptrc-tnbc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-ptrc-tnbc.json",
       "encodingFormat": "application/json"
     }
   ],

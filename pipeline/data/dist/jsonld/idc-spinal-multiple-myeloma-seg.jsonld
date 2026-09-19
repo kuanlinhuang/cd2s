@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-spinal-multiple-myeloma-seg",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-spinal-multiple-myeloma-seg",
   "name": "Spinal-Multiple-Myeloma-SEG",
   "alternateName": [
     "spinal_multiple_myeloma_seg"
   ],
   "description": "This dataset consists of dual-energy low-dose CT scans from 67 patients diagnosed with multiple myeloma, with a total of 72 scans. The dataset includes conventional CT images, virtual monoenergetic images (at 40, 80, and 120 keV), calcium-suppressed images (with suppression indices of 25, 50, 75, and 100), as well as segmentation masks of vertebrae (including vertebra type classification) and multiple myeloma lesions in the spine. In total, the dataset contains 576 CT image series and 144 SEG series comprising 564,608 axial slices. Basic demographic details (mean age 66 years, range 48\u201385; 36% female) and clinical data related to disease progression are also provided. Please see the Spinal-Multiple-Myeloma-SEG page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-spinal-multiple-myeloma-seg",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-spinal-multiple-myeloma-seg",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=spinal_multiple_myeloma_seg",
     "https://www.cancerimagingarchive.net/collections/",
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-spinal-multiple-myeloma-seg.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-spinal-multiple-myeloma-seg.json",
       "encodingFormat": "application/json"
     }
   ],

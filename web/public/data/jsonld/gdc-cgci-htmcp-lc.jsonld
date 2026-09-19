@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cgci-htmcp-lc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-lc",
   "name": "HIV+ Tumor Molecular Characterization Project - Lung Cancer",
   "alternateName": [
     "cgci_htmcp_lc"
   ],
   "description": "People living with HIV have substantially elevated lung cancer incidence and worse outcomes, and are close to absent from the cohorts that define lung cancer genomics. This is the smallest cohort we have made a showcase page for, and we included it because size is not the only thing that determines whether a dataset is worth knowing about.\nAll 39 cases carry whole genome sequencing, 38 RNA sequencing and 37 microRNA. 26 patients are recorded as Black or African American. Pathologic stage is recorded for 62% and prior treatment for 92%, both unusually good for a cohort of this size.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cgci-htmcp-lc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-lc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-LC",
     "gdc_program:CGCI",
@@ -64,7 +64,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -76,7 +76,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-cgci-htmcp-lc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-lc.json",
       "encodingFormat": "application/json"
     }
   ],

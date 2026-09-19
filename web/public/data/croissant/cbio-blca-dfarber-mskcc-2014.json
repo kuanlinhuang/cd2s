@@ -9,7 +9,7 @@
   "name": "cbio-blca-dfarber-mskcc-2014",
   "alternateName": "Bladder Urothelial Carcinoma (DFCI/MSK, Cancer Discov 2014)",
   "description": "Whole exome sequencing of tumor/normal samples from 50 patients treated with cisplatin-based chemotherapy for muscle invasive urothelial carcinoma.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-dfarber-mskcc-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-dfarber-mskcc-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

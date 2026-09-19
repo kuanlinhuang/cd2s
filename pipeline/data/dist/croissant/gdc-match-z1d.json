@@ -9,7 +9,7 @@
   "name": "gdc-match-z1d",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm Z1D",
   "description": "Genomic Characterization CS-MATCH-0007 Arm Z1D",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-z1d",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-z1d",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Next-Generation Sequencing-Based MSI Scoring Predicts Benefit in Mismatch Repair-Deficient Tumors Treated with Nivolumab: Follow-up on NCI-MATCH Arm Z1D.",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-tcga-ovarian-jhu-proteome",
   "alternateName": "TCGA Ovarian JHU Proteome",
   "description": "TCGA Ovarian JHU Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-ovarian-jhu-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-jhu-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TRAIL promotes the polarization of human macrophages toward a proinflammatory M1 phenotype and is associated with increased survival in cancer patients with high tumor macrophage content.",
   "version": "as-retrieved",

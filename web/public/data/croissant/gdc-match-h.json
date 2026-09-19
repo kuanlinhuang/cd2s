@@ -9,7 +9,7 @@
   "name": "gdc-match-h",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm H",
   "description": "Genomic Characterization CS-MATCH-0007 Arm H",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-h",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-h",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic Characterization CS-MATCH-0007 Arm H",
   "version": "as-retrieved",

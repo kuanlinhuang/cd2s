@@ -9,7 +9,7 @@
   "name": "cbio-coadread-dfci-2016",
   "alternateName": "Colorectal Adenocarcinoma (DFCI, Cell Reports 2016)",
   "description": "Whole-exome sequencing of 619 colorectal cancers with clinicopathologic annotations.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-coadread-dfci-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-dfci-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-msk-chord-2024",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-chord-2024",
   "name": "MSK-CHORD (MSK, Nature 2024)",
   "alternateName": [
     "msk_chord_2024"
   ],
   "description": "Targeted sequencing of 25040 tumors from 24950 patients and their matched normals via MSK-IMPACT, along with clinical annotations, some of which are derived from natural language processing (denoted NLP). This data is available under the <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en\">Creative Commons BY-NC-ND 4.0 license</a>. For commercial use, please contact <a href=\"mailto: datarequests@mskcc.org\">datarequests@mskcc.org</a>",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-msk-chord-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-chord-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=msk_chord_2024"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-msk-chord-2024.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-msk-chord-2024.json",
       "encodingFormat": "application/json"
     }
   ],

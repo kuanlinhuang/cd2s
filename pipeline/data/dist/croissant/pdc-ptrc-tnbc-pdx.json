@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-tnbc-pdx",
   "alternateName": "PTRC TNBC PDX",
   "description": "PTRC TNBC PDX",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ptrc-tnbc-pdx",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-tnbc-pdx",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic Markers of Chemotherapy Resistance and Response in Triple-Negative Breast Cancer.",
   "version": "as-retrieved",

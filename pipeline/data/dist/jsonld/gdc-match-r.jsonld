@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-r",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-r",
   "name": "Genomic Characterization CS-MATCH-0007 Arm R",
   "alternateName": [
     "MATCH-R"
   ],
   "description": "Genomic Characterization CS-MATCH-0007 Arm R",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-r",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-r",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/MATCH-R",
     "gdc_program:MATCH",
@@ -64,7 +64,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -76,7 +76,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-match-r.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-match-r.json",
       "encodingFormat": "application/json"
     }
   ],

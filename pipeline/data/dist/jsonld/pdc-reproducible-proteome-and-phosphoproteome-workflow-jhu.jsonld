@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
   "name": "Reproducible Proteome and Phosphoproteome Workflow JHU",
   "alternateName": [
     "Reproducible Proteome and Phosphoproteome Workflow JHU - Phosphoproteome",
     "Reproducible Proteome and Phosphoproteome Workflow JHU - Proteome"
   ],
   "description": "Reproducible Proteome and Phosphoproteome Workflow JHU",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000313",
     "https://pdc.cancer.gov/pdc/study/PDC000311"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu.json",
       "encodingFormat": "application/json"
     }
   ],

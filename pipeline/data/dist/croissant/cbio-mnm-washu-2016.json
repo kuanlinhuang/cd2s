@@ -9,7 +9,7 @@
   "name": "cbio-mnm-washu-2016",
   "alternateName": "Acute myeloid leukemia or myelodysplastic syndromes (WashU, 2016)",
   "description": "Enhanced exome or targeted sequencing of 116 acute myeloid leukemia (AML) or myelodysplastic syndromes (MDS) patients' tumor/normal pairs .",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mnm-washu-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mnm-washu-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

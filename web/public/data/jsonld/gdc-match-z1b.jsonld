@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-z1b",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-z1b",
   "name": "Genomic Characterization CS-MATCH-0007 Arm Z1B",
   "alternateName": [
     "MATCH-Z1B"
   ],
   "description": "Genomic Characterization CS-MATCH-0007 Arm Z1B",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-z1b",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-z1b",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/MATCH-Z1B",
     "gdc_program:MATCH",
@@ -63,7 +63,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -75,7 +75,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-match-z1b.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-match-z1b.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-mmrf-commpass",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-mmrf-commpass",
   "name": "Multiple Myeloma CoMMpass Study",
   "alternateName": [
     "MMRF-COMMPASS"
   ],
   "description": "Multiple Myeloma CoMMpass Study",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-mmrf-commpass",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-mmrf-commpass",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/MMRF-COMMPASS",
     "gdc_program:MMRF",
@@ -46,7 +46,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -58,7 +58,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-mmrf-commpass.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-mmrf-commpass.json",
       "encodingFormat": "application/json"
     }
   ],

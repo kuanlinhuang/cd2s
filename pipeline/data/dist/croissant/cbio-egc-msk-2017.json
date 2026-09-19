@@ -9,7 +9,7 @@
   "name": "cbio-egc-msk-2017",
   "alternateName": "Metastatic Esophagogastric Cancer (MSK, Cancer Discovery 2017)",
   "description": "Targeted sequencing of 341 samples from 305 metastatic esophagogastric cancer patients",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-egc-msk-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-msk-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

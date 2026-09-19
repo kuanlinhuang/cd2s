@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-htan-ohsu",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-htan-ohsu",
   "name": "HTAN-OHSU",
   "alternateName": [
     "htan_ohsu"
   ],
   "description": "The overall goal of the HTAN OMS Atlas Center is to elucidate mechanisms by which metastatic breast cancers become resistant to current generation pathway- and immune checkpoint-targeted treatments. The OMS Atlas is motivated by the appreciation that these treatments are often effective in primary tumors but only transiently effective in the metastatic setting. Possible resistance mechanisms include tumor-intrinsic genomic instability and epigenomic plasticity, as well as events extrinsic to the cancer cells, including chemical and mechanical signals from the microenvironments, production of mechanical extracellular matrix barriers and/or changes in vasculature that reduce drug and/or immune cell access, nanoscale cancer cell-microenvironment interactions that reduce drug efficacy, and a plethora of immune resistance mechanisms, such as loss of HLA expression and antigen presentation, and immune exhaustion. These mechanisms likely vary between patients and within individual patients and change with time as tumors respond to therapeutic attack. The OMS Atlas will focus on elucidating resistance mechanisms in two specific current generation clinical trial scenarios: (a) hormone receptor-positive breast cancer (HRBC) undergoing treatment with a CDK4/6 inhibitor in combination with endocrine therapy and (b) triple negative breast cancer (TNBC) undergoing treatment with a PARP inhibitor and an immunomodulatory agent. Please see the DICOM converted Slide Microscopy images for the HTAN-OHSU collection information page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-htan-ohsu",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-htan-ohsu",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=htan_ohsu",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-htan-ohsu.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-htan-ohsu.json",
       "encodingFormat": "application/json"
     }
   ],

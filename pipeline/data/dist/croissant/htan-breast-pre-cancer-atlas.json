@@ -9,7 +9,7 @@
   "name": "htan-breast-pre-cancer-atlas",
   "alternateName": "Breast Pre-Cancer Atlas",
   "description": "Breast Pre-Cancer Atlas",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-breast-pre-cancer-atlas",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-breast-pre-cancer-atlas",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Single Cell Expression Analysis of Ductal Carcinoma in Situ Identifies Complex Genotypic-Phenotypic Relationships Altering Epithelial Composition",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-prostate-diagnosis",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-diagnosis",
   "name": "PROSTATE-DIAGNOSIS",
   "alternateName": [
     "prostate_diagnosis"
   ],
   "description": "Prostate, cancer-confirmed, MRIs obtained using endorectal and phased array surface coils at 1.5T (Philips Achieva). Pulse sequences include T1, T2 and DCE (\u201cBLISS\u201d sequence using Magnevist injected i.v.). Linked clinical information, including matched patient demographics, radiology and pathology reports in XLS format are available. Please see the Prostate-Diagnosis page to learn more about the images and to obtain any supporting metadata for this collection. Data was provided by Boston Medical Center courtesy Dr. Nicolas Bloch.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-prostate-diagnosis",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-diagnosis",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=prostate_diagnosis",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-prostate-diagnosis.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-prostate-diagnosis.json",
       "encodingFormat": "application/json"
     }
   ],

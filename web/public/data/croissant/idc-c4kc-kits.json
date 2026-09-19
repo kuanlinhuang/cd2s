@@ -9,7 +9,7 @@
   "name": "idc-c4kc-kits",
   "alternateName": "C4KC-KiTS",
   "description": "Data from the training set of the 2019 Kidney and Kidney Tumor Segmentation Challenge (C4KC-KiTS) This collection contains subjects from the training set of the 2019 Kidney and Kidney Tumor Segmentation Challenge (KiTS19) . The challenge aimed to accelerate progress in automatic 3D semantic segmentation by releasing a dataset of CT scans for 210 patients with manual semantic segmentations of the kidneys and tumors in the corticomedullary phase. Please see the C4KC-KiTS wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-c4kc-kits",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-c4kc-kits",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "C4KC-KiTS",
   "version": "as-retrieved",

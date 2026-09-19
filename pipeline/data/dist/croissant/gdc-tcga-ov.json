@@ -9,7 +9,7 @@
   "name": "gdc-tcga-ov",
   "alternateName": "Ovarian Serous Cystadenocarcinoma",
   "description": "The Cancer Genome Atlas-Ovarian Cancer (TCGA-OV) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed OV cases. Please see the TCGA-OV page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-OV collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-ov",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-ov",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Sample-level enrichment analysis unravels shared stress phenotypes among multiple cancer types.",
   "version": "as-retrieved",

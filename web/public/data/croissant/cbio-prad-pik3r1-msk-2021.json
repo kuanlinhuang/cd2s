@@ -9,7 +9,7 @@
   "name": "cbio-prad-pik3r1-msk-2021",
   "alternateName": "Prostate Adenocarcinoma (MSK, Clin Cancer Res. 2022)",
   "description": "Targeted sequencing of 1417 Prostate Adenocarcinoma tumor/normal sample pairs via MSK-IMPACT to analyze the significance of PIK3R1 alterations.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-prad-pik3r1-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-pik3r1-msk-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

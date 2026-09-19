@@ -9,7 +9,7 @@
   "name": "pdc-prospective-breast-bi-phosphoproteome",
   "alternateName": "Prospective Breast BI Phosphoproteome",
   "description": "Prospective Breast BI Phosphoproteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-prospective-breast-bi-phosphoproteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-breast-bi-phosphoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CEP55: an immune-related predictive and prognostic molecular biomarker for multiple cancers.",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-hnsc-mdanderson-2013",
   "alternateName": "Oral Squamous Cell Carcinoma (MD Anderson, Cancer Discov 2013)",
   "description": "Whole-exome sequencing of 40 oral squamous cell carcinoma tumor/normal sample pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-hnsc-mdanderson-2013",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnsc-mdanderson-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

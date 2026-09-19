@@ -9,7 +9,7 @@
   "name": "pdc-tcga-breast-cancer-phosphoproteome",
   "alternateName": "TCGA Breast Cancer Phosphoproteome",
   "description": "TCGA Breast Cancer Phosphoproteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Inflammation-related citrullination of matrisome proteins in human cancer.",
   "version": "as-retrieved",

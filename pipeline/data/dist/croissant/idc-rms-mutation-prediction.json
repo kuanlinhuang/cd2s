@@ -9,7 +9,7 @@
   "name": "idc-rms-mutation-prediction",
   "alternateName": "RMS-Mutation-Prediction",
   "description": "RMS is an aggressive soft tissue tumor which is associated with a broad range of pathological mutations. Multiple studies have identified recurrent mutations and chromosomal translocations which are associated with poor outcome in RMS patients. Since not all patients are screened for these mutations with molecular testing, there is a need to develop tools which accurately identify these alterations at diagnosis. Our study associated with these images applied deep learning with convolutional neural networks to learn mutation-associated histological features from H&E images from diagnostic RMS specimens. Please see the RMS-Mutation-Prediction information page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-rms-mutation-prediction",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-rms-mutation-prediction",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "RMS-Mutation-Prediction",
   "version": "as-retrieved",

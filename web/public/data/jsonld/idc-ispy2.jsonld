@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ispy2",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ispy2",
   "name": "ISPY2",
   "alternateName": [
     "ispy2"
   ],
   "description": "I-SPY 2 (Investigation of Serial studies to Predict Your Therapeutic Response with Imaging And moLecular analysis 2) is an ongoing, multi-center trial designed to quickly evaluate the efficacy of new agents for breast cancer in neoadjuvant chemotherapy (NAC) setting. Women aged \u226518 years diagnosed with locally advanced breast cancer (tumor size \u22652.5 cm) without distant metastasis are eligible to enroll in the trial. Please see the I-SPY 2 Breast Dynamic Contrast Enhanced MRI (I-SPY2 TRIAL) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ispy2",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ispy2",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ispy2",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-ispy2.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ispy2.json",
       "encodingFormat": "application/json"
     }
   ],

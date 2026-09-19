@@ -59,4 +59,4 @@ Summary: 193 gastric cancers measured seven ways - proteome, phosphoproteome, ac
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-cptac-stad-study.json
+- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-stad-study.json

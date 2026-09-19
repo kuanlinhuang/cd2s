@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-hcc-mskimpact-2018",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-hcc-mskimpact-2018",
   "name": "Hepatocellular Carcinoma (MSK, Clin Cancer Res 2018)",
   "alternateName": [
     "hcc_mskimpact_2018"
   ],
   "description": "MSK-IMPACT sequencing of 127 Hepatocellular Carcinoma tumor samples with matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-hcc-mskimpact-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hcc-mskimpact-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=hcc_mskimpact_2018"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-hcc-mskimpact-2018.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-hcc-mskimpact-2018.json",
       "encodingFormat": "application/json"
     }
   ],

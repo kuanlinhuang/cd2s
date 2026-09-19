@@ -9,7 +9,7 @@
   "name": "pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-atrt-phosphoproteome",
   "alternateName": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - ATRT Phosphoproteome",
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - ATRT Phosphoproteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-atrt-phosphoproteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-atrt-phosphoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - ATRT Phosphoproteome",
   "version": "as-retrieved",

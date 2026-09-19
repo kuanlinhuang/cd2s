@@ -9,7 +9,7 @@
   "name": "cbio-brca-aurora-2023",
   "alternateName": "Metastatic Breast Cancer (AURORA US Network, Nat Cancer 2023)",
   "description": "Whole exome and low-pass whole genome sequencing of 55 patients with metastatic breast cancer (53 primary cancers and 102 metastases) and their matched normals. Retrospective Tissue Collection; an initiative of the Breast Cancer Research Foundation.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-brca-aurora-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-aurora-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

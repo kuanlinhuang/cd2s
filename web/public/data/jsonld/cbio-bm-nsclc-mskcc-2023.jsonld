@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-bm-nsclc-mskcc-2023",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-bm-nsclc-mskcc-2023",
   "name": "Non-Small Cell Lung Cancer Brain Metastasis (MSK, Nat Commun 2023)",
   "alternateName": [
     "bm_nsclc_mskcc_2023"
   ],
   "description": "Targeted sequencing of 322 NSCLC brain metastasis and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-bm-nsclc-mskcc-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bm-nsclc-mskcc-2023",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=bm_nsclc_mskcc_2023"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-bm-nsclc-mskcc-2023.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-bm-nsclc-mskcc-2023.json",
       "encodingFormat": "application/json"
     }
   ],

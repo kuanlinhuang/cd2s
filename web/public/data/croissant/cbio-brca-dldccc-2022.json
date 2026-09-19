@@ -9,7 +9,7 @@
   "name": "cbio-brca-dldccc-2022",
   "alternateName": "Triple Negative Breast Cancer (DLDCCC, Cancer Discov 2022)",
   "description": "Whole exome sequencing of 59 pre-treatment and 16 post-treatment triple-negative breast cancer samples and their matched normals as part of micro-scaled proteogenomic analysis to identify markers of chemotherapy resistance and response.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-brca-dldccc-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-dldccc-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

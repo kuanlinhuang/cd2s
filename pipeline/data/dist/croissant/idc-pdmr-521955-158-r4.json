@@ -9,7 +9,7 @@
   "name": "idc-pdmr-521955-158-r4",
   "alternateName": "PDMR-521955-158-R4",
   "description": "Pre-clinical animal models of spontaneous metastatic cancer are infrequent. We identified and characterized a patient derived xenograft model with metastatic potential, adenocarcinoma pancreas xenograft 521955-158-R4. A detailed imaging characterization of this model, which develops spontaneous lung metastases, is provided along with standard operating procedures. Tumors in half of the mice were resected in the range 200-300 cm3 size; tumors in the other half were allowed to grow until euthanasia was required because of tumor size. Please see the PDMR-521955-158-R4 page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-pdmr-521955-158-r4",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-521955-158-r4",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PDMR-521955-158-R4",
   "version": "as-retrieved",

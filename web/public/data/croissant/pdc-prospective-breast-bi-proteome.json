@@ -9,7 +9,7 @@
   "name": "pdc-prospective-breast-bi-proteome",
   "alternateName": "Prospective Breast BI Proteome",
   "description": "Prospective Breast BI Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-prospective-breast-bi-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-breast-bi-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic Landscape of Breast Cancer Tumorigenesis and Targeted Therapy.",
   "version": "as-retrieved",

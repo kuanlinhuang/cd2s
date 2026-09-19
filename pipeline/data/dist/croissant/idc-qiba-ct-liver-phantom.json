@@ -9,7 +9,7 @@
   "name": "idc-qiba-ct-liver-phantom",
   "alternateName": "QIBA-CT-Liver-Phantom",
   "description": "This database contains a collection of three sets of CT scan images acquired from an anthropomorphic abdominal phantom with removable liver inserts. Please see the QIBA Anthropomorphic Abdominal Phantom CT Scans to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-qiba-ct-liver-phantom",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qiba-ct-liver-phantom",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "QIBA-CT-Liver-Phantom",
   "version": "as-retrieved",

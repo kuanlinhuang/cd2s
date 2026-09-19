@@ -9,7 +9,7 @@
   "name": "htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-and-brain",
   "alternateName": "Transition to Metastatic State: Lung Cancer, Pancreatic Cancer and Brain Metastasis",
   "description": "Transition to Metastatic State: Lung Cancer, Pancreatic Cancer and Brain Metastasis",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-and-brain",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-and-brain",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Signatures of plasticity, metastasis, and immunosuppression in an atlas of human small cell lung cancer",
   "version": "as-retrieved",

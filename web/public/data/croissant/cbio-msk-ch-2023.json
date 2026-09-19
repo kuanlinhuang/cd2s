@@ -9,7 +9,7 @@
   "name": "cbio-msk-ch-2023",
   "alternateName": "Cancer Therapy and Clonal Hematopoiesis (MSK, Blood Adv 2023)",
   "description": "Targeted sequencing of 47,532 patient samples with mixed tumor types and their matched normals to identify clonal hematopoiesis mutations using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-msk-ch-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-ch-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

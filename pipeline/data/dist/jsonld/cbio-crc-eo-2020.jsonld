@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-crc-eo-2020",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-eo-2020",
   "name": "Colorectal Cancer (MSK, JNCI 2021)",
   "alternateName": [
     "crc_eo_2020"
   ],
   "description": "Targeted sequencing of 1,516 samples from 818 patients with early onset and 698 patients with average onset colorectal cancer and their matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-crc-eo-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-eo-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=crc_eo_2020"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-crc-eo-2020.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-crc-eo-2020.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "idc-rider-lung-ct",
   "alternateName": "RIDER Lung CT",
   "description": "RIDER Lung CT is a subsection of the broader Reference Image Database to Evaluate Therapy Response (RIDER) collection. RIDER is a targeted data collection for the purpose of generating an initial consensus on how to harmonize data collection and analysis for quantitative imaging methods as applied to measure the response to drug or radiation therapy. The long term goal is to provide a resource to permit harmonized methods for data collection and analysis across different commercial imaging platforms, as required to support multi-site clinical trials, using imaging as a biomarker for therapy response. Please see the RIDER Lung CT page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-rider-lung-ct",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-rider-lung-ct",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "RIDER Lung CT",
   "version": "as-retrieved",

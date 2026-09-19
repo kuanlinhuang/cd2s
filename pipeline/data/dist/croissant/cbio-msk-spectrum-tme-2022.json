@@ -9,7 +9,7 @@
   "name": "cbio-msk-spectrum-tme-2022",
   "alternateName": "Ovarian Cancer - MSK SPECTRUM (MSK, Nature 2022)",
   "description": "Multi-region, multi-modal profiling of 42 untreated high-grade serous ovarian cancer (HGSOC) tumor/normal pairs. This study reports an integrative analysis of mutational processes and their impact on the tumor microenvironment using single-cell RNA sequencing, whole-genome sequencing, targeted sequencing (MSK-IMPACT), digital histopathology and multiplexed immunofluorescence. The study is part of a prospective research program to understand the spatio-temporal determinants of HGSOC evolution, treatment and response (MSK SPECTRUM: Memorial Sloan Kettering - SPatio-temporal Evolution in Cancer TRaced Using Multimodalities).",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-msk-spectrum-tme-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-spectrum-tme-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

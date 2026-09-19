@@ -9,7 +9,7 @@
   "name": "gdc-cmi-mbc",
   "alternateName": "Count Me In (CMI): The Metastatic Breast Cancer (MBC) Project",
   "description": "Count Me In (CMI): The Metastatic Breast Cancer (MBC) Project",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cmi-mbc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-mbc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pan-cancer molecular subtypes of metastasis reveal distinct and evolving transcriptional programs.",
   "version": "as-retrieved",

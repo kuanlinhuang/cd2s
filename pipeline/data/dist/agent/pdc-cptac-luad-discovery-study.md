@@ -57,4 +57,4 @@ Summary: 115 lung adenocarcinomas with proteome, phosphoproteome and acetylome, 
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json
+- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json

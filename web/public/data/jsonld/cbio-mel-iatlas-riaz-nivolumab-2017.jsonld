@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
   "name": "Melanoma (MSK, Cell 2017) - iAtlas Harmonized",
   "alternateName": [
     "mel_iatlas_riaz_nivolumab_2017"
   ],
   "description": "Whole-exome sequencing and neoantigen landscape analysis of tumors from 64 advanced melanoma patients, profiled before and after nivolumab treatment. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mel_iatlas_riaz_nivolumab_2017"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-mel-iatlas-riaz-nivolumab-2017.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mel-iatlas-riaz-nivolumab-2017.json",
       "encodingFormat": "application/json"
     }
   ],

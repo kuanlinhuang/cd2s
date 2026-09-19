@@ -9,7 +9,7 @@
   "name": "idc-ea1141",
   "alternateName": "EA1141",
   "description": "This collection contains data from the Eastern Cooperative Oncology Group (ECOG) Clinical Trial NCT02933489, \u201cAbbreviated Breast MRI and Digital Tomosynthesis Mammography in Screening Women With Dense Breasts\". Principle Investigator: Christopher Comstock. It was sponsored by NCI and performed by the Eastern Cooperative Oncology Group under study number EA1141. This randomized phase II trial enrolled 1,516 subjects to study how well abbreviated breast magnetic resonance imaging (MRI) and digital tomosynthesis mammography work in detecting cancer in women with dense breasts. Imaging and clinical data from 500 of those subjects are being made available through this collection. Please see the Abbreviated Breast MRI and Digital Tomosynthesis Mammography in Screening Women With Dense Breasts (EA1141) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ea1141",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ea1141",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "EA1141",
   "version": "as-retrieved",

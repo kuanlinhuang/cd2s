@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-paad-icgc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-icgc",
   "name": "Pancreatic Adenocarcinoma (ICGC, Nature 2012)",
   "alternateName": [
     "paad_icgc"
   ],
   "description": "Whole-exome sequencing of 99 pancreatic samples and their matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-paad-icgc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-icgc",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=paad_icgc"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-paad-icgc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-paad-icgc.json",
       "encodingFormat": "application/json"
     }
   ],

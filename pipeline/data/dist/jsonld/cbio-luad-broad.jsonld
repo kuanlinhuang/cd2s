@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-luad-broad",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-luad-broad",
   "name": "Lung Adenocarcinoma (Broad, Cell 2012)",
   "alternateName": [
     "luad_broad"
   ],
   "description": "Whole-exome and/or whole-genome sequencing of 183 lung adenocarcinomas and matched normal tissue pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-luad-broad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-luad-broad",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=luad_broad"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-luad-broad.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-luad-broad.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-ihch-msk-2021",
   "alternateName": "Intrahepatic Cholangiocarcinoma (MSK, Hepatology 2021)",
   "description": "Targeted sequencing of 412 intrahepatic cholangiocarcinoma tumor/normal sample pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-ihch-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ihch-msk-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

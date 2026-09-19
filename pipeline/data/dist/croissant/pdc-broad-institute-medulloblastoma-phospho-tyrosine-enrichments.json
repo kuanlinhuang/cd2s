@@ -9,7 +9,7 @@
   "name": "pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
   "alternateName": "Broad Institute - Medulloblastoma - Phospho-tyrosine-enrichments",
   "description": "Broad Institute - Medulloblastoma - Phospho-tyrosine-enrichments",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Broad Institute - Medulloblastoma - Phospho-tyrosine-enrichments",
   "version": "as-retrieved",

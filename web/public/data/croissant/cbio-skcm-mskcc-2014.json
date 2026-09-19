@@ -9,7 +9,7 @@
   "name": "cbio-skcm-mskcc-2014",
   "alternateName": "Melanoma (MSK, NEJM 2014)",
   "description": "Whole-exome sequencing of 64 pretreated (ipilimumab or tremelimumab) melanoma tumor-normal pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-skcm-mskcc-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-mskcc-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

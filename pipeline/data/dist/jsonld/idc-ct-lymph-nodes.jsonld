@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ct-lymph-nodes",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-lymph-nodes",
   "name": "CT Lymph Nodes",
   "alternateName": [
     "ct_lymph_nodes"
   ],
   "description": "This collection consists of Computed Tomography (CT) images of the mediastinum and abdomen in which lymph node positions are marked by radiologists at the National Institutes of Health, Clinical Center. Radiologists at the Imaging Biomarkers and Computer-Aided Diagnosis Laboratory labeled a total of 388 mediastinal lymph nodes in CT images of 90 patients and a total of 595 abdominal lymph nodes in 86 patients. Please see the CT Lymph Nodes wiki page to learn more about the images and to obtain supporting data from this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ct-lymph-nodes",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-lymph-nodes",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_lymph_nodes",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-ct-lymph-nodes.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ct-lymph-nodes.json",
       "encodingFormat": "application/json"
     }
   ],

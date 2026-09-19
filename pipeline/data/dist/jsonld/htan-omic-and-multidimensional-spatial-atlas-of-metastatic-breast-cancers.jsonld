@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
   "name": "Omic and Multidimensional Spatial Atlas of Metastatic Breast Cancers",
   "alternateName": [
     "HTA9"
   ],
   "description": "This atlas follows metastatic breast cancer patients through treatment with serial biopsies, and measures each one across an unusually wide span: multiplexed tissue imaging, spatial transcriptomics, single-cell RNA and ATAC sequencing, bulk RNA and DNA, protein arrays and electron microscopy. It is the largest HTAN atlas by file count at 120,274 files and the only dataset indexed here carrying electron microscopy.\nThe serial design is what makes it scientifically distinctive. Most spatial resources capture one timepoint; this one captures the same patient before, during and after therapy, which is the only way to observe how spatial organization changes as resistance develops. Therapy and follow-up records are both present as HTAN clinical components.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
   "identifier": [
     "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA9%22%7D%5D",
     "https://www.synapse.org/#!Synapse:syn35465046",
@@ -64,7 +64,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -76,7 +76,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers.json",
       "encodingFormat": "application/json"
     }
   ],

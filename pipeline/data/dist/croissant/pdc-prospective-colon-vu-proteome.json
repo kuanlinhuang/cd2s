@@ -9,7 +9,7 @@
   "name": "pdc-prospective-colon-vu-proteome",
   "alternateName": "Prospective Colon VU Proteome",
   "description": "Prospective Colon VU Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-prospective-colon-vu-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-colon-vu-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Sirt3 restricts tumor initiation via promoting LONP1 deacetylation and K63 ubiquitination.",
   "version": "as-retrieved",

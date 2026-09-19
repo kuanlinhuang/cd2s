@@ -9,7 +9,7 @@
   "name": "htan-srrs",
   "alternateName": "SRRS",
   "description": "SRRS",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-srrs",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-srrs",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "SRRS",
   "version": "as-retrieved",

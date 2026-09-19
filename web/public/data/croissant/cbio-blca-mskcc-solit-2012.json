@@ -9,7 +9,7 @@
   "name": "cbio-blca-mskcc-solit-2012",
   "alternateName": "Bladder Cancer (MSK, J Clin Onco 2013)",
   "description": "Comprehensive profiling of 97 high-grade bladder tumors, including targeted sequencing of 15 cancer genes",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-mskcc-solit-2012",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-mskcc-solit-2012",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

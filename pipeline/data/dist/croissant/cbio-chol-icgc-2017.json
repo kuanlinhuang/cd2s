@@ -9,7 +9,7 @@
   "name": "cbio-chol-icgc-2017",
   "alternateName": "Cholangiocarcinoma (ICGC, Cancer Discov 2017)",
   "description": "Whole-exome sequencing and Targeted/Exome sequencing of 489 Cholangiocarcinoma samples from 10 countries.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-chol-icgc-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-chol-icgc-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

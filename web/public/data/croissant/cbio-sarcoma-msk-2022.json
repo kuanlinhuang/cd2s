@@ -9,7 +9,7 @@
   "name": "cbio-sarcoma-msk-2022",
   "alternateName": "Soft Tissue and Bone Sarcoma (MSK, Nat Commun 2022)",
   "description": "Targeted sequencing of 7,494 soft tissue and bone sarcoma samples using the Foundation Medicine platform.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-sarcoma-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-sarcoma-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

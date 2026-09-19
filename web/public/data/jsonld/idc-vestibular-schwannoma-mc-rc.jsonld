@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-vestibular-schwannoma-mc-rc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-vestibular-schwannoma-mc-rc",
   "name": "Vestibular-Schwannoma-MC-RC",
   "alternateName": [
     "vestibular_schwannoma_mc_rc"
   ],
   "description": "This multi-center routine clinical (MC-RC) dataset consists of 160 patients with a single sporadic Vestibular Schwannoma (VS) who were referred from 10 medical sites and consecutively seen at a single center. These routine clinical datasets are more diverse in terms of the tumor manifestation as well as the acquisition parameters. Using this dataset, researchers can develop and validate methods for automatic surveillance of Vestibular Schwannoma, which work robustly on images acquired at different hospitals. Patients had multiple time points resulting in a total of 428 timepoints and 487 3D-images. Manual ground truth segmentations were obtained in an iterative process in which segmentations were: 1) produced or amended by a specialized company; and 2) reviewed by one of three trained radiologists; and 3) validated by an expert team. Compared to the existing Vestibular-Schwannoma-SEG dataset on TCIA that was obtained from a single scanner, this dataset was acquired from multiple scanners manufactured by different vendors. This dataset also provides a refined segmentation of intrameatal and extrameatal components of the VS. Please see the Segmentation of Vestibular Schwannoma from Magnetic Resonance Imaging: An Annotated Multi-Center Routine Clinical Dataset (Vestibular-Schwannoma-MC-RC) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-vestibular-schwannoma-mc-rc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-vestibular-schwannoma-mc-rc",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=vestibular_schwannoma_mc_rc",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-vestibular-schwannoma-mc-rc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-vestibular-schwannoma-mc-rc.json",
       "encodingFormat": "application/json"
     }
   ],

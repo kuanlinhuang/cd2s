@@ -9,7 +9,7 @@
   "name": "cbio-ptad-msk-2024",
   "alternateName": "Pituitary Adenoma (MSK, Acta Neuropathologica 2024)",
   "description": "Targeted sequencing of 104 pituitary adenoma samples and their matched normals using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-ptad-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ptad-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

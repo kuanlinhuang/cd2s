@@ -9,7 +9,7 @@
   "name": "gdc-target-wt",
   "alternateName": "High-Risk Wilms Tumor",
   "description": "High-Risk Wilms Tumor",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-wt",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-wt",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Cyclooxygenase-1 and -2 enzymes differentially regulate the brain upstream NF-kappa B pathway and downstream enzymes involved in prostaglandin biosynthesis.",
   "version": "as-retrieved",

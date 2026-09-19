@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-aml-ohsu-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-aml-ohsu-2022",
   "name": "Acute Myeloid Leukemia (OHSU, Cancer Cell 2022)",
   "alternateName": [
     "aml_ohsu_2022"
   ],
   "description": "Whole-exome and transcriptomic sequencing of 942 acute myeloid leukemia samples (with 500 matched normals) from the Beat AML program.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-aml-ohsu-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-aml-ohsu-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=aml_ohsu_2022"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-aml-ohsu-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-aml-ohsu-2022.json",
       "encodingFormat": "application/json"
     }
   ],

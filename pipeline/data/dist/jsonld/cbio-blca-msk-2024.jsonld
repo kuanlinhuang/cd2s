@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-msk-2024",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-msk-2024",
   "name": "Bladder Urothelial Carcinoma SWOG S1314 Trial (MSK, JCO Precis Oncol 2024)",
   "alternateName": [
     "blca_msk_2024"
   ],
   "description": "Targeted sequencing of 184 muscle-invasive bladder cancer (MIBC) samples and their matched normals using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-msk-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=blca_msk_2024"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-blca-msk-2024.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-blca-msk-2024.json",
       "encodingFormat": "application/json"
     }
   ],

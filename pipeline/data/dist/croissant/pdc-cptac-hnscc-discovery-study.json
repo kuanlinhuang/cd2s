@@ -9,7 +9,7 @@
   "name": "pdc-cptac-hnscc-discovery-study",
   "alternateName": "CPTAC HNSCC Discovery Study",
   "description": "CPTAC HNSCC Discovery Study",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-hnscc-discovery-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-hnscc-discovery-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "A proteogenomic portrait of lung squamous cell carcinoma.",
   "version": "as-retrieved",

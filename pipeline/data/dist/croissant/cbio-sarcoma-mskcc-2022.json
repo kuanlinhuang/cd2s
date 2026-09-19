@@ -9,7 +9,7 @@
   "name": "cbio-sarcoma-mskcc-2022",
   "alternateName": "Sarcoma (MSK, Nat Commun. 2022)",
   "description": "Targeted Sequencing of 2138 Sarcoma samples and matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-sarcoma-mskcc-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-sarcoma-mskcc-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

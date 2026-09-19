@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-bcan-hcrn-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-bcan-hcrn-2022",
   "name": "Urothelial Carcinoma (BCAN/HCRN, Nat Commun 2022)",
   "alternateName": [
     "blca_bcan_hcrn_2022"
   ],
   "description": "Urothelial Cancer-GENOmic analysis to improve patient outcomes and research.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-bcan-hcrn-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-bcan-hcrn-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=blca_bcan_hcrn_2022"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-blca-bcan-hcrn-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-blca-bcan-hcrn-2022.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-ipmn-study-lmd-proteome",
   "alternateName": "IPMN Study - LMD Proteome",
   "description": "IPMN Study - LMD Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ipmn-study-lmd-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ipmn-study-lmd-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "IPMN Study - LMD Proteome",
   "version": "as-retrieved",

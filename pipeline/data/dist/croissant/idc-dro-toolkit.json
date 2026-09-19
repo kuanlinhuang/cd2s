@@ -9,7 +9,7 @@
   "name": "idc-dro-toolkit",
   "alternateName": "DRO-Toolkit",
   "description": "DRO Toolkit: This is a sample collection of synthetic 3D Digital Reference Objects (DROs) intended for standardization of quantitative imaging feature extraction pipelines. We have developed a software toolkit for the creation of DROs with customizable size, shape, intensity, texture, and margin sharpness values. Using user-supplied input parameters, these objects are defined mathematically as continuous functions, discretized, and then saved as DICOM objects. This collection includes objects with a range of values for the various feature categories and many combinations of these categories. Please see the DRO Toolkit page to learn more about the images and to obtain the supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-dro-toolkit",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-dro-toolkit",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "DRO-Toolkit",
   "version": "as-retrieved",

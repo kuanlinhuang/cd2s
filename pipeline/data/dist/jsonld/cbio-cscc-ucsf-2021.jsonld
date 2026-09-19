@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-cscc-ucsf-2021",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-cscc-ucsf-2021",
   "name": "Cutaneous Squamous Cell Carcinoma (UCSF, NPJ Genom Med 2021)",
   "alternateName": [
     "cscc_ucsf_2021"
   ],
   "description": "Catalogue of driver genes in cutaneous squamous cell carcinoma. Meta-analysis of 105 normal/tumor pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-cscc-ucsf-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cscc-ucsf-2021",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=cscc_ucsf_2021"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-cscc-ucsf-2021.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-cscc-ucsf-2021.json",
       "encodingFormat": "application/json"
     }
   ],

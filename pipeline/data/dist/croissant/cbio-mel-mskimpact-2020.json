@@ -9,7 +9,7 @@
   "name": "cbio-mel-mskimpact-2020",
   "alternateName": "Melanoma (MSK, Clin Cancer Res 2021)",
   "description": "Targeted sequencing (MSK-IMPACT) of 696 melanoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mel-mskimpact-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-mskimpact-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

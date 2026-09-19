@@ -9,7 +9,7 @@
   "name": "gdc-varepop-apollo",
   "alternateName": "VA Research Precision Oncology Program",
   "description": "This collection contains subjects from the Research for Precision Oncology Program (RePOP) network, a research activity that established a cohort of Veterans diagnosed with cancer and had genomic analyses performed on their tumor tissue as part of the standard of care. All data relevant to a patient's cancer and cancer care were collected under RePOP, including patient demographics, comorbidities, genomic analysis, treatments, medications, lab values, imaging studies, and outcomes. Please see the VAREPOP-APOLLO page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-varepop-apollo",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-varepop-apollo",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "The Veterans Affairs Precision Oncology Data Repository, a Clinical, Genomic, and Imaging Research Database.",
   "version": "as-retrieved",

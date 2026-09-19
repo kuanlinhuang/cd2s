@@ -9,7 +9,7 @@
   "name": "pdc-cptac-deep-proteomics-2d-dia",
   "alternateName": "CPTAC Deep Proteomics 2D-DIA",
   "description": "CPTAC Deep Proteomics 2D-DIA",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-deep-proteomics-2d-dia",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-deep-proteomics-2d-dia",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC Deep Proteomics 2D-DIA",
   "version": "as-retrieved",

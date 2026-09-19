@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-prad-pik3r1-msk-2021",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-pik3r1-msk-2021",
   "name": "Prostate Adenocarcinoma (MSK, Clin Cancer Res. 2022)",
   "alternateName": [
     "prad_pik3r1_msk_2021"
   ],
   "description": "Targeted sequencing of 1417 Prostate Adenocarcinoma tumor/normal sample pairs via MSK-IMPACT to analyze the significance of PIK3R1 alterations.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-prad-pik3r1-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-pik3r1-msk-2021",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_pik3r1_msk_2021"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-prad-pik3r1-msk-2021.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-pik3r1-msk-2021.json",
       "encodingFormat": "application/json"
     }
   ],

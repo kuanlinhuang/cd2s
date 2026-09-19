@@ -9,7 +9,7 @@
   "name": "pdc-academia-sinica-luad-icpc-b",
   "alternateName": "Academia Sinica LUAD ICPC-B",
   "description": "Academia Sinica LUAD ICPC-B",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-academia-sinica-luad-icpc-b",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-academia-sinica-luad-icpc-b",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Integrative analysis of lung adenocarcinoma across diverse ethnicities and exposures.",
   "version": "as-retrieved",

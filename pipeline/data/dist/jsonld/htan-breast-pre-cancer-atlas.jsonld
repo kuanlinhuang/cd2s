@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-breast-pre-cancer-atlas",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/htan-breast-pre-cancer-atlas",
   "name": "Breast Pre-Cancer Atlas",
   "alternateName": [
     "HTA6"
   ],
   "description": "Breast Pre-Cancer Atlas",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-breast-pre-cancer-atlas",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-breast-pre-cancer-atlas",
   "identifier": [
     "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA6%22%7D%5D",
     "https://www.synapse.org/#!Synapse:syn39262957",
@@ -54,7 +54,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -66,7 +66,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/htan-breast-pre-cancer-atlas.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/htan-breast-pre-cancer-atlas.json",
       "encodingFormat": "application/json"
     }
   ],

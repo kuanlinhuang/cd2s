@@ -9,7 +9,7 @@
   "name": "cbio-blca-msk-2025",
   "alternateName": "Bladder Cancer (MSK, Eur Urol Open Sci 2025)",
   "description": "Targeted sequencing of 308 Bladder Cancer CMO samples via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-msk-2025",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-msk-2025",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

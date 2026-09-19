@@ -9,7 +9,7 @@
   "name": "idc-breast-cancer-screening-dbt",
   "alternateName": "Breast-Cancer-Screening-DBT",
   "description": "Breast cancer is among the most common cancers and a common cause of death among women. Here, we share a curated dataset of digital breast tomosynthesis images that includes normal, actionable, biopsy-proven benign, and biopsy-proven cancer cases. The dataset contains four components: (1) DICOM images, (2) a spreadsheet indicating which group each case belongs to, and (3) annotation boxes. Please see the Breast-Cancer-Screening-DBT to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-breast-cancer-screening-dbt",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-breast-cancer-screening-dbt",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Breast-Cancer-Screening-DBT",
   "version": "as-retrieved",

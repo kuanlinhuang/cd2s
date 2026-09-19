@@ -9,7 +9,7 @@
   "name": "idc-qin-breast",
   "alternateName": "QIN-BREAST",
   "description": "This collection contains longitudinal PET/CT and quantitative MR images collected for the purpose of studying treatment assessment in breast cancer in the neoadjuvant setting. Images were acquired at three time points: prior to the start of treatment (t1), after the first cycle of treatment (t2), and either after the second cycle of treatment or at the completion of all treatments (prior to surgery) (t3). The PET/CT images were acquired with a support device built in-house to allow the patient to be in the prone position to facilitate registration with the MRI data. The value of this collection is to provide clinical imaging data for the development and evaluation of quantitative imaging methods for treatment assessment early in the course of therapy for breast cancer. An extension of this dataset is available via the QIN-BREAST-02 collection. Please see the QIN-Breast wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-qin-breast",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-breast",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "QIN-BREAST",
   "version": "as-retrieved",

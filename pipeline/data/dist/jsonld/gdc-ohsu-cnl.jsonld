@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-ohsu-cnl",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-ohsu-cnl",
   "name": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
   "alternateName": [
     "OHSU-CNL"
   ],
   "description": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-ohsu-cnl",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ohsu-cnl",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/OHSU-CNL",
     "gdc_program:OHSU",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-ohsu-cnl.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-ohsu-cnl.json",
       "encodingFormat": "application/json"
     }
   ],

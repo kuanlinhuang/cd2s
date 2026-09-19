@@ -9,7 +9,7 @@
   "name": "htan-the-lung-pre-cancer-atlas",
   "alternateName": "The Lung Pre-Cancer Atlas",
   "description": "The Lung Pre-Cancer Atlas",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-the-lung-pre-cancer-atlas",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-the-lung-pre-cancer-atlas",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Graph Perceiver Network for Lung Tumor and Bronchial Premalignant Lesion Stratification from Histopathology",
   "version": "as-retrieved",

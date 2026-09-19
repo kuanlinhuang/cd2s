@@ -9,7 +9,7 @@
   "name": "cbio-gbm-columbia-2019",
   "alternateName": "Glioblastoma (Columbia, Nat Med. 2019)",
   "description": "Whole-exome sequencing of 32 out of 42 glioblastomas patients with matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-gbm-columbia-2019",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gbm-columbia-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

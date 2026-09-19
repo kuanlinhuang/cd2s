@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-stad",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-stad",
   "name": "Stomach Adenocarcinoma",
   "alternateName": [
     "tcga_stad"
   ],
   "description": "The Cancer Genome Atlas-Stomach Adenoarcinoma (TCGA-STAD) data collection is part of a larger effort to enhance the TCGA data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed STAD cases. Please see the TCGA-STAD page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-STAD collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-stad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-stad",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-STAD",
     "gdc_program:TCGA",
@@ -63,7 +63,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -75,7 +75,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-tcga-stad.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-stad.json",
       "encodingFormat": "application/json"
     }
   ],

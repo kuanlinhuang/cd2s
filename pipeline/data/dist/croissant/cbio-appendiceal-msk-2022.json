@@ -9,7 +9,7 @@
   "name": "cbio-appendiceal-msk-2022",
   "alternateName": "Appendiceal Cancer (MSK, J Clin Oncol 2022)",
   "description": "Targeted sequencing of 273 appendiceal tumor/normal pairs via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-appendiceal-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-appendiceal-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

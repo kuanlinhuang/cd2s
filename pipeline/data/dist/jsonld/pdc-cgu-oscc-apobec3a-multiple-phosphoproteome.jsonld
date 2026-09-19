@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
   "name": "CGU OSCC APOBEC3A - Multiple Phosphoproteome",
   "alternateName": [
     "CGU OSCC APOBEC3A - Multiple Phosphoproteome"
   ],
   "description": "CGU OSCC APOBEC3A - Multiple Phosphoproteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000521"
   ],
@@ -37,7 +37,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -49,7 +49,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome.json",
       "encodingFormat": "application/json"
     }
   ],

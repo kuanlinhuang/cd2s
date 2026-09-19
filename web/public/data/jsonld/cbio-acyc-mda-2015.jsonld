@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-acyc-mda-2015",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-acyc-mda-2015",
   "name": "Adenoid Cystic Carcinoma (MDA, Clin Cancer Res 2015)",
   "alternateName": [
     "acyc_mda_2015"
   ],
   "description": "WGS of 21 salivary ACCs and targeted molecular analyses of a validation set (81 patients).",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-acyc-mda-2015",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-acyc-mda-2015",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=acyc_mda_2015"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-acyc-mda-2015.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-acyc-mda-2015.json",
       "encodingFormat": "application/json"
     }
   ],

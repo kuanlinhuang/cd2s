@@ -9,7 +9,7 @@
   "name": "cbio-es-iocurie-2014",
   "alternateName": "Ewing Sarcoma (Institut Curie, Cancer Discov 2014)",
   "description": "Whole-genome sequencing of 112 Ewing sarcoma samples and matched germ line DNA.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-es-iocurie-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-es-iocurie-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

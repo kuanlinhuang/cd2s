@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-trio-cru",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-trio-cru",
   "name": "Ukrainian National Research Center for Radiation Medicine Trio Study",
   "alternateName": [
     "TRIO-CRU"
   ],
   "description": "Ukrainian National Research Center for Radiation Medicine Trio Study",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-trio-cru",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-trio-cru",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TRIO-CRU",
     "gdc_program:TRIO",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-trio-cru.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-trio-cru.json",
       "encodingFormat": "application/json"
     }
   ],

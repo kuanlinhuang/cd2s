@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-prostatex",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-prostatex",
   "name": "PROSTATEx",
   "alternateName": [
     "prostatex"
   ],
   "description": "SPIE, along with the support of the American Association of Physicists in Medicine (AAPM) and the National Cancer Institute (NCI), will conduct a \u201cGrand Challenge\u201d on quantitative image analysis methods for the diagnostic classification of clinically significant prostate lesions. As part of the 2017 SPIE Medical Imaging Symposium, the PROSTATEx Challenge will provide a unique opportunity for participants to compare their algorithms with those of others from academia, industry, and government in a structured, direct way using the same data sets. For more details, go to https://www.spie.org/search?&term=PROSTATEx . * Release date of training set cases with truth: November 21, 2016 * Release date of test set cases without truth: December 12, 2016 * Submission date for participants' test set classification output: January 15, 2017 * Challenge results released to participants: January 20, 2017 * SPIE Medical Imaging Symposium: February 13-16, 2017. Please see the PROSTATEx page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-prostatex",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostatex",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=prostatex",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-prostatex.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-prostatex.json",
       "encodingFormat": "application/json"
     }
   ],

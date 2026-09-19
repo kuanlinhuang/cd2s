@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort",
   "name": "AML Ex Vivo Drug Response - Primary Cohort",
   "alternateName": [
     "AML Ex Vivo Drug Response - Primary Cohort - Phosphoproteome",
     "AML Ex Vivo Drug Response - Primary Cohort - Proteome"
   ],
   "description": "AML Ex Vivo Drug Response - Primary Cohort",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000399",
     "https://pdc.cancer.gov/pdc/study/PDC000398"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort.json",
       "encodingFormat": "application/json"
     }
   ],

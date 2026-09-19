@@ -9,7 +9,7 @@
   "name": "idc-gbm-dsc-mri-dro",
   "alternateName": "GBM-DSC-MRI-DRO",
   "description": "The standardization of dynamic susceptibility contrast (DSC)-magnetic resonance imaging (MRI) have been confounded by a lack of consensus on DSC-MRI methodology for preventing potential relative cerebral blood volume (CBV) inaccuracies, including the choice of acquisition protocols and postprocessing algorithms. Therefore, a digital reference object (DRO) was developed using physiological and kinetic parameters derived from a patient database, unique voxel-wise 3-dimensional tissue structures, and a validated MRI signal computational approach. The primary, intended use of the DRO is to validate image acquisition and analysis methods for accurately measuring relative cerebral blood volume in glioblastomas Please see the GBM-DSC-MRI-DRO wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-gbm-dsc-mri-dro",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-gbm-dsc-mri-dro",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "GBM-DSC-MRI-DRO",
   "version": "as-retrieved",

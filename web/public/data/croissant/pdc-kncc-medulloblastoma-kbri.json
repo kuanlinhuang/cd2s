@@ -9,7 +9,7 @@
   "name": "pdc-kncc-medulloblastoma-kbri",
   "alternateName": "KNCC Medulloblastoma - KBRI",
   "description": "KNCC Medulloblastoma - KBRI",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-kncc-medulloblastoma-kbri",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-kncc-medulloblastoma-kbri",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Comprehensive proteogenomic characterization reveals clinically relevant molecular subtypes associated with medulloblastoma progression.",
   "version": "as-retrieved",

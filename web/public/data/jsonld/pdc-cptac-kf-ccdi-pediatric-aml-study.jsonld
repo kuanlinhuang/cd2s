@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-aml-study",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-aml-study",
   "name": "CPTAC-KF-CCDI-Pediatric AML Study",
   "alternateName": [
     "CPTAC-KF-CCDI-Pediatric AML Study - Phosphoproteome",
     "CPTAC-KF-CCDI-Pediatric AML Study - Proteome"
   ],
   "description": "CPTAC-KF-CCDI-Pediatric AML Study",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-aml-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-aml-study",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000602",
     "https://pdc.cancer.gov/pdc/study/PDC000604"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-aml-study.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-aml-study.json",
       "encodingFormat": "application/json"
     }
   ],

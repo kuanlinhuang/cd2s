@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-validation",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-validation",
   "name": "PTRC HGSOC FFPE Validation",
   "alternateName": [
     "PTRC HGSOC FFPE Validation - Phosphoproteome",
     "PTRC HGSOC FFPE Validation - Proteome"
   ],
   "description": "PTRC HGSOC FFPE Validation",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-validation",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-validation",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000357",
     "https://pdc.cancer.gov/pdc/study/PDC000358"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-ptrc-hgsoc-ffpe-validation.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-ptrc-hgsoc-ffpe-validation.json",
       "encodingFormat": "application/json"
     }
   ],

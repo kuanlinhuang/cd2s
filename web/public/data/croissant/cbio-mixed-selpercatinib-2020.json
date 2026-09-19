@@ -9,7 +9,7 @@
   "name": "cbio-mixed-selpercatinib-2020",
   "alternateName": "Mixed Tumors Selpercatinib RET Trial (MSK, Nat Commun. 2022)",
   "description": "Targeted sequencing of Selpercatinib treated RET-driven solid cancers.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mixed-selpercatinib-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mixed-selpercatinib-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

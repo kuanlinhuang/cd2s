@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-pdmr-bl0293-f563",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-bl0293-f563",
   "name": "PDMR-BL0293-F563",
   "alternateName": [
     "pdmr_bl0293_f563"
   ],
   "description": "We identified and characterized a patient-derived xenograft model with metastatic potential, bladder xenograft BL0293-F563. In this study we performed a detailed imaging characterization of this model, which develops spontaneous liver and bone metastases. Please see the PDMR-BL0293-F563 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-pdmr-bl0293-f563",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-bl0293-f563",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pdmr_bl0293_f563",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-pdmr-bl0293-f563.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-pdmr-bl0293-f563.json",
       "encodingFormat": "application/json"
     }
   ],

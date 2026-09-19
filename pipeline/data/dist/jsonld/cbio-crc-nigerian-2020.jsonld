@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-crc-nigerian-2020",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-nigerian-2020",
   "name": "Disparities in metastatic colorectal cancer between Africans and Americans (MSK, 2020)",
   "alternateName": [
     "crc_nigerian_2020"
   ],
   "description": "Targeted sequencing of 64 colorectal tumor/normal pairs via MSK-IMPACT to determine the epigenetic differences seen in Nigerian patients.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-crc-nigerian-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-nigerian-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=crc_nigerian_2020"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-crc-nigerian-2020.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-crc-nigerian-2020.json",
       "encodingFormat": "application/json"
     }
   ],

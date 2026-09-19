@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cgci-htmcp-cc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-cc",
   "name": "HIV+ Tumor Molecular Characterization Project - Cervical Cancer",
   "alternateName": [
     "cgci_htmcp_cc"
   ],
   "description": "The HIV+ Tumor Molecular Characterization Project (HTMCP) cervical cancer cohort was assembled to study how HIV infection shapes cervical carcinoma in a population where both diseases are common. It is one of very few NCI-supported genomic cohorts whose participants are almost entirely Black African women recruited outside the United States, and that makes it structurally different from every other cervical cancer resource in the portfolio. The cohort carries whole genome sequencing on 124 cases, RNA sequencing on 123, methylation arrays on 120, microRNA on 118, and both histopathology and radiology images on 211 - an unusually complete multimodal picture for a cohort of this size and origin.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cgci-htmcp-cc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-cc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-CC",
     "gdc_program:CGCI",
@@ -64,7 +64,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -76,7 +76,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-cgci-htmcp-cc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-cc.json",
       "encodingFormat": "application/json"
     }
   ],

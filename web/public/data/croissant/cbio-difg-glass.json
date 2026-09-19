@@ -9,7 +9,7 @@
   "name": "cbio-difg-glass",
   "alternateName": "Diffuse Glioma (GLASS Consortium)",
   "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at <a href=\"https://www.synapse.org/#!Synapse:syn17038081/wiki/585622\">Synapse</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-difg-glass",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-glass",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

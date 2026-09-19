@@ -9,7 +9,7 @@
   "name": "cbio-brca-mapk-hp-msk-2021",
   "alternateName": "MAPK on resistance to anti-HER2 therapy for breast cancer (MSK, Nat Commun. 2022)",
   "description": "MSK-IMPACT targeted sequencing of 145 breast tumors with matched normal samples.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-brca-mapk-hp-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-mapk-hp-msk-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

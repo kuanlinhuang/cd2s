@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-aml-quizartinib-resistance",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-quizartinib-resistance",
   "name": "AML Quizartinib Resistance",
   "alternateName": [
     "AML Quizartinib Resistance -  Phosphoproteome",
     "AML Quizartinib Resistance -  Proteome"
   ],
   "description": "AML Quizartinib Resistance",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-aml-quizartinib-resistance",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-quizartinib-resistance",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000320",
     "https://pdc.cancer.gov/pdc/study/PDC000317"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-aml-quizartinib-resistance.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-aml-quizartinib-resistance.json",
       "encodingFormat": "application/json"
     }
   ],

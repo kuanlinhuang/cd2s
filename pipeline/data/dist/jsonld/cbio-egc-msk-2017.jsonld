@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-egc-msk-2017",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-msk-2017",
   "name": "Metastatic Esophagogastric Cancer (MSK, Cancer Discovery 2017)",
   "alternateName": [
     "egc_msk_2017"
   ],
   "description": "Targeted sequencing of 341 samples from 305 metastatic esophagogastric cancer patients",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-egc-msk-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-msk-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=egc_msk_2017"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-egc-msk-2017.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-egc-msk-2017.json",
       "encodingFormat": "application/json"
     }
   ],

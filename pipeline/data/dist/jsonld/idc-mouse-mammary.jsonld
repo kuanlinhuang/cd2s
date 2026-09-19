@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-mouse-mammary",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-mouse-mammary",
   "name": "Mouse-Mammary",
   "alternateName": [
     "mouse_mammary"
   ],
   "description": "This collection consists of Magnetic Resonance Imaging (MRI) of mouse breast cancer in 32 mice. Please see the Mouse-Mammary wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-mouse-mammary",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-mouse-mammary",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=mouse_mammary",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-mouse-mammary.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-mouse-mammary.json",
       "encodingFormat": "application/json"
     }
   ],

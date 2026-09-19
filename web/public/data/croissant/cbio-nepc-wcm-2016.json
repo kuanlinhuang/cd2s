@@ -9,7 +9,7 @@
   "name": "cbio-nepc-wcm-2016",
   "alternateName": "Neuroendocrine Prostate Cancer (Multi-Institute, Nat Med 2016)",
   "description": "Whole exome sequencing of 114 metastatic tumor/normal pairs to understand genomic overlap between castration resistant adenocarcinoma (CRPC-Adeno) and neuroendocrine histologies (CRPC-NE).",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-nepc-wcm-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-nepc-wcm-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

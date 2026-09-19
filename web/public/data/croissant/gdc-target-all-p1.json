@@ -9,7 +9,7 @@
   "name": "gdc-target-all-p1",
   "alternateName": "Acute Lymphoblastic Leukemia - Phase I",
   "description": "Acute Lymphoblastic Leukemia - Phase I",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-all-p1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Deregulation of DUX4 and ERG in acute lymphoblastic leukemia.",
   "version": "as-retrieved",

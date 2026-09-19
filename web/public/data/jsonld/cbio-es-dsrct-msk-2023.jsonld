@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-es-dsrct-msk-2023",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-es-dsrct-msk-2023",
   "name": "Ewing Sarcoma (MSK, Cancer Research 2024)",
   "alternateName": [
     "es_dsrct_msk_2023"
   ],
   "description": "Targeted Sequencing of 277 Ewing sarcoma and Desmoplastic small round cell patient tumors with their matched normal pairs via MSK-IMPACT platform to detect EWSR1 chromoplexy-associated structural rearrangements.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-es-dsrct-msk-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-es-dsrct-msk-2023",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=es_dsrct_msk_2023"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-es-dsrct-msk-2023.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-es-dsrct-msk-2023.json",
       "encodingFormat": "application/json"
     }
   ],

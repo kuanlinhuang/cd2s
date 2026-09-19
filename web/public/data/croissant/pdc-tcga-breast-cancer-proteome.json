@@ -9,7 +9,7 @@
   "name": "pdc-tcga-breast-cancer-proteome",
   "alternateName": "TCGA Breast Cancer Proteome",
   "description": "TCGA Breast Cancer Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-breast-cancer-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-breast-cancer-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
   "version": "as-retrieved",

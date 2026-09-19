@@ -9,7 +9,7 @@
   "name": "gdc-target-all-p2",
   "alternateName": "Acute Lymphoblastic Leukemia - Phase II",
   "description": "Acute Lymphoblastic Leukemia - Phase II",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-all-p2",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p2",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours.",
   "version": "as-retrieved",

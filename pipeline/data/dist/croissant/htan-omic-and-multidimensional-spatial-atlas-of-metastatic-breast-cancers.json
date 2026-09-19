@@ -9,7 +9,7 @@
   "name": "htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
   "alternateName": "Omic and Multidimensional Spatial Atlas of Metastatic Breast Cancers",
   "description": "This atlas follows metastatic breast cancer patients through treatment with serial biopsies, and measures each one across an unusually wide span: multiplexed tissue imaging, spatial transcriptomics, single-cell RNA and ATAC sequencing, bulk RNA and DNA, protein arrays and electron microscopy. It is the largest HTAN atlas by file count at 120,274 files and the only dataset indexed here carrying electron microscopy.\nThe serial design is what makes it scientifically distinctive. Most spatial resources capture one timepoint; this one captures the same patient before, during and after therapy, which is the only way to observe how spatial organization changes as resistance develops. Therapy and follow-up records are both present as HTAN clinical components.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "An omic and multidimensional spatial atlas from serial biopsies of an evolving metastatic breast cancer",
   "version": "as-retrieved",

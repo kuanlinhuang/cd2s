@@ -9,7 +9,7 @@
   "name": "pdc-ncc-icc",
   "alternateName": "NCC iCC",
   "description": "NCC iCC",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ncc-icc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ncc-icc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets.",
   "version": "as-retrieved",

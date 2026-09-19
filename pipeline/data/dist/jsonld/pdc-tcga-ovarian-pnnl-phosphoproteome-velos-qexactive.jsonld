@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
   "name": "TCGA Ovarian PNNL Phosphoproteome Velos Qexactive",
   "alternateName": [
     "TCGA Ovarian PNNL Phosphoproteome Velos Qexactive"
   ],
   "description": "TCGA Ovarian PNNL Phosphoproteome Velos Qexactive",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000115"
   ],
@@ -37,7 +37,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -49,7 +49,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive.json",
       "encodingFormat": "application/json"
     }
   ],

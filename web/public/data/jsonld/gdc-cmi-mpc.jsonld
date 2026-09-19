@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cmi-mpc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-mpc",
   "name": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
   "alternateName": [
     "CMI-MPC"
   ],
   "description": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cmi-mpc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-mpc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CMI-MPC",
     "gdc_program:CMI",
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-cmi-mpc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cmi-mpc.json",
       "encodingFormat": "application/json"
     }
   ],

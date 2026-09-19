@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-fm-ad",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-fm-ad",
   "name": "Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)",
   "alternateName": [
     "FM-AD"
   ],
   "description": "The Foundation Medicine Adult Cancer Clinical Dataset is by a wide margin the largest single cohort indexed here: 18,004 patients across many tumor types, profiled with a targeted DNA panel in a clinical rather than research setting. That scale is genuinely useful for questions about mutation frequency and co-occurrence in a real-world population, which is precisely where research cohorts are least representative.\nIt is also the clearest case in this corpus of a dataset whose catalog entry invites analyses it cannot support. Vital status is populated for 100% of cases and informative for 0% - every value is \"not reported\". Race is \"not reported\" for all 18,004 patients. Every treatment field is empty. Progression and last known disease status are populated for every case and informative for none. A researcher attracted by the sample size will find, after obtaining controlled access to 54,012 files, that no outcome-anchored analysis is possible.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-fm-ad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-fm-ad",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/FM-AD",
     "gdc_program:FM",
@@ -109,7 +109,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -121,7 +121,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-fm-ad.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-fm-ad.json",
       "encodingFormat": "application/json"
     }
   ],

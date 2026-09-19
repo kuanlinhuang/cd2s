@@ -58,4 +58,4 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-nsclc-radiogenomics.json
+- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiogenomics.json

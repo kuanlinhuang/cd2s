@@ -9,7 +9,7 @@
   "name": "idc-psma-pet-ct-lesions",
   "alternateName": "PSMA-PET-CT-Lesions",
   "description": "597 whole-body PSMA-PET/CT studies from 378 male patients with suspected or diagnosed prostate carcinoma, acquired at LMU University Hospital Munich (2014-2022). All PSMA-avid tumor lesions were manually segmented on PET images in 3D. The dataset includes DICOM images, DICOM SEG segmentation masks, and a TSV metadata file. Used in the autoPET III and IV Grand Challenges. Please see the PSMA-PET-CT-Lesions page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-psma-pet-ct-lesions",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-psma-pet-ct-lesions",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PSMA-PET-CT-Lesions",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-brca-dfci-2020",
   "alternateName": "Metastatic Breast Cancer (DFCI, Cancer Discov 2020)",
   "description": "Whole exome sequencing of 59 CDK4/6i exposed metastatic breast cancer tumors and their matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-brca-dfci-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-dfci-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-normal-skin-keratinocytes-2024",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-normal-skin-keratinocytes-2024",
   "name": "Normal Keratinocytes (UCSF, BioRxiv 2024)",
   "alternateName": [
     "normal_skin_keratinocytes_2024"
   ],
   "description": "Whole exome and targeted sequencing  data of 137 normal keratinocytes samples from human skin. The study is part of a broader analysis involving three distinct cell types, with findings stratified accordingly (see related <a href=\"https://www.cbioportal.org/study/summary?id=skin_melanocytes_2024\">melanocytes</a> and <a href=\"https://www.cbioportal.org/study/summary?id=normal_skin_fibroblast_2024\">fibroblasts</a> studies).",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-normal-skin-keratinocytes-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-normal-skin-keratinocytes-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=normal_skin_keratinocytes_2024"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-normal-skin-keratinocytes-2024.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-normal-skin-keratinocytes-2024.json",
       "encodingFormat": "application/json"
     }
   ],

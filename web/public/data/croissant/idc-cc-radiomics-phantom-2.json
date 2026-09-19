@@ -9,7 +9,7 @@
   "name": "idc-cc-radiomics-phantom-2",
   "alternateName": "CC-Radiomics-Phantom-2",
   "description": "Credence Cartridge Radiomics Phantom CT Scans with Controlled Scanning Approach (CC-Radiomics-Phantom-2) This collection consists of 251 CT scans of the Credence Cartridge Radiomic (CCR) phantom. This texture phantom was developed to investigate the feature robustness in the emerging field of radiomics. This phantom dataset was acquired on 4-8 CT scanners using a set of imaging parameters (e.g., reconstruction Field of View, Slice thickness, reconstruction kernels, mAs, and Pitch). A controlled scanning approach was employed to assess the variability in radiomic features due to each imaging parameter. This dataset will be useful to radiomic research community to identify a subset of robust radiomic features and for establishing the ground truths for future clinical investigations. Using this dataset, the numerical values of radiomic features can be cross-validated by other research groups using their own feature extraction tools. Please see the CC-Radiomics-Phantom-2 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-cc-radiomics-phantom-2",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-radiomics-phantom-2",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CC-Radiomics-Phantom-2",
   "version": "as-retrieved",

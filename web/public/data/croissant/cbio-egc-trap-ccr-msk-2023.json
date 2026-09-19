@@ -9,7 +9,7 @@
   "name": "cbio-egc-trap-ccr-msk-2023",
   "alternateName": "Esophagogastric Cancer (MSK, Clin Cancer Res 2023)",
   "description": "Whole exome sequencing of 64 esophagogastric cancers and their matched normal samples.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-egc-trap-ccr-msk-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-trap-ccr-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

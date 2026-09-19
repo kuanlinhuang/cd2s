@@ -5,7 +5,7 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
   "name": "Proteogenomics of Gastric Cancer",
   "alternateName": [
     "Proteogenomics of Gastric Cancer - Glycoproteome",
@@ -13,7 +13,7 @@
     "Proteogenomics of Gastric Cancer - Proteome"
   ],
   "description": "Proteogenomics of Gastric Cancer",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000216",
     "https://pdc.cancer.gov/pdc/study/PDC000215",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-proteogenomics-of-gastric-cancer.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-proteogenomics-of-gastric-cancer.json",
       "encodingFormat": "application/json"
     }
   ],

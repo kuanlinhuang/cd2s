@@ -9,7 +9,7 @@
   "name": "gdc-target-nbl",
   "alternateName": "Neuroblastoma",
   "description": "Neuroblastoma",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-nbl",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-nbl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Micrometastases in neuroblastoma: are they clinically important?",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-cgu-oscc-apobec3a-global-phosphoproteome",
   "alternateName": "CGU OSCC APOBEC3A - Global Phosphoproteome",
   "description": "CGU OSCC APOBEC3A - Global Phosphoproteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CGU OSCC APOBEC3A - Global Phosphoproteome",
   "version": "as-retrieved",

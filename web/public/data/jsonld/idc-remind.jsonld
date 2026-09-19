@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-remind",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-remind",
   "name": "ReMIND",
   "alternateName": [
     "remind"
   ],
   "description": "The Brain Resection Multimodal Imaging Database (ReMIND) contains pre- and intra-operative data collected on 114 consecutive patients who were surgically treated with image-guided tumor resection between 2018 and 2022. For all patients, preoperative MRI, 3D intraoperative ultrasound series, and intraoperative MRI are available. Additionally, each case typically contains segmentations, including the preoperative tumor, the pre-resection cerebrum, the previous resection cavity derived from the preoperative MRI (if applicable), and any residual tumor identified on the intraoperative MRI. In total, this collection contains 369 preoperative MRI series, 320 3D intraoperative ultrasound series, 301 intraoperative MRI series, and 356 segmentations. We expect this data to be a resource for computational research in brain shift and image analysis as well as for neurosurgical training in the interpretation of intraoperative ultrasound and intraoperative MRI. Please see the The Brain Resection Multimodal Imaging Database (ReMIND) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-remind",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-remind",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=remind",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-remind.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-remind.json",
       "encodingFormat": "application/json"
     }
   ],

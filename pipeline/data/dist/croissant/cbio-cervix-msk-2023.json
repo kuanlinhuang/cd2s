@@ -9,7 +9,7 @@
   "name": "cbio-cervix-msk-2023",
   "alternateName": "Cervical Cancer (MSK, Clin Cancer Res 2023)",
   "description": "Targeted sequencing of 177 cervical tumors and their matched normal samples via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-cervix-msk-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cervix-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-csf-msk-2024",
   "alternateName": "Cerebrospinal Fluid Circulating Tumor DNA (MSK, Acta Neuropathol Commun 2024)",
   "description": "Targeted sequencing of 1,007 cerebrospinal fluid circulating tumor DNA from patients with central nervous system tumors using MSK-IMPACT and their matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-csf-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-csf-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-difg-msk-2023",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-msk-2023",
   "name": "IDH-mutated Diffuse Glioma (MSK, Clin Cancer Res 2024)",
   "alternateName": [
     "difg_msk_2023"
   ],
   "description": "Targeted sequencing of 73 IDH-mutated low-grade gliomas and their matched normal pairs via MSK-IMPACT. The data is available on <a href=\"https://www.synapse.org/#!Synapse:syn52658621/wiki/624065\">Synapse</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-difg-msk-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-msk-2023",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=difg_msk_2023"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-difg-msk-2023.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-difg-msk-2023.json",
       "encodingFormat": "application/json"
     }
   ],

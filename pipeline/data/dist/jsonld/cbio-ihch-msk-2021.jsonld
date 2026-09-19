@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-ihch-msk-2021",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-ihch-msk-2021",
   "name": "Intrahepatic Cholangiocarcinoma (MSK, Hepatology 2021)",
   "alternateName": [
     "ihch_msk_2021"
   ],
   "description": "Targeted sequencing of 412 intrahepatic cholangiocarcinoma tumor/normal sample pairs.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-ihch-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ihch-msk-2021",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=ihch_msk_2021"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-ihch-msk-2021.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-ihch-msk-2021.json",
       "encodingFormat": "application/json"
     }
   ],

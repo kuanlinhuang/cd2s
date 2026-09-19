@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-egc-msk-tp53-ccr-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-msk-tp53-ccr-2022",
   "name": "Esophagogastric Cancer (MSK, Clin Cancer Res 2022)",
   "alternateName": [
     "egc_msk_tp53_ccr_2022"
   ],
   "description": "Targeted sequencing of 237 esophagogastric tumor/normal pairs via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-egc-msk-tp53-ccr-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-msk-tp53-ccr-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=egc_msk_tp53_ccr_2022"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-egc-msk-tp53-ccr-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-egc-msk-tp53-ccr-2022.json",
       "encodingFormat": "application/json"
     }
   ],

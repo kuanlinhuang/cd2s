@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-pediatric-ct-seg",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-pediatric-ct-seg",
   "name": "Pediatric-CT-SEG",
   "alternateName": [
     "pediatric_ct_seg"
   ],
   "description": "This dataset was collected by a collaboration of researchers from Children\u2019s Wisconsin, Marquette University, Varian Medical Systems, Medical College of Wisconsin, and Stanford University as part of a project funded by the National Institute of Biomedical Imaging and Bioengineering (U01EB023822) to develop tools for rapid, patient-specific CT organ dose estimation. The collection consists of CT images in DICOM format of 359 pediatric chest-abdomen-pelvis or abdomen-pelvis exams acquired from three CT scanners. The datasets represent random pediatric cases based upon routine clinical indications. Each dataset contains expert contours of up to twenty-nine structures in DICOM RTSS format. Please see the Pediatric-CT-SEG page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-pediatric-ct-seg",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pediatric-ct-seg",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pediatric_ct_seg",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-pediatric-ct-seg.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-pediatric-ct-seg.json",
       "encodingFormat": "application/json"
     }
   ],

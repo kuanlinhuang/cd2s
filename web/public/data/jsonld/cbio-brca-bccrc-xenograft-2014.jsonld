@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-brca-bccrc-xenograft-2014",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-bccrc-xenograft-2014",
   "name": "Breast Cancer Xenografts (British Columbia, Nature 2015)",
   "alternateName": [
     "brca_bccrc_xenograft_2014"
   ],
   "description": "Whole genome/targeted sequencing to evaluate the clonal dynamics in 116 breast cancer patient xenografts.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-brca-bccrc-xenograft-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-bccrc-xenograft-2014",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=brca_bccrc_xenograft_2014"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-brca-bccrc-xenograft-2014.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-brca-bccrc-xenograft-2014.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-chl-sccc-2023",
   "alternateName": "Classical Hodgkins Lymphoma (SCCC, Blood Cancer Discov 2023)",
   "description": "Whole-exome sequencing of 36 cases and whole-genome sequencing of 25 cases of classical hodgkins lymphomas and their matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-chl-sccc-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-chl-sccc-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

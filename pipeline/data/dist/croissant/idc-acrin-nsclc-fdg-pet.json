@@ -9,7 +9,7 @@
   "name": "idc-acrin-nsclc-fdg-pet",
   "alternateName": "ACRIN-NSCLC-FDG-PET",
   "description": "Thirty-seven institutions accrued 250 patients to the study ACRIN 6668. Eligible patients were >18 years with AJCC-criteria clinical stage IIB/III non-small cell lung carcinoma who were being planned for definitive concurrent chemoradiotherapy (inoperable disease). 173 had evaluable post-treatment PET, representing the analysis cohort for the primary end point. Please see the ACRIN-NSCLC-FDG-PET wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-acrin-nsclc-fdg-pet",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-nsclc-fdg-pet",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "ACRIN-NSCLC-FDG-PET",
   "version": "as-retrieved",

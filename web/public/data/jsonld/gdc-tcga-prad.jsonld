@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-prad",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-prad",
   "name": "Prostate Adenocarcinoma",
   "alternateName": [
     "tcga_prad"
   ],
   "description": "The Cancer Imaging Program (CIP) is working directly with primary investigators from institutes participating in TCGA to obtain and load images relating to the genomic, clinical, and pathological data being stored within the TCGA Data Portal. Currently this image collection of prostate adenocarcinoma (PRAD) patients can be matched by each unique case identifier with the extensive gene and expression data of the same case from The Cancer Genome Atlas Data Portal to research the link between clinical phenome and tissue genome. Please see the TCGA-PRAD page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-PRAD collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-prad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-prad",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-PRAD",
     "gdc_program:TCGA",
@@ -66,7 +66,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -78,7 +78,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-tcga-prad.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-prad.json",
       "encodingFormat": "application/json"
     }
   ],

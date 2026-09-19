@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ncc-icc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-ncc-icc",
   "name": "NCC iCC",
   "alternateName": [
     "NCC iCC - Phosphoproteome",
     "NCC iCC - Proteome"
   ],
   "description": "NCC iCC",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ncc-icc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ncc-icc",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000363",
     "https://pdc.cancer.gov/pdc/study/PDC000356"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-ncc-icc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-ncc-icc.json",
       "encodingFormat": "application/json"
     }
   ],

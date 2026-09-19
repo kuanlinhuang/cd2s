@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-colon-cancer-proteome",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-colon-cancer-proteome",
   "name": "TCGA Colon Cancer Proteome",
   "alternateName": [
     "TCGA Colon Cancer Proteome"
   ],
   "description": "TCGA Colon Cancer Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-tcga-colon-cancer-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-colon-cancer-proteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000111"
   ],
@@ -37,7 +37,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -49,7 +49,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-tcga-colon-cancer-proteome.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-colon-cancer-proteome.json",
       "encodingFormat": "application/json"
     }
   ],

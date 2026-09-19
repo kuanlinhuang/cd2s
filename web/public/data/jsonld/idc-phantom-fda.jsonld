@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-phantom-fda",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-phantom-fda",
   "name": "Phantom FDA",
   "alternateName": [
     "phantom_fda"
   ],
   "description": "A series of CT sets scanned at differing slice thicknesses and exposure parameters of a chest simulating phantom containing lung nodules. It was constructed by an NCI-FDA joint effort to provide data for nodule-detecting CAD processes. Please see the Phantom FDA page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-phantom-fda",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-phantom-fda",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=phantom_fda",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-phantom-fda.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-phantom-fda.json",
       "encodingFormat": "application/json"
     }
   ],

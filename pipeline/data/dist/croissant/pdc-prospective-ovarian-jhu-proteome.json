@@ -9,7 +9,7 @@
   "name": "pdc-prospective-ovarian-jhu-proteome",
   "alternateName": "Prospective Ovarian JHU Proteome",
   "description": "Prospective Ovarian JHU Proteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-prospective-ovarian-jhu-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-jhu-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
   "version": "as-retrieved",

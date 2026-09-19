@@ -9,7 +9,7 @@
   "name": "cbio-bladder-columbia-msk-2018",
   "alternateName": "Bladder Cancer (Columbia University/MSK, Cell 2018)",
   "description": "Targeted sequencing of 130 bladder cancer tumors, organoids and xenografts and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-bladder-columbia-msk-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bladder-columbia-msk-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

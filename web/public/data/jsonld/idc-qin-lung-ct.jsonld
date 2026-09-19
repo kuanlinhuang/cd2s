@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-qin-lung-ct",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-lung-ct",
   "name": "QIN LUNG CT",
   "alternateName": [
     "qin_lung_ct"
   ],
   "description": "The Computed tomography (CT) Image data was obtained on patients diagnosed with Non-Small Cell Lung Cancer (NSCLC) with mixed stage & histology from the H. Lee Moffitt Cancer Center and Research Institute. Scans were obtained from patients who underwent surgical resection and had corresponding pre-surgery diagnostic CTs. Please see the QIN LUNG CT page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-qin-lung-ct",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-lung-ct",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_lung_ct",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-qin-lung-ct.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-qin-lung-ct.json",
       "encodingFormat": "application/json"
     }
   ],

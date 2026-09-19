@@ -9,7 +9,7 @@
   "name": "cbio-blca-cornell-2016",
   "alternateName": "Urothelial Carcinoma (Cornell/Trento, Nat Gen 2016)",
   "description": "Whole-exome sequencing of 72 tumor samples (with 32 matched normals) in Urothelial Carcinoma.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-cornell-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-cornell-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

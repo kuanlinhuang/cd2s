@@ -9,7 +9,7 @@
   "name": "cbio-mng-utoronto-2021",
   "alternateName": "Meningioma (University of Toronto, Nature 2021)",
   "description": "Meningioma DNA somatic copy number, somatic point mutations, DNA methylation, RNA abundance, protein abundance",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mng-utoronto-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mng-utoronto-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

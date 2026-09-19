@@ -9,7 +9,7 @@
   "name": "gdc-cmi-mpc",
   "alternateName": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
   "description": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-cmi-mpc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-mpc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Epithelial-mesenchymal transition and its transcription factors.",
   "version": "as-retrieved",

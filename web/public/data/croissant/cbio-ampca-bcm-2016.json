@@ -9,7 +9,7 @@
   "name": "cbio-ampca-bcm-2016",
   "alternateName": "Ampullary Carcinoma (Baylor College of Medicine, Cell Reports 2016)",
   "description": "Exome sequencing analysis of 160 cancers arising in the periampullary region, 62 of these clearly arising from either the bile duct (n = 44) or the duodenum (n = 18) and 98 for which the epithelium of origin could not be clearly defined morphologically (AMPCA).",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-ampca-bcm-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ampca-bcm-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

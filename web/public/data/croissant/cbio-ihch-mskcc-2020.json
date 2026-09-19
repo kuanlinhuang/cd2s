@@ -9,7 +9,7 @@
   "name": "cbio-ihch-mskcc-2020",
   "alternateName": "Intrahepatic Cholangiocarcinoma (MSK, Clin Cancer Res 2021)",
   "description": "Targeted sequencing of IMPACT and CMO samples",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-ihch-mskcc-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ihch-mskcc-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-crc-orion-2024",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-orion-2024",
   "name": "Colorectal Adenocarcinoma (DFCI/Orion, BioRxiv 2024)",
   "alternateName": [
     "crc_orion_2024"
   ],
   "description": "Combined spatial and targeted genomic analysis of 74 colon and rectal cancers.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-crc-orion-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-orion-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=crc_orion_2024"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-crc-orion-2024.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-crc-orion-2024.json",
       "encodingFormat": "application/json"
     }
   ],

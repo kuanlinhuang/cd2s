@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mel-dfci-2019",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-dfci-2019",
   "name": "Metastatic Melanoma (DFCI, Nature Medicine 2019)",
   "alternateName": [
     "mel_dfci_2019"
   ],
   "description": "Whole-exome sequencing of 144 pre-treatment samples from 144 patients with metastatic melanoma treated with anti-PD1 ICB. <br><strong>Related Dataset:</strong> A harmonized version with extended neoantigen annotations (122 samples) is available: <a href=\"https://www.cbioportal.org/study/summary?id=mel_iatlas_liu_2019\">iAtlas Harmonized Version</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mel-dfci-2019",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-dfci-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mel_dfci_2019"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-mel-dfci-2019.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mel-dfci-2019.json",
       "encodingFormat": "application/json"
     }
   ],

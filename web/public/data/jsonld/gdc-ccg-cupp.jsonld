@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-ccg-cupp",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-ccg-cupp",
   "name": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
   "alternateName": [
     "CCG-CUPP"
   ],
   "description": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-ccg-cupp",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ccg-cupp",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CCG-CUPP",
     "gdc_program:CCG",
@@ -61,7 +61,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -73,7 +73,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-ccg-cupp.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-ccg-cupp.json",
       "encodingFormat": "application/json"
     }
   ],

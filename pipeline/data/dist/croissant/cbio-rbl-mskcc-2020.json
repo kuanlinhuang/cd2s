@@ -9,7 +9,7 @@
   "name": "cbio-rbl-mskcc-2020",
   "alternateName": "Retinoblastoma (MSK, Cancers 2021)",
   "description": "Targeted sequencing of 83 Retinoblastoma tumor-normal pairs via MSK-IMPACT. Genomic data provided is limited to somatic alterations.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-rbl-mskcc-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-rbl-mskcc-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

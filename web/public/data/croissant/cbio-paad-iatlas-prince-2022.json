@@ -9,7 +9,7 @@
   "name": "cbio-paad-iatlas-prince-2022",
   "alternateName": "Metastatic Pancreatic Adenocarcinoma (PRINCE Trial, Nat Med. 2022) - iAtlas Harmonized",
   "description": "Whole-exome sequencing and neoantigen landscape analysis of 93 metastatic pancreatic adenocarcinomas and their matched normals from a randomized phase 2 trial evaluating the efficacy of nivolumab and/or sotigalimab with gemcitabine/nab-paclitaxel (chemotherapy) as first-line therapy for metastatic pancreatic cancer. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-paad-iatlas-prince-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-iatlas-prince-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

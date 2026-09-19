@@ -9,7 +9,7 @@
   "name": "cbio-blca-msk-2024",
   "alternateName": "Bladder Urothelial Carcinoma SWOG S1314 Trial (MSK, JCO Precis Oncol 2024)",
   "description": "Targeted sequencing of 184 muscle-invasive bladder cancer (MIBC) samples and their matched normals using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-blca-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-anti-pd-1-lung",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-anti-pd-1-lung",
   "name": "Anti-PD-1_Lung",
   "alternateName": [
     "anti_pd_1_lung"
   ],
   "description": "This collection includes 46 lung cases treated with anti-PD1 immunotherapy in 2016, each with pre-treatment imaging (CT,PT,SC) and most with 1 imaging follow-up timepoint. Please see the Anti-PD-1_Lung wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-anti-pd-1-lung",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-anti-pd-1-lung",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=anti_pd_1_lung",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-anti-pd-1-lung.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-anti-pd-1-lung.json",
       "encodingFormat": "application/json"
     }
   ],

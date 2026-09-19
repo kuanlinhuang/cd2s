@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-thym",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-thym",
   "name": "Thymoma",
   "alternateName": [
     "tcga_thym"
   ],
   "description": "This cancer develops in the outer surface of the thymus, a gland behind the breastbone that produces T-cells, a type of white blood cells. Thymoma is rare, but it is the most common tumor in adults affecting the mediastinum, which is the cavity between the lungs containing the heart, esophagus, and trachea. A tumor of the thymus tends to grow slowly and rarely spreads to other parts of the body. However, of the estimated 400 Americans who develop this cancer each year, half are diagnosed with metastatic thymoma. When the cancer metastasizes, only 45% of patients survive five years after their diagnosis. Please see the DICOM converted Slide Microscopy images for the TCGA-THYM collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-tcga-thym",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-thym",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-THYM",
     "gdc_program:TCGA",
@@ -60,7 +60,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -72,7 +72,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-tcga-thym.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-thym.json",
       "encodingFormat": "application/json"
     }
   ],

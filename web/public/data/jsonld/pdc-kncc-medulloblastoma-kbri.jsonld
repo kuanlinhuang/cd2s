@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-kncc-medulloblastoma-kbri",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-kncc-medulloblastoma-kbri",
   "name": "KNCC Medulloblastoma - KBRI",
   "alternateName": [
     "KNCC Medulloblastoma - KBRI - Phosphoproteome",
     "KNCC Medulloblastoma - KBRI - Proteome"
   ],
   "description": "KNCC Medulloblastoma - KBRI",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-kncc-medulloblastoma-kbri",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-kncc-medulloblastoma-kbri",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000525",
     "https://pdc.cancer.gov/pdc/study/PDC000523"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-kncc-medulloblastoma-kbri.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-kncc-medulloblastoma-kbri.json",
       "encodingFormat": "application/json"
     }
   ],

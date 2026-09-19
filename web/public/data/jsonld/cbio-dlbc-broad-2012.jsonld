@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-dlbc-broad-2012",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbc-broad-2012",
   "name": "Diffuse Large B-Cell Lymphoma (Broad, PNAS 2012)",
   "alternateName": [
     "dlbc_broad_2012"
   ],
   "description": "Whole exome sequencing of 58 primary DLBCL samples and their matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-dlbc-broad-2012",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbc-broad-2012",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=dlbc_broad_2012"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-dlbc-broad-2012.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-dlbc-broad-2012.json",
       "encodingFormat": "application/json"
     }
   ],

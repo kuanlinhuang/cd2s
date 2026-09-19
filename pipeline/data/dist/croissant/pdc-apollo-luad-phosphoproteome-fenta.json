@@ -9,7 +9,7 @@
   "name": "pdc-apollo-luad-phosphoproteome-fenta",
   "alternateName": "APOLLO LUAD - Phosphoproteome - FeNTA",
   "description": "APOLLO LUAD - Phosphoproteome - FeNTA",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-apollo-luad-phosphoproteome-fenta",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-luad-phosphoproteome-fenta",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "APOLLO LUAD - Phosphoproteome - FeNTA",
   "version": "as-retrieved",

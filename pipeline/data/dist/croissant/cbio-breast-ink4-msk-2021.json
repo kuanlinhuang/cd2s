@@ -9,7 +9,7 @@
   "name": "cbio-breast-ink4-msk-2021",
   "alternateName": "Metastatic Breast Cancer (MSK, Cancer Discovery 2022)",
   "description": "Targeted Sequencing of 1365 metastatic Breast Cancer tumor/normal pairs via MSK-IMPACT to understand the role of INK4 on CDK4/6 resistance.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-breast-ink4-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-ink4-msk-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

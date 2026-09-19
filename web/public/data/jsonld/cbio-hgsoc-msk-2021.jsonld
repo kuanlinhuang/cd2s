@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-hgsoc-msk-2021",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-hgsoc-msk-2021",
   "name": "High-Grade Serous Ovarian Cancer (MSK, NPJ Genome Med 2021)",
   "alternateName": [
     "hgsoc_msk_2021"
   ],
   "description": "Targeted Sequencing of 45 Serous Ovarian Cancer tumor/normal pairs from 45 patients.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-hgsoc-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hgsoc-msk-2021",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=hgsoc_msk_2021"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-hgsoc-msk-2021.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-hgsoc-msk-2021.json",
       "encodingFormat": "application/json"
     }
   ],

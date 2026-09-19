@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-phosphoproteome",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-phosphoproteome",
   "name": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Sarcoma Phosphoproteome",
   "alternateName": [
     "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Sarcoma Phosphoproteome"
   ],
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Sarcoma Phosphoproteome",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-phosphoproteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-phosphoproteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000681"
   ],
@@ -37,7 +37,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -49,7 +49,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-phosphoproteome.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-phosphoproteome.json",
       "encodingFormat": "application/json"
     }
   ],

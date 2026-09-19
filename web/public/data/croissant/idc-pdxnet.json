@@ -9,7 +9,7 @@
   "name": "idc-pdxnet",
   "alternateName": "PDXNet",
   "description": "A pan-cancer repository of 5,420 DICOM Slide Microscopy instances from 919 patient-derived xenograft (PDX) and paired parental tumor H&E whole slide images (870 mouse PDX, 49 human progenitor) curated from the NCI PDXNet Consortium. Images have associated genomic, transcriptomic, and clinical metadata, as well as pathologic assessments and, in some cases, detailed pathologic annotations. The original TIFF and SVS images were converted to DICOM SM format. Please see the PDXNet Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-pdxnet",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdxnet",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PDXNet",
   "version": "as-retrieved",

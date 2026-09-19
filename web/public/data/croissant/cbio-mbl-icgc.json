@@ -9,7 +9,7 @@
   "name": "cbio-mbl-icgc",
   "alternateName": "Medulloblastoma (ICGC, Nature 2012)",
   "description": "Comprehensive profiling of 125 matched tumor and germline medulloblastoma samples",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mbl-icgc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-icgc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-covid-19-ar",
   "alternateName": "COVID-19-AR",
   "description": "Radiology imaging is playing an increasingly vital role in the diagnosis of COVID-19 patients and determining therapeutic options, patient care management and new research directions. We have published a collection of radiographic and CT imaging studies for patients who tested positive for COVID-19. Each patient is described by a limited set of clinical data correlates that includes demographics, comorbidities, selected lab data and key radiology findings. These data are cross-linked to SARS-COV-2 cDNA sequence data extracted from clinical isolates from the same population, uploaded to the Genbank repository. Please see the COVID-19-AR page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-covid-19-ar",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-covid-19-ar",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "COVID-19-AR",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "gdc-apollo-ov",
   "alternateName": "APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma",
   "description": "APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-apollo-ov",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-apollo-ov",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma",
   "version": "as-retrieved",

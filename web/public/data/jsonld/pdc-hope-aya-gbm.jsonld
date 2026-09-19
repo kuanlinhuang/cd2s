@@ -5,7 +5,7 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-hope-aya-gbm",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-hope-aya-gbm",
   "name": "HOPE-AYA GBM",
   "alternateName": [
     "HOPE-AYA GBM - Glycoproteome",
@@ -13,7 +13,7 @@
     "HOPE-AYA GBM - Proteome"
   ],
   "description": "HOPE-AYA GBM",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-hope-aya-gbm",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-hope-aya-gbm",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000499",
     "https://pdc.cancer.gov/pdc/study/PDC000497",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-hope-aya-gbm.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-hope-aya-gbm.json",
       "encodingFormat": "application/json"
     }
   ],

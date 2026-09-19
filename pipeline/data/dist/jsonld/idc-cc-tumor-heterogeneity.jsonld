@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-cc-tumor-heterogeneity",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-tumor-heterogeneity",
   "name": "CC-Tumor-Heterogeneity",
   "alternateName": [
     "cc_tumor_heterogeneity"
   ],
   "description": "The functional and biological properties of the tumor microenvironment are fundamentally important determinants of tumor response and therapy outcome in cancer. Oxygenation status and vascularity are known to influence radiation response, and molecular energy metabolism and proliferation impact on recurrence and metastatic progression. Please see the Cervical Cancer \u2013 Tumor Heterogeneity: Serial Functional and Molecular Imaging Across the Radiation Therapy Course in Advanced Cervical Cancer Cervical Cancer wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-cc-tumor-heterogeneity",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-tumor-heterogeneity",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cc_tumor_heterogeneity",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-cc-tumor-heterogeneity.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cc-tumor-heterogeneity.json",
       "encodingFormat": "application/json"
     }
   ],

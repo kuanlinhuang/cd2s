@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-prad-mskcc-2014",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc-2014",
   "name": "Prostate Adenocarcinoma (MSK, PNAS 2014)",
   "alternateName": [
     "prad_mskcc_2014"
   ],
   "description": "Genome-wide copy number profiling in 104 primary prostate cancer tumor/normal pairs. <a href=\"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54691\">Raw data via GEO (GSE54691)</a>.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-prad-mskcc-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc-2014",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_mskcc_2014"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-prad-mskcc-2014.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-mskcc-2014.json",
       "encodingFormat": "application/json"
     }
   ],

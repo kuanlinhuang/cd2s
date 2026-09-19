@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-wt",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-wt",
   "name": "High-Risk Wilms Tumor",
   "alternateName": [
     "TARGET-WT"
   ],
   "description": "High-Risk Wilms Tumor",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-target-wt",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-wt",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-WT",
     "gdc_program:TARGET",
@@ -49,7 +49,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -61,7 +61,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-target-wt.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-wt.json",
       "encodingFormat": "application/json"
     }
   ],

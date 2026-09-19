@@ -9,7 +9,7 @@
   "name": "idc-soft-tissue-sarcoma",
   "alternateName": "Soft-tissue-Sarcoma",
   "description": "In this study, a cohort of 51 patients with histologically proven soft-tissue sarcomas (STSs) of the extremities was retrospectively evaluated. During the follow-up period, 19 patients developed lung metastases. Patients with metastatic and/or recurrent STSs at presentation were excluded from the study. All patients had pre-treatment FDG-PET/CT and MRI scans. Please see the Soft Tissue Sarcoma page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-soft-tissue-sarcoma",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-soft-tissue-sarcoma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Soft-tissue-Sarcoma",
   "version": "as-retrieved",

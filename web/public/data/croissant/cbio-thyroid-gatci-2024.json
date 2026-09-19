@@ -9,7 +9,7 @@
   "name": "cbio-thyroid-gatci-2024",
   "alternateName": "Anaplastic Thyroid Cancers (GATCI, Cell Reports 2024)",
   "description": "Whole-genome or whole-exome sequencing of 190 anaplastic thyroid carcinoma (ATC) and co-occurring differentiated thyroid carcinoma (DTC) samples.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-thyroid-gatci-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-thyroid-gatci-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

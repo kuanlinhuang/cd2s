@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-dp1-clinical-",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-dp1-clinical-",
   "name": "Microscaled Proteogenomic Methods for Precision Oncology DP1 Clinical Trial",
   "alternateName": [
     "Microscaled Proteogenomic Methods for Precision Oncology DP1 Clinical Trial - Phosphoproteome",
     "Microscaled Proteogenomic Methods for Precision Oncology DP1 Clinical Trial - Proteome"
   ],
   "description": "Microscaled Proteogenomic Methods for Precision Oncology DP1 Clinical Trial",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-dp1-clinical-",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-dp1-clinical-",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000326",
     "https://pdc.cancer.gov/pdc/study/PDC000325"
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-dp1-clinical-.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-dp1-clinical-.json",
       "encodingFormat": "application/json"
     }
   ],

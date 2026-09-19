@@ -9,7 +9,7 @@
   "name": "gdc-ccdi-mci",
   "alternateName": "Molecular Characterization Initiative (MCI)",
   "description": "The Molecular Characterization Initiative (MCI) is a component of the National Cancer Institute\u2019s (NCI) Childhood Cancer Data Initiative (CCDI). It offers state-of-the-art molecular testing at no cost to newly diagnosed children, adolescents, and young adults (AYAs) with central nervous system (CNS) tumors, soft tissue sarcomas (STS), certain rare childhood cancers (RAR), and certain neuroblastomas (NBL) treated at a Children\u2019s Oncology Group (COG)\u2013affiliated hospital. The goal of MCI is to enhance the understanding of genetic factors in pediatric cancers and to provide timely, clinically relevant findings to doctors and families to aid in treatment decisions and determine eligibility for certain planned COG clinical trials. Please see the DICOM converted whole slide hematoxylin and eosin stained images from the Molecular Characterization Initiative of the National Cancer Institute's Childhood Cancer Data Initiative information page to learn more about the images and any supporting metadata for this collection, and to learn about attribution/citation requirements.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-ccdi-mci",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ccdi-mci",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "The Childhood Cancer Data Initiative: Using the Power of Data to Learn From and Improve Outcomes for Every Child and Young Adult With Pediatric Cancer.",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-pancreas-ctdna-msk-2025",
   "alternateName": "Pancreatic Cancer cfDNA (MSK, J Natl Cancer Inst 2025)",
   "description": "Genomic profiling by ctDNA is feasible in patients with PDAC and is informative in specific groups such as those with untreated metastatic disease, higher disease burden and liver metastases.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-pancreas-ctdna-msk-2025",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pancreas-ctdna-msk-2025",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

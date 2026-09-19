@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-coadread-mskcc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-mskcc",
   "name": "Colorectal Adenocarcinoma Triplets (MSK, Genome Biol 2014)",
   "alternateName": [
     "coadread_mskcc"
   ],
   "description": "Targeted sequencing of primary, metastatic, and normal tissues from 69 colorectal adenocarcinoma patients.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-coadread-mskcc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-mskcc",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=coadread_mskcc"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-coadread-mskcc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-coadread-mskcc.json",
       "encodingFormat": "application/json"
     }
   ],

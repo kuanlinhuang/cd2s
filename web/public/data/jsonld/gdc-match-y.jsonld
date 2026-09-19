@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-y",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-y",
   "name": "Genomic Characterization CS-MATCH-0007 Arm Y",
   "alternateName": [
     "MATCH-Y"
   ],
   "description": "Genomic Characterization CS-MATCH-0007 Arm Y",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/gdc-match-y",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-y",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/MATCH-Y",
     "gdc_program:MATCH",
@@ -62,7 +62,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -74,7 +74,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/gdc-match-y.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-match-y.json",
       "encodingFormat": "application/json"
     }
   ],

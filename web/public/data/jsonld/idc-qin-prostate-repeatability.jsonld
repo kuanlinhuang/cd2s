@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-qin-prostate-repeatability",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-prostate-repeatability",
   "name": "QIN-PROSTATE-Repeatability",
   "alternateName": [
     "qin_prostate_repeatability"
   ],
   "description": "This is a dataset with multiparametric prostate MRI applied in a test-retest setting, allowing to evaluate repeatability of the MRI-based measurements in the prostate. There is very limited data about the repeatability in mpMRI of the prostate, while such information is critical for establishing technical characteristics of mpMRI as imaging biomarker of prostate cancer. Please see the QIN-PROSTATE-Repeatability wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-qin-prostate-repeatability",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-prostate-repeatability",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_prostate_repeatability",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-qin-prostate-repeatability.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-qin-prostate-repeatability.json",
       "encodingFormat": "application/json"
     }
   ],

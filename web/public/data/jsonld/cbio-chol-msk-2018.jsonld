@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-chol-msk-2018",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-chol-msk-2018",
   "name": "Cholangiocarcinoma (MSK, Clin Cancer Res 2018)",
   "alternateName": [
     "chol_msk_2018"
   ],
   "description": "Targeted sequencing (MSK-IMPACT) of 195 tumor samples (194 with matched normals) from 192 cholangiocarcinoma patients.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-chol-msk-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-chol-msk-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=chol_msk_2018"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-chol-msk-2018.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-chol-msk-2018.json",
       "encodingFormat": "application/json"
     }
   ],

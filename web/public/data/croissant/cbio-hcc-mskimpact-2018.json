@@ -9,7 +9,7 @@
   "name": "cbio-hcc-mskimpact-2018",
   "alternateName": "Hepatocellular Carcinoma (MSK, Clin Cancer Res 2018)",
   "description": "MSK-IMPACT sequencing of 127 Hepatocellular Carcinoma tumor samples with matched normals.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-hcc-mskimpact-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hcc-mskimpact-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

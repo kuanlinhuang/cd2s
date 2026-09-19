@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mbl-icgc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-icgc",
   "name": "Medulloblastoma (ICGC, Nature 2012)",
   "alternateName": [
     "mbl_icgc"
   ],
   "description": "Comprehensive profiling of 125 matched tumor and germline medulloblastoma samples",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-mbl-icgc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-icgc",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mbl_icgc"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-mbl-icgc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mbl-icgc.json",
       "encodingFormat": "application/json"
     }
   ],

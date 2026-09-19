@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-rider-lung-ct",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-rider-lung-ct",
   "name": "RIDER Lung CT",
   "alternateName": [
     "rider_lung_ct"
   ],
   "description": "RIDER Lung CT is a subsection of the broader Reference Image Database to Evaluate Therapy Response (RIDER) collection. RIDER is a targeted data collection for the purpose of generating an initial consensus on how to harmonize data collection and analysis for quantitative imaging methods as applied to measure the response to drug or radiation therapy. The long term goal is to provide a resource to permit harmonized methods for data collection and analysis across different commercial imaging platforms, as required to support multi-site clinical trials, using imaging as a biomarker for therapy response. Please see the RIDER Lung CT page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-rider-lung-ct",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-rider-lung-ct",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=rider_lung_ct",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-rider-lung-ct.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-rider-lung-ct.json",
       "encodingFormat": "application/json"
     }
   ],

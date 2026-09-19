@@ -9,7 +9,7 @@
   "name": "cbio-chol-jhu-2013",
   "alternateName": "Intrahepatic Cholangiocarcinoma (JHU, Nat Genet 2013)",
   "description": "Exome sequencing of tumor/normal pairs from 32 intrahepatic cholangiocarcinoma cases and 8 gall bladder carcinoma cases.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-chol-jhu-2013",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-chol-jhu-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

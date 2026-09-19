@@ -9,7 +9,7 @@
   "name": "cbio-biliary-tract-msk-2026",
   "alternateName": "Hepatobiliary Cancer (MSK, 2026)",
   "description": "Targeted sequencing of 1,291 hepatobiliary cancer tumor/normal samples via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-biliary-tract-msk-2026",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-biliary-tract-msk-2026",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

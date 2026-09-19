@@ -9,7 +9,7 @@
   "name": "idc-nlst",
   "alternateName": "NLST",
   "description": "This collection contains all CT exams from the National Lung Screening Trial (NLST), which was conducted to determine whether screening with low-dose CT could reduce mortality from lung cancer for persons at high risk for lung cancer at 33 U.S. medical centers. Participants were randomly assigned to undergo three annual screenings between 2002-2004. Please see the NLST wiki page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the NLST collection wiki page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-nlst",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nlst",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NLST",
   "version": "as-retrieved",

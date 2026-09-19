@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-hgsoc-ffpe-discovery",
   "alternateName": "PTRC HGSOC FFPE Discovery",
   "description": "PTRC HGSOC FFPE Discovery",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-discovery",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-discovery",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PTRC HGSOC FFPE Discovery",
   "version": "as-retrieved",

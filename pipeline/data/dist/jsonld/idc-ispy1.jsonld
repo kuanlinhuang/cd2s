@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ispy1",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ispy1",
   "name": "ISPY1",
   "alternateName": [
     "ispy1"
   ],
   "description": "ISPY1/ACRIN 6657 was designed as a prospective study to test MRI for ability to predict response to treatment and risk-of-recurrence in patients with stage 2 or 3 breast cancer receiving neoadjuvant chemotherapy (NACT). ACRIN 6657 was conducted as a companion study to CALGB 150007, a correlative science study evaluating tissue-based biomarkers in the setting of neoadjuvant treatment of breast cancer. Collectively, CALGB 150007 and ACRIN 6657 formed the basis of the multicenter Investigation of Serial Studies to Predict Your Therapeutic Response with Imaging and moLecular Analysis (I-SPY TRIAL) breast cancer trial, a study of imaging and tissue-based biomarkers for predicting pathologic complete response (pCR) and recurrence-free survival (RFS). The collection consists of 847 MR studies from 222 subjects. Please see the ISPY1 page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-ispy1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ispy1",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ispy1",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/idc-ispy1.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ispy1.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-yonsei-cancer-center-tnbc",
   "alternateName": "Yonsei Cancer Center - TNBC",
   "description": "Yonsei Cancer Center - TNBC",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/pdc-yonsei-cancer-center-tnbc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-yonsei-cancer-center-tnbc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic decoding of chemotherapy resistance in patients with triple-negative breast cancer.",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-eay131",
   "alternateName": "EAY131",
   "description": "This collection contains imaging and clinical data for \"unmatched\" patients who didn't meet the criteria for the genetic sub-studies in the \"Targeted Therapy Directed by Genetic Testing in Treating Patients With Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).\" This trial was sponsored by the National Cancer Institute and performed by the ECOG-ACRIN Cancer Research Group under study numbers NCT02465060 and EAY131. The Study Chair was Keith T Flaherty, MD. Please see the EAY131 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-eay131",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-eay131",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "EAY131",
   "version": "as-retrieved",

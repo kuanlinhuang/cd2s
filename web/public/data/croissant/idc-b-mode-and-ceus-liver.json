@@ -9,7 +9,7 @@
   "name": "idc-b-mode-and-ceus-liver",
   "alternateName": "B-mode-and-CEUS-Liver",
   "description": "This Collection contains contrast-enhanced ultrasound to a) characterize liver lesions and b) monitor treatment response. Sagittal and transverse plane ultrasound data was obtained with curvilinear probe. Please see the B-mode-and-CEUS-Liver wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/idc-b-mode-and-ceus-liver",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-b-mode-and-ceus-liver",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "B-mode-and-CEUS-Liver",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-rectal-msk-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-rectal-msk-2022",
   "name": "Rectal Cancer (MSK, Nature Medicine 2022)",
   "alternateName": [
     "rectal_msk_2022"
   ],
   "description": "DNA and RNA sequencing of 738 primary rectal tumors.",
-  "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/datasets/cbio-rectal-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-rectal-msk-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=rectal_msk_2022"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase-kuanlinhuangs-projects.vercel.app/data/datasets/cbio-rectal-msk-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-rectal-msk-2022.json",
       "encodingFormat": "application/json"
     }
   ],
