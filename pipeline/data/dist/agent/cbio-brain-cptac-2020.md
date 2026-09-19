@@ -8,10 +8,25 @@ Dataset id: cbio-brain-cptac-2020
 
 ## What it is
 
-- Cohort: 218 samples
+- Cohort: 199 cases
 - Cancer types: CNS/Brain
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Reverse phase protein array
+- Median follow-up: 35.0 months (derivable for 192 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- DFS Status: 100.0% informative
+- Ethnicity: 100.0% informative
+- Oncotree Code: 100.0% informative
+- OS Status: 100.0% informative
+- Race: 100.0% informative
+- Sex: 100.0% informative
+- DFS Months: 96.5% populated (one-to-many)
+- OS Months: 96.5% populated (one-to-many)
 
 ## Evidence of prior reuse
 

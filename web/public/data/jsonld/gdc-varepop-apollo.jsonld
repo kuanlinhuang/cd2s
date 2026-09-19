@@ -31,6 +31,7 @@
     "Squamous Cell Neoplasms",
     "Thymus",
     "gdc",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology",
@@ -145,7 +146,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Tumour grade",
+      "name": "Tumor grade",
       "description": "Populated for 100.0% of cases, informative for 57.1%"
     },
     {
@@ -175,7 +176,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Classification of tumour",
+      "name": "Classification of tumor",
       "description": "Populated for 100.0% of cases, informative for 85.7%"
     },
     {

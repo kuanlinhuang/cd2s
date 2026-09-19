@@ -34,13 +34,13 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 98.0% informative
 - Tissue or organ of origin: 98.0% informative
 - AJCC pathologic stage: 2.7% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 2.7% informative
 - Prior malignancy: 2.7% informative
 - Synchronous malignancy: 2.7% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
-- Classification of tumour: 0.0% informative
+- Classification of tumor: 0.0% informative
 - Treatment type: 2.7% informative
 - Treatment given: 2.7% informative
 - Alcohol history: 0.0% informative
@@ -84,7 +84,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 1
 - Citations to the dataset's publication: 138 (attention, not reuse)
-- Reuse gap index: -1.36 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.64 (negative means less reused than comparable datasets)
   - Distinctive molecular features of radiation-induced thyroid cancers. (2025) PMID 40845117
 
 ## Provenance

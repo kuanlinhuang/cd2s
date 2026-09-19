@@ -93,3 +93,91 @@ def test_every_modality_label_in_the_site_is_a_real_modality():
     known = {m.value for m in Modality}
     assert not (labelled - known), f"labels for modalities that do not exist: {labelled - known}"
     assert not (known - labelled), f"modalities with no display label: {known - labelled}"
+
+
+def _interface_fields(source: str, name: str) -> set[str]:
+    block = re.search(rf"export interface {name} \{{(.*?)\n\}}", source, re.S)
+    assert block, f"{name} not found"
+    # `field?: type` and `field: type`, skipping comment lines.
+    return set(re.findall(r"^\s{2}(\w+)\??:", block.group(1), re.M))
+
+
+@pytest.mark.skipif(not DATA_TS.exists(), reason="site not present")
+def test_every_corpus_stat_the_site_reads_is_written(record_factory):
+    """The landing page, the methods page and the agents page all read stats.json.
+
+    A stat renamed on this side renders as `undefined` on that side - and a count that
+    silently becomes `undefined` reads as a missing number, not as an error.
+    """
+    from cds.export.site import corpus_stats
+
+    types_src = (WEB_DIR / "lib" / "types.ts").read_text()
+    expected = _interface_fields(types_src, "CorpusStats")
+    rows = [search_row(record_factory("a"))]
+    written = set(corpus_stats([record_factory("a")], rows))
+    missing = expected - written
+    assert not missing, f"the site reads stats the export does not write: {sorted(missing)}"
+
+
+@pytest.mark.skipif(not DATA_TS.exists(), reason="site not present")
+def test_workbook_counts_are_not_interchangeable(record_factory):
+    """Attachments, pages and distinct workbooks are three different numbers.
+
+    They were one field called `n_workbooks`, which counted (dataset, workbook) pairs and
+    was rendered as "N dataset pages carry a workbook". Twenty attachments across fifteen
+    pages made that sentence wrong by five.
+    """
+    from cds.export.site import corpus_stats
+    from cds.model import AnalysisExample, WorkbookLevel
+
+    def example(path: str) -> AnalysisExample:
+        return AnalysisExample(
+            level=WorkbookLevel.INTERMEDIATE, title=path, question="?", workbook_path=path
+        )
+
+    a = record_factory("a")
+    a.analysis_examples = [example("w/1.py"), example("w/2.py")]
+    b = record_factory("b")
+    b.analysis_examples = [example("w/1.py")]
+    c = record_factory("c")
+    stats = corpus_stats([a, b, c], [search_row(r) for r in (a, b, c)])
+    assert stats["n_workbook_attachments"] == 3
+    assert stats["n_datasets_with_workbook"] == 2
+    assert stats["n_distinct_workbooks"] == 2
+
+
+FORMAT_TS = WEB_DIR / "lib" / "format.ts"
+
+
+def _ts_string_list(source: str, name: str) -> set[str]:
+    block = re.search(rf"const {name} = (?:new Set\(\[|\[)(.*?)\]\)?;", source, re.S)
+    assert block, f"{name} not found in format.ts"
+    return set(re.findall(r'"([^"]*)"', block.group(1)))
+
+
+@pytest.mark.skipif(not FORMAT_TS.exists(), reason="site not present")
+def test_the_site_and_the_pipeline_agree_on_what_is_not_an_answer():
+    """Both sides decide whether a value answers a field, and they must decide alike.
+
+    The pipeline computes coverage from it; the page colours a bar and filters a
+    demographic breakdown by it. They were two hand-written lists that had already
+    diverged - the site counted "Pt Refused To Answer" as a recorded race while the
+    verdict printed above it did not - so the page's copy is generated from this one.
+    """
+    from cds.clinical import (
+        _NON_ANSWER_PREFIXES,
+        _NON_ANSWER_SUBSTRINGS,
+        NON_ANSWERS,
+        is_non_answer,
+    )
+
+    src = FORMAT_TS.read_text()
+    assert _ts_string_list(src, "NON_ANSWERS") == {v for v in NON_ANSWERS if v}
+    assert _ts_string_list(src, "NON_ANSWER_PREFIXES") == set(_NON_ANSWER_PREFIXES)
+    assert _ts_string_list(src, "NON_ANSWER_SUBSTRINGS") == set(_NON_ANSWER_SUBSTRINGS)
+
+    # The values that actually turned up in the corpus and were being miscounted.
+    for value in ("Unknown whether Spanish or not", "Pt Refused To Answer", "unknown_other"):
+        assert is_non_answer(value)
+    for value in ("White", "Hispanic Or Latino", "Other"):
+        assert not is_non_answer(value)

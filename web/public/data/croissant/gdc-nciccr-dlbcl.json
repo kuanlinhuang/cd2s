@@ -11,7 +11,7 @@
   "description": "Genomic Variation in Diffuse Large B Cell Lymphomas",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-nciccr-dlbcl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "A multiprotein supercomplex controlling oncogenic signalling in lymphoma.",
+  "citeAs": "Genomic Variation in Diffuse Large B Cell Lymphomas",
   "version": "as-retrieved",
   "datePublished": "2018-01-01",
   "recordSet": [
@@ -108,7 +108,7 @@
         {
           "@type": "cr:Field",
           "@id": "clinical/diagnoses.tumor_grade",
-          "name": "Tumour grade",
+          "name": "Tumor grade",
           "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 0.0%.",
           "dataType": "sc:Text"
         },
@@ -150,7 +150,7 @@
         {
           "@type": "cr:Field",
           "@id": "clinical/diagnoses.classification_of_tumor",
-          "name": "Classification of tumour",
+          "name": "Classification of tumor",
           "description": "Category: pathology. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
           "dataType": "sc:Text"
         },

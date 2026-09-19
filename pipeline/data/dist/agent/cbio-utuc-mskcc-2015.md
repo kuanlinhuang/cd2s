@@ -8,10 +8,25 @@ Dataset id: cbio-utuc-mskcc-2015
 
 ## What it is
 
-- Cohort: 85 samples
+- Cohort: 83 cases
 - Cancer types: Upper Tract Urothelial Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 33.0 months (derivable for 71 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Neoplasm Histologic Grade: 98.8% informative
+- Overall Survival Status: 98.8% informative
+- Sex: 98.8% informative
+- Smoking History: 98.8% informative
+- Overall Survival (Months): 85.5% populated (one-to-many)
+- Disease Free Status: 83.1% informative
+- Disease Free (Months): 83.1% populated (one-to-many)
 
 ## Evidence of prior reuse
 

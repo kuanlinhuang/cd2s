@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Callout, Card } from "@/components/ui";
-import { getStats } from "@/lib/data";
+import { getLargestUninformativeCohort, getStats } from "@/lib/data";
 import { num } from "@/lib/format";
 
 export const metadata: Metadata = {
@@ -58,6 +58,7 @@ const FILES = [
 
 export default function AgentsPage() {
   const stats = getStats();
+  const trap = getLargestUninformativeCohort();
   return (
     <>
       <div className="pt-10 pb-6">
@@ -77,10 +78,26 @@ export default function AgentsPage() {
         </h2>
         <div className="mt-3 max-w-3xl">
           <Callout tone="warn" title="The failure this resource exists to prevent">
-            An agent that ranks datasets by cohort size picks the largest one. Here that
-            is 18,004 patients with a vital status field filled for every one of them and
-            informative for none. It supports no survival analysis at any sample size,
-            and records no treatment and no race. Nothing in its catalog entry says so.
+            {trap ? (
+              <>
+                An agent that ranks datasets by cohort size and then asks about outcome
+                walks into cohorts like{" "}
+                <Link href={`/datasets/${trap.row.id}`} className="underline">
+                  {trap.row.short_title ?? trap.row.title}
+                </Link>
+                : {num(trap.row.n_cases)} patients with a vital status field filled for{" "}
+                {trap.vitalStatusPct !== null ? `${Math.round(trap.vitalStatusPct)}%` : "every one"}{" "}
+                of them and informative for none. It supports no survival analysis at any
+                sample size. Nothing in its catalog entry says so.
+              </>
+            ) : (
+              <>
+                An agent that ranks datasets by cohort size and then asks about outcome
+                walks into cohorts whose vital status is filled for every case and
+                informative for none. They support no survival analysis at any sample
+                size, and nothing in a catalog entry says so.
+              </>
+            )}
           </Callout>
         </div>
         <div className="prose-cds mt-4 text-[14px]">
@@ -186,7 +203,7 @@ curl "/data/agent/gdc-fm-ad.md"`}</code>
       <section className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">Runnable workbooks</h2>
         <p className="mt-1 mb-4 max-w-3xl text-[13px] t-muted">
-          {num(stats.n_workbooks)} dataset pages carry a workbook executed end to end
+          {num(stats.n_datasets_with_workbook ?? 0)} dataset pages carry a workbook executed end to end
           against the live public APIs. Each ships a receipt recording when it ran, with
           which package versions, how long it took and a hash of its outputs. So
           &ldquo;executed&rdquo; is a claim you can check.

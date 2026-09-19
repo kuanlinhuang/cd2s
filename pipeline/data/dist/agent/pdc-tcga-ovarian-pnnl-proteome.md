@@ -9,14 +9,40 @@ Dataset id: pdc-tcga-ovarian-pnnl-proteome
 ## What it is
 
 - Cohort: 85 cases
+- Cancer types: Ovarian Serous Cystadenocarcinoma
 - Measurements: Proteome mass spectrometry (iTRAQ4 / DDA)
+- Median follow-up: 42.0 months (derivable for 84 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Prior malignancy: 0.0% informative
+- Vital status: 98.8% informative
+- Sex at birth (gender): 98.8% informative
+- Morphology (ICD-O): 98.8% informative
+- Primary diagnosis: 98.8% informative
+- Tissue or organ of origin: 98.8% informative
+- Prior treatment: 98.8% informative
+- Classification of tumor: 0.0% informative
+- Age at diagnosis: 98.8% populated (one-to-many)
+- Race: 94.1% informative
+- Days to last follow-up: 94.1% populated (one-to-many)
+- Days to death: 76.5% populated (one-to-many)
+- Ethnicity: 38.8% informative
+- Cause of death: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 7
 - Citations to the dataset's publication: 29 (attention, not reuse)
-- Reuse gap index: +0.55 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.52 (negative means less reused than comparable datasets)
   - Starvation-inactivated MTOR triggers cell migration via a ULK1-SH3PXD2A/TKS5-MMP14 pathway in ovarian carcinoma. (2023) PMID 37505094
   - Model Cell Lines and Tissues of Different HGSOC Subtypes Differ in Local Estrogen Biosynthesis. (2022) PMID 35681563
   - Machine Learning-Enhanced Extraction of Biomarkers for High-Grade Serous Ovarian Cancer from Proteomics Data. (2024) PMID 38918474

@@ -8,7 +8,7 @@ Dataset id: cbio-mng-utoronto-2021
 
 ## What it is
 
-- Cohort: 121 samples
+- Cohort: 121 cases
 - Cancer types: Meningioma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Mass spectrometry proteomics
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

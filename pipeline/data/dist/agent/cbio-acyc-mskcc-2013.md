@@ -8,10 +8,25 @@ Dataset id: cbio-acyc-mskcc-2013
 
 ## What it is
 
-- Cohort: 60 samples
+- Cohort: 60 cases
 - Cancer types: Adenoid Cystic Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 14.2 months (derivable for 51 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Sex: 100.0% informative
+- Tumor Stage: 100.0% informative
+- Disease Free Status: 85.0% informative
+- Overall Survival Status: 85.0% informative
+- Disease Free (Months): 85.0% populated (one-to-many)
+- Overall Survival (Months): 85.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

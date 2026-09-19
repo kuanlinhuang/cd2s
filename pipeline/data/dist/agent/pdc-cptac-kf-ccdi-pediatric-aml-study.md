@@ -9,8 +9,33 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-aml-study
 ## What it is
 
 - Cohort: 99 cases
+- Cancer types: Acute Myeloid Leukemia
 - Measurements: Phosphoproteome mass spectrometry (TMT18 / DDA), Proteome mass spectrometry (TMT18 / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Morphology (ICD-O): 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Tissue or organ of origin: 96.0% informative
+- Sex at birth (gender): 93.9% informative
+- Vital status: 81.8% informative
+- Ethnicity: 81.8% informative
+- Primary diagnosis: 81.8% informative
+- Race: 75.8% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
+- Synchronous malignancy: 0.0% informative
+- Classification of tumor: 0.0% informative
 
 ## Evidence of prior reuse
 

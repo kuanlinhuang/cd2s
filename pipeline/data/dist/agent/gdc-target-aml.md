@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 87.8% informative
 - Morphology (ICD-O): 87.8% informative
 - Tissue or organ of origin: 87.8% informative
-- Classification of tumour: 87.5% informative
+- Classification of tumor: 87.5% informative
 - Sex at birth: 86.6% informative
 - Vital status: 86.6% informative
 - Treatment type: 86.3% populated (one-to-many)
@@ -35,7 +35,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Ethnicity: 83.4% informative
 - Race: 78.0% informative
 - Therapeutic agents: 35.2% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Cause of death: 0.0% informative
@@ -70,7 +70,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 280
 - Citations to the dataset's publication: 695 (attention, not reuse)
-- Reuse gap index: -1.24 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.20 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural alterations and age-specific mutational interactions. (2018) PMID 29227476
   - Genetic mechanisms of primary chemotherapy resistance in pediatric acute myeloid leukemia. (2019) PMID 30760869

@@ -25,9 +25,9 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% populated (one-to-many)
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
-- Tumour grade: 100.0% informative
+- Tumor grade: 100.0% informative
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Disease response at follow-up: 100.0% populated (one-to-many)
 - Treatment type: 99.5% populated (one-to-many)
 - Treatment given: 99.5% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.14 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.26 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Single-cell RNA sequencing reveals adrb1 as a sympathetic nerve-regulated immune checkpoint driving T cell exhaustion and impacting immunotherapy in esophageal squamous cell carcinoma. (2025) PMID 40406147
   - Extracellular vesicle-LncRNA HOTAIR modulates esophageal cancer chemoresistance and immune microenvironment via miR-375/CDH2 pathway. (2025) PMID 40235720

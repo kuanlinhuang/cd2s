@@ -26,9 +26,9 @@ Populated means a value exists; informative excludes 'not reported'.
 - Vital status: 99.1% informative
 - Ethnicity: 94.6% informative
 - Race: 86.6% informative
-- Classification of tumour: 65.2% informative
+- Classification of tumor: 65.2% informative
 - Treatment given: 64.8% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Progression at follow-up: 13.7% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 42
 - Citations to the dataset's publication: 761 (attention, not reuse)
-- Reuse gap index: -1.48 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.20 (negative means less reused than comparable datasets)
   - 14q32 rearrangements deregulating BCL11B mark a distinct subgroup of T-lymphoid and myeloid immature acute leukemia. (2021) PMID 33876209
   - Survival Genie, a web platform for survival analysis across pediatric and adult cancers. (2022) PMID 35197510
   - Targeting Pim kinases in hematological cancers: molecular and clinical review. (2023) PMID 36694243

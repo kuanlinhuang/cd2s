@@ -69,14 +69,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Epithelial-mesenchymal transition and its transcription factors.",
-      "identifier": "https://doi.org/10.1042/bsr20211754",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:37:23.632281+00:00",
   "datePublished": "2021-01-01",
@@ -143,7 +136,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Tumour grade",
+      "name": "Tumor grade",
       "description": "Populated for 0.0% of cases, informative for 0.0%"
     },
     {
@@ -173,7 +166,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Classification of tumour",
+      "name": "Classification of tumor",
       "description": "Populated for 0.0% of cases, informative for 0.0%"
     },
     {

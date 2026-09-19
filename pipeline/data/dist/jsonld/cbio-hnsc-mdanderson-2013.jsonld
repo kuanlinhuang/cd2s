@@ -18,7 +18,7 @@
   "keywords": [
     "Head and Neck Squamous Cell Carcinoma",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "head_neck",
     "investigator-cohort",
     "nci-funded",
@@ -30,7 +30,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -89,7 +89,43 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Disease Free Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumor Stage",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease Free (Months)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)"
   ]

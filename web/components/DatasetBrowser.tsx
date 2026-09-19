@@ -12,7 +12,7 @@ import {
   UnderexploredBadge,
 } from "@/components/ui";
 import type { BrowseRow, Facets, SearchDoc } from "@/lib/types";
-import { SCARCE_MODALITIES, modalityLabel, months, num } from "@/lib/format";
+import { REVIEW_STATUS_LABELS, SCARCE_MODALITIES, modalityLabel, months, num } from "@/lib/format";
 
 /**
  * Search and browse over the whole corpus.
@@ -55,6 +55,12 @@ const CAPABILITY_FILTERS = {
   workbook: {
     label: "Has a runnable workbook",
     test: (r: BrowseRow) => r.n_workbooks > 0,
+  },
+  reviewed: {
+    // Keyed on "not machine-only" rather than on a particular review status, so a record
+    // promoted from project-curated to expert-reviewed stays in this filter.
+    label: "Interpretation reviewed by a person",
+    test: (r: BrowseRow) => r.review_status !== "machine_only",
   },
   scarce: {
     label: "Scarce measurement type",
@@ -152,6 +158,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
   const [site, setSite] = useState(initial.site ?? "");
   const [repository, setRepository] = useState(initial.repository ?? "");
   const [access, setAccess] = useState(initial.access ?? "");
+  const [review, setReview] = useState(initial.review ?? "");
   const [caps, setCaps] = useState<Set<CapabilityKey>>(
     () =>
       new Set(
@@ -213,6 +220,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     if (site) out = out.filter((r) => r.primary_sites.includes(site));
     if (repository) out = out.filter((r) => r.repositories.includes(repository));
     if (access) out = out.filter((r) => r.access_tier === access);
+    if (review) out = out.filter((r) => r.review_status === review);
     for (const c of caps) out = out.filter(CAPABILITY_FILTERS[c].test);
 
     const sorted = [...out];
@@ -237,7 +245,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
       sorted.sort((a, b) => a.title.localeCompare(b.title));
     }
     return sorted;
-  }, [rows, scores, modality, cancer, site, repository, access, caps, sort]);
+  }, [rows, scores, modality, cancer, site, repository, access, review, caps, sort]);
 
   // Reset pagination whenever the filter set changes. Done during render via React's
   // documented "adjusting state when props change" pattern rather than in an effect:
@@ -250,6 +258,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     site,
     repository,
     access,
+    review,
     [...caps].sort().join(","),
     sort,
   ].join("|");
@@ -265,6 +274,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     (site ? 1 : 0) +
     (repository ? 1 : 0) +
     (access ? 1 : 0) +
+    (review ? 1 : 0) +
     caps.size;
 
   function toggleCap(k: CapabilityKey) {
@@ -292,6 +302,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     setSite("");
     setRepository("");
     setAccess("");
+    setReview("");
     setCaps(new Set());
   }
 
@@ -388,6 +399,15 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
           options={(facets.access_tier ?? []).map((f) => ({
             value: f.value,
             label: `${f.value} (${f.count})`,
+          }))}
+        />
+        <FacetSelect
+          label="Interpretation"
+          value={review}
+          onChange={setReview}
+          options={(facets.review_status ?? []).map((f) => ({
+            value: f.value,
+            label: `${REVIEW_STATUS_LABELS[f.value] ?? f.value} (${f.count})`,
           }))}
         />
 

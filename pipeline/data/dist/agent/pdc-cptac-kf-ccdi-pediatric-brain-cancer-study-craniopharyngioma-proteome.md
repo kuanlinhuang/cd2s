@@ -9,8 +9,34 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-craniopharyngioma-pro
 ## What it is
 
 - Cohort: 66 cases
+- Cancer types: Pediatric/AYA Brain Tumors
 - Measurements: Proteome mass spectrometry (TMT18 / DDA)
+- Median follow-up: 140.2 months (derivable for 4 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Vital status: 100.0% informative
+- Sex at birth (gender): 100.0% informative
+- Primary diagnosis: 100.0% informative
+- Tissue or organ of origin: 100.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Age at diagnosis: 100.0% populated (one-to-many)
+- Ethnicity: 84.5% informative
+- Race: 70.7% informative
+- Cause of death: 0.0% informative
+- Morphology (ICD-O): 6.9% informative
+- Tumor grade: 6.9% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
+- Classification of tumor: 6.9% informative
+- Days to last follow-up: 6.9% populated (one-to-many)
+- Progression or recurrence: 0.0% informative
 
 ## Evidence of prior reuse
 

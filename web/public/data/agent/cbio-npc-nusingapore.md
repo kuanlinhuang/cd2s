@@ -8,10 +8,23 @@ Dataset id: cbio-npc-nusingapore
 
 ## What it is
 
-- Cohort: 56 samples
+- Cohort: 56 cases
 - Cancer types: Nasopharyngeal Carcinoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 24.0 months (derivable for 50 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Smoking History: 96.4% informative
+- Neoplasm American Joint Committee on Cancer Clinical Group Stage: 94.6% informative
+- Overall Survival Status: 89.3% informative
+- Overall Survival (Months): 89.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 

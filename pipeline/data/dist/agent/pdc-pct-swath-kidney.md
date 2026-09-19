@@ -9,8 +9,33 @@ Dataset id: pdc-pct-swath-kidney
 ## What it is
 
 - Cohort: 9 cases
+- Cancer types: Clear Cell Renal Cell Carcinoma, Papillary Renal Cell Carcinoma, Chromophobe Renal Cell Carcinoma
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- Race: 0.0% informative
+- Ethnicity: 0.0% informative
+- Sex at birth (gender): 100.0% informative
+- Morphology (ICD-O): 0.0% informative
+- Primary diagnosis: 100.0% informative
+- Tissue or organ of origin: 100.0% informative
+- Tumor grade: 100.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 100.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
+- Classification of tumor: 100.0% informative
+- Age at diagnosis: 100.0% populated (one-to-many)
+- Days to last follow-up: 100.0% populated (one-to-many)
+- Days to recurrence: 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

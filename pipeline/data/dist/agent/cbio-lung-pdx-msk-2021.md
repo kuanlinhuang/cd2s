@@ -8,11 +8,27 @@ Dataset id: cbio-lung-pdx-msk-2021
 
 ## What it is
 
-- Cohort: 69 samples
+- Cohort: 39 cases
 - Cancer types: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 14.1 months (derivable for 30 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity Category: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Sex: 100.0% informative
+- Race Category: 94.9% informative
+- Overall Survival Status: 76.9% informative
+- Smoking History: 76.9% informative
+- Overall Survival (Months): 76.9% populated (one-to-many)
+- Neoplasm Histologic Grade: 58.0% informative
+- Named therapeutic agents: 2.6% populated (one-to-many)
 
 ## Evidence of prior reuse
 

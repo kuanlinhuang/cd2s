@@ -12,7 +12,7 @@ Summary: An HTAN atlas built explicitly around therapeutic resistance, with mult
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 156 cases
 - Measurements: Multiplexed tissue imaging, Single-cell / single-nucleus RNA sequencing, Bulk DNA sequencing
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -20,14 +20,14 @@ Summary: An HTAN atlas built explicitly around therapeutic resistance, with mult
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Family history: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Extended clinical data (tier 2): None% populated (one-to-many)
-- Therapy: None% populated (one-to-many)
-- Demographics: None% populated (one-to-many)
-- Diagnosis: None% populated (one-to-many)
-- Clinical molecular test: None% populated (one-to-many)
+- Extended clinical data (tier 2): 100.0% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Diagnosis: 100.0% populated (one-to-many)
+- Family history: 100.0% populated (one-to-many)
+- Follow-up: 100.0% populated (one-to-many)
+- Therapy: 100.0% populated (one-to-many)
+- Exposure history: 64.1% populated (one-to-many)
+- Clinical molecular test: 41.0% populated (one-to-many)
 
 ## Questions these data can support
 

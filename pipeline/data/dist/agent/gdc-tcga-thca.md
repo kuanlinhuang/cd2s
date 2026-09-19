@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Disease response at follow-up: 99.8% populated (one-to-many)
 - AJCC pathologic stage: 99.6% informative
 - Treatment type: 99.6% populated (one-to-many)
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Citations to the dataset's publication: 5556 (attention, not reuse)
-- Reuse gap index: -0.30 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.23 (negative means less reused than comparable datasets)
   - Developing a named entity framework for thyroid cancer staging and risk level classification using large language models. (2025) PMID 40025285
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Annexin A1-FPR1 Interaction in dendritic cells promotes immune microenvironment modulation in Thyroid Cancer. (2025) PMID 40483281

@@ -8,10 +8,19 @@ Dataset id: cbio-brca-cptac-2020
 
 ## What it is
 
-- Cohort: 122 samples
+- Cohort: 122 cases
 - Cancer types: Invasive Breast Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Mass spectrometry proteomics
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity: 94.3% informative
+- Tumor Stage: 87.7% informative
+- Sex: 86.1% informative
 
 ## Evidence of prior reuse
 

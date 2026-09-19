@@ -4,7 +4,8 @@ Dataset id: idc-cptac-cm
 
 ## Read this first: what these data CANNOT support
 
-- No blocking limitation has been recorded. This is not the same as there being none: check the review status below.
+- IDC serves no clinical table for this collection, so nothing about outcome, stage, treatment or demographics can be read from the repository. Any such variable would have to come from the originating trial or publication. The collection's own supporting_data field nevertheless lists clinical data, so the two disagree.
+  Rules out: survival, treatment response, stage-adjusted modelling, analysis by race or ethnicity
 
 ## What it is
 

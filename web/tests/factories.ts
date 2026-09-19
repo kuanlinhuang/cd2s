@@ -1,0 +1,113 @@
+import type { ClinicalVariable, DatasetRecord, IndexRow } from "@/lib/types";
+
+/** A clinical variable measured the way an adapter reports one. */
+export function variable(
+  name: string,
+  opts: Partial<ClinicalVariable> & { harmonized?: string } = {},
+): ClinicalVariable {
+  const { harmonized, ...rest } = opts;
+  return {
+    name,
+    harmonized_name: harmonized ?? name,
+    label: name,
+    category: "other",
+    n_nonmissing: null,
+    n_not_reported: null,
+    n_informative: null,
+    n_total: 100,
+    coverage_pct: null,
+    populated_pct: null,
+    is_repeated: false,
+    example_values: [],
+    unit: null,
+    evidence: [],
+    ...rest,
+  } as ClinicalVariable;
+}
+
+export function record(over: Partial<DatasetRecord> = {}): DatasetRecord {
+  return {
+    id: "test-1",
+    title: "Test cohort",
+    short_title: "TEST",
+    aliases: [],
+    identifiers: [],
+    repository: null,
+    cancer_types: [],
+    primary_sites: [],
+    cohort: {
+      n_cases: 100,
+      demographics: { sex: {}, race: {}, ethnicity: {}, vital_status: {}, evidence: [] },
+      evidence: [],
+    },
+    assays: [],
+    clinical_variables: [],
+    longitudinal: {
+      has_followup: null,
+      has_survival_endpoint: null,
+      survival_endpoints: [],
+      median_followup_months: null,
+      max_followup_months: null,
+      n_cases_with_followup: null,
+      has_serial_samples: null,
+      timepoints: [],
+      n_cases_with_serial: null,
+      has_treatment_response: null,
+      response_criteria: [],
+      evidence: [],
+    },
+    access: { tier: "open", open_components: [], controlled_components: [], evidence: [] },
+    useful_for: [],
+    limitations: [],
+    inappropriate_uses: [],
+    access_steps: [],
+    analysis_examples: [],
+    primary_publications: [],
+    reuse: [],
+    grants: [],
+    tags: [],
+    ...over,
+  } as unknown as DatasetRecord;
+}
+
+export function indexRow(over: Partial<IndexRow> = {}): IndexRow {
+  return {
+    id: "row-1",
+    title: "Row",
+    short_title: "ROW",
+    one_liner: null,
+    summary: null,
+    repository: "GDC",
+    repositories: ["GDC"],
+    program: null,
+    nci_program: null,
+    cancer_types: [],
+    primary_sites: [],
+    modalities: [],
+    n_modalities: 0,
+    n_cases: 100,
+    n_samples: null,
+    access_tier: "open",
+    has_followup: null,
+    has_survival_endpoint: null,
+    median_followup_months: null,
+    has_treatment_response: null,
+    is_pediatric: null,
+    population_flags: [],
+    n_verified_reuse: null,
+    n_citations_to_primary_publication: null,
+    reuse_gap_index: null,
+    expected_reuse: null,
+    reuse_gap_percentile: null,
+    has_citable_accession: null,
+    is_underexplored: false,
+    is_showcase: false,
+    n_research_questions: 0,
+    n_limitations: 0,
+    n_workbooks: 0,
+    review_status: "machine_only",
+    tags: [],
+    search_text: "",
+    ...over,
+  } as unknown as IndexRow;
+}

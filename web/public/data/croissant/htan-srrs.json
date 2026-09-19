@@ -25,7 +25,7 @@
           "@type": "cr:Field",
           "@id": "clinical/htan:ClinicalDataTier2",
           "name": "Extended clinical data (tier 2)",
-          "description": "Category: other. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: other. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         }
       ]

@@ -8,10 +8,24 @@ Dataset id: cbio-nsclc-mskcc-2018
 
 ## What it is
 
-- Cohort: 75 samples
+- Cohort: 75 cases
 - Cancer types: Non-Small Cell Lung Cancer
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 5.4 months (derivable for 75 cases)
+- Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Best Overall Response: 100.0% informative
+- Durable Clinical Benefit: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Progression Free Status: 100.0% informative
+- Sex: 100.0% informative
+- Smoking Status: 100.0% informative
+- Progress Free Survival (Months): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

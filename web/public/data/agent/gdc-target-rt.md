@@ -23,7 +23,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Treatment given: 100.0% informative
 - Race: 89.9% informative
 - Vital status: 89.9% informative
@@ -33,7 +33,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 270
 - Citations to the dataset's publication: 275 (attention, not reuse)
-- Reuse gap index: +0.23 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.42 (negative means less reused than comparable datasets)
   - Comprehensive Molecular Characterization Identifies Distinct Genomic and Immune Hallmarks of Renal Medullary Carcinoma. (2020) PMID 32359397
   - Identification and Analyses of Extra-Cranial and Cranial Rhabdoid Tumor Molecular Subgroups Reveal Tumors with Cytotoxic T Cell Infiltration. (2019) PMID 31708418
   - Emergence and potential transmission route of avian influenza A (H5N1) virus in domestic cats in Poland, June 2023. (2023) PMID 37535471

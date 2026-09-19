@@ -8,7 +8,7 @@ Dataset id: htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-an
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 202 cases
 - Measurements: Multiplexed tissue imaging, Single-cell / single-nucleus RNA sequencing
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -16,19 +16,20 @@ Dataset id: htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-an
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Demographics: None% populated (one-to-many)
-- Diagnosis: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Family history: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Therapy: None% populated (one-to-many)
-- Clinical molecular test: None% populated (one-to-many)
-- Extended clinical data (tier 2): None% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Family history: 100.0% populated (one-to-many)
+- Clinical molecular test: 100.0% populated (one-to-many)
+- Therapy: 100.0% populated (one-to-many)
+- Diagnosis: 99.5% populated (one-to-many)
+- Follow-up: 95.0% populated (one-to-many)
+- Exposure history: 75.2% populated (one-to-many)
+- Extended clinical data (tier 2): 19.8% populated (one-to-many)
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 611 (attention, not reuse)
+- Reuse gap index: -1.25 (negative means less reused than comparable datasets)
 
 ## Provenance
 

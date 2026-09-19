@@ -8,10 +8,18 @@ Dataset id: cbio-sarcoma-msk-2022
 
 ## What it is
 
-- Cohort: 7,494 samples
+- Cohort: 7,494 cases
 - Cancer types: Soft Tissue
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
 
 ## Evidence of prior reuse
 

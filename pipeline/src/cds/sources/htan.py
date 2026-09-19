@@ -102,6 +102,13 @@ CLINICAL_COMPONENTS: dict[str, tuple[str, str]] = {
     "ClinicalDataTier2": ("Extended clinical data (tier 2)", "other"),
 }
 
+# HTAN's data model is one table per clinical topic, not one harmonized field per
+# concept, so an atlas can only tell us how many participants a table covers - never
+# which fields inside it are populated. That earns "limited" at most, and the record
+# says why. The component that defines the denominator is Demographics: the model
+# carries one Demographics record per participant.
+PARTICIPANT_COMPONENT = "Demographics"
+
 SKIP_COMPONENTS = {"Biospecimen", "AccessoryManifest", "SRRSBiospecimen"}
 
 
@@ -159,9 +166,59 @@ def to_record(
 
     # Aggregate components into assays and clinical variables.
     assay_items: dict[tuple[Modality, str], dict[str, Any]] = {}
-    clinical: list[ClinicalVariable] = []
-    clinical_seen: set[str] = set()
     levels: dict[tuple[Modality, str], set[str]] = defaultdict(set)
+
+    # Clinical tables first, because the participant count they imply is the denominator
+    # for everything else on the record. Each entry in the inventory is one manifest, so
+    # the records in a table are summed across manifests before anything is derived.
+    table_records: dict[str, int] = defaultdict(int)
+    table_components: dict[str, set[str]] = defaultdict(set)
+    for c in components:
+        comp = c.get("component") or ""
+        base = _base_component(comp)
+        if base in CLINICAL_COMPONENTS:
+            table_records[base] += int(c.get("numItems") or 0)
+            table_components[base].add(comp)
+
+    n_participants = table_records.get(PARTICIPANT_COMPONENT) or None
+    clinical: list[ClinicalVariable] = []
+    for base in sorted(table_records):
+        label, category = CLINICAL_COMPONENTS[base]
+        n_records = table_records[base]
+        total = n_participants or n_records
+        # A table can carry more rows than there are participants - several therapy
+        # lines, several follow-up visits - so a share above 100% is reported as a
+        # one-to-many table rather than silently clipped.
+        repeated = bool(n_participants) and n_records > n_participants
+        clinical.append(
+            ClinicalVariable(
+                name=f"htan:{base}",
+                harmonized_name=None,
+                label=label,
+                category=category,  # type: ignore[arg-type]
+                n_nonmissing=min(n_records, total) if not repeated else n_records,
+                n_total=total,
+                populated_pct=round(100.0 * min(n_records, total) / total, 1) if total else None,
+                is_repeated=repeated,
+                evidence=[
+                    _ev(
+                        syn_url,
+                        at,
+                        locator=(
+                            f"{n_records:,} {base} records across "
+                            f"{len(table_components[base])} manifest(s)"
+                            + (
+                                f"; {n_participants:,} participants in the atlas"
+                                if n_participants
+                                else ""
+                            )
+                        ),
+                        conf=Confidence.MEDIUM,
+                    )
+                ],
+            )
+        )
+    clinical_seen = set(table_records)
 
     for c in components:
         comp = c.get("component") or ""
@@ -169,24 +226,6 @@ def to_record(
             continue
         base = _base_component(comp)
         if base in CLINICAL_COMPONENTS:
-            label, category = CLINICAL_COMPONENTS[base]
-            if base not in clinical_seen:
-                clinical_seen.add(base)
-                clinical.append(
-                    ClinicalVariable(
-                        name=f"htan:{base}",
-                        label=label,
-                        category=category,  # type: ignore[arg-type]
-                        evidence=[
-                            _ev(
-                                syn_url,
-                                at,
-                                locator=f"component {comp} present",
-                                conf=Confidence.MEDIUM,
-                            )
-                        ],
-                    )
-                )
             continue
         matched = next(((m, lbl) for pat, m, lbl in COMPONENT_MODALITY if pat.search(base)), None)
         if matched is None:
@@ -346,8 +385,21 @@ def to_record(
         landing_page_url=f"{PORTAL}/explore",
         retrieved_at=at,
         cohort=Cohort(
+            n_cases=n_participants,
             n_files=sum(int(c.get("numItems") or 0) for c in components) or None,
-            evidence=[ev],
+            evidence=[
+                _ev(
+                    syn_url,
+                    at,
+                    locator=(
+                        f"participants counted as {PARTICIPANT_COMPONENT} records "
+                        f"({n_participants:,})"
+                        if n_participants
+                        else "no Demographics records in the atlas inventory"
+                    ),
+                    conf=Confidence.MEDIUM,
+                )
+            ],
         ),
         assays=assays,
         clinical_variables=clinical,

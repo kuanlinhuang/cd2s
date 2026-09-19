@@ -8,10 +8,21 @@ Dataset id: cbio-rectal-msk-2022
 
 ## What it is
 
-- Cohort: 788 samples
+- Cohort: 738 cases
 - Cancer types: Bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Microarray expression
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Race Category: 98.1% informative
+- Ethnicity Category: 91.7% informative
+- Disease-specific Survival status: 47.0% informative
 
 ## Evidence of prior reuse
 

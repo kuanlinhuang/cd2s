@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Disease response at follow-up: 99.6% populated (one-to-many)
 - Prior malignancy: 99.2% informative
 - Synchronous malignancy: 99.2% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.18 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.30 (negative means less reused than comparable datasets)
   - Oncogene-induced matrix reorganization controls CD8+ T cell function in the soft-tissue sarcoma microenvironment. (2024) PMID 38652549
   - Identifying specific TLS-associated genes as potential biomarkers for predicting prognosis and evaluating the efficacy of immunotherapy in soft tissue sarcoma. (2024) PMID 38720884
   - Integration of ubiquitination-related genes in predictive signatures for prognosis and immunotherapy response in sarcoma. (2024) PMID 39469643

@@ -8,10 +8,20 @@ Dataset id: cbio-blca-bcan-hcrn-2022
 
 ## What it is
 
-- Cohort: 192 samples
+- Cohort: 223 cases
 - Cancer types: Bladder Urothelial Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 97.5% informative
+- Smoking Status: 97.0% informative
+- Race: 84.7% informative
 
 ## Evidence of prior reuse
 

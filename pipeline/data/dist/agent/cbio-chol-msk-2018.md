@@ -8,10 +8,24 @@ Dataset id: cbio-chol-msk-2018
 
 ## What it is
 
-- Cohort: 195 samples
+- Cohort: 192 cases
 - Cancer types: Cholangiocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 31.6 months (derivable for 192 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity Category: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Race Category: 94.8% informative
 
 ## Evidence of prior reuse
 

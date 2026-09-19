@@ -8,11 +8,26 @@ Dataset id: cbio-ihch-msk-2021
 
 ## What it is
 
-- Cohort: 412 samples
+- Cohort: 412 cases
 - Cancer types: Intrahepatic Cholangiocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 24.5 months (derivable for 412 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- OncoTree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Smoking Status: 99.3% informative
+- Tumor Grade: 95.1% informative
+- RFS Status: 50.7% informative
+- RFS Months: 50.7% populated (one-to-many)
+- Named therapeutic agents: 8.7% populated (one-to-many)
 
 ## Evidence of prior reuse
 

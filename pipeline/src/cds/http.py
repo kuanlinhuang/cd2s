@@ -45,6 +45,31 @@ HOST_DELAYS: dict[str, float] = {
 DEFAULT_DELAY = 0.3
 _last_hit: dict[str, float] = {}
 
+# Hosts that serve the same API under more than one name. A cached build keys on the
+# canonical URL, so the fallback never changes the cache or the evidence we would have
+# recorded from the canonical host - it only keeps a rebuild working on a network where
+# one of the names does not resolve. PDC publishes its GraphQL endpoint at both of
+# these; the second is the portal's own domain.
+EQUIVALENT_HOSTS: dict[str, tuple[str, ...]] = {
+    "proteomic.datacommons.cancer.gov": ("pdc.cancer.gov",),
+    "pdc.cancer.gov": ("proteomic.datacommons.cancer.gov",),
+}
+
+
+def _is_name_resolution_error(exc: Exception) -> bool:
+    """A DNS failure, as opposed to a refused connection or a timeout."""
+    text = str(exc).lower()
+    return any(
+        marker in text
+        for marker in (
+            "nodename nor servname",
+            "name or service not known",
+            "temporary failure in name resolution",
+            "getaddrinfo failed",
+            "no address associated with hostname",
+        )
+    )
+
 
 class FetchError(RuntimeError):
     pass
@@ -168,6 +193,16 @@ class Client:
         )
 
     # -- fetch ------------------------------------------------------------------
+    def _request(
+        self, method: str, url: str, *, body: Any = None, params: Any = None
+    ) -> httpx.Response:
+        _throttle(url)
+        if method.upper() == "GET":
+            return self._client.get(url, params=params)
+        if isinstance(body, (dict, list)):
+            return self._client.post(url, json=body, params=params)
+        return self._client.post(url, content=body, params=params)
+
     @retry(
         stop=stop_after_attempt(4),
         wait=wait_exponential_jitter(initial=2, max=45),
@@ -175,14 +210,23 @@ class Client:
         reraise=True,
     )
     def _live(self, method: str, url: str, *, body: Any = None, params: Any = None) -> Response:
-        _throttle(url)
-        if method.upper() == "GET":
-            r = self._client.get(url, params=params)
-        else:
-            if isinstance(body, (dict, list)):
-                r = self._client.post(url, json=body, params=params)
-            else:
-                r = self._client.post(url, content=body, params=params)
+        try:
+            r = self._request(method, url, body=body, params=params)
+        except httpx.ConnectError as exc:
+            if not _is_name_resolution_error(exc):
+                raise
+            r = None
+            host = httpx.URL(url).host or ""
+            for alt in EQUIVALENT_HOSTS.get(host, ()):
+                try:
+                    r = self._request(
+                        method, str(httpx.URL(url).copy_with(host=alt)), body=body, params=params
+                    )
+                    break
+                except httpx.ConnectError:
+                    continue
+            if r is None:
+                raise
         # Retry on transient server-side and rate-limit codes only.
         if r.status_code in (429, 500, 502, 503, 504):
             raise httpx.HTTPStatusError(

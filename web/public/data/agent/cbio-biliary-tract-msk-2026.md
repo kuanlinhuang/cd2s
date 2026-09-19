@@ -8,10 +8,22 @@ Dataset id: cbio-biliary-tract-msk-2026
 
 ## What it is
 
-- Cohort: 1,291 samples
+- Cohort: 1,254 cases
 - Cancer types: Biliary Tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 10.6 months (derivable for 213 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Stage: 40.4% informative
+- Overall Survival Status: 32.9% informative
+- Overall Survival (Months): 17.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

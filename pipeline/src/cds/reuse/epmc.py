@@ -45,8 +45,10 @@ TIER_FIELDS: dict[ReuseTier, tuple[str, ...]] = {
     # The accession appears where the analysis itself is described.
     ReuseTier.T3_ANALYZED: ("METHODS", "RESULTS", "TABLE", "FIG", "SUPPL"),
     # The authors declared they used these data. Only the narrow DATA_AVAILABILITY
-    # field is used: Europe PMC's broader AVAILABILITY field matched 3,421 of the 4,375
-    # articles mentioning TCGA-BRCA anywhere, so it does not discriminate.
+    # field is used, because Europe PMC's broader AVAILABILITY field matches most of the
+    # articles that mention a dataset at all and so cannot discriminate. The measurement
+    # behind that choice is re-run by `calibrate_fields` and published as
+    # field_calibration.json rather than written into a comment that goes stale.
     ReuseTier.T2_DECLARED: ("DATA_AVAILABILITY",),
     # Europe PMC's text-mined accession index found it somewhere in the article.
     ReuseTier.T1_ACCESSION: ("ACCESSION_ID",),
@@ -161,6 +163,51 @@ def count_all_tiers(client: Client, token: str) -> dict[ReuseTier, int]:
 def free_text_count(client: Client, token: str) -> int:
     data, _, _ = _search(client, f'"{token}"')
     return int(data.get("hitCount") or 0)
+
+
+#: A field name Europe PMC does not index. Querying it must return zero; if it ever
+#: returns hits, the index is falling back to free text and every section-scoped count
+#: on the site would be meaningless.
+SENTINEL_FIELD = "NOT_AN_INDEXED_FIELD"
+
+#: Fields compared when calibrating. `AVAILABILITY` is the one we reject.
+CALIBRATION_FIELDS = ("AVAILABILITY", "DATA_AVAILABILITY", "METHODS", "RESULTS")
+
+
+def calibrate_fields(client: Client, token: str) -> dict[str, Any]:
+    """Re-measure why the narrow availability field is used and the broad one is not.
+
+    Run against one well-attested accession. The comparison is the evidence for the
+    central methodological choice on the site, so it is measured on every build rather
+    than quoted from a note someone once took.
+    """
+    free_text = free_text_count(client, token)
+    fields: dict[str, int] = {}
+    at = datetime.now(UTC)
+    url = ""
+    for field in CALIBRATION_FIELDS:
+        data, url, at = _search(client, f'{field}:"{token}"')
+        fields[field] = int(data.get("hitCount") or 0)
+    sentinel_data, _, _ = _search(client, f'{SENTINEL_FIELD}:"{token}"')
+    sentinel = int(sentinel_data.get("hitCount") or 0)
+    return {
+        "strategy_id": STRATEGY_ID,
+        "token": token,
+        "retrieved_at": at.isoformat(),
+        "query_url_example": url,
+        "n_mentioning_anywhere": free_text,
+        "by_field": fields,
+        "rejected_field": "AVAILABILITY",
+        "used_field": "DATA_AVAILABILITY",
+        "sentinel_field": SENTINEL_FIELD,
+        "sentinel_hits": sentinel,
+        "sentinel_passes": sentinel == 0,
+        "note": (
+            "A field name Europe PMC does not index returns zero hits, which is what "
+            "shows the section fields are genuinely indexed rather than falling back to "
+            "free-text search."
+        ),
+    }
 
 
 def citation_count(client: Client, pmid: str) -> int:

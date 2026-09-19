@@ -368,10 +368,41 @@ def to_agent_brief(rec: DatasetRecord) -> str:
     return "\n".join(lines)
 
 
+def _uninformative_giant(records: list[DatasetRecord]) -> tuple[DatasetRecord, int] | None:
+    """The largest cohort whose vital status is recorded for all and informative for none.
+
+    The concrete trap an agent falls into when it ranks by sample size. Looked up rather
+    than written down: the example is only useful while it is true, and the corpus grows.
+    """
+    best: tuple[DatasetRecord, int] | None = None
+    for rec in records:
+        n = rec.cohort.n_cases or 0
+        if n <= 0 or (best and n <= best[1]):
+            continue
+        for v in rec.clinical_variables:
+            if (v.harmonized_name or v.name) != "demographic.vital_status":
+                continue
+            if (v.populated_pct or 0) >= 99 and v.coverage_pct == 0:
+                best = (rec, n)
+            break
+    return best
+
+
 def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
     """The /llms.txt convention: an orientation file for language models."""
     showcase = [r for r in records if r.is_showcase]
     under = [r for r in records if r.underexplored.is_underexplored]
+    trap = _uninformative_giant(records)
+    trap_line = (
+        f"1. Read a dataset's blocking limitations BEFORE its capabilities. "
+        f"{trap[0].short_title or trap[0].title} holds {trap[1]:,} patients whose vital "
+        f"status is populated for every case and informative for none; it will support "
+        f"no survival analysis at any sample size."
+        if trap
+        else "1. Read a dataset's blocking limitations BEFORE its capabilities. A field "
+        "populated for every case can still be informative for none, and then it "
+        "supports no analysis at any sample size."
+    )
     lines = [
         "# Cancer Data Showcase",
         "",
@@ -385,9 +416,7 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         "",
         "## How to use this if you are an agent",
         "",
-        "1. Read a dataset's blocking limitations BEFORE its capabilities. A cohort of "
-        "18,004 patients whose vital status is populated for every case and informative "
-        "for none will support no survival analysis at any sample size.",
+        trap_line,
         "2. Filter on measured capability (`has_survival_endpoint`, "
         "`has_treatment_response`), not on description text.",
         "3. `has_citable_accession: false` means reuse could not be measured, not that "
@@ -404,6 +433,19 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         f"- [schema.org JSON-LD]({SITE_URL}/data/jsonld/{{id}}.jsonld)",
         f"- [MLCommons Croissant]({SITE_URL}/data/croissant/{{id}}.json)",
         f"- [Reuse gap model]({SITE_URL}/data/reuse_gap_model.json): coefficients and diagnostics",
+        f"- [Field calibration]({SITE_URL}/data/field_calibration.json): why the reuse "
+        "method uses the fields it uses, re-measured on every build",
+        "",
+        "## Live endpoints",
+        "",
+        f"- `GET {SITE_URL}/api/v1/search` - filter on measured capability: `survival`, "
+        "`treatment_response`, `modality`, `access`, `repository`, `min_cases`, "
+        "`min_modalities`, `underexplored`, `showcase`, `q`, `limit`",
+        f"- `GET {SITE_URL}/api/v1/datasets/{{id}}` - the full record plus `analysis_fit`, "
+        "the six verdicts",
+        f"- `GET {SITE_URL}/api/v1/agent?q=...` - describe an analysis, get a ranked "
+        'shortlist with the reasons and the blockers (`POST` with `{"q": "..."}` also works)',
+        f"- [OpenAPI description]({SITE_URL}/openapi.json)",
         "",
         "## Method notes that change how you should read the numbers",
         "",
@@ -501,6 +543,174 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
                     ],
                     "responses": {"200": {"description": "Markdown brief"}},
                 }
+            },
+            "/data/jsonld/{id}.jsonld": {
+                "get": {
+                    "summary": "schema.org/Dataset plus DCAT, for indexing",
+                    "parameters": [
+                        {"name": "id", "in": "path", "required": True, "schema": {"type": "string"}}
+                    ],
+                    "responses": {"200": {"description": "JSON-LD document"}},
+                }
+            },
+            "/data/reuse_gap_model.json": {
+                "get": {
+                    "summary": "The fitted reuse model, its coefficients and its worst case",
+                    "description": (
+                        "Ships so the underexplored label can be recomputed or contested. "
+                        "`largest_over_prediction` names the dataset the model is most "
+                        "wrong about, which bounds how far `expected_reuse` can be trusted."
+                    ),
+                    "responses": {"200": {"description": "Model diagnostics"}},
+                }
+            },
+            "/data/field_calibration.json": {
+                "get": {
+                    "summary": "Why the narrow availability field is used and the broad one is not",
+                    "description": (
+                        "Re-measured against the live Europe PMC index on every build, "
+                        "including a sentinel query against an unindexed field name that "
+                        "must return zero hits."
+                    ),
+                    "responses": {"200": {"description": "Calibration result"}},
+                }
+            },
+            "/api/v1/datasets/{id}": {
+                "get": {
+                    "summary": "The full record plus the six analysis verdicts",
+                    "description": (
+                        "Everything in /data/datasets/{id}.json, plus `analysis_fit`: one "
+                        "verdict per analysis class, each `supported`, `limited`, "
+                        "`blocked` or `unknown`. `unknown` means the field was not "
+                        "measured for this record and must not be read as absent."
+                    ),
+                    "parameters": [
+                        {"name": "id", "in": "path", "required": True, "schema": {"type": "string"}}
+                    ],
+                    "responses": {
+                        "200": {"description": "Record with analysis_fit"},
+                        "404": {"description": "No such dataset"},
+                    },
+                }
+            },
+            "/api/v1/search": {
+                "get": {
+                    "summary": "Capability-first dataset search",
+                    "description": (
+                        "Filters on what a dataset can support, measured from field "
+                        "completeness, rather than on what its description says. "
+                        "Results are ordered by cohort size."
+                    ),
+                    "parameters": [
+                        {
+                            "name": name,
+                            "in": "query",
+                            "required": False,
+                            "schema": schema,
+                            "description": desc,
+                        }
+                        for name, schema, desc in (
+                            (
+                                "q",
+                                {"type": "string"},
+                                "Substring match over the record's searchable text",
+                            ),
+                            (
+                                "modality",
+                                {"type": "string"},
+                                "Measurement type, as in /data/facets.json",
+                            ),
+                            ("site", {"type": "string"}, "Primary anatomic site"),
+                            (
+                                "access",
+                                {
+                                    "type": "string",
+                                    "enum": ["open", "mixed", "controlled", "request", "unknown"],
+                                },
+                                "Access tier",
+                            ),
+                            ("repository", {"type": "string"}, "GDC, PDC, IDC, HTAN or cBioPortal"),
+                            (
+                                "survival",
+                                {"type": "boolean"},
+                                "Only datasets where a survival endpoint is derivable",
+                            ),
+                            (
+                                "treatment_response",
+                                {"type": "boolean"},
+                                "Only datasets that record a response to therapy",
+                            ),
+                            (
+                                "underexplored",
+                                {"type": "boolean"},
+                                "Only datasets labelled underexplored by the reuse model",
+                            ),
+                            (
+                                "showcase",
+                                {"type": "boolean"},
+                                "Only datasets whose interpretation a person has reviewed",
+                            ),
+                            (
+                                "min_cases",
+                                {"type": "integer"},
+                                "Minimum cohort size, falling back to samples",
+                            ),
+                            (
+                                "min_modalities",
+                                {"type": "integer"},
+                                "Minimum number of distinct measurement types",
+                            ),
+                            (
+                                "limit",
+                                {"type": "integer", "default": 25, "maximum": 200},
+                                "Maximum results to return",
+                            ),
+                        )
+                    ],
+                    "responses": {"200": {"description": "total, returned, caveat and results"}},
+                }
+            },
+            "/api/v1/agent": {
+                "get": {
+                    "summary": "Describe an analysis, get a ranked shortlist",
+                    "description": (
+                        "Retrieval and the capability checks are deterministic and always "
+                        "run. When the deployment has a language-model key configured, a "
+                        "model ranks the shortlist and writes the explanations; the "
+                        "response says which happened in `mode`."
+                    ),
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "in": "query",
+                            "required": True,
+                            "schema": {"type": "string", "minLength": 3, "maxLength": 600},
+                            "description": "The analysis the researcher wants to run, in their own words",
+                        }
+                    ],
+                    "responses": {
+                        "200": {"description": "query, mode, model, needs, summary and picks"},
+                        "400": {"description": "Query too short"},
+                    },
+                },
+                "post": {
+                    "summary": "Same as GET, with the query in a JSON body",
+                    "requestBody": {
+                        "required": True,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": ["q"],
+                                    "properties": {"q": {"type": "string"}},
+                                }
+                            }
+                        },
+                    },
+                    "responses": {
+                        "200": {"description": "query, mode, model, needs, summary and picks"}
+                    },
+                },
             },
             "/data/croissant/{id}.json": {
                 "get": {

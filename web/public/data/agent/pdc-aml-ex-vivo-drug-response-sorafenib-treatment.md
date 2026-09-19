@@ -9,8 +9,34 @@ Dataset id: pdc-aml-ex-vivo-drug-response-sorafenib-treatment
 ## What it is
 
 - Cohort: 5 cases
+- Cancer types: Acute Myeloid Leukemia
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
+- Median follow-up: 10.2 months (derivable for 4 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Morphology (ICD-O): 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Vital status: 80.0% informative
+- Cause of death: 80.0% informative
+- Race: 80.0% informative
+- Ethnicity: 80.0% informative
+- Sex at birth (gender): 80.0% informative
+- Primary diagnosis: 80.0% informative
+- Tissue or organ of origin: 80.0% informative
+- Age at diagnosis: 80.0% populated (one-to-many)
+- Days to death: 80.0% populated (one-to-many)
+- Days to last follow-up: 80.0% populated (one-to-many)
+- Days to recurrence: 60.0% populated (one-to-many)
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
 
 ## Evidence of prior reuse
 

@@ -24,7 +24,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 100.0% informative
 - Treatment given: 99.9% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 233
 - Citations to the dataset's publication: 103 (attention, not reuse)
-- Reuse gap index: +1.55 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.90 (negative means less reused than comparable datasets)
   - Gain of Chromosome 1q is associated with early progression in multiple myeloma patients treated with lenalidomide, bortezomib, and dexamethasone. (2019) PMID 31767829
   - Timing the initiation of multiple myeloma. (2020) PMID 32317634
   - Multiple myeloma immunoglobulin lambda translocations portend poor prognosis. (2019) PMID 31015454

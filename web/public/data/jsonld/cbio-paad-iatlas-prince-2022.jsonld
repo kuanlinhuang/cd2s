@@ -10,7 +10,7 @@
   "alternateName": [
     "paad_iatlas_prince_2022"
   ],
-  "description": "Whole-exome sequencing and neoantigen landscape analysis of 93 metastatic pancreatic adenocarcinomas and their matched normals from a randomized phase 2 trial evaluating the efficacy of nivolumab and/or sotigalimab with gemcitabine/nab-paclitaxel (chemotherapy) as first-line therapy for metastatic pancreatic cancer. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
+  "description": "Whole-exome sequencing and neoantigen landscape analysis of 93 metastatic pancreatic adenocarcinomas and their matched normals from a randomized phase 2 trial evaluating the efficacy of nivolumab and/or sotigalimab with gemcitabine/nab-paclitaxel (chemotherapy) as first-line therapy for metastatic pancreatic cancer. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-iatlas-prince-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=paad_iatlas_prince_2022"
@@ -18,7 +18,7 @@
   "keywords": [
     "Pancreatic Adenocarcinoma",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "pancreas",
@@ -31,7 +31,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -80,7 +80,63 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical Benefit",
+      "description": "Populated for 89.2% of cases, informative for 89.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical Stage",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 98.6% of cases, informative for 98.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression-Free Status",
+      "description": "Populated for 98.6% of cases, informative for 98.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 91.9% of cases, informative for 91.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Response",
+      "description": "Populated for 91.4% of cases, informative for 91.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 98.6% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression-Free (Months)",
+      "description": "Populated for 98.6% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "RNA sequencing expression"

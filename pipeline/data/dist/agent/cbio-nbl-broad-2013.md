@@ -8,10 +8,23 @@ Dataset id: cbio-nbl-broad-2013
 
 ## What it is
 
-- Cohort: 240 samples
+- Cohort: 240 cases
 - Cancer types: Neuroblastoma
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
+- Median follow-up: 23.9 months (derivable for 240 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Neoplasm Histologic Grade: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Race Category: 92.5% informative
+- Ethnicity Category: 88.8% informative
 
 ## Evidence of prior reuse
 

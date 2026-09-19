@@ -32,7 +32,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Race: 92.3% informative
 - Prior treatment: 92.3% informative
 - Prior malignancy: 92.3% informative
-- Classification of tumour: 92.3% populated (one-to-many)
+- Classification of tumor: 92.3% populated (one-to-many)
 - Treatment type: 92.3% populated (one-to-many)
 - Treatment given: 92.3% populated (one-to-many)
 - Disease response at follow-up: 92.3% populated (one-to-many)

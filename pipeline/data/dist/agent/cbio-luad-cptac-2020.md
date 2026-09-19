@@ -8,10 +8,22 @@ Dataset id: cbio-luad-cptac-2020
 
 ## What it is
 
-- Cohort: 110 samples
+- Cohort: 110 cases
 - Cancer types: Lung Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, microRNA expression, Mass spectrometry proteomics
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Smoking History: 100.0% informative
+- Ethnicity: 97.3% informative
+- Smoking Status: 92.7% informative
+- Stage: 69.1% informative
 
 ## Evidence of prior reuse
 

@@ -23,12 +23,12 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Sex at birth: 99.8% informative
 - Vital status: 99.8% informative
 - Treatment type: 99.8% populated (one-to-many)
 - Treatment given: 99.8% populated (one-to-many)
-- Tumour grade: 99.6% informative
+- Tumor grade: 99.6% informative
 - Prior malignancy: 99.4% informative
 - Synchronous malignancy: 99.4% informative
 - Country of residence: 99.2% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 707
-- Reuse gap index: +0.53 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.60 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Updating TCGA glioma classification through integration of molecular data following the latest WHO guidelines. (2025) PMID 40467633
   - Multimodal Explainable Artificial Intelligence for Prognostic Stratification of Patients With Glioblastoma. (2025) PMID 40419087

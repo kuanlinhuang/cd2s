@@ -54,13 +54,15 @@ useful_for:
 limitations:
   - kind: missing_data
     statement: >-
-      No clinical annotation is distributed with the PDC study - no outcome, treatment, stage
-      or smoking history, the last being central to lung adenocarcinoma biology.
+      Treatment is absent: no therapeutic agent, treatment type or response is recorded for
+      any of the 115 cases, and neither is smoking history, which is central to lung
+      adenocarcinoma biology. Vital status, follow-up time and stage are served by the PDC
+      API even though they do not ship in the study's file bundle.
     severity: blocking
-    affected_analyses: [Survival analysis, Smoking-stratified analysis, Clinical correlation]
+    affected_analyses: [Treatment-response analysis, Smoking-stratified analysis]
     mitigation: >-
-      Retrieve the matching clinical data from the GDC CPTAC-3 record and join on case
-      identifier.
+      For smoking history and treatment, retrieve the matching clinical records from the GDC
+      CPTAC-3 record and join on case identifier.
   - kind: harmonization
     statement: >-
       Ubiquitylome covers 80 of the 115 cases, so analyses using that layer run on 70% of the
@@ -81,8 +83,14 @@ limitations:
     affected_analyses: [Subtype-stratified analysis]
     mitigation: Pre-specify contrasts.
 inappropriate_uses:
-  - statement: Survival or prognostic claims from PDC data alone.
-    reason: No outcome variable is distributed with the study.
+  - statement: Treatment-response or resistance claims from PDC data alone.
+    reason: >-
+      No treatment record of any kind is populated for this study - not the agent, not the
+      type, not the outcome.
+  - statement: Survival claims that ignore how short the follow-up is.
+    reason: >-
+      Vital status is informative for 93% of cases and 107 have a follow-up time, but the
+      median is 15.7 months, so late events are largely unobserved.
   - statement: Treating the ubiquitylome subset as representative of the full cohort without checking.
     reason: 80 of 115 cases carry it; the selection may not be random.
 access_steps:

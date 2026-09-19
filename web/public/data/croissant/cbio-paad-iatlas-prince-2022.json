@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-paad-iatlas-prince-2022",
   "alternateName": "Metastatic Pancreatic Adenocarcinoma (PRINCE Trial, Nat Med. 2022) - iAtlas Harmonized",
-  "description": "Whole-exome sequencing and neoantigen landscape analysis of 93 metastatic pancreatic adenocarcinomas and their matched normals from a randomized phase 2 trial evaluating the efficacy of nivolumab and/or sotigalimab with gemcitabine/nab-paclitaxel (chemotherapy) as first-line therapy for metastatic pancreatic cancer. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
+  "description": "Whole-exome sequencing and neoantigen landscape analysis of 93 metastatic pancreatic adenocarcinomas and their matched normals from a randomized phase 2 trial evaluating the efficacy of nivolumab and/or sotigalimab with gemcitabine/nab-paclitaxel (chemotherapy) as first-line therapy for metastatic pancreatic cancer. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-iatlas-prince-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,85 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:CLINICAL_BENEFIT",
+          "name": "Clinical Benefit",
+          "description": "Category: treatment. Populated for 89.2% of cases; informative (excluding non-answers) for 89.2%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:CLINICAL_STAGE",
+          "name": "Clinical Stage",
+          "description": "Category: staging. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ETHNICITY",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival Status",
+          "description": "Category: outcome. Populated for 98.6% of cases; informative (excluding non-answers) for 98.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_STATUS",
+          "name": "Progression-Free Status",
+          "description": "Category: outcome. Populated for 98.6% of cases; informative (excluding non-answers) for 98.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RACE",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 91.9% of cases; informative (excluding non-answers) for 91.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RESPONSE",
+          "name": "Response",
+          "description": "Category: treatment. Populated for 91.4% of cases; informative (excluding non-answers) for 91.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (Months)",
+          "description": "Category: followup. Populated for 98.6% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_MONTHS",
+          "name": "Progression-Free (Months)",
+          "description": "Category: outcome. Populated for 98.6% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

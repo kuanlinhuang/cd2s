@@ -30,19 +30,19 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior malignancy: 96.4% informative
 - Ethnicity: 92.9% informative
 - Race: 90.5% informative
-- Classification of tumour: 90.5% informative
+- Classification of tumor: 90.5% informative
 - AJCC pathologic stage: 66.7% populated (one-to-many)
 - AJCC clinical stage: 27.4% informative
 - Cause of death: 0.0% informative
 - Population group: 0.0% informative
 - Country of residence: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
 - Citations to the dataset's publication: 85 (attention, not reuse)
-- Reuse gap index: -2.34 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.77 (negative means less reused than comparable datasets)
   - Single nucleotide polymorphism rs4961 in the adducin 1 gene is not associated with gastric cancer or preneoplastic cancer lesions. (2024) PMID 39100993
   - Case Report: The molecular fingerprint and the clinical implication of an exceptional response to neoadjuvant therapy in a metastatic cardia adenocarcinoma. (2024) PMID 38689602
   - Decreased SPTBN2 expression regulated by the ceRNA network is associated with poor prognosis and immune infiltration in low‑grade glioma. (2023) PMID 37153896

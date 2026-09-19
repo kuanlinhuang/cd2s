@@ -10,7 +10,7 @@
   "alternateName": [
     "prad_mskcc"
   ],
-  "description": "Comprehensive profiling of 218 prostate tumors (181 primaries, 37 metastases) and 14 prostate cancer cell lines and xenografts. MSKCC Prostate Oncogenome Project.<br><a href=\"http://cbio.mskcc.org/cancergenomics/prostate/data/\">Normalized flat data files</a>. <a href=\"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE21032\">Raw data via GEO (GSE21032)</a>.",
+  "description": "Comprehensive profiling of 218 prostate tumors (181 primaries, 37 metastases) and 14 prostate cancer cell lines and xenografts. MSKCC Prostate Oncogenome Project.Normalized flat data files. Raw data via GEO (GSE21032).",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_mskcc"
@@ -19,7 +19,7 @@
     "Prostate Adenocarcinoma",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "mirna",
     "nci-funded",
@@ -33,7 +33,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -82,7 +82,33 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Disease Free Status",
+      "description": "Populated for 83.2% of cases, informative for 83.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease Free (Months)",
+      "description": "Populated for 83.2% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

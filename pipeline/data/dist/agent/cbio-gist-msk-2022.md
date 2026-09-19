@@ -8,11 +8,25 @@ Dataset id: cbio-gist-msk-2022
 
 ## What it is
 
-- Cohort: 499 samples
+- Cohort: 499 cases
 - Cancer types: Gastrointestinal Stromal Tumor
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 35.4 months (derivable for 469 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Overall Survival Status: 99.4% informative
+- Sex: 99.4% informative
+- Race Category: 96.0% informative
+- Overall Survival (Months): 94.0% populated (one-to-many)
+- Ethnicity Category: 92.8% informative
+- Named therapeutic agents: 21.2% populated (one-to-many)
 
 ## Evidence of prior reuse
 

@@ -1,0 +1,19 @@
+{
+  "strategy_id": "epmc-sectioned-v1",
+  "token": "TCGA-LUAD",
+  "retrieved_at": "2026-09-18T02:53:48.995056+00:00",
+  "query_url_example": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=RESULTS%3A%22TCGA-LUAD%22&format=json&pageSize=1&resultType=lite&cursorMark=%2A",
+  "n_mentioning_anywhere": 5146,
+  "by_field": {
+    "AVAILABILITY": 3953,
+    "DATA_AVAILABILITY": 311,
+    "METHODS": 2831,
+    "RESULTS": 3321
+  },
+  "rejected_field": "AVAILABILITY",
+  "used_field": "DATA_AVAILABILITY",
+  "sentinel_field": "NOT_AN_INDEXED_FIELD",
+  "sentinel_hits": 0,
+  "sentinel_passes": true,
+  "note": "A field name Europe PMC does not index returns zero hits, which is what shows the section fields are genuinely indexed rather than falling back to free-text search."
+}

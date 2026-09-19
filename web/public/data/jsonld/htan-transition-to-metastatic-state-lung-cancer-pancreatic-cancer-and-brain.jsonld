@@ -111,43 +111,43 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
+      "name": "Extended clinical data (tier 2)",
+      "description": "Populated for 19.8% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
       "name": "Demographics",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Diagnosis",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 99.5% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Exposure history",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 75.2% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Family history",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Follow-up",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Therapy",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 95.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Clinical molecular test",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
-      "name": "Extended clinical data (tier 2)",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "name": "Therapy",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     }
   ],
   "measurementTechnique": [

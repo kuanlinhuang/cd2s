@@ -344,7 +344,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Tumour grade",
+      "name": "Tumor grade",
       "description": "Populated for 95.9% of cases, informative for 95.9%"
     },
     {
@@ -374,7 +374,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Classification of tumour",
+      "name": "Classification of tumor",
       "description": "Populated for 96.5% of cases (one-to-many field; per-case shares not derivable)"
     },
     {

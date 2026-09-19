@@ -9,14 +9,38 @@ Dataset id: pdc-hbv-related-hepatocellular-carcinoma
 ## What it is
 
 - Cohort: 171 cases
+- Cancer types: Hepatocellular Carcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity: 0.0% informative
+- Morphology (ICD-O): 0.0% informative
+- Primary diagnosis: 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Race: 93.6% informative
+- Sex at birth (gender): 93.6% informative
+- Tissue or organ of origin: 93.6% informative
+- Classification of tumor: 93.6% informative
+- Age at diagnosis: 93.6% populated (one-to-many)
+- Vital status: 88.3% informative
+- Days to recurrence: 88.3% populated (one-to-many)
+- Cause of death: 6.4% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 27
-- Citations to the dataset's publication: 114 (attention, not reuse)
-- Reuse gap index: +1.12 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.95 (negative means less reused than comparable datasets)
   - Oxidative stress induces extracellular vesicle release by upregulation of HEXB to facilitate tumour growth in experimental hepatocellular carcinoma. (2024) PMID 38944674
   - Integrative multiomics evaluation reveals the importance of pseudouridine synthases in hepatocellular carcinoma. (2022) PMID 36437949
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075

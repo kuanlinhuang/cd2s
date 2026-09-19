@@ -22,7 +22,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Vital status: 99.8% informative
 - Treatment given: 99.8% informative
 - Sex at birth: 99.7% informative
@@ -33,7 +33,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 171
 - Citations to the dataset's publication: 47 (attention, not reuse)
-- Reuse gap index: -1.59 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.50 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - A Children's Oncology Group and TARGET initiative exploring the genetic landscape of Wilms tumor. (2017) PMID 28825729
   - Recurrent DGCR8, DROSHA, and SIX homeodomain mutations in favorable histology Wilms tumors. (2015) PMID 25670082

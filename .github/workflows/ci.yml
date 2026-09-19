@@ -46,6 +46,10 @@ jobs:
         run: npm run typecheck
       - name: lint
         run: npm run lint
+      - name: tests
+        # The six analysis verdicts and the dataset agent's need matching. A wrong verdict
+        # is the one defect here that misleads a researcher, so it is gated.
+        run: npm test
       - name: build
         # Needs the generated data in web/public/data, which is committed alongside the
         # source so the site builds from a clean checkout without running the pipeline.

@@ -1,8 +1,10 @@
 """NCI Genomic Data Commons adapter.
 
-GDC is the backbone: 93 projects spanning TCGA, TARGET, CPTAC, CGCI, HCMI, MMRF,
-BEATAML, APOLLO, NCI-MATCH and more. We treat each *project* as one dataset record,
-not each program, because that is the unit a researcher actually downloads and analyses.
+GDC is the backbone: every released project, spanning TCGA, TARGET, CPTAC, CGCI, HCMI,
+MMRF, BEATAML, APOLLO, NCI-MATCH and more. We treat each *project* as one dataset
+record, not each program, because that is the unit a researcher actually downloads and
+analyses. How many there are is whatever the API returns, and is reported in the ingest
+manifest.
 
 The interesting work here is not copying counts. It is computing, per project, how
 complete the clinical variables actually are - because "clinical data available" is
@@ -18,6 +20,7 @@ import statistics
 from datetime import UTC, date, datetime
 from typing import Any
 
+from cds import clinical as cl
 from cds.http import Client
 from cds.model import (
     Access,
@@ -202,54 +205,16 @@ def _buckets(agg: dict[str, Any], key: str) -> tuple[dict[str, int], int]:
     return out, missing
 
 
-NON_ANSWERS = {
-    "not reported",
-    "unknown",
-    "not allowed to collect",
-    "unspecified",
-    "not otherwise specified",
-    "indeterminate",
-    "not applicable",
-    "data not available",
-    "missing",
-}
+# GDC's clinical fields are the shared vocabulary, so the harmonized name of a probe is
+# the probe itself. The non-answer set and the response vocabulary live in cds.clinical
+# because every repository needs the same ones; duplicating them here is how the GDC and
+# the cBioPortal verdicts would drift apart.
+NON_ANSWERS = cl.NON_ANSWERS
 
 RESPONSE_FIELDS = {
-    "follow_ups.disease_response",
-    "diagnoses.treatments.treatment_outcome",
+    cl.FU_DISEASE_RESPONSE,
+    cl.TREATMENT_OUTCOME,
 }
-
-# Values that genuinely describe response to therapy. GDC's response-bearing fields also
-# carry disease-status codes - "tf-tumor free", "wt-with tumor", "pdm-persistent distant
-# metastasis" - which describe the state of the disease, not how it responded to
-# treatment. Counting those as treatment response marks cohorts as usable for
-# resistance work when they are not: WCDT-MCRPC records "persistent distant metastasis"
-# for every case and has no treatment field populated at all.
-RESPONSE_VOCABULARY = (
-    "complete response",
-    "partial response",
-    "progressive disease",
-    "stable disease",
-    "cr-complete response",
-    "pr-partial response",
-    "pd-progressive disease",
-    "sd-stable disease",
-    "complete remission",
-    "partial remission",
-    "no measurable disease",
-    "persistent disease",
-    "pathologic complete response",
-    "treatment ongoing",
-    "mixed response",
-    "no response",
-)
-
-
-def _is_response_value(value: str) -> bool:
-    v = value.strip().lower()
-    if v in NON_ANSWERS:
-        return False
-    return any(v == term or v.startswith(term) for term in RESPONSE_VOCABULARY)
 
 
 def fetch_clinical_profile(
@@ -298,6 +263,7 @@ def fetch_clinical_profile(
         variables.append(
             ClinicalVariable(
                 name=field,
+                harmonized_name=field if field in cl.HARMONIZED_FIELDS else None,
                 label=label,
                 category=category,  # type: ignore[arg-type]
                 n_nonmissing=populated,
@@ -696,7 +662,7 @@ def _apply_response_coverage(longi: LongitudinalCoverage, clinical: list[Clinica
             continue
         if (v.n_nonmissing or 0) <= 0:
             continue
-        criteria.extend(x for x in v.example_values if _is_response_value(x))
+        criteria.extend(x for x in v.example_values if cl.is_response_value(x))
     if criteria:
         longi.has_treatment_response = True
         longi.response_criteria = sorted(set(criteria))[:8]

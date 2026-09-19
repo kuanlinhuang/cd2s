@@ -21,6 +21,7 @@
     "Bone Marrow",
     "Leukemia",
     "clinical",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

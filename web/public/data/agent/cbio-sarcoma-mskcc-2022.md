@@ -8,10 +8,23 @@ Dataset id: cbio-sarcoma-mskcc-2022
 
 ## What it is
 
-- Cohort: 2,138 samples
+- Cohort: 2,138 cases
 - Cancer types: Soft Tissue
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 22.5 months (derivable for 2000 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Sex: 100.0% informative
+- Overall Survival Status: 99.5% informative
+- Race Category: 93.8% informative
+- Overall Survival (Months): 93.5% populated (one-to-many)
+- Ethnicity Category: 93.1% informative
+- Primary Tumor Site: 83.5% informative
 
 ## Evidence of prior reuse
 

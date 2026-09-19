@@ -8,10 +8,20 @@ Dataset id: cbio-msk-ch-2020
 
 ## What it is
 
-- Cohort: 24,146 samples
+- Cohort: 24,146 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Sex: 100.0% informative
+- Oncotree Code: 99.5% informative
+- Smoking Status: 96.1% informative
+- Race: 95.6% informative
 
 ## Evidence of prior reuse
 

@@ -8,10 +8,26 @@ Dataset id: cbio-es-dsrct-msk-2023
 
 ## What it is
 
-- Cohort: 290 samples
+- Cohort: 277 cases
 - Cancer types: Ewing Sarcoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 19.7 months (derivable for 264 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 99.6% informative
+- Progress Free Survival (Months): 99.3% populated (one-to-many)
+- Sex: 98.9% informative
+- Primary Tumor Site: 97.6% informative
+- Progression Free Status: 96.0% informative
+- Race Category: 96.0% informative
+- Ethnicity Category: 95.7% informative
+- Overall Survival (Months): 95.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 

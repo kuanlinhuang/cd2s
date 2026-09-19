@@ -30,7 +30,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 7
 - Citations to the dataset's publication: 20 (attention, not reuse)
-- Reuse gap index: +0.58 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.31 (negative means less reused than comparable datasets)
   - Chemical Complementarity of Breast Cancer Resident, T-Cell Receptor CDR3 Domains and the Cancer Antigen, ARMC3, is Associated With Higher Levels of Survival and Granzyme Expression. (2023) PMID 37313373
   - Comprehensive Analysis for Anti-Cancer Target-Indication Prioritization of Placental Growth Factor Inhibitor (PGF) by Use of Omics and Patient Survival Data. (2023) PMID 37508400
   - Multimodal data integration in early-stage breast cancer. (2025) PMID 39922065

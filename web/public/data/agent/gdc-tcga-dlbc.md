@@ -30,7 +30,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 82.8% populated (one-to-many)
 - Prior malignancy: 82.8% informative
 - Synchronous malignancy: 82.8% informative
-- Classification of tumour: 82.8% populated (one-to-many)
+- Classification of tumor: 82.8% populated (one-to-many)
 - Treatment type: 82.8% populated (one-to-many)
 - Treatment given: 82.8% populated (one-to-many)
 - Disease response at follow-up: 82.8% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.84 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.02 (negative means less reused than comparable datasets)
   - Predicting lymphoma prognosis using machine learning-based genes associated with lactylation. (2024) PMID 39146596
   - 5-Hydroxymethylcytosine profiles of cfDNA are highly predictive of R-CHOP treatment response in diffuse large B cell lymphoma patients. (2021) PMID 33573703
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215

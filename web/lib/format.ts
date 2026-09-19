@@ -176,6 +176,71 @@ export const CLINICAL_CATEGORY_LABELS: Record<string, string> = {
   other: "Other",
 };
 
+/**
+ * Values that occupy a field without answering it.
+ *
+ * The same judgement the pipeline makes when it computes coverage, repeated here because
+ * the page also has to decide whether to draw a bar as an answer or as a non-answer. The
+ * two must agree: a cohort whose race is recorded entirely as "Pt Refused To Answer" is
+ * not a cohort with recorded race, and a page that drew it as one would contradict the
+ * verdict printed above it. The export-contract test fails if these drift apart from
+ * `cds.clinical`.
+ */
+const NON_ANSWERS = new Set([
+  "-",
+  "--",
+  "cannot be determined",
+  "data not available",
+  "declined to answer",
+  "indeterminate",
+  "missing",
+  "n/a",
+  "na",
+  "nan",
+  "no value entered",
+  "none",
+  "not allowed to collect",
+  "not applicable",
+  "not available",
+  "not collected",
+  "not evaluated",
+  "not otherwise specified",
+  "not performed",
+  "not reported",
+  "notreported",
+  "null",
+  "patient refused",
+  "pt refused to answer",
+  "refused",
+  "unk",
+  "unknown",
+  "unknown/not reported",
+  "unspecified",
+]);
+
+const NON_ANSWER_PREFIXES = [
+  "unknown",
+  "not reported",
+  "notreported",
+  "no value",
+];
+
+const NON_ANSWER_SUBSTRINGS = [
+  "refus",
+  "declin",
+  "choose not to answer",
+  "prefer not to",
+  "not disclosed",
+  "withheld",
+];
+
+export function isNonAnswer(value: string | null | undefined): boolean {
+  const v = (value ?? "").trim().toLowerCase();
+  if (NON_ANSWERS.has(v)) return true;
+  if (NON_ANSWER_PREFIXES.some((p) => v.startsWith(p))) return true;
+  return NON_ANSWER_SUBSTRINGS.some((m) => v.includes(m));
+}
+
 export const REVIEW_STATUS_LABELS: Record<string, string> = {
   machine_only: "Machine-extracted",
   needs_review: "Queued for review",

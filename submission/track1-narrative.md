@@ -17,15 +17,17 @@ Imaging Data Commons, the Human Tumor Atlas Network, and investigator cohorts cu
 cBioPortal, we audited how complete each dataset's clinical fields actually are, rather than
 whether those fields exist.
 
-The Foundation Medicine Adult Cancer Dataset holds 18,004 patients, the largest cohort we
-indexed. Its vital status field is populated for 100% of cases and informative for 0%: every
-value is "not reported." Race is "not reported" for all 18,004 patients. Every treatment field
-is empty. A researcher attracted by that sample size discovers this only after requesting
-controlled access to 54,012 files. Seven GDC projects share the pattern, including ALCHEMIST
-(1,176 cases) and the West Coast Dream Team metastatic prostate cohort, where no treatment
-field is populated at all in a cohort defined by its treatment history. The Chernobyl-exposed
-thyroid cohort reports a median follow-up of 115 months, the longest figure in our corpus; that
-median rests on 12 of 449 cases, and no outcome exists to pair it with.
+The Foundation Medicine Adult Cancer Dataset holds 18,004 patients, the largest cohort in the
+Genomic Data Commons. Its vital status field is populated for 100% of cases and informative for
+0%: every value is "not reported." Race is "not reported" for all 18,004 patients. Every
+treatment field is empty. A researcher attracted by that sample size discovers this only after
+requesting controlled access to 54,012 files. Thirty-two records in our corpus share the exact
+pattern - vital status uninformative, race uninformative, no treatment field populated -
+twenty of them GDC projects, seventeen of those NCI-MATCH arms. Beyond FM-AD the largest are
+ALCHEMIST (1,176 cases) and the West Coast Dream Team metastatic prostate cohort, where no
+treatment field is populated at all in a cohort defined by its treatment history. The
+Chernobyl-exposed thyroid cohort reports a median follow-up of 115 months; that median rests on
+12 of 449 cases, and no outcome exists to pair it with.
 
 Three distinctions do most of the work here, and no catalog currently draws any of them. A
 field that is *absent* differs from a field that is *populated but uninformative*, and both
@@ -48,7 +50,7 @@ catalog entry. NCI's commitment to equitable sharing is not served by data that 
 open but practically undiscoverable.
 
 And it affects AI agents, now a significant consumer of public data. Asked to find a cancer
-dataset, an agent ranks by cohort size and selects precisely the 18,004-case cohort that
+dataset, an agent ranks by cohort size and selects precisely the kind of cohort that
 supports none of the analyses it will then attempt.
 
 The gap compounds because reuse itself is largely invisible. Of our 602 records, 364 have no
@@ -142,18 +144,23 @@ a layer above the infrastructure rather than a replacement for any of it.
 Four things are new.
 
 **Measured fitness rather than declared contents.** We compute per-field informativeness from
-each repository's own missing-value facets. This is what reveals that an 18,004-case cohort
-supports no survival analysis, and it is a small technical step that nobody is currently
-taking.
+each repository's own records, in one shared vocabulary, so that a proteomic cohort and a
+genomic one are graded by the same rule. It covers 385 of our 602 records today - every GDC
+project, 126 of 130 Proteomic Data Commons cohorts and 166 of 228 cBioPortal studies - and it
+is what reveals that an 18,004-case cohort supports no survival analysis. It is a small
+technical step that nobody is currently taking.
 
 **Graded reuse evidence.** Citing a dataset's paper is not reusing its data, yet reuse
 statistics in the field routinely treat them as one. We grade by where an accession appears in
 an article: methods, results, a table or a figure means the reported findings depend on the
 data; a reference-list mention does not. Europe PMC indexes article sections separately, which
 makes the distinction tractable. Crucially, the field choice was calibrated against the live
-index rather than assumed - Europe PMC's broad AVAILABILITY field matched 3,421 of the 4,375
-articles mentioning TCGA-BRCA anywhere and therefore cannot discriminate, while the narrow
-DATA_AVAILABILITY field matched 313 and can. We also test independence by author overlap,
+index rather than assumed, and it is re-measured on every build rather than quoted from a note.
+In the current build, Europe PMC's broad AVAILABILITY field matched 3,953 of the 5,146 articles
+mentioning TCGA-LUAD anywhere and therefore cannot discriminate, while the narrow
+DATA_AVAILABILITY field matched 311 and can. An unindexed field name returns zero hits, which
+is what shows the section fields are genuinely indexed; a build where that check fails does not
+publish. We also test independence by author overlap,
 because a follow-up by the team that generated the data is a continuation rather than someone
 else finding the resource useful.
 
@@ -185,9 +192,9 @@ same method that surfaces it in the data.
 ## Prompt 4: Transferability, Sustainability, and Feasibility
 
 **Feasibility is demonstrated rather than asserted.** The prototype exists and runs: 602
-dataset records, 20 deeply curated pages (14 of them less-known resources), 736 NCI awards
-resolved through RePORTER, 778 verified reuse studies, and six workbooks executed end to end
-against live public APIs. Each workbook ships a receipt recording when it ran, with which
+dataset records, clinical field completeness measured for 385 of them, 20 deeply curated pages
+(14 of them less-known resources), 736 NCI awards resolved through RePORTER, 778 verified reuse
+studies, and six workbooks executed end to end against live public APIs. Each workbook ships a receipt recording when it ran, with which
 package versions, how long it took, and a hash of its outputs, so "independently executed" is a
 claim a reviewer can check. A link check across the curated pages resolves 124 of 124 URLs. All
 of it was built by a small team in a short period.
@@ -219,7 +226,11 @@ uniquely placed to convene, and a natural fit for the Data Jamboree and the ODS 
 **Honest constraints.** Section indexing requires full text, so closed-access articles are
 under-represented and reuse counts are biased downward for datasets whose users publish in
 subscription journals. Datasets without citable accessions cannot be assessed at all, which is
-364 of our 602. Discovery of investigator cohorts runs through cBioPortal and therefore skews
+364 of our 602. Field-level completeness reaches 385 of 602 records: the Human Tumor Atlas
+Network publishes one clinical table per topic rather than harmonized fields, and the Imaging
+Data Commons serves per-collection tables named by the submitting trial, so neither can be
+graded field by field. Those records read *not measured*, which we never fold into *not
+supported*. Discovery of investigator cohorts runs through cBioPortal and therefore skews
 toward institutions that deposit there, Memorial Sloan Kettering most of all. Author-overlap
 independence is a proxy that will miss consortium reuse. Our corpus is a demonstration, not a
 census, and we say so on the site.

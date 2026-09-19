@@ -16,7 +16,7 @@ Dataset id: htan-srrs
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Extended clinical data (tier 2): None% populated (one-to-many)
+- Extended clinical data (tier 2): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

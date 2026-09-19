@@ -8,10 +8,24 @@ Dataset id: cbio-hcc-jcopo-msk-2023
 
 ## What it is
 
-- Cohort: 90 samples
+- Cohort: 51 cases
 - Cancer types: Hepatocellular Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 18.4 months (derivable for 37 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Ethnicity Category: 72.5% informative
+- Overall Survival Status: 72.5% informative
+- Sex: 72.5% informative
+- Overall Survival (Months): 72.5% populated (one-to-many)
+- Race Category: 70.6% informative
+- Primary Tumor Site: 41.1% informative
 
 ## Evidence of prior reuse
 

@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 100.0% informative
+- Tumor grade: 100.0% informative
 - Tobacco smoking status: 100.0% informative
 - AJCC pathologic stage: 97.7% informative
 - Treatment type: 58.6% populated (one-to-many)
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 3
 - Citations to the dataset's publication: 73 (attention, not reuse)
-- Reuse gap index: -0.57 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.14 (negative means less reused than comparable datasets)
   - Amplified dosage of the NKX2-1 lineage transcription factor controls its oncogenic role in lung adenocarcinoma. (2025) PMID 40139189
   - Morphological basis of the lung adenocarcinoma subtypes. (2024) PMID 38706836
   - Multi-omics protein signaling networks identify sex-specific therapeutic candidates in lung adenocarcinoma. (2025) PMID 41024254

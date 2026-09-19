@@ -22,7 +22,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Race: 0.0% informative
 - Ethnicity: 0.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Primary diagnosis: 70.5% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 3
 - Citations to the dataset's publication: 74 (attention, not reuse)
-- Reuse gap index: -1.70 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.09 (negative means less reused than comparable datasets)
   - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618
   - Transcriptomic signature can distinguish chronic neutrophilic leukemia from ambiguous neutrophilic leukemias. (2025) PMID 40255485
   - Identification of a Novel miR-122-5p/CDC25A Axis and Potential Therapeutic Targets for Chronic Myeloid Leukemia. (2025) PMID 41373559

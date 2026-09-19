@@ -27,7 +27,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 89.2% populated (one-to-many)
 - Prior malignancy: 89.2% informative
 - Synchronous malignancy: 89.2% informative
-- Classification of tumour: 89.2% populated (one-to-many)
+- Classification of tumor: 89.2% populated (one-to-many)
 - Country of residence: 89.1% informative
 - AJCC pathologic stage: 87.9% informative
 - Tobacco smoking status: 86.8% informative
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3321
-- Citations to the dataset's publication: 5556 (attention, not reuse)
-- Reuse gap index: +2.71 (negative means less reused than comparable datasets)
+- Reuse gap index: +2.77 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
   - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477

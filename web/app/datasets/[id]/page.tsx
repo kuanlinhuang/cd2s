@@ -34,6 +34,7 @@ import {
   SCARCE_MODALITIES,
   bytes,
   idSchemeLabel,
+  isNonAnswer,
   modalityLabel,
   months,
   num,
@@ -294,8 +295,6 @@ function Fit({ record: r }: { record: DatasetRecord }) {
 // 1. at a glance
 // ====================================================================================
 
-const UNINFORMATIVE = new Set(["not reported", "unknown", "not allowed to collect", "unspecified"]);
-
 /** Bars for one demographic breakdown. Uninformative values are drawn in amber. */
 function demographicRows(values: Record<string, number>, limit = 6): BarRow[] {
   const total = Object.values(values).reduce((a, b) => a + b, 0);
@@ -306,7 +305,7 @@ function demographicRows(values: Record<string, number>, limit = 6): BarRow[] {
       key: label,
       label,
       value: n,
-      tone: UNINFORMATIVE.has(label.toLowerCase()) ? "warn" : "primary",
+      tone: isNonAnswer(label) ? "warn" : "primary",
       display: (
         <>
           {num(n)}
@@ -319,7 +318,7 @@ function demographicRows(values: Record<string, number>, limit = 6): BarRow[] {
 
 function informativeCount(values: Record<string, number>): number {
   return Object.entries(values)
-    .filter(([k]) => !UNINFORMATIVE.has(k.toLowerCase()))
+    .filter(([k]) => !isNonAnswer(k))
     .reduce((a, [, n]) => a + n, 0);
 }
 

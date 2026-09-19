@@ -8,10 +8,23 @@ Dataset id: cbio-mel-dfci-2019
 
 ## What it is
 
-- Cohort: 144 samples
+- Cohort: 144 cases
 - Cancer types: Melanoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 19.4 months (derivable for 144 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Progression Free Status: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Progress Free Survival (Months): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

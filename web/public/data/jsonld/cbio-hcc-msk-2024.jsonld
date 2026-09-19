@@ -10,7 +10,7 @@
   "alternateName": [
     "hcc_msk_2024"
   ],
-  "description": "Targeted sequencing of 1,370 hepatobiliary cancer samples (with 1366 matched normals) via MSK-IMPACT. This data is available under the <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en\">Creative Commons BY-NC-ND 4.0 license</a>.",
+  "description": "Targeted sequencing of 1,370 hepatobiliary cancer samples (with 1366 matched normals) via MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hcc-msk-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=hcc_msk_2024"
@@ -19,7 +19,7 @@
     "Hepatocellular Carcinoma",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "liver",
     "nci-funded",
@@ -32,7 +32,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -101,7 +101,48 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 96.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 99.8% of cases, informative for 99.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary Tumor Site",
+      "description": "Populated for 100.0% of cases, informative for 99.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 98.0% of cases, informative for 98.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumor Stage",
+      "description": "Populated for 88.0% of cases, informative for 88.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 99.1% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

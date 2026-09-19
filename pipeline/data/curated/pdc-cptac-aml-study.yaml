@@ -73,14 +73,16 @@ useful_for:
 limitations:
   - kind: missing_data
     statement: >-
-      No clinical annotation is distributed with the PDC study: no survival, no treatment, no
-      cytogenetic risk group, no demographics.
+      Cytogenetic risk group - the primary stratifier in AML - is not in the PDC clinical
+      records, and neither is any therapeutic agent. A treatment record of any kind exists
+      for 2% of the 164 cases. What the API does serve is vital status and follow-up time
+      for 99% of cases, which is enough for overall survival but not for anything
+      risk-stratified.
     severity: blocking
-    affected_analyses: [Survival analysis, Risk-stratified comparison, Treatment-response analysis]
+    affected_analyses: [Risk-stratified comparison, Treatment-response analysis]
     mitigation: >-
-      Cytogenetic risk group is essential context in AML. Obtain the matching clinical data
-      from the GDC CPTAC records or the CPTAC data portal before drawing any clinical
-      conclusion.
+      Obtain cytogenetics and treatment from the GDC CPTAC records or the CPTAC data portal
+      and join on case identifier before drawing any risk-stratified conclusion.
   - kind: harmonization
     statement: >-
       Lipidome and metabolome cover 98 cases while the proteomic layers cover 164, so the
@@ -101,8 +103,12 @@ limitations:
     affected_analyses: [Subtype-specific metabolic profiling]
     mitigation: Pre-specify a small number of subtype contrasts.
 inappropriate_uses:
-  - statement: Prognostic or survival claims.
-    reason: No outcome data are distributed with this study.
+  - statement: Prognostic claims that do not adjust for cytogenetic risk.
+    reason: >-
+      Vital status and follow-up are present for 99% of cases, so a survival model will
+      fit - but risk group is absent, and in AML it dominates prognosis.
+  - statement: Treatment-response or resistance analysis from these data.
+    reason: A treatment record of any kind exists for 2% of the cohort and no agent is named.
   - statement: Risk-group comparisons without obtaining cytogenetics separately.
     reason: Cytogenetic risk is the primary stratifier in AML and is not present here.
 access_steps:

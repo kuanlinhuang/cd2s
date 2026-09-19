@@ -25,7 +25,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Vital status: 93.9% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: -0.01 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.09 (negative means less reused than comparable datasets)
   - mTORC1 upregulates B7-H3/CD276 to inhibit antitumor T cells and drive tumor immune evasion. (2023) PMID 36869048
   - IL-33-activated ILC2s induce tertiary lymphoid structures in pancreatic cancer. (2025) PMID 39814891
   - Meta-analysis of five genome-wide association studies identifies multiple new loci associated with testicular germ cell tumor. (2017) PMID 28604732

@@ -20,7 +20,71 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ETHNICITY",
+          "name": "Ethnicity Category",
+          "description": "Category: demographic. Populated for 98.6% of cases; informative (excluding non-answers) for 95.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival Status",
+          "description": "Category: outcome. Populated for 99.6% of cases; informative (excluding non-answers) for 99.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_STATUS",
+          "name": "Progression Free Status",
+          "description": "Category: outcome. Populated for 96.0% of cases; informative (excluding non-answers) for 96.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PRIMARY_SITE",
+          "name": "Primary Tumor Site",
+          "description": "Category: diagnosis. Populated for 99.7% of cases; informative (excluding non-answers) for 97.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RACE",
+          "name": "Race Category",
+          "description": "Category: demographic. Populated for 98.9% of cases; informative (excluding non-answers) for 96.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 98.9% of cases; informative (excluding non-answers) for 98.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (Months)",
+          "description": "Category: followup. Populated for 95.3% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_MONTHS",
+          "name": "Progress Free Survival (Months)",
+          "description": "Category: outcome. Populated for 99.3% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

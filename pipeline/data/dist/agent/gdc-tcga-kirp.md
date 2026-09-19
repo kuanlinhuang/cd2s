@@ -27,7 +27,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Disease response at follow-up: 99.3% populated (one-to-many)
 - Race: 94.8% informative
 - AJCC pathologic stage: 89.7% populated (one-to-many)
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Citations to the dataset's publication: 5556 (attention, not reuse)
-- Reuse gap index: -0.06 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.04 (negative means less reused than comparable datasets)
   - An automated surgical decision-making framework for partial or radical nephrectomy based on 3D-CT multi-level anatomical features in renal cell carcinoma. (2023) PMID 37289245
   - A Cluster of Metabolic-Related Genes Serve as Potential Prognostic Biomarkers for Renal Cell Carcinoma. (2022) PMID 35873461
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533

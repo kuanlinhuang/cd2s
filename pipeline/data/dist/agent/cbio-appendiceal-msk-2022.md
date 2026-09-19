@@ -8,10 +8,24 @@ Dataset id: cbio-appendiceal-msk-2022
 
 ## What it is
 
-- Cohort: 273 samples
+- Cohort: 273 cases
 - Cancer types: Appendiceal Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 25.0 months (derivable for 244 cases)
+- Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Stage: 99.6% informative
+- Overall Survival Status: 98.9% informative
+- Race Category: 93.0% informative
+- Overall Survival (Months): 89.4% populated (one-to-many)
+- Best Response: 17.9% informative
 
 ## Evidence of prior reuse
 

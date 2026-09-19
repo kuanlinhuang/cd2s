@@ -23,7 +23,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Vital status: 100.0% informative
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 99.7% populated (one-to-many)
 - Disease response at follow-up: 99.3% populated (one-to-many)
@@ -32,7 +32,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Country of residence: 98.0% informative
 - Prior malignancy: 98.0% informative
 - Synchronous malignancy: 98.0% informative
-- Tumour grade: 97.4% informative
+- Tumor grade: 97.4% informative
 - Race: 88.3% informative
 - Tobacco smoking status: 85.7% informative
 - ECOG performance status: 67.8% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 481
-- Reuse gap index: +0.20 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.30 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Deep learning for predicting prognostic consensus molecular subtypes in cervical cancer from histology images. (2025) PMID 39799271
   - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231

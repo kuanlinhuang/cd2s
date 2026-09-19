@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-pancreas-msk-2024",
   "alternateName": "Pancreatic Cancer (MSK, Cancer Cell 2024)",
-  "description": "Targeted sequencing of 395 early stage pancreatic cancer cases and their matched normals via MSK-IMPACT. This data is available under the <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en\">Creative Commons BY-NC-ND 4.0 license</a>.",
+  "description": "Targeted sequencing of 395 early stage pancreatic cancer cases and their matched normals via MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pancreas-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,57 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ETHNICITY",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 97.5%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival Status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PRIMARY_SITE",
+          "name": "Primary Tumor Site",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 99.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RACE",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 97.2%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (Months)",
+          "description": "Category: followup. Populated for 99.5% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

@@ -21,6 +21,7 @@
     "COVID-19 (non-cancer)",
     "Lung",
     "clinical",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

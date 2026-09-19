@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Disease response at follow-up: 100.0% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 796
-- Reuse gap index: +0.74 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.82 (negative means less reused than comparable datasets)
   - Identification and validation of prognostic genes and prognostic models associated with cutaneous melanoma and integrative stress response. (2025) PMID 41409301
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Machine learning-based identification of an immunotherapy-related signature to enhance outcomes and immunotherapy responses in melanoma. (2024) PMID 39355255

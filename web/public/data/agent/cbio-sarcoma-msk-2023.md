@@ -8,10 +8,24 @@ Dataset id: cbio-sarcoma-msk-2023
 
 ## What it is
 
-- Cohort: 82 samples
+- Cohort: 82 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 15.6 months (derivable for 80 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Sex: 100.0% informative
+- Ethnicity Category: 97.6% informative
+- Race Category: 97.6% informative
+- Overall Survival (Months): 97.6% populated (one-to-many)
 
 ## Evidence of prior reuse
 

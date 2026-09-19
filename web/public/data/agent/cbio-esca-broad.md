@@ -8,10 +8,20 @@ Dataset id: cbio-esca-broad
 
 ## What it is
 
-- Cohort: 151 samples
+- Cohort: 151 cases
 - Cancer types: Esophageal Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Neoplasm Histologic Grade: 99.3% informative
+- Sex: 99.3% informative
+- Ethnicity Category: 85.4% informative
 
 ## Evidence of prior reuse
 

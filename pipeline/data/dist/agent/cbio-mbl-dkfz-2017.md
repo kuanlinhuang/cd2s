@@ -8,10 +8,18 @@ Dataset id: cbio-mbl-dkfz-2017
 
 ## What it is
 
-- Cohort: 491 samples
+- Cohort: 491 cases
 - Cancer types: Medulloblastoma
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- OncoTree Code: 100.0% informative
+- Sex: 99.4% informative
 
 ## Evidence of prior reuse
 

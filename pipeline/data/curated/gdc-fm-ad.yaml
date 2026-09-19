@@ -11,12 +11,13 @@ review:
     before requesting access is worth more than another well-annotated small cohort.
 
 one_liner: >-
-  18,004 patients profiled with a targeted clinical panel - the largest cohort in this
-  corpus, with no informative vital status, no race data, and no treatment records.
+  18,004 patients profiled with a targeted clinical panel - the largest cohort in the
+  Genomic Data Commons, with no informative vital status, no race data, and no treatment
+  records.
 
 summary: >-
-  The Foundation Medicine Adult Cancer Clinical Dataset is by a wide margin the largest
-  single cohort indexed here: 18,004 patients across many tumor types, profiled with a
+  The Foundation Medicine Adult Cancer Clinical Dataset is the largest single cohort in
+  the Genomic Data Commons: 18,004 patients across many tumor types, profiled with a
   targeted DNA panel in a clinical rather than research setting. That scale is genuinely
   useful for questions about mutation frequency and co-occurrence in a real-world
   population, which is precisely where research cohorts are least representative.
@@ -97,9 +98,9 @@ limitations:
       population, so alteration frequencies reflect an unrecorded treatment history.
   - kind: population_coverage
     statement: >-
-      Race is recorded as "not reported" for all 18,004 patients. The largest cohort in this
-      corpus contributes nothing to any question about how cancer genomics differs across
-      populations.
+      Race is recorded as "not reported" for all 18,004 patients. The largest cohort the
+      Genomic Data Commons holds contributes nothing to any question about how cancer
+      genomics differs across populations.
     severity: blocking
     affected_analyses: [Disparities research, Ancestry-stratified analysis]
     mitigation: >-

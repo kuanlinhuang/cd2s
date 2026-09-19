@@ -25,6 +25,7 @@ import type {
   NetworkEdge,
   NetworkNode,
   QuestionRow,
+  FieldCalibration,
   ReuseGapModel,
   ScatterPoint,
 } from "./types";
@@ -130,7 +131,6 @@ export function getStats(): CorpusStats {
       n_without_citable_accession: 0,
       n_with_publication_citations: 0,
       median_citation_to_reuse_ratio: null,
-      n_workbooks: 0,
       n_grants_linked: 0,
       n_reuse_studies_verified: 0,
     });
@@ -210,6 +210,46 @@ export function getRelated(id: string, limit = 6): IndexRow[] {
   return scored.slice(0, limit).map((x) => x.r);
 }
 
+/**
+ * The largest cohort in the corpus whose vital status is recorded for every case and
+ * informative for none.
+ *
+ * This is the concrete failure the resource exists to prevent - an agent ranking by
+ * sample size picking a cohort that can answer nothing about outcome - and it is worth
+ * naming on the page. It is looked up rather than written down, because the largest such
+ * cohort changes as the corpus grows and a stale example would be exactly the kind of
+ * unchecked claim this site criticises.
+ */
+export function getLargestUninformativeCohort(): {
+  row: IndexRow;
+  vitalStatusPct: number | null;
+} | null {
+  const candidates = getIndex()
+    .filter((r) => r.has_survival_endpoint === false && (r.n_cases ?? 0) > 0)
+    .sort((a, b) => (b.n_cases ?? 0) - (a.n_cases ?? 0));
+  for (const row of candidates) {
+    const rec = getRecord(row.id);
+    if (!rec) continue;
+    const vital = rec.clinical_variables.find(
+      (v) => (v.harmonized_name ?? v.name) === "demographic.vital_status",
+    );
+    // Populated for effectively every case, informative for none: the exact trap.
+    if (vital && (vital.populated_pct ?? 0) >= 99 && (vital.coverage_pct ?? 1) === 0) {
+      return { row, vitalStatusPct: vital.populated_pct ?? null };
+    }
+  }
+  return null;
+}
+
+/** The largest cohort in the corpus by recorded patient count, whatever it supports. */
+export function getLargestCohort(): IndexRow | null {
+  return (
+    [...getIndex()]
+      .filter((r) => (r.n_cases ?? 0) > 0)
+      .sort((a, b) => (b.n_cases ?? 0) - (a.n_cases ?? 0))[0] ?? null
+  );
+}
+
 export function getUnderexplored(limit?: number): IndexRow[] {
   const rows = getIndex()
     .filter((r) => r.is_underexplored)
@@ -245,6 +285,20 @@ export function getScatterPoints(): ScatterPoint[] {
       index: r.reuse_gap_index ?? null,
       underexplored: r.is_underexplored,
     }));
+}
+
+let _calibration: FieldCalibration | null | undefined;
+
+/**
+ * The Europe PMC field comparison behind the reuse method, as measured on this build.
+ * Null when `cds calibrate` has not been run, in which case the page says so rather
+ * than quoting numbers from a previous corpus.
+ */
+export function getFieldCalibration(): FieldCalibration | null {
+  if (_calibration === undefined) {
+    _calibration = readJson<FieldCalibration | null>("field_calibration.json", null);
+  }
+  return _calibration;
 }
 
 let _model: ReuseGapModel | null | undefined;

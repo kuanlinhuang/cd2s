@@ -8,10 +8,23 @@ Dataset id: cbio-lung-nci-2022
 
 ## What it is
 
-- Cohort: 232 samples
+- Cohort: 232 cases
 - Cancer types: Lung Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
+- Median follow-up: 49.8 months (derivable for 206 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival Status: 97.8% informative
+- Tumor Stage: 97.0% informative
+- Overall Survival (Months): 88.8% populated (one-to-many)
+- Tumor Grade: 84.1% informative
 
 ## Evidence of prior reuse
 

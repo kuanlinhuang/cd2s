@@ -20,7 +20,197 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:vital_status",
+          "name": "Vital status",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:cause_of_death",
+          "name": "Cause of death",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:race",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 85.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:ethnicity",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 62.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:gender",
+          "name": "Sex at birth (gender)",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:morphology",
+          "name": "Morphology (ICD-O)",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:primary_diagnosis",
+          "name": "Primary diagnosis",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:tissue_or_organ_of_origin",
+          "name": "Tissue or organ of origin",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:tumor_grade",
+          "name": "Tumor grade",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 98.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:ajcc_pathologic_stage",
+          "name": "AJCC pathologic stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:ajcc_clinical_stage",
+          "name": "AJCC clinical stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:tumor_stage",
+          "name": "AJCC pathologic stage (tumor_stage)",
+          "description": "Category: staging. Populated for 100.0% of cases; informative (excluding non-answers) for 97.5%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:progression_or_recurrence",
+          "name": "Progression or recurrence",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:last_known_disease_status",
+          "name": "Last known disease status",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:prior_treatment",
+          "name": "Prior treatment",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:prior_malignancy",
+          "name": "Prior malignancy",
+          "description": "Category: diagnosis. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:synchronous_malignancy",
+          "name": "Synchronous malignancy",
+          "description": "Category: diagnosis. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:classification_of_tumor",
+          "name": "Classification of tumor",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 98.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:age_at_diagnosis",
+          "name": "Age at diagnosis",
+          "description": "Category: demographic. Populated for 98.1% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:days_to_death",
+          "name": "Days to death",
+          "description": "Category: outcome. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:days_to_last_follow_up",
+          "name": "Days to last follow-up",
+          "description": "Category: followup. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:days_to_recurrence",
+          "name": "Days to recurrence",
+          "description": "Category: outcome. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:treatments.treatment_type",
+          "name": "Treatment type",
+          "description": "Category: treatment. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:treatments.therapeutic_agents",
+          "name": "Therapeutic agents",
+          "description": "Category: treatment. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:treatments.treatment_outcome",
+          "name": "Treatment outcome",
+          "description": "Category: treatment. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:treatments.regimen_or_line_of_therapy",
+          "name": "Regimen or line of therapy",
+          "description": "Category: treatment. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/pdc:treatments.treatment_or_therapy",
+          "name": "Treatment given",
+          "description": "Category: treatment. Populated for 0.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

@@ -12,7 +12,7 @@ Summary: Serial biopsies from metastatic breast cancer patients measured nine wa
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 33 cases
 - Measurements: Electron microscopy, Multiplexed tissue imaging, Bulk DNA sequencing, Bulk RNA sequencing, Single-cell ATAC sequencing, Single-cell / single-nucleus RNA sequencing, Reverse phase protein array, NanoString GeoMx spatial profiling, Other assay
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -20,13 +20,13 @@ Summary: Serial biopsies from metastatic breast cancer patients measured nine wa
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Diagnosis: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Family history: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Therapy: None% populated (one-to-many)
-- Clinical molecular test: None% populated (one-to-many)
-- Demographics: None% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Diagnosis: 100.0% populated (one-to-many)
+- Exposure history: 100.0% populated (one-to-many)
+- Family history: 100.0% populated (one-to-many)
+- Follow-up: 100.0% populated (one-to-many)
+- Clinical molecular test: 100.0% populated (one-to-many)
+- Therapy: 100.0% populated (one-to-many)
 
 ## Questions these data can support
 
@@ -55,6 +55,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 40 (attention, not reuse)
+- Reuse gap index: -2.87 (negative means less reused than comparable datasets)
 
 ## Provenance
 

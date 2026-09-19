@@ -288,3 +288,85 @@ def test_receipt_counts_code_cells_only():
     receipt look like a partial run."""
     cells = parse_percent_script("# %% [markdown]\n# doc\n\n# %%\nx = 1\n")
     assert sum(1 for k, _ in cells if k == "code") == 1
+
+
+class TestMarkerPaperInference:
+    """A marker paper describes one cohort.
+
+    The inference - earliest heavily cited article that analysed the accession - nominated
+    a pan-tissue DNA methylation clock as the marker paper for eleven separate TCGA
+    projects, and its citation count then appeared four times on the site's "most cited
+    publications" board. A methods paper that reused the data is exactly what the rest of
+    this project exists to distinguish from a marker paper.
+    """
+
+    @staticmethod
+    def _inferred(pmid: str, citations: int = 5000):
+        from cds.model import Confidence, Evidence, Method, Publication
+        from cds.reuse.enrich import INFERRED_LABEL
+
+        return Publication(
+            pmid=pmid,
+            title="DNA methylation age of human tissues and cell types",
+            citation_count=citations,
+            evidence=[
+                Evidence(
+                    method=Method.DERIVED,
+                    source_label=INFERRED_LABEL,
+                    confidence=Confidence.LOW,
+                )
+            ],
+        )
+
+    @staticmethod
+    def _authoritative(pmid: str):
+        from cds.model import Confidence, Evidence, Method, Publication
+
+        return Publication(
+            pmid=pmid,
+            title="Comprehensive molecular portraits of human breast tumors",
+            evidence=[
+                Evidence(
+                    method=Method.API,
+                    source_label="cBioPortal API /studies",
+                    confidence=Confidence.HIGH,
+                )
+            ],
+        )
+
+    def test_withdraws_an_inference_claimed_by_more_than_one_dataset(self, record_factory):
+        from cds.reuse.enrich import drop_ambiguous_inferred_primaries
+
+        a, b = record_factory("a"), record_factory("b")
+        for rec in (a, b):
+            rec.primary_publications = [self._inferred("24138928")]
+            rec.reuse_metrics.n_citations_to_primary_publication = 5556
+        stats = drop_ambiguous_inferred_primaries([a, b])
+
+        assert stats["n_records_withdrawn"] == 2
+        assert a.primary_publications == [] and b.primary_publications == []
+        assert a.reuse_metrics.n_citations_to_primary_publication is None
+        assert any(
+            "nominated for 2 datasets" in (e.locator or "") for e in a.reuse_metrics.evidence
+        ), "the withdrawal must leave a reason on the record"
+
+    def test_keeps_an_inference_claimed_by_exactly_one_dataset(self, record_factory):
+        from cds.reuse.enrich import drop_ambiguous_inferred_primaries
+
+        a, b = record_factory("a"), record_factory("b")
+        a.primary_publications = [self._inferred("111")]
+        b.primary_publications = [self._inferred("222")]
+        drop_ambiguous_inferred_primaries([a, b])
+        assert [p.pmid for p in a.primary_publications] == ["111"]
+        assert [p.pmid for p in b.primary_publications] == ["222"]
+
+    def test_never_withdraws_a_publication_the_repository_supplied(self, record_factory):
+        """Two records can legitimately share a repository-supplied marker paper."""
+        from cds.reuse.enrich import drop_ambiguous_inferred_primaries
+
+        a, b = record_factory("a"), record_factory("b")
+        for rec in (a, b):
+            rec.primary_publications = [self._authoritative("23000897")]
+        stats = drop_ambiguous_inferred_primaries([a, b])
+        assert stats["n_records_withdrawn"] == 0
+        assert [p.pmid for p in a.primary_publications] == ["23000897"]

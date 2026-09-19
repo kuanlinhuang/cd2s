@@ -10,7 +10,7 @@
   "alternateName": [
     "rcc_iatlas_immotion150_2018"
   ],
-  "description": "A randomized phase 2 study of atezolizumab (anti-PD-L1) alone or combined with bevacizumab (anti-VEGF) versus sunitinib in 263 patients with treatment-naive metastatic renal cell carcinoma. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
+  "description": "A randomized phase 2 study of atezolizumab (anti-PD-L1) alone or combined with bevacizumab (anti-VEGF) versus sunitinib in 263 patients with treatment-naive metastatic renal cell carcinoma. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-rcc-iatlas-immotion150-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=rcc_iatlas_immotion150_2018"
@@ -18,7 +18,7 @@
   "keywords": [
     "Renal Cell Carcinoma",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "kidney",
     "nci-funded",
@@ -31,7 +31,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -110,7 +110,38 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical Benefit",
+      "description": "Populated for 93.9% of cases, informative for 93.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical Stage",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression-Free Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Response",
+      "description": "Populated for 93.9% of cases, informative for 93.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression-Free (Months)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "RNA sequencing expression"

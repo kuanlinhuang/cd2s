@@ -9,14 +9,40 @@ Dataset id: pdc-tcga-ovarian-jhu-proteome
 ## What it is
 
 - Cohort: 124 cases
+- Cancer types: Ovarian Serous Cystadenocarcinoma
 - Measurements: Proteome mass spectrometry (iTRAQ4 / DDA)
+- Median follow-up: 29.9 months (derivable for 122 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Prior malignancy: 0.0% informative
+- Vital status: 98.4% informative
+- Sex at birth (gender): 98.4% informative
+- Morphology (ICD-O): 98.4% informative
+- Primary diagnosis: 98.4% informative
+- Tissue or organ of origin: 98.4% informative
+- Prior treatment: 98.4% informative
+- Classification of tumor: 0.0% informative
+- Age at diagnosis: 95.2% populated (one-to-many)
+- Days to last follow-up: 95.2% populated (one-to-many)
+- Race: 91.1% informative
+- Days to death: 61.3% populated (one-to-many)
+- Ethnicity: 46.8% informative
+- Cause of death: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
 - Citations to the dataset's publication: 38 (attention, not reuse)
-- Reuse gap index: +0.19 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.15 (negative means less reused than comparable datasets)
   - Automated imaging and identification of proteoforms directly from ovarian cancer tissue. (2023) PMID 37838706
   - Model Cell Lines and Tissues of Different HGSOC Subtypes Differ in Local Estrogen Biosynthesis. (2022) PMID 35681563
   - Machine Learning-Enhanced Extraction of Biomarkers for High-Grade Serous Ovarian Cancer from Proteomics Data. (2024) PMID 38918474

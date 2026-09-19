@@ -8,10 +8,23 @@ Dataset id: cbio-rcc-iatlas-immotion150-2018
 
 ## What it is
 
-- Cohort: 263 samples
+- Cohort: 263 cases
 - Cancer types: Renal Cell Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Median follow-up: 5.8 months (derivable for 263 cases)
+- Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Clinical Stage: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Progression-Free Status: 100.0% informative
+- Progression-Free (Months): 100.0% populated (one-to-many)
+- Clinical Benefit: 93.9% informative
+- Response: 93.9% informative
 
 ## Evidence of prior reuse
 

@@ -8,10 +8,19 @@ Dataset id: cbio-brca-sanger
 
 ## What it is
 
-- Cohort: 100 samples
+- Cohort: 100 cases
 - Cancer types: Invasive Breast Carcinoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Neoplasm Histologic Grade: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
 
 ## Evidence of prior reuse
 

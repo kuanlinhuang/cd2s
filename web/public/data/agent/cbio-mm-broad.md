@@ -8,10 +8,20 @@ Dataset id: cbio-mm-broad
 
 ## What it is
 
-- Cohort: 211 samples
+- Cohort: 211 cases
 - Cancer types: Plasma Cell Myeloma
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 93.4% informative
+- Race Category: 90.0% informative
+- Ethnicity Category: 65.9% informative
 
 ## Evidence of prior reuse
 

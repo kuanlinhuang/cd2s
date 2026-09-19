@@ -8,7 +8,7 @@ Dataset id: htan-tnp-tma
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 51 cases
 - Measurements: Multiplexed tissue imaging, NanoString GeoMx spatial profiling
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -16,13 +16,13 @@ Dataset id: htan-tnp-tma
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Demographics: None% populated (one-to-many)
-- Diagnosis: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Family history: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Therapy: None% populated (one-to-many)
-- Clinical molecular test: None% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Diagnosis: 100.0% populated (one-to-many)
+- Exposure history: 100.0% populated (one-to-many)
+- Family history: 100.0% populated (one-to-many)
+- Follow-up: 100.0% populated (one-to-many)
+- Clinical molecular test: 100.0% populated (one-to-many)
+- Therapy: 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

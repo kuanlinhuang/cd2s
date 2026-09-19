@@ -1,15 +1,24 @@
 """NCI Imaging Data Commons adapter (which wraps The Cancer Imaging Archive collections).
 
-Imaging is the most under-reused modality in the NCI portfolio relative to its size:
-99 TB across 176 collections and 85,000 patients. A large part of the reason is that
-imaging collections are hard to match to a research question - a researcher who wants
-"CT scans with matched transcriptomics and outcome" has no way to ask for that.
+Imaging is the most under-reused modality in the NCI portfolio relative to its size -
+tens of terabytes across well over a hundred collections. A large part of the reason is
+that imaging collections are hard to match to a research question: a researcher who
+wants "CT scans with matched transcriptomics and outcome" has no way to ask for that.
+The collection and patient counts are read from the API on every build and reported in
+the ingest manifest rather than quoted here, because a number in a docstring is a
+number nobody updates.
 
 IDC's `supporting_data` field records exactly which other modalities accompany the
 images, so we can answer that question. We also mine each description for cross-
 repository accessions (GEO series, DOIs, dbGaP), which recovers imaging-genomics pairs
 that are otherwise invisible - NSCLC Radiogenomics, for instance, links its CT and
 PET/CT to a GEO expression series in prose alone.
+
+We also record whether IDC serves a clinical table for each collection at all. Its
+clinical columns are named by the submitting trial, so they cannot be graded field by
+field against the harmonized repositories - but "there is no clinical table here" is a
+fact a researcher needs before choosing a collection for an outcome study, and it is one
+the collection's own `supporting_data` field sometimes contradicts.
 """
 
 from __future__ import annotations
@@ -30,10 +39,13 @@ from cds.model import (
     FundingRole,
     Identifier,
     IdScheme,
+    Limitation,
+    LimitationKind,
     Method,
     Modality,
     OntologyTerm,
     RepositoryNode,
+    Severity,
 )
 
 API = "https://api.imaging.datacommons.cancer.gov/v3"
@@ -100,6 +112,28 @@ def fetch_analysis_results(client: Client) -> tuple[list[dict[str, Any]], dateti
     return (r.json() if r.ok else []), r.retrieved_at
 
 
+def fetch_clinical_tables(client: Client) -> tuple[dict[str, list[dict[str, Any]]], datetime, str]:
+    """Which collections ship a clinical table, and how wide it is.
+
+    IDC serves clinical data as per-collection tables whose columns are whatever the
+    submitting trial recorded - `i_spy_2_research_id`, `t0`, `dlco`. There is no
+    harmonized vocabulary to grade against, so the six verdicts stay "not measured" for
+    every imaging collection. What is worth measuring, and what nothing else states, is
+    whether a clinical table exists at all: a collection with images and no clinical
+    table cannot support an outcome analysis no matter how many scans it holds.
+    """
+    url = f"{API}/clinical/tables"
+    r = client.get(url)
+    if not r.ok:
+        return {}, r.retrieved_at, url
+    by_collection: dict[str, list[dict[str, Any]]] = {}
+    for t in (r.json() or {}).get("tables") or []:
+        cid = str(t.get("collection_id") or "")
+        if cid:
+            by_collection.setdefault(cid, []).append(t)
+    return by_collection, r.retrieved_at, url
+
+
 def _slug(text: str) -> str:
     return re.sub(r"-{2,}", "-", re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-"))[:70]
 
@@ -108,6 +142,9 @@ def to_record(
     coll: dict[str, Any],
     at: datetime,
     derived: list[dict[str, Any]],
+    clinical_tables: list[dict[str, Any]] | None = None,
+    clinical_at: datetime | None = None,
+    clinical_url: str | None = None,
 ) -> DatasetRecord:
     cid = coll["collection_id"]
     url = f"{API}/collections/{cid}"
@@ -197,7 +234,87 @@ def to_record(
 
     my_derived = [d for d in derived if cid in (d.get("collections") or "")]
 
+    # Whether IDC serves a clinical table for this collection at all.
+    #
+    # This is not a field-completeness measurement and is deliberately not reported as
+    # one: IDC's clinical columns are whatever the submitting trial recorded, so there is
+    # no harmonized field to grade. What is worth stating, and what no catalog states, is
+    # the binary. A collection of scans with no clinical table cannot support an outcome
+    # analysis however many scans it holds, and that belongs in the limitations a reader
+    # sees before they choose it.
+    tables = clinical_tables or []
+    limitations: list[Limitation] = []
+    if clinical_url:
+        n_cols = sum(int(t.get("column_count") or 0) for t in tables)
+        says_clinical = "clinical" in supporting
+        table_ev = Evidence(
+            method=Method.API,
+            source_url=clinical_url,
+            source_label="IDC v3 API /clinical/tables",
+            retrieved_at=clinical_at or at,
+            locator=(
+                f"collection_id={cid}: {len(tables)} table(s), {n_cols} columns in total"
+                if tables
+                else f"collection_id={cid}: no clinical table is served"
+            ),
+            confidence=Confidence.HIGH,
+        )
+        if not tables:
+            limitations.append(
+                Limitation(
+                    kind=LimitationKind.MISSING_DATA,
+                    statement=(
+                        "IDC serves no clinical table for this collection, so nothing "
+                        "about outcome, stage, treatment or demographics can be read "
+                        "from the repository. Any such variable would have to come from "
+                        "the originating trial or publication."
+                        + (
+                            " The collection's own supporting_data field nevertheless "
+                            "lists clinical data, so the two disagree."
+                            if says_clinical
+                            else ""
+                        )
+                    ),
+                    severity=Severity.BLOCKING,
+                    affected_analyses=[
+                        "survival",
+                        "treatment response",
+                        "stage-adjusted modelling",
+                        "analysis by race or ethnicity",
+                    ],
+                    evidence=[table_ev],
+                )
+            )
+        else:
+            limitations.append(
+                Limitation(
+                    kind=LimitationKind.HARMONIZATION,
+                    statement=(
+                        f"Clinical data arrive as {len(tables)} collection-specific "
+                        f"table(s) with {n_cols} columns in total, named by the "
+                        "submitting trial rather than by a shared vocabulary. The "
+                        "variables exist, but they cannot be compared field by field "
+                        "with the harmonized repositories, so this record's analysis "
+                        "verdicts stay unmeasured."
+                        + (
+                            " The collection's supporting_data field does not list "
+                            "clinical data even though a table is served."
+                            if not says_clinical
+                            else ""
+                        )
+                    ),
+                    severity=Severity.MAJOR,
+                    mitigation=(
+                        "Read the table's own schema from "
+                        f"{API}/clinical/tables before planning an analysis."
+                    ),
+                    evidence=[table_ev],
+                )
+            )
+
     tags = ["idc", "imaging"]
+    if tables:
+        tags.append("has-clinical-table")
     if "genomics" in supporting:
         tags.append("imaging-genomics")
     if "proteomics" in supporting:
@@ -233,6 +350,7 @@ def to_record(
             evidence=[ev],
         ),
         assays=assays,
+        limitations=limitations,
         access=Access(
             tier=AccessTier.OPEN,
             mechanism=(
@@ -258,16 +376,34 @@ def build(
 ) -> tuple[list[DatasetRecord], dict[str, Any]]:
     colls, at = fetch_collections(client)
     derived, _ = fetch_analysis_results(client) if deep else ([], at)
+    tables: dict[str, list[dict[str, Any]]] = {}
+    tables_at: datetime | None = None
+    tables_url: str | None = None
+    if deep:
+        tables, tables_at, tables_url = fetch_clinical_tables(client)
     colls = [c for c in colls if c.get("collection_id")]
     colls.sort(key=lambda c: -(c.get("patients") or c.get("subjects") or 0))
     if limit:
         colls = colls[:limit]
-    records = [to_record(c, at, derived) for c in colls]
+    records = [
+        to_record(
+            c,
+            at,
+            derived,
+            clinical_tables=tables.get(str(c["collection_id"]), []),
+            clinical_at=tables_at,
+            clinical_url=tables_url,
+        )
+        for c in colls
+    ]
+    n_with_tables = sum(1 for c in colls if tables.get(str(c["collection_id"])))
     manifest = {
         "source": "IDC",
         "api": API,
         "n_collections": len(records),
         "n_derived_analysis_resources": len(derived),
+        "n_with_clinical_table": n_with_tables,
+        "n_without_clinical_table": len(records) - n_with_tables if tables_url else None,
         "fetched_at": datetime.now(UTC).isoformat(),
     }
     return records, manifest

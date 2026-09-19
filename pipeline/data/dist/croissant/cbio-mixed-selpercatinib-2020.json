@@ -20,7 +20,15 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SMOKING_STATUS",
+          "name": "Smoking Status",
+          "description": "Category: exposure. Populated for 62.5% of cases; informative (excluding non-answers) for 62.5%.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

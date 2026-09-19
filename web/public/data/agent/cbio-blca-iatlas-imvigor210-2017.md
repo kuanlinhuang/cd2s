@@ -8,10 +8,24 @@ Dataset id: cbio-blca-iatlas-imvigor210-2017
 
 ## What it is
 
-- Cohort: 347 samples
+- Cohort: 347 cases
 - Cancer types: Bladder Urothelial Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Median follow-up: 8.1 months (derivable for 347 cases)
+- Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Clinical Stage: 93.7% informative
+- Clinical Benefit: 85.9% informative
+- Response: 85.9% informative
 
 ## Evidence of prior reuse
 

@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-gist-msk-2022",
   "alternateName": "Gastrointestinal Stromal Tumor (MSK, NPJ Precis Oncol 2023)",
-  "description": "Paired analysis of 499  Gastrointestinal stromal tumor/normal pairs via MSK-IMPACT platform.",
+  "description": "Paired analysis of 499 Gastrointestinal stromal tumor/normal pairs via MSK-IMPACT platform.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gist-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,64 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ETHNICITY",
+          "name": "Ethnicity Category",
+          "description": "Category: demographic. Populated for 97.4% of cases; informative (excluding non-answers) for 92.8%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival Status",
+          "description": "Category: outcome. Populated for 99.4% of cases; informative (excluding non-answers) for 99.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PRIMARY_SITE",
+          "name": "Primary Tumor Site",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RACE",
+          "name": "Race Category",
+          "description": "Category: demographic. Populated for 99.4% of cases; informative (excluding non-answers) for 96.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 99.4% of cases; informative (excluding non-answers) for 99.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (Months)",
+          "description": "Category: followup. Populated for 94.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:therapeutic_agents",
+          "name": "Named therapeutic agents",
+          "description": "Category: treatment. Populated for 21.2% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

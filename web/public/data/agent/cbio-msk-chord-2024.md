@@ -8,11 +8,25 @@ Dataset id: cbio-msk-chord-2024
 
 ## What it is
 
-- Cohort: 25,040 samples
+- Cohort: 24,950 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 24.6 months (derivable for 24950 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Sex: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Primary Tumor Site: 99.9% informative
+- Race: 96.2% informative
+- Ethnicity: 96.0% informative
+- Named therapeutic agents: 86.1% populated (one-to-many)
 
 ## Evidence of prior reuse
 

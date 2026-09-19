@@ -28,7 +28,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Sex at birth: 100.0% informative
 - Prior treatment: 81.4% informative
 - Prior malignancy: 81.4% informative
-- Classification of tumour: 81.4% informative
+- Classification of tumor: 81.4% informative
 - Treatment type: 81.4% populated (one-to-many)
 - Treatment given: 81.4% populated (one-to-many)
 - Disease response at follow-up: 81.4% populated (one-to-many)
@@ -74,7 +74,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Reuse gap index: +0.09 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.88 (negative means less reused than comparable datasets)
   - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None
 
 ## Provenance

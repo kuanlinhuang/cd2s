@@ -112,6 +112,8 @@ export interface Cohort {
 
 export interface ClinicalVariable {
   name: string;
+  /** The same concept's name in the shared vocabulary, when the field has one. */
+  harmonized_name?: string | null;
   label?: string | null;
   category: string;
   n_nonmissing?: number | null;
@@ -498,6 +500,10 @@ export interface CorpusStats {
   n_showcase: number;
   n_underexplored: number;
   n_expert_reviewed: number;
+  /** Records whose clinical fields have been measured against the shared vocabulary. */
+  n_clinically_measured?: number;
+  clinically_measured_by_repository?: Record<string, { measured: number; total: number }>;
+  n_datasets_with_case_count?: number;
   n_cases_total: number;
   n_repositories: number;
   n_distinct_modalities: number;
@@ -507,7 +513,12 @@ export interface CorpusStats {
   n_without_citable_accession: number;
   n_with_publication_citations: number;
   median_citation_to_reuse_ratio?: number | null;
-  n_workbooks: number;
+  /** One per (dataset, workbook) pair - a workbook attached to three pages counts three times. */
+  n_workbook_attachments?: number;
+  /** Dataset pages that carry at least one workbook. */
+  n_datasets_with_workbook?: number;
+  /** Distinct workbooks, however many pages they appear on. */
+  n_distinct_workbooks?: number;
   n_grants_linked: number;
   n_reuse_studies_verified: number;
 }
@@ -538,6 +549,21 @@ export interface ScatterPoint {
 }
 
 /** Diagnostics the pipeline writes with the fitted reuse gap model. */
+/** Why the narrow availability field is used and the broad one is not, re-measured per build. */
+export interface FieldCalibration {
+  strategy_id: string;
+  token: string;
+  retrieved_at: string;
+  n_mentioning_anywhere: number;
+  by_field: Record<string, number>;
+  rejected_field: string;
+  used_field: string;
+  sentinel_field: string;
+  sentinel_hits: number;
+  sentinel_passes: boolean;
+  note: string;
+}
+
 export interface ReuseGapModel {
   model_id: string;
   n_records: number;
@@ -555,6 +581,16 @@ export interface ReuseGapModel {
   observed_reuse_median?: number | null;
   observed_reuse_max?: number | null;
   max_expected_reuse?: number | null;
+  /** The corpus's worst over-prediction: the weakest point of the fit, published not described. */
+  largest_over_prediction?: {
+    id: string;
+    n_cases: number;
+    observed: number;
+    expected: number;
+    residual_log2: number;
+    residual_in_sd?: number | null;
+  } | null;
+  upper_tail_note?: string | null;
   covariates: string[];
   deliberately_excluded_covariates: string[];
   response_note?: string | null;

@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 100.0% informative
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Treatment type: 100.0% informative
 - Treatment given: 100.0% populated (one-to-many)
 - Therapeutic agents: 100.0% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 441
-- Reuse gap index: +1.12 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.32 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Integrated multiomics analysis and machine learning refine neutrophil extracellular trap-related molecular subtypes and prognostic models for acute myeloid leukemia. (2025) PMID 40066454
   - Inhibition of PI3K/AKT/mTOR signaling enhances autophagy in HL-60 acute myeloid leukemia cells: An integrative bioinformatic and in vitro study. (2025) PMID 40917720

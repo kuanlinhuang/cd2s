@@ -8,10 +8,18 @@ Dataset id: cbio-pptc-2019
 
 ## What it is
 
-- Cohort: 261 samples
+- Cohort: 244 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Structural variants / fusions
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 98.4% informative
 
 ## Evidence of prior reuse
 

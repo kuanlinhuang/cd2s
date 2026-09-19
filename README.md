@@ -9,21 +9,26 @@ Reuse Ideas). Submission materials are in [`submission/`](submission/).
 
 ## The problem, in one example
 
-The Foundation Medicine Adult Cancer Dataset holds 18,004 patients, the largest cohort in this
-corpus. Its vital status field is populated for 100% of cases and informative for 0%: every
-value is `not reported`. Race is `not reported` for all 18,004 patients. Every treatment field
-is empty.
+The Foundation Medicine Adult Cancer Dataset holds 18,004 patients, the largest cohort in the
+Genomic Data Commons.
+Its vital status field is populated for 100% of cases and informative for 0%: every value is
+`not reported`.
+Race is `not reported` for all 18,004 patients.
+Every treatment field is empty.
 
 A researcher who selects it for its sample size discovers this after requesting controlled
-access to 54,012 files. Seven GDC projects share the pattern. No catalog says so, because
-catalogs describe what a dataset *contains* rather than what it can *support*.
+access to 54,012 files.
+Several GDC projects share the pattern.
+No catalog says so, because catalogs describe what a dataset *contains* rather than what it
+can *support*.
 
 ## What this does
 
 For every dataset it ingests:
 
 - **Measures** clinical field completeness from the repository's own records, separating
-  *absent* from *populated but uninformative* from *informative*
+  *absent* from *populated but uninformative* from *informative* - in one shared vocabulary,
+  so a proteomic cohort and a genomic one are graded by the same rule
 - **Answers** "can it answer your question?" up front: six analysis verdicts (overall
   survival, progression, treatment response, therapeutic agents, stage adjustment, race)
   derived from that completeness with the thresholds of the executed audit workbook, and
@@ -33,25 +38,44 @@ For every dataset it ingests:
   articles that cited the paper
 - **Links** funding through NIH RePORTER, separating NCI-funded generation from NCI-funded reuse
 - **Ships** an executable starting point and a machine-readable package for agents
+- **Checks itself**: the reuse method's field calibration, the model's own worst case and
+  the marker-paper inferences it withdraws are all re-measured and published on every build
 
 Every substantive claim carries provenance: source, retrieval date, method, and confidence.
 
 ## Current corpus
 
+Every number below is generated. `pipeline/data/dist/stats.json` is the source; this table is
+a snapshot of the build described there.
+
 | | |
 | --- | --- |
 | Dataset records | 602 across 5 repositories, 29 measurement types |
+| Clinical fields measured | 385 records, in one harmonized vocabulary |
+| Survival endpoint derivable | 233 records, measured rather than asserted |
 | Deeply curated pages | 20 (14 of them less-known resources) |
 | Verified reuse studies | 778 (accession in methods, results, a table or a figure) |
 | NCI awards linked | 736, resolved through NIH RePORTER |
-| Executed workbooks | 6, each with an execution receipt |
+| Executed workbooks | 6, attached to 15 dataset pages, each with an execution receipt |
 | Datasets with no citable accession | 364 - their reuse cannot be traced at all |
+| People across the corpus | 349,817 patients or subjects, in the 601 records that report a count |
+
+Measurement coverage by repository, because how far it reaches is part of the result:
+
+| Repository | Records | Clinical fields measured |
+| --- | --- | --- |
+| GDC | 93 | 93 |
+| cBioPortal | 228 | 166 |
+| PDC | 130 | 126 |
+| HTAN | 14 | 0 - table-level coverage only, so verdicts reach *limited* at most |
+| IDC | 137 | 0 - per-collection tables with no shared vocabulary to grade against |
 
 ## Repository layout
 
 | Path | Contents |
 | --- | --- |
 | `pipeline/` | Python ingestion, linkage, reuse tracing, metrics, export |
+| `pipeline/src/cds/clinical.py` | The shared clinical vocabulary every adapter reports into |
 | `pipeline/src/cds/sources/` | One adapter per repository (GDC, PDC, IDC, HTAN, cBioPortal, RePORTER) |
 | `pipeline/src/cds/reuse/` | Europe PMC section-scoped reuse tracing and availability dating |
 | `pipeline/src/cds/metrics/` | The reuse gap model |
@@ -61,7 +85,6 @@ Every substantive claim carries provenance: source, retrieval date, method, and 
 | `workbooks/python/` | Workbook source as plain `# %%` scripts |
 | `workbooks/executed/` | Executed notebooks plus execution receipts |
 | `submission/` | Track 1 narrative and supporting evidence |
-| `docs/` | Design notes and methodology |
 
 ## Running it
 
@@ -86,6 +109,13 @@ uv venv --python 3.12 && uv pip install -e ".[dev,notebooks]"
 cd ../web && npm install && npm run build && npm start
 ```
 
+The local gate, which is what any status report here is based on:
+
+```bash
+cd pipeline && .venv/bin/ruff check . && .venv/bin/ruff format --check . && .venv/bin/python -m pytest
+cd ../web && npm run typecheck && npm run lint && npm test && npm run build
+```
+
 Every HTTP response is cached on disk keyed by request, so a rebuild is deterministic and can
 run offline from the cache.
 
@@ -106,6 +136,7 @@ so a clean checkout builds without running the pipeline.
 | `OPENROUTER_API_KEY` | Vercel project | lets a language model rank and explain the dataset agent's shortlist; without it the agent runs on rules and says so |
 | `OPENROUTER_MODEL` | Vercel project, optional | overrides the default `deepseek/deepseek-v4-flash` |
 | `CDS_SITE_URL` | local shell, before `cds export` | the same origin, baked into the agent packages |
+| `CDS_REPO_URL` | local shell, before `cds curate` | base URL of a **public** source repository; when set, each dataset page links its executed notebook. Left unset the pages name the workbook and its receipt instead of offering a link that would 404 |
 
 The site's dataset agent (the "describe your analysis" box on the home page and
 `/api/v1/agent`) works without any key: retrieval and the capability checks are deterministic.
@@ -124,6 +155,8 @@ See [`/agents`](web/app/agents/page.tsx) on the running site, or the generated f
 - `/data/agent/{id}.md` - plain-language brief, **constraints first**
 - `/data/croissant/{id}.json` - MLCommons Croissant with per-field completeness
 - `/data/jsonld/{id}.jsonld` - schema.org/Dataset + DCAT
+- `/data/field_calibration.json` - the Europe PMC field comparison, re-measured per build
+- `/data/reuse_gap_model.json` - the fitted model, its diagnostics and its worst case
 - `/llms.txt`, `/openapi.json`, and `GET /api/v1/search`
 
 ## Methodology
@@ -132,11 +165,24 @@ The [Methods page](web/app/methods/page.tsx) documents how the corpus is assembl
 is graded, how the reuse gap model is fitted, and - deliberately, at the end - where the
 approach is weak. Two decisions worth knowing about up front:
 
-**Citation is not reuse.** We grade by where an accession appears in an article. Methods,
-results, a table or a figure means the reported findings depend on the data; a reference-list
-mention does not. Field choice was calibrated against the live index: Europe PMC's broad
-`AVAILABILITY` field matched 3,421 of 4,375 articles mentioning TCGA-BRCA anywhere and cannot
-discriminate, while the narrow `DATA_AVAILABILITY` field matched 313 and can.
+**Citation is not reuse.** We grade by where an accession appears in an article.
+Methods, results, a table or a figure means the reported findings depend on the data; a
+reference-list mention does not.
+Field choice is calibrated against the live index on every build rather than quoted from a
+note: `cds calibrate` re-measures how many articles each candidate field matches for the
+corpus's most reused accession, checks that an unindexed field name returns zero hits, and
+publishes the result as `field_calibration.json`.
+The broad `AVAILABILITY` field matches most articles that mention a dataset at all and so
+cannot discriminate; the narrow `DATA_AVAILABILITY` field can.
+
+**A marker paper describes one cohort.** Where a repository publishes no marker-paper link,
+the earliest heavily cited article that analysed the accession is nominated as a candidate at
+low confidence.
+That heuristic fails on methods papers, which reuse many datasets and are cited heavily: it
+nominated a pan-tissue DNA methylation clock as the marker paper for eleven TCGA projects at
+once.
+An inference claimed by more than one dataset is therefore withdrawn from all of them, and the
+record records why.
 
 **"Underexplored" is a measurement.** Raw reuse counts are not comparable across datasets of
 different size, age and access tier, so we model expected reuse and report the residual.
@@ -152,7 +198,19 @@ every record carries the source and retrieval date of each claim.
 
 ## Status
 
-Working prototype. Curated interpretation covers 20 of 602 records; every other page states
-plainly that its interpretation has not been reviewed. Clinical field completeness, and so
-the six analysis verdicts, is measured for the 93 GDC projects; other repositories show
-*not measured* until their clinical tables are probed the same way.
+Working prototype.
+
+Curated interpretation covers 20 of 602 records; every other page states plainly that its
+interpretation has not been reviewed.
+
+Clinical field completeness, and so the six analysis verdicts, is measured for 385 of 602
+records: every GDC project, 126 of 130 PDC cohorts and 166 of 228 cBioPortal studies.
+HTAN reports table-level coverage only, which reaches *limited* at most.
+IDC serves per-collection clinical tables whose columns are named by the submitting trial,
+with no shared vocabulary to grade against, so its records state whether such a table exists
+and otherwise show *not measured*.
+*Not measured* is never folded into *not supported*.
+
+Workbook notebooks are linked from dataset pages only when `CDS_REPO_URL` points at a public
+repository; while the source repository is private, the pages name the workbook path and its
+execution receipt rather than offering a link that would 404.

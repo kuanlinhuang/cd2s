@@ -8,10 +8,19 @@ Dataset id: cbio-normal-skin-melanocytes-2024
 
 ## What it is
 
-- Cohort: 308 samples
+- Cohort: 35 cases
 - Cancer types: Skin
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Ethnicity: 68.6% informative
+- Sex: 68.6% informative
 
 ## Evidence of prior reuse
 

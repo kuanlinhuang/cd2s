@@ -25,13 +25,13 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 0.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Cause of death: 0.0% informative
 - Population group: 0.0% informative
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative

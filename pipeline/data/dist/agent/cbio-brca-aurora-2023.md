@@ -8,11 +8,23 @@ Dataset id: cbio-brca-aurora-2023
 
 ## What it is
 
-- Cohort: 155 samples
+- Cohort: 55 cases
 - Cancer types: Invasive Breast Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 34.0 months (derivable for 50 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Disease Free Status: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Named therapeutic agents: 100.0% populated (one-to-many)
+- Disease Free (months): 90.9% populated (one-to-many)
 
 ## Evidence of prior reuse
 

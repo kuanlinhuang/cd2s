@@ -101,6 +101,255 @@
         }
       }
     },
+    "/data/jsonld/{id}.jsonld": {
+      "get": {
+        "summary": "schema.org/Dataset plus DCAT, for indexing",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON-LD document"
+          }
+        }
+      }
+    },
+    "/data/reuse_gap_model.json": {
+      "get": {
+        "summary": "The fitted reuse model, its coefficients and its worst case",
+        "description": "Ships so the underexplored label can be recomputed or contested. `largest_over_prediction` names the dataset the model is most wrong about, which bounds how far `expected_reuse` can be trusted.",
+        "responses": {
+          "200": {
+            "description": "Model diagnostics"
+          }
+        }
+      }
+    },
+    "/data/field_calibration.json": {
+      "get": {
+        "summary": "Why the narrow availability field is used and the broad one is not",
+        "description": "Re-measured against the live Europe PMC index on every build, including a sentinel query against an unindexed field name that must return zero hits.",
+        "responses": {
+          "200": {
+            "description": "Calibration result"
+          }
+        }
+      }
+    },
+    "/api/v1/datasets/{id}": {
+      "get": {
+        "summary": "The full record plus the six analysis verdicts",
+        "description": "Everything in /data/datasets/{id}.json, plus `analysis_fit`: one verdict per analysis class, each `supported`, `limited`, `blocked` or `unknown`. `unknown` means the field was not measured for this record and must not be read as absent.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Record with analysis_fit"
+          },
+          "404": {
+            "description": "No such dataset"
+          }
+        }
+      }
+    },
+    "/api/v1/search": {
+      "get": {
+        "summary": "Capability-first dataset search",
+        "description": "Filters on what a dataset can support, measured from field completeness, rather than on what its description says. Results are ordered by cohort size.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Substring match over the record's searchable text"
+          },
+          {
+            "name": "modality",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Measurement type, as in /data/facets.json"
+          },
+          {
+            "name": "site",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Primary anatomic site"
+          },
+          {
+            "name": "access",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "open",
+                "mixed",
+                "controlled",
+                "request",
+                "unknown"
+              ]
+            },
+            "description": "Access tier"
+          },
+          {
+            "name": "repository",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "GDC, PDC, IDC, HTAN or cBioPortal"
+          },
+          {
+            "name": "survival",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "Only datasets where a survival endpoint is derivable"
+          },
+          {
+            "name": "treatment_response",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "Only datasets that record a response to therapy"
+          },
+          {
+            "name": "underexplored",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "Only datasets labelled underexplored by the reuse model"
+          },
+          {
+            "name": "showcase",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "Only datasets whose interpretation a person has reviewed"
+          },
+          {
+            "name": "min_cases",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Minimum cohort size, falling back to samples"
+          },
+          {
+            "name": "min_modalities",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Minimum number of distinct measurement types"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 25,
+              "maximum": 200
+            },
+            "description": "Maximum results to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "total, returned, caveat and results"
+          }
+        }
+      }
+    },
+    "/api/v1/agent": {
+      "get": {
+        "summary": "Describe an analysis, get a ranked shortlist",
+        "description": "Retrieval and the capability checks are deterministic and always run. When the deployment has a language-model key configured, a model ranks the shortlist and writes the explanations; the response says which happened in `mode`.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 600
+            },
+            "description": "The analysis the researcher wants to run, in their own words"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "query, mode, model, needs, summary and picks"
+          },
+          "400": {
+            "description": "Query too short"
+          }
+        }
+      },
+      "post": {
+        "summary": "Same as GET, with the query in a JSON body",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "q"
+                ],
+                "properties": {
+                  "q": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "query, mode, model, needs, summary and picks"
+          }
+        }
+      }
+    },
     "/data/croissant/{id}.json": {
       "get": {
         "summary": "MLCommons Croissant description",

@@ -31,6 +31,7 @@
     "Small Cell Lung Cancer",
     "Thyroid Cancer",
     "clinical",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

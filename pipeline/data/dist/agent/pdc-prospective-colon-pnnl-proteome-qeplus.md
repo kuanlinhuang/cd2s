@@ -15,8 +15,7 @@ Dataset id: pdc-prospective-colon-pnnl-proteome-qeplus
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 19
-- Citations to the dataset's publication: 114 (attention, not reuse)
-- Reuse gap index: +1.79 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.76 (negative means less reused than comparable datasets)
   - Arginase-1 inhibition reduces migration ability and metastatic colonization of colon cancer cells. (2023) PMID 36639644
   - LINC00982-encoded protein PRDM16-DT regulates <i>CHEK2</i> splicing to suppress colorectal cancer metastasis and chemoresistance. (2024) PMID 38855188
   - Targeting ARF1-IQGAP1 interaction to suppress colorectal cancer metastasis and vemurafenib resistance. (2023) PMID 36396045

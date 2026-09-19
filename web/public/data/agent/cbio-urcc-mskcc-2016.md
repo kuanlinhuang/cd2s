@@ -8,10 +8,25 @@ Dataset id: cbio-urcc-mskcc-2016
 
 ## What it is
 
-- Cohort: 62 samples
+- Cohort: 62 cases
 - Cancer types: Unclassified Renal Cell Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 11.9 months (derivable for 23 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Disease Free Status: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Sex: 100.0% informative
+- Race Category: 96.8% informative
+- Disease Free (Months): 96.8% populated (one-to-many)
+- Overall Survival (Months): 37.1% populated (one-to-many)
 
 ## Evidence of prior reuse
 

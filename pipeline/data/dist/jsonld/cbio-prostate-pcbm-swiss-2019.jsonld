@@ -18,7 +18,7 @@
   "keywords": [
     "Prostate",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "targeted dna",
@@ -30,7 +30,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -79,7 +79,13 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)"
   ]

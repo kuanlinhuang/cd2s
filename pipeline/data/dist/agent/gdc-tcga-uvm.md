@@ -28,7 +28,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Disease response at follow-up: 100.0% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.69 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.86 (negative means less reused than comparable datasets)
   - Machine learning to construct sphingolipid metabolism genes signature to characterize the immune landscape and prognosis of patients with uveal melanoma. (2022) PMID 36568076
   - Prognostic Implications of Novel Ten-Gene Signature in Uveal Melanoma. (2020) PMID 33194647
   - Analysis of Ferroptosis-Mediated Modification Patterns and Tumor Immune Microenvironment Characterization in Uveal Melanoma. (2021) PMID 34386492

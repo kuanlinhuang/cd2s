@@ -10,7 +10,7 @@
   "alternateName": [
     "pancreas_msk_2024"
   ],
-  "description": "Targeted sequencing of 395 early stage pancreatic cancer cases and their matched normals via MSK-IMPACT. This data is available under the <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en\">Creative Commons BY-NC-ND 4.0 license</a>.",
+  "description": "Targeted sequencing of 395 early stage pancreatic cancer cases and their matched normals via MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pancreas-msk-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=pancreas_msk_2024"
@@ -19,7 +19,7 @@
     "Pancreas",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "structural variant",
@@ -32,7 +32,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -111,7 +111,43 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 97.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary Tumor Site",
+      "description": "Populated for 100.0% of cases, informative for 99.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 97.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 99.5% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

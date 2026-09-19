@@ -8,10 +8,22 @@ Dataset id: cbio-mbl-icgc
 
 ## What it is
 
-- Cohort: 125 samples
+- Cohort: 125 cases
 - Cancer types: Medulloblastoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 22.0 months (derivable for 103 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 82.4% populated (one-to-many)
+- Progress Free Survival (Months): 79.2% populated (one-to-many)
 
 ## Evidence of prior reuse
 

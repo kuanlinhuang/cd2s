@@ -141,6 +141,63 @@ def gap_cmd() -> None:
         (target / "reuse_gap_model.json").write_text(json.dumps(diag, indent=2, default=str))
 
 
+@app.command("calibrate")
+def calibrate_cmd(
+    token: str = typer.Option(
+        "", help="Accession to calibrate on; defaults to the most-reused one in the corpus"
+    ),
+    stage: str = typer.Option("traced", help="Stage to pick the reference accession from"),
+    max_age_days: float = typer.Option(21.0),
+) -> None:
+    """Re-measure which Europe PMC fields discriminate reuse, and publish the numbers.
+
+    The Methods page explains why the narrow DATA_AVAILABILITY field is used and the
+    broad AVAILABILITY field is not. That explanation rests on a measurement, so the
+    measurement is re-run and shipped rather than quoted from memory.
+    """
+    import json
+
+    from cds import store
+    from cds.paths import DIST_DIR, WEB_DATA_DIR
+    from cds.reuse import epmc
+
+    reference = token
+    if not reference:
+        from cds.reuse import trace
+
+        recs = store.load_source(stage) or store.load_all_sources()
+        # Calibrate on the most-reused accession in the corpus: the comparison is only
+        # informative where the broad field has enough articles to be wrong about.
+        candidates = [
+            (r, trace.tokens_for(r, limit=1)) for r in recs if r.reuse_metrics.has_citable_accession
+        ]
+        best = max(
+            ((r, toks[0]) for r, toks in candidates if toks),
+            key=lambda pair: pair[0].reuse_metrics.n_by_tier.get("t3_analyzed") or 0,
+            default=None,
+        )
+        if best is None:
+            console.print("[red]no record with a citable accession to calibrate on[/red]")
+            raise typer.Exit(1)
+        reference = best[1]
+        console.print(f"  reference accession: {reference} (from {best[0].id})")
+
+    with Client("epmc", max_age_days=max_age_days) as c:
+        result = epmc.calibrate_fields(c, reference)
+    for k, v in result.items():
+        if k != "note":
+            console.print(f"  {k}: {v}")
+    if not result["sentinel_passes"]:
+        console.print(
+            "[red]sentinel field returned hits: section-scoped counts cannot be trusted[/red]"
+        )
+        raise typer.Exit(1)
+    for target in (DIST_DIR, WEB_DATA_DIR):
+        target.mkdir(parents=True, exist_ok=True)
+        (target / "field_calibration.json").write_text(json.dumps(result, indent=2, default=str))
+    console.print("[green]wrote field_calibration.json[/green]")
+
+
 @app.command("export")
 def export_cmd(stage: str = typer.Option("enriched", help="Which stage to export")) -> None:
     """Write site data, structured metadata and agent packages."""
@@ -194,7 +251,19 @@ def enrich_cmd(
                     f"last={r.short_title} anchor={r.release_date} reuse={len(r.reuse)}"
                 )
                 store.save_source("traced", recs, {"stage": "enrich-partial"})
-    store.save_source("traced", recs, {"stage": "enrich", "n_enriched": len(targets)})
+
+    # Corpus-level check, after every record has been enriched: a machine-nominated
+    # marker paper claimed by more than one dataset is wrong for all but one of them.
+    withdrawn = enrich.drop_ambiguous_inferred_primaries(recs)
+    for k, v in withdrawn.items():
+        if k != "withdrawn_pmids":
+            console.print(f"  marker_papers.{k}: {v}")
+
+    store.save_source(
+        "traced",
+        recs,
+        {"stage": "enrich", "n_enriched": len(targets), "marker_papers": withdrawn},
+    )
     console.print(f"[green]enriched {len(targets)}[/green]")
 
 

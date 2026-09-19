@@ -34,7 +34,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Ethnicity: 73.3% informative
 - Cause of death: 35.6% informative
 - Tissue or organ of origin: 17.8% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Treatment type: 6.7% populated (one-to-many)
@@ -72,7 +72,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 5
 - Citations to the dataset's publication: 333 (attention, not reuse)
-- Reuse gap index: -1.79 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.26 (negative means less reused than comparable datasets)
   - A Hyper-IgM Syndrome Mutation in Activation-Induced Cytidine Deaminase Disrupts G-Quadruplex Binding and Genome-wide Chromatin Localization. (2020) PMID 33098766
   - Developmental Deconvolution for Classification of Cancer Origin. (2022) PMID 36041084
   - International Prognostic Index-Based Immune Prognostic Model for Diffuse Large B-Cell Lymphoma. (2021) PMID 34745101

@@ -9,8 +9,34 @@ Dataset id: pdc-ipmn-study-cptac-pdac-proteome
 ## What it is
 
 - Cohort: 146 cases
+- Cancer types: Pancreatic Ductal Adenocarcinoma
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
+- Median follow-up: 15.0 months (derivable for 144 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Race: 100.0% informative
+- Sex at birth (gender): 100.0% informative
+- Morphology (ICD-O): 100.0% informative
+- Primary diagnosis: 100.0% informative
+- Tissue or organ of origin: 100.0% informative
+- Tumor grade: 100.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Classification of tumor: 0.0% informative
+- Vital status: 98.6% informative
+- Age at diagnosis: 98.6% populated (one-to-many)
+- Days to last follow-up: 98.6% populated (one-to-many)
+- AJCC pathologic stage: 96.6% informative
+- Days to death: 78.8% populated (one-to-many)
+- Cause of death: 63.0% informative
+- Ethnicity: 21.9% informative
+- Days to recurrence: 21.9% populated (one-to-many)
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
 
 ## Evidence of prior reuse
 

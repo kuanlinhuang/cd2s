@@ -8,10 +8,20 @@ Dataset id: cbio-bladder-columbia-msk-2018
 
 ## What it is
 
-- Cohort: 130 samples
+- Cohort: 22 cases
 - Cancer types: Bladder/Urinary Tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Smoking Status: 100.0% informative
+- Tumor Stage: 100.0% informative
 
 ## Evidence of prior reuse
 

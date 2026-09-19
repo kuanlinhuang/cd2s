@@ -8,10 +8,21 @@ Dataset id: cbio-lusc-cptac-2021
 
 ## What it is
 
-- Cohort: 80 samples
+- Cohort: 108 cases
 - Cancer types: Lung Squamous Cell Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, microRNA expression
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Ethnicity: 96.3% informative
+- Stage: 95.4% informative
+- Smoking History: 88.9% informative
 
 ## Evidence of prior reuse
 

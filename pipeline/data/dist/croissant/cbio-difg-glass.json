@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-difg-glass",
   "alternateName": "Diffuse Glioma (GLASS Consortium)",
-  "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at <a href=\"https://www.synapse.org/#!Synapse:syn17038081/wiki/585622\">Synapse</a>.",
+  "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at Synapse.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-glass",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,50 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival",
+          "description": "Category: outcome. Populated for 95.4% of cases; informative (excluding non-answers) for 95.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 95.4% of cases; informative (excluding non-answers) for 95.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:TUMOR_GRADE",
+          "name": "Tumor Grade",
+          "description": "Category: pathology. Populated for 95.4% of cases; informative (excluding non-answers) for 95.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (months)",
+          "description": "Category: followup. Populated for 95.1% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:therapeutic_agents",
+          "name": "Named therapeutic agents",
+          "description": "Category: treatment. Populated for 78.1% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

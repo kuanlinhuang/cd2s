@@ -9,14 +9,39 @@ Dataset id: pdc-academia-sinica-luad100
 ## What it is
 
 - Cohort: 110 cases
+- Cancer types: Lung Adenocarcinoma, Lung Squamous Cell Carcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Race: 0.0% informative
+- Ethnicity: 0.0% informative
+- Morphology (ICD-O): 0.0% informative
+- Tissue or organ of origin: 100.0% informative
+- Tumor grade: 0.0% informative
+- Classification of tumor: 100.0% informative
+- Sex at birth (gender): 95.5% informative
+- Age at diagnosis: 94.5% populated (one-to-many)
+- Primary diagnosis: 93.6% informative
+- AJCC pathologic stage (tumor_stage): 93.6% informative
+- Cause of death: 0.0% informative
+- Vital status: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 10
 - Citations to the dataset's publication: 11 (attention, not reuse)
-- Reuse gap index: -0.55 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.74 (negative means less reused than comparable datasets)
   - Comprehensive analysis of chemokines family and related regulatory ceRNA network in lung adenocarcinoma. (2022) PMID 36387469
   - Alternative splicing regulates &lt;i&gt;FGGY-&lt;/i&gt;derived neoantigen presentation and promotes immune evasion in metabolic-associated hepatocellular carcinoma. (2026) PMID 42291265
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932

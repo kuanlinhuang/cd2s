@@ -10,7 +10,7 @@
   "alternateName": [
     "prostate_msk_2024"
   ],
-  "description": "Targeted sequencing of 2,257 prostate cancer patient samples and their matched normals via MSK-IMPACT platform. This data is available under the <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en\">Creative Commons BY-NC-ND 4.0 license</a>.",
+  "description": "Targeted sequencing of 2,257 prostate cancer patient samples and their matched normals via MSK-IMPACT platform. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prostate-msk-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prostate_msk_2024"
@@ -19,7 +19,7 @@
     "Prostate",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "structural variant",
@@ -32,7 +32,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -101,7 +101,43 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 93.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression Free Survival Status",
+      "description": "Populated for 1.5% of cases, informative for 1.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 95.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 97.5% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression Free Survival Status (months)",
+      "description": "Populated for 1.5% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

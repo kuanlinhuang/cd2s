@@ -29,7 +29,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Tissue or organ of origin: 100.0% informative
 - Prior treatment: 100.0% informative
 - Prior malignancy: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Disease response at follow-up: 100.0% populated (one-to-many)
@@ -38,7 +38,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Tobacco smoking status: 99.1% informative
 - Morphology (ICD-O): 98.6% informative
 - ECOG performance status: 98.6% informative
-- Tumour grade: 98.1% informative
+- Tumor grade: 98.1% informative
 - Race: 97.6% informative
 - Treatment outcome: 67.9% populated (one-to-many)
 - Ethnicity: 47.6% informative
@@ -94,7 +94,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 21
 - Citations to the dataset's publication: 70 (attention, not reuse)
-- Reuse gap index: -1.27 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.89 (negative means less reused than comparable datasets)
   - Integrated analysis of cervical squamous cell carcinoma cohorts from three continents reveals conserved subtypes of prognostic significance. (2022) PMID 36207323
   - Insight into the Regulation of NDRG1 Expression. (2025) PMID 40332138
   - Identification and validation of a prognostic signature related to hypoxic tumor microenvironment in cervical cancer. (2022) PMID 35657977

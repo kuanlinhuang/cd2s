@@ -8,10 +8,24 @@ Dataset id: cbio-crc-orion-2024
 
 ## What it is
 
-- Cohort: 74 samples
+- Cohort: 74 cases
 - Cancer types: Bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 64.6 months (derivable for 74 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Grade: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Progression-Free Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival Status (Months): 100.0% populated (one-to-many)
+- Progression-Free Survival Status (Months): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

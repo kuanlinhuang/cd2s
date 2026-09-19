@@ -10,7 +10,7 @@
   "alternateName": [
     "mel_iatlas_riaz_nivolumab_2017"
   ],
-  "description": "Whole-exome sequencing and neoantigen landscape analysis of tumors from 64 advanced melanoma patients, profiled before and after nivolumab treatment. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
+  "description": "Whole-exome sequencing and neoantigen landscape analysis of tumors from 64 advanced melanoma patients, profiled before and after nivolumab treatment. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mel_iatlas_riaz_nivolumab_2017"
@@ -18,7 +18,7 @@
   "keywords": [
     "Melanoma",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "rna seq",
@@ -31,7 +31,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -110,7 +110,48 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical Benefit",
+      "description": "Populated for 87.5% of cases, informative for 87.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical Stage",
+      "description": "Populated for 75.0% of cases, informative for 75.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 90.6% of cases, informative for 90.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 82.8% of cases, informative for 82.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Response",
+      "description": "Populated for 91.6% of cases, informative for 91.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 82.8% of cases, informative for 82.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 90.6% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "RNA sequencing expression"

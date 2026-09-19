@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-normal-skin-melanocytes-2024",
   "alternateName": "Normal Melanocytes (UCSF, Nature 2020)",
-  "description": "Whole exome sequencing and targeted sequencing data of 308 normal melanocytes samples from human skin. In addition to data retrieved from four different articles, the study is part of a broader analysis involving three distinct cell types, with findings stratified accordingly (see related <a href=\"https://www.cbioportal.org/study/summary?id=skin_fibroblast_2024\">fibroblasts</a> and <a href=\"https://www.cbioportal.org/study/summary?id=normal_skin_keratinocytes_2024\">keratinocytes</a> studies).",
+  "description": "Whole exome sequencing and targeted sequencing data of 308 normal melanocytes samples from human skin. In addition to data retrieved from four different articles, the study is part of a broader analysis involving three distinct cell types, with findings stratified accordingly (see related fibroblasts and keratinocytes studies).",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-normal-skin-melanocytes-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,29 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ETHNICITY",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 68.6% of cases; informative (excluding non-answers) for 68.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 68.6% of cases; informative (excluding non-answers) for 68.6%.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

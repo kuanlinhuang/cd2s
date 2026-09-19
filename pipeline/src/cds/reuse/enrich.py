@@ -39,6 +39,71 @@ def _pick_primary(
     return max(early, key=lambda c: c.publication.citation_count or 0)
 
 
+#: How an inferred primary publication is labelled, so the corpus-level check can find
+#: the machine-nominated ones and leave a repository's own marker-paper link alone.
+INFERRED_LABEL = "Candidate primary publication (machine-inferred)"
+
+
+def _is_inferred(pub: Any) -> bool:
+    return any((e.source_label or "") == INFERRED_LABEL for e in pub.evidence)
+
+
+def drop_ambiguous_inferred_primaries(records: list[DatasetRecord]) -> dict[str, Any]:
+    """Withdraw any machine-nominated marker paper claimed by more than one dataset.
+
+    A marker paper describes one cohort. When the same article is nominated for several,
+    the nomination is wrong for at least all but one of them and we cannot tell which,
+    so it is withdrawn from all of them rather than asserted for each.
+
+    This is not hypothetical. The heuristic - earliest heavily cited article that
+    analysed the accession - nominated a pan-tissue DNA methylation clock as the marker
+    paper for eleven separate TCGA projects, and put its citation count on the site's
+    "most cited publications" board four times over. A methods paper that reused the data
+    is exactly what the rest of this project exists to distinguish from a marker paper.
+
+    Repository-supplied and reviewer-supplied publications are untouched; only the
+    low-confidence inferences are withdrawn.
+    """
+    claims: dict[str, list[DatasetRecord]] = {}
+    for rec in records:
+        for pub in rec.primary_publications:
+            if pub.pmid and _is_inferred(pub):
+                claims.setdefault(pub.pmid, []).append(rec)
+
+    shared = {pmid: recs for pmid, recs in claims.items() if len(recs) > 1}
+    n_dropped = 0
+    for pmid, sharers in shared.items():
+        for rec in sharers:
+            rec.primary_publications = [
+                p for p in rec.primary_publications if not (p.pmid == pmid and _is_inferred(p))
+            ]
+            if not rec.primary_publications:
+                rec.reuse_metrics.n_citations_to_primary_publication = None
+                rec.reuse_metrics.citation_to_reuse_ratio = None
+            rec.reuse_metrics.evidence.append(
+                Evidence(
+                    method=Method.DERIVED,
+                    source_label="Marker-paper inference withdrawn",
+                    retrieved_at=datetime.now(UTC),
+                    locator=f"PMID {pmid} was nominated for {len(sharers)} datasets",
+                    confidence=Confidence.HIGH,
+                    note=(
+                        "A marker paper describes one cohort. This article was inferred "
+                        "as the marker paper for several datasets at once, which means "
+                        "the inference is wrong for all but one of them and we cannot "
+                        "tell which, so no marker paper is claimed for this record."
+                    ),
+                )
+            )
+            n_dropped += 1
+    return {
+        "n_inferred_primaries": len(claims),
+        "n_shared_across_datasets": len(shared),
+        "n_records_withdrawn": n_dropped,
+        "withdrawn_pmids": sorted(shared),
+    }
+
+
 def enrich_record(
     client: Client,
     rec: DatasetRecord,
@@ -111,7 +176,7 @@ def enrich_record(
             pub.evidence = [
                 Evidence(
                     method=Method.DERIVED,
-                    source_label="Candidate primary publication (machine-inferred)",
+                    source_label=INFERRED_LABEL,
                     retrieved_at=now,
                     locator=(
                         f"earliest highly cited article analyzing {tokens[0]} "

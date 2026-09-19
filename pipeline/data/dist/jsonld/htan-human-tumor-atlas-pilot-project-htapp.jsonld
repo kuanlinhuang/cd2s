@@ -110,37 +110,37 @@
     {
       "@type": "PropertyValue",
       "name": "Demographics",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Exposure history",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Diagnosis",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
-      "name": "Follow-up",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Therapy",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Clinical molecular test",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "name": "Exposure history",
+      "description": "Populated for 92.2% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Family history",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 91.2% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     }
   ],
   "measurementTechnique": [

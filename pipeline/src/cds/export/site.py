@@ -22,6 +22,7 @@ from typing import Any
 import orjson
 
 from cds import __version__
+from cds.clinical import VERDICT_FIELDS, is_non_answer
 from cds.model import DatasetRecord, ReuseTier
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
 
@@ -111,7 +112,10 @@ def population_flags(r: DatasetRecord) -> list[str]:
     flags: list[str] = []
     race = r.cohort.demographics.race
     total = sum(race.values())
-    informative = {k: v for k, v in race.items() if k.lower() not in {"not reported", "unknown"}}
+    # The shared non-answer rule, not a local list: registries write refusal and
+    # ignorance a dozen ways, and a facet that counts "Pt Refused To Answer" as a race
+    # group can label a cohort by a category nobody chose.
+    informative = {k: v for k, v in race.items() if not is_non_answer(k)}
     if total and informative:
         for group, n in informative.items():
             if n / total >= 0.5 and "white" not in group.lower():
@@ -235,7 +239,8 @@ def build_facets(rows: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> dict[str, Any]:
-    n_cases = sum(r.cohort.n_cases or 0 for r in records)
+    with_case_count = [r for r in records if r.cohort.n_cases]
+    n_cases = sum(r.cohort.n_cases or 0 for r in with_case_count)
     assessed = [r for r in records if r.reuse_metrics.reuse_gap_index is not None]
     uncitable = [r for r in records if r.reuse_metrics.has_citable_accession is False]
     with_cites = [
@@ -246,6 +251,17 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         for r in records
         if r.reuse_metrics.citation_to_reuse_ratio
     ]
+    # How far the central measurement actually reaches. Until every repository's clinical
+    # tables are probed the same way, the six verdicts cover only part of the corpus, and
+    # the site should be able to say how much rather than imply all of it.
+    verdict_fields = {f for fs in VERDICT_FIELDS.values() for f in fs}
+    measured = [
+        r for r in records if any(v.harmonized_name in verdict_fields for v in r.clinical_variables)
+    ]
+    measured_by_repo: Counter[str] = Counter(
+        r.repository.short_name for r in measured if r.repository
+    )
+    total_by_repo: Counter[str] = Counter(r.repository.short_name for r in records if r.repository)
     return {
         "generated_at": datetime.now(UTC).isoformat(),
         "pipeline_version": __version__,
@@ -254,6 +270,12 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         "n_underexplored": sum(1 for r in records if r.underexplored.is_underexplored),
         "n_expert_reviewed": sum(1 for r in records if r.review.status.value == "expert_reviewed"),
         "n_cases_total": n_cases,
+        "n_datasets_with_case_count": len(with_case_count),
+        "n_clinically_measured": len(measured),
+        "clinically_measured_by_repository": {
+            repo: {"measured": measured_by_repo.get(repo, 0), "total": n}
+            for repo, n in sorted(total_by_repo.items())
+        },
         "n_repositories": len({r.repository.short_name for r in records if r.repository}),
         "n_distinct_modalities": len({a.modality.value for r in records for a in r.assays}),
         "n_with_survival": sum(1 for r in rows if r.get("has_survival_endpoint")),
@@ -264,7 +286,15 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         "median_citation_to_reuse_ratio": (
             round(sorted(ratios)[len(ratios) // 2], 1) if ratios else None
         ),
-        "n_workbooks": sum(1 for r in records for a in r.analysis_examples if a.workbook_path),
+        "n_workbook_attachments": sum(
+            1 for r in records for a in r.analysis_examples if a.workbook_path
+        ),
+        "n_datasets_with_workbook": sum(
+            1 for r in records if any(a.workbook_path for a in r.analysis_examples)
+        ),
+        "n_distinct_workbooks": len(
+            {a.workbook_path for r in records for a in r.analysis_examples if a.workbook_path}
+        ),
         "n_grants_linked": len(
             {g.core_project_num for r in records for g in r.grants if g.core_project_num}
         ),

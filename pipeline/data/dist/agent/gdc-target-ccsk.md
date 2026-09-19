@@ -26,14 +26,14 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Treatment given: 100.0% informative
 - Cause of death: 30.8% informative
 - Population group: 0.0% informative
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 4
 - Citations to the dataset's publication: 119 (attention, not reuse)
-- Reuse gap index: -2.71 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.25 (negative means less reused than comparable datasets)
   - Targeted &lt;i&gt;in silico&lt;/i&gt; characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575
   - TCF21 hypermethylation in genetically quiescent clear cell sarcoma of the kidney. (2015) PMID 26158413
   - Loss of DHX36/G4R1, a G4 resolvase, drives genome instability and regulates innate immune gene expression in cancer cells. (2025) PMID 40598896

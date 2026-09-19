@@ -25,7 +25,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Vital status: 0.0% informative
 - Morphology (ICD-O): 0.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 100.0% informative
 - Sex at birth: 98.6% informative
@@ -70,7 +70,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 6
 - Citations to the dataset's publication: 898 (attention, not reuse)
-- Reuse gap index: +0.33 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.05 (negative means less reused than comparable datasets)
   - Systematic determination of the mitochondrial proportion in human and mice tissues for single-cell RNA-sequencing data quality control. (2021) PMID 32840568
   - Human Pancreatic Cancer Single-Cell Atlas Reveals Association of CXCL10+ Fibroblasts and Basal Subtype Tumor Cells. (2025) PMID 39636224
   - The DNA methylation landscape of human cancer organoids available at the American type culture collection. (2020) PMID 32396494

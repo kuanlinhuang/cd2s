@@ -8,10 +8,22 @@ Dataset id: cbio-aml-ohsu-2018
 
 ## What it is
 
-- Cohort: 672 samples
+- Cohort: 562 cases
 - Cancer types: Acute Myeloid Leukemia
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structural variants / fusions
+- Median follow-up: 10.2 months (derivable for 497 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity Category: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival Status: 89.9% informative
+- Overall Survival (Months): 88.4% populated (one-to-many)
 
 ## Evidence of prior reuse
 

@@ -28,13 +28,13 @@ Populated means a value exists; informative excludes 'not reported'.
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% informative
 - Alcohol history: 100.0% informative
-- Classification of tumour: 85.7% informative
+- Classification of tumor: 85.7% informative
 - AJCC clinical stage: 71.4% informative
 - Prior malignancy: 71.4% informative
 - Progression or recurrence: 71.4% informative
 - Last known disease status: 71.4% informative
 - Therapeutic agents: 71.4% informative
-- Tumour grade: 57.1% informative
+- Tumor grade: 57.1% informative
 - Race: 42.9% informative
 - Cause of death: 0.0% informative
 
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 2
 - Citations to the dataset's publication: 9 (attention, not reuse)
-- Reuse gap index: -1.43 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.58 (negative means less reused than comparable datasets)
   - FocusedON-BC: A Robust Deep Learning Framework for Automated Body Composition Assessment. (2026) PMID 42124078
 
 ## Provenance

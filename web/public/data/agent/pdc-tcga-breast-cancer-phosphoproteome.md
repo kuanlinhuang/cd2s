@@ -9,14 +9,39 @@ Dataset id: pdc-tcga-breast-cancer-phosphoproteome
 ## What it is
 
 - Cohort: 109 cases
+- Cancer types: Breast Invasive Carcinoma
 - Measurements: Phosphoproteome mass spectrometry (iTRAQ4 / DDA)
+- Median follow-up: 37.5 months (derivable for 105 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Tumor grade: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Vital status: 96.3% informative
+- Sex at birth (gender): 96.3% informative
+- Morphology (ICD-O): 96.3% informative
+- Primary diagnosis: 96.3% informative
+- Tissue or organ of origin: 96.3% informative
+- Classification of tumor: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 95.4% informative
+- Prior treatment: 95.4% informative
+- Prior malignancy: 95.4% informative
+- Age at diagnosis: 95.4% populated (one-to-many)
+- AJCC pathologic stage: 94.5% informative
+- Race: 86.2% informative
+- Days to last follow-up: 86.2% populated (one-to-many)
+- Ethnicity: 76.1% informative
+- Days to death: 11.9% populated (one-to-many)
+- Cause of death: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Citations to the dataset's publication: 12 (attention, not reuse)
-- Reuse gap index: -0.56 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.60 (negative means less reused than comparable datasets)
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
   - SIMD: Synergistic integration mutualistic platform based on single-cell and proteotranscriptomics for drug repositioning. (2025) PMID 41444222
 

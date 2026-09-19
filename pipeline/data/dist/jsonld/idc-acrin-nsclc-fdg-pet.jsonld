@@ -21,6 +21,7 @@
     "Lung",
     "Non-small Cell Lung Cancer",
     "clinical",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

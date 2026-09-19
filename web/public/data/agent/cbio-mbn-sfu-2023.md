@@ -8,10 +8,22 @@ Dataset id: cbio-mbn-sfu-2023
 
 ## What it is
 
-- Cohort: 297 samples
+- Cohort: 297 cases
 - Cancer types: Mature B-Cell Neoplasms
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structural variants / fusions
+- Median follow-up: 10.2 months (derivable for 254 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Sex: 90.9% informative
+- Overall Survival : 85.5% informative
+- Progression-free Survival Status: 85.5% informative
+- Overall Survival (months): 85.5% populated (one-to-many)
+- Progression-free Survival (months): 73.7% populated (one-to-many)
 
 ## Evidence of prior reuse
 

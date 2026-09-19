@@ -28,7 +28,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - AJCC pathologic stage: 100.0% informative
 - Prior treatment: 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Prior malignancy: 94.3% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.47 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.62 (negative means less reused than comparable datasets)
   - Redefining malignant pleural mesothelioma types as a continuum uncovers immune-vascular interactions. (2019) PMID 31648983
   - Identification of cancer-associated fibroblasts subtypes in prostate cancer. (2023) PMID 37033924
   - Single-Cell View of Tumor Microenvironment Gradients in Pleural Mesothelioma. (2024) PMID 38959428

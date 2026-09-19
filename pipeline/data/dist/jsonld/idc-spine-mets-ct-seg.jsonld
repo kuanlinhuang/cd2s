@@ -29,6 +29,7 @@
     "Skin Cancer",
     "Soft-tissue Sarcoma",
     "clinical",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

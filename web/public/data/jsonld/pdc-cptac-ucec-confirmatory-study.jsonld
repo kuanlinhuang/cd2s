@@ -22,6 +22,8 @@
     "https://pdc.cancer.gov/pdc/study/PDC000439"
   ],
   "keywords": [
+    "Uterine Corpus Endometrial Carcinoma",
+    "Uterus, NOS",
     "acetylome",
     "acetylproteome",
     "glycoproteome",
@@ -75,7 +77,143 @@
   "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2024-01-01",
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 87.4% of cases, informative for 79.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 14.5% of cases, informative for 12.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 83.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 39.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth (gender)",
+      "description": "Populated for 100.0% of cases, informative for 86.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases, informative for 86.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases, informative for 86.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases, informative for 86.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumor grade",
+      "description": "Populated for 100.0% of cases, informative for 86.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 87.4% of cases, informative for 81.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.6% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage (tumor_stage)",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.6% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumor",
+      "description": "Populated for 0.6% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Age at diagnosis",
+      "description": "Populated for 81.8% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Days to death",
+      "description": "Populated for 13.8% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Days to last follow-up",
+      "description": "Populated for 79.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Days to recurrence",
+      "description": "Populated for 3.1% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Acetylome mass spectrometry (TMT11 / DDA)",
     "Glycoproteome mass spectrometry (TMT11 / DDA)",

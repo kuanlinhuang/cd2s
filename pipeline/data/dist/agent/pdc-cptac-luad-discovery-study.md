@@ -5,16 +5,43 @@ Summary: 115 lung adenocarcinomas with proteome, phosphoproteome and acetylome, 
 
 ## Read this first: what these data CANNOT support
 
-- No clinical annotation is distributed with the PDC study - no outcome, treatment, stage or smoking history, the last being central to lung adenocarcinoma biology.
-  Rules out: Survival analysis, Smoking-stratified analysis, Clinical correlation
-- Do not use for: Survival or prognostic claims from PDC data alone. (No outcome variable is distributed with the study.)
+- Treatment is absent: no therapeutic agent, treatment type or response is recorded for any of the 115 cases, and neither is smoking history, which is central to lung adenocarcinoma biology. Vital status, follow-up time and stage are served by the PDC API even though they do not ship in the study's file bundle.
+  Rules out: Treatment-response analysis, Smoking-stratified analysis
+- Do not use for: Treatment-response or resistance claims from PDC data alone. (No treatment record of any kind is populated for this study - not the agent, not the type, not the outcome.)
+- Do not use for: Survival claims that ignore how short the follow-up is. (Vital status is informative for 93% of cases and 107 have a follow-up time, but the median is 15.7 months, so late events are largely unobserved.)
 - Do not use for: Treating the ubiquitylome subset as representative of the full cohort without checking. (80 of 115 cases carry it; the selection may not be random.)
 
 ## What it is
 
 - Cohort: 115 cases
+- Cancer types: Lung Adenocarcinoma
 - Measurements: Acetylome mass spectrometry (TMT10 / DDA), Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA), Ubiquitylome mass spectrometry (TMT11 / DDA)
+- Median follow-up: 15.7 months (derivable for 107 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Sex at birth (gender): 96.5% informative
+- Morphology (ICD-O): 96.5% informative
+- Primary diagnosis: 96.5% informative
+- Tissue or organ of origin: 96.5% informative
+- Tumor grade: 96.5% informative
+- AJCC pathologic stage: 96.5% informative
+- Age at diagnosis: 96.5% populated (one-to-many)
+- Race: 93.9% informative
+- Vital status: 93.0% informative
+- Days to last follow-up: 93.0% populated (one-to-many)
+- Ethnicity: 33.0% informative
+- Days to death: 22.6% populated (one-to-many)
+- Cause of death: 13.9% informative
+- Days to recurrence: 7.8% populated (one-to-many)
+- Prior malignancy: 0.0% informative
+- Classification of tumor: 0.0% informative
+- AJCC clinical stage: 0.0% informative
 
 ## Questions these data can support
 
@@ -45,8 +72,7 @@ Summary: 115 lung adenocarcinomas with proteome, phosphoproteome and acetylome, 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 22
-- Citations to the dataset's publication: 350 (attention, not reuse)
-- Reuse gap index: -0.68 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.00 (negative means less reused than comparable datasets)
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - ALDH2 as a potential stem cell-related biomarker in lung adenocarcinoma: Comprehensive multi-omics analysis. (2023) PMID 36936815
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626

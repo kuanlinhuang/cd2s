@@ -8,10 +8,23 @@ Dataset id: cbio-prad-mskcc-2014
 
 ## What it is
 
-- Cohort: 104 samples
+- Cohort: 104 cases
 - Cancer types: Prostate Adenocarcinoma
 - Measurements: Copy number alterations
+- Median follow-up: 70.1 months (derivable for 104 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Disease Free Status: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Disease Free (Months): 100.0% populated (one-to-many)
+- Overall Survival (Months): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

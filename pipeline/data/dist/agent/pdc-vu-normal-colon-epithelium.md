@@ -10,13 +10,37 @@ Dataset id: pdc-vu-normal-colon-epithelium
 
 - Cohort: 30 cases
 - Measurements: Proteome mass spectrometry (Label Free / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Race: 0.0% informative
+- Ethnicity: 0.0% informative
+- Sex at birth (gender): 0.0% informative
+- Morphology (ICD-O): 0.0% informative
+- Primary diagnosis: 0.0% informative
+- Tissue or organ of origin: 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Classification of tumor: 0.0% informative
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
+- Synchronous malignancy: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
 - Citations to the dataset's publication: 1 (attention, not reuse)
-- Reuse gap index: +1.35 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.58 (negative means less reused than comparable datasets)
 
 ## Provenance
 

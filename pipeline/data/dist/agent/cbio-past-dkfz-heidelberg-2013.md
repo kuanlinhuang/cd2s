@@ -8,10 +8,23 @@ Dataset id: cbio-past-dkfz-heidelberg-2013
 
 ## What it is
 
-- Cohort: 96 samples
+- Cohort: 96 cases
 - Cancer types: Pilocytic Astrocytoma
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
+- Median follow-up: 11.0 months (derivable for 95 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Patient's Vital Status: 100.0% informative
+- Disease Free Status: 99.0% informative
+- Disease Free (Months): 99.0% populated (one-to-many)
+- Overall Survival (Months): 99.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

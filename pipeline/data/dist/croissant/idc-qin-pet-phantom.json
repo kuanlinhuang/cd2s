@@ -25,7 +25,18 @@
   ],
   "cr:usageGuidance": {
     "supportedQuestions": [],
-    "blockingLimitations": [],
+    "blockingLimitations": [
+      {
+        "kind": "missing_data",
+        "statement": "IDC serves no clinical table for this collection, so nothing about outcome, stage, treatment or demographics can be read from the repository. Any such variable would have to come from the originating trial or publication.",
+        "rulesOut": [
+          "survival",
+          "treatment response",
+          "stage-adjusted modelling",
+          "analysis by race or ethnicity"
+        ]
+      }
+    ],
     "inappropriateUses": []
   }
 }

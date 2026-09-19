@@ -9,14 +9,40 @@ Dataset id: pdc-cptac-ucec-confirmatory-study
 ## What it is
 
 - Cohort: 159 cases
+- Cancer types: Uterine Corpus Endometrial Carcinoma
 - Measurements: Acetylome mass spectrometry (TMT11 / DDA), Glycoproteome mass spectrometry (TMT11 / DDA), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
+- Median follow-up: 45.8 months (derivable for 127 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Sex at birth (gender): 86.8% informative
+- Morphology (ICD-O): 86.8% informative
+- Primary diagnosis: 86.8% informative
+- Tissue or organ of origin: 86.8% informative
+- Tumor grade: 86.2% informative
+- Race: 83.6% informative
+- AJCC pathologic stage: 81.8% informative
+- Age at diagnosis: 81.8% populated (one-to-many)
+- Vital status: 79.9% informative
+- Days to last follow-up: 79.9% populated (one-to-many)
+- Ethnicity: 39.0% informative
+- Days to death: 13.8% populated (one-to-many)
+- Cause of death: 12.6% informative
+- Days to recurrence: 3.1% populated (one-to-many)
+- AJCC clinical stage: 0.0% informative
+- Prior treatment: 0.0% informative
+- Classification of tumor: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
 - Citations to the dataset's publication: 3 (attention, not reuse)
-- Reuse gap index: -2.48 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.65 (negative means less reused than comparable datasets)
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
 
 ## Provenance

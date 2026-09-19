@@ -8,10 +8,22 @@ Dataset id: cbio-histiocytosis-cobi-msk-2019
 
 ## What it is
 
-- Cohort: 52 samples
+- Cohort: 18 cases
 - Cancer types: Histiocytic and Dendritic Cell Neoplasms
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 11.7 months (derivable for 18 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Progression Free Status: 100.0% informative
+- Sex: 100.0% informative
+- Patient's Vital Status: 100.0% informative
+- Progress Free Survival (Months): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

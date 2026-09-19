@@ -18,7 +18,7 @@
   "keywords": [
     "Pancreatic Adenocarcinoma",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "pancreas",
@@ -31,7 +31,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -80,7 +80,33 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Neoplasm Disease Stage American Joint Committee on Cancer Code",
+      "description": "Populated for 99.1% of cases, informative for 91.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity Category",
+      "description": "Populated for 79.6% of cases, informative for 79.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 95.8% of cases, informative for 95.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumor Grade",
+      "description": "Populated for 88.8% of cases, informative for 88.8%"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "RNA sequencing expression"

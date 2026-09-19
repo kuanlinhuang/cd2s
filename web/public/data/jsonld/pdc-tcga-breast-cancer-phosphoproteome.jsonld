@@ -16,6 +16,8 @@
     "https://pdc.cancer.gov/pdc/study/PDC000174"
   ],
   "keywords": [
+    "Breast",
+    "Breast Invasive Carcinoma",
     "pdc",
     "phosphoproteome",
     "proteogenomics"
@@ -53,18 +55,147 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Inflammation-related citrullination of matrisome proteins in human cancer.",
-      "identifier": "https://doi.org/10.3389/fonc.2022.1035188",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2022-01-01",
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 96.3% of cases, informative for 96.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.9% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 86.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 76.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth (gender)",
+      "description": "Populated for 100.0% of cases, informative for 96.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases, informative for 96.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases, informative for 96.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases, informative for 96.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumor grade",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 100.0% of cases, informative for 94.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage (tumor_stage)",
+      "description": "Populated for 100.0% of cases, informative for 95.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 100.0% of cases, informative for 95.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 100.0% of cases, informative for 95.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumor",
+      "description": "Populated for 96.3% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Age at diagnosis",
+      "description": "Populated for 95.4% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Days to death",
+      "description": "Populated for 11.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Days to last follow-up",
+      "description": "Populated for 86.2% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Days to recurrence",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Phosphoproteome mass spectrometry (iTRAQ4 / DDA)"
   ]

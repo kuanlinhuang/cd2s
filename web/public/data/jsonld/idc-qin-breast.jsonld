@@ -22,6 +22,7 @@
     "Breast",
     "Breast Cancer",
     "clinical",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

@@ -20,7 +20,113 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:DFS_STATUS",
+          "name": "Disease Free Status",
+          "description": "Category: outcome. Populated for 88.4% of cases; informative (excluding non-answers) for 88.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:DSS_STATUS",
+          "name": "Disease Specific Survival Status",
+          "description": "Category: outcome. Populated for 88.4% of cases; informative (excluding non-answers) for 88.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ETHNICITY",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 35.7% of cases; informative (excluding non-answers) for 33.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:GRADE",
+          "name": "Neoplasm Histologic Grade",
+          "description": "Category: pathology. Populated for 99.1% of cases; informative (excluding non-answers) for 99.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival Status",
+          "description": "Category: outcome. Populated for 78.6% of cases; informative (excluding non-answers) for 78.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_STATUS",
+          "name": "Progression Free Status",
+          "description": "Category: outcome. Populated for 95.5% of cases; informative (excluding non-answers) for 95.5%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PRIMARY_SITE",
+          "name": "Primary Tumor Site",
+          "description": "Category: diagnosis. Populated for 35.7% of cases; informative (excluding non-answers) for 35.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RACE",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 35.7% of cases; informative (excluding non-answers) for 34.8%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SMOKING_HISTORY",
+          "name": "Smoking History",
+          "description": "Category: exposure. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:VITAL_STATUS",
+          "name": "Status",
+          "description": "Category: outcome. Populated for 42.9% of cases; informative (excluding non-answers) for 42.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:DFS_MONTHS",
+          "name": "Disease Free (Months)",
+          "description": "Category: outcome. Populated for 88.4% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (Months)",
+          "description": "Category: followup. Populated for 78.6% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_MONTHS",
+          "name": "Progression Free(Months)",
+          "description": "Category: outcome. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

@@ -8,7 +8,7 @@ Dataset id: htan-human-tumor-atlas-pilot-project-htapp
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 205 cases
 - Measurements: Expansion sequencing (ExSeq) in situ transcriptomics, Single-cell / single-nucleus RNA sequencing, Multiplexed tissue imaging, 10x Visium spatial transcriptomics, Bulk DNA sequencing, Bulk RNA sequencing, Other assay
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -16,18 +16,19 @@ Dataset id: htan-human-tumor-atlas-pilot-project-htapp
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Demographics: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Diagnosis: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Therapy: None% populated (one-to-many)
-- Clinical molecular test: None% populated (one-to-many)
-- Family history: None% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Diagnosis: 100.0% populated (one-to-many)
+- Follow-up: 100.0% populated (one-to-many)
+- Clinical molecular test: 100.0% populated (one-to-many)
+- Therapy: 100.0% populated (one-to-many)
+- Exposure history: 92.2% populated (one-to-many)
+- Family history: 91.2% populated (one-to-many)
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 856 (attention, not reuse)
+- Reuse gap index: -3.43 (negative means less reused than comparable datasets)
 
 ## Provenance
 

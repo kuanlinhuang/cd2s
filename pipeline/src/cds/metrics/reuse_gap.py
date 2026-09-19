@@ -128,28 +128,27 @@ def fit(records: list[DatasetRecord]) -> tuple[pd.DataFrame, dict[str, Any]]:
     changing is worth recording, because it is the kind of thing that quietly invalidates
     an index.
 
-    Reuse counts in this corpus span four orders of magnitude - TCGA-LUAD has 3,321
-    analyzing articles while the median dataset has six and many have none. Fitting a
-    Poisson or negative binomial to that on a log link lets a handful of extreme points
-    dominate the fit, and the resulting predictions extrapolate absurdly: an earlier
-    negative binomial specification predicted over 300 analyzing articles for a 211-subject
-    imaging collection, which would have made its "shortfall" an artifact of the model
-    rather than a property of the dataset.
+    Reuse counts in this corpus span four orders of magnitude - the most reused dataset
+    has thousands of analyzing articles while the median has a handful and many have
+    none. Fitting a Poisson or negative binomial to that on a log link lets a handful of
+    extreme points dominate the fit, and the resulting predictions extrapolate absurdly:
+    an earlier negative binomial specification predicted hundreds of analyzing articles
+    for a two-hundred-subject imaging collection, which would have made its "shortfall"
+    an artifact of the model rather than a property of the dataset.
 
     Modeling the already-compressed response bounds this. The residual is then directly
     interpretable: it *is* the reuse gap index, in log2 units, with no back-transformation
     and no opportunity for exponential blow-up.
 
     It reduces the problem rather than removing it, and the honest version of that
-    sentence is worth keeping. The same 211-subject imaging collection is still predicted
-    around 197 analyzing articles against 3 observed - lower than the negative binomial's
-    300-plus, and inside the range actually seen in the corpus, but a long way from
-    comfortable. It is the corpus's largest residual at roughly four times the residual
-    standard deviation, which is why the underexplored label additionally requires the
-    absolute count to be small: a prediction that extreme should not on its own be enough
-    to call a dataset neglected. Anyone recomputing the index from the published
-    coefficients should treat the upper tail of `expected_reuse` as the weakest part of
-    the model.
+    sentence is worth keeping. Some small collection is still predicted far more articles
+    than it received - lower than the negative binomial's extrapolation, and inside the
+    range actually seen in the corpus, but a long way from comfortable. Which dataset
+    that is, and by how much, is published in the diagnostics as
+    `largest_over_prediction` rather than written into prose that goes stale: it is the
+    reason the underexplored label additionally requires the absolute count to be small,
+    and the reason anyone recomputing the index from the published coefficients should
+    treat the upper tail of `expected_reuse` as the weakest part of the model.
     """
     df = build_frame(records)
     fitset = df[df["eligible"]].copy()
@@ -199,6 +198,27 @@ def fit(records: list[DatasetRecord]) -> tuple[pd.DataFrame, dict[str, Any]]:
     fitset["rgi_percentile"] = fitset["rgi"].rank(pct=True) * 100.0
 
     resid_sd = float(np.std(fitset["rgi"], ddof=1))
+
+    # The model's own worst case, published rather than described. The Methods page used
+    # to name a specific dataset and a specific predicted count in prose; those numbers
+    # went stale the first time the corpus changed, which is exactly the failure this
+    # project criticises elsewhere. They are computed here instead.
+    over = fitset.assign(gap=fitset["expected"] - fitset["observed"]).sort_values(
+        "gap", ascending=False
+    )
+    worst = over.iloc[0] if len(over) else None
+    largest_over_prediction = (
+        {
+            "id": str(worst["id"]),
+            "n_cases": int(worst["n_cases"]),
+            "observed": int(worst["observed"]),
+            "expected": round(float(worst["expected"]), 1),
+            "residual_log2": round(float(worst["rgi"]), 2),
+            "residual_in_sd": round(float(worst["rgi"]) / resid_sd, 1) if resid_sd else None,
+        }
+        if worst is not None
+        else None
+    )
     diagnostics.update(
         {
             "status": "fitted",
@@ -211,6 +231,15 @@ def fit(records: list[DatasetRecord]) -> tuple[pd.DataFrame, dict[str, Any]]:
             "observed_reuse_median": float(fitset["observed"].median()),
             "observed_reuse_max": int(fitset["observed"].max()),
             "max_expected_reuse": round(float(fitset["expected"].max()), 1),
+            "largest_over_prediction": largest_over_prediction,
+            "upper_tail_note": (
+                "Expected reuse is least trustworthy at the top of its range. The "
+                "dataset in `largest_over_prediction` is the corpus's worst case: the "
+                "model predicts far more analysing articles than were observed. That is "
+                "why the underexplored label additionally requires a small absolute "
+                "count, and why anyone recomputing the index should treat the upper tail "
+                "of `expected_reuse` as the weakest part of the fit."
+            ),
             "covariates": [
                 "log10(cohort size)",
                 "log2(1 + years available)",

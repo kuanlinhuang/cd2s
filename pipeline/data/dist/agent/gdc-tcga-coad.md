@@ -24,7 +24,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior treatment: 100.0% populated (one-to-many)
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Prior malignancy: 99.8% informative
 - Sex at birth: 99.6% informative
 - Vital status: 99.6% informative
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1943
-- Citations to the dataset's publication: 5556 (attention, not reuse)
-- Reuse gap index: +2.04 (negative means less reused than comparable datasets)
+- Reuse gap index: +2.11 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Epigenetic fingerprints link early-onset colon and rectal cancer to pesticide exposure. (2026) PMID 42014507
   - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231

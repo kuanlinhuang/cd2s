@@ -5,7 +5,13 @@ import { Bars } from "@/components/charts/Bars";
 import { RepositoryBars } from "@/components/charts/RepositoryBars";
 import ReuseScatter from "@/components/charts/ReuseScatter";
 import { Callout, Card } from "@/components/ui";
-import { getModel, getRepositoryBreakdown, getScatterPoints, getStats } from "@/lib/data";
+import {
+  getFieldCalibration,
+  getModel,
+  getRepositoryBreakdown,
+  getScatterPoints,
+  getStats,
+} from "@/lib/data";
 import { FIT_RULES } from "@/lib/fit";
 import { num, shortDate } from "@/lib/format";
 
@@ -44,7 +50,9 @@ const SOURCES = [
       "PDC ships one study per analytical fraction, so proteome and phosphoproteome of " +
       "the same tumors arrive as separate studies. We group fractions back into one " +
       "record per biological cohort and drop inter-laboratory reference materials, " +
-      "which are not patient cohorts.",
+      "which are not patient cohorts. Clinical completeness is read case by case from " +
+      "clinicalPerStudy and the treatment records, in the same harmonized vocabulary " +
+      "the GDC uses, so a proteomic cohort is graded by the same six rules.",
   },
   {
     name: "NCI Imaging Data Commons",
@@ -54,16 +62,20 @@ const SOURCES = [
       "Subject and series counts, DICOM modalities, licenses, and the supporting_data " +
       "field that records which other measurements accompany the images. Collection " +
       "descriptions are mined for cross-repository accessions, which recovers " +
-      "imaging-genomics pairs documented only in prose.",
+      "imaging-genomics pairs documented only in prose. Clinical variables here are " +
+      "per-collection tables named by the submitting trial, with no shared vocabulary " +
+      "to grade against, so we record only whether such a table exists - and say so " +
+      "where a collection's own supporting_data disagrees with what is served.",
   },
   {
     name: "Human Tumor Atlas Network",
     endpoint: "github.com/ncihtan/htan-portal",
     unit: "atlas",
     what:
-      "Per-atlas Synapse component inventories, which give the assay mix and file " +
-      "counts, plus the network's own curated publication manifest with PMIDs and grant " +
-      "numbers. That manifest is unusually strong evidence because HTAN maintains it.",
+      "Per-atlas Synapse component inventories, which give the assay mix, file counts " +
+      "and the participant count behind each clinical table, plus the network's own " +
+      "curated publication manifest with PMIDs and grant numbers. That manifest is " +
+      "unusually strong evidence because HTAN maintains it.",
   },
   {
     name: "cBioPortal",
@@ -73,7 +85,9 @@ const SOURCES = [
       "The discovery channel for investigator-generated cohorts. Every public study " +
       "records the PMID it came from; we resolve those through NIH RePORTER and keep the " +
       "ones an NCI award paid for. This surfaces NCI-supported datasets that no NCI " +
-      "catalog enumerates.",
+      "catalog enumerates. Its standard clinical attributes are counted per patient, " +
+      "including an explicit bucket for patients a field has no row for, and the " +
+      "survival and progression times are read value by value so the medians are exact.",
   },
   {
     name: "Europe PMC",
@@ -125,6 +139,10 @@ export default function MethodsPage() {
   const model = getModel();
   const points = getScatterPoints();
   const repos = getRepositoryBreakdown();
+  const calibration = getFieldCalibration();
+  const coverage = Object.entries(stats.clinically_measured_by_repository ?? {}).sort(
+    (a, b) => b[1].total - a[1].total,
+  );
   return (
     <>
       <div className="pt-10 pb-6">
@@ -211,9 +229,10 @@ export default function MethodsPage() {
           <p>
             Two distinctions matter. A field filled entirely with &ldquo;not
             reported&rdquo; blocks an analysis as surely as an absent one, for a different
-            reason, so the two are counted separately. One 18,004-case dataset in this
-            corpus reports vital status for every case and an informative value for none,
-            which makes survival analysis impossible in a way no catalog entry reveals.
+            reason, so the two are counted separately. Several cohorts here report vital
+            status for every case and an informative value for none, which makes survival
+            analysis impossible in a way no catalog entry reveals; the dataset pages name
+            them and show the counts.
           </p>
           <p>
             One-to-many fields, such as treatment records, produce counts that exceed the
@@ -221,7 +240,40 @@ export default function MethodsPage() {
             are flagged <code>1:n</code> and only the share of cases with any record is
             reported.
           </p>
+          <p>
+            Each repository names its clinical fields its own way. Every measured field
+            therefore carries both its native name and a harmonized name from one shared
+            vocabulary, and the verdicts read the harmonized one, so a proteomic cohort
+            and a genomic one are graded by the same rule. Where two fields claim the same
+            concept, the one informative for more of the cohort is used.
+          </p>
         </div>
+
+        {coverage.length > 0 && (
+          <Card className="mt-4">
+            <h3 className="text-[14px] font-medium">How far the measurement reaches</h3>
+            <p className="mt-1 mb-3 max-w-3xl text-[12px] t-muted">
+              The six verdicts can only be graded where a repository serves clinical
+              fields that map onto the shared vocabulary.{" "}
+              {num(stats.n_clinically_measured ?? 0)} of {num(stats.n_datasets)} records
+              qualify. The rest show <em>not measured</em>, which is a statement about this
+              resource and not about the data.
+            </p>
+            <Bars
+              max={Math.max(...coverage.map(([, v]) => v.total))}
+              labelWidth={120}
+              valueWidth={120}
+              rows={coverage.map(([repo, v]) => ({
+                key: repo,
+                label: repo,
+                value: v.measured,
+                display: `${num(v.measured)} of ${num(v.total)}`,
+                title: `${v.measured} of ${v.total} ${repo} records have at least one field the verdicts read`,
+                tone: (v.measured > 0 ? "primary" : "muted") as "primary" | "muted",
+              }))}
+            />
+          </Card>
+        )}
       </section>
 
       {/* -------------------------------------------------------------------- fit */}
@@ -321,25 +373,57 @@ export default function MethodsPage() {
         <div className="mt-4 space-y-3">
           <Card>
             <h3 className="text-[14px] font-medium">Which fields we use, and one we rejected</h3>
-            <p className="mt-1 mb-3 text-[13px] t-muted">
-              Field choice was calibrated on the live index. Of the 4,375 articles that
-              mention TCGA-BRCA anywhere, the broad <code>AVAILABILITY</code> field
-              matches most of them and so cannot discriminate. The narrow{" "}
-              <code>DATA_AVAILABILITY</code> field can. An invalid field name returns zero
-              hits, which confirms each field is truly indexed rather than falling back to
-              free text.
-            </p>
-            <Bars
-              total={4375}
-              max={4375}
-              labelWidth={230}
-              valueWidth={90}
-              rows={[
-                { key: "any", label: "Mentions TCGA-BRCA anywhere", value: 4375, tone: "muted" },
-                { key: "avail", label: "AVAILABILITY (broad, rejected)", value: 3421, tone: "muted" },
-                { key: "data", label: "DATA_AVAILABILITY (narrow, used)", value: 313, tone: "primary" },
-              ]}
-            />
+            {calibration ? (
+              <>
+                <p className="mt-1 mb-3 text-[13px] t-muted">
+                  Field choice is re-measured against the live index on every build, on the
+                  corpus&rsquo;s most reused accession. Of the{" "}
+                  {num(calibration.n_mentioning_anywhere)} articles that mention{" "}
+                  <code>{calibration.token}</code> anywhere, the broad{" "}
+                  <code>{calibration.rejected_field}</code> field matches most and so cannot
+                  discriminate. The narrow <code>{calibration.used_field}</code> field can.
+                  Measured {shortDate(calibration.retrieved_at)}.
+                </p>
+                <Bars
+                  total={calibration.n_mentioning_anywhere}
+                  max={calibration.n_mentioning_anywhere}
+                  labelWidth={250}
+                  valueWidth={96}
+                  rows={[
+                    {
+                      key: "any",
+                      label: `Mentions ${calibration.token} anywhere`,
+                      value: calibration.n_mentioning_anywhere,
+                      tone: "muted",
+                    },
+                    ...Object.entries(calibration.by_field).map(([field, value]) => ({
+                      key: field,
+                      label:
+                        field === calibration.used_field
+                          ? `${field} (narrow, used)`
+                          : field === calibration.rejected_field
+                            ? `${field} (broad, rejected)`
+                            : `${field} (counted as reuse)`,
+                      value,
+                      tone: (field === calibration.used_field ? "primary" : "muted") as
+                        | "primary"
+                        | "muted",
+                    })),
+                  ]}
+                />
+                <p className="mt-3 text-[12px] t-faint">
+                  The unindexed field name <code>{calibration.sentinel_field}</code> returned{" "}
+                  {num(calibration.sentinel_hits)} hits, which is what shows these fields are
+                  genuinely indexed rather than falling back to free text. A build where that
+                  check fails does not publish.
+                </p>
+              </>
+            ) : (
+              <p className="mt-1 text-[13px] t-muted">
+                The field comparison has not been measured for this build, so no numbers are
+                quoted here. Run <code>cds calibrate</code> to produce them.
+              </p>
+            )}
           </Card>
           <Callout tone="neutral" title="Which accessions count">
             Only accession-like tokens: dbGaP <code>phs</code> identifiers, GDC project
@@ -495,19 +579,36 @@ RGI    = y - fitted`}</code>
             <strong>This is the second specification.</strong> The first was a negative
             binomial on raw counts, the textbook choice for overdispersed count data, and
             it was wrong here. Reuse spans four orders of magnitude, so a few extreme
-            points dominated the fit and predictions ran to over three hundred expected
-            articles for a 211-subject imaging collection. Modeling the log response
-            bounds that. Huber weighting stops the 33 TCGA projects, at once the oldest
-            and the most reused datasets here, from setting the slope on years available
-            and so smuggling back the program effect we refuse to adjust for.
+            points dominated the fit and predictions ran to hundreds of expected articles
+            for small imaging collections. Modeling the log response bounds that. Huber
+            weighting stops the TCGA projects, at once the oldest and the most reused
+            datasets here, from setting the slope on years available and so smuggling back
+            the program effect we refuse to adjust for.
           </p>
-          <p>
-            It bounds the problem rather than removing it. That same collection is still
-            predicted around 197 articles against 3 observed, the largest residual in the
-            corpus at about four standard deviations. That is why the label also requires
-            a small absolute count, and why the upper tail of predicted reuse is the
-            weakest part of this model.
-          </p>
+          {model?.largest_over_prediction ? (
+            <p>
+              It bounds the problem rather than removing it. The corpus&rsquo;s worst case
+              is{" "}
+              <Link href={`/datasets/${model.largest_over_prediction.id}`}>
+                {model.largest_over_prediction.id}
+              </Link>
+              , a {num(model.largest_over_prediction.n_cases)}-case dataset predicted{" "}
+              {num(Math.round(model.largest_over_prediction.expected))} articles against{" "}
+              {num(model.largest_over_prediction.observed)} observed
+              {model.largest_over_prediction.residual_in_sd
+                ? `, ${Math.abs(model.largest_over_prediction.residual_in_sd).toFixed(1)} residual standard deviations below its prediction`
+                : ""}
+              . That is why the label also requires a small absolute count, and why the
+              upper tail of predicted reuse is the weakest part of this model. The figure
+              is recomputed on every build rather than quoted here.
+            </p>
+          ) : (
+            <p>
+              It bounds the problem rather than removing it. The upper tail of predicted
+              reuse remains the weakest part of this model, which is why the label also
+              requires a small absolute count.
+            </p>
+          )}
           <p>
             <strong>One covariate is deliberately absent.</strong> Program membership is
             not adjusted for. &ldquo;It is part of TCGA&rdquo; is the disparity we are
@@ -537,17 +638,18 @@ RGI    = y - fitted`}</code>
         </h2>
         <div className="prose-cds mt-3 text-[14px]">
           <p>
-            TCGA-BRCA is one cohort of 1,098 patients. It appears as a GDC project for
-            genomics, an IDC collection for radiology and pathology slides, and a
-            cBioPortal study for harmonized matrices. Records describing the same cohort
-            are folded into one page with every access route listed.
+            TCGA-BRCA is one cohort of patients. It appears as a GDC project for genomics,
+            an IDC collection for radiology and pathology slides, and a cBioPortal study
+            for harmonized matrices. Records describing the same cohort are folded into
+            one page with every access route listed, and the cohort size shown is the one
+            the primary repository reports.
           </p>
           <p>
             Merging is conservative. We merge only on identifiers that name a specific
             cohort, and any value shared by more than two records is treated as
             program-level and ignored. Every TCGA project shares dbGaP{" "}
-            <code>phs000178</code>; merging on it would collapse 33 cancer types into one
-            record. All source identifiers and all evidence survive the merge.
+            <code>phs000178</code>; merging on it would collapse every TCGA cancer type
+            into one record. All source identifiers and all evidence survive the merge.
           </p>
         </div>
       </section>
@@ -573,7 +675,7 @@ RGI    = y - fitted`}</code>
             ],
             [
               "Inferred primary publications",
-              "Where a repository publishes no marker-paper link we nominate the earliest heavily cited article that analyzed the data. That is a guess, it is labeled as one at low confidence, and it is queued for review rather than presented as fact.",
+              "Where a repository publishes no marker-paper link we nominate the earliest heavily cited article that analyzed the data. That is a guess, it is labeled as one at low confidence, and it is queued for review rather than presented as fact. One failure mode is now caught automatically: an inference claimed by more than one dataset is wrong for all but one of them, so it is withdrawn from all of them and the record says so. It had nominated a pan-tissue methylation clock as the marker paper for eleven TCGA projects.",
             ],
             [
               "Author-overlap independence is a proxy",

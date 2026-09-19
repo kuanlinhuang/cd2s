@@ -76,7 +76,7 @@
     {
       "@type": "PropertyValue",
       "name": "Extended clinical data (tier 2)",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     }
   ],
   "measurementTechnique": [

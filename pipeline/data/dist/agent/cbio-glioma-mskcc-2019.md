@@ -8,11 +8,24 @@ Dataset id: cbio-glioma-mskcc-2019
 
 ## What it is
 
-- Cohort: 1,004 samples
+- Cohort: 924 cases
 - Cancer types: Diffuse Glioma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 20.3 months (derivable for 923 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 99.9% informative
+- Sex: 99.9% informative
+- Overall Survival (Months): 99.9% populated (one-to-many)
+- Named therapeutic agents: 86.1% populated (one-to-many)
+- Progression Free Status: 67.6% informative
+- Progress Free Survival (Months): 67.5% populated (one-to-many)
 
 ## Evidence of prior reuse
 

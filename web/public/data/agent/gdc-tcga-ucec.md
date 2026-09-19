@@ -24,9 +24,9 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 97.9% populated (one-to-many)
 - Morphology (ICD-O): 97.9% populated (one-to-many)
 - Tissue or organ of origin: 97.9% populated (one-to-many)
-- Tumour grade: 97.9% informative
+- Tumor grade: 97.9% informative
 - Prior treatment: 97.9% populated (one-to-many)
-- Classification of tumour: 97.9% populated (one-to-many)
+- Classification of tumor: 97.9% populated (one-to-many)
 - Treatment type: 97.9% populated (one-to-many)
 - Treatment given: 97.9% populated (one-to-many)
 - Therapeutic agents: 97.9% populated (one-to-many)
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 438
-- Citations to the dataset's publication: 5556 (attention, not reuse)
-- Reuse gap index: -0.19 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.12 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Mutational scanning reveals oncogenic CTNNB1 mutations have diverse effects on signaling. (2026) PMID 41629672
   - Significance of Gelsolin Superfamily Genes in Diagnosis, Prognosis and Immune Microenvironment Regulation for Endometrial Cancer. (2025) PMID 39964147

@@ -26,9 +26,9 @@ Populated means a value exists; informative excludes 'not reported'.
 - Ethnicity: 89.7% informative
 - Race: 88.4% informative
 - Tissue or organ of origin: 87.1% informative
-- Classification of tumour: 74.4% informative
+- Classification of tumor: 74.4% informative
 - Treatment given: 74.2% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Cause of death: 0.0% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 55
 - Citations to the dataset's publication: 24 (attention, not reuse)
-- Reuse gap index: -3.45 (negative means less reused than comparable datasets)
+- Reuse gap index: -3.39 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - ONECUT2 is a driver of neuroendocrine prostate cancer. (2019) PMID 30655535
   - <i>MYC</i> Drives a Subset of High-Risk Pediatric Neuroblastomas and Is Activated through Mechanisms Including Enhancer Hijacking and Focal Enhancer Amplification. (2018) PMID 29284669

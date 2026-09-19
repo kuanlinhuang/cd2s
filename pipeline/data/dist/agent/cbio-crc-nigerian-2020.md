@@ -8,10 +8,19 @@ Dataset id: cbio-crc-nigerian-2020
 
 ## What it is
 
-- Cohort: 64 samples
+- Cohort: 64 cases
 - Cancer types: Colorectal Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Race Category: 100.0% informative
+- Sex: 100.0% informative
 
 ## Evidence of prior reuse
 

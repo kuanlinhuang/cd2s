@@ -23,16 +23,16 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Regimen or line of therapy: 100.0% informative
 - Vital status: 98.1% informative
 - Ethnicity: 96.2% informative
+- Regimen or line of therapy: 96.2% informative
 - Race: 92.3% informative
 - Cause of death: 0.0% informative
 - Population group: 0.0% informative
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 1
 - Citations to the dataset's publication: 27 (attention, not reuse)
-- Reuse gap index: -2.12 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.48 (negative means less reused than comparable datasets)
   - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None
 
 ## Provenance

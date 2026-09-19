@@ -9,14 +9,40 @@ Dataset id: pdc-beat-aml-baseline-clinical
 ## What it is
 
 - Cohort: 211 cases
+- Cancer types: Acute Myeloid Leukemia, Other Leukemias, Myelodysplastic Syndromes
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
+- Median follow-up: 11.0 months (derivable for 207 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Morphology (ICD-O): 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Tissue or organ of origin: 99.5% informative
+- Primary diagnosis: 98.6% informative
+- Days to last follow-up: 98.6% populated (one-to-many)
+- Sex at birth (gender): 98.1% informative
+- Age at diagnosis: 97.6% populated (one-to-many)
+- Race: 70.1% informative
+- Ethnicity: 58.3% informative
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
 - Citations to the dataset's publication: 19 (attention, not reuse)
-- Reuse gap index: -0.84 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.90 (negative means less reused than comparable datasets)
   - High <i>SEC61A1</i> expression predicts poor outcome of acute myeloid leukemia. (2024) PMID 38584833
 
 ## Provenance

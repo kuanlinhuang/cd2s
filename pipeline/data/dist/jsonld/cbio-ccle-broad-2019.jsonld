@@ -10,7 +10,7 @@
   "alternateName": [
     "ccle_broad_2019"
   ],
-  "description": "Cancer Cell Line Encyclopedia from the Broad Institute and Novartis, updated 2019. Data downloaded from the <a href=\"https://portals.broadinstitute.org/ccle/data\">Broad CCLE Portal</a>. For more info about the proteomics data, see the <a href=\"https://github.com/cbioportal/datahub/blob/master/public/ccle_broad_2019/README.md\">README</a>.",
+  "description": "Cancer Cell Line Encyclopedia from the Broad Institute and Novartis, updated 2019. Data downloaded from the Broad CCLE Portal. For more info about the proteomics data, see the README.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ccle-broad-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=ccle_broad_2019"
@@ -19,7 +19,7 @@
     "Mixed Cancer Types",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "other",
@@ -34,7 +34,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -203,7 +203,33 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity Category",
+      "description": "Populated for 59.6% of cases, informative for 59.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary Tumor Site",
+      "description": "Populated for 61.0% of cases, informative for 61.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race Category",
+      "description": "Populated for 33.3% of cases, informative for 33.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 52.6% of cases, informative for 52.6%"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

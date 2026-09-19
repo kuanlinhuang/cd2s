@@ -8,10 +8,21 @@ Dataset id: cbio-csf-msk-2024
 
 ## What it is
 
-- Cohort: 1,007 samples
+- Cohort: 711 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 27.5 months (derivable for 649 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 93.2% informative
+- Sex: 93.2% informative
+- Overall Survival (Months): 91.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 

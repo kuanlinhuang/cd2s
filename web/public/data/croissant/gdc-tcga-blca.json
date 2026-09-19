@@ -108,7 +108,7 @@
         {
           "@type": "cr:Field",
           "@id": "clinical/diagnoses.tumor_grade",
-          "name": "Tumour grade",
+          "name": "Tumor grade",
           "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 99.0%.",
           "dataType": "sc:Text"
         },
@@ -150,7 +150,7 @@
         {
           "@type": "cr:Field",
           "@id": "clinical/diagnoses.classification_of_tumor",
-          "name": "Classification of tumour",
+          "name": "Classification of tumor",
           "description": "Category: pathology. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         },

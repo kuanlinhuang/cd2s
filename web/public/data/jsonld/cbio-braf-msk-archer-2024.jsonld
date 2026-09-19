@@ -10,7 +10,7 @@
   "alternateName": [
     "braf_msk_archer_2024"
   ],
-  "description": "Targeted sequencing of 107 clinical cases via ARCHER to characterize the structure and impact of BRAF fusions on clinical course in a tumor-agnostic approach. This study is part of a broader analysis and is complemented by a parallel study using MSK-IMPACT sequencing (see related <a href=\"https://www.cbioportal.org/study/summary?id=braf_msk_impact_2024\">MSK-IMPACT</a> study).",
+  "description": "Targeted sequencing of 107 clinical cases via ARCHER to characterize the structure and impact of BRAF fusions on clinical course in a tumor-agnostic approach. This study is part of a broader analysis and is complemented by a parallel study using MSK-IMPACT sequencing (see related MSK-IMPACT study).",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-braf-msk-archer-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=braf_msk_archer_2024"
@@ -18,7 +18,7 @@
   "keywords": [
     "Mixed Cancer Types",
     "cbioportal",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "other",
@@ -30,7 +30,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -119,7 +119,13 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    }
+  ],
   "measurementTechnique": [
     "Structural variants / fusions"
   ]

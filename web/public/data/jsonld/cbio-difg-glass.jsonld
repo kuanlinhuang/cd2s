@@ -10,7 +10,7 @@
   "alternateName": [
     "difg_glass"
   ],
-  "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at <a href=\"https://www.synapse.org/#!Synapse:syn17038081/wiki/585622\">Synapse</a>.",
+  "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at Synapse.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-glass",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=difg_glass"
@@ -20,7 +20,7 @@
     "brain",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "rna seq",
@@ -34,7 +34,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -233,7 +233,38 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival",
+      "description": "Populated for 95.4% of cases, informative for 95.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 95.4% of cases, informative for 95.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumor Grade",
+      "description": "Populated for 95.4% of cases, informative for 95.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (months)",
+      "description": "Populated for 95.1% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Named therapeutic agents",
+      "description": "Populated for 78.1% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

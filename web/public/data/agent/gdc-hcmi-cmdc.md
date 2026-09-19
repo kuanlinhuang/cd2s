@@ -25,7 +25,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Sex at birth: 100.0% informative
 - Primary diagnosis: 100.0% populated (one-to-many)
 - Morphology (ICD-O): 100.0% populated (one-to-many)
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Tissue or organ of origin: 99.5% informative
 - Prior treatment: 88.9% informative
@@ -33,7 +33,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Treatment type: 75.7% populated (one-to-many)
 - Prior malignancy: 73.8% informative
 - Progression at follow-up: 64.6% populated (one-to-many)
-- Tumour grade: 60.9% informative
+- Tumor grade: 60.9% informative
 - Vital status: 59.3% informative
 - Therapeutic agents: 55.9% populated (one-to-many)
 - Disease response at follow-up: 52.4% informative
@@ -74,7 +74,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 6
 - Citations to the dataset's publication: 92 (attention, not reuse)
-- Reuse gap index: -2.56 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.15 (negative means less reused than comparable datasets)
   - Revolutionizing healthcare and medicine: The impact of modern technologies for a healthier future-A comprehensive review. (2024) PMID 39479277
   - Oncofetal reprogramming drives phenotypic plasticity in WNT-dependent colorectal cancer. (2025) PMID 39930084
   - Weight-bearing activity impairs nuclear membrane and genome integrity via YAP activation in plantar melanoma. (2022) PMID 35468978

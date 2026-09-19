@@ -25,49 +25,49 @@
           "@type": "cr:Field",
           "@id": "clinical/htan:Demographics",
           "name": "Demographics",
-          "description": "Category: demographic. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: demographic. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         },
         {
           "@type": "cr:Field",
           "@id": "clinical/htan:Diagnosis",
           "name": "Diagnosis",
-          "description": "Category: diagnosis. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: diagnosis. Populated for 91.8% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         },
         {
           "@type": "cr:Field",
           "@id": "clinical/htan:Exposure",
           "name": "Exposure history",
-          "description": "Category: exposure. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: exposure. Populated for 91.8% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         },
         {
           "@type": "cr:Field",
           "@id": "clinical/htan:FamilyHistory",
           "name": "Family history",
-          "description": "Category: other. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: other. Populated for 54.9% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         },
         {
           "@type": "cr:Field",
           "@id": "clinical/htan:FollowUp",
           "name": "Follow-up",
-          "description": "Category: followup. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
-          "dataType": "sc:Text"
-        },
-        {
-          "@type": "cr:Field",
-          "@id": "clinical/htan:Therapy",
-          "name": "Therapy",
-          "description": "Category: treatment. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: followup. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         },
         {
           "@type": "cr:Field",
           "@id": "clinical/htan:MolecularTest",
           "name": "Clinical molecular test",
-          "description": "Category: molecular_marker. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "description": "Category: molecular_marker. Populated for 91.8% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Therapy",
+          "name": "Therapy",
+          "description": "Category: treatment. Populated for 91.8% of cases; one-to-many field, per-case shares not derivable.",
           "dataType": "sc:Text"
         }
       ]

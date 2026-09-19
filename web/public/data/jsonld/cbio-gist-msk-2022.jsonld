@@ -10,7 +10,7 @@
   "alternateName": [
     "gist_msk_2022"
   ],
-  "description": "Paired analysis of 499  Gastrointestinal stromal tumor/normal pairs via MSK-IMPACT platform.",
+  "description": "Paired analysis of 499 Gastrointestinal stromal tumor/normal pairs via MSK-IMPACT platform.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gist-msk-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=gist_msk_2022"
@@ -19,7 +19,7 @@
     "Gastrointestinal Stromal Tumor",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "soft_tissue",
@@ -34,7 +34,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -93,7 +93,48 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity Category",
+      "description": "Populated for 97.4% of cases, informative for 92.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 99.4% of cases, informative for 99.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary Tumor Site",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race Category",
+      "description": "Populated for 99.4% of cases, informative for 96.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 99.4% of cases, informative for 99.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 94.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Named therapeutic agents",
+      "description": "Populated for 21.2% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

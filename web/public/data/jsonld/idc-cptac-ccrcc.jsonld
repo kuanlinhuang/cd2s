@@ -22,6 +22,7 @@
     "Clear Cell Carcinoma",
     "Kidney",
     "clinical",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

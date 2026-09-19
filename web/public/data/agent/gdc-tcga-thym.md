@@ -28,7 +28,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Disease response at follow-up: 100.0% populated (one-to-many)
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.50 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.65 (negative means less reused than comparable datasets)
   - The Integrated Genomic Landscape of Thymic Epithelial Tumors. (2018) PMID 29438696
   - Myasthenia gravis-specific aberrant neuromuscular gene expression by medullary thymic epithelial cells in thymoma. (2022) PMID 35869073
   - A cfDNA methylation-based tissue-of-origin classifier for cancers of unknown primary. (2024) PMID 38632274

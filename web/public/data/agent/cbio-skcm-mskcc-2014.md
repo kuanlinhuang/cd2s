@@ -8,10 +8,24 @@ Dataset id: cbio-skcm-mskcc-2014
 
 ## What it is
 
-- Cohort: 64 samples
+- Cohort: 64 cases
 - Cancer types: Cutaneous Melanoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression
+- Median follow-up: 25.2 months (derivable for 64 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Durable Clinical Benefit: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Tumor Stage: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Treatment Response: 85.9% informative
 
 ## Evidence of prior reuse
 

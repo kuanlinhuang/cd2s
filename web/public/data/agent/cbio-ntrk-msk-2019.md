@@ -8,11 +8,22 @@ Dataset id: cbio-ntrk-msk-2019
 
 ## What it is
 
-- Cohort: 106 samples
+- Cohort: 76 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Stage: 75.5% informative
+- Progression Free Status: 67.1% informative
+- Relapse Free Status: 65.8% informative
+- Named therapeutic agents: 55.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 

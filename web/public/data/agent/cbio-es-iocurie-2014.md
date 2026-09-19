@@ -8,10 +8,25 @@ Dataset id: cbio-es-iocurie-2014
 
 ## What it is
 
-- Cohort: 115 samples
+- Cohort: 115 cases
 - Cancer types: Ewing Sarcoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 51.1 months (derivable for 103 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 89.6% informative
+- Sex: 89.6% informative
+- Overall Survival (Months): 89.6% populated (one-to-many)
+- Primary Tumor Site: 88.7% informative
+- Patient's Vital Status: 87.0% informative
+- Disease Free Status: 86.1% informative
+- Disease Free (Months): 73.9% populated (one-to-many)
 
 ## Evidence of prior reuse
 

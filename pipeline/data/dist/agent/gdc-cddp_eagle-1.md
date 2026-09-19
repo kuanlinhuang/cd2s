@@ -25,11 +25,11 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - AJCC pathologic stage: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 100.0% informative
 - Prior malignancy: 100.0% informative
 - Progression or recurrence: 0.0% informative
-- Classification of tumour: 0.0% informative
+- Classification of tumor: 0.0% informative
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Alcohol history: 0.0% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 1
 - Citations to the dataset's publication: 1 (attention, not reuse)
-- Reuse gap index: -0.07 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.76 (negative means less reused than comparable datasets)
 
 ## Provenance
 

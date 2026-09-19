@@ -8,10 +8,24 @@ Dataset id: cbio-soft-tissue-msk-2023
 
 ## What it is
 
-- Cohort: 42 samples
+- Cohort: 20 cases
 - Cancer types: Rhabdomyosarcoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 31.9 months (derivable for 19 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 95.0% informative
+- Sex: 95.0% informative
+- Overall Survival (Months): 95.0% populated (one-to-many)
+- Ethnicity Category: 90.0% informative
+- Primary Tumor Site: 88.1% informative
+- Race Category: 85.0% informative
 
 ## Evidence of prior reuse
 

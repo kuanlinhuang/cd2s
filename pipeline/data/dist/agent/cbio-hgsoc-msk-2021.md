@@ -8,10 +8,24 @@ Dataset id: cbio-hgsoc-msk-2021
 
 ## What it is
 
-- Cohort: 45 samples
+- Cohort: 45 cases
 - Cancer types: High-Grade Serous Ovarian Cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 16.7 months (derivable for 45 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity Category: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Race Category: 97.8% informative
+- Primary Tumor Site: 95.6% informative
 
 ## Evidence of prior reuse
 

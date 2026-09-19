@@ -8,10 +8,27 @@ Dataset id: cbio-hnc-mskcc-2016
 
 ## What it is
 
-- Cohort: 151 samples
+- Cohort: 151 cases
 - Cancer types: Head and Neck
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 31.9 months (derivable for 146 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Primary Tumor Site: 97.4% informative
+- Disease Free Status: 96.7% informative
+- Overall Survival Status: 96.7% informative
+- Smoking History: 96.7% informative
+- Patient's Vital Status: 96.7% informative
+- Overall Survival (Months): 96.7% populated (one-to-many)
+- Disease Free (Months): 90.1% populated (one-to-many)
+- Race Category: 88.7% informative
 
 ## Evidence of prior reuse
 

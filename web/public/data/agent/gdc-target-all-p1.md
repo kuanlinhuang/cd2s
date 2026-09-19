@@ -22,7 +22,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Classification of tumour: 100.0% informative
+- Classification of tumor: 100.0% informative
 - Sex at birth: 95.8% informative
 - Ethnicity: 95.8% informative
 - Vital status: 95.8% informative
@@ -34,7 +34,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 14
 - Citations to the dataset's publication: 259 (attention, not reuse)
-- Reuse gap index: -0.78 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.28 (negative means less reused than comparable datasets)
   - Targeted &lt;i&gt;in silico&lt;/i&gt; characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575
   - EBF1 and Pax5 safeguard leukemic transformation by limiting IL-7 signaling, Myc expression, and folate metabolism. (2020) PMID 33004416
   - RNA binding protein IGF2BP1 synergizes with ETV6-RUNX1 to drive oncogenic signaling in B-cell Acute Lymphoblastic Leukemia. (2023) PMID 37670323

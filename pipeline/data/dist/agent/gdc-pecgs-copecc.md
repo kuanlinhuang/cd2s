@@ -34,7 +34,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Cause of death: 10.4% informative
 - Population group: 0.0% informative
 - Country of residence: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 

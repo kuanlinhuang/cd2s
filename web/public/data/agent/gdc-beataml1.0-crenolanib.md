@@ -25,7 +25,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 100.0% informative
 - Last known disease status: 0.0% informative
 - Cause of death: 0.0% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 132 (attention, not reuse)
-- Reuse gap index: -2.94 (negative means less reused than comparable datasets)
+- Reuse gap index: -3.06 (negative means less reused than comparable datasets)
 
 ## Provenance
 

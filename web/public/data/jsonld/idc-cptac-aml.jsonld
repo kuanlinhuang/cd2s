@@ -22,6 +22,7 @@
     "Blood",
     "Marrow",
     "clinical",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

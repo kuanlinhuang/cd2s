@@ -30,7 +30,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Country of residence: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
@@ -40,8 +40,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 239 (attention, not reuse)
-- Reuse gap index: -1.70 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.00 (negative means less reused than comparable datasets)
   - Tracking of stem cells in vivo for cardiovascular applications. (2014) PMID 24406054
   - The Key Gene Expression Patterns and Prognostic Factors in Malignant Transformation from Enchondroma to Chondrosarcoma. (2021) PMID 34568022
   - [Current management of acute pediatric rhinosinusitis in France]. (2007) PMID 17317063

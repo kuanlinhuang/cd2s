@@ -8,10 +8,19 @@ Dataset id: cbio-prad-broad
 
 ## What it is
 
-- Cohort: 123 samples
+- Cohort: 123 cases
 - Cancer types: Prostate Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Microarray expression
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Tumor Stage: 91.1% informative
 
 ## Evidence of prior reuse
 

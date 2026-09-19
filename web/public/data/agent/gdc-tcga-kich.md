@@ -29,7 +29,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Race: 98.2% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 395
-- Reuse gap index: +0.54 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.70 (negative means less reused than comparable datasets)
   - Alternative splicing of &lt;i&gt;GSDMB&lt;/i&gt; modulates killer lymphocyte-triggered pyroptosis. (2023) PMID 37115914
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
   - Loss of CDKN1A mRNA and Protein Expression Are Independent Predictors of Poor Outcome in Chromophobe Renal Cell Carcinoma Patients. (2020) PMID 32079343

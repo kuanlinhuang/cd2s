@@ -38,7 +38,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Population group: 0.0% informative
 - AJCC pathologic stage: 0.0% informative
 - AJCC clinical stage: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Prior treatment: 0.0% informative
 
 ## Questions these data can support
@@ -79,7 +79,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 2
 - Citations to the dataset's publication: 17 (attention, not reuse)
-- Reuse gap index: -0.67 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.05 (negative means less reused than comparable datasets)
   - Pseudogene Coexpression Networks Reveal a Robust Prognostic Signature for Pediatric B-ALL Survival. (2026) PMID 41802009
   - Increased activity of PRMT5-MEP50 complex improves survival of chromosomally unstable cancer cells by increasing tolerance to protein aggregation and proteotoxicity (2025) PMID None
   - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None

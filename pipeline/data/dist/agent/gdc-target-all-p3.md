@@ -23,12 +23,12 @@ Populated means a value exists; informative excludes 'not reported'.
 - Tissue or organ of origin: 68.6% informative
 - Primary diagnosis: 66.5% informative
 - Morphology (ICD-O): 66.5% informative
-- Classification of tumour: 58.6% informative
+- Classification of tumor: 58.6% informative
 - Vital status: 56.0% informative
 - Race: 24.6% informative
 - Ethnicity: 24.1% informative
 - Cause of death: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 7.9% informative
 - Population group: 0.0% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 105
-- Reuse gap index: -0.73 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.51 (negative means less reused than comparable datasets)
   - The genomic landscape of pediatric acute lymphoblastic leukemia. (2022) PMID 36050548
   - Epithelial-mesenchymal transition and its transcription factors. (2022) PMID 34708244
   - Cancer gene mutation frequencies for the U.S. population. (2021) PMID 34645806

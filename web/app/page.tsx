@@ -151,7 +151,7 @@ export default function Home() {
       <section className="border-t py-8">
         <div className="flex items-baseline justify-between gap-3">
           <h2 className="text-lg font-semibold tracking-tight">Reviewed in depth</h2>
-          <Link href="/datasets?review=expert_reviewed" className="text-[13px] underline">
+          <Link href="/datasets?capability=reviewed" className="text-[13px] underline">
             All {stats.n_showcase}
           </Link>
         </div>

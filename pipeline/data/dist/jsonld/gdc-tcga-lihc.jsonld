@@ -29,6 +29,7 @@
     "clinical",
     "copy number",
     "gdc",
+    "has-clinical-table",
     "has-derived-annotations",
     "histopathology",
     "idc",
@@ -79,14 +80,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "DNA methylation age of human tissues and cell types.",
-      "identifier": "https://doi.org/10.1186/gb-2013-14-10-r115",
-      "datePublished": "2013"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",
@@ -344,7 +338,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Tumour grade",
+      "name": "Tumor grade",
       "description": "Populated for 98.7% of cases, informative for 98.7%"
     },
     {
@@ -374,7 +368,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Classification of tumour",
+      "name": "Classification of tumor",
       "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {

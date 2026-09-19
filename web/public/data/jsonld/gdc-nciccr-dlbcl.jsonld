@@ -61,14 +61,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "A multiprotein supercomplex controlling oncogenic signalling in lymphoma.",
-      "identifier": "https://doi.org/10.1038/s41586-018-0290-0",
-      "datePublished": "2018"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",
@@ -286,7 +279,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Tumour grade",
+      "name": "Tumor grade",
       "description": "Populated for 100.0% of cases, informative for 0.0%"
     },
     {
@@ -316,7 +309,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Classification of tumour",
+      "name": "Classification of tumor",
       "description": "Populated for 0.0% of cases, informative for 0.0%"
     },
     {

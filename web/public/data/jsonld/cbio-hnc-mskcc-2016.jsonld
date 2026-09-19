@@ -19,7 +19,7 @@
     "Head and Neck",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "structural variant",
@@ -32,7 +32,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -81,7 +81,58 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Disease Free Status",
+      "description": "Populated for 96.7% of cases, informative for 96.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 96.7% of cases, informative for 96.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary Tumor Site",
+      "description": "Populated for 99.3% of cases, informative for 97.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race Category",
+      "description": "Populated for 90.1% of cases, informative for 88.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Smoking History",
+      "description": "Populated for 96.7% of cases, informative for 96.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Patient's Vital Status",
+      "description": "Populated for 96.7% of cases, informative for 96.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease Free (Months)",
+      "description": "Populated for 90.1% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 96.7% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

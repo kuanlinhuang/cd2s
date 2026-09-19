@@ -8,10 +8,18 @@ Dataset id: cbio-all-stjude-2013
 
 ## What it is
 
-- Cohort: 44 samples
+- Cohort: 40 cases
 - Cancer types: Myeloid
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
 
 ## Evidence of prior reuse
 

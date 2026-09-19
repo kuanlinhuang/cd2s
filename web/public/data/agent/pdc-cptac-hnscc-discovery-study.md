@@ -9,14 +9,39 @@ Dataset id: pdc-cptac-hnscc-discovery-study
 ## What it is
 
 - Cohort: 124 cases
+- Cancer types: Head and Neck Squamous Cell Carcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
+- Median follow-up: 24.3 months (derivable for 106 cases)
+- Treatment response recorded: True
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Classification of tumor: 0.0% informative
+- Sex at birth (gender): 90.3% informative
+- Tumor grade: 90.3% informative
+- Morphology (ICD-O): 88.7% informative
+- Primary diagnosis: 88.7% informative
+- Tissue or organ of origin: 88.7% informative
+- AJCC pathologic stage: 88.7% informative
+- Age at diagnosis: 88.7% populated (one-to-many)
+- Race: 87.1% informative
+- Vital status: 86.3% informative
+- Days to last follow-up: 86.3% populated (one-to-many)
+- Prior malignancy: 83.1% informative
+- Days to death: 33.1% populated (one-to-many)
+- Cause of death: 19.4% informative
+- Days to recurrence: 2.4% populated (one-to-many)
+- Ethnicity: 1.6% informative
+- Treatment type: 0.8% populated (one-to-many)
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 18
-- Citations to the dataset's publication: 350 (attention, not reuse)
-- Reuse gap index: +0.19 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.01 (negative means less reused than comparable datasets)
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
   - Pathobiological functions and clinical implications of annexin dysregulation in human cancers. (2022) PMID 36247003

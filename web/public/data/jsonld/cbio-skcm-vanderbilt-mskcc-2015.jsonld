@@ -10,7 +10,7 @@
   "alternateName": [
     "skcm_vanderbilt_mskcc_2015"
   ],
-  "description": "Targeted sequencing of pre-treatment 66 Melanoma tumor samples. <a href=\"https://ascopubs.org/doi/full/10.1200/PO.16.00054\">PubMed</a>",
+  "description": "Targeted sequencing of pre-treatment 66 Melanoma tumor samples. PubMed",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-vanderbilt-mskcc-2015",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=skcm_vanderbilt_mskcc_2015"
@@ -19,7 +19,7 @@
     "Cutaneous Melanoma",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "mel",
     "nci-funded",
@@ -31,7 +31,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -90,7 +90,33 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Stage",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progress Free Survival (Months)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations"

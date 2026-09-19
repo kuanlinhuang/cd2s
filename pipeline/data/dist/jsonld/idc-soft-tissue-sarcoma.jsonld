@@ -21,6 +21,7 @@
     "Extremities",
     "Soft-tissue Sarcoma",
     "clinical",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

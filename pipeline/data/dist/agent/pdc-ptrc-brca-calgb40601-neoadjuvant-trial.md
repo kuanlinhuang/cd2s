@@ -9,14 +9,39 @@ Dataset id: pdc-ptrc-brca-calgb40601-neoadjuvant-trial
 ## What it is
 
 - Cohort: 59 cases
+- Cancer types: Breast Invasive Carcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT16 / DDA), Proteome mass spectrometry (TMT16 / DDA)
+- Treatment response recorded: True
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Race: 0.0% informative
+- Ethnicity: 0.0% informative
+- Sex at birth (gender): 100.0% informative
+- Morphology (ICD-O): 0.0% informative
+- Primary diagnosis: 0.0% informative
+- Tumor grade: 0.0% informative
+- Tissue or organ of origin: 91.5% informative
+- AJCC pathologic stage (tumor_stage): 91.5% informative
+- Age at diagnosis: 91.5% populated (one-to-many)
+- Treatment type: 91.5% populated (one-to-many)
+- Therapeutic agents: 91.5% populated (one-to-many)
+- Treatment outcome: 91.5% populated (one-to-many)
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
 - Citations to the dataset's publication: 3 (attention, not reuse)
-- Reuse gap index: +0.12 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.22 (negative means less reused than comparable datasets)
 
 ## Provenance
 

@@ -21,6 +21,7 @@
     "Breast",
     "Breast Cancer",
     "Non-Cancer",
+    "has-clinical-table",
     "idc",
     "imaging",
     "radiology"

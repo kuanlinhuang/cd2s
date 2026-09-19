@@ -32,7 +32,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% informative
 - Tissue or organ of origin: 100.0% informative
 - AJCC pathologic stage: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 100.0% informative
 - Last known disease status: 100.0% informative
 - Disease response at follow-up: 100.0% informative
@@ -82,7 +82,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 27
 - Citations to the dataset's publication: 1206 (attention, not reuse)
-- Reuse gap index: +0.84 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.41 (negative means less reused than comparable datasets)
   - Multiplexed functional genomic analysis of 5' untranslated region mutations across the spectrum of prostate cancer. (2021) PMID 34244513
   - Assessment of Androgen Receptor Splice Variant-7 as a Biomarker of Clinical Response in Castration-Sensitive Prostate Cancer. (2022) PMID 35695870
   - Integrative molecular analyses define correlates of high B7-H3 expression in metastatic castrate-resistant prostate cancer. (2022) PMID 36323882

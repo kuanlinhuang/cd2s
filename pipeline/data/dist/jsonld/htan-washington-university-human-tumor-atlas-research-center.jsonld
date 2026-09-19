@@ -121,33 +121,33 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name": "Therapy",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "Demographics",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Family history",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Exposure history",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Follow-up",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
     },
     {
       "@type": "PropertyValue",
       "name": "Diagnosis",
-      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for 36.3% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for 52.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for 49.5% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for 68.1% of cases (one-to-many field; per-case shares not derivable)"
     }
   ],
   "measurementTechnique": [

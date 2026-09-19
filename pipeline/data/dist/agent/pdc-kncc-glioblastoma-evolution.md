@@ -9,14 +9,40 @@ Dataset id: pdc-kncc-glioblastoma-evolution
 ## What it is
 
 - Cohort: 111 cases
+- Cancer types: Glioblastoma
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
+- Median follow-up: 26.7 months (derivable for 105 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity: 0.0% informative
+- Morphology (ICD-O): 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Race: 98.2% informative
+- Sex at birth (gender): 98.2% informative
+- Primary diagnosis: 98.2% informative
+- Tissue or organ of origin: 98.2% informative
+- Days to last follow-up: 94.6% populated (one-to-many)
+- Days to recurrence: 93.7% populated (one-to-many)
+- Age at diagnosis: 91.9% populated (one-to-many)
+- Classification of tumor: 0.0% informative
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
 - Citations to the dataset's publication: 92 (attention, not reuse)
-- Reuse gap index: -0.56 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.59 (negative means less reused than comparable datasets)
   - T2Pdecoder enables protein-centric analyses from transcriptomic data. (2026) PMID 42277023
   - Inhibition of FOS-Like Antigen 1 Reduces Chemoresistance to Temozolomide Through Stemness Reprogramming via IL-6/STAT3&lt;sup&gt;Tyr705&lt;/sup&gt; Pathway. (2026) PMID 41556041
 

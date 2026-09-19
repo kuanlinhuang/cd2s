@@ -9,14 +9,39 @@ Dataset id: pdc-sampling-techniques-for-enrichment-of-pdac
 ## What it is
 
 - Cohort: 7 cases
+- Cancer types: Pancreatic Ductal Adenocarcinoma
 - Measurements: Proteome mass spectrometry (TMT10 / DDA)
+- Median follow-up: 10.5 months (derivable for 6 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Ethnicity: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Vital status: 85.7% informative
+- Race: 85.7% informative
+- Sex at birth (gender): 85.7% informative
+- Morphology (ICD-O): 85.7% informative
+- Primary diagnosis: 85.7% informative
+- Tissue or organ of origin: 85.7% informative
+- Tumor grade: 85.7% informative
+- AJCC pathologic stage: 85.7% informative
+- Classification of tumor: 0.0% informative
+- Age at diagnosis: 85.7% populated (one-to-many)
+- Days to last follow-up: 85.7% populated (one-to-many)
+- Cause of death: 71.4% informative
+- Days to death: 71.4% populated (one-to-many)
+- Days to recurrence: 14.3% populated (one-to-many)
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Citations to the dataset's publication: 14 (attention, not reuse)
-- Reuse gap index: +0.83 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.96 (negative means less reused than comparable datasets)
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
 
 ## Provenance

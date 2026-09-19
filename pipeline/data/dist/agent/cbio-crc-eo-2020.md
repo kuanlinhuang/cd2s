@@ -8,10 +8,21 @@ Dataset id: cbio-crc-eo-2020
 
 ## What it is
 
-- Cohort: 1,516 samples
+- Cohort: 1,516 cases
 - Cancer types: Bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 96.4% informative
+- Smoking history: 95.4% informative
+- Tumor Grade: 94.2% informative
+- Race Category: 93.0% informative
 
 ## Evidence of prior reuse
 

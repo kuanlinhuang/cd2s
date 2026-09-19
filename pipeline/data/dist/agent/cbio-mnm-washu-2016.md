@@ -8,10 +8,22 @@ Dataset id: cbio-mnm-washu-2016
 
 ## What it is
 
-- Cohort: 136 samples
+- Cohort: 116 cases
 - Cancer types: Myeloid Neoplasm
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 8.9 months (derivable for 116 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Sex: 85.3% informative
+- Prior Treatment: 41.4% informative
 
 ## Evidence of prior reuse
 

@@ -8,10 +8,28 @@ Dataset id: cbio-paad-iatlas-prince-2022
 
 ## What it is
 
-- Cohort: 93 samples
+- Cohort: 74 cases
 - Cancer types: Pancreatic Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Median follow-up: 9.8 months (derivable for 73 cases)
+- Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Clinical Stage: 100.0% informative
+- Ethnicity: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival Status: 98.6% informative
+- Progression-Free Status: 98.6% informative
+- Overall Survival (Months): 98.6% populated (one-to-many)
+- Progression-Free (Months): 98.6% populated (one-to-many)
+- Race: 91.9% informative
+- Response: 91.4% informative
+- Clinical Benefit: 89.2% informative
 
 ## Evidence of prior reuse
 

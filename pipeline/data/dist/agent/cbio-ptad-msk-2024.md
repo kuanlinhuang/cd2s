@@ -8,11 +8,25 @@ Dataset id: cbio-ptad-msk-2024
 
 ## What it is
 
-- Cohort: 104 samples
+- Cohort: 92 cases
 - Cancer types: Pituitary Adenoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 54.7 months (derivable for 88 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Primary Tumor Site: 99.0% informative
+- Overall Survival (Months): 95.7% populated (one-to-many)
+- Ethnicity: 90.2% informative
+- Race: 90.2% informative
+- Named therapeutic agents: 27.2% populated (one-to-many)
 
 ## Evidence of prior reuse
 

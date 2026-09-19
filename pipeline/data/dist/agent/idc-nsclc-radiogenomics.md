@@ -49,7 +49,7 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 - Articles that analyzed these data: 3
 - Citations to the dataset's publication: 202 (attention, not reuse)
-- Reuse gap index: -5.63 (negative means less reused than comparable datasets)
+- Reuse gap index: -6.17 (negative means less reused than comparable datasets)
   - Integrative analysis of imaging and transcriptomic data of the immune landscape associated with tumor metabolism in lung adenocarcinoma: Clinical and prognostic implications. (2018) PMID 29556367
   - Synergies of Radiomics and Transcriptomics in Lung Cancer Diagnosis: A Pilot Study. (2023) PMID 36832225
   - Radiogenomics Based on PET Imaging. (2020) PMID 32582396

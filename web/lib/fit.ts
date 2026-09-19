@@ -1,3 +1,4 @@
+import { isNonAnswer } from "@/lib/format";
 import type { ClinicalVariable, DatasetRecord, Evidence } from "@/lib/types";
 
 /**
@@ -97,11 +98,28 @@ export const FIT_RULES = [
   },
 ] as const;
 
-const UNINFORMATIVE = new Set(["not reported", "unknown", "not allowed to collect", "unspecified"]);
-
+/**
+ * Index the measured variables by every name a verdict might look them up under.
+ *
+ * Each repository names its clinical fields its own way - `demographic.vital_status`
+ * in GDC, `pdc:vital_status` in PDC, `cbioportal:OS_STATUS` in cBioPortal - and every
+ * one of them also carries the harmonized name of the concept. The verdicts read the
+ * harmonized name, so one set of rules covers the whole corpus.
+ *
+ * Where two fields claim the same concept - PDC serves both `ajcc_pathologic_stage`
+ * and a legacy `tumor_stage` - the one informative for more of the cohort wins, because
+ * the question is whether the analysis is possible at all, not which column to use.
+ */
 function byName(vars: ClinicalVariable[]): Map<string, ClinicalVariable> {
   const m = new Map<string, ClinicalVariable>();
-  for (const v of vars) m.set(v.name.toLowerCase(), v);
+  const share = (v: ClinicalVariable) => v.coverage_pct ?? v.populated_pct ?? 0;
+  for (const v of vars) {
+    m.set(v.name.toLowerCase(), v);
+    const h = v.harmonized_name?.toLowerCase();
+    if (!h) continue;
+    const cur = m.get(h);
+    if (!cur || share(v) > share(cur)) m.set(h, v);
+  }
   return m;
 }
 
@@ -124,8 +142,17 @@ function pctText(p: number): string {
   return `${p < 1 && p > 0 ? p.toFixed(1) : Math.round(p)}%`;
 }
 
+/**
+ * The field name as its repository spells it, without the routing prefix.
+ *
+ * Every adapter namespaces its fields - `pdc:vital_status`, `cbioportal:OS_STATUS`,
+ * `demographic.vital_status` - so a reader can find the field in the source API. The
+ * prefix is noise in a sentence, and the sentence is capitalised by CSS, which turned
+ * `pdc:progression_or_recurrence` into `Pdc:progression_or_recurrence`.
+ */
 function short(name: string): string {
-  return name.split(".").pop() ?? name;
+  const withoutNamespace = name.includes(":") ? name.slice(name.indexOf(":") + 1) : name;
+  return withoutNamespace.split(".").pop() || withoutNamespace;
 }
 
 /**
@@ -164,7 +191,7 @@ function informativeShare(values: Record<string, number>): number | null {
   if (entries.length === 0) return null;
   const total = entries.reduce((a, [, n]) => a + n, 0);
   if (total === 0) return null;
-  const good = entries.filter(([k]) => !UNINFORMATIVE.has(k.toLowerCase())).reduce((a, [, n]) => a + n, 0);
+  const good = entries.filter(([k]) => !isNonAnswer(k)).reduce((a, [, n]) => a + n, 0);
   return (100 * good) / total;
 }
 
@@ -230,7 +257,9 @@ export function fitVerdicts(r: DatasetRecord): FitVerdict[] {
       const bits = [
         L.median_followup_months ? `median follow-up ${(L.median_followup_months / 12).toFixed(1)} years` : null,
         L.n_cases_with_followup ? `${L.n_cases_with_followup.toLocaleString("en-US")} cases with follow-up` : null,
-        L.survival_endpoints.length ? L.survival_endpoints.join(", ") : null,
+        L.survival_endpoints.length
+          ? `${L.survival_endpoints.length === 1 ? "endpoint" : "endpoints"}: ${L.survival_endpoints.join(", ")}`
+          : null,
       ].filter(Boolean);
       out.push({
         key: "survival",
@@ -380,10 +409,13 @@ export function fitSummary(verdicts: FitVerdict[]): {
   if (unk === verdicts.length) {
     sentence = "Clinical field completeness has not been measured for this record, so none of these analyses can be confirmed or ruled out from here.";
   } else {
+    // Each clause is a predicate of "this dataset", so the limited clause is phrased as
+    // one too. Written as a bare list it produced "This dataset overall survival ... are
+    // possible only for part of the cohort" whenever nothing was supported or blocked.
     const parts: string[] = [];
     if (supported) parts.push(`supports ${names("supported").join(", ")}`);
     if (blocked) parts.push(`cannot support ${names("blocked").join(", ")}`);
-    if (limited) parts.push(`${names("limited").join(", ")} ${limited === 1 ? "is" : "are"} possible only for part of the cohort`);
+    if (limited) parts.push(`can support ${names("limited").join(", ")} only for part of the cohort`);
     sentence = `This dataset ${parts.join("; ")}.`;
     if (unk) sentence += ` ${unk} of ${verdicts.length} ${unk === 1 ? "was" : "were"} not measured.`;
   }

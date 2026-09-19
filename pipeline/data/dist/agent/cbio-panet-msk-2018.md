@@ -8,10 +8,23 @@ Dataset id: cbio-panet-msk-2018
 
 ## What it is
 
-- Cohort: 96 samples
+- Cohort: 80 cases
 - Cancer types: Pancreatic Neuroendocrine Tumor
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 39.2 months (derivable for 79 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Patient Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Smoker or Prior Smoker : 98.8% informative
+- Overall Patient Survival Status (Months): 98.8% populated (one-to-many)
+- Race Category: 96.2% informative
 
 ## Evidence of prior reuse
 

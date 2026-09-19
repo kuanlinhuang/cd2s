@@ -8,10 +8,19 @@ Dataset id: cbio-ucec-ancestry-cds-msk-2023
 
 ## What it is
 
-- Cohort: 1,882 samples
+- Cohort: 1,882 cases
 - Cancer types: Endometrial Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Race Category: 100.0% informative
+- Ethnicity Category: 95.6% informative
 
 ## Evidence of prior reuse
 

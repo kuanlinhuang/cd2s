@@ -8,10 +8,24 @@ Dataset id: cbio-mixed-kunga-msk-2022
 
 ## What it is
 
-- Cohort: 135 samples
+- Cohort: 134 cases
 - Cancer types: Mixed Cancer Types
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 26.4 months (derivable for 95 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival Status: 72.4% informative
+- Overall Survival (Months): 70.9% populated (one-to-many)
+- Ethnicity Category: 69.4% informative
+- Race Category: 68.7% informative
+- Primary Tumor Site: 68.1% informative
 
 ## Evidence of prior reuse
 

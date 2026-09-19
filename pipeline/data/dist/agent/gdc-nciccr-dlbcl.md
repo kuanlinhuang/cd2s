@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% informative
 - Morphology (ICD-O): 0.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Cause of death: 0.0% informative
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 24
-- Citations to the dataset's publication: 343 (attention, not reuse)
-- Reuse gap index: -0.35 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.13 (negative means less reused than comparable datasets)
   - Impact of <i>TP53</i> Genomic Alterations in Large B-Cell Lymphoma Treated With CD19-Chimeric Antigen Receptor T-Cell Therapy. (2022) PMID 34860572
   - <i>PD-L1</i> gene alterations identify a subset of diffuse large B-cell lymphoma harboring a T-cell-inflamed phenotype. (2019) PMID 30910787
   - Mutations in the transcription factor FOXO1 mimic positive selection signals to promote germinal center B cell expansion and lymphomagenesis. (2021) PMID 34380064

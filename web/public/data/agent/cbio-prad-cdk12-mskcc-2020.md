@@ -8,11 +8,20 @@ Dataset id: cbio-prad-cdk12-mskcc-2020
 
 ## What it is
 
-- Cohort: 1,465 samples
+- Cohort: 1,465 cases
 - Cancer types: Prostate Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Primary Tumor Site: 100.0% informative
+- Sex: 99.8% informative
+- Named therapeutic agents: 0.1% populated (one-to-many)
 
 ## Evidence of prior reuse
 

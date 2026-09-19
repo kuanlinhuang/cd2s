@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-mel-iatlas-liu-2019",
   "alternateName": "Metastatic Melanoma (DFCI, Nat Med. 2019) - iAtlas Harmonized",
-  "description": "Whole-exome sequencing and neoantigen landscape analysis of 122 patients with metastatic melanoma treated with anti-PD1 ICB, along with their matched normal samples. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>. <br><strong>Related Dataset:</strong> This is a harmonized subset of the <a href=\"https://www.cbioportal.org/study/summary?id=mel_dfci_2019\">original 144-sample DFCI study</a> with standardized mutation calling and extended immunogenomics annotations.",
+  "description": "Whole-exome sequencing and neoantigen landscape analysis of 122 patients with metastatic melanoma treated with anti-PD1 ICB, along with their matched normal samples. The reprocessing of raw sequencing data is coordinated by CRI iAtlas. Related Dataset: This is a harmonized subset of the original 144-sample DFCI study with standardized mutation calling and extended immunogenomics annotations.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-iatlas-liu-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,71 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:CLINICAL_BENEFIT",
+          "name": "Clinical Benefit",
+          "description": "Category: treatment. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:CLINICAL_STAGE",
+          "name": "Clinical Stage",
+          "description": "Category: staging. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_STATUS",
+          "name": "Overall Survival Status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_STATUS",
+          "name": "Progression-Free Status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:RESPONSE",
+          "name": "Response",
+          "description": "Category: treatment. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:OS_MONTHS",
+          "name": "Overall Survival (Months)",
+          "description": "Category: followup. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:PFS_MONTHS",
+          "name": "Progression-Free (Months)",
+          "description": "Category: outcome. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

@@ -253,6 +253,12 @@ class ClinicalVariable(CDSModel):
     """A clinical field with its actual completeness - not just 'clinical data available'."""
 
     name: str
+    harmonized_name: str | None = Field(
+        default=None,
+        description="The same concept's name in the shared vocabulary (cds.clinical), so "
+        "completeness is comparable across repositories that spell the field "
+        "differently. None when the source field has no harmonized equivalent.",
+    )
     label: str | None = None
     category: Literal[
         "demographic",

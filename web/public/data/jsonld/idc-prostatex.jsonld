@@ -21,6 +21,7 @@
     "Non-Cancer",
     "Prostate",
     "Prostate Cancer",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

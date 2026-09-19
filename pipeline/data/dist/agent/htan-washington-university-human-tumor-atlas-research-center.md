@@ -8,7 +8,7 @@ Dataset id: htan-washington-university-human-tumor-atlas-research-center
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 295 cases
 - Measurements: Single-cell / single-nucleus RNA sequencing, Single-cell ATAC sequencing, 10x Visium spatial transcriptomics, Bulk DNA sequencing, Bulk RNA sequencing, Multiplexed tissue imaging
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -16,17 +16,18 @@ Dataset id: htan-washington-university-human-tumor-atlas-research-center
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Therapy: None% populated (one-to-many)
-- Demographics: None% populated (one-to-many)
-- Family history: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Diagnosis: None% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Diagnosis: 100.0% populated (one-to-many)
+- Therapy: 68.1% populated (one-to-many)
+- Family history: 52.9% populated (one-to-many)
+- Follow-up: 49.5% populated (one-to-many)
+- Exposure history: 36.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 676 (attention, not reuse)
+- Reuse gap index: -3.00 (negative means less reused than comparable datasets)
 
 ## Provenance
 

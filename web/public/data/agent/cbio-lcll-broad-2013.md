@@ -8,10 +8,17 @@ Dataset id: cbio-lcll-broad-2013
 
 ## What it is
 
-- Cohort: 160 samples
+- Cohort: 160 cases
 - Cancer types: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
 
 ## Evidence of prior reuse
 

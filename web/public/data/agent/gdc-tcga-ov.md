@@ -24,9 +24,9 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 96.5% populated (one-to-many)
 - Tissue or organ of origin: 96.5% populated (one-to-many)
 - Prior treatment: 96.5% populated (one-to-many)
-- Classification of tumour: 96.5% populated (one-to-many)
+- Classification of tumor: 96.5% populated (one-to-many)
 - Vital status: 96.2% informative
-- Tumour grade: 95.9% informative
+- Tumor grade: 95.9% informative
 - Treatment type: 95.2% populated (one-to-many)
 - Treatment given: 95.2% populated (one-to-many)
 - Race: 91.4% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 652
 - Citations to the dataset's publication: 44 (attention, not reuse)
-- Reuse gap index: +0.53 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.61 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
   - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477

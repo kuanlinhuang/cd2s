@@ -79,16 +79,20 @@ useful_for:
     approx_n: 153
     topics: [networks, methods-benchmarking]
 limitations:
-  - kind: missing_data
+  - kind: annotation_quality
     statement: >-
-      The PDC record carries no clinical annotation: no survival, no treatment, no stage and
-      no demographics are exposed through the study metadata.
-    severity: blocking
-    affected_analyses: [Survival analysis, Treatment-response analysis, Clinical correlation of any kind]
+      Clinical annotation is served by the PDC API rather than shipped with the study
+      files, and it is uneven. Vital status, stage and race are informative for 86% of the
+      193 cases and the median follow-up is two years, which supports survival work. A
+      treatment record exists for about half: type for 52%, a RECIST-style outcome for
+      50%, a named agent for 32%. Progression or recurrence is absent entirely.
+    severity: major
+    affected_analyses: [Progression-free analysis, Complete-case treatment analysis]
     mitigation: >-
-      Clinical data for CPTAC cohorts are distributed through the Genomic Data Commons and
-      the CPTAC data portal rather than PDC. Retrieve them separately and join on the case
-      identifier before attempting any clinical claim.
+      Read the clinical records from the PDC API (clinicalPerStudy and
+      paginatedCaseTreatmentsPerStudy) rather than from the study download, and report the
+      analysable subset. For progression, and for anything the PDC record leaves empty,
+      retrieve the corresponding GDC CPTAC-3 clinical records and join on case identifier.
   - kind: harmonization
     statement: >-
       Each analytical fraction is a separate PDC study with its own sample set, so the
@@ -107,13 +111,24 @@ limitations:
     affected_analyses: [Cross-layer integration, Unsupervised clustering]
     mitigation: Model layer-specific batch covariates; do not concatenate raw intensities.
   - kind: population_coverage
-    statement: Demographics are not exposed in the PDC study metadata.
-    severity: major
-    affected_analyses: [Any population-stratified analysis]
-    mitigation: Obtain demographics from the GDC records for the corresponding CPTAC cases.
+    statement: >-
+      Race is informative for 86% of cases but is overwhelmingly one group, and ethnicity
+      is informative for well under 1%: it is recorded as "not reported" for almost every
+      case. Population-stratified work is not supportable here whatever the race field
+      suggests.
+    severity: blocking
+    affected_analyses: [Any population-stratified analysis, Disparities research]
+    mitigation: >-
+      None within this cohort. Check the race distribution on the dataset page before
+      planning any stratified contrast.
 inappropriate_uses:
-  - statement: Survival or prognostic analysis using PDC data alone.
-    reason: No outcome variable is distributed with these studies.
+  - statement: Progression-free or recurrence analysis from these data.
+    reason: Progression or recurrence is recorded for no case in the PDC clinical records.
+  - statement: >-
+      Treating treatment annotation as complete when reporting a response analysis.
+    reason: >-
+      A treatment outcome is recorded for half the cohort and a named agent for a third, so
+      a complete-case treatment analysis runs on a self-selected subset.
   - statement: Treating the seven layers as a complete-case multi-omic matrix without checking overlap.
     reason: Case counts differ by layer; the naive intersection is smaller than any single layer.
 access_steps:

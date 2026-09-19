@@ -9,14 +9,39 @@ Dataset id: pdc-ncc-icc
 ## What it is
 
 - Cohort: 106 cases
+- Cancer types: Cholangiocarcinoma, Hepatocellular Carcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
+- Median follow-up: 21.0 months (derivable for 104 cases)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Race: 98.1% informative
+- Ethnicity: 98.1% informative
+- Sex at birth (gender): 98.1% informative
+- Morphology (ICD-O): 98.1% informative
+- Tissue or organ of origin: 98.1% informative
+- Tumor grade: 98.1% informative
+- Age at diagnosis: 98.1% populated (one-to-many)
+- Days to last follow-up: 98.1% populated (one-to-many)
+- Days to recurrence: 98.1% populated (one-to-many)
+- Primary diagnosis: 97.2% informative
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Citations to the dataset's publication: 5 (attention, not reuse)
-- Reuse gap index: +0.45 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.52 (negative means less reused than comparable datasets)
   - An SLCO2B1 mRNA Isoform Acts as a Noncoding RNA to Drive Cancer Progression by Triggering Protein Biosynthesis. (2026) PMID 41886603
   - Automated sparse feature selection in high-dimensional proteomics data via 1-bit compressed sensing and K-Medoids clustering. (2025) PMID 40597613
 

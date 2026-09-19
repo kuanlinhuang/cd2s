@@ -8,10 +8,23 @@ Dataset id: cbio-ampca-bcm-2016
 
 ## What it is
 
-- Cohort: 160 samples
+- Cohort: 160 cases
 - Cancer types: Ampullary Carcinoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 26.7 months (derivable for 160 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Patient's Vital Status: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Overall Survival Status: 99.4% informative
+- Neoplasm Histologic Grade: 97.5% informative
+- Primary Tumor Site: 96.2% informative
 
 ## Evidence of prior reuse
 

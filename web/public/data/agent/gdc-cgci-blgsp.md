@@ -20,7 +20,7 @@ Dataset id: gdc-cgci-blgsp
 Populated means a value exists; informative excludes 'not reported'.
 
 - Sex at birth: 99.7% informative
-- Classification of tumour: 89.8% informative
+- Classification of tumor: 89.8% informative
 - Treatment type: 89.8% populated (one-to-many)
 - Treatment given: 89.8% populated (one-to-many)
 - Tissue or organ of origin: 89.5% informative
@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 8
 - Citations to the dataset's publication: 62 (attention, not reuse)
-- Reuse gap index: -2.99 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.65 (negative means less reused than comparable datasets)
   - Developmental Deconvolution for Classification of Cancer Origin. (2022) PMID 36041084
   - Epstein-Barr Virus in Burkitt Lymphoma in Africa Reveals a Limited Set of Whole Genome and &lt;i&gt;LMP-1&lt;/i&gt; Sequence Patterns: Analysis of Archival Datasets and Field Samples From Uganda, Tanzania, and Kenya. (2022) PMID 35340265
   - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618

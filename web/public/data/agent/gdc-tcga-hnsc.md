@@ -27,8 +27,8 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior treatment: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
-- Tumour grade: 99.2% informative
+- Classification of tumor: 100.0% populated (one-to-many)
+- Tumor grade: 99.2% informative
 - Tobacco smoking status: 97.5% informative
 - AJCC clinical stage: 97.3% informative
 - Race: 97.2% informative
@@ -41,8 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 758
-- Citations to the dataset's publication: 5556 (attention, not reuse)
-- Reuse gap index: +0.62 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.69 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Drug repurposing targeting miRNA-mRNA networks to mitigate areca nut-induced head and neck cancer. (2026) PMID 40639775
   - Multi-omics analysis to uncover the molecular basis of tumor budding in head and neck squamous cell carcinoma. (2025) PMID 40082664

@@ -10,7 +10,7 @@
   "alternateName": [
     "pptc_2019"
   ],
-  "description": "Whole-exome sequencing of 261 patient derived xenografts (PDXs) samples from high-risk childhood cancers (with no matched normals). Website: <a href='https://preclinicalpivot.org'>PPTC (now, PIVOT)</a>",
+  "description": "Whole-exome sequencing of 261 patient derived xenografts (PDXs) samples from high-risk childhood cancers (with no matched normals). Website: PPTC (now, PIVOT)",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pptc-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=pptc_2019"
@@ -19,7 +19,7 @@
     "Mixed Cancer Types",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "nci-funded",
     "other",
@@ -33,7 +33,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -172,7 +172,18 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 100.0% of cases, informative for 98.4%"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

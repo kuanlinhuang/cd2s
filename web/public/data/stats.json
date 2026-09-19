@@ -1,20 +1,46 @@
 {
-  "generated_at": "2026-09-19T02:58:18.141064+00:00",
+  "generated_at": "2026-09-19T04:14:30.257636+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
-  "n_underexplored": 18,
+  "n_underexplored": 21,
   "n_expert_reviewed": 0,
-  "n_cases_total": 131564,
+  "n_cases_total": 349817,
+  "n_datasets_with_case_count": 601,
+  "n_clinically_measured": 385,
+  "clinically_measured_by_repository": {
+    "GDC": {
+      "measured": 93,
+      "total": 93
+    },
+    "HTAN": {
+      "measured": 0,
+      "total": 14
+    },
+    "IDC": {
+      "measured": 0,
+      "total": 137
+    },
+    "PDC": {
+      "measured": 126,
+      "total": 130
+    },
+    "cBioPortal": {
+      "measured": 166,
+      "total": 228
+    }
+  },
   "n_repositories": 5,
   "n_distinct_modalities": 29,
-  "n_with_survival": 67,
-  "n_with_treatment_response": 58,
-  "n_reuse_assessed": 132,
+  "n_with_survival": 233,
+  "n_with_treatment_response": 62,
+  "n_reuse_assessed": 142,
   "n_without_citable_accession": 364,
-  "n_with_publication_citations": 341,
-  "median_citation_to_reuse_ratio": 6.3,
-  "n_workbooks": 20,
+  "n_with_publication_citations": 298,
+  "median_citation_to_reuse_ratio": 7.5,
+  "n_workbook_attachments": 20,
+  "n_datasets_with_workbook": 15,
+  "n_distinct_workbooks": 6,
   "n_grants_linked": 736,
   "n_reuse_studies_verified": 778
 }

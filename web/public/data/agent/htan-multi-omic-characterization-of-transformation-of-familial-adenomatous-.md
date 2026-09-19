@@ -8,7 +8,7 @@ Dataset id: htan-multi-omic-characterization-of-transformation-of-familial-adeno
 
 ## What it is
 
-- Cohort size not published
+- Cohort: 40 cases
 - Measurements: Multiplexed tissue imaging, Mass spectrometry proteomics, Bulk DNA sequencing, Single-cell ATAC sequencing, Single-cell / single-nucleus RNA sequencing, Bulk RNA sequencing, Hi-C chromatin conformation
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 
@@ -16,17 +16,18 @@ Dataset id: htan-multi-omic-characterization-of-transformation-of-familial-adeno
 
 Populated means a value exists; informative excludes 'not reported'.
 
-- Demographics: None% populated (one-to-many)
-- Diagnosis: None% populated (one-to-many)
-- Exposure history: None% populated (one-to-many)
-- Family history: None% populated (one-to-many)
-- Follow-up: None% populated (one-to-many)
-- Therapy: None% populated (one-to-many)
+- Demographics: 100.0% populated (one-to-many)
+- Diagnosis: 40.0% populated (one-to-many)
+- Exposure history: 40.0% populated (one-to-many)
+- Family history: 40.0% populated (one-to-many)
+- Follow-up: 40.0% populated (one-to-many)
+- Therapy: 40.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 294 (attention, not reuse)
+- Reuse gap index: -2.39 (negative means less reused than comparable datasets)
 
 ## Provenance
 

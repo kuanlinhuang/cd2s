@@ -26,7 +26,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Disease response at follow-up: 100.0% populated (one-to-many)

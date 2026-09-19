@@ -8,10 +8,21 @@ Dataset id: cbio-thyroid-mskcc-2016
 
 ## What it is
 
-- Cohort: 117 samples
+- Cohort: 117 cases
 - Cancer types: Thyroid
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 33.2 months (derivable for 115 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 98.3% informative
+- Overall Survival (Months): 98.3% populated (one-to-many)
+- Sex: 81.2% informative
 
 ## Evidence of prior reuse
 

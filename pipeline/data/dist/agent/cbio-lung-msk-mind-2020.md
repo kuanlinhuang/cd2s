@@ -8,10 +8,24 @@ Dataset id: cbio-lung-msk-mind-2020
 
 ## What it is
 
-- Cohort: 247 samples
+- Cohort: 247 cases
 - Cancer types: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 2.7 months (derivable for 246 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- PFS Status: 99.6% informative
+- Primary Tumor Site: 99.6% informative
+- Sex: 99.6% informative
+- What is the patient's smoking status?: 99.6% informative
+- Is the patient deceased?: 99.6% informative
+- PFS Months: 99.6% populated (one-to-many)
 
 ## Evidence of prior reuse
 

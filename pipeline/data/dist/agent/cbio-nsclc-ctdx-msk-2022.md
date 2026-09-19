@@ -8,11 +8,27 @@ Dataset id: cbio-nsclc-ctdx-msk-2022
 
 ## What it is
 
-- Cohort: 2,621 samples
+- Cohort: 1,127 cases
 - Cancer types: Non-Small Cell Lung Cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
-- Treatment response recorded: True
+- Median follow-up: 16.6 months (derivable for 1127 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Sex: 99.1% informative
+- Prior Treatment: 97.8% informative
+- Smoking Status: 97.8% informative
+- Race Category: 64.4% informative
+- Ethnicity Category: 63.8% informative
+- Primary Tumor Site: 46.2% informative
+- Named therapeutic agents: 0.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

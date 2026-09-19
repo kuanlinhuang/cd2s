@@ -21,6 +21,7 @@
     "Brain",
     "Glioblastoma",
     "clinical",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

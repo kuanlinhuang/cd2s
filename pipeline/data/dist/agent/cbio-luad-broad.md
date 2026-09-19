@@ -8,10 +8,22 @@ Dataset id: cbio-luad-broad
 
 ## What it is
 
-- Cohort: 183 samples
+- Cohort: 183 cases
 - Cancer types: Lung Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 9.1 months (derivable for 135 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Ethnicity Category: 98.9% informative
+- Stage: 86.3% informative
+- Progress Free Survival (Months): 73.8% populated (one-to-many)
 
 ## Evidence of prior reuse
 

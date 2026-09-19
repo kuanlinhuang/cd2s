@@ -8,10 +8,21 @@ Dataset id: cbio-paad-qcmg-uq-2016
 
 ## What it is
 
-- Cohort: 456 samples
+- Cohort: 456 cases
 - Cancer types: Pancreatic Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 95.8% informative
+- Neoplasm Disease Stage American Joint Committee on Cancer Code: 91.2% informative
+- Tumor Grade: 88.8% informative
+- Ethnicity Category: 79.6% informative
 
 ## Evidence of prior reuse
 

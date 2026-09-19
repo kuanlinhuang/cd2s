@@ -21,6 +21,7 @@
     "Hepatocellular carcinoma",
     "Liver",
     "clinical",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

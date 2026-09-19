@@ -8,10 +8,24 @@ Dataset id: cbio-hnsc-mdanderson-2013
 
 ## What it is
 
-- Cohort: 40 samples
+- Cohort: 40 cases
 - Cancer types: Head and Neck Squamous Cell Carcinoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Median follow-up: 29.5 months (derivable for 40 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Disease Free Status: 100.0% informative
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 100.0% informative
+- Sex: 100.0% informative
+- Tumor Stage: 100.0% informative
+- Disease Free (Months): 100.0% populated (one-to-many)
+- Overall Survival (Months): 100.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 

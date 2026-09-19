@@ -54,7 +54,7 @@ export interface AgentAnswer {
 // what the request needs
 // ------------------------------------------------------------------------------------
 
-type Need = {
+export type Need = {
   key: string;
   label: string;
   test: RegExp;
@@ -208,14 +208,69 @@ function search(): MiniSearch<Doc> {
 
 type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unknown: Need[] };
 
+/**
+ * What the request asks for, read from its wording.
+ *
+ * Exported because it is the step that decides which datasets can be ruled out, and a
+ * missed need is silent: the agent simply stops checking for it. Tested directly.
+ */
+export function readNeeds(query: string): Need[] {
+  return NEEDS.filter((n) => n.test.test(query));
+}
+
+/**
+ * Words that carry no topic, so their presence should not make a dataset relevant.
+ *
+ * Two kinds: ordinary function words, and the words that describe a dataset in general
+ * rather than a subject - "cohort", "open", "records". The second kind matters more,
+ * because almost every page contains them and a query that leans on them would rank by
+ * page length.
+ */
+const STOPWORDS = new Set([
+  "a", "access", "all", "an", "and", "any", "are", "as", "at", "available", "be", "by",
+  "can", "cohort", "cohorts", "data", "dataset", "datasets", "do", "does", "find", "for",
+  "from", "get", "have", "how", "i", "in", "into", "is", "it", "its", "large", "like",
+  "looking", "me", "my", "need", "of", "on", "open", "or", "patients", "public",
+  "records", "samples", "show", "small", "some", "study", "studies", "that", "the",
+  "their", "then", "there", "this", "to", "use", "using", "want", "was", "were", "what",
+  "which", "with", "would",
+]);
+
+/**
+ * What the request is *about*, with the words that already became needs removed.
+ *
+ * Those words are counted once as a capability check, which is the reliable measurement.
+ * Leaving them in the text query counted them a second time, and because well-curated
+ * pages discuss survival and treatment at length it made every well-annotated cohort
+ * look textually relevant to every clinical question: "proteogenomic gastric cancer
+ * survival with treatment records" ranked a paediatric leukaemia trial above the gastric
+ * cohort that answers it.
+ *
+ * Returns null when nothing but capability words is left. There is then no topic, and
+ * text relevance is not used at all rather than being read out of noise.
+ */
+export function topicOf(query: string, needs: Need[]): string | null {
+  const words = query.split(/[^A-Za-z0-9+-]+/).filter(Boolean);
+  const kept = words.filter(
+    (w) => !STOPWORDS.has(w.toLowerCase()) && !needs.some((n) => n.test.test(w)),
+  );
+  return kept.some((w) => w.length >= 3) ? kept.join(" ") : null;
+}
+
+/** Every need the agent knows how to check, for tests and for documentation. */
+export const NEED_KEYS = NEEDS.map((n) => n.key);
+
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
-  const needs = NEEDS.filter((n) => n.test.test(query));
+  const needs = readNeeds(query);
   const index = getIndex();
   const hits = new Map<string, number>();
   let max = 0;
-  for (const h of search().search(query)) {
-    hits.set(h.id as string, h.score);
-    max = Math.max(max, h.score);
+  const topic = topicOf(query, needs);
+  if (topic) {
+    for (const h of search().search(topic)) {
+      hits.set(h.id as string, h.score);
+      max = Math.max(max, h.score);
+    }
   }
   const scored: Scored[] = index.map((row) => {
     const text = max > 0 ? (hits.get(row.id) ?? 0) / max : 0;
@@ -228,7 +283,11 @@ function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] 
       else if (v === false) failed.push(n);
       else unknown.push(n);
     }
-    let score = text * 2 + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
+    // Topic relevance is weighted above any single capability, because a researcher who
+    // names a disease is not negotiating about it: a gastric cohort meeting two of three
+    // needs should outrank a leukaemia cohort meeting three. It is never decisive on its
+    // own - failing a stated need still costs more than the best possible text match.
+    let score = text * 3.5 + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
     if (row.is_showcase) score += 0.4;
     if (row.n_research_questions > 0) score += 0.2;
     if (row.n_cases && row.n_cases >= 200) score += 0.2;

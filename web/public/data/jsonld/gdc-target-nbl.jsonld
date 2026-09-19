@@ -309,7 +309,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Tumour grade",
+      "name": "Tumor grade",
       "description": "Populated for 24.6% of cases, informative for 0.0%"
     },
     {
@@ -339,7 +339,7 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Classification of tumour",
+      "name": "Classification of tumor",
       "description": "Populated for 74.4% of cases, informative for 74.4%"
     },
     {

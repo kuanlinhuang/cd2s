@@ -9,14 +9,38 @@ Dataset id: pdc-prospective-ovarian-pnnl-phosphoproteome-lumos
 ## What it is
 
 - Cohort: 95 cases
+- Cancer types: Ovarian Serous Cystadenocarcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Vital status: 0.0% informative
+- Cause of death: 0.0% informative
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Prior treatment: 0.0% informative
+- Classification of tumor: 0.0% informative
+- Prior malignancy: 96.8% informative
+- Age at diagnosis: 96.8% populated (one-to-many)
+- Days to last follow-up: 96.8% populated (one-to-many)
+- Days to recurrence: 96.8% populated (one-to-many)
+- Tissue or organ of origin: 94.7% informative
+- Primary diagnosis: 92.6% informative
+- Sex at birth (gender): 91.6% informative
+- Race: 89.5% informative
+- AJCC pathologic stage (tumor_stage): 87.4% informative
+- Ethnicity: 84.2% informative
+- Morphology (ICD-O): 82.1% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 1 (attention, not reuse)
-- Reuse gap index: +0.85 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.03 (negative means less reused than comparable datasets)
 
 ## Provenance
 

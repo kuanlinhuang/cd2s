@@ -19,7 +19,7 @@ Dataset id: gdc-beataml1.0-cohort
 Populated means a value exists; informative excludes 'not reported'.
 
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Last known disease status: 0.0% informative
 - Sex at birth: 97.1% informative
 - Primary diagnosis: 95.8% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 22
 - Citations to the dataset's publication: 1161 (attention, not reuse)
-- Reuse gap index: -1.13 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.71 (negative means less reused than comparable datasets)
   - Characteristics and prognostic impact of IDH mutations in AML: a COG, SWOG, and ECOG analysis. (2023) PMID 37267439
   - Acute Myeloid Leukemia iPSCs Reveal a Role for RUNX1 in the Maintenance of Human Leukemia Stem Cells. (2020) PMID 32492433
   - Cohesin regulates alternative splicing. (2023) PMID 36857449

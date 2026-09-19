@@ -8,10 +8,22 @@ Dataset id: cbio-blca-mskcc-solit-2012
 
 ## What it is
 
-- Cohort: 97 samples
+- Cohort: 97 cases
 - Cancer types: Bladder Urothelial Carcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Microarray expression, DNA methylation (HM27)
+- Median follow-up: 11.6 months (derivable for 38 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Disease Free Status: 99.0% informative
+- Disease Free (Months): 97.9% populated (one-to-many)
+- Overall Survival Status: 85.6% informative
+- Overall Survival (Months): 39.2% populated (one-to-many)
 
 ## Evidence of prior reuse
 

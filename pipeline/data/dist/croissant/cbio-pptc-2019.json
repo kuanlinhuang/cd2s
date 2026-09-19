@@ -8,7 +8,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "name": "cbio-pptc-2019",
   "alternateName": "Pediatric Preclinical Testing Consortium  (CHOP, Cell Rep 2019)",
-  "description": "Whole-exome sequencing of 261 patient derived xenografts (PDXs) samples from high-risk childhood cancers (with no matched normals). Website: <a href='https://preclinicalpivot.org'>PPTC (now, PIVOT)</a>",
+  "description": "Whole-exome sequencing of 261 patient derived xenografts (PDXs) samples from high-risk childhood cancers (with no matched normals). Website: PPTC (now, PIVOT)",
   "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pptc-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
@@ -20,7 +20,22 @@
       "@id": "clinical",
       "name": "Clinical variables with measured completeness",
       "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
-      "field": []
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:ONCOTREE_CODE",
+          "name": "Oncotree Code",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/cbioportal:SEX",
+          "name": "Sex",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 98.4%.",
+          "dataType": "sc:Text"
+        }
+      ]
     }
   ],
   "cr:usageGuidance": {

@@ -8,10 +8,18 @@ Dataset id: cbio-rms-nih-2014
 
 ## What it is
 
-- Cohort: 43 samples
+- Cohort: 43 cases
 - Cancer types: Rhabdomyosarcoma
 - Measurements: Mutation calls (panel, exome or genome)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
 
 ## Evidence of prior reuse
 

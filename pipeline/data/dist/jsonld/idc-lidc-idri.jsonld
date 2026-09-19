@@ -23,6 +23,7 @@
     "Metastatic disease",
     "Non-Cancer",
     "clinical",
+    "has-clinical-table",
     "has-derived-annotations",
     "idc",
     "imaging",

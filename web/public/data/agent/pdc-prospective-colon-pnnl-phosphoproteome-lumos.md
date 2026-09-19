@@ -9,14 +9,39 @@ Dataset id: pdc-prospective-colon-pnnl-phosphoproteome-lumos
 ## What it is
 
 - Cohort: 102 cases
+- Cancer types: Colon Adenocarcinoma
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Tumor grade: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Prior treatment: 0.0% informative
+- Primary diagnosis: 99.0% informative
+- Tissue or organ of origin: 99.0% informative
+- AJCC pathologic stage (tumor_stage): 99.0% informative
+- Prior malignancy: 99.0% informative
+- Vital status: 0.0% informative
+- Sex at birth (gender): 98.0% informative
+- Morphology (ICD-O): 98.0% informative
+- AJCC pathologic stage: 98.0% informative
+- Classification of tumor: 0.0% informative
+- Ethnicity: 97.1% informative
+- Race: 96.1% informative
+- Days to last follow-up: 1.0% populated (one-to-many)
+- Cause of death: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
 - Citations to the dataset's publication: 15 (attention, not reuse)
-- Reuse gap index: -0.34 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.33 (negative means less reused than comparable datasets)
   - MetaProD: A Highly-Configurable Mass Spectrometry Analyzer for Multiplexed Proteomic and Metaproteomic Data. (2023) PMID 36688801
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
   - TP53 Loss Fuels mTORC1 Activation and Autophagy Suppression to Drive Immune-Cold Colorectal Cancer. (2026) PMID 41822325

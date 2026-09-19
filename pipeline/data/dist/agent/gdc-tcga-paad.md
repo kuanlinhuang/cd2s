@@ -25,11 +25,11 @@ Populated means a value exists; informative excludes 'not reported'.
 - Primary diagnosis: 100.0% populated (one-to-many)
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
-- Tumour grade: 100.0% informative
+- Tumor grade: 100.0% informative
 - Prior treatment: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
 - Synchronous malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - AJCC pathologic stage: 98.4% informative
@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 989
-- Reuse gap index: +1.65 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.78 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Comprehensive assessment of disulfidptosis-related long non-coding RNA index as biomarkers for predicting clinical outcomes and immune microenvironment in pancreatic cancer. (2025) PMID 40530161
   - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231

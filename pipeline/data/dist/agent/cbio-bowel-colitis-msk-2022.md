@@ -8,10 +8,27 @@ Dataset id: cbio-bowel-colitis-msk-2022
 
 ## What it is
 
-- Cohort: 179 samples
+- Cohort: 175 cases
 - Cancer types: Bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 21.4 months (derivable for 128 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 95.4% informative
+- Primary Tumor Site: 91.7% informative
+- Overall Survival (Months): 73.1% populated (one-to-many)
+- Overall Survival Status: 62.9% informative
+- Race Category: 60.6% informative
+- Ethnicity Category: 58.3% informative
+- Patient's Vital Status: 11.4% informative
+- Relapse Free Status: 8.6% informative
+- Relapse Free Status (Months): 8.6% populated (one-to-many)
 
 ## Evidence of prior reuse
 

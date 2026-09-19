@@ -8,10 +8,24 @@ Dataset id: cbio-egc-msk-tp53-ccr-2022
 
 ## What it is
 
-- Cohort: 237 samples
+- Cohort: 237 cases
 - Cancer types: Esophagogastric Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 24.6 months (derivable for 223 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Tumor Grade: 100.0% informative
+- Overall Survival Status: 94.1% informative
+- Overall Survival (Months): 94.1% populated (one-to-many)
+- Progression Free Status: 93.7% informative
+- Progress Free Survival (Months): 93.7% populated (one-to-many)
 
 ## Evidence of prior reuse
 

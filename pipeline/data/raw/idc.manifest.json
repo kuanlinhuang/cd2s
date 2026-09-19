@@ -1,1 +1,1 @@
-{"source":"IDC","api":"https://api.imaging.datacommons.cancer.gov/v3","n_collections":176,"n_derived_analysis_resources":24,"fetched_at":"2026-09-18T02:52:45.680984+00:00","http_live":0,"http_cached":2}
+{"source":"IDC","api":"https://api.imaging.datacommons.cancer.gov/v3","n_collections":176,"n_derived_analysis_resources":24,"n_with_clinical_table":59,"n_without_clinical_table":117,"fetched_at":"2026-09-19T03:58:03.644034+00:00","http_live":0,"http_cached":3}

@@ -20,10 +20,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Vital status: 0.0% informative
 - Tissue or organ of origin: 100.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
-- Classification of tumour: 0.0% informative
+- Classification of tumor: 0.0% informative
 - Race: 96.8% informative
 - Sex at birth: 96.5% informative
 - Prior malignancy: 96.5% informative
@@ -40,8 +40,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 8
-- Citations to the dataset's publication: 469 (attention, not reuse)
-- Reuse gap index: -0.95 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.39 (negative means less reused than comparable datasets)
   - pyComBat, a Python tool for batch effects correction in high-throughput molecular data using empirical Bayes methods. (2023) PMID 38057718
   - Inflammatory reprogramming of the solid tumor microenvironment by infiltrating clonal hematopoiesis is associated with adverse outcomes. (2025) PMID 40037357
   - Prognostic relevance of HRDness gene expression signature in ovarian high-grade serous carcinoma; JGOG3025-TR2 study. (2023) PMID 36593360

@@ -8,10 +8,25 @@ Dataset id: cbio-coad-cptac-2019
 
 ## What it is
 
-- Cohort: 110 samples
+- Cohort: 110 cases
 - Cancer types: Colon Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, microRNA expression, Mass spectrometry proteomics
+- Median follow-up: 30.0 months (derivable for 102 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Cancer Stage: 100.0% informative
+- Primary Site: 99.1% informative
+- Overall Survival Status: 92.7% informative
+- Overall Survival (Months): 92.7% populated (one-to-many)
+- Disease Free Status: 88.2% informative
+- Disease Free (Months): 77.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 

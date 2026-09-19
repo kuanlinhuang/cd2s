@@ -8,10 +8,23 @@ Dataset id: cbio-luad-mskcc-2023-met-organotropism
 
 ## What it is
 
-- Cohort: 2,653 samples
+- Cohort: 2,298 cases
 - Cancer types: Lung Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 36.8 months (derivable for 766 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 95.8% informative
+- Race Category: 91.6% informative
+- Primary Tumor Site: 91.2% informative
+- Overall Survival Status: 33.3% informative
+- Overall Survival (Months): 33.3% populated (one-to-many)
 
 ## Evidence of prior reuse
 

@@ -8,10 +8,22 @@ Dataset id: cbio-difg-glass-2019
 
 ## What it is
 
-- Cohort: 444 samples
+- Cohort: 222 cases
 - Cancer types: Diffuse Glioma
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
+- Median follow-up: 37.0 months (derivable for 207 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Overall Survival Status: 93.7% informative
+- Sex: 93.7% informative
+- Grade: 93.5% informative
+- Overall Survival (Months): 93.2% populated (one-to-many)
 
 ## Evidence of prior reuse
 

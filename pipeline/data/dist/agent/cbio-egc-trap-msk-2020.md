@@ -8,10 +8,24 @@ Dataset id: cbio-egc-trap-msk-2020
 
 ## What it is
 
-- Cohort: 68 samples
+- Cohort: 37 cases
 - Cancer types: Esophagogastric Adenocarcinoma
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 13.0 months (derivable for 37 cases)
+- Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Overall Survival Status: 100.0% informative
+- Progression of disease: 100.0% informative
+- Sex: 100.0% informative
+- Treatment best response: 100.0% informative
+- Overall Survival (Months): 100.0% populated (one-to-many)
+- Progress Free Survival (Months): 100.0% populated (one-to-many)
+- Race Category: 97.3% informative
 
 ## Evidence of prior reuse
 

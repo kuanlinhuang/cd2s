@@ -19,7 +19,7 @@
     "Non-Small Cell Lung Cancer",
     "cbioportal",
     "copy number",
-    "harmonised-for-reuse",
+    "harmonized-for-reuse",
     "investigator-cohort",
     "lung",
     "nci-funded",
@@ -34,7 +34,7 @@
   "creator": [
     {
       "@type": "Organization",
-      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+      "name": "Investigator-initiated cohort (harmonized in cBioPortal)"
     }
   ],
   "publisher": {
@@ -143,7 +143,58 @@
   ],
   "dateModified": "2026-09-18T02:48:40.878054+00:00",
   "datePublished": null,
-  "variableMeasured": [],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity Category",
+      "description": "Populated for 65.7% of cases, informative for 63.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Oncotree Code",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival Status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary Tumor Site",
+      "description": "Populated for 47.9% of cases, informative for 46.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior Treatment",
+      "description": "Populated for 97.8% of cases, informative for 97.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race Category",
+      "description": "Populated for 66.1% of cases, informative for 64.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sex",
+      "description": "Populated for 99.1% of cases, informative for 99.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Smoking Status",
+      "description": "Populated for 97.8% of cases, informative for 97.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Overall Survival (Months)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Named therapeutic agents",
+      "description": "Populated for 0.0% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
   "measurementTechnique": [
     "Mutation calls (panel, exome or genome)",
     "Copy number alterations",

@@ -8,10 +8,32 @@ Dataset id: cbio-bladder-msk-2024
 
 ## What it is
 
-- Cohort: 112 samples
+- Cohort: 112 cases
 - Cancer types: Bladder/Urinary Tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
+- Median follow-up: 52.6 months (derivable for 88 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Smoking History: 100.0% informative
+- Progression Free(Months): 100.0% populated (one-to-many)
+- Neoplasm Histologic Grade: 99.1% informative
+- Progression Free Status: 95.5% informative
+- Disease Free Status: 88.4% informative
+- Disease Specific Survival Status: 88.4% informative
+- Disease Free (Months): 88.4% populated (one-to-many)
+- Overall Survival Status: 78.6% informative
+- Overall Survival (Months): 78.6% populated (one-to-many)
+- Status: 42.9% informative
+- Primary Tumor Site: 35.7% informative
+- Race: 34.8% informative
+- Ethnicity: 33.9% informative
 
 ## Evidence of prior reuse
 

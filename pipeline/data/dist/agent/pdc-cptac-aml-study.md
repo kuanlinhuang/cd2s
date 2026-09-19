@@ -5,16 +5,43 @@ Summary: 164 acute myeloid leukaemias with proteome, phosphoproteome, acetylome 
 
 ## Read this first: what these data CANNOT support
 
-- No clinical annotation is distributed with the PDC study: no survival, no treatment, no cytogenetic risk group, no demographics.
-  Rules out: Survival analysis, Risk-stratified comparison, Treatment-response analysis
-- Do not use for: Prognostic or survival claims. (No outcome data are distributed with this study.)
+- Cytogenetic risk group - the primary stratifier in AML - is not in the PDC clinical records, and neither is any therapeutic agent. A treatment record of any kind exists for 2% of the 164 cases. What the API does serve is vital status and follow-up time for 99% of cases, which is enough for overall survival but not for anything risk-stratified.
+  Rules out: Risk-stratified comparison, Treatment-response analysis
+- Do not use for: Prognostic claims that do not adjust for cytogenetic risk. (Vital status and follow-up are present for 99% of cases, so a survival model will fit - but risk group is absent, and in AML it dominates prognosis.)
+- Do not use for: Treatment-response or resistance analysis from these data. (A treatment record of any kind exists for 2% of the cohort and no agent is named.)
 - Do not use for: Risk-group comparisons without obtaining cytogenetics separately. (Cytogenetic risk is the primary stratifier in AML and is not present here.)
 
 ## What it is
 
 - Cohort: 164 cases
+- Cancer types: Acute Myeloid Leukemia
 - Measurements: Acetylome mass spectrometry (TMT18 / DDA), Glycoproteome mass spectrometry (TMT18 / DDA), Lipidome mass spectrometry (Label Free / DDA), Metabolome mass spectrometry (Label Free / DDA), Phosphoproteome mass spectrometry (TMT18 / DDA), Proteome mass spectrometry (TMT18 / DDA)
+- Median follow-up: 12.1 months (derivable for 162 cases)
+- Treatment response recorded: True
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Tumor grade: 0.0% informative
+- AJCC pathologic stage (tumor_stage): 0.0% informative
+- Vital status: 99.4% informative
+- Race: 99.4% informative
+- Sex at birth (gender): 99.4% informative
+- Morphology (ICD-O): 99.4% informative
+- Primary diagnosis: 99.4% informative
+- Tissue or organ of origin: 99.4% informative
+- AJCC pathologic stage: 0.0% informative
+- Age at diagnosis: 99.4% populated (one-to-many)
+- Days to last follow-up: 99.4% populated (one-to-many)
+- Days to death: 68.9% populated (one-to-many)
+- Cause of death: 61.6% informative
+- Ethnicity: 12.8% informative
+- Days to recurrence: 9.1% populated (one-to-many)
+- Treatment type: 2.4% populated (one-to-many)
+- Treatment outcome: 2.4% populated (one-to-many)
+- AJCC clinical stage: 0.0% informative
 
 ## Questions these data can support
 

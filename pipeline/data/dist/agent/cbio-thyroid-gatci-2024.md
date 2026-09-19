@@ -8,10 +8,22 @@ Dataset id: cbio-thyroid-gatci-2024
 
 ## What it is
 
-- Cohort: 190 samples
+- Cohort: 158 cases
 - Cancer types: Thyroid
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
+- Median follow-up: 4.1 months (derivable for 142 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 100.0% informative
+- Overall Survival: 90.5% informative
+- Overall Survival (Months): 89.9% populated (one-to-many)
+- Tumor Stage: 52.6% informative
 
 ## Evidence of prior reuse
 

@@ -36,7 +36,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Progression or recurrence: 77.9% informative
 - Last known disease status: 77.2% informative
 - AJCC pathologic stage: 75.6% informative
-- Tumour grade: 69.7% informative
+- Tumor grade: 69.7% informative
 - Treatment type: 52.7% populated (one-to-many)
 - Treatment outcome: 44.1% informative
 - Cause of death: 28.9% informative
@@ -69,7 +69,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 25
 - Citations to the dataset's publication: 688 (attention, not reuse)
-- Reuse gap index: -1.76 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.45 (negative means less reused than comparable datasets)
   - Tumor microbiome links cellular programs and immunity in pancreatic cancer. (2022) PMID 36220074
   - Open-source curation of a pancreatic ductal adenocarcinoma gene expression analysis platform (pdacR) supports a two-subtype model. (2023) PMID 36765128
   - Inflammatory reprogramming of the solid tumor microenvironment by infiltrating clonal hematopoiesis is associated with adverse outcomes. (2025) PMID 40037357

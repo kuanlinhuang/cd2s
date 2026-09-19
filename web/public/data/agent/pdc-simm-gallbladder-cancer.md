@@ -9,8 +9,33 @@ Dataset id: pdc-simm-gallbladder-cancer
 ## What it is
 
 - Cohort: 195 cases
+- Cancer types: Epithelial Neoplasms, NOS
 - Measurements: Phosphoproteome mass spectrometry (TMT16 / DDA), Proteome mass spectrometry (TMT16 / DDA)
+- Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Tissue or organ of origin: 100.0% informative
+- Vital status: 99.0% informative
+- Race: 99.0% informative
+- Ethnicity: 99.0% informative
+- Sex at birth (gender): 99.0% informative
+- Morphology (ICD-O): 99.0% informative
+- Primary diagnosis: 99.0% informative
+- AJCC pathologic stage (tumor_stage): 99.0% informative
+- Classification of tumor: 99.0% informative
+- Age at diagnosis: 99.0% populated (one-to-many)
+- Tumor grade: 95.9% informative
+- Cause of death: 0.0% informative
+- AJCC pathologic stage: 0.0% informative
+- AJCC clinical stage: 0.0% informative
+- Progression or recurrence: 0.0% informative
+- Last known disease status: 0.0% informative
+- Prior treatment: 0.0% informative
+- Prior malignancy: 0.0% informative
 
 ## Evidence of prior reuse
 

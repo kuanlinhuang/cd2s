@@ -53,14 +53,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
-      "identifier": "https://doi.org/10.1038/s41586-022-04499-2",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",

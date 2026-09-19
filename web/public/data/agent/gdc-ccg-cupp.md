@@ -25,14 +25,14 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 100.0% populated (one-to-many)
 - Tissue or organ of origin: 100.0% populated (one-to-many)
 - Prior malignancy: 100.0% informative
-- Classification of tumour: 100.0% populated (one-to-many)
+- Classification of tumor: 100.0% populated (one-to-many)
 - Treatment type: 100.0% populated (one-to-many)
 - Treatment given: 100.0% populated (one-to-many)
 - Race: 97.8% informative
 - Ethnicity: 97.4% informative
 - Cause of death: 83.1% informative
 - Prior treatment: 77.6% informative
-- Tumour grade: 29.8% informative
+- Tumor grade: 29.8% informative
 - Country of residence: 18.8% informative
 - Synchronous malignancy: 18.8% informative
 - Tobacco smoking status: 18.8% informative

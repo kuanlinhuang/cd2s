@@ -27,7 +27,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Morphology (ICD-O): 97.2% populated (one-to-many)
 - Tissue or organ of origin: 97.2% populated (one-to-many)
 - Prior treatment: 97.2% populated (one-to-many)
-- Classification of tumour: 97.2% populated (one-to-many)
+- Classification of tumor: 97.2% populated (one-to-many)
 - Sex at birth: 96.6% informative
 - Vital status: 96.3% informative
 - Treatment type: 94.2% populated (one-to-many)
@@ -76,7 +76,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 1753
 - Citations to the dataset's publication: 1839 (attention, not reuse)
-- Reuse gap index: +1.41 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.44 (negative means less reused than comparable datasets)
   - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Updating TCGA glioma classification through integration of molecular data following the latest WHO guidelines. (2025) PMID 40467633
   - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231

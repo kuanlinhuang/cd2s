@@ -1,7 +1,7 @@
 # Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)
 
 Dataset id: gdc-fm-ad
-Summary: 18,004 patients profiled with a targeted clinical panel - the largest cohort in this corpus, with no informative vital status, no race data, and no treatment records.
+Summary: 18,004 patients profiled with a targeted clinical panel - the largest cohort in the Genomic Data Commons, with no informative vital status, no race data, and no treatment records.
 
 ## Read this first: what these data CANNOT support
 
@@ -9,7 +9,7 @@ Summary: 18,004 patients profiled with a targeted clinical panel - the largest c
   Rules out: Survival analysis, Prognostic modeling, Any outcome-anchored question
 - Every treatment field is empty for every case: prior treatment, treatment type, therapeutic agents, treatment outcome and line of therapy are all at 0% coverage.
   Rules out: Treatment-response analysis, Resistance mechanisms, Line-of-therapy questions
-- Race is recorded as "not reported" for all 18,004 patients. The largest cohort in this corpus contributes nothing to any question about how cancer genomics differs across populations.
+- Race is recorded as "not reported" for all 18,004 patients. The largest cohort the Genomic Data Commons holds contributes nothing to any question about how cancer genomics differs across populations.
   Rules out: Disparities research, Ancestry-stratified analysis
 - Do not use for: Any survival, prognostic or outcome analysis. (Vital status is uninformative for all 18,004 cases.)
 - Do not use for: Any treatment or resistance analysis. (All treatment fields are empty.)
@@ -32,13 +32,13 @@ Populated means a value exists; informative excludes 'not reported'.
 - Race: 0.0% informative
 - Ethnicity: 0.0% informative
 - Vital status: 0.0% informative
-- Tumour grade: 0.0% informative
+- Tumor grade: 0.0% informative
 - Progression or recurrence: 0.0% informative
 - Last known disease status: 0.0% informative
 - Primary diagnosis: 98.8% informative
 - Morphology (ICD-O): 98.8% informative
 - Tissue or organ of origin: 90.0% informative
-- Classification of tumour: 86.3% informative
+- Classification of tumor: 86.3% informative
 - Cause of death: 0.0% informative
 - Population group: 0.0% informative
 - Country of residence: 0.0% informative
@@ -78,7 +78,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 6
 - Citations to the dataset's publication: 726 (attention, not reuse)
-- Reuse gap index: -2.90 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.46 (negative means less reused than comparable datasets)
   - Functional characterization of SMARCA4 variants identified by targeted exome-sequencing of 131,668 cancer patients. (2020) PMID 33144586
   - Genomic analysis of 63,220 tumors reveals insights into tumor uniqueness and targeted cancer immunotherapy strategies. (2017) PMID 28231819
   - Comprehensive characterization of distinct genetic alterations in metastatic breast cancer across various metastatic sites. (2021) PMID 34272397

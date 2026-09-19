@@ -8,10 +8,21 @@ Dataset id: cbio-mbl-sickkids-2016
 
 ## What it is
 
-- Cohort: 46 samples
+- Cohort: 46 cases
 - Cancer types: Medulloblastoma
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
+- Median follow-up: 45.6 months (derivable for 29 cases)
+- Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.
+
+## Clinical field completeness
+
+Populated means a value exists; informative excludes 'not reported'.
+
+- Oncotree Code: 100.0% informative
+- Sex: 82.6% informative
+- Overall Survival Status: 63.0% informative
+- Overall Survival (Months): 63.0% populated (one-to-many)
 
 ## Evidence of prior reuse
 
