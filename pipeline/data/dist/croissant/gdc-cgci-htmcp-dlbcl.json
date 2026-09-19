@@ -1,0 +1,260 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "gdc-cgci-htmcp-dlbcl",
+  "alternateName": "HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma",
+  "description": "HIV-associated lymphoma is common where HIV is common and rare in the cohorts that define lymphoma genomics. This cohort addresses that gap directly: 70 cases with whole genome sequencing on 66, RNA sequencing on 55 and microRNA on 60, of which 34 patients are recorded as Black or African American and 18 as white.\nClinical annotation is better than the cohort size suggests. Prior treatment is recorded for 81%, ECOG performance status for 71%, treatment outcome for 46%, and named regimens including CHOP-21, COM and COP for 24%.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cgci-htmcp-dlbcl",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CRESCENT: a deep learning framework with multi-scale attention for detecting recurrent copy number alterations.",
+  "version": "as-retrieved",
+  "datePublished": "2025-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.sex_at_birth",
+          "name": "Sex at birth",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.race",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 75.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.ethnicity",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 72.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.vital_status",
+          "name": "Vital status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 75.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.cause_of_death",
+          "name": "Cause of death",
+          "description": "Category: outcome. Populated for 47.1% of cases; informative (excluding non-answers) for 18.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.population_group",
+          "name": "Population group",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.country_of_residence_at_enrollment",
+          "name": "Country of residence",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.primary_diagnosis",
+          "name": "Primary diagnosis",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 77.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.morphology",
+          "name": "Morphology (ICD-O)",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 74.3%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tissue_or_organ_of_origin",
+          "name": "Tissue or organ of origin",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 80.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_pathologic_stage",
+          "name": "AJCC pathologic stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_clinical_stage",
+          "name": "AJCC clinical stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tumor_grade",
+          "name": "Tumour grade",
+          "description": "Category: pathology. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_treatment",
+          "name": "Prior treatment",
+          "description": "Category: treatment. Populated for 81.4% of cases; informative (excluding non-answers) for 81.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_malignancy",
+          "name": "Prior malignancy",
+          "description": "Category: diagnosis. Populated for 81.4% of cases; informative (excluding non-answers) for 81.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.synchronous_malignancy",
+          "name": "Synchronous malignancy",
+          "description": "Category: diagnosis. Populated for 81.4% of cases; informative (excluding non-answers) for 77.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.progression_or_recurrence",
+          "name": "Progression or recurrence",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.last_known_disease_status",
+          "name": "Last known disease status",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.classification_of_tumor",
+          "name": "Classification of tumour",
+          "description": "Category: pathology. Populated for 81.4% of cases; informative (excluding non-answers) for 81.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_type",
+          "name": "Treatment type",
+          "description": "Category: treatment. Populated for 81.4% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_or_therapy",
+          "name": "Treatment given",
+          "description": "Category: treatment. Populated for 81.4% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.therapeutic_agents",
+          "name": "Therapeutic agents",
+          "description": "Category: treatment. Populated for 25.7% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_outcome",
+          "name": "Treatment outcome",
+          "description": "Category: treatment. Populated for 45.7% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.regimen_or_line_of_therapy",
+          "name": "Regimen or line of therapy",
+          "description": "Category: treatment. Populated for 24.3% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.disease_response",
+          "name": "Disease response at follow-up",
+          "description": "Category: followup. Populated for 81.4% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.progression_or_recurrence",
+          "name": "Progression at follow-up",
+          "description": "Category: followup. Populated for 17.1% of cases; informative (excluding non-answers) for 17.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.ecog_performance_status",
+          "name": "ECOG performance status",
+          "description": "Category: followup. Populated for 71.4% of cases; informative (excluding non-answers) for 60.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.tobacco_smoking_status",
+          "name": "Tobacco smoking status",
+          "description": "Category: exposure. Populated for 61.4% of cases; informative (excluding non-answers) for 55.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.alcohol_history",
+          "name": "Alcohol history",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [
+      "How does the genomic landscape of HIV-associated diffuse large B-cell lymphoma differ from that of lymphoma in immunocompetent patients?",
+      "Does immune status shape the tumor transcriptome in lymphoma?",
+      "What are the outcomes of HIV-associated DLBCL treated with standard regimens?"
+    ],
+    "blockingLimitations": [
+      {
+        "kind": "statistical_power",
+        "statement": "70 cases, with individual layers covering 50 to 66, limits all subgroup analysis.",
+        "rulesOut": [
+          "Genome-wide discovery",
+          "Subgroup comparison",
+          "Multivariable modeling"
+        ]
+      },
+      {
+        "kind": "missing_data",
+        "statement": "HIV status, CD4 count and antiretroviral therapy are not structured fields, despite being the cohort's organizing rationale. Stage is absent for all cases.",
+        "rulesOut": [
+          "HIV-stratified comparison",
+          "Stage-adjusted survival"
+        ]
+      }
+    ],
+    "inappropriateUses": [
+      "Comparing HIV-positive with HIV-negative lymphoma within the cohort.",
+      "Genome-wide significance testing."
+    ]
+  }
+}

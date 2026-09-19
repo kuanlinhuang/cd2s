@@ -1,0 +1,286 @@
+id: gdc-cgci-htmcp-cc
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed:
+    - useful_for
+    - limitations
+    - inappropriate_uses
+    - access_steps
+    - primary_publications
+  open_questions:
+    - >-
+      HIV status, CD4 count and antiretroviral therapy history are central to this
+      cohort's scientific value but are not exposed as structured fields in the GDC
+      harmonized clinical records. Confirm with the CGCI data access committee whether
+      they are available in the dbGaP phenotype files before planning an HIV-stratified
+      analysis.
+    - >-
+      Stage is unpopulated in GDC for all 212 cases. The marker paper reports stage
+      distribution, so it exists somewhere; confirm whether it can be obtained from the
+      supplementary tables or only through controlled access.
+
+one_liner: >-
+  212 cervical carcinomas from Ugandan women, 98% Black African and enriched for HIV
+  infection - the largest genomically characterized cervical cancer cohort from
+  sub-Saharan Africa, with ECOG status on 99% of cases, treatment outcome on 68%, and a derivable follow-up
+  time for every single case.
+
+summary: >-
+  The HIV+ Tumor Molecular Characterization Project (HTMCP) cervical cancer cohort was
+  assembled to study how HIV infection shapes cervical carcinoma in a population where
+  both diseases are common. It is one of very few NCI-supported genomic cohorts whose
+  participants are almost entirely Black African women recruited outside the United
+  States, and that makes it structurally different from every other cervical cancer
+  resource in the portfolio. The cohort carries whole genome sequencing on 124 cases,
+  RNA sequencing on 123, methylation arrays on 120, microRNA on 118, and both
+  histopathology and radiology images on 211 - an unusually complete multimodal picture
+  for a cohort of this size and origin.
+
+primary_publications:
+  - pmid: "32747824"
+    title: >-
+      Analysis of Ugandan cervical carcinomas identifies human papillomavirus clade-specific
+      epigenome and transcriptome landscapes
+    journal: Nature Genetics
+    year: 2020
+    url: https://pubmed.ncbi.nlm.nih.gov/32747824/
+
+useful_for:
+  - question: >-
+      Does HPV clade shape the tumor epigenome and transcriptome differently in an
+      African cohort than in the predominantly North American and European cohorts that
+      define current cervical cancer subtypes?
+    rationale: >-
+      Methylation arrays are available on 120 cases and RNA sequencing on 123, on the
+      same tumors as whole genome sequencing that can be used to type and subclassify
+      the integrated HPV. This is the design the marker paper used, and the cohort is
+      large enough to repeat it with different clade groupings or to test subtype
+      assignments derived from TCGA-CESC against an independent, differently
+      constituted population.
+    required_modalities: [methylation, rna_seq, wgs]
+    required_fields:
+      - diagnoses.primary_diagnosis
+      - demographic.race
+    feasibility: needs_access
+    approx_n: 118
+    statistical_note: >-
+      Analyses restricted to the intersection of methylation and expression leave roughly
+      118 cases; clade subgroups below about 25 cases will not support multiple-testing
+      corrected genome-wide comparisons.
+    topics: [viral-oncogenesis, epigenetics, health-disparities]
+    exemplar_pmid: "32747824"
+
+  - question: >-
+      Do molecular subtypes derived from predominantly white cohorts transfer to Black
+      African patients, or do they misclassify tumors in this population?
+    rationale: >-
+      207 of 212 cases are recorded as Black or African American, making this the only
+      cohort in this corpus where a non-white group constitutes more than half the
+      participants. Expression and methylation data allow subtype classifiers trained on
+      TCGA to be applied directly, and classifier failure is itself the finding.
+    required_modalities: [rna_seq, methylation]
+    required_fields:
+      - demographic.race
+    feasibility: needs_access
+    approx_n: 120
+    statistical_note: >-
+      Because the cohort is nearly homogeneous by race, this is a transfer-validation
+      design rather than a within-cohort disparities comparison; there is no internal
+      white comparison group.
+    topics: [health-disparities, classifier-validation]
+
+  - question: >-
+      Which molecular features are associated with performance status and with response
+      to chemoradiation in a setting where platinum-based chemoradiation is the dominant
+      treatment?
+    rationale: >-
+      ECOG performance status is informative on 98.6% of cases, which is exceptional -
+      most GDC projects record it for none. Treatment type is populated for every case,
+      therapeutic agents for 29.7% (cisplatin, paclitaxel and carboplatin are the
+      commonest), and a treatment outcome field is populated for 67.9%. Together these
+      support a response analysis that is impossible in most cohorts of this size.
+    required_modalities: [rna_seq, treatment, clinical]
+    required_fields:
+      - follow_ups.ecog_performance_status
+      - diagnoses.treatments.treatment_outcome
+      - diagnoses.treatments.therapeutic_agents
+    feasibility: needs_access
+    approx_n: 144
+    statistical_note: >-
+      Roughly 144 cases have a populated treatment outcome. Response categories are
+      unevenly distributed and the outcome field is one-to-many, so collapse to a binary
+      responder definition per case before modeling and pre-register that definition.
+    topics: [treatment-response, chemoradiation]
+
+  - question: >-
+      How do survival patterns in this cohort compare with cervical cancer cohorts from
+      high-income settings, given a median follow-up of only 13.2 months?
+    rationale: >-
+      Vital status is informative for 100% of cases and follow-up time is computable,
+      giving a usable overall survival endpoint. The short follow-up is itself
+      scientifically interesting because it reflects real-world attrition in the setting
+      where the cohort was recruited.
+    required_modalities: [clinical, outcome]
+    required_fields:
+      - demographic.vital_status
+      - diagnoses.days_to_last_follow_up
+    feasibility: direct
+    approx_n: 212
+    statistical_note: >-
+      Median follow-up is 13.2 months and the maximum is 32.7, so late events are not
+      observed. Report restricted mean survival time or landmark analyses rather than
+      median overall survival, and do not compare medians directly against cohorts with
+      five-year follow-up.
+    topics: [survival, global-oncology]
+
+  - question: >-
+      Can radiology and histopathology images from this cohort be used to build or
+      validate imaging models on a population that is absent from almost every public
+      imaging training set?
+    rationale: >-
+      Histopathology and radiology are both available for 211 of 212 cases, alongside the
+      molecular data. Imaging models trained largely on North American and European
+      cohorts have documented performance gaps on under-represented populations, and this
+      is one of the few resources that permits an external check.
+    required_modalities: [histopathology, radiology, rna_seq]
+    feasibility: needs_linkage
+    approx_n: 211
+    statistical_note: >-
+      Suitable for external validation rather than primary training; 211 cases is small
+      for training a deep model from scratch.
+    topics: [imaging, algorithmic-fairness]
+
+limitations:
+  - kind: missing_data
+    statement: >-
+      Tumor stage is not populated for any case in the GDC harmonized clinical records -
+      both AJCC pathologic stage and AJCC clinical stage are empty for all 212 cases.
+      Since stage is the dominant prognostic factor in cervical cancer, any survival model
+      built from these records alone is unadjusted for the single most important covariate.
+    severity: blocking
+    affected_analyses:
+      - Multivariable survival modeling
+      - Prognostic biomarker discovery
+      - Any comparison of outcomes against staged cohorts
+    mitigation: >-
+      The marker publication reports stage information, so it exists outside the
+      harmonized records. Obtain it from the publication's supplementary material or
+      through the dbGaP phenotype files before claiming any stage-adjusted result.
+
+  - kind: missing_data
+    statement: >-
+      HIV status is not available as a structured field, despite being the organizing
+      scientific rationale for the cohort. Neither CD4 count nor antiretroviral therapy
+      history appears in the harmonized clinical records.
+    severity: major
+    affected_analyses:
+      - Any HIV-stratified comparison
+      - Immune-context analyses
+    mitigation: >-
+      Request the full phenotype file through dbGaP. Do not assume HIV positivity for all
+      participants: the project name describes the study population, not a guarantee about
+      every case.
+
+  - kind: statistical_power
+    statement: >-
+      Median follow-up is 13.2 months with a maximum of 32.7, derivable for all 212
+      cases. Events accumulate over a much longer horizon in cervical cancer, so the
+      observed survival experience is heavily right-censored.
+    severity: major
+    affected_analyses:
+      - Median overall survival estimates
+      - Five-year survival comparisons
+    mitigation: >-
+      Use restricted mean survival time over a horizon the data support, or landmark
+      analysis. State the follow-up distribution explicitly in any comparison.
+
+  - kind: population_coverage
+    statement: >-
+      Ethnicity is recorded as unknown or not reported for 111 of 212 cases, and the
+      cohort is drawn from a single geographic setting. Findings describe Ugandan cervical
+      cancer patients and should not be generalised to Black populations elsewhere, whose
+      exposure and treatment contexts differ substantially.
+    severity: major
+    affected_analyses:
+      - Generalization to African-ancestry populations outside Uganda
+    mitigation: >-
+      Frame results as specific to this cohort and setting, and report the recruitment
+      context alongside any ancestry claim.
+
+  - kind: access_constraint
+    statement: >-
+      Of 7,160 files, 4,703 are controlled access. Sequence-level data including the whole
+      genome sequencing require an approved dbGaP data access request; only 2,457 files
+      can be downloaded without approval.
+    severity: major
+    affected_analyses:
+      - Any analysis requiring raw or aligned sequence data
+    mitigation: >-
+      Start the dbGaP request before planning the analysis, and check whether derived
+      open-access files answer the question first.
+
+inappropriate_uses:
+  - statement: Estimating cervical cancer incidence or population-level disease burden.
+    reason: >-
+      This is a convenience sample of patients presenting to participating centres, not a
+      population-based registry. It carries no denominator and no sampling frame.
+  - statement: Stage-adjusted prognostic modeling using only the GDC clinical records.
+    reason: >-
+      Stage is empty for all 212 cases in those records, so a model cannot adjust for it
+      no matter how it is specified.
+  - statement: Comparing HIV-positive and HIV-negative tumor biology within the cohort.
+    reason: >-
+      HIV status is not present as a structured variable in the harmonized records, so the
+      comparison cannot be constructed without obtaining additional controlled phenotype data.
+
+access_steps:
+  - order: 1
+    action: Read the marker publication first
+    detail: >-
+      The Nature Genetics paper describes the recruitment setting, HPV typing approach and
+      the clinical variables that exist outside the harmonized records. It will tell you
+      whether the variables your analysis needs are obtainable at all.
+    url: https://pubmed.ncbi.nlm.nih.gov/32747824/
+    est_time: 1 hour
+
+  - order: 2
+    action: Explore the open-access files without any approval
+    detail: >-
+      2,457 of 7,160 files are open. Derived expression, copy number and methylation
+      products are enough to scope the analysis and check that the cohort fits before you
+      invest in an access request.
+    url: https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-CC
+    est_time: 1-2 hours
+    cli_snippet: |
+      # Open-access file manifest for this project, no credentials required
+      curl -s 'https://api.gdc.cancer.gov/files' \
+        --get \
+        --data-urlencode 'filters={"op":"and","content":[
+          {"op":"in","content":{"field":"cases.project.project_id","value":["CGCI-HTMCP-CC"]}},
+          {"op":"in","content":{"field":"access","value":["open"]}}]}' \
+        --data-urlencode 'fields=file_id,file_name,data_category,data_type' \
+        --data-urlencode 'size=2000&format=TSV' > htmcp_cc_open_files.tsv
+
+  - order: 3
+    action: Submit a dbGaP data access request for the controlled tier
+    detail: >-
+      Needed for whole genome sequencing and any sequence-level analysis. You will need an
+      eRA Commons account and your institutional signing official. Request the full
+      phenotype file at the same time - that is where stage and HIV-related variables are
+      most likely to live.
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+
+  - order: 4
+    action: Download with the GDC client
+    detail: >-
+      Once approved, use the GDC Data Transfer Tool with your token. Do not put the token
+      on a command line or into a script that is committed anywhere.
+    url: https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
+    est_time: hours, depending on volume
+
+tags: [distinctive-population, treatment-response, global-oncology, hiv-associated]

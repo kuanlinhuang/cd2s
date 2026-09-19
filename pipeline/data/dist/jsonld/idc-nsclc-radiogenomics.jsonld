@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiogenomics",
+  "name": "NSCLC Radiogenomics",
+  "alternateName": [
+    "nsclc_radiogenomics"
+  ],
+  "description": "Radiogenomics needs the same patients measured both ways, and almost no public resource provides it. This collection does: 211 patients imaged with thin-section CT and whole-body PET/CT before surgical excision, with a subset carrying matched microarray expression data deposited separately in the Gene Expression Omnibus.\nThe link between the two is recorded in the collection description as prose, not as a structured cross-reference, which is why the pairing is easy to miss. We extract that accession automatically and surface it here. Everything is openly downloadable with no account.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiogenomics",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiogenomics",
+    "https://www.cancerimagingarchive.net/collections/",
+    "geo_series:GSE28827",
+    "doi:10.7937/K9/TCIA.2017.7hs46erv"
+  ],
+  "keywords": [
+    "Chest",
+    "Non-small Cell Lung Cancer",
+    "clinical",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "imaging-genomics",
+    "lung",
+    "multimodal",
+    "open-access",
+    "radiology",
+    "underexplored-candidate",
+    "wgs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiogenomics",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-nsclc-radiogenomics.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A radiogenomic dataset of non-small cell lung cancer",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/30325352/",
+      "datePublished": "2018"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": "2012-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)",
+    "Genomics (accompanying data, per IDC supporting_data)"
+  ]
+}

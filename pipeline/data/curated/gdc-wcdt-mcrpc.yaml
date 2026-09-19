@@ -1,0 +1,168 @@
+id: gdc-wcdt-mcrpc
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps, primary_publications]
+  open_questions:
+    - >-
+      The PNAS marker paper reports clinical outcomes for this cohort, but vital status is
+      "unknown" for all 101 cases in the GDC harmonized records. Confirm whether outcome
+      data are obtainable from the supplementary material or only under dbGaP terms.
+
+one_liner: >-
+  101 metastatic castration-resistant prostate cancers with whole genome and RNA
+  sequencing from metastatic biopsies - every case stage IV with documented progression,
+  and no usable vital status.
+
+summary: >-
+  The West Coast Dream Team cohort is one of the few public resources that sequences
+  metastatic castration-resistant prostate cancer tissue rather than primary tumor, which
+  is what makes it valuable: the biology that drives lethal prostate cancer is not well
+  represented in primary-tumor cohorts. All 101 cases carry whole genome sequencing with
+  copy number and structural variant calls, and 99 carry RNA sequencing.
+
+  The clinical annotation is unusual in shape. Disease state is recorded with complete
+  consistency - every case is AJCC stage IV, every case has progression or recurrence
+  recorded as "yes", and every case's last known disease status is distant metastatic
+  recurrence or progression. But vital status is "unknown" for all 101 cases, and no
+  treatment field is populated. The cohort tells you precisely where these patients were
+  in their disease course and nothing about what happened to them next.
+
+primary_publications:
+  - pmid: "31061129"
+    title: Genomic correlates of clinical outcome in advanced prostate cancer
+    journal: Proceedings of the National Academy of Sciences
+    year: 2019
+    url: https://pubmed.ncbi.nlm.nih.gov/31061129/
+
+useful_for:
+  - question: >-
+      What distinguishes the genome of metastatic castration-resistant prostate cancer
+      from primary prostate cancer?
+    rationale: >-
+      Whole genome sequencing on all 101 metastatic biopsies pairs naturally with
+      TCGA-PRAD's 500 primary tumors in the same repository under the same harmonization.
+      The contrast is the cohort's clearest use and does not depend on any outcome field.
+    required_modalities: [wgs, copy_number, structural_variant]
+    feasibility: needs_linkage
+    approx_n: 101
+    statistical_note: >-
+      The two cohorts differ in sequencing strategy and processing era as well as in
+      disease state, so treat platform as a confounder rather than assuming harmonization
+      removed it.
+    topics: [metastasis, prostate, genome-structure]
+    exemplar_pmid: "31061129"
+  - question: >-
+      Which transcriptional programs mark androgen receptor pathway independence and
+      neuroendocrine transdifferentiation in treatment-resistant disease?
+    rationale: >-
+      RNA sequencing on 99 metastatic biopsies is the right substrate for AR-signaling and
+      neuroendocrine scoring, and metastatic tissue is where these phenotypes actually occur.
+    required_modalities: [rna_seq]
+    feasibility: needs_access
+    approx_n: 99
+    statistical_note: >-
+      Biopsy site varies across the cohort and contributes substantially to expression
+      variance; include site as a covariate or stratify.
+    topics: [treatment-resistance, transcriptional-programs, prostate]
+  - question: >-
+      How do structural variants and genome rearrangement patterns differ between
+      metastatic sites?
+    rationale: >-
+      Structural variant calls exist for all 101 cases from whole genome rather than exome
+      data, which is what makes rearrangement analysis credible here.
+    required_modalities: [structural_variant, wgs]
+    feasibility: needs_access
+    approx_n: 101
+    topics: [genome-structure, metastasis]
+  - question: >-
+      Can expression or genomic features predict which metastatic biopsies come from
+      patients with the most aggressive disease trajectory?
+    rationale: >-
+      This is the question most people want the cohort for, and it is the one the
+      harmonized records cannot support. It is listed here to be explicit that it requires
+      outcome data obtained separately.
+    required_modalities: [rna_seq, wgs, outcome]
+    feasibility: needs_linkage
+    approx_n: 101
+    statistical_note: >-
+      Not answerable from the GDC records alone. Vital status is "unknown" for every case;
+      outcomes must come from the marker publication's supplement or a dbGaP phenotype file.
+    topics: [prognosis, prostate]
+
+limitations:
+  - kind: missing_data
+    statement: >-
+      Vital status is populated for all 101 cases and informative for none - every value is
+      "unknown". No overall survival endpoint exists in the harmonized records, despite a follow-up
+      time being derivable for 87 of 101 cases with a median of 95 months.
+    severity: blocking
+    affected_analyses: [Overall survival, Prognostic modeling, Outcome-anchored biomarker discovery]
+    mitigation: >-
+      Outcome data are analyzed in the PNAS marker paper. Obtain them from its supplementary
+      material or through dbGaP before planning any survival work.
+  - kind: treatment_context
+    statement: >-
+      No treatment field is populated: treatment type, therapeutic agents, treatment outcome
+      and line of therapy are all empty. These are castration-resistant patients, so every
+      one has had prior androgen deprivation and most will have had further systemic
+      therapy, but which therapy and in what order is not recorded here.
+    severity: blocking
+    affected_analyses: [Treatment-response analysis, Resistance mechanism attribution, Line-of-therapy stratification]
+    mitigation: >-
+      Do not attribute molecular features to specific treatments using these records. The
+      absence of treatment annotation in a treatment-defined cohort is the single most
+      important thing to know before selecting it.
+  - kind: statistical_power
+    statement: >-
+      101 cases limits subgroup analysis sharply. Any stratification by biopsy site,
+      molecular subtype or genomic alteration leaves groups in the low tens.
+    severity: major
+    affected_analyses: [Subgroup comparisons, Rare-variant association]
+    mitigation: Pre-specify a small number of hypotheses; treat subgroup results as exploratory.
+  - kind: population_coverage
+    statement: >-
+      86 of 101 cases are recorded as white and 5 as Black or African American, in a disease
+      with pronounced incidence and mortality disparities affecting Black men.
+    severity: major
+    affected_analyses: [Disparities research, Ancestry-stratified analysis]
+    mitigation: >-
+      Do not use this cohort to characterise metastatic prostate cancer biology in Black
+      patients; five cases cannot support it.
+  - kind: access_constraint
+    statement: 1,700 of 1,900 files are controlled access.
+    severity: major
+    affected_analyses: [Any sequence-level analysis]
+    mitigation: Budget several weeks for the dbGaP request.
+
+inappropriate_uses:
+  - statement: Survival analysis or prognostic biomarker discovery from the GDC records.
+    reason: Vital status is uninformative for all 101 cases.
+  - statement: Attributing resistance mechanisms to particular drugs.
+    reason: >-
+      No treatment is recorded for any case, so drug attribution would be invented rather
+      than observed.
+  - statement: Studying prostate cancer disparities.
+    reason: Five Black patients cannot support a disparities analysis.
+
+access_steps:
+  - order: 1
+    action: Read the PNAS marker paper for the clinical annotation
+    detail: >-
+      It carries the outcome and treatment context that the harmonized records lack. Decide
+      from it whether your question is viable.
+    url: https://pubmed.ncbi.nlm.nih.gov/31061129/
+    est_time: 1-2 hours
+  - order: 2
+    action: Scope with the 200 open-access files
+    url: https://portal.gdc.cancer.gov/projects/WCDT-MCRPC
+    est_time: 1 hour
+  - order: 3
+    action: Submit a dbGaP data access request
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+
+tags: [metastatic, treatment-resistant, prostate, cautionary]

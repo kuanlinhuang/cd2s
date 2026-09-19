@@ -1,0 +1,456 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-brca",
+  "name": "Breast Invasive Carcinoma",
+  "alternateName": [
+    "tcga_brca"
+  ],
+  "description": "TCGA breast is the most heavily analyzed dataset indexed here: 2,463 articles reference it in their methods or results. Its continuing value is less about novelty than about being the common denominator - a cohort so widely used that a new method which cannot reproduce known findings on it is not yet credible.\nTwo things about it are less widely appreciated. First, its radiology and pathology imaging lives in the Imaging Data Commons rather than the GDC, so the same 1,098 patients carry twelve measurement types once the repositories are joined, and most analyses use only the genomic subset. Second, its treatment annotation is better than its reputation: therapeutic agents are recorded for 71% of cases and a treatment outcome for 64%, which supports response questions people generally assume require a trial cohort.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-brca",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/TCGA-BRCA",
+    "gdc_program:TCGA",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000178",
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=tcga_brca",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/K9/TCIA.2016.AB2NAZRP",
+    "zenodo:10.5281/zenodo.12689962"
+  ],
+  "keywords": [
+    "Adenomas and Adenocarcinomas",
+    "Adnexal and Skin Appendage Neoplasms",
+    "Basal Cell Neoplasms",
+    "Breast",
+    "Complex Epithelial Neoplasms",
+    "Cystic, Mucinous and Serous Neoplasms",
+    "Ductal and Lobular Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Fibroepithelial Neoplasms",
+    "Squamous Cell Neoplasms",
+    "atac seq",
+    "breast",
+    "clinical",
+    "copy number",
+    "gdc",
+    "has-derived-annotations",
+    "histopathology",
+    "idc",
+    "imaging",
+    "imaging-genomics",
+    "imaging-pathology",
+    "methylation",
+    "mirna",
+    "multimodal",
+    "protein array",
+    "radiology",
+    "reference-cohort",
+    "released",
+    "rna seq",
+    "structural variant",
+    "tcga",
+    "treatment-response",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "TCGA"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/TCGA-BRCA",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-brca.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Comprehensive molecular portraits of human breast tumors",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/23000897/",
+      "datePublished": "2012"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA264032",
+      "name": "The joint WCM-NYGC Center for Functional and Clinical Interpretation of Tumor Profiles",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA264032"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R37CA229861",
+      "name": "Cell-of-Origin Footprints of Passenger Mutations in Human Lung Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA229861"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA097096",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA097096"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA097096",
+      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA097096"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA247773",
+      "name": "Project 2: TMEJ Regulation in Cancer and Treatment Resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA247773"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA240139",
+      "name": "Behavioral and Community-Based Research Shared Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA240139"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K12CA226330",
+      "name": "UM Calabresi Clinical Oncology Research Career Development Award",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA226330"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA233465",
+      "name": "Community Outreach Core (COC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA233465"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA163071",
+      "name": "Research Education Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA163071"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA163068",
+      "name": "Shared Resource Core: Quantitative Sciences Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA163068"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA284732",
+      "name": "Elucidating the role of transcriptomics in driving ethnicity and ancestry-related disparities in colorectal cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA284732"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA248931",
+      "name": "Variation in tumor-associated immune profiles and colorectal cancer outcomes",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA248931"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA238087",
+      "name": "Biological determinants of colorectal cancer outcomes in Latinos of diverse\u00fdancestral origins",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA238087"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA155101",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155101"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA285275",
+      "name": "Developmental Research Project",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA285275"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA076292",
+      "name": "Administrative Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA076292"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA014089",
+      "name": "Leadership, Planning and Evaluation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA014089"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P20CA252733",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P20CA252733"
+    }
+  ],
+  "dateModified": "2026-09-18T02:35:47.179829+00:00",
+  "datePublished": "2011-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 99.9% of cases, informative for 99.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 99.9% of cases, informative for 91.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 99.9% of cases, informative for 84.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 99.9% of cases, informative for 99.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 63.5% of cases, informative for 63.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 98.9% of cases, informative for 98.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 0.1% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 99.9% of cases, informative for 99.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 99.9% of cases, informative for 99.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.1% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.1% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 99.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 70.7% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 64.4% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.5% of cases, informative for 0.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 97.4% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 8.7% of cases, informative for 8.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.1% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "SNP genotyping array (copy number, germline)",
+    "Clinical",
+    "DICOM medical imaging",
+    "DNA methylation array",
+    "Bulk RNA sequencing",
+    "microRNA sequencing",
+    "Whole exome sequencing",
+    "Whole-slide diagnostic images",
+    "Whole genome sequencing",
+    "Somatic Structural Variation",
+    "Reverse phase protein array",
+    "ATAC sequencing (chromatin accessibility)"
+  ]
+}

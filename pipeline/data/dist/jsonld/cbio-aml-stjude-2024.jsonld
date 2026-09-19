@@ -1,0 +1,120 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-aml-stjude-2024",
+  "name": "Pediatric Acute Myeloid Leukemia (St. Jude, Nat Genet 2024)",
+  "alternateName": [
+    "aml_stjude_2024"
+  ],
+  "description": "Molecular profiling of 887 pediatric acute myeloid leukemia cases and their matched normals using RNA-Seq, WES, and WGS.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-aml-stjude-2024",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=aml_stjude_2024"
+  ],
+  "keywords": [
+    "Acute Myeloid Leukemia",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "mnm",
+    "nci-funded",
+    "rna seq",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=aml_stjude_2024",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-aml-stjude-2024.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/38212634/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA243124",
+      "name": "Experimental and preclinical modeling of NUP98-rearranged acute leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA243124"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016058",
+      "name": "Shared Resource 10: Pharmacoanalytical Shared Resource (PhASR)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016058"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA256489",
+      "name": "Co-targeting BET Bromodomain Proteins and Aberrant Signaling in AML.",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA256489"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "RNA sequencing expression",
+    "Structural variants / fusions"
+  ]
+}

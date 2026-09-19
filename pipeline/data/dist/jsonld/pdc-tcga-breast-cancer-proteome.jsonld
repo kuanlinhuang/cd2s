@@ -1,0 +1,222 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-breast-cancer-proteome",
+  "name": "TCGA Breast Cancer Proteome",
+  "alternateName": [
+    "TCGA Breast Cancer Proteome"
+  ],
+  "description": "TCGA Breast Cancer Proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-breast-cancer-proteome",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000173"
+  ],
+  "keywords": [
+    "pdc",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000173",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-breast-cancer-proteome.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
+      "identifier": "https://doi.org/10.1038/s41586-022-04499-2",
+      "datePublished": "2022"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "R21CA274620",
+      "name": "Predicting actionable cancer vulnerabilities enabled by mutant-directed protein-protein interactions",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA274620"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA258857",
+      "name": "Targeting posttranslational modifications of CD73 in TNBCs",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA258857"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA258765",
+      "name": "Targeting posttranslational modifications of B7-H4 in carcinogenesis and therapy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA258765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA250110",
+      "name": "Targeting Posttranslational Modifications in Breast Carcinogenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA250110"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA250101",
+      "name": "The distinct role of cysteinyl leukotriene receptor for myeloid-derived suppressive cells",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA250101"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA222963",
+      "name": "WEE1 inhibition and tumor immunity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA222963"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA202963",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA202963"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA202948",
+      "name": "Interplay between ER and TGF-b in carcinogenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA202948"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA217691",
+      "name": "Project 3: Targeting Bax signaling to overcome treatment resistance in NSCLC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA217691"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA138292",
+      "name": "Clinical Protocol and Data Management",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA138292"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA060553",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA060553"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA252713",
+      "name": "Canine MHC-I genotyping and tumor specific neoantigen determination",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA252713"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA274499",
+      "name": "Systems Analysis of Stress-adapted Cancer Organelles (SASCO) Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA274499"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA265089",
+      "name": "Definition and perturbation of cell-regulatory heterogeneities in solid tumors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA265089"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA044579",
+      "name": "BSR - SR Component",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA044579"
+    }
+  ],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2022-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Proteome mass spectrometry (iTRAQ4 / DDA)"
+  ]
+}

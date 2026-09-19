@@ -1,0 +1,124 @@
+id: htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - >-
+      Per-atlas case counts are not exposed in the HTAN portal metadata we ingest, only file
+      counts. Obtain participant numbers from Synapse before designing a powered analysis.
+one_liner: >-
+  Serial biopsies from metastatic breast cancer patients measured nine ways including
+  electron microscopy, Visium spatial transcriptomics, multiplexed imaging and single-cell
+  ATAC - 120,000 files, and the only electron microscopy in the corpus.
+summary: >-
+  This atlas follows metastatic breast cancer patients through treatment with serial
+  biopsies, and measures each one across an unusually wide span: multiplexed tissue imaging,
+  spatial transcriptomics, single-cell RNA and ATAC sequencing, bulk RNA and DNA, protein
+  arrays and electron microscopy. It is the largest HTAN atlas by file count at 120,274
+  files and the only dataset indexed here carrying electron microscopy.
+
+  The serial design is what makes it scientifically distinctive. Most spatial resources
+  capture one timepoint; this one captures the same patient before, during and after therapy,
+  which is the only way to observe how spatial organization changes as resistance develops.
+  Therapy and follow-up records are both present as HTAN clinical components.
+useful_for:
+  - question: >-
+      How does the spatial organization of a metastatic tumor change as it acquires
+      resistance to therapy?
+    rationale: >-
+      Serial biopsies with multiplexed imaging and spatial transcriptomics on the same
+      patients across treatment, with therapy and follow-up clinical components present.
+      This longitudinal spatial design is essentially unique in public data.
+    required_modalities: [spatial_proteomics, spatial_transcriptomics, treatment]
+    feasibility: needs_access
+    statistical_note: >-
+      Patient numbers are small by design - deep serial sampling trades breadth for depth.
+      Treat this as a case-series design with within-patient comparison, not a cohort study.
+    topics: [treatment-resistance, spatial-biology, metastasis, longitudinal]
+  - question: >-
+      Do single-cell chromatin accessibility changes precede the transcriptional changes that
+      accompany resistance?
+    rationale: >-
+      Single-cell ATAC and single-cell RNA on the same serial samples allow regulatory and
+      transcriptional state to be ordered in time within a patient.
+    required_modalities: [scatac_seq, scrna_seq]
+    feasibility: needs_access
+    topics: [epigenetics, treatment-resistance]
+  - question: >-
+      Can ultrastructural features from electron microscopy be related to molecular state
+      measured on the same tissue?
+    rationale: >-
+      Electron microscopy appears in no other dataset in this corpus. Linking ultrastructure
+      to spatial and single-cell molecular data on the same specimens is possible only here.
+    required_modalities: [electron_microscopy, spatial_proteomics]
+    feasibility: needs_access
+    statistical_note: Descriptive and mechanistic rather than statistically powered.
+    topics: [ultrastructure, scarce-measurement, spatial-biology]
+  - question: >-
+      How do multiplexed imaging and spatial transcriptomics agree when applied to the same
+      tissue section?
+    rationale: >-
+      Both assays are present on shared specimens, which makes cross-platform concordance
+      measurable - a methodological question the spatial field needs answered and rarely can.
+    required_modalities: [spatial_proteomics, spatial_transcriptomics]
+    feasibility: needs_access
+    topics: [methods-benchmarking, spatial-biology]
+limitations:
+  - kind: statistical_power
+    statement: >-
+      Deep serial profiling means few patients. File counts are large but participant numbers
+      are small, and the portal metadata we ingest does not expose them.
+    severity: blocking
+    affected_analyses: [Cohort-level association, Biomarker discovery, Any powered comparison]
+    mitigation: >-
+      Design within-patient longitudinal comparisons. Obtain participant counts from Synapse
+      before committing to a statistical plan.
+  - kind: access_constraint
+    statement: >-
+      Access is split: level 1 and 2 sequencing data are controlled through dbGaP, while
+      level 3 and 4 derived data and most imaging are available from Synapse after
+      registration and accepting the HTAN data use terms.
+    severity: major
+    affected_analyses: [Raw sequence analysis]
+    mitigation: >-
+      Start with the Synapse-accessible derived tier, which covers most spatial and imaging
+      analyses, and request dbGaP access only if raw sequence is required.
+  - kind: harmonization
+    statement: >-
+      Nine modalities across four data levels do not cover an identical specimen set, and
+      assay coverage varies by biopsy.
+    severity: major
+    affected_analyses: [Complete-case multimodal integration]
+    mitigation: Build the specimen-level intersection from the Synapse manifests before planning.
+  - kind: annotation_quality
+    statement: >-
+      Spatial and imaging data require substantial processing expertise; file counts in the
+      hundreds of thousands are not directly analysable without a pipeline.
+    severity: major
+    affected_analyses: [Any analysis without spatial informatics capacity]
+    mitigation: Use the level 3 and 4 derived products, which are analysis-ready.
+inappropriate_uses:
+  - statement: Population-level or cohort-level statistical inference.
+    reason: The design is deep serial sampling of few patients, not a representative cohort.
+  - statement: Assuming all nine modalities are available for every specimen.
+    reason: Coverage varies by biopsy and by level; the intersection is much smaller than the union.
+access_steps:
+  - order: 1
+    action: Explore the atlas in the HTAN Data Portal
+    url: https://humantumoratlas.org/explore
+    est_time: 1 hour
+  - order: 2
+    action: Register with Synapse and accept the HTAN data use terms
+    detail: This unlocks the level 3 and 4 derived data and most imaging without a formal data access request.
+    url: https://humantumoratlas.org/data-access
+    requires: [Synapse account]
+    est_time: 1 day
+  - order: 3
+    action: Request dbGaP access only if you need level 1 or 2 sequence data
+    url: https://humantumoratlas.org/data-access
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [spatial, longitudinal, serial-biopsy, scarce-modality, electron-microscopy, treatment-resistance]

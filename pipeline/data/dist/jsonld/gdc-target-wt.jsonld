@@ -1,0 +1,397 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-wt",
+  "name": "High-Risk Wilms Tumor",
+  "alternateName": [
+    "TARGET-WT"
+  ],
+  "description": "High-Risk Wilms Tumor",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-wt",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/TARGET-WT",
+    "gdc_program:TARGET",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000471"
+  ],
+  "keywords": [
+    "Complex Mixed and Stromal Neoplasms",
+    "Kidney",
+    "clinical",
+    "gdc",
+    "methylation",
+    "mirna",
+    "released",
+    "rna seq",
+    "structural variant",
+    "target",
+    "targeted dna",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "TARGET"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/TARGET-WT",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-wt.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Cyclooxygenase-1 and -2 enzymes differentially regulate the brain upstream NF-kappa B pathway and downstream enzymes involved in prostaglandin biosynthesis.",
+      "identifier": "https://doi.org/10.1111/j.1471-4159.2006.03926.x",
+      "datePublished": "2006"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098543",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098543"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA114766",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA114766"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180899",
+      "name": "Children's Oncology Group Statistics and Data Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180899"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180886",
+      "name": "COG NCTN Network Group Operations Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180886"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098413",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098413"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA088131",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA088131"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA079447",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA079447"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA060553",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA060553"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016058",
+      "name": "Shared Resource 10: Pharmacoanalytical Shared Resource (PhASR)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016058"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA042326",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA042326"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196173",
+      "name": "COG U24 Funding 2026-2027",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196173"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA258406",
+      "name": "The Integrative Genomics Viewer (IGV) for Cancer Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA258406"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA180922",
+      "name": "Trinity: Transcriptome assembly for genetic and functional analysis of cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA180922"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA211461",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA211461"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA273527",
+      "name": "Pathogenic role of human papillomavirus (HPV) DNA Integration and clonal expansion in cervical tumorigenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA273527"
+    }
+  ],
+  "dateModified": "2026-09-18T02:35:56.409210+00:00",
+  "datePublished": "2006-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 99.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 91.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 70.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 99.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 17.3% of cases, informative for 16.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 99.8% of cases, informative for 99.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "microRNA sequencing",
+    "Whole genome sequencing",
+    "Bulk RNA sequencing",
+    "Whole exome sequencing",
+    "Targeted DNA panel sequencing",
+    "DNA methylation array",
+    "Clinical",
+    "Structural Variation"
+  ]
+}

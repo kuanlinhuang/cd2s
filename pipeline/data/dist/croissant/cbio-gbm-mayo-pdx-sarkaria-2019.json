@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-gbm-mayo-pdx-sarkaria-2019",
+  "alternateName": "Brain Tumor PDXs (Mayo Clinic, Clin Cancer Res 2020)",
+  "description": "WES on a total of 106 PDXs and 80 PDXs have the matched germline (blood) samples sequenced. A total of 66 PDXs have RNASeq available",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-gbm-mayo-pdx-sarkaria-2019",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

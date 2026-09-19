@@ -1,0 +1,140 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-gbm-mayo-pdx-sarkaria-2019",
+  "name": "Brain Tumor PDXs (Mayo Clinic, Clin Cancer Res 2020)",
+  "alternateName": [
+    "gbm_mayo_pdx_sarkaria_2019"
+  ],
+  "description": "WES on a total of 106 PDXs and 80 PDXs have the matched germline (blood) samples sequenced. A total of 66 PDXs have RNASeq available",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-gbm-mayo-pdx-sarkaria-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=gbm_mayo_pdx_sarkaria_2019"
+  ],
+  "keywords": [
+    "Diffuse Glioma",
+    "brain",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "rna seq",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=gbm_mayo_pdx_sarkaria_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-gbm-mayo-pdx-sarkaria-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/31852831/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA227954",
+      "name": "Pre-Clinical Novel Radiosensitizer Evaluation Program for Brain Tumors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA227954"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA217858",
+      "name": "Systematic Identification and Pharmacological Targeting of Tumor Dependencies for Precision Cancer Medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA217858"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197745",
+      "name": "Predicting Cancer Cell Response to Endogenous and Exogenous Perturbations at the Single Cell Level",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197745"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA230712",
+      "name": "(PQ3) UNDERSTANDING THE INTERACTIONS BETWEEN GERMLINE AND SOMATIC ALTERATIONS in the PATHOGENESIS OF GLIOMAS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA230712"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA184320",
+      "name": "(PQD3) Mechanisms of prolonged initial disease-free survival in glioblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA184320"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA108961",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA108961"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "RNA sequencing expression"
+  ]
+}

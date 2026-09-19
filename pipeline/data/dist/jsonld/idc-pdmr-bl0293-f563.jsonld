@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-bl0293-f563",
+  "name": "PDMR-BL0293-F563",
+  "alternateName": [
+    "pdmr_bl0293_f563"
+  ],
+  "description": "We identified and characterized a patient-derived xenograft model with metastatic potential, bladder xenograft BL0293-F563. In this study we performed a detailed imaging characterization of this model, which develops spontaneous liver and bone metastases. Please see the PDMR-BL0293-F563 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-bl0293-f563",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pdmr_bl0293_f563",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/tcia.2019.b6u7wmqw"
+  ],
+  "keywords": [
+    "Bladder",
+    "Bladder Cancer",
+    "clinical",
+    "idc",
+    "imaging",
+    "non-human",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pdmr_bl0293_f563",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-pdmr-bl0293-f563.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-aml-study",
+  "name": "CPTAC AML Study",
+  "alternateName": [
+    "CPTAC AML Study - Acetylome",
+    "CPTAC AML Study - Glycoproteome",
+    "CPTAC AML Study - Lipidome",
+    "CPTAC AML Study - Metabolome",
+    "CPTAC AML Study - Phosphoproteome",
+    "CPTAC AML Study - Proteome"
+  ],
+  "description": "Lipidomics is the scarcest measurement type in the entire corpus indexed here: three studies carry it, all within CPTAC, and this is the largest. Combined with metabolomics on the same 98 patients and four proteomic layers on all 164, it supports metabolic questions in leukaemia that cannot be posed anywhere else with measured rather than inferred data.\nAML is a disease where metabolic state has clear therapeutic relevance, and where measured lipid and metabolite data on primary patient samples are close to unobtainable. The barrier to reuse here is discoverability rather than access: everything is open, and nothing about the PDC catalog entry tells a metabolism researcher that this cohort exists.",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-aml-study",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000558",
+    "https://pdc.cancer.gov/pdc/study/PDC000560",
+    "https://pdc.cancer.gov/pdc/study/PDC000562",
+    "https://pdc.cancer.gov/pdc/study/PDC000561",
+    "https://pdc.cancer.gov/pdc/study/PDC000556",
+    "https://pdc.cancer.gov/pdc/study/PDC000554"
+  ],
+  "keywords": [
+    "acetylome",
+    "acetylproteome",
+    "glycoproteome",
+    "leukaemia",
+    "lipidome",
+    "lipidomics",
+    "metabolome",
+    "metabolomics",
+    "open-access",
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome",
+    "rare-modality",
+    "scarce-modality",
+    "underexplored-candidate"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000558",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-aml-study.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Acetylome mass spectrometry (TMT18 / DDA)",
+    "Glycoproteome mass spectrometry (TMT18 / DDA)",
+    "Lipidome mass spectrometry (Label Free / DDA)",
+    "Metabolome mass spectrometry (Label Free / DDA)",
+    "Phosphoproteome mass spectrometry (TMT18 / DDA)",
+    "Proteome mass spectrometry (TMT18 / DDA)"
+  ]
+}

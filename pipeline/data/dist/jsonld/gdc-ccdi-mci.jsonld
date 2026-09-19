@@ -1,0 +1,334 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-ccdi-mci",
+  "name": "Molecular Characterization Initiative (MCI)",
+  "alternateName": [
+    "ccdi_mci"
+  ],
+  "description": "The Molecular Characterization Initiative (MCI) is a component of the National Cancer Institute\u2019s (NCI) Childhood Cancer Data Initiative (CCDI). It offers state-of-the-art molecular testing at no cost to newly diagnosed children, adolescents, and young adults (AYAs) with central nervous system (CNS) tumors, soft tissue sarcomas (STS), certain rare childhood cancers (RAR), and certain neuroblastomas (NBL) treated at a Children\u2019s Oncology Group (COG)\u2013affiliated hospital. The goal of MCI is to enhance the understanding of genetic factors in pediatric cancers and to provide timely, clinically relevant findings to doctors and families to aid in treatment decisions and determine eligibility for certain planned COG clinical trials. Please see the DICOM converted whole slide hematoxylin and eosin stained images from the Molecular Characterization Initiative of the National Cancer Institute's Childhood Cancer Data Initiative information page to learn more about the images and any supporting metadata for this collection, and to learn about attribution/citation requirements.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-ccdi-mci",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/CCDI-MCI",
+    "gdc_program:CCDI",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002790",
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ccdi_mci",
+    "https://www.cancerimagingarchive.net/collections/",
+    "zenodo:10.5281/zenodo.11099086"
+  ],
+  "keywords": [
+    "Accessory sinuses",
+    "Acinar Cell Neoplasms",
+    "Adenomas and Adenocarcinomas",
+    "Adrenal gland",
+    "Base of tongue",
+    "Bladder",
+    "Bones, joints and articular cartilage of limbs",
+    "Bones, joints and articular cartilage of other and unspecified sites",
+    "Brain",
+    "Breast",
+    "Bronchus and lung",
+    "Cervix uteri",
+    "Colon",
+    "Connective, subcutaneous and other soft tissues",
+    "Cystic, Mucinous and Serous Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Esophagus",
+    "Eye and adnexa",
+    "Gliomas",
+    "Granular Cell Tumors and Alveolar Soft Part Sarcomas",
+    "Heart, mediastinum, and pleura",
+    "Larynx",
+    "Lip",
+    "Lymph nodes",
+    "Malignant Lymphomas, NOS or Diffuse",
+    "Meninges",
+    "Meningiomas",
+    "Nasal cavity and middle ear",
+    "Nasopharynx",
+    "Neoplasms, NOS",
+    "Nevi and Melanomas",
+    "Odontogenic Tumors",
+    "Oropharynx",
+    "Other and ill-defined digestive organs",
+    "Other and ill-defined sites",
+    "Other and ill-defined sites in lip, oral cavity and pharynx",
+    "Other and ill-defined sites within respiratory system and intrathoracic organs",
+    "Other and unspecified female genital organs",
+    "Other and unspecified male genital organs",
+    "Other and unspecified parts of mouth",
+    "Other and unspecified urinary organs",
+    "Other endocrine glands and related structures",
+    "Ovary",
+    "Palate",
+    "Pancreas",
+    "Peripheral nerves and autonomic nervous system",
+    "Prostate gland",
+    "Rectosigmoid junction",
+    "Rectum",
+    "Renal pelvis",
+    "Retroperitoneum and peritoneum",
+    "Skin",
+    "Small intestine",
+    "Soft Tissue Tumors and Sarcomas, NOS",
+    "Specialized Gonadal Neoplasms",
+    "Spinal cord, cranial nerves, and other parts of central nervous system",
+    "Stomach",
+    "Testis",
+    "Thymic Epithelial Neoplasms",
+    "Thymus",
+    "Thyroid gland",
+    "Unknown",
+    "Vagina",
+    "Various",
+    "ccdi",
+    "gdc",
+    "idc",
+    "imaging",
+    "methylation",
+    "radiology",
+    "released",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "CCDI"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/CCDI-MCI",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-ccdi-mci.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The Childhood Cancer Data Initiative: Using the Power of Data to Learn From and Improve Outcomes for Every Child and Young Adult With Pediatric Cancer.",
+      "identifier": "https://doi.org/10.1200/jco.22.02208",
+      "datePublished": "2023"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "T32CA060441",
+      "name": "Lab Research Training in Pediatric Oncology-Hematology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA060441"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R21CA267515",
+      "name": "Preventing Therapeutic Resistance in RAS-mutated Pediatric Cancers",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA267515"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA255232",
+      "name": "Isoform-specific signaling as a determinant of RAS-driven oncogenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA255232"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA223495",
+      "name": "A HTS Approach to Discover Guanine Nucleotide-Competitive Inhibitors of Oncogenic KRAS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA223495"
+    }
+  ],
+  "dateModified": "2026-09-18T02:32:32.918968+00:00",
+  "datePublished": "2026-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 70.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 18.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 26.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 95.3% of cases, informative for 93.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 95.3% of cases, informative for 94.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 95.3% of cases, informative for 95.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Whole exome sequencing",
+    "DNA methylation array"
+  ]
+}

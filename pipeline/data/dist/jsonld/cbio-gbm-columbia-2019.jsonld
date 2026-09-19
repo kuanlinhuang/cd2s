@@ -1,0 +1,129 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-gbm-columbia-2019",
+  "name": "Glioblastoma (Columbia, Nat Med. 2019)",
+  "alternateName": [
+    "gbm_columbia_2019"
+  ],
+  "description": "Whole-exome sequencing of 32 out of 42 glioblastomas patients with matched normals.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-gbm-columbia-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=gbm_columbia_2019"
+  ],
+  "keywords": [
+    "Diffuse Glioma",
+    "brain",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "targeted dna",
+    "treatment",
+    "treatment-annotated"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=gbm_columbia_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-gbm-columbia-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/30742119/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA193313",
+      "name": "Topology of Cancer Evolution and Heterogeneity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA193313"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA185486",
+      "name": "(PQB5) Reconstruction of Evolutionary Networks using Cross-Sectional Genomic Data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA185486"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA179044",
+      "name": "Identification and modeling of driver genetic modules in glioblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA179044"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA221747",
+      "name": "A Phase 1 Adaptive Dose Escalation Study of Mycophenolate Mofetil in Combination with Temozolomide for Patients with Newly Diagnosed Glioblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA221747"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA060553",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA060553"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Structured treatment records"
+  ]
+}

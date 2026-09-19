@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-htan-hms",
+  "name": "HTAN-HMS",
+  "alternateName": [
+    "htan_hms"
+  ],
+  "description": "We are constructing a multi-dimensional atlas of pre-melanoma focused on understanding genetic and epigenetic events that transform melanocytes into invasive tumors. Melanoma is a cancer of increasing prevalence that is curable with minor surgery if detected early but life-threatening when it metastasizes. Melanomas metastasize when still small, making early detection essential but challenging. Our atlas will delineate the precise sequence of events leading up to pre-melanoma through detailed spatial analysis of cell-autonomous events such as oncogene mutation and non-autonomous events such as escape from immune surveillance. The atlas is based on highly-multiplexed tissue imaging and single cell sequencing and focused on samples in which the full sequence of events from atypia to invasive melanoma can be visualized in a single specimen. The atlas will serve as a publicly accessible resource for research scientists, physicians, and patients and improve our ability to (i) highlight lesions likely to progress to cancer, (ii) identify high-risk patients to inform decisions on surgery, (iii) identify low-risk patients to reduce unnecessary procedures, (iv) design improved procedures for routine screening of all individuals, and (v) inform treatment options when surgery is insufficient. Complementary studies with similar goals (but not supported by HTAN) are studying later stage melanomas. Please see the DICOM converted Slide Microscopy images for the HTAN-HMS collection information page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-htan-hms",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=htan_hms",
+    "https://www.cancerimagingarchive.net/collections/",
+    "zenodo:10.5281/zenodo.12666872"
+  ],
+  "keywords": [
+    "Adenocarcinoma",
+    "Colon",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=htan_hms",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-htan-hms.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-pancreas-ct",
+  "name": "Pancreas-CT",
+  "alternateName": [
+    "pancreas_ct"
+  ],
+  "description": "The National Institutes of Health Clinical Center performed 82 abdominal contrast enhanced 3D CT scans (~70 seconds after intravenous contrast injection in portal-venous) from 53 male and 27 female subjects. Seventeen of the subjects are healthy kidney donors scanned prior to nephrectomy. The remaining 65 patients were selected by a radiologist from patients who neither had major abdominal pathologies nor pancreatic cancer lesions. A medical student manually performed slice-by-slice segmentations of the pancreas as ground-truth and these were verified/modified by an experienced radiologist. Please see the Pancreas-CT wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pancreas-ct",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pancreas_ct",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/K9/TCIA.2016.tNB1kqBU"
+  ],
+  "keywords": [
+    "Healthy Controls (non-cancer)",
+    "Pancreas",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pancreas_ct",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-pancreas-ct.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

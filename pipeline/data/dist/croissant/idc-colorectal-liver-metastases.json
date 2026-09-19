@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-colorectal-liver-metastases",
+  "alternateName": "Colorectal-Liver-Metastases",
+  "description": "This collection consists of DICOM images and DICOM Segmentation Objects (DSOs) for 197 patients with Colorectal Liver Metastases (CRLM). The collection consists of a large, single-institution consecutive series of patients that underwent resection of CRLM and matched preoperative computed tomography (CT) scans for quantitative image analysis. Inclusion criteria were (a) pathologically confirmed resected CRLM, (b) available data from pathologic analysis of the underlying non-tumoral liver parenchyma and hepatic tumor, (c) available preoperative conventional portal venous contrast-enhanced multi-detector computed tomography (MDCT) performed within 6 weeks of hepatic resection. Patients with 90-day mortality or that had less than 24 months of follow-up were excluded. Please see the Preoperative CT and Recurrence for Patients Undergoing Resection of Colorectal Liver Metastases (Colorectal Liver Metastases) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-colorectal-liver-metastases",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Colorectal-Liver-Metastases",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

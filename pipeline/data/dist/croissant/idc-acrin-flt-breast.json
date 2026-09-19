@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-acrin-flt-breast",
+  "alternateName": "ACRIN-FLT-Breast",
+  "description": "ACRIN 6688, a 18F -fluorothymidine (FLT) imaging study using positron emission tomography (PET), was designed to evaluate the relationship between 18F FLT uptake parameters and pathologic complete response to neoadjuvant therapy of the primary tumor in patients with locally advanced breast cancer. Participant Eligibility and Enrollment: Criteria for inclusion were patients with pathologically confirmed breast cancer and determined to be a candidate for primary systemic (neoadjuvant) therapy and for whom surgical resection of residual primary tumor following completion of neoadjuvant therapy is planned. Please see the ACRIN-FLT-Breast wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-acrin-flt-breast",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "ACRIN-FLT-Breast",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

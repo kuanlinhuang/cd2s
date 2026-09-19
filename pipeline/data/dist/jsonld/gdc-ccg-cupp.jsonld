@@ -1,0 +1,242 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-ccg-cupp",
+  "name": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
+  "alternateName": [
+    "CCG-CUPP"
+  ],
+  "description": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-ccg-cupp",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/CCG-CUPP",
+    "gdc_program:CCG",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001801"
+  ],
+  "keywords": [
+    "Adenomas and Adenocarcinomas",
+    "Adnexal and Skin Appendage Neoplasms",
+    "Complex Epithelial Neoplasms",
+    "Cystic, Mucinous and Serous Neoplasms",
+    "Ductal and Lobular Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Germ Cell Neoplasms",
+    "Myomatous Neoplasms",
+    "Neoplasms, NOS",
+    "Soft Tissue Tumors and Sarcomas, NOS",
+    "Squamous Cell Neoplasms",
+    "Transitional Cell Papillomas and Carcinomas",
+    "Unknown",
+    "ccg",
+    "clinical",
+    "copy number",
+    "gdc",
+    "histopathology",
+    "methylation",
+    "mirna",
+    "released",
+    "rna seq",
+    "structural variant",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "CCG"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/CCG-CUPP",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-ccg-cupp.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:41.775137+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 97.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 97.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 85.3% of cases, informative for 83.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 18.8% of cases, informative for 18.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 43.0% of cases, informative for 14.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 16.2% of cases, informative for 14.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 81.2% of cases, informative for 29.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 100.0% of cases, informative for 77.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 18.8% of cases, informative for 18.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 14.0% of cases, informative for 10.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 18.8% of cases, informative for 14.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 8.8% of cases, informative for 8.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 15.8% of cases, informative for 15.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 18.8% of cases, informative for 18.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Whole exome sequencing",
+    "Whole genome sequencing",
+    "Bulk RNA sequencing",
+    "microRNA sequencing",
+    "DNA methylation array",
+    "Whole-slide tissue images",
+    "Clinical",
+    "Copy Number Variation",
+    "Somatic Structural Variation"
+  ]
+}

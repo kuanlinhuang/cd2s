@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-the-lung-pre-cancer-atlas",
+  "name": "The Lung Pre-Cancer Atlas",
+  "alternateName": [
+    "HTA3"
+  ],
+  "description": "The Lung Pre-Cancer Atlas",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-the-lung-pre-cancer-atlas",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA3%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn39147270",
+    "https://www.synapse.org/#!Synapse:syn39147409",
+    "https://www.synapse.org/#!Synapse:syn39147740",
+    "https://www.synapse.org/#!Synapse:syn39147967",
+    "https://www.synapse.org/#!Synapse:syn39148008",
+    "https://www.synapse.org/#!Synapse:syn39148043",
+    "https://www.synapse.org/#!Synapse:syn39148070",
+    "https://www.synapse.org/#!Synapse:syn39148087",
+    "https://www.synapse.org/#!Synapse:syn39148106",
+    "https://www.synapse.org/#!Synapse:syn39148128",
+    "https://www.synapse.org/#!Synapse:syn39148156"
+  ],
+  "keywords": [
+    "bulk dna",
+    "htan",
+    "rare-modality",
+    "rna seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Boston University, University of California, Los Angeles (UCLA)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-the-lung-pre-cancer-atlas.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Graph Perceiver Network for Lung Tumor and Bronchial Premalignant Lesion Stratification from Histopathology",
+      "identifier": "https://doi.org/10.1016/j.ajpath.2024.03.009",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Aberrant basal cell clonal dynamics shape early lung carcinogenesis",
+      "identifier": "https://doi.org/10.1126/science.ads9145",
+      "datePublished": "2025"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Single-Cell Characterization of Pulmonary Nodules Implicates Suppression of Immunosurveillance across Early Stages of Lung Adenocarcinoma",
+      "identifier": "https://doi.org/10.1158/0008-5472.can-23-0128",
+      "datePublished": "2023"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233238",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233238"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Bulk RNA sequencing",
+    "Multiplexed tissue imaging",
+    "Bulk DNA sequencing",
+    "Single-cell / single-nucleus RNA sequencing"
+  ]
+}

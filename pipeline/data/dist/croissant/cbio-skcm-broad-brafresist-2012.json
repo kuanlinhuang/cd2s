@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-skcm-broad-brafresist-2012",
+  "alternateName": "Skin Cutaneous Melanoma(Broad, Cancer Discov 2014)",
+  "description": "Exome Sequencing of tumors (with matched normals) from 45 patients with BRAFV600-mutant metastatic melanoma who received vemurafenib or dabrafenib monotherapy.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-broad-brafresist-2012",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

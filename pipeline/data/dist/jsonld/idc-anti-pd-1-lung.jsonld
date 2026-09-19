@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-anti-pd-1-lung",
+  "name": "Anti-PD-1_Lung",
+  "alternateName": [
+    "anti_pd_1_lung"
+  ],
+  "description": "This collection includes 46 lung cases treated with anti-PD1 immunotherapy in 2016, each with pre-treatment imaging (CT,PT,SC) and most with 1 imaging follow-up timepoint. Please see the Anti-PD-1_Lung wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-anti-pd-1-lung",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=anti_pd_1_lung",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/tcia.2019.zjjwb9ip"
+  ],
+  "keywords": [
+    "Lung",
+    "Lung Cancer",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=anti_pd_1_lung",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-anti-pd-1-lung.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

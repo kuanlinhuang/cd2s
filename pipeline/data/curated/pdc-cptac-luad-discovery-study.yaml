@@ -1,0 +1,98 @@
+id: pdc-cptac-luad-discovery-study
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+one_liner: >-
+  115 lung adenocarcinomas with proteome, phosphoproteome and acetylome, plus ubiquitylome on
+  80 - one of five ubiquitylation datasets in the Proteomic Data Commons, openly downloadable.
+summary: >-
+  Ubiquitylation is the scarcest proteomic modification layer in the NCI portfolio: five
+  studies across the whole Proteomic Data Commons carry it, and this is one of them. On 80
+  of these 115 lung adenocarcinomas, protein degradation signaling can be measured directly
+  rather than inferred, alongside acetylome and phosphoproteome on all 115.
+
+  Because the ubiquitin-proteasome system is a validated therapeutic axis and degradation
+  state is invisible to transcriptomics, this layer answers questions that no expression
+  cohort can. All of it is open and needs no account.
+useful_for:
+  - question: >-
+      Which proteins are regulated by degradation rather than by transcription in lung
+      adenocarcinoma?
+    rationale: >-
+      Ubiquitylome on 80 cases alongside proteome on all 115 allows the two regulatory modes
+      to be separated on the same tumors - the direct test of an assumption that expression
+      studies make implicitly.
+    required_modalities: [ubiquitylome, proteome]
+    feasibility: direct
+    approx_n: 80
+    statistical_note: >-
+      Ubiquitylation site quantification is sparse; apply a completeness filter and report it,
+      since the filter choice materially changes the feature set.
+    topics: [protein-degradation, scarce-measurement, lung]
+  - question: How do acetylation and phosphorylation interact in the same tumor?
+    rationale: >-
+      Both modification layers are measured on all 115 cases, allowing cross-modification
+      analysis on a common set of tumors rather than across separate cohorts.
+    required_modalities: [acetylproteome, phosphoproteome]
+    feasibility: direct
+    approx_n: 115
+    topics: [post-translational-modification, signaling]
+  - question: >-
+      Can degradation signatures identify candidate targets for proteasome or E3 ligase
+      directed therapy?
+    rationale: >-
+      Direct measurement of ubiquitylation state in primary tumors is the substrate for
+      target nomination in a therapeutic area where target selection is usually based on
+      inference.
+    required_modalities: [ubiquitylome, proteome]
+    feasibility: direct
+    approx_n: 80
+    topics: [drug-targets, protein-degradation]
+limitations:
+  - kind: missing_data
+    statement: >-
+      No clinical annotation is distributed with the PDC study - no outcome, treatment, stage
+      or smoking history, the last being central to lung adenocarcinoma biology.
+    severity: blocking
+    affected_analyses: [Survival analysis, Smoking-stratified analysis, Clinical correlation]
+    mitigation: >-
+      Retrieve the matching clinical data from the GDC CPTAC-3 record and join on case
+      identifier.
+  - kind: harmonization
+    statement: >-
+      Ubiquitylome covers 80 of the 115 cases, so analyses using that layer run on 70% of the
+      cohort and the subset may not be random.
+    severity: major
+    affected_analyses: [Complete-case multi-layer analysis]
+    mitigation: Check whether the 80 differ systematically before generalising.
+  - kind: batch_technical
+    statement: >-
+      Each modification layer uses a different enrichment chemistry, so batch structure differs
+      between layers and does not cancel on integration.
+    severity: major
+    affected_analyses: [Cross-layer integration]
+    mitigation: Model layer-specific batch effects.
+  - kind: statistical_power
+    statement: 115 cases, and 80 for the ubiquitylome, limits subgroup work.
+    severity: major
+    affected_analyses: [Subtype-stratified analysis]
+    mitigation: Pre-specify contrasts.
+inappropriate_uses:
+  - statement: Survival or prognostic claims from PDC data alone.
+    reason: No outcome variable is distributed with the study.
+  - statement: Treating the ubiquitylome subset as representative of the full cohort without checking.
+    reason: 80 of 115 cases carry it; the selection may not be random.
+access_steps:
+  - order: 1
+    action: Download the fractions from the PDC portal
+    detail: Open access, no account required.
+    url: https://pdc.cancer.gov/pdc/browse
+    est_time: 1 hour
+  - order: 2
+    action: Join clinical data from the GDC CPTAC-3 record
+    url: https://portal.gdc.cancer.gov/projects/CPTAC-3
+    est_time: 2-3 hours
+tags: [scarce-modality, ubiquitylome, proteogenomics, lung, open-access]

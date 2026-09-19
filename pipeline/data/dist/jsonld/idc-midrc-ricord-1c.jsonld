@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-midrc-ricord-1c",
+  "name": "MIDRC-RICORD-1C",
+  "alternateName": [
+    "midrc_ricord_1c"
+  ],
+  "description": "The first multi-institutional, multi-national expert annotated COVID-19 imaging dataset made freely available to the machine learning community as a research and educational resource for COVID-19 chest imaging. The Radiological Society of North America (RSNA) assembled the RSNA International COVID-19 Open Radiology Database (RICORD) collection of COVID-related imaging datasets and expert annotations to support research and education. RICORD data will be incorporated in the Medical Imaging and Data Resourc e Center (MIDRC) , a multi-institutional research data repository funded by the National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health. The collection contains 998 Chest x-ray examinations. Please see the MIDRC-RICORD-1c wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-midrc-ricord-1c",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=midrc_ricord_1c",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/91ah-v663"
+  ],
+  "keywords": [
+    "COVID-19 (non-cancer)",
+    "Lung",
+    "clinical",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=midrc_ricord_1c",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-midrc-ricord-1c.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

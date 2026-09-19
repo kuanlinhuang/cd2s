@@ -1,0 +1,244 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-cgci-htmcp-lc",
+  "name": "HIV+ Tumor Molecular Characterization Project - Lung Cancer",
+  "alternateName": [
+    "cgci_htmcp_lc"
+  ],
+  "description": "People living with HIV have substantially elevated lung cancer incidence and worse outcomes, and are close to absent from the cohorts that define lung cancer genomics. This is the smallest cohort we have made a showcase page for, and we included it because size is not the only thing that determines whether a dataset is worth knowing about.\nAll 39 cases carry whole genome sequencing, 38 RNA sequencing and 37 microRNA. 26 patients are recorded as Black or African American. Pathologic stage is recorded for 62% and prior treatment for 92%, both unusually good for a cohort of this size.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cgci-htmcp-lc",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-LC",
+    "gdc_program:CGCI",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000530",
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cgci_htmcp_lc",
+    "https://www.cancerimagingarchive.net/collections/",
+    "zenodo:10.5281/zenodo.17381428"
+  ],
+  "keywords": [
+    "Adenomas and Adenocarcinomas",
+    "Bronchus and lung",
+    "Complex Epithelial Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Neoplasms, NOS",
+    "Paragangliomas and Glomus Tumors",
+    "Squamous Cell Neoplasms",
+    "cgci",
+    "clinical",
+    "copy number",
+    "distinctive-population",
+    "gdc",
+    "histopathology",
+    "hiv-associated",
+    "idc",
+    "imaging",
+    "lung",
+    "mirna",
+    "radiology",
+    "released",
+    "rna seq",
+    "small-cohort",
+    "structural variant",
+    "underexplored-candidate",
+    "wgs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "CGCI"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-LC",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-cgci-htmcp-lc.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:37:21.647585+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 92.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 89.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 89.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 64.1% of cases, informative for 20.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 61.5% of cases, informative for 61.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 43.6% of cases, informative for 43.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 92.3% of cases, informative for 92.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 92.3% of cases, informative for 92.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 92.3% of cases, informative for 76.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 92.3% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 92.3% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 92.3% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 10.3% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 30.8% of cases, informative for 23.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 92.3% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 17.9% of cases, informative for 17.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 66.7% of cases, informative for 59.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 92.3% of cases, informative for 89.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Whole genome sequencing",
+    "Bulk RNA sequencing",
+    "microRNA sequencing",
+    "Clinical",
+    "Copy Number Variation",
+    "Somatic Structural Variation",
+    "Whole-slide tissue images",
+    "DICOM medical imaging"
+  ]
+}

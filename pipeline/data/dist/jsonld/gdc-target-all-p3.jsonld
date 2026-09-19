@@ -1,0 +1,434 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p3",
+  "name": "Acute Lymphoblastic Leukemia - Phase III",
+  "alternateName": [
+    "TARGET-ALL-P3"
+  ],
+  "description": "Acute Lymphoblastic Leukemia - Phase III",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p3",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/TARGET-ALL-P3",
+    "gdc_program:TARGET",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000218"
+  ],
+  "keywords": [
+    "Hematopoietic and reticuloendothelial systems",
+    "Leukemias, NOS",
+    "Lymphoid Leukemias",
+    "Myeloid Leukemias",
+    "Not Applicable",
+    "Unknown",
+    "clinical",
+    "copy number",
+    "gdc",
+    "methylation",
+    "mirna",
+    "released",
+    "rna seq",
+    "structural variant",
+    "target",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "TARGET"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/TARGET-ALL-P3",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-all-p3.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197695",
+      "name": "Translating genomic discoveries to improved outcomes for high risk acute leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197695"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA216391",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA216391"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA241297",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA241297"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009370",
+      "name": "Cancer Heterogeneity, Immunity, and Microenvironment (CHIME) Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009370"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA014195",
+      "name": "Mass Spectrometry Core (MASS)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA014195"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K22CA216318",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K22CA216318"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA243124",
+      "name": "Experimental and preclinical modeling of NUP98-rearranged acute leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA243124"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196173",
+      "name": "COG U24 Funding 2026-2027",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196173"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA114766",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA114766"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180899",
+      "name": "Children's Oncology Group Statistics and Data Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180899"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180886",
+      "name": "COG NCTN Network Group Operations Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180886"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA236748",
+      "name": "Childhood Hematological Malignancies Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA236748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009615",
+      "name": "Cancer Center Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009615"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R03CA256550",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R03CA256550"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA264837",
+      "name": "Biomarkers of dasatinib response and resistance in T-cell acute lymphoblastic leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA264837"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA193776",
+      "name": "Improving risk allocation and developing novel therapies for children with T-ALL and T-LL",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193776"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA279756",
+      "name": "Role of BCL11B in lineage ambiguous leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA279756"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K12CA076931",
+      "name": "Physician Scientist Training in Clinical Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA076931"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA286762",
+      "name": "Calming the Cytokine Storm: Unraveling the Biology of CRS and ICANS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA286762"
+    }
+  ],
+  "dateModified": "2026-09-18T02:36:48.073180+00:00",
+  "datePublished": "2012-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 93.2% of cases, informative for 85.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 93.2% of cases, informative for 24.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 93.2% of cases, informative for 24.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 93.2% of cases, informative for 56.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 22.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 68.6% of cases, informative for 66.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 68.6% of cases, informative for 66.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 68.6% of cases, informative for 68.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 9.9% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 9.9% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 9.9% of cases, informative for 7.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 60.7% of cases, informative for 58.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Whole exome sequencing",
+    "microRNA sequencing",
+    "Bulk RNA sequencing",
+    "Whole genome sequencing",
+    "DNA methylation array",
+    "Clinical",
+    "Copy Number Variation",
+    "Somatic Structural Variation"
+  ]
+}

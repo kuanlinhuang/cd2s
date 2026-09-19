@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-chl-sccc-2023",
+  "alternateName": "Classical Hodgkins Lymphoma (SCCC, Blood Cancer Discov 2023)",
+  "description": "Whole-exome sequencing of 36 cases and whole-genome sequencing of 25 cases of classical hodgkins lymphomas and their matched normals.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-chl-sccc-2023",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

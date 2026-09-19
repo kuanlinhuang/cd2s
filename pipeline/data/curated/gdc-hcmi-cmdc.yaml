@@ -1,0 +1,107 @@
+id: gdc-hcmi-cmdc
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+one_liner: >-
+  805 next-generation cancer models - organoids and other patient-derived systems - with
+  whole genome sequencing on 804 and the matched patient tumor, spanning many rare cancers.
+summary: >-
+  The Human Cancer Models Initiative exists to replace ageing immortalised cell lines with
+  models that retain patient genomics and come with their source tumor characterized.
+  Coverage is exceptionally uniform: whole genome on 804 of 805, RNA sequencing on 781,
+  exome on 721, methylation on 703, and both histopathology and radiology on 382.
+
+  Its distinctive value is breadth across tumor types, including rare cancers that have no
+  established model system at all. Prior treatment is recorded for 92% of donors, which
+  matters because it determines what the derived model actually represents.
+useful_for:
+  - question: How faithfully do patient-derived models retain the genomics of their source tumor?
+    rationale: >-
+      Models and their source tumors are both characterized, with near-complete whole genome
+      coverage, which makes fidelity measurable rather than assumed. The answer determines how
+      much any model-based result should be trusted.
+    required_modalities: [wgs, rna_seq, model_system]
+    feasibility: needs_access
+    approx_n: 721
+    statistical_note: Verify model and source tumor pairing per case; it is not uniform.
+    topics: [model-fidelity, organoids]
+  - question: Can a usable model system be found for a rare cancer that currently has none?
+    rationale: >-
+      Coverage spans many tumor types including rare ones. For a researcher working on a
+      cancer with no established cell line, this is often the only route to any model at all,
+      and it is the cohort's most practically valuable use.
+    required_modalities: [model_system, wgs]
+    feasibility: direct
+    approx_n: 805
+    statistical_note: Per-tumor-type counts are small; this is model discovery, not a powered comparison.
+    topics: [rare-cancers, model-systems]
+  - question: Does prior treatment of the donor shape the derived model's biology?
+    rationale: >-
+      Prior treatment is informative for 88.9% of donors and treatment given is recorded for
+      all, so models derived from treated and untreated patients can be compared - a question
+      with direct bearing on how model-based drug screens should be interpreted.
+    required_modalities: [wgs, rna_seq, treatment]
+    required_fields: [diagnoses.prior_treatment, diagnoses.treatments.treatment_type]
+    feasibility: needs_access
+    approx_n: 716
+    topics: [model-fidelity, treatment-context]
+limitations:
+  - kind: missing_data
+    statement: >-
+      Vital status is informative for 59.3% of cases and follow-up is derivable for 544 of
+      805. Progression and last known disease status are empty for all cases.
+    severity: major
+    affected_analyses: [Survival analysis, Progression-free endpoints]
+    mitigation: >-
+      Use the cohort for model characterization rather than for clinical outcome questions.
+  - kind: population_coverage
+    statement: >-
+      Race is not reported or unknown for 441 of 805 cases, over half the cohort, which
+      undermines any claim that the model collection represents diverse populations.
+    severity: major
+    affected_analyses: [Ancestry-aware model selection, Disparities research]
+    mitigation: >-
+      Genetic ancestry can be estimated from the germline data, subject to consent terms.
+  - kind: annotation_quality
+    statement: >-
+      These are model systems. Culture adaptation selects for growth-competent clones, so
+      model genomics diverge from the source tumor over passage.
+    severity: major
+    affected_analyses: [Direct clinical inference from model results]
+    mitigation: Record and report passage number; prefer early-passage models.
+  - kind: statistical_power
+    statement: Spread across many tumor types, per-type counts are small.
+    severity: major
+    affected_analyses: [Type-specific comparison]
+    mitigation: Treat as a model catalog rather than a cohort study.
+  - kind: access_constraint
+    statement: A large share of the 43,662 files are controlled access.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: Submit a dbGaP request.
+inappropriate_uses:
+  - statement: Survival analysis.
+    reason: Vital status is informative for 59% of cases, and progression is absent entirely.
+  - statement: Treating model results as clinical evidence.
+    reason: >-
+      Models are experimental systems; translational claims require clinical validation this
+      resource does not contain.
+access_steps:
+  - order: 1
+    action: Search the model catalog for your tumor type
+    url: https://portal.gdc.cancer.gov/projects/HCMI-CMDC
+    est_time: 1 hour
+  - order: 2
+    action: Check model availability through the HCMI Searchable Catalog
+    detail: The data describe models; obtaining the physical model is a separate step.
+    url: https://ocg.cancer.gov/programs/HCMI
+    est_time: 1 hour
+  - order: 3
+    action: Submit a dbGaP data access request for sequence data
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [model-systems, organoids, rare-cancers, multi-tumor]

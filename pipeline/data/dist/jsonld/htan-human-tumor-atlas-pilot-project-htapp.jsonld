@@ -1,0 +1,155 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-human-tumor-atlas-pilot-project-htapp",
+  "name": "Human Tumor Atlas Pilot Project (HTAPP)",
+  "alternateName": [
+    "HTA1"
+  ],
+  "description": "Human Tumor Atlas Pilot Project (HTAPP)",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-human-tumor-atlas-pilot-project-htapp",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA1%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn35558468",
+    "https://www.synapse.org/#!Synapse:syn35558474",
+    "https://www.synapse.org/#!Synapse:syn35558479",
+    "https://www.synapse.org/#!Synapse:syn35558619",
+    "https://www.synapse.org/#!Synapse:syn35558699",
+    "https://www.synapse.org/#!Synapse:syn35558704",
+    "https://www.synapse.org/#!Synapse:syn35558712",
+    "https://www.synapse.org/#!Synapse:syn39042300",
+    "https://www.synapse.org/#!Synapse:syn41754091",
+    "https://www.synapse.org/#!Synapse:syn41755623",
+    "https://www.synapse.org/#!Synapse:syn41761654"
+  ],
+  "keywords": [
+    "bulk dna",
+    "htan",
+    "other",
+    "rare-modality",
+    "rna seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "spatial transcriptomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Broad Institute, Dana-Farber Cancer Institute, Harvard Medical School"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-human-tumor-atlas-pilot-project-htapp.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A multi-modal single-cell and spatial expression map of metastatic breast cancer biopsies across clinicopathological features",
+      "identifier": "https://doi.org/10.1038/s41591-024-03215-z",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A spatial cell atlas of neuroblastoma reveals developmental, epigenetic and spatial axis of tumor heterogeneity",
+      "identifier": "https://doi.org/10.1101/2024.01.07.574538",
+      "datePublished": "2026"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Spatially organized multicellular immune hubs in human colorectal cancer",
+      "identifier": "https://doi.org/10.1016/j.cell.2021.08.003",
+      "datePublished": "2021"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CHHSN261201500003I",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=HHSN261201500003I"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Expansion sequencing (ExSeq) in situ transcriptomics",
+    "Single-cell / single-nucleus RNA sequencing",
+    "Multiplexed tissue imaging",
+    "10x Visium spatial transcriptomics",
+    "Bulk DNA sequencing",
+    "Bulk RNA sequencing",
+    "Other assay"
+  ]
+}

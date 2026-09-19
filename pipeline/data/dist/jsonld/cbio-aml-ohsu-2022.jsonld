@@ -1,0 +1,230 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-aml-ohsu-2022",
+  "name": "Acute Myeloid Leukemia (OHSU, Cancer Cell 2022)",
+  "alternateName": [
+    "aml_ohsu_2022"
+  ],
+  "description": "Whole-exome and transcriptomic sequencing of 942 acute myeloid leukemia samples (with 500 matched normals) from the Beat AML program.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-aml-ohsu-2022",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=aml_ohsu_2022"
+  ],
+  "keywords": [
+    "Acute Myeloid Leukemia",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "mnm",
+    "nci-funded",
+    "rna seq",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=aml_ohsu_2022",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-aml-ohsu-2022.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/35868306/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA224019",
+      "name": "Architecture and Trajectory of Acquired Resistance to Therapy in AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224019"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA271412",
+      "name": "Proteogenomic characterization of early and late resistance mechanisms in acute myeloid leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA271412"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA217862",
+      "name": "Functional Genomic Discovery of Pathway Targeted and Immune Modulatory Therapeutic Combinations in Hematologic Malignancies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA217862"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214116",
+      "name": "Proteogenomic Translational Research Center for Clinical Proteomic",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214116"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA262758",
+      "name": "Mechanisms of venetoclax combination activity in acute myeloid leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA262758"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA247943",
+      "name": "Mechanisms of differentiation blockade in CSF3R-mutant AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA247943"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA245002",
+      "name": "Targeting PTPN11 dependent Hematologic Malignancies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA245002"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA229875",
+      "name": "Mechanisms and targeting of inflammatory cytokine-driven expansion and progression in AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA229875"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA214428",
+      "name": "An Academic-Industry Partnership to Advance Functional Genomics for Personalized Oncology.",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA214428"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA237630",
+      "name": "Characterizing the pathogenesis and targeted therapeutics of Wilms' Tumor 1 (WT1) mutations in AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA237630"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA069533",
+      "name": "Translational Oncology Research Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA069533"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA042014",
+      "name": "Cancer Biostatistics (CB)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA042014"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA237630",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA237630"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA245224",
+      "name": "Epigenetics of Mutation-Order in Acute Myeloid Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA245224"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "F30CA239335",
+      "name": "Defining the stromal landscape that sustains AML drug resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=F30CA239335"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "RNA sequencing expression",
+    "Structural variants / fusions"
+  ]
+}

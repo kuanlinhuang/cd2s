@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-ct-lymph-nodes",
+  "alternateName": "CT Lymph Nodes",
+  "description": "This collection consists of Computed Tomography (CT) images of the mediastinum and abdomen in which lymph node positions are marked by radiologists at the National Institutes of Health, Clinical Center. Radiologists at the Imaging Biomarkers and Computer-Aided Diagnosis Laboratory labeled a total of 388 mediastinal lymph nodes in CT images of 90 patients and a total of 595 abdominal lymph nodes in 86 patients. Please see the CT Lymph Nodes wiki page to learn more about the images and to obtain supporting data from this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-lymph-nodes",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CT Lymph Nodes",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

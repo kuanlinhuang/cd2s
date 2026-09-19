@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-pdmr-bl0293-f563",
+  "alternateName": "PDMR-BL0293-F563",
+  "description": "We identified and characterized a patient-derived xenograft model with metastatic potential, bladder xenograft BL0293-F563. In this study we performed a detailed imaging characterization of this model, which develops spontaneous liver and bone metastases. Please see the PDMR-BL0293-F563 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-bl0293-f563",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "PDMR-BL0293-F563",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

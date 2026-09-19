@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-qiba-ct-liver-phantom",
+  "alternateName": "QIBA-CT-Liver-Phantom",
+  "description": "This database contains a collection of three sets of CT scan images acquired from an anthropomorphic abdominal phantom with removable liver inserts. Please see the QIBA Anthropomorphic Abdominal Phantom CT Scans to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-qiba-ct-liver-phantom",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "QIBA-CT-Liver-Phantom",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

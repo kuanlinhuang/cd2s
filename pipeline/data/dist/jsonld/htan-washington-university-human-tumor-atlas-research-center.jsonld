@@ -1,0 +1,161 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-washington-university-human-tumor-atlas-research-center",
+  "name": "Washington University Human Tumor Atlas Research Center",
+  "alternateName": [
+    "HTA12"
+  ],
+  "description": "Washington University Human Tumor Atlas Research Center",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-washington-university-human-tumor-atlas-research-center",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA12%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn39159015",
+    "https://www.synapse.org/#!Synapse:syn39159784",
+    "https://www.synapse.org/#!Synapse:syn39159835",
+    "https://www.synapse.org/#!Synapse:syn39159871",
+    "https://www.synapse.org/#!Synapse:syn39159904",
+    "https://www.synapse.org/#!Synapse:syn39168749",
+    "https://www.synapse.org/#!Synapse:syn39168806",
+    "https://www.synapse.org/#!Synapse:syn39168815",
+    "https://www.synapse.org/#!Synapse:syn39168925",
+    "https://www.synapse.org/#!Synapse:syn39169269",
+    "https://www.synapse.org/#!Synapse:syn39169760"
+  ],
+  "keywords": [
+    "bulk dna",
+    "htan",
+    "rare-modality",
+    "rna seq",
+    "scatac seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "spatial transcriptomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Washington University"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-washington-university-human-tumor-atlas-research-center.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Differential chromatin accessibility and transcriptional dynamics define breast cancer subtypes and their lineages",
+      "identifier": "https://doi.org/10.1038/s43018-024-00773-6",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Tumour evolution and microenvironment interactions in 2D and 3D space",
+      "identifier": "https://doi.org/10.1038/s41586-024-08087-4",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Epigenetic regulation during cancer transitions across 11 tumour types",
+      "identifier": "https://doi.org/10.1038/s41586-023-06682-5",
+      "datePublished": "2023"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Epigenetic and transcriptomic characterization reveals progression markers and essential pathways in clear cell renal cell carcinoma",
+      "identifier": "https://doi.org/10.1038/s41467-023-37211-7",
+      "datePublished": "2023"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Spatially restricted drivers and transitional cell populations cooperate with the microenvironment in untreated and chemo-resistant pancreatic cancer",
+      "identifier": "https://doi.org/10.1038/s41588-022-01157-1",
+      "datePublished": "2022"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233303",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233303"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Single-cell / single-nucleus RNA sequencing",
+    "Single-cell ATAC sequencing",
+    "10x Visium spatial transcriptomics",
+    "Bulk DNA sequencing",
+    "Bulk RNA sequencing",
+    "Multiplexed tissue imaging"
+  ]
+}

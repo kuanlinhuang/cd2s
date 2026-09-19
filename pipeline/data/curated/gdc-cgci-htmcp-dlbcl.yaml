@@ -1,0 +1,97 @@
+id: gdc-cgci-htmcp-dlbcl
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - HIV status and CD4 count are not structured fields; confirm availability through dbGaP.
+one_liner: >-
+  70 diffuse large B-cell lymphomas from an HIV-enriched cohort, half Black or African
+  American, with whole genome sequencing on 66 and named chemotherapy regimens on a quarter.
+summary: >-
+  HIV-associated lymphoma is common where HIV is common and rare in the cohorts that define
+  lymphoma genomics. This cohort addresses that gap directly: 70 cases with whole genome
+  sequencing on 66, RNA sequencing on 55 and microRNA on 60, of which 34 patients are
+  recorded as Black or African American and 18 as white.
+
+  Clinical annotation is better than the cohort size suggests. Prior treatment is recorded
+  for 81%, ECOG performance status for 71%, treatment outcome for 46%, and named regimens
+  including CHOP-21, COM and COP for 24%.
+useful_for:
+  - question: >-
+      How does the genomic landscape of HIV-associated diffuse large B-cell lymphoma differ
+      from that of lymphoma in immunocompetent patients?
+    rationale: >-
+      Whole genome sequencing on 66 cases from an HIV-enriched population, contrastable with
+      the many DLBCL cohorts derived from largely HIV-negative populations. Whole genome
+      rather than exome makes structural and viral-integration analysis possible.
+    required_modalities: [wgs, rna_seq]
+    feasibility: needs_access
+    approx_n: 66
+    statistical_note: >-
+      70 cases supports description of recurrent alterations but not genome-wide discovery
+      at conventional significance thresholds.
+    topics: [hiv-associated, lymphoma, viral-oncogenesis]
+  - question: Does immune status shape the tumor transcriptome in lymphoma?
+    rationale: >-
+      RNA sequencing on 55 cases with ECOG performance status on 71% allows transcriptional
+      programs to be related to a clinical proxy for host status.
+    required_modalities: [rna_seq, clinical]
+    feasibility: needs_access
+    approx_n: 55
+    statistical_note: >-
+      ECOG is a crude proxy for immune competence; CD4 count would be far better and is not
+      available in these records.
+    topics: [tumor-immunology, lymphoma]
+  - question: What are the outcomes of HIV-associated DLBCL treated with standard regimens?
+    rationale: >-
+      Vital status is informative for 76% of cases, follow-up is derivable for 57 of 70
+      with a median of 11.3 months extending to 99.6, and 24% carry a named regimen.
+    required_modalities: [clinical, outcome, treatment]
+    feasibility: needs_access
+    approx_n: 53
+    statistical_note: >-
+      53 cases with informative vital status gives wide confidence intervals; median
+      follow-up of 11.3 months is short for lymphoma outcomes.
+    topics: [survival, treatment-response, lymphoma]
+limitations:
+  - kind: statistical_power
+    statement: 70 cases, with individual layers covering 50 to 66, limits all subgroup analysis.
+    severity: blocking
+    affected_analyses: [Genome-wide discovery, Subgroup comparison, Multivariable modeling]
+    mitigation: Use for description and hypothesis generation; pool with other cohorts for discovery.
+  - kind: missing_data
+    statement: >-
+      HIV status, CD4 count and antiretroviral therapy are not structured fields, despite
+      being the cohort's organizing rationale. Stage is absent for all cases.
+    severity: blocking
+    affected_analyses: [HIV-stratified comparison, Stage-adjusted survival]
+    mitigation: Request the full phenotype file through dbGaP before planning either analysis.
+  - kind: missing_data
+    statement: Progression and last known disease status are empty for all cases.
+    severity: major
+    affected_analyses: [Progression-free survival]
+    mitigation: Restrict to overall survival.
+  - kind: access_constraint
+    statement: 1,166 of 2,112 files are controlled.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: Submit a dbGaP request.
+inappropriate_uses:
+  - statement: Comparing HIV-positive with HIV-negative lymphoma within the cohort.
+    reason: HIV status is not a structured variable in these records.
+  - statement: Genome-wide significance testing.
+    reason: 66 whole genomes cannot support it.
+access_steps:
+  - order: 1
+    action: Scope with the 946 open-access files
+    url: https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-DLBCL
+    est_time: 1 hour
+  - order: 2
+    action: Request controlled access, naming HIV-related phenotype variables
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [hiv-associated, distinctive-population, lymphoma, small-cohort, underexplored-candidate]

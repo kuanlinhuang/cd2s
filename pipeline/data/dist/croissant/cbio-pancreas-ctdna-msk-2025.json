@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-pancreas-ctdna-msk-2025",
+  "alternateName": "Pancreatic Cancer cfDNA (MSK, J Natl Cancer Inst 2025)",
+  "description": "Genomic profiling by ctDNA is feasible in patients with PDAC and is informative in specific groups such as those with untreated metastatic disease, higher disease burden and liver metastases.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-pancreas-ctdna-msk-2025",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

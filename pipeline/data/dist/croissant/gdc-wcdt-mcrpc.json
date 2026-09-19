@@ -1,0 +1,263 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "gdc-wcdt-mcrpc",
+  "alternateName": "Genomic Characterization of Metastatic Castration Resistant Prostate Cancer",
+  "description": "The West Coast Dream Team cohort is one of the few public resources that sequences metastatic castration-resistant prostate cancer tissue rather than primary tumor, which is what makes it valuable: the biology that drives lethal prostate cancer is not well represented in primary-tumor cohorts. All 101 cases carry whole genome sequencing with copy number and structural variant calls, and 99 carry RNA sequencing.\nThe clinical annotation is unusual in shape. Disease state is recorded with complete consistency - every case is AJCC stage IV, every case has progression or recurrence recorded as \"yes\", and every case's last known disease status is distant metastatic recurrence or progression. But vital status is \"unknown\" for all 101 cases, and no treatment field is populated. The cohort tells you precisely where these patients were in their disease course and nothing about what happened to them next.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-wcdt-mcrpc",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Genomic correlates of clinical outcome in advanced prostate cancer",
+  "version": "as-retrieved",
+  "datePublished": "2019-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.sex_at_birth",
+          "name": "Sex at birth",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.race",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 94.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.ethnicity",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 93.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.vital_status",
+          "name": "Vital status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.cause_of_death",
+          "name": "Cause of death",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.population_group",
+          "name": "Population group",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.country_of_residence_at_enrollment",
+          "name": "Country of residence",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.primary_diagnosis",
+          "name": "Primary diagnosis",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.morphology",
+          "name": "Morphology (ICD-O)",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tissue_or_organ_of_origin",
+          "name": "Tissue or organ of origin",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_pathologic_stage",
+          "name": "AJCC pathologic stage",
+          "description": "Category: staging. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_clinical_stage",
+          "name": "AJCC clinical stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tumor_grade",
+          "name": "Tumour grade",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_treatment",
+          "name": "Prior treatment",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_malignancy",
+          "name": "Prior malignancy",
+          "description": "Category: diagnosis. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.synchronous_malignancy",
+          "name": "Synchronous malignancy",
+          "description": "Category: diagnosis. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.progression_or_recurrence",
+          "name": "Progression or recurrence",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.last_known_disease_status",
+          "name": "Last known disease status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.classification_of_tumor",
+          "name": "Classification of tumour",
+          "description": "Category: pathology. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_type",
+          "name": "Treatment type",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_or_therapy",
+          "name": "Treatment given",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.therapeutic_agents",
+          "name": "Therapeutic agents",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_outcome",
+          "name": "Treatment outcome",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.regimen_or_line_of_therapy",
+          "name": "Regimen or line of therapy",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.disease_response",
+          "name": "Disease response at follow-up",
+          "description": "Category: followup. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.progression_or_recurrence",
+          "name": "Progression at follow-up",
+          "description": "Category: followup. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.ecog_performance_status",
+          "name": "ECOG performance status",
+          "description": "Category: followup. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.tobacco_smoking_status",
+          "name": "Tobacco smoking status",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.alcohol_history",
+          "name": "Alcohol history",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [
+      "What distinguishes the genome of metastatic castration-resistant prostate cancer from primary prostate cancer?",
+      "Which transcriptional programs mark androgen receptor pathway independence and neuroendocrine transdifferentiation in treatment-resistant disease?",
+      "How do structural variants and genome rearrangement patterns differ between metastatic sites?",
+      "Can expression or genomic features predict which metastatic biopsies come from patients with the most aggressive disease trajectory?"
+    ],
+    "blockingLimitations": [
+      {
+        "kind": "missing_data",
+        "statement": "Vital status is populated for all 101 cases and informative for none - every value is \"unknown\". No overall survival endpoint exists in the harmonized records, despite a follow-up time being derivable for 87 of 101 cases with a median of 95 months.",
+        "rulesOut": [
+          "Overall survival",
+          "Prognostic modeling",
+          "Outcome-anchored biomarker discovery"
+        ]
+      },
+      {
+        "kind": "treatment_context",
+        "statement": "No treatment field is populated: treatment type, therapeutic agents, treatment outcome and line of therapy are all empty. These are castration-resistant patients, so every one has had prior androgen deprivation and most will have had further systemic therapy, but which therapy and in what order is not recorded here.",
+        "rulesOut": [
+          "Treatment-response analysis",
+          "Resistance mechanism attribution",
+          "Line-of-therapy stratification"
+        ]
+      }
+    ],
+    "inappropriateUses": [
+      "Survival analysis or prognostic biomarker discovery from the GDC records.",
+      "Attributing resistance mechanisms to particular drugs.",
+      "Studying prostate cancer disparities."
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-ctpred-sunitinib-pannet",
+  "alternateName": "CTpred-Sunitinib-panNET",
+  "description": "The Prediction of Sunitinib Efficacy using Computed Tomography in Patients with Pancreatic Neuroendocrine Tumors study aimed to develop and validate a computed tomography (CT)-based method to predict the efficacy of sunitinib in Pretreatment CT images of 171 lesions from 38 patients with metastatic or locally advanced pancreatic neuroendocrine tumors (panNET). The dataset can be used to validate the findings of the study. More importantly, researchers can use this dataset to study the imaging characteristics of panNET. Please see the CTpred-Sunitinib-panNET wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ctpred-sunitinib-pannet",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CTpred-Sunitinib-panNET",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

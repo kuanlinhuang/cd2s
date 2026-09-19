@@ -1,0 +1,158 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-crc-hta11-htan-2021",
+  "name": "Pre-cancer Colorectal Polyps (HTAN Vanderbilt, Cell 2021)",
+  "alternateName": [
+    "crc_hta11_htan_2021"
+  ],
+  "description": "Whole-exome sequencing and single-cell transcriptomics analysis of 61 pre-malignant colorectal polyps (discovery and validation sets) and their matched normal colon tissues.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-crc-hta11-htan-2021",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=crc_hta11_htan_2021"
+  ],
+  "keywords": [
+    "Colorectal Adenocarcinoma",
+    "bowel",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "rna seq",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=crc_hta11_htan_2021",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-crc-hta11-htan-2021.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/34910928/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA215798",
+      "name": "Systems approaches to understanding the relationships between genotype, signaling, and therapeutic efficacy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA215798"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA119925",
+      "name": "Integrated Biological Systems Training in Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA119925"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197570",
+      "name": "Early to Late Events in Colorectal Neoplasia: Basic Biology to Clinical Implementation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197570"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA205406",
+      "name": "Leveraging Novel Randomized Clinical Trials of Vitamin D Supplementation in Patients with Colorectal Cancer: Impact on Survival and Anti-Tumor Immunity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA205406"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA097386",
+      "name": "Tumor Markers and Recurrent Adenomas: A Follow-up Study",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA097386"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA236733",
+      "name": "Project 1: Overcoming Immune Exclusion in Microsatellite Stable Colorectal Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA236733"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA068485",
+      "name": "Survey and Biospecimen Shared Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA068485"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K07CA122451",
+      "name": "Diet, Genetics, Epigenetics and Colorectal Adenoma Risk.",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K07CA122451"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "RNA sequencing expression"
+  ]
+}

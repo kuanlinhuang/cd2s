@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-pct-swath-kidney",
+  "name": "PCT SWATH Kidney",
+  "alternateName": [
+    "PCT SWATH Kidney"
+  ],
+  "description": "PCT SWATH Kidney",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-pct-swath-kidney",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000152"
+  ],
+  "keywords": [
+    "pdc",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Quantitative digital maps of tissue biopsies"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000152",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-pct-swath-kidney.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Proteome mass spectrometry (Label Free / DIA)"
+  ]
+}

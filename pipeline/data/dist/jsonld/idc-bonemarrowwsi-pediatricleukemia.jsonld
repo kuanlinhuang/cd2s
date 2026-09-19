@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-bonemarrowwsi-pediatricleukemia",
+  "name": "BoneMarrowWSI-PediatricLeukemia",
+  "alternateName": [
+    "bonemarrowwsi_pediatricleukemia"
+  ],
+  "description": "The dataset comprises bone marrow aspirate smear WSI for 245 pediatric cases (< 18 years) of leukemia, including acute lymphoid leukemia (ALL), acute myeloid leukemia (AML), and chronic myeloid leukemia (CML). The smears were prepared for the initial diagnosis (i.e., without prior treatment), stained in accordance with the Pappenheim method, and scanned at 40x magnification (without immersion), resulting in a resolution of 0.11x0.11 \u00b5m/pixel. Additionally, clinical information (age group, sex, diagnosis) and laboratory data (blasts, white blood cell count, thrombocytes, LDH, uric acid, hemoglobin) are available for each case. Please see the BoneMarrowWSI-PediatricLeukemia: A Comprehensive Dataset of Bone Marrow Aspirate Smear Whole Slide Images with Expert Annotations and Clinical Data in Pediatric Leukemia information page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-bonemarrowwsi-pediatricleukemia",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=bonemarrowwsi_pediatricleukemia",
+    "https://www.cancerimagingarchive.net/collections/",
+    "zenodo:10.5281/zenodo.14933087"
+  ],
+  "keywords": [
+    "Bone Marrow",
+    "Leukemia",
+    "clinical",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=bonemarrowwsi_pediatricleukemia",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-bonemarrowwsi-pediatricleukemia.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

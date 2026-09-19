@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-lung-pet-ct-dx",
+  "name": "Lung-PET-CT-Dx",
+  "alternateName": [
+    "lung_pet_ct_dx"
+  ],
+  "description": "This dataset consists of CT and PET-CT DICOM images of lung cancer subjects with XML Annotation files that indicate tumor location with bounding boxes. The images were retrospectively acquired from patients with suspicion of lung cancer, and who underwent standard-of-care lung biopsy and PET/CT. Subjects were grouped according to a tissue histopathological diagnosis. Patients with Names/IDs containing the letter ,,A,, were diagnosed with Adenocarcinoma, ,,B,, with Small Cell Carcinoma, ,,C,, with Large Cell Carcinoma, and ,,G,, with Squamous Cell Carcinoma. Please see the LUNG-PET-CT-Dx wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-lung-pet-ct-dx",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=lung_pet_ct_dx",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/TCIA.2020.NNC2-0461"
+  ],
+  "keywords": [
+    "Lung",
+    "Lung Cancer",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=lung_pet_ct_dx",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-lung-pet-ct-dx.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

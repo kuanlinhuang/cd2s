@@ -1,0 +1,282 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2015",
+  "name": "Metastatic Prostate Cancer (SU2C/PCF Dream Team, Cell 2015)",
+  "alternateName": [
+    "prad_su2c_2015"
+  ],
+  "description": "Whole-exome sequencing of 150 metastatic prostate cancer tumor/normal pairs by the SU2C/PCF Dream Team.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2015",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=prad_su2c_2015"
+  ],
+  "keywords": [
+    "Prostate Adenocarcinoma",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "prostate",
+    "rna seq",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=prad_su2c_2015",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-su2c-2015.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/26000489/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA111275",
+      "name": "A Systems Biology Approach to the Development of Cancer Biomarkers",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA111275"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009437",
+      "name": "MOLECULAR TRAINING PROGRAM IN CANCER RESEARCH - COMPETIN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009437"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R21CA128352",
+      "name": "A phase II study of IPI-504 in metastatic hormone refractory prostate cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA128352"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA193910",
+      "name": "Defining the epigenetic landscape in human prostate cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193910"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA193837",
+      "name": "Role of ETS factors in specifying prostate luminal cell identity and androgen receptor dependence",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193837"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA155169",
+      "name": "Understanding Resistance to Next Generation Antiandrogens",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155169"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA136578",
+      "name": "Sex-Hormones and the TMPRSS2: ERG Fusion in Prostate Cancer Progression",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA136578"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA131945",
+      "name": "Molecular Link Between Metabolic Syndrome and Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA131945"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA129435",
+      "name": "Fine mapping and characterization of the 8q24 prostate cancer risk locus",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA129435"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA116337",
+      "name": "Molecular Signatures of Lethal and Indolent Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA116337"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA085912",
+      "name": "Functional Analysis of the PTEN Tumor Suppressor Protein",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA085912"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA186786",
+      "name": "Michigan Prostate SPORE 2025-2030",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA186786"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA097186",
+      "name": "Developmental Research Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA097186"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA092629",
+      "name": "SPORE in Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA092629"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA090381",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA090381"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA069568",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA069568"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA006516",
+      "name": "Dana-Farber/Harvard Cancer Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA006516"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA163227",
+      "name": "Androgen Receptor Action in Castration Resistant Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA163227"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA188615",
+      "name": "Resistance to Emerging Androgen Deprivation Therapies in Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA188615"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "RNA sequencing expression",
+    "Structural variants / fusions"
+  ]
+}

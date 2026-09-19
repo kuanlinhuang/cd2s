@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-utuc-mskcc-2015",
+  "alternateName": "Upper Tract Urothelial Cancer (MSK, Eur Urol 2015)",
+  "description": "Next-generation sequencing (MSK-IMPACT) on all protein-coding exons of 300 cancer associated genes of 85 Upper Tract Urothelial Carcinoma tumor samples and paired normals.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-utuc-mskcc-2015",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

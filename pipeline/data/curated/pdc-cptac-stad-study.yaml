@@ -1,0 +1,141 @@
+id: pdc-cptac-stad-study
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - >-
+      PDC study identifiers are almost never quoted in the literature, so the reuse figure
+      on this page is close to uninformative. A manual review of gastric proteogenomics
+      papers would give a better estimate than any citation-based method.
+one_liner: >-
+  193 gastric cancers measured seven ways - proteome, phosphoproteome, acetylome,
+  glycoproteome, ubiquitylome, metabolome and protein-protein interaction - the deepest
+  single-cohort molecular characterization in the NCI portfolio, and openly downloadable.
+summary: >-
+  The CPTAC gastric cancer study is the most extensively measured cohort indexed here. Four
+  of its seven layers - acetylome, glycoproteome, ubiquitylome and metabolome - exist in
+  fewer than twenty NCI cohorts each, and the combination on a single set of 193 tumors
+  exists nowhere else. Ubiquitylation data on 184 cases is particularly scarce: only five
+  studies in the entire Proteomic Data Commons carry it.
+
+  It is also a clear illustration of why reuse measurement is hard. All of it is openly
+  downloadable with no account, and yet a literature search for its accession finds almost
+  nothing - because authors cite the marker paper, not the PDC study identifier. The
+  absence of citation evidence here says more about how proteomics data are referenced than
+  about whether anyone has used them.
+useful_for:
+  - question: >-
+      How do distinct post-translational modification layers diverge from each other and
+      from transcript abundance on the same tumors?
+    rationale: >-
+      Phosphorylation, acetylation, glycosylation and ubiquitylation are measured on largely
+      the same 184 to 193 tumors. Comparing regulation across four modification types on
+      one cohort is an analysis this dataset uniquely enables; almost every other resource
+      offers at most two.
+    required_modalities: [proteome, phosphoproteome, acetylproteome, glycoproteome, ubiquitylome]
+    feasibility: direct
+    approx_n: 184
+    statistical_note: >-
+      Each layer has its own missingness pattern from mass spectrometry. Do not impute
+      across layers; restrict to features quantified in a pre-specified fraction of samples
+      and report that threshold.
+    topics: [post-translational-modification, proteogenomics, gastric]
+  - question: >-
+      Does protein degradation signaling, read from the ubiquitylome, identify tumor
+      subgroups invisible to transcriptomics?
+    rationale: >-
+      Ubiquitylome data on 184 cases is among the largest such datasets anywhere. Degradation
+      is a major regulatory axis that expression data cannot see, and a cohort this size
+      makes subgroup discovery feasible rather than anecdotal.
+    required_modalities: [ubiquitylome, proteome]
+    feasibility: direct
+    approx_n: 184
+    statistical_note: >-
+      Ubiquitylation site quantification is sparser than proteome quantification; expect to
+      lose a substantial fraction of sites to the completeness filter.
+    topics: [protein-degradation, subtype-discovery]
+  - question: >-
+      How does tumor metabolism, measured directly rather than inferred, relate to
+      signaling state?
+    rationale: >-
+      Metabolomics on 187 cases is available alongside the phosphoproteome, so metabolic
+      state can be related to signaling directly instead of being inferred from enzyme
+      transcript levels - which is what most metabolic analyses in cancer actually do.
+    required_modalities: [metabolome, phosphoproteome]
+    feasibility: direct
+    approx_n: 187
+    topics: [metabolism, signaling]
+  - question: >-
+      Can measured protein-protein interaction data improve network inference over
+      correlation-based approaches?
+    rationale: >-
+      Interaction data on 153 cases is exceptionally rare in a tumor cohort, and provides a
+      measured reference against which inferred co-expression networks can be scored.
+    required_modalities: [other, proteome]
+    feasibility: direct
+    approx_n: 153
+    topics: [networks, methods-benchmarking]
+limitations:
+  - kind: missing_data
+    statement: >-
+      The PDC record carries no clinical annotation: no survival, no treatment, no stage and
+      no demographics are exposed through the study metadata.
+    severity: blocking
+    affected_analyses: [Survival analysis, Treatment-response analysis, Clinical correlation of any kind]
+    mitigation: >-
+      Clinical data for CPTAC cohorts are distributed through the Genomic Data Commons and
+      the CPTAC data portal rather than PDC. Retrieve them separately and join on the case
+      identifier before attempting any clinical claim.
+  - kind: harmonization
+    statement: >-
+      Each analytical fraction is a separate PDC study with its own sample set, so the
+      seven layers do not cover an identical group of tumors - case counts range from 153
+      to 193.
+    severity: major
+    affected_analyses: [Complete-case multi-layer integration]
+    mitigation: >-
+      Build the intersection explicitly and report it. A complete-case analysis across all
+      seven layers will be substantially smaller than 193.
+  - kind: batch_technical
+    statement: >-
+      Layers were acquired with different enrichment chemistries and instrument methods, so
+      batch structure differs between them and does not cancel out on integration.
+    severity: major
+    affected_analyses: [Cross-layer integration, Unsupervised clustering]
+    mitigation: Model layer-specific batch covariates; do not concatenate raw intensities.
+  - kind: population_coverage
+    statement: Demographics are not exposed in the PDC study metadata.
+    severity: major
+    affected_analyses: [Any population-stratified analysis]
+    mitigation: Obtain demographics from the GDC records for the corresponding CPTAC cases.
+inappropriate_uses:
+  - statement: Survival or prognostic analysis using PDC data alone.
+    reason: No outcome variable is distributed with these studies.
+  - statement: Treating the seven layers as a complete-case multi-omic matrix without checking overlap.
+    reason: Case counts differ by layer; the naive intersection is smaller than any single layer.
+access_steps:
+  - order: 1
+    action: Browse the study in the PDC portal
+    detail: No account is required. All seven fractions are openly downloadable.
+    url: https://pdc.cancer.gov/pdc/browse
+    est_time: 30 minutes
+  - order: 2
+    action: Pull the study manifest from the PDC GraphQL API
+    detail: The API is public and needs no key, which makes this cohort unusually easy to script against.
+    est_time: 1 hour
+    cli_snippet: |
+      curl -s https://proteomic.datacommons.cancer.gov/graphql \
+        -H 'Content-Type: application/json' \
+        -d '{"query":"{ allPrograms { name projects { name studies { pdc_study_id study_name analytical_fraction experiment_type cases_count } } } }"}' \
+        | python3 -m json.tool | grep -A4 'CPTAC STAD'
+  - order: 3
+    action: Retrieve the matching clinical and genomic data from the GDC
+    detail: >-
+      This is the step people skip. Without it the proteomic layers have no clinical context
+      at all.
+    url: https://portal.gdc.cancer.gov/projects/CPTAC-3
+    est_time: 2-3 hours
+tags: [scarce-modality, proteogenomics, multi-omic, open-access, gastric]

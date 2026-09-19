@@ -1,0 +1,136 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-broad",
+  "name": "Skin Cutaneous Melanoma (Broad, Cell 2012)",
+  "alternateName": [
+    "skcm_broad"
+  ],
+  "description": "Whole-exome sequencing of 121 melanoma samples with matched normals.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-broad",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=skcm_broad"
+  ],
+  "keywords": [
+    "Cutaneous Melanoma",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "mel",
+    "nci-funded",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=skcm_broad",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-skcm-broad.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/22817889/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009172",
+      "name": "Physician Scientist Training in Cancer Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009172"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R33CA126674",
+      "name": "High-throughput oncogene mutation detection in human cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R33CA126674"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA093947",
+      "name": "The genetic Basis of Melanoma Metastasis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA093947"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA093459",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA093459"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016672",
+      "name": "Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016672"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)"
+  ]
+}

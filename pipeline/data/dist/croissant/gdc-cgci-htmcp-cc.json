@@ -1,0 +1,255 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "gdc-cgci-htmcp-cc",
+  "alternateName": "HIV+ Tumor Molecular Characterization Project - Cervical Cancer",
+  "description": "The HIV+ Tumor Molecular Characterization Project (HTMCP) cervical cancer cohort was assembled to study how HIV infection shapes cervical carcinoma in a population where both diseases are common. It is one of very few NCI-supported genomic cohorts whose participants are almost entirely Black African women recruited outside the United States, and that makes it structurally different from every other cervical cancer resource in the portfolio. The cohort carries whole genome sequencing on 124 cases, RNA sequencing on 123, methylation arrays on 120, microRNA on 118, and both histopathology and radiology images on 211 - an unusually complete multimodal picture for a cohort of this size and origin.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cgci-htmcp-cc",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Analysis of Ugandan cervical carcinomas identifies human papillomavirus clade-specific epigenome and transcriptome landscapes",
+  "version": "as-retrieved",
+  "datePublished": "2020-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.sex_at_birth",
+          "name": "Sex at birth",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.race",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 97.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.ethnicity",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 47.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.vital_status",
+          "name": "Vital status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.cause_of_death",
+          "name": "Cause of death",
+          "description": "Category: outcome. Populated for 54.7% of cases; informative (excluding non-answers) for 9.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.population_group",
+          "name": "Population group",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.country_of_residence_at_enrollment",
+          "name": "Country of residence",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.primary_diagnosis",
+          "name": "Primary diagnosis",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 99.5%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.morphology",
+          "name": "Morphology (ICD-O)",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 98.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tissue_or_organ_of_origin",
+          "name": "Tissue or organ of origin",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_pathologic_stage",
+          "name": "AJCC pathologic stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_clinical_stage",
+          "name": "AJCC clinical stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tumor_grade",
+          "name": "Tumour grade",
+          "description": "Category: pathology. Populated for 98.1% of cases; informative (excluding non-answers) for 98.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_treatment",
+          "name": "Prior treatment",
+          "description": "Category: treatment. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_malignancy",
+          "name": "Prior malignancy",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.synchronous_malignancy",
+          "name": "Synchronous malignancy",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 99.5%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.progression_or_recurrence",
+          "name": "Progression or recurrence",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.last_known_disease_status",
+          "name": "Last known disease status",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.classification_of_tumor",
+          "name": "Classification of tumour",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_type",
+          "name": "Treatment type",
+          "description": "Category: treatment. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_or_therapy",
+          "name": "Treatment given",
+          "description": "Category: treatment. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.therapeutic_agents",
+          "name": "Therapeutic agents",
+          "description": "Category: treatment. Populated for 29.7% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_outcome",
+          "name": "Treatment outcome",
+          "description": "Category: treatment. Populated for 67.9% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.regimen_or_line_of_therapy",
+          "name": "Regimen or line of therapy",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.disease_response",
+          "name": "Disease response at follow-up",
+          "description": "Category: followup. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.progression_or_recurrence",
+          "name": "Progression at follow-up",
+          "description": "Category: followup. Populated for 8.0% of cases; informative (excluding non-answers) for 8.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.ecog_performance_status",
+          "name": "ECOG performance status",
+          "description": "Category: followup. Populated for 99.1% of cases; informative (excluding non-answers) for 98.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.tobacco_smoking_status",
+          "name": "Tobacco smoking status",
+          "description": "Category: exposure. Populated for 99.1% of cases; informative (excluding non-answers) for 99.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.alcohol_history",
+          "name": "Alcohol history",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [
+      "Does HPV clade shape the tumor epigenome and transcriptome differently in an African cohort than in the predominantly North American and European cohorts that define current cervical cancer subtypes?",
+      "Do molecular subtypes derived from predominantly white cohorts transfer to Black African patients, or do they misclassify tumors in this population?",
+      "Which molecular features are associated with performance status and with response to chemoradiation in a setting where platinum-based chemoradiation is the dominant treatment?",
+      "How do survival patterns in this cohort compare with cervical cancer cohorts from high-income settings, given a median follow-up of only 13.2 months?",
+      "Can radiology and histopathology images from this cohort be used to build or validate imaging models on a population that is absent from almost every public imaging training set?"
+    ],
+    "blockingLimitations": [
+      {
+        "kind": "missing_data",
+        "statement": "Tumor stage is not populated for any case in the GDC harmonized clinical records - both AJCC pathologic stage and AJCC clinical stage are empty for all 212 cases. Since stage is the dominant prognostic factor in cervical cancer, any survival model built from these records alone is unadjusted for the single most important covariate.",
+        "rulesOut": [
+          "Multivariable survival modeling",
+          "Prognostic biomarker discovery",
+          "Any comparison of outcomes against staged cohorts"
+        ]
+      }
+    ],
+    "inappropriateUses": [
+      "Estimating cervical cancer incidence or population-level disease burden.",
+      "Stage-adjusted prognostic modeling using only the GDC clinical records.",
+      "Comparing HIV-positive and HIV-negative tumor biology within the cohort."
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+id: gdc-cgci-htmcp-lc
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - HIV status and CD4 count are not structured fields; confirm availability through dbGaP.
+one_liner: >-
+  39 lung cancers from an HIV-enriched cohort, two thirds Black or African American, with
+  whole genome sequencing on every case and clinical staging on 62% - very small, and
+  addressing a population that appears in almost no lung cancer genomics.
+summary: >-
+  People living with HIV have substantially elevated lung cancer incidence and worse
+  outcomes, and are close to absent from the cohorts that define lung cancer genomics. This
+  is the smallest cohort we have made a showcase page for, and we included it because size is
+  not the only thing that determines whether a dataset is worth knowing about.
+
+  All 39 cases carry whole genome sequencing, 38 RNA sequencing and 37 microRNA. 26 patients
+  are recorded as Black or African American. Pathologic stage is recorded for 62% and prior
+  treatment for 92%, both unusually good for a cohort of this size.
+useful_for:
+  - question: >-
+      Does lung cancer arising in people living with HIV differ genomically from lung cancer
+      in the general population?
+    rationale: >-
+      Whole genome sequencing on all 39 cases, contrastable with the large TCGA lung cohorts
+      in the same repository under the same harmonization. Whole genome rather than exome
+      allows mutational signature and structural analysis.
+    required_modalities: [wgs, rna_seq]
+    feasibility: needs_access
+    approx_n: 39
+    statistical_note: >-
+      39 cases supports descriptive comparison of signature burden and recurrent alterations
+      only. Any difference must be large to be detectable, and the comparison cohorts differ
+      in sequencing era and platform.
+    topics: [hiv-associated, lung, health-disparities]
+  - question: Can this cohort serve as a validation set for HIV-associated cancer hypotheses?
+    rationale: >-
+      Alongside the cervical and lymphoma cohorts in the same program, it allows a
+      hypothesis about HIV-associated tumor biology to be tested across three tumor types
+      collected under a common protocol.
+    required_modalities: [wgs, rna_seq]
+    feasibility: needs_linkage
+    approx_n: 39
+    topics: [hiv-associated, cross-cohort]
+  - question: What is the survival experience of this population?
+    rationale: >-
+      Vital status is informative for 89.7% of cases, with follow-up derivable for 36 of 39
+      and extending to 104 months despite a short median of 6.4.
+    required_modalities: [clinical, outcome]
+    feasibility: needs_access
+    approx_n: 35
+    statistical_note: >-
+      35 cases with informative vital status and a 6.4-month median follow-up gives very
+      wide confidence intervals. Report them and avoid median survival estimates.
+    topics: [survival, lung, health-disparities]
+limitations:
+  - kind: statistical_power
+    statement: >-
+      39 cases is the smallest cohort with a showcase page here. Nearly every analysis is
+      underpowered, and no subgroup analysis is viable.
+    severity: blocking
+    affected_analyses: [Discovery, Subgroup comparison, Multivariable modeling]
+    mitigation: >-
+      Use for descriptive characterization or as a validation set for an externally derived
+      hypothesis. Do not attempt discovery.
+  - kind: missing_data
+    statement: >-
+      HIV status, CD4 count and antiretroviral history are not structured fields. Progression
+      and last known disease status are empty for all cases.
+    severity: blocking
+    affected_analyses: [HIV-stratified analysis, Progression-free survival]
+    mitigation: Request the full phenotype file through dbGaP.
+  - kind: treatment_context
+    statement: >-
+      Treatment type is recorded for 92% but therapeutic agents for only 10%, so the specific
+      therapy is unknown for most patients.
+    severity: major
+    affected_analyses: [Treatment-response analysis]
+    mitigation: Restrict to the small subset with agent records and report its size.
+  - kind: access_constraint
+    statement: 804 of 1,184 files are controlled access.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: Submit a dbGaP request.
+inappropriate_uses:
+  - statement: Any statistically powered discovery analysis.
+    reason: 39 cases cannot support it.
+  - statement: Comparing HIV-positive with HIV-negative patients within the cohort.
+    reason: HIV status is not a structured variable in these records.
+access_steps:
+  - order: 1
+    action: Scope with the 380 open-access files
+    url: https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-LC
+    est_time: 30 minutes
+  - order: 2
+    action: Consider analyzing alongside the cervical and lymphoma HTMCP cohorts
+    detail: >-
+      All three share a collection protocol, and together they are considerably more useful
+      than any one alone.
+    est_time: 1 hour
+  - order: 3
+    action: Submit a dbGaP data access request
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [hiv-associated, distinctive-population, lung, small-cohort, underexplored-candidate]

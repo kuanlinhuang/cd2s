@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-ovary-geomx-gray-foundation-2024",
+  "name": "Ovarian Cancer (Gray Foundation, Cancer Discov 2024)",
+  "alternateName": [
+    "ovary_geomx_gray_foundation_2024"
+  ],
+  "description": "Microregion transcriptomic data (GeoMx) and multiplex imaging (CyCIF) for High-Grade Serous ovarian Cancer Cases (HGSOC). This resource was supported by the Gray Foundation.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ovary-geomx-gray-foundation-2024",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=ovary_geomx_gray_foundation_2024"
+  ],
+  "keywords": [
+    "Ovary/Fallopian Tube",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "rna seq",
+    "tissue"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=ovary_geomx_gray_foundation_2024",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-ovary-geomx-gray-foundation-2024.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/39386723/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "P50CA228991",
+      "name": "Core B: Biostatistics Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA228991"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "RNA sequencing expression"
+  ]
+}

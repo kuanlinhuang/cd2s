@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "pdc-cptac-pdac-proteins-in-serum",
+  "alternateName": "CPTAC PDAC Proteins in Serum",
+  "description": "CPTAC PDAC Proteins in Serum",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-pdac-proteins-in-serum",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CPTAC PDAC Proteins in Serum",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

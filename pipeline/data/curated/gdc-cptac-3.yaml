@@ -1,0 +1,130 @@
+id: gdc-cptac-3
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps, primary_publications]
+one_liner: >-
+  1,866 tumors across six cancer types with genomics in the GDC and proteomics in the PDC -
+  the largest prospectively collected proteogenomic cohort, with recurrence recorded for 78%
+  of cases.
+summary: >-
+  CPTAC-3 is the genomic half of a cohort whose proteomic half lives in a different
+  repository. That split is the single most important practical fact about it: the GDC record
+  carries exome on 1,844 cases, whole genome on 1,827, RNA sequencing on 1,824 and
+  methylation on 1,817, while proteome, phosphoproteome and the scarcer modification layers
+  are distributed through the Proteomic Data Commons under different study identifiers.
+
+  Its clinical annotation is unusually strong for a multi-cancer cohort. Vital status is
+  informative for 95.8%, progression or recurrence for 77.9%, and last known disease status
+  for 77.2% - which makes recurrence-based endpoints genuinely available, not just nominally
+  present.
+primary_publications:
+  - pmid: "32649874"
+    title: >-
+      Proteogenomic Characterization Reveals Therapeutic Vulnerabilities in Lung
+      Adenocarcinoma
+    journal: Cell
+    year: 2020
+    url: https://pubmed.ncbi.nlm.nih.gov/32649874/
+useful_for:
+  - question: Which genomic alterations have consequences at the protein level, and which do not?
+    rationale: >-
+      This is the question CPTAC exists to answer, and it needs both halves joined. Genomics
+      on over 1,800 cases here pairs with proteomic studies in the PDC on the same
+      participants, allowing copy number and mutation effects to be traced to protein and
+      phosphosite abundance.
+    required_modalities: [wxs, rna_seq, proteome, phosphoproteome]
+    feasibility: needs_linkage
+    approx_n: 1000
+    statistical_note: >-
+      The proteomic layers cover subsets of the cohort organized by cancer type, so the joined
+      analysis is substantially smaller than 1,866 and varies by tumor type. Build the
+      intersection first.
+    topics: [proteogenomics, multi-omic]
+    exemplar_pmid: "32649874"
+  - question: What molecular features predict recurrence across cancer types?
+    rationale: >-
+      Progression or recurrence is informative for 77.9% of 1,866 cases with a median
+      follow-up of 22.8 months - unusual completeness for a recurrence endpoint, and the basis
+      for a genuinely pan-cancer recurrence analysis.
+    required_modalities: [rna_seq, wxs, outcome]
+    required_fields: [diagnoses.progression_or_recurrence, demographic.vital_status]
+    feasibility: needs_access
+    approx_n: 1453
+    statistical_note: >-
+      Pan-cancer recurrence pooling mixes very different natural histories; stratify by tumor
+      type and treat the pooled estimate as secondary.
+    topics: [recurrence, prognosis, pan-cancer]
+  - question: Do proteogenomic subtypes cut across tissue of origin?
+    rationale: >-
+      Six cancer types collected prospectively under a common protocol make cross-tissue
+      subtype comparison less confounded by collection differences than a retrospective
+      pan-cancer assembly.
+    required_modalities: [proteome, rna_seq]
+    feasibility: needs_linkage
+    approx_n: 1000
+    topics: [pan-cancer, molecular-subtypes, proteogenomics]
+limitations:
+  - kind: harmonization
+    statement: >-
+      The proteomic data that define this cohort's purpose are not in this record. They are
+      distributed through the Proteomic Data Commons as separate per-fraction studies with
+      their own identifiers, and joining them is the analyst's responsibility.
+    severity: blocking
+    affected_analyses: [Any proteogenomic analysis]
+    mitigation: >-
+      Retrieve the corresponding PDC studies and join on case identifier. Budget real time for
+      this; it is the most common place CPTAC reuse stalls.
+  - kind: treatment_context
+    statement: >-
+      Treatment type is populated for 52.7% of cases and therapeutic agents for only 4.1%, so
+      treatment context is thin relative to the outcome annotation.
+    severity: major
+    affected_analyses: [Treatment-response analysis, Treatment-adjusted prognosis]
+    mitigation: Restrict treatment claims to the subset with agent-level records, and report its size.
+  - kind: population_coverage
+    statement: >-
+      1,496 of 1,866 cases are recorded as white, 244 as Asian and only 22 as Black or African
+      American. The Asian representation reflects international collection sites.
+    severity: major
+    affected_analyses: [Disparities research involving Black patients]
+    mitigation: >-
+      22 cases cannot support conclusions about Black patients. The Asian subgroup is large
+      enough for some comparisons but is confounded with collection site.
+  - kind: statistical_power
+    statement: Six cancer types means per-type sample sizes in the low hundreds.
+    severity: major
+    affected_analyses: [Type-specific discovery]
+    mitigation: Pool for discovery and validate per type, or use hierarchical models.
+  - kind: access_constraint
+    statement: A large share of the 110,077 files are controlled access.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: >-
+      The PDC proteomic half is entirely open, so the proteomic analysis can begin before
+      genomic access is approved.
+inappropriate_uses:
+  - statement: Describing this as a proteogenomic dataset without retrieving the PDC studies.
+    reason: This GDC record contains no proteomic data.
+  - statement: Conclusions about Black patients.
+    reason: 22 cases is far too few.
+access_steps:
+  - order: 1
+    action: Decide which half you need first
+    detail: >-
+      The proteomic half is open and immediately usable; the genomic half is largely
+      controlled. If your question is proteomic, start at the PDC and avoid the access delay
+      entirely.
+    est_time: 30 minutes
+  - order: 2
+    action: Retrieve the matching PDC studies
+    url: https://pdc.cancer.gov/pdc/browse
+    est_time: 2-3 hours
+  - order: 3
+    action: Submit a dbGaP request for the controlled genomic tier
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [proteogenomics, pan-cancer, recurrence, cross-repository]

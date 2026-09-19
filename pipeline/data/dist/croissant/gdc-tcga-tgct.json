@@ -1,0 +1,235 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "gdc-tcga-tgct",
+  "alternateName": "Testicular Germ Cell Tumors",
+  "description": "More than 90% of testicular cancer start in the germ cells, which are cells in the testicles and develop into sperm. This type of cancer is known as testicular germ cell cancer. Testicular germ cell cancer can be classified as either seminomas or nonseminomas, which may be identified by microscopy. Nonseminomas typically grow and spread more quickly than seminomas. A testicular germ cell tumor that contains a mix of both these subtypes is classified as a nonseminoma. TCGA studied both seminomas and nonseminomas. Testicular germ cell cancer is rare, comprising 1-2% of all tumors in males. However, it is the most common cancer in men ages 15 to 35. The incidence of testicular germ cell cancer has been continuously rising in many countries, including Europe and the U.S. In 2013, about 8,000 American men were estimated to be diagnosed with the cancer. Of those, 370 are predicted to die from the disease. Men who are Caucasian, have an undescended testicle, abnormally developed testicles, or a family history of testicular cancer have a greater risk of developing testicular cancer. Fortunately, testicular germ cell cancer is highly treatable. Please see the DICOM converted Slide Microscopy images for the TCGA-TGCT collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-tgct",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Testicular Germ Cell Tumors",
+  "version": "as-retrieved",
+  "datePublished": "2011-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.sex_at_birth",
+          "name": "Sex at birth",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.race",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 88.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.ethnicity",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 83.3%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.vital_status",
+          "name": "Vital status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 93.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.cause_of_death",
+          "name": "Cause of death",
+          "description": "Category: outcome. Populated for 2.7% of cases; informative (excluding non-answers) for 2.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.population_group",
+          "name": "Population group",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.country_of_residence_at_enrollment",
+          "name": "Country of residence",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.primary_diagnosis",
+          "name": "Primary diagnosis",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.morphology",
+          "name": "Morphology (ICD-O)",
+          "description": "Category: pathology. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tissue_or_organ_of_origin",
+          "name": "Tissue or organ of origin",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_pathologic_stage",
+          "name": "AJCC pathologic stage",
+          "description": "Category: staging. Populated for 92.4% of cases; informative (excluding non-answers) for 92.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_clinical_stage",
+          "name": "AJCC clinical stage",
+          "description": "Category: staging. Populated for 90.5% of cases; informative (excluding non-answers) for 90.5%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tumor_grade",
+          "name": "Tumour grade",
+          "description": "Category: pathology. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_treatment",
+          "name": "Prior treatment",
+          "description": "Category: treatment. Populated for 93.9% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_malignancy",
+          "name": "Prior malignancy",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 93.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.synchronous_malignancy",
+          "name": "Synchronous malignancy",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.progression_or_recurrence",
+          "name": "Progression or recurrence",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.last_known_disease_status",
+          "name": "Last known disease status",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.classification_of_tumor",
+          "name": "Classification of tumour",
+          "description": "Category: pathology. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_type",
+          "name": "Treatment type",
+          "description": "Category: treatment. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_or_therapy",
+          "name": "Treatment given",
+          "description": "Category: treatment. Populated for 100.0% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.therapeutic_agents",
+          "name": "Therapeutic agents",
+          "description": "Category: treatment. Populated for 37.6% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_outcome",
+          "name": "Treatment outcome",
+          "description": "Category: treatment. Populated for 63.1% of cases; informative (excluding non-answers) for 61.6%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.regimen_or_line_of_therapy",
+          "name": "Regimen or line of therapy",
+          "description": "Category: treatment. Populated for 0.8% of cases; informative (excluding non-answers) for 0.8%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.disease_response",
+          "name": "Disease response at follow-up",
+          "description": "Category: followup. Populated for 93.9% of cases; informative (excluding non-answers) for 90.1%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.progression_or_recurrence",
+          "name": "Progression at follow-up",
+          "description": "Category: followup. Populated for 13.7% of cases; informative (excluding non-answers) for 13.7%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.ecog_performance_status",
+          "name": "ECOG performance status",
+          "description": "Category: followup. Populated for 76.8% of cases; informative (excluding non-answers) for 75.3%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.tobacco_smoking_status",
+          "name": "Tobacco smoking status",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.alcohol_history",
+          "name": "Alcohol history",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-rcc-iatlas-immotion150-2018",
+  "name": "Renal Cell Carcinoma (IMmotion150 Clinical Trial, Nat Med. 2018) - iAtlas Harmonized",
+  "alternateName": [
+    "rcc_iatlas_immotion150_2018"
+  ],
+  "description": "A randomized phase 2 study of atezolizumab (anti-PD-L1) alone or combined with bevacizumab (anti-VEGF) versus sunitinib in 263 patients with treatment-naive metastatic renal cell carcinoma. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-rcc-iatlas-immotion150-2018",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=rcc_iatlas_immotion150_2018"
+  ],
+  "keywords": [
+    "Renal Cell Carcinoma",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "kidney",
+    "nci-funded",
+    "rna seq",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=rcc_iatlas_immotion150_2018",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-rcc-iatlas-immotion150-2018.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/29867230/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "P50CA101942",
+      "name": "DF/HCC Kidney Cancer Project 2: Optimizing Anti-PD1 Based Therapy in High Risk and Metastatic RCC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA101942"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA068485",
+      "name": "Survey and Biospecimen Shared Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA068485"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA014599",
+      "name": "Integrated Small Animal Imaging Research Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA014599"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "RNA sequencing expression"
+  ]
+}

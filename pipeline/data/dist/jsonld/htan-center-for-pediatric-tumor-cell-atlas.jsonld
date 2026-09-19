@@ -1,0 +1,156 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-center-for-pediatric-tumor-cell-atlas",
+  "name": "Center for Pediatric Tumor Cell Atlas",
+  "alternateName": [
+    "HTA4"
+  ],
+  "description": "Center for Pediatric Tumor Cell Atlas",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-center-for-pediatric-tumor-cell-atlas",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA4%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn39246524",
+    "https://www.synapse.org/#!Synapse:syn39247066",
+    "https://www.synapse.org/#!Synapse:syn39247085",
+    "https://www.synapse.org/#!Synapse:syn39247103",
+    "https://www.synapse.org/#!Synapse:syn39247123",
+    "https://www.synapse.org/#!Synapse:syn39247148",
+    "https://www.synapse.org/#!Synapse:syn39247186",
+    "https://www.synapse.org/#!Synapse:syn39247218",
+    "https://www.synapse.org/#!Synapse:syn39247252",
+    "https://www.synapse.org/#!Synapse:syn39247346",
+    "https://www.synapse.org/#!Synapse:syn39247437"
+  ],
+  "keywords": [
+    "bulk dna",
+    "htan",
+    "rare-modality",
+    "scatac seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Children\u2019s Hospital of Philadelphia"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-center-for-pediatric-tumor-cell-atlas.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Single-cell multiomics reveals increased plasticity, resistant populations, and stem-cell-like blasts in KMT2A-rearranged leukemia",
+      "identifier": "https://doi.org/10.1182/blood.2021013442",
+      "datePublished": "2022"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Identification and characterization of chemotherapy resistant high-risk neuroblastoma persister cells",
+      "identifier": "https://doi.org/10.1158/2159-8290.cd-24-0046",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A longitudinal single-cell and spatial multiomic atlas of pediatric high-grade glioma",
+      "identifier": "https://doi.org/10.1016/j.xcrm.2026.102766",
+      "datePublished": "2026"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Longitudinal single-cell multiomic atlas of high-risk neuroblastoma reveals chemotherapy-induced tumor microenvironment rewiring",
+      "identifier": "https://doi.org/10.1038/s41588-025-02158-6",
+      "datePublished": "2025"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233285",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233285"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Single-cell / single-nucleus RNA sequencing",
+    "Single-cell ATAC sequencing",
+    "Bulk DNA sequencing",
+    "Multiplexed tissue imaging"
+  ]
+}

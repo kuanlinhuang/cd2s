@@ -1,0 +1,126 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mnm-washu-2016",
+  "name": "Acute myeloid leukemia or myelodysplastic syndromes (WashU, 2016)",
+  "alternateName": [
+    "mnm_washu_2016"
+  ],
+  "description": "Enhanced exome or targeted sequencing of 116 acute myeloid leukemia (AML) or myelodysplastic syndromes (MDS) patients' tumor/normal pairs .",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mnm-washu-2016",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=mnm_washu_2016"
+  ],
+  "keywords": [
+    "Myeloid Neoplasm",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "myeloid",
+    "nci-funded",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=mnm_washu_2016",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mnm-washu-2016.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/27959731/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197561",
+      "name": "Molecular Pathogenesis of Acute Myeloid Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197561"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA171963",
+      "name": "Core A: Biospecimen Processing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA171963"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA101937",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA101937"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K12CA167540",
+      "name": "Washington University Paul Calabresi K12 Career Development Award for Clinical Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA167540"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA166229",
+      "name": "HISTONE H3 METHYLATION AND EPIGENOMICS IN ACUTE LEUKEMIA",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA166229"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)"
+  ]
+}

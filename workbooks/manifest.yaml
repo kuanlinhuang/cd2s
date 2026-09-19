@@ -1,0 +1,144 @@
+# Which datasets each workbook demonstrates, and how it should appear on their pages.
+#
+# A workbook is attached to a dataset only when it actually exercises that dataset, so
+# the "runnable workbook" badge on a page always corresponds to code that ran against
+# those data. Execution receipts are read from workbooks/executed/ at build time.
+
+- workbook: 01_can_i_answer_this
+  title: Audit whether this dataset can answer your question
+  level: beginner
+  language: python
+  question: >-
+    Which classes of analysis do this cohort's clinical records actually support, and
+    which are ruled out before I request access?
+  inputs:
+    - A GDC project identifier
+    - Network access to api.gdc.cancer.gov
+  outputs:
+    - Per-field coverage table separating populated from informative values
+    - Assay coverage as a percentage of the cohort
+    - A yes/no verdict for six common analysis classes
+  steps:
+    - Fetch project summary and per-assay case counts
+    - Request facet counts for the clinical fields that gate common analyses
+    - Separate absent fields from fields populated with non-answers
+    - Flag one-to-many fields where per-case percentages cannot be inferred
+    - Retrieve case-level fields and test whether a survival endpoint is derivable
+    - Print a verdict for each analysis class
+  est_runtime: about a minute
+  datasets: [gdc-cgci-htmcp-cc, gdc-fm-ad, gdc-rebc-thyr, gdc-wcdt-mcrpc, gdc-tcga-brca, gdc-mp2prt-all]
+
+- workbook: 02_survival_tcga_brca
+  title: Overall survival from open data, with the endpoint derived correctly
+  level: beginner
+  language: python
+  question: Which molecular and clinical factors are associated with survival?
+  inputs:
+    - Open GDC clinical records, no account required
+    - lifelines, pandas, numpy
+  outputs:
+    - Kaplan-Meier estimates with survival at 12, 36 and 60 months
+    - Log-rank test between stage groups
+    - Multivariable Cox model with concordance
+  steps:
+    - Retrieve case-level clinical fields including all three follow-up locations
+    - Derive time and event, guarding against GDC sentinel values
+    - Report how many cases are dropped and why
+    - Fit Kaplan-Meier and a stage-stratified log-rank test
+    - Fit a multivariable Cox model adjusting for age and stage
+  est_runtime: about two minutes
+  datasets: [gdc-tcga-brca]
+
+- workbook: 03_treatment_response_cervical
+  title: Treatment response, after checking the response field is real
+  level: intermediate
+  language: python
+  question: >-
+    Is performance status associated with response to chemoradiation, and which agents
+    were actually given?
+  inputs:
+    - Open GDC clinical records for CGCI-HTMCP-CC
+    - scipy, pandas
+  outputs:
+    - Separation of genuine response categories from disease-status codes
+    - Per-case responder/progressor labels under a stated rule
+    - Mann-Whitney comparison of ECOG between response groups
+    - Agent frequency table
+  steps:
+    - Facet the two response-bearing fields and classify their values
+    - Collapse one-to-many treatment records to one label per case
+    - Compare performance status between response groups
+    - Tabulate the therapeutic agents actually recorded
+  est_runtime: about a minute
+  datasets: [gdc-cgci-htmcp-cc, gdc-cgci-htmcp-dlbcl, gdc-cgci-htmcp-lc]
+
+- workbook: 04_scarce_modality_cptac
+  title: Find and use the scarcest measurements in the portfolio
+  level: intermediate
+  language: python
+  question: >-
+    Where can I find ubiquitylome, lipidome or metabolome data, and which cohorts carry
+    several scarce layers on the same tumors?
+  inputs:
+    - Public PDC GraphQL API, no account required
+    - pandas
+  outputs:
+    - Scarcity ranking of every analytical fraction
+    - Cohorts carrying two or more scarce layers
+    - Layer overlap bounding a complete-case analysis
+    - Citation counts demonstrating that PDC accessions are not quoted
+  steps:
+    - Enumerate every PDC study through the public GraphQL endpoint
+    - Rank analytical fractions by number of studies
+    - Group per-fraction studies back into biological cohorts
+    - Report the per-layer case counts that bound a complete-case analysis
+    - Query Europe PMC for each accession to show citation tracing is blind here
+  est_runtime: about a minute
+  datasets: [pdc-cptac-stad-study, pdc-cptac-aml-study, pdc-cptac-luad-discovery-study]
+
+- workbook: 05_cross_repository_linkage
+  title: Join the same patients across two NCI repositories
+  level: advanced
+  language: python
+  question: >-
+    Which cohorts have both imaging and molecular data on the same patients, and how many
+    patients actually carry both?
+  inputs:
+    - Open GDC and IDC APIs, no account required
+    - pandas
+  outputs:
+    - Patient-level intersection between a GDC project and an IDC collection
+    - Counts of molecular-only, imaging-only and joined patients
+    - A map of every cohort present in both repositories
+  steps:
+    - Retrieve patient identifiers from the GDC project
+    - Query IDC's public SQL endpoint for the collection's patient identifiers
+    - Intersect on the shared barcode and quantify the overlap
+    - Sweep every GDC project against every IDC collection
+  est_runtime: about two minutes
+  datasets: [gdc-tcga-brca, gdc-tcga-gbm, idc-nsclc-radiogenomics, gdc-hcmi-cmdc]
+
+- workbook: 06_agent_dataset_selection
+  title: Select a dataset the way an agent should
+  level: advanced
+  language: python
+  question: >-
+    Given a research goal, which dataset should an agent choose, and what must it refuse
+    to do with it?
+  inputs:
+    - The Cancer Data Showcase structured export
+    - pandas
+  outputs:
+    - Contrast between a size-ranked and a capability-ranked selection
+    - A transparent fit score favoring under-used resources
+    - Blocking limitations read before committing
+    - A machine-readable task brief for the next step
+  steps:
+    - Load the structured index
+    - Show what a naive size-ranked selection returns
+    - Filter on measured capability rather than description
+    - Rank on fit, rewarding under-used datasets
+    - Read blocking limitations from the full record
+    - Emit a task brief including what the agent must not do
+  est_runtime: under a minute
+  datasets: [gdc-mp2prt-all, gdc-cgci-htmcp-cc, htan-the-cellular-geography-of-therapeutic-resistance-in-cancer]

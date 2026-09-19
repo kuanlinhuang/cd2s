@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mel-iatlas-liu-2019",
+  "name": "Metastatic Melanoma (DFCI, Nat Med. 2019) - iAtlas Harmonized",
+  "alternateName": [
+    "mel_iatlas_liu_2019"
+  ],
+  "description": "Whole-exome sequencing and neoantigen landscape analysis of 122 patients with metastatic melanoma treated with anti-PD1 ICB, along with their matched normal samples. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>. <br><strong>Related Dataset:</strong> This is a harmonized subset of the <a href=\"https://www.cbioportal.org/study/summary?id=mel_dfci_2019\">original 144-sample DFCI study</a> with standardized mutation calling and extended immunogenomics annotations.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mel-iatlas-liu-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=mel_iatlas_liu_2019"
+  ],
+  "keywords": [
+    "Melanoma",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "rna seq",
+    "skin",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=mel_iatlas_liu_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mel-iatlas-liu-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/31792460/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA233100",
+      "name": "Molecular and immune drivers of immunotherapy responsiveness in prostate cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA233100"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA227388",
+      "name": "Integrative Somatic and Germline Computational Biology to Redefine Clinical Actionability in Solid Tumors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA227388"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA234458",
+      "name": "Dissecting Therapeutic Resistance and Progression in Metastatic Melanoma Through Clinical Computational Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA234458"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA222663",
+      "name": "Dissecting mechanisms of immunotherapy resistance in melanoma patients",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA222663"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "RNA sequencing expression"
+  ]
+}

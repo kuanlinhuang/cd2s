@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-gtex",
+  "name": "GTEx",
+  "alternateName": [
+    "gtex"
+  ],
+  "description": "The GTExGenotype-Tissue Expression (GTEx) Project established a data resource and tissue bank to study the relationship between genetic variants and gene expression in multiple human tissues and across individuals. The project included contributions from numerous groups with diverse expertise in biospecimen collection and processing, pathology review, molecular analysis, and data management. The contributors are collectively called the GTEx Consortium. GTEx collected a total of 26,468 unique tissue samples from 50+ different tissue types, from 956 healthy postmortem donors. The standardized biospecimen collection and analysis practices applied during the study served to minimize preanalytical variability associated with specimen-related factors and their potential impact on analytic endpoints. Each GTEx tissue was divided into two tissue blocks, one for histology and one for molecular analysis; both tissue blocks were preserved in PAXgene Tissue Fixative (Qiagen) solution for 6 to 24 hours, followed by PAXgene Tissue Stabilizer (Qiagen) as specified in the project-specific standard operating procedures . Tissue blocks were processed and embedded in paraffin at the GTEx central repository at the Van Andel Institute (MI) and hematoxylin and eosin\u2013stained slides were generated from all GTEx donors. Digitally scanned whole slide images of PAXgene-fixed/stabilized, paraffin-embedded tissue sections were created using Aperio Scanscope software (Leica Biosystems). The digital images were then reviewed and annotated by one of four board-certified pathologists assigned to the GTEx study. There are a total of 25,503 digital histology images in the GTEx collection. Please see the GTEx information page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-gtex",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=gtex",
+    "https://www.cancerimagingarchive.net/collections/",
+    "zenodo:10.5281/zenodo.11099099"
+  ],
+  "keywords": [
+    "Non-diseased",
+    "Various",
+    "clinical",
+    "idc",
+    "imaging",
+    "imaging-genomics",
+    "radiology",
+    "wgs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=gtex",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-gtex.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)",
+    "Genomics (accompanying data, per IDC supporting_data)"
+  ]
+}

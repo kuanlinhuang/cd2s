@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-sclc-jhu",
+  "alternateName": "Small Cell Lung Cancer (Johns Hopkins, Nat Genet 2012)",
+  "description": "Whole exome-sequencing of 80 human SCLCs, including 36 primary SCLC human tumor and adjacent normal sample pairs and 17 paired SCLC cell lines and their patient-matched lymphoblastoid lines, as well as 4 primary SCLC tumors and 23 SCLC cell lines without matched normal controls. Data from Rudin et al., Nat Gene 2012. Sequencing data are publicly available in EGA (EGAS0000100334)",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-sclc-jhu",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

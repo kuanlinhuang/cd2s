@@ -1,0 +1,435 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-organoid-pancreatic",
+  "name": "Pancreas Cancer Organoid Profiling",
+  "alternateName": [
+    "ORGANOID-PANCREATIC"
+  ],
+  "description": "Patient-derived organoids occupy a useful middle ground: they retain patient-specific genomics while remaining experimentally tractable, which tissue cohorts are not. This resource profiles 70 pancreatic cancer organoids with exome sequencing on 69, RNA sequencing on 49 and whole genome on 22, with stage recorded for 84% of the source tumors.\nIts distinctive value is that the source publication paired these molecular profiles with pharmacotyping - measured drug responses - which makes it one of the few NCI resources where genotype can be related to an experimentally measured phenotype rather than to a clinical outcome recorded years later.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-organoid-pancreatic",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/ORGANOID-PANCREATIC",
+    "gdc_program:ORGANOID",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001611"
+  ],
+  "keywords": [
+    "Adenomas and Adenocarcinomas",
+    "Pancreas",
+    "Unknown",
+    "drug-response",
+    "gdc",
+    "model-system",
+    "organoid",
+    "organoids",
+    "pancreatic",
+    "released",
+    "rna seq",
+    "structural variant",
+    "underexplored-candidate",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "ORGANOID"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/ORGANOID-PANCREATIC",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-organoid-pancreatic.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Organoid Profiling Identifies Common Responders to Chemotherapy in Pancreatic Cancer",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/29853643/",
+      "datePublished": "2018"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA209997",
+      "name": "Structural and Functional Biology-based analysis of non-oncogene cancer dependencies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA209997"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180944",
+      "name": "Integrated Translational Cancer Science Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180944"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA274154",
+      "name": "Fibroblast orchestration of the immune response in pancreatic cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA274154"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA224145",
+      "name": "Interrupting Cellular Crosstalk in the Immunosuppressive Microenvironment of Pancreas Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA224145"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA224013",
+      "name": "CSHL-JAX Patient-Derived Models of Pancreatic Cancer as Systems for Investigating Tumor Heterogeneity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA224013"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA210240",
+      "name": "Pancreatic Cancer Detection Consortium",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA210240"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA200468",
+      "name": "Clinical Validation Center for Early Detection of Pancreatic Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA200468"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA168409",
+      "name": "COMPUTATIONAL AND FUNCTIONAL APPROACHES TO VALIDATING CANCER GENOME TARGETS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA168409"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA148056",
+      "name": "CSHL Cancer Gene Discovery and Cancer Biology Postdoctoral Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA148056"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA211506",
+      "name": "Preclinical Models for Cancer Therapeutic Development",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA211506"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA211462",
+      "name": "Critical Resources Provided by UNMC Rapid Autopsy Program (RAP) Biorepository Stimulate Cancer Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA211462"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197745",
+      "name": "Predicting Cancer Cell Response to Endogenous and Exogenous Perturbations at the Single Cell Level",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197745"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R33CA206949",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R33CA206949"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA281198",
+      "name": "Collagen Signaling in Pancreatic Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA281198"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA248160",
+      "name": "Stromal metabolism promotes therapeutic resistance in pancreatic cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA248160"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA247516",
+      "name": "Metaplastic Tuft Cells in Pancreatic Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA247516"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA244931",
+      "name": "Targeting metabolic stress to induce pancreatic tumor cell death",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA244931"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA212600",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA212600"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA202762",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA202762"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA198074",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA198074"
+    }
+  ],
+  "dateModified": "2026-09-18T02:37:04.095031+00:00",
+  "datePublished": "2022-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 98.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 88.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 97.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases, informative for 84.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 84.3% of cases, informative for 80.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Whole exome sequencing",
+    "Bulk RNA sequencing",
+    "Whole genome sequencing",
+    "Structural Variation"
+  ]
+}

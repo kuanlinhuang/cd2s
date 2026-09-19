@@ -1,0 +1,156 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-breast-pre-cancer-atlas",
+  "name": "Breast Pre-Cancer Atlas",
+  "alternateName": [
+    "HTA6"
+  ],
+  "description": "Breast Pre-Cancer Atlas",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-breast-pre-cancer-atlas",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA6%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn39262957",
+    "https://www.synapse.org/#!Synapse:syn39263164",
+    "https://www.synapse.org/#!Synapse:syn39263335",
+    "https://www.synapse.org/#!Synapse:syn39263670",
+    "https://www.synapse.org/#!Synapse:syn39265227",
+    "https://www.synapse.org/#!Synapse:syn39265472",
+    "https://www.synapse.org/#!Synapse:syn39265732",
+    "https://www.synapse.org/#!Synapse:syn39266384",
+    "https://www.synapse.org/#!Synapse:syn39271290",
+    "https://www.synapse.org/#!Synapse:syn39271566",
+    "https://www.synapse.org/#!Synapse:syn39271610"
+  ],
+  "keywords": [
+    "bulk dna",
+    "htan",
+    "rare-modality",
+    "rna seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Duke University"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-breast-pre-cancer-atlas.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Single Cell Expression Analysis of Ductal Carcinoma in Situ Identifies Complex Genotypic-Phenotypic Relationships Altering Epithelial Composition",
+      "identifier": "https://doi.org/10.1158/0008-5472.can-24-3023",
+      "datePublished": "2025"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Transition to invasive breast cancer is associated with progressive changes in the structure and composition of tumor stroma",
+      "identifier": "https://doi.org/10.1016/j.cell.2021.12.023",
+      "datePublished": "2022"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Molecular classification and biomarkers of clinical outcome in breast ductal carcinoma in situ: Analysis of TBCRC 038 and RAHBT cohorts",
+      "identifier": "https://doi.org/10.1016/j.ccell.2022.10.021",
+      "datePublished": "2022"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Analysis of ductal carcinoma in situ by self-reported race reveals molecular differences related to outcome",
+      "identifier": "https://doi.org/10.1186/s13058-024-01885-8",
+      "datePublished": "2024"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233254",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233254"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Bulk DNA sequencing",
+    "Bulk RNA sequencing",
+    "Multiplexed tissue imaging",
+    "Single-cell / single-nucleus RNA sequencing"
+  ]
+}

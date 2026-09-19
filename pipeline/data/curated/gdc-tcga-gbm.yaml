@@ -1,0 +1,113 @@
+id: gdc-tcga-gbm
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - >-
+      The machine-inferred primary publication for this record is a TCGA GBM analysis rather
+      than the cohort's marker paper. Replace with the correct marker citation on next review.
+one_liner: >-
+  617 glioblastomas with twelve measurement types including radiology on 607 and pathology
+  slides on 389 - the reference glioma cohort, with a median follow-up of 12.0 months.
+summary: >-
+  TCGA glioblastoma is the cohort on which most glioma computational biology was built, and
+  1,753 articles reference it in methods or results. Its imaging is its least-used asset:
+  radiology exists for 607 of 617 cases and histopathology for 389, held in the Imaging Data
+  Commons rather than the GDC, which is why most analyses treat it as a molecular-only cohort.
+
+  Its follow-up is the fact most likely to trip up a new user. Median recorded follow-up is
+  12.0 months across 596 of 617 cases, reaching 127 months at the maximum - shorter than
+  many users expect, because it reflects last recorded contact rather than total observation.
+useful_for:
+  - question: >-
+      Do imaging features add prognostic or subtype information beyond molecular data in
+      glioblastoma?
+    rationale: >-
+      Radiology on 607 cases and pathology slides on 389, paired with expression on 293,
+      methylation on 423 and copy number on 599 for the same patients. Glioma is the disease
+      where imaging is most clinically central, and this pairing is openly available.
+    required_modalities: [radiology, histopathology, rna_seq, methylation]
+    feasibility: needs_linkage
+    approx_n: 389
+    statistical_note: >-
+      The intersection of imaging and expression is well below 617; build it explicitly.
+      Imaging is in a separate repository from the molecular data.
+    topics: [multimodal, imaging, glioma]
+  - question: Does a new glioma classifier reproduce established methylation subgroups?
+    rationale: >-
+      Methylation on 423 cases with subgroup definitions established across a large
+      literature makes this the standard validation set for glioma classification.
+    required_modalities: [methylation, rna_seq]
+    feasibility: direct
+    approx_n: 423
+    statistical_note: >-
+      Extensive prior use means good performance here is weak evidence of generalization.
+    topics: [methods-benchmarking, molecular-subtypes, glioma]
+  - question: Which molecular features associate with survival in glioblastoma?
+    rationale: >-
+      Vital status is informative for 96.3% of 617 cases, giving a clean overall survival
+      endpoint on a well-characterized cohort.
+    required_modalities: [rna_seq, methylation, clinical, outcome]
+    feasibility: direct
+    approx_n: 594
+    statistical_note: >-
+      Follow-up time is recorded across three different GDC fields and is null in the most
+      obvious one; derive it from days to death, follow-up records and diagnosis records
+      together, and state your derivation.
+    topics: [survival, glioma]
+limitations:
+  - kind: missing_data
+    statement: >-
+      Progression or recurrence is populated for 0.6% of cases and informative for none,
+      so progression-free survival cannot be derived at all.
+    severity: blocking
+    affected_analyses: [Progression-free survival, Recurrence biology]
+    mitigation: Restrict to overall survival, derived from vital status and days to death.
+  - kind: treatment_context
+    statement: >-
+      Treatment type is recorded for 94% and therapeutic agents for 72%, but the cohort spans
+      an era in which standard therapy changed, and treatment is unrandomised.
+    severity: major
+    affected_analyses: [Treatment-response claims, Predictive biomarkers]
+    mitigation: Adjust for enrolment era; frame findings as associative.
+  - kind: statistical_power
+    statement: >-
+      Molecular coverage is uneven - expression 293, exome 401, ATAC 9 - so multi-omic
+      analyses run on much less than 617 cases.
+    severity: major
+    affected_analyses: [Multi-omic integration]
+    mitigation: Build the intersection first; note that ATAC covers 9 cases only.
+  - kind: platform_obsolescence
+    statement: Methylation and copy number rely on platforms no longer in routine use.
+    severity: minor
+    affected_analyses: [Integration with contemporary cohorts]
+    mitigation: Restrict to shared features.
+  - kind: population_coverage
+    statement: 507 of 617 patients are recorded as white and 51 as Black or African American.
+    severity: major
+    affected_analyses: [Disparities research]
+    mitigation: Limited power for race-stratified analysis.
+inappropriate_uses:
+  - statement: Progression-free survival analysis.
+    reason: Progression is informative for no case in the record.
+  - statement: Claiming a classifier generalizes from TCGA-GBM performance alone.
+    reason: The cohort has been used extensively for method development.
+access_steps:
+  - order: 1
+    action: Download open derived molecular files from the GDC
+    url: https://portal.gdc.cancer.gov/projects/TCGA-GBM
+    est_time: 1 hour
+  - order: 2
+    action: Add imaging from the Imaging Data Commons
+    detail: Openly available for the same patients, and the cohort's most under-used asset.
+    url: https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=tcga_gbm
+    est_time: 1-2 hours
+  - order: 3
+    action: Request controlled access only for sequence-level work
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [reference-cohort, multimodal, imaging, glioma]

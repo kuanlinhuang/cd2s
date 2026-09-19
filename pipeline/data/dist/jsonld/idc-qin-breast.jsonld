@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-qin-breast",
+  "name": "QIN-BREAST",
+  "alternateName": [
+    "qin_breast"
+  ],
+  "description": "This collection contains longitudinal PET/CT and quantitative MR images collected for the purpose of studying treatment assessment in breast cancer in the neoadjuvant setting. Images were acquired at three time points: prior to the start of treatment (t1), after the first cycle of treatment (t2), and either after the second cycle of treatment or at the completion of all treatments (prior to surgery) (t3). The PET/CT images were acquired with a support device built in-house to allow the patient to be in the prone position to facilitate registration with the MRI data. The value of this collection is to provide clinical imaging data for the development and evaluation of quantitative imaging methods for treatment assessment early in the course of therapy for breast cancer. An extension of this dataset is available via the QIN-BREAST-02 collection. Please see the QIN-Breast wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-qin-breast",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_breast",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/TCIA.2019.4cfm06rr",
+    "doi:10.7937/K9/TCIA.2016.21JUebH0"
+  ],
+  "keywords": [
+    "Breast",
+    "Breast Cancer",
+    "clinical",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_breast",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-qin-breast.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

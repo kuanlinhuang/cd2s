@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
+  "alternateName": "PTRC BRCA CALGB40601 Neoadjuvant Trial",
+  "description": "PTRC BRCA CALGB40601 Neoadjuvant Trial",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Proteogenomic analysis of the CALGB 40601 (Alliance) HER2+ breast cancer neoadjuvant trial reveals resistance biomarkers.",
+  "version": "as-retrieved",
+  "datePublished": "2025-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

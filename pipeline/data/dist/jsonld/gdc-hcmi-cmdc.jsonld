@@ -1,0 +1,366 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-hcmi-cmdc",
+  "name": "NCI Cancer Model Development for the Human Cancer Model Initiative",
+  "alternateName": [
+    "hcmi_cmdc"
+  ],
+  "description": "The Human Cancer Models Initiative exists to replace ageing immortalised cell lines with models that retain patient genomics and come with their source tumor characterized. Coverage is exceptionally uniform: whole genome on 804 of 805, RNA sequencing on 781, exome on 721, methylation on 703, and both histopathology and radiology on 382.\nIts distinctive value is breadth across tumor types, including rare cancers that have no established model system at all. Prior treatment is recorded for 92% of donors, which matters because it determines what the derived model actually represents.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-hcmi-cmdc",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/HCMI-CMDC",
+    "gdc_program:HCMI",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001486",
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=hcmi_cmdc",
+    "https://www.cancerimagingarchive.net/collections/",
+    "zenodo:10.5281/zenodo.17381441"
+  ],
+  "keywords": [
+    "Acinar Cell Neoplasms",
+    "Adenomas and Adenocarcinomas",
+    "Adrenal gland",
+    "Bladder",
+    "Blood Vessel Tumors",
+    "Bones, joints and articular cartilage of other and unspecified sites",
+    "Brain",
+    "Breast",
+    "Bronchus and lung",
+    "Colon",
+    "Complex Epithelial Neoplasms",
+    "Complex Mixed and Stromal Neoplasms",
+    "Connective, subcutaneous and other soft tissues",
+    "Corpus uteri",
+    "Cystic, Mucinous and Serous Neoplasms",
+    "Ductal and Lobular Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Esophagus",
+    "Eye and adnexa",
+    "Fibromatous Neoplasms",
+    "Gallbladder",
+    "Gliomas",
+    "Hematopoietic and reticuloendothelial systems",
+    "Kidney",
+    "Larynx",
+    "Liver and intrahepatic bile ducts",
+    "Lymph nodes",
+    "Lymphoid Leukemias",
+    "Malignant Lymphomas, NOS or Diffuse",
+    "Mature T- and NK-Cell Lymphomas",
+    "Miscellaneous Bone Tumors",
+    "Myomatous Neoplasms",
+    "Nasal cavity and middle ear",
+    "Neuroepitheliomatous Neoplasms",
+    "Nevi and Melanomas",
+    "Osseous and Chondromatous Neoplasms",
+    "Other and ill-defined sites",
+    "Other and unspecified parts of biliary tract",
+    "Other and unspecified parts of mouth",
+    "Other and unspecified parts of tongue",
+    "Ovary",
+    "Pancreas",
+    "Rectosigmoid junction",
+    "Rectum",
+    "Skin",
+    "Small intestine",
+    "Soft Tissue Tumors and Sarcomas, NOS",
+    "Squamous Cell Neoplasms",
+    "Stomach",
+    "Synovial-like Neoplasms",
+    "Thyroid gland",
+    "Transitional Cell Papillomas and Carcinomas",
+    "Unknown",
+    "Uterus, NOS",
+    "bladder organ",
+    "body of uterus",
+    "brain",
+    "breast",
+    "clinical",
+    "colon",
+    "copy number",
+    "esophagus",
+    "gdc",
+    "hcmi",
+    "histopathology",
+    "idc",
+    "imaging",
+    "kidney",
+    "liver",
+    "lung",
+    "methylation",
+    "mirna",
+    "model-systems",
+    "multi-tumor",
+    "organoids",
+    "ovary",
+    "pancreas",
+    "radiology",
+    "rare-cancers",
+    "rectum",
+    "released",
+    "rna seq",
+    "skin of body",
+    "stomach",
+    "structural variant",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "HCMI"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/HCMI-CMDC",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-hcmi-cmdc.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Patient-Derived Triple-Negative Breast Cancer Organoids Provide Robust Model Systems That Recapitulate Tumor Intrinsic Characteristics.",
+      "identifier": "https://doi.org/10.1158/0008-5472.can-21-2807",
+      "datePublished": "2022"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "R01CA292376",
+      "name": "Functional and molecular characterization of Oncofetal Stem Cells in CRC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA292376"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA196521",
+      "name": "Bioinformatics for Next Generation Sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA196521"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA272485",
+      "name": "Triggering a New Cancer Cell Death Mechanism in Sarcoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA272485"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA124435",
+      "name": "Biostatistics",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA124435"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA230220",
+      "name": "Targeting casein kinase 1-alpha for cancer therapy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA230220"
+    }
+  ],
+  "dateModified": "2026-09-18T02:35:55.276335+00:00",
+  "datePublished": "2022-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 45.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 43.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 59.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 23.2% of cases, informative for 20.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases, informative for 99.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 42.6% of cases, informative for 41.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 29.2% of cases, informative for 27.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 61.4% of cases, informative for 60.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 91.7% of cases, informative for 88.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 99.1% of cases, informative for 73.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 24.5% of cases, informative for 24.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 75.7% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 100.0% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 55.9% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 16.9% of cases, informative for 15.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 17.6% of cases, informative for 17.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 61.1% of cases, informative for 52.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 64.6% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 7.3% of cases, informative for 1.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 87.1% of cases, informative for 87.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Clinical",
+    "Whole genome sequencing",
+    "Bulk RNA sequencing",
+    "Whole exome sequencing",
+    "DNA methylation array",
+    "Copy Number Variation",
+    "Somatic Structural Variation",
+    "microRNA sequencing",
+    "Whole-slide tissue images",
+    "DICOM medical imaging"
+  ]
+}

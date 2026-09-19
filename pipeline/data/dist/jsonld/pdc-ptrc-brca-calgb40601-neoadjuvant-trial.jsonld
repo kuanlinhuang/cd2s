@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
+  "name": "PTRC BRCA CALGB40601 Neoadjuvant Trial",
+  "alternateName": [
+    "PTRC BRCA CALGB40601 Neoadjuvant Trial - Phosphoproteome",
+    "PTRC BRCA CALGB40601 Neoadjuvant Trial - Proteome"
+  ],
+  "description": "PTRC BRCA CALGB40601 Neoadjuvant Trial",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000583",
+    "https://pdc.cancer.gov/pdc/study/PDC000582"
+  ],
+  "keywords": [
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000583",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-ptrc-brca-calgb40601-neoadjuvant-trial.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Proteogenomic analysis of the CALGB 40601 (Alliance) HER2+ breast cancer neoadjuvant trial reveals resistance biomarkers.",
+      "identifier": "https://doi.org/10.1016/j.xcrm.2025.102154",
+      "datePublished": "2025"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2025-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Phosphoproteome mass spectrometry (TMT16 / DDA)",
+    "Proteome mass spectrometry (TMT16 / DDA)"
+  ]
+}

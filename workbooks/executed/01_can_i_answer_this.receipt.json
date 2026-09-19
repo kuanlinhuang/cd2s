@@ -1,0 +1,22 @@
+{
+  "workbook": "01_can_i_answer_this",
+  "executed": true,
+  "executed_at": "2026-09-18T14:36:57.616926+00:00",
+  "runtime_seconds": 1.81,
+  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
+  "package_versions": {
+    "python": "3.12.13",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "lifelines": "0.30.0",
+    "scipy": "1.18.1",
+    "requests": "2.34.2",
+    "httpx": "0.28.1"
+  },
+  "n_cells": 5,
+  "n_cells_executed": 5,
+  "output_hash": "fc60cdd5b500682b32678ae536093910",
+  "error": null,
+  "notebook_path": "workbooks/executed/01_can_i_answer_this.ipynb"
+}

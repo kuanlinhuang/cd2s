@@ -1,0 +1,161 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-multi-omic-characterization-of-transformation-of-familial-adenomatous-",
+  "name": "Multi-omic Characterization of Transformation of Familial Adenomatous Polyposis",
+  "alternateName": [
+    "HTA10"
+  ],
+  "description": "Multi-omic Characterization of Transformation of Familial Adenomatous Polyposis",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-multi-omic-characterization-of-transformation-of-familial-adenomatous-",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA10%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn39282161",
+    "https://www.synapse.org/#!Synapse:syn39283342",
+    "https://www.synapse.org/#!Synapse:syn39283525",
+    "https://www.synapse.org/#!Synapse:syn39283683",
+    "https://www.synapse.org/#!Synapse:syn39283850",
+    "https://www.synapse.org/#!Synapse:syn39284405",
+    "https://www.synapse.org/#!Synapse:syn39284881",
+    "https://www.synapse.org/#!Synapse:syn39285152",
+    "https://www.synapse.org/#!Synapse:syn39285191",
+    "https://www.synapse.org/#!Synapse:syn39285223",
+    "https://www.synapse.org/#!Synapse:syn39285399"
+  ],
+  "keywords": [
+    "bulk dna",
+    "hic",
+    "htan",
+    "proteome",
+    "rare-modality",
+    "rna seq",
+    "scatac seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Stanford University"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-multi-omic-characterization-of-transformation-of-familial-adenomatous-.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Single-cell analyses define a continuum of cell state and composition changes in the malignant transformation of polyps to colorectal cancer",
+      "identifier": "https://doi.org/10.1038/s41588-022-01088-x",
+      "datePublished": "2022"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Multiomic analysis of familial adenomatous polyposis reveals molecular pathways associated with early tumorigenesis",
+      "identifier": "https://doi.org/10.1038/s43018-024-00831-z",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Global loss of promoter\u2013enhancer connectivity and rebalancing of gene expression during early colorectal cancer carcinogenesis",
+      "identifier": "https://doi.org/10.1038/s43018-024-00823-z",
+      "datePublished": "2024"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233311",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233311"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233254",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233254"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Multiplexed tissue imaging",
+    "Mass spectrometry proteomics",
+    "Bulk DNA sequencing",
+    "Single-cell ATAC sequencing",
+    "Single-cell / single-nucleus RNA sequencing",
+    "Bulk RNA sequencing",
+    "Hi-C chromatin conformation"
+  ]
+}

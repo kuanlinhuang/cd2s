@@ -1,0 +1,110 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-sarc-mskcc",
+  "name": "Sarcoma (MSKCC/Broad, Nat Genet 2010)",
+  "alternateName": [
+    "sarc_mskcc"
+  ],
+  "description": "Sanger-sequenced 226 protein-coding genes (3,849 exons and adjacent intronic) on 207 samples (with 205 matched normals) encompassing 7 major sarcoma subtypes.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-sarc-mskcc",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=sarc_mskcc"
+  ],
+  "keywords": [
+    "Soft Tissue",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "rna seq",
+    "targeted dna",
+    "tissue"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=sarc_mskcc",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-sarc-mskcc.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/20601955/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "P50CA140146",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA140146"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA047179",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA047179"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA122833",
+      "name": "High-resolution genome-wide mapping of structural mutations in prostate cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA122833"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "Microarray expression"
+  ]
+}

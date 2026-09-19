@@ -1,0 +1,116 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-eay131",
+  "name": "EAY131",
+  "alternateName": [
+    "eay131"
+  ],
+  "description": "This collection contains imaging and clinical data for \"unmatched\" patients who didn't meet the criteria for the genetic sub-studies in the \"Targeted Therapy Directed by Genetic Testing in Treating Patients With Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).\" This trial was sponsored by the National Cancer Institute and performed by the ECOG-ACRIN Cancer Research Group under study numbers NCT02465060 and EAY131. The Study Chair was Keith T Flaherty, MD. Please see the EAY131 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-eay131",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=eay131",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/c5ke-yx42"
+  ],
+  "keywords": [
+    "Adenocarcinoma",
+    "Adrenocortical Carcinoma",
+    "Anal Cancer",
+    "Anal Squamous Cell Carcinoma",
+    "Astrocytoma",
+    "Bladder Cancer",
+    "Brain Cancer",
+    "Breast Cancer",
+    "Cervical Cancer",
+    "Cervical Squamous Cell Carcinoma",
+    "Cholangiocarcinoma",
+    "Colorectal Cancer",
+    "Esophageal Carcinoma",
+    "Ewing sarcoma - Peripheral PNET",
+    "Gastrointestinal Stromal Tumor",
+    "Glioblastoma Multiforme",
+    "Glioma",
+    "Head and Neck Cancer",
+    "Head and Neck Squamous Cell Carcinoma",
+    "Hodgkin Lymphoma",
+    "Kidney Cancer",
+    "Leukemia",
+    "Liver Cancer",
+    "Lung Adenocarcinoma",
+    "Lung Cancer",
+    "Lung Squamous Cell Carcinoma",
+    "Lymphoma",
+    "Melanoma",
+    "Mesothelioma",
+    "Multiple Myeloma",
+    "Nasopharyngeal Cancer",
+    "Neuroendocrine cancer (NOS)",
+    "Non-small Cell Lung Cancer",
+    "Osteosarcoma",
+    "Ovarian Cancer",
+    "Pancreatic Cancer",
+    "Prostate Cancer",
+    "Sarcomas",
+    "Skin Cancer",
+    "Small Cell Lung Cancer",
+    "Squamous Cell Carcinoma",
+    "Thymoma",
+    "Thyroid Cancer",
+    "Urothelial - bladder cancer (NOS)",
+    "Uveal Melanoma",
+    "Various",
+    "Wilms Tumor",
+    "clinical",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=eay131",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-eay131.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

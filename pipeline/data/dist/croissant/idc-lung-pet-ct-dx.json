@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-lung-pet-ct-dx",
+  "alternateName": "Lung-PET-CT-Dx",
+  "description": "This dataset consists of CT and PET-CT DICOM images of lung cancer subjects with XML Annotation files that indicate tumor location with bounding boxes. The images were retrospectively acquired from patients with suspicion of lung cancer, and who underwent standard-of-care lung biopsy and PET/CT. Subjects were grouped according to a tissue histopathological diagnosis. Patients with Names/IDs containing the letter ,,A,, were diagnosed with Adenocarcinoma, ,,B,, with Small Cell Carcinoma, ,,C,, with Large Cell Carcinoma, and ,,G,, with Squamous Cell Carcinoma. Please see the LUNG-PET-CT-Dx wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-lung-pet-ct-dx",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Lung-PET-CT-Dx",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

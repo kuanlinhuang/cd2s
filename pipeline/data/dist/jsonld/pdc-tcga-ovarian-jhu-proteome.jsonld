@@ -1,0 +1,152 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-ovarian-jhu-proteome",
+  "name": "TCGA Ovarian JHU Proteome",
+  "alternateName": [
+    "TCGA Ovarian JHU Proteome"
+  ],
+  "description": "TCGA Ovarian JHU Proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-ovarian-jhu-proteome",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000113"
+  ],
+  "keywords": [
+    "pdc",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000113",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-ovarian-jhu-proteome.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "TRAIL promotes the polarization of human macrophages toward a proinflammatory M1 phenotype and is associated with increased survival in cancer patients with high tumor macrophage content.",
+      "identifier": "https://doi.org/10.3389/fimmu.2023.1209249",
+      "datePublished": "2023"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "P30CA060553",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA060553"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA274499",
+      "name": "Systems Analysis of Stress-adapted Cancer Organelles (SASCO) Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA274499"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA265089",
+      "name": "Definition and perturbation of cell-regulatory heterogeneities in solid tumors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA265089"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA044579",
+      "name": "BSR - SR Component",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA044579"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271114",
+      "name": "Proteogenomic translator for cancer biomarker discovery towards precision medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210993",
+      "name": "Systems Biology based Proteogenomic Translator for Cancer Marker Discovery towards Precision Medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210993"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214114",
+      "name": "Proteogenomic studies aimed at understanding ovarian tumor responses to agents targeting the DNA damage response and translating this knowledge into clinical benefit",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA136393",
+      "name": "Personalized Vaccines Targeting Cryptic Antigens in Ovarian Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA136393"
+    }
+  ],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2022-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Proteome mass spectrometry (iTRAQ4 / DDA)"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-colorectal-liver-metastases",
+  "name": "Colorectal-Liver-Metastases",
+  "alternateName": [
+    "colorectal_liver_metastases"
+  ],
+  "description": "This collection consists of DICOM images and DICOM Segmentation Objects (DSOs) for 197 patients with Colorectal Liver Metastases (CRLM). The collection consists of a large, single-institution consecutive series of patients that underwent resection of CRLM and matched preoperative computed tomography (CT) scans for quantitative image analysis. Inclusion criteria were (a) pathologically confirmed resected CRLM, (b) available data from pathologic analysis of the underlying non-tumoral liver parenchyma and hepatic tumor, (c) available preoperative conventional portal venous contrast-enhanced multi-detector computed tomography (MDCT) performed within 6 weeks of hepatic resection. Patients with 90-day mortality or that had less than 24 months of follow-up were excluded. Please see the Preoperative CT and Recurrence for Patients Undergoing Resection of Colorectal Liver Metastases (Colorectal Liver Metastases) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-colorectal-liver-metastases",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=colorectal_liver_metastases",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/QXK2-QG03"
+  ],
+  "keywords": [
+    "Colon",
+    "Colorectal Cancer",
+    "clinical",
+    "has-derived-annotations",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=colorectal_liver_metastases",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-colorectal-liver-metastases.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

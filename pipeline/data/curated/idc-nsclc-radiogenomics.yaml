@@ -1,0 +1,130 @@
+id: idc-nsclc-radiogenomics
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps, primary_publications]
+  open_questions:
+    - >-
+      The collection description states that 26 of the cases have matched microarray data in
+      GEO series GSE28827, with DICOM patient names matching microarray sample names.
+      Confirm the join works as described before designing around it.
+one_liner: >-
+  211 non-small cell lung cancers with pre-surgical CT and PET/CT, semantic annotations,
+  segmentations and matched gene expression - a genuinely paired imaging-genomics cohort,
+  fully open, and described only in prose.
+summary: >-
+  Radiogenomics needs the same patients measured both ways, and almost no public resource
+  provides it. This collection does: 211 patients imaged with thin-section CT and whole-body
+  PET/CT before surgical excision, with a subset carrying matched microarray expression data
+  deposited separately in the Gene Expression Omnibus.
+
+  The link between the two is recorded in the collection description as prose, not as a
+  structured cross-reference, which is why the pairing is easy to miss. We extract that
+  accession automatically and surface it here. Everything is openly downloadable with no
+  account.
+primary_publications:
+  - pmid: "30325352"
+    title: A radiogenomic dataset of non-small cell lung cancer
+    journal: Scientific Data
+    year: 2018
+    url: https://pubmed.ncbi.nlm.nih.gov/30325352/
+useful_for:
+  - question: Do quantitative CT or PET features predict gene expression programs in lung adenocarcinoma?
+    rationale: >-
+      This is the defining radiogenomics question and it needs paired data on the same
+      patients, which this collection provides for the subset with matched microarrays.
+      Imaging is available for all 211.
+    required_modalities: [radiology, rna_seq]
+    feasibility: needs_linkage
+    approx_n: 26
+    statistical_note: >-
+      The matched-expression subset described in the collection is around 26 patients, which
+      supports hypothesis generation and feature-level correlation but not a validated
+      predictive model. Confirm the exact overlap before designing.
+    topics: [radiogenomics, imaging, lung]
+    exemplar_pmid: "30325352"
+  - question: How reproducible are radiomic features across CT and PET acquisitions of the same tumor?
+    rationale: >-
+      Both modalities were acquired for the same patients pre-surgically, so feature
+      stability across modality and acquisition can be assessed directly - a prerequisite
+      for any radiomics claim and rarely testable.
+    required_modalities: [radiology]
+    feasibility: direct
+    approx_n: 211
+    statistical_note: Reproducibility is estimable at this sample size; report intraclass correlation.
+    topics: [radiomics, reproducibility, methods-benchmarking]
+  - question: >-
+      Can models trained on this cohort's segmentations generalize to other lung imaging
+      collections in the same repository?
+    rationale: >-
+      Expert segmentations and semantic annotations are provided, and the Imaging Data
+      Commons holds several other lung collections that can serve as external validation
+      within one access framework.
+    required_modalities: [radiology]
+    feasibility: needs_linkage
+    approx_n: 211
+    topics: [segmentation, generalization, lung]
+limitations:
+  - kind: statistical_power
+    statement: >-
+      The matched imaging-and-expression subset is a small fraction of the 211 imaged
+      patients - the collection describes roughly 26 cases with microarray data. The cohort
+      is imaging-rich and genomics-poor.
+    severity: blocking
+    affected_analyses: [Predictive radiogenomic modeling, Genome-wide imaging-expression association]
+    mitigation: >-
+      Treat radiogenomic analyses as hypothesis-generating and validate elsewhere. Use the
+      full 211 for imaging-only questions.
+  - kind: harmonization
+    statement: >-
+      The link between imaging and expression is documented in free text in the collection
+      description rather than as a structured cross-reference, and depends on DICOM patient
+      names matching microarray sample names.
+    severity: major
+    affected_analyses: [Any paired analysis]
+    mitigation: >-
+      Verify the join on a handful of cases before building on it, and report how many
+      patients actually matched.
+  - kind: platform_obsolescence
+    statement: >-
+      The matched expression data are microarray, not RNA sequencing, which constrains
+      integration with contemporary transcriptomic cohorts.
+    severity: minor
+    affected_analyses: [Cross-cohort expression integration]
+    mitigation: Restrict to genes measurable on both platforms; use rank-based methods.
+  - kind: missing_data
+    statement: >-
+      Outcome and treatment annotation are not distributed through the imaging repository
+      metadata, so survival questions require the source publication's supplementary data.
+    severity: major
+    affected_analyses: [Prognostic imaging models]
+    mitigation: Retrieve clinical variables from the Scientific Data paper's supplement.
+inappropriate_uses:
+  - statement: Training a deep radiogenomic model end to end.
+    reason: Around 26 paired cases is far too few; the result would not generalize.
+  - statement: Population-level claims about lung cancer imaging phenotypes.
+    reason: Single-institution surgical series with no sampling frame.
+access_steps:
+  - order: 1
+    action: Explore the collection in the Imaging Data Commons
+    detail: Fully open. No account, no data access request.
+    url: https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiogenomics
+    est_time: 30 minutes
+  - order: 2
+    action: Pull DICOM with the idc-index Python package
+    est_time: 1-2 hours
+    cli_snippet: |
+      pip install idc-index
+      python -c "
+      from idc_index import index
+      c = index.IDCClient()
+      df = c.get_series_size('nsclc_radiogenomics')
+      print(df.head())
+      "
+  - order: 3
+    action: Retrieve the matched expression series from GEO and verify the identifier join
+    url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28827
+    est_time: 2 hours
+tags: [imaging-genomics, multimodal, open-access, lung, underexplored-candidate]

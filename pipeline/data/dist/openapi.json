@@ -1,0 +1,125 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Cancer Data Showcase API",
+    "version": "0.1.0",
+    "summary": "Question-first metadata for NCI-supported cancer datasets.",
+    "description": "A read-only JSON surface over the Cancer Data Showcase corpus. Every endpoint is a static file, so it is cacheable, archivable and has no rate limit. Records expose measured clinical field completeness and graded reuse evidence, not only descriptive metadata.",
+    "license": {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://cancer-data-showcase.example.org"
+    }
+  ],
+  "paths": {
+    "/data/index.json": {
+      "get": {
+        "summary": "Every dataset as a slim searchable row",
+        "description": "602 rows. Filter on `has_survival_endpoint`, `has_treatment_response`, `modalities`, `access_tier`, `is_underexplored`.",
+        "responses": {
+          "200": {
+            "description": "Array of index rows"
+          }
+        }
+      }
+    },
+    "/data/facets.json": {
+      "get": {
+        "summary": "Browse dimensions with counts",
+        "responses": {
+          "200": {
+            "description": "Facet map"
+          }
+        }
+      }
+    },
+    "/data/stats.json": {
+      "get": {
+        "summary": "Corpus-level statistics",
+        "responses": {
+          "200": {
+            "description": "Statistics object"
+          }
+        }
+      }
+    },
+    "/data/questions.json": {
+      "get": {
+        "summary": "Curated research questions across all datasets",
+        "responses": {
+          "200": {
+            "description": "Array of questions"
+          }
+        }
+      }
+    },
+    "/data/datasets/{id}.json": {
+      "get": {
+        "summary": "Full record with evidence for every claim",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "gdc-cgci-htmcp-cc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "DatasetRecord"
+          },
+          "404": {
+            "description": "Unknown id"
+          }
+        }
+      }
+    },
+    "/data/agent/{id}.md": {
+      "get": {
+        "summary": "Plain-language brief for a language model, constraints first",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Markdown brief"
+          }
+        }
+      }
+    },
+    "/data/croissant/{id}.json": {
+      "get": {
+        "summary": "MLCommons Croissant description",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Croissant JSON-LD"
+          }
+        }
+      }
+    }
+  }
+}

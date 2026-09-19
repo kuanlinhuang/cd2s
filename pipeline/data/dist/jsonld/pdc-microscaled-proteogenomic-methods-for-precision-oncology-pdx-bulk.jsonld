@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-bulk",
+  "name": "Microscaled Proteogenomic Methods for Precision Oncology PDX bulk",
+  "alternateName": [
+    "Microscaled Proteogenomic Methods for Precision Oncology PDX bulk - Phosphoproteome",
+    "Microscaled Proteogenomic Methods for Precision Oncology PDX bulk - Proteome"
+  ],
+  "description": "Microscaled Proteogenomic Methods for Precision Oncology PDX bulk",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-bulk",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000328",
+    "https://pdc.cancer.gov/pdc/study/PDC000327"
+  ],
+  "keywords": [
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000328",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-bulk.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Phosphoproteome mass spectrometry (TMT10 / DDA)",
+    "Proteome mass spectrometry (TMT10 / DDA)"
+  ]
+}

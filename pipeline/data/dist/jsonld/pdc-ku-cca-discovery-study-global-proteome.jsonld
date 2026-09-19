@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-ku-cca-discovery-study-global-proteome",
+  "name": "KU CCA Discovery Study - Global proteome",
+  "alternateName": [
+    "KU CCA Discovery Study - Global proteome"
+  ],
+  "description": "KU CCA Discovery Study - Global proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ku-cca-discovery-study-global-proteome",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000342"
+  ],
+  "keywords": [
+    "pdc",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "International Cancer Proteogenome Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000342",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-ku-cca-discovery-study-global-proteome.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Proteogenomic characterization of molecular and cellular targets for treatment-resistant subtypes in locally advanced cervical cancers.",
+      "identifier": "https://doi.org/10.1186/s12943-025-02256-3",
+      "datePublished": "2025"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2025-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Proteome mass spectrometry (TMT11 / DDA)"
+  ]
+}

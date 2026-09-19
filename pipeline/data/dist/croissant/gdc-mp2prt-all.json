@@ -1,0 +1,243 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "gdc-mp2prt-all",
+  "alternateName": "Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia",
+  "description": "MP2PRT-ALL is the strongest treatment-response resource in this corpus, and it is not widely known. Every one of the 1,510 patients has a populated treatment outcome, a named regimen or line of therapy, and a progression status at follow-up - 100% coverage on all three, which is rarer than it sounds. Median follow-up is 100.2 months with a maximum of 180.8, the longest realised follow-up of any cohort indexed here. Whole genome sequencing covers 1,507 cases, exome 1,494 and RNA sequencing 1,479.\nBecause the cohort is drawn from cooperative-group trials, the treatment is protocolised rather than heterogeneous, which removes the confounding that usually defeats treatment-response analysis in observational cohorts. 333 of 1,510 patients are recorded as Hispanic or Latino, a group with documented excess ALL incidence and inferior outcomes and one that is under-represented in most genomic cohorts.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-mp2prt-all",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Molecular and pharmacological heterogeneity of ETV6::RUNX1 acute lymphoblastic leukemia.",
+  "version": "as-retrieved",
+  "datePublished": "2025-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.sex_at_birth",
+          "name": "Sex at birth",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.race",
+          "name": "Race",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 87.4%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.ethnicity",
+          "name": "Ethnicity",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 96.8%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.vital_status",
+          "name": "Vital status",
+          "description": "Category: outcome. Populated for 100.0% of cases; informative (excluding non-answers) for 84.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.cause_of_death",
+          "name": "Cause of death",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.population_group",
+          "name": "Population group",
+          "description": "Category: demographic. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/demographic.country_of_residence_at_enrollment",
+          "name": "Country of residence",
+          "description": "Category: demographic. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.primary_diagnosis",
+          "name": "Primary diagnosis",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 99.9%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.morphology",
+          "name": "Morphology (ICD-O)",
+          "description": "Category: pathology. Populated for 100.0% of cases; informative (excluding non-answers) for 89.8%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tissue_or_organ_of_origin",
+          "name": "Tissue or organ of origin",
+          "description": "Category: diagnosis. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_pathologic_stage",
+          "name": "AJCC pathologic stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.ajcc_clinical_stage",
+          "name": "AJCC clinical stage",
+          "description": "Category: staging. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.tumor_grade",
+          "name": "Tumour grade",
+          "description": "Category: pathology. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_treatment",
+          "name": "Prior treatment",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.prior_malignancy",
+          "name": "Prior malignancy",
+          "description": "Category: diagnosis. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.synchronous_malignancy",
+          "name": "Synchronous malignancy",
+          "description": "Category: diagnosis. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.progression_or_recurrence",
+          "name": "Progression or recurrence",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.last_known_disease_status",
+          "name": "Last known disease status",
+          "description": "Category: outcome. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.classification_of_tumor",
+          "name": "Classification of tumour",
+          "description": "Category: pathology. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_type",
+          "name": "Treatment type",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_or_therapy",
+          "name": "Treatment given",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.therapeutic_agents",
+          "name": "Therapeutic agents",
+          "description": "Category: treatment. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.treatment_outcome",
+          "name": "Treatment outcome",
+          "description": "Category: treatment. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/diagnoses.treatments.regimen_or_line_of_therapy",
+          "name": "Regimen or line of therapy",
+          "description": "Category: treatment. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.disease_response",
+          "name": "Disease response at follow-up",
+          "description": "Category: followup. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.progression_or_recurrence",
+          "name": "Progression at follow-up",
+          "description": "Category: followup. Populated for 100.0% of cases; informative (excluding non-answers) for 100.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/follow_ups.ecog_performance_status",
+          "name": "ECOG performance status",
+          "description": "Category: followup. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.tobacco_smoking_status",
+          "name": "Tobacco smoking status",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/exposures.alcohol_history",
+          "name": "Alcohol history",
+          "description": "Category: exposure. Populated for 0.0% of cases; informative (excluding non-answers) for 0.0%.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [
+      "Which genomic features predict failure of protocolised induction therapy in paediatric B-cell acute lymphoblastic leukaemia?",
+      "Do Hispanic or Latino children carry a different genomic landscape or a different response profile, and does genomics explain any of the known outcome disparity?",
+      "What are the long-term survival determinants in paediatric ALL, given follow-up that extends beyond fifteen years?",
+      "How do subtype-defining fusions and copy number alterations interact with assigned risk group and delivered therapy?"
+    ],
+    "blockingLimitations": [],
+    "inappropriateUses": [
+      "Estimating paediatric ALL incidence or population survival.",
+      "Comparing specific chemotherapy agents head to head."
+    ]
+  }
+}

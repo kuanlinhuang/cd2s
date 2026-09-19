@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-soft-tissue-sarcoma",
+  "alternateName": "Soft-tissue-Sarcoma",
+  "description": "In this study, a cohort of 51 patients with histologically proven soft-tissue sarcomas (STSs) of the extremities was retrospectively evaluated. During the follow-up period, 19 patients developed lung metastases. Patients with metastatic and/or recurrent STSs at presentation were excluded from the study. All patients had pre-treatment FDG-PET/CT and MRI scans. Please see the Soft Tissue Sarcoma page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-soft-tissue-sarcoma",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Soft-tissue-Sarcoma",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

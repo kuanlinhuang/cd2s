@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-ct-phantom4radiomics",
+  "name": "CT-Phantom4Radiomics",
+  "alternateName": [
+    "ct_phantom4radiomics"
+  ],
+  "description": "The aims of this dataset are to determine the stability of radiomics features against computed tomography (CT) parameter variations and to study their discriminative power concerning tissue classification using a 3D-printed CT phantom based on real patient data . 4 tissue types (normal, benign cyst, hemangioma, and metastasis) were manually annotated. 238 CT series with 8 parameter variations of reconstruction algorithms, reconstruction kernels, slice thickness, and slice spacing are available. Please see the CT-Phantom4Radiomics wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-phantom4radiomics",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_phantom4radiomics",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/a1v1-rc66"
+  ],
+  "keywords": [
+    "Phantom",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_phantom4radiomics",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-ct-phantom4radiomics.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

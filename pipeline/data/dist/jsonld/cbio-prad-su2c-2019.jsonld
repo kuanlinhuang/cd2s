@@ -1,0 +1,170 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2019",
+  "name": "Metastatic Prostate Adenocarcinoma (SU2C/PCF Dream Team, PNAS 2019)",
+  "alternateName": [
+    "prad_su2c_2019"
+  ],
+  "description": "Whole exome sequencing of 444 castrate resistant prostate cancer tumor/normal pairs. SU2C-PCF Dream Team: Precision Therapy for Advanced Prostate Cancer.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=prad_su2c_2019"
+  ],
+  "keywords": [
+    "Prostate Adenocarcinoma",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "prostate",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=prad_su2c_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-su2c-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/31061129/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA224079",
+      "name": "Project 2: Reversing resistance caused by lineage plasticity through epigenetic therapy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224079"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA155169",
+      "name": "Understanding Resistance to Next Generation Antiandrogens",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155169"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA125612",
+      "name": "Towards Understanding Prostate Cancer Heterogeneity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA125612"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA211024",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA211024"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA186786",
+      "name": "Michigan Prostate SPORE 2025-2030",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA186786"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA097186",
+      "name": "Developmental Research Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA097186"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA092629",
+      "name": "SPORE in Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA092629"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA090381",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA090381"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "Structural variants / fusions"
+  ]
+}

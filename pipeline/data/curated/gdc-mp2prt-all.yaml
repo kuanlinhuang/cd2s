@@ -1,0 +1,153 @@
+id: gdc-mp2prt-all
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - >-
+      The machine-inferred primary publication for this cohort is not authoritative. The
+      cohort derives from Children's Oncology Group trials; confirm the correct marker
+      publication with the COG data team before citing one.
+one_liner: >-
+  1,510 children with acute lymphoblastic leukaemia from Children's Oncology Group trials,
+  with whole genome sequencing, 8.4 years of median follow-up, and a named treatment
+  regimen and response recorded for every single case.
+summary: >-
+  MP2PRT-ALL is the strongest treatment-response resource in this corpus, and it is not
+  widely known. Every one of the 1,510 patients has a populated treatment outcome, a named
+  regimen or line of therapy, and a progression status at follow-up - 100% coverage on all
+  three, which is rarer than it sounds. Median follow-up is 100.2 months with a maximum of
+  180.8, the longest realised follow-up of any cohort indexed here. Whole genome sequencing
+  covers 1,507 cases, exome 1,494 and RNA sequencing 1,479.
+
+  Because the cohort is drawn from cooperative-group trials, the treatment is protocolised
+  rather than heterogeneous, which removes the confounding that usually defeats
+  treatment-response analysis in observational cohorts. 333 of 1,510 patients are recorded
+  as Hispanic or Latino, a group with documented excess ALL incidence and inferior outcomes
+  and one that is under-represented in most genomic cohorts.
+useful_for:
+  - question: >-
+      Which genomic features predict failure of protocolised induction therapy in paediatric
+      B-cell acute lymphoblastic leukaemia?
+    rationale: >-
+      Treatment outcome and regimen are populated for 100% of 1,510 cases, and regimen
+      strings name the actual protocol arm, so response can be modeled within a treatment
+      context rather than across an uncontrolled mixture of therapies. Whole genome
+      sequencing on 1,507 cases supports genome-wide discovery at this sample size.
+    required_modalities: [wgs, rna_seq, treatment]
+    required_fields:
+      - diagnoses.treatments.treatment_outcome
+      - diagnoses.treatments.regimen_or_line_of_therapy
+    feasibility: needs_access
+    approx_n: 1510
+    statistical_note: >-
+      Complete response is the dominant outcome category in a curable disease, so the
+      informative contrast is relapse and residual disease rather than induction failure.
+      Expect a heavily imbalanced outcome and plan the design accordingly.
+    topics: [treatment-response, paediatric-oncology, leukaemia]
+  - question: >-
+      Do Hispanic or Latino children carry a different genomic landscape or a different
+      response profile, and does genomics explain any of the known outcome disparity?
+    rationale: >-
+      333 of 1,510 patients are recorded as Hispanic or Latino - both a substantial absolute
+      number and a substantial share, which is unusual. With treatment held closer to
+      constant by the trial protocol, the ethnicity contrast is less confounded by care
+      access than in an observational cohort.
+    required_modalities: [wgs, rna_seq, treatment]
+    required_fields: [demographic.ethnicity, diagnoses.treatments.treatment_outcome]
+    feasibility: needs_access
+    approx_n: 1461
+    statistical_note: >-
+      Ethnicity is self-reported and unknown for 49 cases. Genetic ancestry can be estimated
+      from the germline data and is the more defensible variable for biological claims;
+      report both and do not treat them as interchangeable.
+    topics: [health-disparities, paediatric-oncology, treatment-response]
+  - question: >-
+      What are the long-term survival determinants in paediatric ALL, given follow-up that
+      extends beyond fifteen years?
+    rationale: >-
+      Vital status is informative for 84% of cases and median follow-up is 100.2 months, so
+      late relapse and long-term survival are genuinely observable rather than censored away.
+      Very few genomic cohorts of this size reach this follow-up duration.
+    required_modalities: [clinical, outcome, wgs]
+    required_fields: [demographic.vital_status, diagnoses.days_to_last_follow_up]
+    feasibility: needs_access
+    approx_n: 1268
+    statistical_note: >-
+      16% of cases have uninformative vital status; check whether missingness is associated
+      with treatment arm before assuming it is uninformative censoring.
+    topics: [survival, paediatric-oncology]
+  - question: >-
+      How do subtype-defining fusions and copy number alterations interact with assigned risk
+      group and delivered therapy?
+    rationale: >-
+      Structural variant and copy number calls exist for 1,504 cases, and the regimen field
+      records the risk-stratified arm each patient received, allowing molecular subtype to be
+      crossed with the therapy actually delivered.
+    required_modalities: [structural_variant, copy_number, treatment]
+    feasibility: needs_access
+    approx_n: 1504
+    topics: [molecular-subtypes, risk-stratification]
+limitations:
+  - kind: missing_data
+    statement: >-
+      Despite complete treatment-outcome coverage, the descriptive treatment fields are
+      empty: treatment type, treatment given and therapeutic agents are all at 0%. The
+      regimen field names the protocol arm, so the therapy is recoverable from trial
+      documentation, but individual drug exposures are not recorded per patient here.
+    severity: major
+    affected_analyses: [Drug-specific exposure analysis, Cumulative dose analysis]
+    mitigation: >-
+      Map the regimen strings onto the published COG protocol definitions to recover drug
+      composition, and state that mapping explicitly in your methods.
+  - kind: missing_data
+    statement: Cause of death is not recorded for any case, so competing risks cannot be separated.
+    severity: major
+    affected_analyses: [Competing-risk models, Treatment-related mortality]
+    mitigation: Restrict to overall survival, or obtain cause of death through the trial group.
+  - kind: ascertainment_bias
+    statement: >-
+      Participants are enrolled on cooperative-group trials, which select for access to a
+      participating center and for eligibility criteria that exclude some patients. Outcomes
+      in trial populations are generally better than in the wider patient population.
+    severity: major
+    affected_analyses: [Population-level outcome estimates, Generalization to non-trial patients]
+    mitigation: Frame results as applying to trial-enrolled patients.
+  - kind: population_coverage
+    statement: >-
+      Race is unknown for 190 of 1,510 cases, and Black or African American patients number
+      89, which limits race-stratified analysis even though ethnicity coverage is good.
+    severity: minor
+    affected_analyses: [Race-stratified subgroup analysis]
+    mitigation: Prefer genetic ancestry estimated from the germline data for biological claims.
+  - kind: access_constraint
+    statement: 53,372 of 60,831 files are controlled access.
+    severity: major
+    affected_analyses: [Any sequence-level analysis]
+    mitigation: Begin the dbGaP request early.
+inappropriate_uses:
+  - statement: Estimating paediatric ALL incidence or population survival.
+    reason: This is a trial-enrolled cohort with no population denominator.
+  - statement: Comparing specific chemotherapy agents head to head.
+    reason: >-
+      Per-patient drug exposure is not recorded; only the protocol arm is. Agent-level claims
+      would rest on assumptions about protocol adherence rather than on data.
+access_steps:
+  - order: 1
+    action: Confirm which trial protocols the cohort draws from
+    detail: >-
+      The regimen field contains protocol arm names. Reading the corresponding COG protocol
+      publications is what turns those strings into an interpretable treatment variable.
+    est_time: 2-3 hours
+  - order: 2
+    action: Scope with the 7,459 open-access files
+    url: https://portal.gdc.cancer.gov/projects/MP2PRT-ALL
+    est_time: 1-2 hours
+  - order: 3
+    action: Submit a dbGaP data access request
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [treatment-response, longitudinal, paediatric, trial-linked, underexplored-candidate]

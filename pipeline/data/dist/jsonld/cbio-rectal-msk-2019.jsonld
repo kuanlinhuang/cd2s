@@ -1,0 +1,228 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-rectal-msk-2019",
+  "name": "Rectal Cancer (MSK,Nature Medicine 2019)",
+  "alternateName": [
+    "rectal_msk_2019"
+  ],
+  "description": "MSK-IMPACT targeted sequencing of matched rectal cancer tumor and tumoroid samples.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-rectal-msk-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=rectal_msk_2019"
+  ],
+  "keywords": [
+    "Colorectal Adenocarcinoma",
+    "bowel",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=rectal_msk_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-rectal-msk-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/31591597/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA224079",
+      "name": "Project 2: Reversing resistance caused by lineage plasticity through epigenetic therapy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224079"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA160001",
+      "name": "Translational Research in Oncology Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA160001"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009207",
+      "name": "Investigational Cancer Therapeutics Training Program (ICTTP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009207"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R25CA020449",
+      "name": "Summer research experiences for medical students supervised by faculty mentors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R25CA020449"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA193837",
+      "name": "Role of ETS factors in specifying prostate luminal cell identity and androgen receptor dependence",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193837"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA182551",
+      "name": "Organ Preservation in Rectal Adenocarcinoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA182551"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA155169",
+      "name": "Understanding Resistance to Next Generation Antiandrogens",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155169"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA092629",
+      "name": "SPORE in Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA092629"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA129243",
+      "name": "Mediators of Lung Adenocarcinoma Metastasis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA129243"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA094060",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA094060"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K22CA181280",
+      "name": "Defining the genetic requirements for maintenance of colorectal cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K22CA181280"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K12CA184746",
+      "name": "MSK Paul Calabresi Career Development Award for Clinical Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA184746"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA230213",
+      "name": "Investigating L1CAM-dependent stem cell regeneration in metastasis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA230213"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "F30CA200110",
+      "name": "Modeling metastatic colorectal cancer in vivo",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=F30CA200110"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations"
+  ]
+}

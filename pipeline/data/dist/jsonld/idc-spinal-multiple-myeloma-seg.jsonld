@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-spinal-multiple-myeloma-seg",
+  "name": "Spinal-Multiple-Myeloma-SEG",
+  "alternateName": [
+    "spinal_multiple_myeloma_seg"
+  ],
+  "description": "This dataset consists of dual-energy low-dose CT scans from 67 patients diagnosed with multiple myeloma, with a total of 72 scans. The dataset includes conventional CT images, virtual monoenergetic images (at 40, 80, and 120 keV), calcium-suppressed images (with suppression indices of 25, 50, 75, and 100), as well as segmentation masks of vertebrae (including vertebra type classification) and multiple myeloma lesions in the spine. In total, the dataset contains 576 CT image series and 144 SEG series comprising 564,608 axial slices. Basic demographic details (mean age 66 years, range 48\u201385; 36% female) and clinical data related to disease progression are also provided. Please see the Spinal-Multiple-Myeloma-SEG page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-spinal-multiple-myeloma-seg",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=spinal_multiple_myeloma_seg",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/k4qv-hh78"
+  ],
+  "keywords": [
+    "Bone",
+    "LSpine",
+    "Marrow",
+    "Multiple Myeloma",
+    "TSpine",
+    "clinical",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=spinal_multiple_myeloma_seg",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-spinal-multiple-myeloma-seg.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

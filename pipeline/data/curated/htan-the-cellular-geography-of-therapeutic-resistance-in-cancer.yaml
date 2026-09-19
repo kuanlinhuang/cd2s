@@ -1,0 +1,117 @@
+id: htan-the-cellular-geography-of-therapeutic-resistance-in-cancer
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  open_questions:
+    - >-
+      This atlas has no entry in the HTAN publication manifest, so we cannot identify its
+      marker publication or confirm whether one exists yet. Confirm with the atlas team.
+    - Participant counts are not exposed in the portal metadata; obtain them from Synapse.
+one_liner: >-
+  An HTAN atlas built explicitly around therapeutic resistance, with multiplexed imaging,
+  single-cell RNA sequencing and the richest clinical annotation of any atlas here - and no
+  publications recorded in the network's own manifest.
+summary: >-
+  Of the fourteen HTAN atlases, this is the one whose stated purpose is resistance: mapping
+  where in a tumor resistant cells survive treatment. It carries 20,350 files across
+  multiplexed tissue imaging, single-cell RNA sequencing and bulk DNA, and it is the only
+  atlas in the network carrying the extended clinical data tier alongside therapy, follow-up,
+  exposure, family history and molecular test components.
+
+  It is also the clearest case in this corpus of a resource that is well built and
+  apparently unused. HTAN maintains its own publication manifest, and this atlas has no
+  entry in it - unlike most atlases, which record three to five publications. The
+  combination of a resistance-focused design, unusually complete clinical annotation and no
+  recorded downstream use makes it the strongest reuse opportunity we identified.
+useful_for:
+  - question: Where within a tumor do cells that survive therapy actually reside?
+    rationale: >-
+      Multiplexed tissue imaging with single-cell RNA sequencing on the same specimens, in an
+      atlas designed around this question, with therapy records available as a clinical
+      component to define the treatment context.
+    required_modalities: [spatial_proteomics, scrna_seq, treatment]
+    feasibility: needs_access
+    statistical_note: >-
+      Spatial analyses are specimen-level; patient numbers are small and the appropriate unit
+      of inference is the region or cell neighborhood, with patient as a random effect.
+    topics: [treatment-resistance, spatial-biology]
+  - question: >-
+      Do spatial niches associated with resistance recur across cancer types, or are they
+      tissue-specific?
+    rationale: >-
+      Neighborhood definitions derived here can be tested against other HTAN atlases that
+      share the multiplexed imaging component, giving cross-atlas comparison within a single
+      access framework and a common data model.
+    required_modalities: [spatial_proteomics]
+    feasibility: needs_linkage
+    topics: [spatial-biology, cross-cohort, treatment-resistance]
+  - question: >-
+      Can the extended clinical tier be used to relate spatial organization to real treatment
+      sequences rather than to treatment as a single binary?
+    rationale: >-
+      This atlas carries the extended clinical data tier that most atlases lack, alongside
+      therapy and follow-up. That is what allows spatial features to be related to what was
+      actually given and what happened next.
+    required_modalities: [spatial_proteomics, treatment, clinical]
+    feasibility: needs_access
+    statistical_note: >-
+      Confirm the completeness of the extended clinical fields in Synapse before designing;
+      the portal metadata records their presence but not their coverage.
+    topics: [treatment-response, spatial-biology, clinical-annotation]
+limitations:
+  - kind: statistical_power
+    statement: >-
+      HTAN atlases profile few patients deeply. 20,350 files does not mean many participants,
+      and participant counts are not exposed in the portal metadata.
+    severity: blocking
+    affected_analyses: [Cohort-level association, Powered biomarker discovery]
+    mitigation: Obtain participant counts from Synapse first; design within-patient or region-level comparisons.
+  - kind: annotation_quality
+    statement: >-
+      No publication is recorded for this atlas in HTAN's own manifest, so there is no marker
+      paper to read for design details, quality caveats or the intended interpretation of the
+      clinical fields.
+    severity: major
+    affected_analyses: [Interpreting cohort design, Understanding sampling]
+    mitigation: >-
+      Contact the atlas team through the HTAN portal before investing in an analysis. The
+      absence of a marker paper is the main practical barrier to reusing this resource.
+  - kind: access_constraint
+    statement: >-
+      Level 1 and 2 sequencing is controlled through dbGaP; derived data and imaging need a
+      Synapse account and acceptance of the HTAN terms.
+    severity: major
+    affected_analyses: [Raw sequence analysis]
+    mitigation: Start with the Synapse tier.
+  - kind: harmonization
+    statement: Assay coverage varies by specimen across the three modalities.
+    severity: major
+    affected_analyses: [Multimodal integration]
+    mitigation: Build the specimen intersection from Synapse manifests.
+inappropriate_uses:
+  - statement: Cohort-level statistical inference.
+    reason: Deep sampling of few patients; the design does not support it.
+  - statement: Assuming clinical field completeness from their presence in the metadata.
+    reason: >-
+      The portal metadata records which clinical components exist, not how completely they are
+      populated. Verify in Synapse.
+access_steps:
+  - order: 1
+    action: Contact the atlas team through the HTAN portal
+    detail: >-
+      With no marker publication recorded, this is the fastest route to the design details you
+      would normally get from a paper.
+    url: https://humantumoratlas.org/
+    est_time: days
+  - order: 2
+    action: Register with Synapse and accept the HTAN data use terms
+    url: https://humantumoratlas.org/data-access
+    requires: [Synapse account]
+    est_time: 1 day
+  - order: 3
+    action: Verify participant counts and clinical field coverage before designing
+    est_time: 2-3 hours
+tags: [treatment-resistance, spatial, underexplored-candidate, no-recorded-publications]

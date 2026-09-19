@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "pdc-beat-aml-baseline-clinical",
+  "alternateName": "Beat AML Baseline Clinical",
+  "description": "Beat AML Baseline Clinical",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-beat-aml-baseline-clinical",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Mapping the proteogenomic landscape enables prediction of drug response in acute myeloid leukemia.",
+  "version": "as-retrieved",
+  "datePublished": "2024-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

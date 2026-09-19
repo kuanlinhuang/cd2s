@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-acrin-flt-breast",
+  "name": "ACRIN-FLT-Breast",
+  "alternateName": [
+    "acrin_flt_breast"
+  ],
+  "description": "ACRIN 6688, a 18F -fluorothymidine (FLT) imaging study using positron emission tomography (PET), was designed to evaluate the relationship between 18F FLT uptake parameters and pathologic complete response to neoadjuvant therapy of the primary tumor in patients with locally advanced breast cancer. Participant Eligibility and Enrollment: Criteria for inclusion were patients with pathologically confirmed breast cancer and determined to be a candidate for primary systemic (neoadjuvant) therapy and for whom surgical resection of residual primary tumor following completion of neoadjuvant therapy is planned. Please see the ACRIN-FLT-Breast wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-acrin-flt-breast",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=acrin_flt_breast",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/K9/TCIA.2017.ol20zmxg"
+  ],
+  "keywords": [
+    "Breast",
+    "Breast Cancer",
+    "clinical",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=acrin_flt_breast",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-acrin-flt-breast.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

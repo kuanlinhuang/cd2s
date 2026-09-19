@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-academia-sinica-luad-icpc-b",
+  "name": "Academia Sinica LUAD ICPC-B",
+  "alternateName": [
+    "Academia Sinica LUAD ICPC-B - Phosphoproteome",
+    "Academia Sinica LUAD ICPC-B - Proteome"
+  ],
+  "description": "Academia Sinica LUAD ICPC-B",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-academia-sinica-luad-icpc-b",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000564",
+    "https://pdc.cancer.gov/pdc/study/PDC000563"
+  ],
+  "keywords": [
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "International Cancer Proteogenome Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000564",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-academia-sinica-luad-icpc-b.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Integrative analysis of lung adenocarcinoma across diverse ethnicities and exposures.",
+      "identifier": "https://doi.org/10.1016/j.ccell.2025.07.011",
+      "datePublished": "2025"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2025-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Phosphoproteome mass spectrometry (TMT10 / DDA)",
+    "Proteome mass spectrometry (TMT10 / DDA)"
+  ]
+}

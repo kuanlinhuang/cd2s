@@ -1,0 +1,128 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-dlbcl-dfci-2018",
+  "name": "Diffuse Large B cell Lymphoma (DFCI, Nat Med 2018)",
+  "alternateName": [
+    "dlbcl_dfci_2018"
+  ],
+  "description": "Whole-exome sequencing of tumor/matching normal sample pairs from 135 DLBCL patients.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-dlbcl-dfci-2018",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=dlbcl_dfci_2018"
+  ],
+  "keywords": [
+    "Diffuse Large B-Cell Lymphoma, NOS",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "mbn",
+    "nci-funded",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=dlbcl_dfci_2018",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-dlbcl-dfci-2018.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/29713087/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210999",
+      "name": "Global Infrastructure for Collaborative High-throughput  Cancer Genomics Analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210999"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA155010",
+      "name": "Personal tumor neoantigens for immunity against chronic lymphocytic leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155010"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA097274",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA097274"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA163222",
+      "name": "The Epigenetic Enzyme CARM1 as a Negative Regulator of Dendritic cells and CD8 T cells in Melanoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA163222"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Structural variants / fusions"
+  ]
+}

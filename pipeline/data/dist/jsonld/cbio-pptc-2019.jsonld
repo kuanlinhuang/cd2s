@@ -1,0 +1,182 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-pptc-2019",
+  "name": "Pediatric Preclinical Testing Consortium  (CHOP, Cell Rep 2019)",
+  "alternateName": [
+    "pptc_2019"
+  ],
+  "description": "Whole-exome sequencing of 261 patient derived xenografts (PDXs) samples from high-risk childhood cancers (with no matched normals). Website: <a href='https://preclinicalpivot.org'>PPTC (now, PIVOT)</a>",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-pptc-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=pptc_2019"
+  ],
+  "keywords": [
+    "Mixed Cancer Types",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "other",
+    "rna seq",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=pptc_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-pptc-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/31693904/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA263981",
+      "name": "A Testing Program to Identify Novel Agents for Treatment of Pediatric and AYA High-Risk Sarcoma, Kidney and Liver Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA263981"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA199297",
+      "name": "Pediatric Preclinical Testing Consortium: Research Programs non-CNS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA199297"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA199288",
+      "name": "In vivo Drug Testing of Pediatric CNS Tumors Using Patient Derived Orthotopic Xenograft Models",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA199288"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA199287",
+      "name": "Pediatric Preclinical Testing Consortium",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA199287"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA199222",
+      "name": "Pediatric Preclinical Testing Consortium: Coordinating Center-Additional PPTC funding extension",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA199222"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA199221",
+      "name": "Genomically informed agent selection and testing in osteosarcoma patient-derived xenograft models",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA199221"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA199000",
+      "name": "NCI Pediatric In Vivo Testing Program - Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA199000"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009615",
+      "name": "Cancer Center Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009615"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA220500",
+      "name": "Discovering mechanisms of neuroblastoma tumorigenesis to improve patient outcomes",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA220500"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA221957",
+      "name": "Genomic and functional characterization of a panel of neuroblastoma patient-derived xenografts and cell lines",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA221957"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "RNA sequencing expression",
+    "Structural variants / fusions"
+  ]
+}

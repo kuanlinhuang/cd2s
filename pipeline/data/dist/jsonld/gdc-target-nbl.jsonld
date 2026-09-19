@@ -1,0 +1,405 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-nbl",
+  "name": "Neuroblastoma",
+  "alternateName": [
+    "TARGET-NBL"
+  ],
+  "description": "Neuroblastoma",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-nbl",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/TARGET-NBL",
+    "gdc_program:TARGET",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000467"
+  ],
+  "keywords": [
+    "Adrenal gland",
+    "Bones, joints and articular cartilage of limbs",
+    "Bones, joints and articular cartilage of other and unspecified sites",
+    "Connective, subcutaneous and other soft tissues",
+    "Heart, mediastinum, and pleura",
+    "Hematopoietic and reticuloendothelial systems",
+    "Kidney",
+    "Liver and intrahepatic bile ducts",
+    "Lymph nodes",
+    "Meninges",
+    "Neuroepitheliomatous Neoplasms",
+    "Not Applicable",
+    "Other and ill-defined sites",
+    "Other endocrine glands and related structures",
+    "Peripheral nerves and autonomic nervous system",
+    "Renal pelvis",
+    "Retroperitoneum and peritoneum",
+    "Skin",
+    "Spinal cord, cranial nerves, and other parts of central nervous system",
+    "Stomach",
+    "Unknown",
+    "Uterus, NOS",
+    "clinical",
+    "gdc",
+    "methylation",
+    "released",
+    "rna seq",
+    "structural variant",
+    "target",
+    "targeted dna",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "TARGET"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/TARGET-NBL",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-nbl.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Micrometastases in neuroblastoma: are they clinically important?",
+      "identifier": "https://doi.org/10.1136/jcp.57.1.14",
+      "datePublished": "2004"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098543",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098543"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA211024",
+      "name": "Project 1: Non-Invasive Clinical Assay for Early Detection of Treatment Resistance in Patients with Metastatic Prostate Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA211024"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA210064",
+      "name": "Mechanisms and Vulnerabilities of Aberrant Transcriptional Enhancers in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA210064"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA180692",
+      "name": "Role of LMO1 in Neuroblastoma Initiation and Maintenance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA180692"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA196631",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA196631"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA124709",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA124709"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA104125",
+      "name": "Cytoskeletal Dynamics in Pancreatic Cancer Metastasis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA104125"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA178189",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA178189"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA215105",
+      "name": "Precision Medicine by Targeting Cell Adhesion in Melanoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA215105"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA217694",
+      "name": "Project 3: Identifying Targetable Epigenetic and Immuno-Oncologic Vulnerabilities in Synovial Sarcoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA217694"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA204974",
+      "name": "Structural Variation in Neuroblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA204974"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA237170",
+      "name": "Characterization of high-grade serous ovarian cancer subtypes via single-cell profiling",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA237170"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA236890",
+      "name": "Linking nucleotide and amino acid metabolism to cholesterol synthesis by MYCN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA236890"
+    }
+  ],
+  "dateModified": "2026-09-18T02:35:46.756009+00:00",
+  "datePublished": "2004-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 98.9% of cases, informative for 98.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 98.9% of cases, informative for 88.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 98.9% of cases, informative for 89.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 98.9% of cases, informative for 98.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 98.9% of cases, informative for 98.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 98.9% of cases, informative for 98.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 98.9% of cases, informative for 87.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 24.6% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 24.6% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 24.6% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 74.4% of cases, informative for 74.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 74.2% of cases, informative for 74.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Bulk RNA sequencing",
+    "Whole genome sequencing",
+    "Whole exome sequencing",
+    "Targeted DNA panel sequencing",
+    "DNA methylation array",
+    "Clinical",
+    "Structural Variation"
+  ]
+}

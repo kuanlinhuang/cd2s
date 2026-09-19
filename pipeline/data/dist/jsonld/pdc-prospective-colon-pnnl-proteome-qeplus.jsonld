@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-colon-pnnl-proteome-qeplus",
+  "name": "Prospective Colon PNNL Proteome Qeplus",
+  "alternateName": [
+    "Prospective Colon PNNL Proteome Qeplus"
+  ],
+  "description": "Prospective Colon PNNL Proteome Qeplus",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-colon-pnnl-proteome-qeplus",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000116"
+  ],
+  "keywords": [
+    "pdc",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000116",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-prospective-colon-pnnl-proteome-qeplus.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
+      "identifier": "https://doi.org/10.1038/s41586-022-04499-2",
+      "datePublished": "2022"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA274506",
+      "name": "Outreach Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA274506"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA209997",
+      "name": "Structural and Functional Biology-based analysis of non-oncogene cancer dependencies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA209997"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA272610",
+      "name": "Elucidating and Targeting tumor dependencies and drug resistance determinants at the single cell level",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA272610"
+    }
+  ],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2022-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Proteome mass spectrometry (TMT10 / DDA)"
+  ]
+}

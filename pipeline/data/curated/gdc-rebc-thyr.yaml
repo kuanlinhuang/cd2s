@@ -1,0 +1,218 @@
+id: gdc-rebc-thyr
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed:
+    - useful_for
+    - limitations
+    - inappropriate_uses
+    - access_steps
+    - primary_publications
+  open_questions:
+    - >-
+      Individual radiation dose reconstruction is the defining variable of this cohort and
+      is reported in the marker paper, but it is not present in the GDC harmonized clinical
+      records. Confirm through dbGaP whether per-case absorbed thyroid dose is releasable.
+    - >-
+      Vital status is populated for 98% of cases and informative for none. Confirm with the
+      submitters whether outcome data were collected at all or simply not submitted.
+
+one_liner: >-
+  449 papillary thyroid carcinomas from Ukrainians exposed to Chernobyl fallout as
+  children - an irreplaceable radiation-exposure cohort with essentially no clinical
+  annotation and no usable outcome data at all.
+
+summary: >-
+  This cohort characterises papillary thyroid carcinoma arising in people who were
+  children or in utero in Ukraine at the time of the 1986 Chernobyl accident, and it
+  exists because no comparable exposure can ethically be reconstructed. Whole genome
+  sequencing is available on 395 cases, RNA sequencing on 438 and microRNA on 437. The
+  scientific question it was built for - what radiation does to a genome, and whether the
+  resulting tumors differ mechanistically from sporadic ones - is answerable here and
+  almost nowhere else.
+
+  It is also an object lesson in why a catalog entry is not enough. The harmonized
+  clinical records report a median follow-up of 115 months - but that median rests on
+  just 12 of the 449 cases. They also record vital status for 440 of 449 cases as "not reported". A
+  researcher who selected this dataset on the strength of its follow-up figure would
+  discover only after obtaining access that no survival analysis is possible, and that
+  the follow-up figure itself rests on under 3% of the cohort.
+
+primary_publications:
+  - pmid: "33888599"
+    title: >-
+      Radiation-related genomic profile of papillary thyroid carcinoma after the Chernobyl
+      accident
+    journal: Science
+    year: 2021
+    url: https://pubmed.ncbi.nlm.nih.gov/33888599/
+
+useful_for:
+  - question: >-
+      What is the mutational and structural signature of ionising radiation exposure in a
+      solid human tumor, and how does it scale with dose?
+    rationale: >-
+      Whole genome sequencing on 395 cases with structural variant and copy number calls
+      on 394 supports genome-wide signature analysis, including the fusion-driven and
+      small-deletion patterns the marker paper associated with radiation. This is the
+      cohort's central strength and the reason it was assembled.
+    required_modalities: [wgs, structural_variant, copy_number]
+    feasibility: needs_access
+    approx_n: 394
+    statistical_note: >-
+      Dose-response analysis requires the reconstructed individual dose estimates, which
+      are not in the harmonized records. Without them this becomes an exposed-cohort
+      description rather than a dose-response study.
+    topics: [mutational-signatures, radiation-carcinogenesis]
+    exemplar_pmid: "33888599"
+
+  - question: >-
+      Do radiation-associated papillary thyroid carcinomas differ transcriptionally from
+      sporadic ones, and can a classifier separate them?
+    rationale: >-
+      RNA sequencing on 438 cases and microRNA on 437 gives a well-powered expression
+      cohort. TCGA-THCA provides a 507-case sporadic comparison group in the same
+      repository with the same harmonization, which makes a cross-cohort contrast
+      unusually tractable.
+    required_modalities: [rna_seq, mirna]
+    feasibility: needs_linkage
+    approx_n: 437
+    statistical_note: >-
+      Batch and platform differences between this cohort and TCGA-THCA are confounded with
+      the exposure of interest. Any classifier must be evaluated with that confound stated,
+      ideally with a batch-aware design rather than naive merging.
+    topics: [expression, radiation-carcinogenesis, classifier-validation]
+
+  - question: >-
+      Does age at exposure shape the resulting tumor genome, given that participants were
+      children or in utero at the time?
+    rationale: >-
+      The cohort's defining feature is exposure during a developmental window. Age
+      variables together with the genomic data allow the question to be posed, and it is
+      one of the few human settings where exposure timing is externally fixed by a single
+      dated event rather than self-reported.
+    required_modalities: [wgs, rna_seq]
+    feasibility: needs_access
+    approx_n: 395
+    statistical_note: >-
+      Age at diagnosis is not summarized in the harmonized records for this project, so
+      age variables must be obtained through controlled access before this can be designed.
+    topics: [radiation-carcinogenesis, developmental-exposure]
+
+  - question: >-
+      Can microRNA profiles discriminate radiation-associated thyroid tumors, as a cheaper
+      assay than whole genome sequencing for future screening cohorts?
+    rationale: >-
+      microRNA data exist on 437 of 449 cases, an unusually complete layer, and microRNA
+      assays are far more tractable in resource-limited screening settings than sequencing.
+    required_modalities: [mirna]
+    feasibility: needs_access
+    approx_n: 437
+    topics: [biomarkers, screening]
+
+limitations:
+  - kind: missing_data
+    statement: >-
+      Vital status is populated for 98% of cases and informative for 0%: every populated
+      value is "not reported". A follow-up time is derivable for just 12 of 449 cases, and even for
+      those there is no outcome to pair it with, so no survival endpoint exists. No survival analysis of any kind is possible.
+    severity: blocking
+    affected_analyses:
+      - Overall survival
+      - Prognostic biomarker discovery
+      - Any outcome-anchored model
+    mitigation: >-
+      None available within the dataset as distributed. Contact the submitting
+      investigators through the dbGaP study page if outcome data are essential to your
+      question, and do not plan the analysis on the assumption that they will be released.
+
+  - kind: missing_data
+    statement: >-
+      Individual reconstructed radiation dose is not present in the harmonized clinical
+      records, although it is the variable that distinguishes this cohort from any other
+      thyroid cancer resource and is analyzed in the marker paper.
+    severity: blocking
+    affected_analyses:
+      - Dose-response modeling
+      - Any claim about radiation dose thresholds
+    mitigation: >-
+      Request the full phenotype file through dbGaP. Until you hold it, treat the cohort as
+      an exposed group without a dose gradient.
+
+  - kind: missing_data
+    statement: >-
+      Tumor stage is recorded for 2.7% of cases and treatment for 2.7%. The cohort
+      supports genomic description but carries essentially no clinical annotation.
+    severity: major
+    affected_analyses:
+      - Stage-stratified analyses
+      - Treatment-context interpretation
+    mitigation: >-
+      Restrict claims to tumor biology. Do not interpret molecular differences as
+      prognostic or predictive without the clinical variables to support it.
+
+  - kind: population_coverage
+    statement: >-
+      Race and ethnicity are recorded as "not reported" for all 440 cases with a value, and
+      the cohort is drawn from one country and one exposure event. It describes Ukrainian
+      patients exposed to a specific accident.
+    severity: minor
+    affected_analyses:
+      - Ancestry-stratified analyses
+    mitigation: >-
+      Ancestry can be estimated from the germline sequence data if required, subject to the
+      consent terms in the data use agreement.
+
+  - kind: access_constraint
+    statement: >-
+      14,315 of 18,583 files are controlled access. The whole genome sequencing that makes
+      this cohort valuable is entirely in the controlled tier.
+    severity: major
+    affected_analyses:
+      - Signature analysis
+      - Structural variant analysis
+    mitigation: Begin the dbGaP request early; plan several weeks of lead time.
+
+inappropriate_uses:
+  - statement: Survival or prognostic analysis of any kind.
+    reason: >-
+      Vital status is uninformative for every case. The long recorded follow-up in the
+      metadata is not accompanied by outcome status, and using it would produce a survival
+      curve with no events.
+  - statement: Quantifying cancer risk attributable to Chernobyl exposure.
+    reason: >-
+      This is a case series of tumors, with no unexposed comparison group and no
+      population denominator. Risk estimation requires an epidemiological cohort design
+      that these data do not constitute.
+  - statement: Treatment-effect or response analysis.
+    reason: Treatment fields are populated for 2.7% of cases and contain no outcome.
+
+access_steps:
+  - order: 1
+    action: Read the Science paper before requesting access
+    detail: >-
+      It states which clinical and dosimetric variables were available to the original
+      investigators. That is the fastest way to learn whether your question is answerable
+      at all, given that the harmonized records carry almost no clinical annotation.
+    url: https://pubmed.ncbi.nlm.nih.gov/33888599/
+    est_time: 1-2 hours
+  - order: 2
+    action: Scope with the 4,268 open-access files
+    detail: >-
+      Derived expression and copy number products are open and sufficient to test whether
+      your analysis plan is viable before you commit to an access request.
+    url: https://portal.gdc.cancer.gov/projects/REBC-THYR
+    est_time: 1-2 hours
+  - order: 3
+    action: Submit a dbGaP request, explicitly asking for dosimetry and outcome variables
+    detail: >-
+      Name the dose reconstruction and vital status variables in your request. They are the
+      difference between a descriptive genomic analysis and the dose-response study most
+      people want this cohort for.
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+
+tags: [radiation-exposure, distinctive-population, longitudinal-recorded, cautionary]

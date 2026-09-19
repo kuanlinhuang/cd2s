@@ -1,0 +1,149 @@
+id: gdc-fm-ad
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps]
+  notes: >-
+    Included as a showcase page specifically because its size makes it attractive and its
+    annotation makes most of the analyses people would attempt impossible. Knowing that
+    before requesting access is worth more than another well-annotated small cohort.
+
+one_liner: >-
+  18,004 patients profiled with a targeted clinical panel - the largest cohort in this
+  corpus, with no informative vital status, no race data, and no treatment records.
+
+summary: >-
+  The Foundation Medicine Adult Cancer Clinical Dataset is by a wide margin the largest
+  single cohort indexed here: 18,004 patients across many tumor types, profiled with a
+  targeted DNA panel in a clinical rather than research setting. That scale is genuinely
+  useful for questions about mutation frequency and co-occurrence in a real-world
+  population, which is precisely where research cohorts are least representative.
+
+  It is also the clearest case in this corpus of a dataset whose catalog entry invites
+  analyses it cannot support. Vital status is populated for 100% of cases and informative
+  for 0% - every value is "not reported". Race is "not reported" for all 18,004 patients.
+  Every treatment field is empty. Progression and last known disease status are populated
+  for every case and informative for none. A researcher attracted by the sample size will
+  find, after obtaining controlled access to 54,012 files, that no outcome-anchored
+  analysis is possible.
+
+useful_for:
+  - question: >-
+      What are the mutation frequencies and co-occurrence patterns of clinically targeted
+      genes in a large real-world oncology population?
+    rationale: >-
+      18,004 patients profiled on a clinical panel give tight confidence intervals on
+      alteration frequencies, including for alterations too rare to study in a
+      thousand-patient research cohort. Frequency and co-occurrence need only the variant
+      calls and the tumor type, both of which are present.
+    required_modalities: [targeted_dna]
+    required_fields: [diagnoses.primary_diagnosis]
+    feasibility: needs_access
+    approx_n: 18004
+    statistical_note: >-
+      Panel composition bounds what can be counted: absence of a gene from the panel is not
+      absence of alteration. Report frequencies only for genes on the panel and state the
+      panel version.
+    topics: [mutation-frequency, real-world-evidence, precision-oncology]
+  - question: >-
+      How does the mutational landscape of clinically sequenced patients differ from that of
+      research cohorts such as TCGA?
+    rationale: >-
+      Clinical sequencing populations are enriched for advanced and pretreated disease
+      relative to the largely treatment-naive primary tumors in research cohorts. With
+      18,004 cases the comparison is well powered, and the discrepancy is itself a caution
+      about generalising research-cohort findings to clinical practice.
+    required_modalities: [targeted_dna]
+    feasibility: needs_linkage
+    approx_n: 18004
+    statistical_note: >-
+      Restrict the comparison to genes present on both assays and to matched tumor types;
+      differences in assay sensitivity and tumor purity confound naive comparisons.
+    topics: [real-world-evidence, cohort-comparison]
+  - question: >-
+      How common are actionable alterations across tumor types in routine practice?
+    rationale: >-
+      Scale plus a clinically-deployed panel makes this the right cohort for estimating what
+      fraction of patients would be eligible for a given targeted therapy, a question that
+      research cohorts systematically answer wrong.
+    required_modalities: [targeted_dna]
+    feasibility: needs_access
+    approx_n: 18004
+    statistical_note: >-
+      Eligibility estimates apply to the population that received clinical sequencing, which
+      is not the whole cancer population.
+    topics: [precision-oncology, actionability]
+
+limitations:
+  - kind: missing_data
+    statement: >-
+      Vital status is populated for 100% of the 18,004 cases and informative for 0%: every
+      value is "not reported". Progression or recurrence and last known disease status show
+      the same pattern - fully populated, entirely uninformative. No outcome endpoint of any
+      kind can be derived.
+    severity: blocking
+    affected_analyses: [Survival analysis, Prognostic modeling, Any outcome-anchored question]
+    mitigation: None. Choose a different cohort for any outcome question.
+  - kind: treatment_context
+    statement: >-
+      Every treatment field is empty for every case: prior treatment, treatment type,
+      therapeutic agents, treatment outcome and line of therapy are all at 0% coverage.
+    severity: blocking
+    affected_analyses: [Treatment-response analysis, Resistance mechanisms, Line-of-therapy questions]
+    mitigation: >-
+      None. Note that this is a clinically sequenced and therefore largely pretreated
+      population, so alteration frequencies reflect an unrecorded treatment history.
+  - kind: population_coverage
+    statement: >-
+      Race is recorded as "not reported" for all 18,004 patients. The largest cohort in this
+      corpus contributes nothing to any question about how cancer genomics differs across
+      populations.
+    severity: blocking
+    affected_analyses: [Disparities research, Ancestry-stratified analysis]
+    mitigation: >-
+      Germline-based ancestry inference is not appropriate here; the assay is a tumor-only
+      targeted panel and the consent scope does not contemplate it.
+  - kind: ascertainment_bias
+    statement: >-
+      Patients enter this cohort by being referred for clinical tumor sequencing, which
+      selects for advanced disease, access to specialist care and insurance coverage.
+    severity: major
+    affected_analyses: [Population frequency estimates, Generalization to all patients]
+    mitigation: Describe results as applying to clinically sequenced patients, not to all patients.
+  - kind: access_constraint
+    statement: 54,012 of 54,096 files are controlled access; only 84 files are open.
+    severity: major
+    affected_analyses: [Everything except catalog browsing]
+    mitigation: >-
+      Confirm from this page that your question survives the annotation gaps before starting
+      an access request, because scoping with open files is not possible at this ratio.
+
+inappropriate_uses:
+  - statement: Any survival, prognostic or outcome analysis.
+    reason: Vital status is uninformative for all 18,004 cases.
+  - statement: Any treatment or resistance analysis.
+    reason: All treatment fields are empty.
+  - statement: Any analysis of racial or ethnic differences.
+    reason: Race is "not reported" for every patient in the cohort.
+  - statement: Estimating population-level mutation prevalence.
+    reason: >-
+      The cohort is ascertained by clinical referral for sequencing and carries no sampling
+      frame or denominator.
+
+access_steps:
+  - order: 1
+    action: Check your question against the annotation gaps above
+    detail: >-
+      Almost all files are controlled, so scoping after approval is expensive. The three
+      blocking limitations on this page rule out most reasons people arrive at a cohort of
+      this size.
+    est_time: 15 minutes
+  - order: 2
+    action: Submit a dbGaP data access request if the question survives
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+
+tags: [large-cohort, real-world-evidence, cautionary, annotation-poor]

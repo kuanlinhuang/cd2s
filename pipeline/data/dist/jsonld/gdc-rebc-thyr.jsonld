@@ -1,0 +1,266 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-rebc-thyr",
+  "name": "Comprehensive genomic characterization of radiation-related papillary thyroid cancer in the Ukraine",
+  "alternateName": [
+    "REBC-THYR"
+  ],
+  "description": "This cohort characterises papillary thyroid carcinoma arising in people who were children or in utero in Ukraine at the time of the 1986 Chernobyl accident, and it exists because no comparable exposure can ethically be reconstructed. Whole genome sequencing is available on 395 cases, RNA sequencing on 438 and microRNA on 437. The scientific question it was built for - what radiation does to a genome, and whether the resulting tumors differ mechanistically from sporadic ones - is answerable here and almost nowhere else.\nIt is also an object lesson in why a catalog entry is not enough. The harmonized clinical records report a median follow-up of 115 months - but that median rests on just 12 of the 449 cases. They also record vital status for 440 of 449 cases as \"not reported\". A researcher who selected this dataset on the strength of its follow-up figure would discover only after obtaining access that no survival analysis is possible, and that the follow-up figure itself rests on under 3% of the cohort.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-rebc-thyr",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/REBC-THYR",
+    "gdc_program:REBC",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001134"
+  ],
+  "keywords": [
+    "Adenomas and Adenocarcinomas",
+    "Epithelial Neoplasms, NOS",
+    "Thyroid gland",
+    "cautionary",
+    "copy number",
+    "distinctive-population",
+    "gdc",
+    "longitudinal-recorded",
+    "mirna",
+    "radiation-exposure",
+    "rebc",
+    "released",
+    "rna seq",
+    "structural variant",
+    "wgs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "REBC"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/REBC-THYR",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-rebc-thyr.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Radiation-related genomic profile of papillary thyroid carcinoma after the Chernobyl accident",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/33888599/",
+      "datePublished": "2021"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA097096",
+      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA097096"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA097096",
+      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA097096"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA247773",
+      "name": "Project 2: TMEJ Regulation in Cancer and Treatment Resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA247773"
+    }
+  ],
+  "dateModified": "2026-09-18T02:36:25.802055+00:00",
+  "datePublished": "2024-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 98.0% of cases, informative for 98.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 98.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 98.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 98.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 98.0% of cases, informative for 98.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 98.0% of cases, informative for 98.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 98.0% of cases, informative for 98.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 2.7% of cases, informative for 2.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 2.7% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 2.7% of cases, informative for 2.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 2.7% of cases, informative for 2.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 2.7% of cases, informative for 2.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 2.7% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 2.7% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 2.7% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 2.7% of cases, informative for 2.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 2.7% of cases, informative for 2.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 2.7% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Whole genome sequencing",
+    "Bulk RNA sequencing",
+    "microRNA sequencing",
+    "Copy Number Variation",
+    "Somatic Structural Variation"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "pdc-ku-pdac-discovery-study-global-proteome",
+  "alternateName": "KU PDAC Discovery Study - Global proteome",
+  "description": "KU PDAC Discovery Study - Global proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ku-pdac-discovery-study-global-proteome",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets.",
+  "version": "as-retrieved",
+  "datePublished": "2025-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

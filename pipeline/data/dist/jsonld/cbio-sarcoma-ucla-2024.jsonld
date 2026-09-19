@@ -1,0 +1,108 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-sarcoma-ucla-2024",
+  "name": "Sarcoma (UCLA, Cell 2024)",
+  "alternateName": [
+    "sarcoma_ucla_2024"
+  ],
+  "description": "Targeted sequencing of 63 out of 194 soft tissue sarcoma samples using OncoPanel v3 platform.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-sarcoma-ucla-2024",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=sarcoma_ucla_2024"
+  ],
+  "keywords": [
+    "Soft Tissue",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "structural variant",
+    "targeted dna",
+    "tissue"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=sarcoma_ucla_2024",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-sarcoma-ucla-2024.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/39305899/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA248265",
+      "name": "Advancing method benchmarking and data sharing through crowd-sourced competitions in cancer research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA248265"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA244729",
+      "name": "The Evolution of Sarcoma Drug Sensitivity through Time and Space",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA244729"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016042",
+      "name": "Epigenomics, RNA, and Gene Regulation (ERGR)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016042"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Structural variants / fusions"
+  ]
+}

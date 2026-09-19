@@ -1,0 +1,65 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-confirmatory-study-training",
+  "name": "CPTAC CCRCC Confirmatory Study - Training",
+  "alternateName": [
+    "CPTAC CCRCC Confirmatory Study - Training - Metabolome"
+  ],
+  "description": "CPTAC CCRCC Confirmatory Study - Training",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-confirmatory-study-training",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000534"
+  ],
+  "keywords": [
+    "metabolome",
+    "pdc",
+    "proteogenomics",
+    "rare-modality"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000534",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ccrcc-confirmatory-study-training.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Metabolome mass spectrometry (Label Free / N/A)"
+  ]
+}

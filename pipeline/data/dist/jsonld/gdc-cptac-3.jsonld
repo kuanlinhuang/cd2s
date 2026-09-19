@@ -1,0 +1,376 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-cptac-3",
+  "name": "CPTAC-Brain, Head and Neck, Kidney, Lung, Pancreas, Uterus",
+  "alternateName": [
+    "CPTAC-3"
+  ],
+  "description": "CPTAC-3 is the genomic half of a cohort whose proteomic half lives in a different repository. That split is the single most important practical fact about it: the GDC record carries exome on 1,844 cases, whole genome on 1,827, RNA sequencing on 1,824 and methylation on 1,817, while proteome, phosphoproteome and the scarcer modification layers are distributed through the Proteomic Data Commons under different study identifiers.\nIts clinical annotation is unusually strong for a multi-cancer cohort. Vital status is informative for 95.8%, progression or recurrence for 77.9%, and last known disease status for 77.2% - which makes recurrence-based endpoints genuinely available, not just nominally present.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cptac-3",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/CPTAC-3",
+    "gdc_program:CPTAC",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001287"
+  ],
+  "keywords": [
+    "Adenomas and Adenocarcinomas",
+    "Base of tongue",
+    "Brain",
+    "Breast",
+    "Bronchus and lung",
+    "Colon",
+    "Complex Epithelial Neoplasms",
+    "Complex Mixed and Stromal Neoplasms",
+    "Ductal and Lobular Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Floor of mouth",
+    "Gliomas",
+    "Gum",
+    "Hematopoietic and reticuloendothelial systems",
+    "Kidney",
+    "Larynx",
+    "Lip",
+    "Lipomatous Neoplasms",
+    "Myeloid Leukemias",
+    "Nevi and Melanomas",
+    "Not Applicable",
+    "Oropharynx",
+    "Other and ill-defined sites",
+    "Other and ill-defined sites in lip, oral cavity and pharynx",
+    "Other and unspecified parts of mouth",
+    "Other and unspecified parts of tongue",
+    "Other and unspecified urinary organs",
+    "Pancreas",
+    "Skin",
+    "Squamous Cell Neoplasms",
+    "Stomach",
+    "Tonsil",
+    "Transitional Cell Papillomas and Carcinomas",
+    "Unknown",
+    "Uterus, NOS",
+    "copy number",
+    "cptac",
+    "cross-repository",
+    "gdc",
+    "methylation",
+    "mirna",
+    "pan-cancer",
+    "proteogenomics",
+    "recurrence",
+    "released",
+    "rna seq",
+    "scrna seq",
+    "structural variant",
+    "targeted dna",
+    "wgs",
+    "wxs"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "CPTAC"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/CPTAC-3",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-cptac-3.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Proteogenomic Characterization Reveals Therapeutic Vulnerabilities in Lung Adenocarcinoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/32649874/",
+      "datePublished": "2020"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "R21CA248122",
+      "name": "Inference of tumor growth dynamics using genomic data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA248122"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA072720",
+      "name": "Clinical Protocol and Data Management",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA072720"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA237404",
+      "name": "Lineage specifiers governing pancreatic cancer growth and molecular subtype",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA237404"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009172",
+      "name": "Physician Scientist Training in Cancer Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009172"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA265182",
+      "name": "Molecular origins and evolution to treatment resistance in genitourinary cancers",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA265182"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA220449",
+      "name": "Human metabolic variation as a window into cancer initiation and progression",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA220449"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA285336",
+      "name": "Construction of A Lung Cancer Preclinical Model Cross-comparison Platform",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA285336"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA273585",
+      "name": "The role of translation initiation factor eIF5B in lung cancer pathogenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA273585"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA142543",
+      "name": "UT Southwestern Medical Center Simmons Comprehensive Cancer Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA142543"
+    }
+  ],
+  "dateModified": "2026-09-18T02:35:37.301850+00:00",
+  "datePublished": "2020-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 94.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 21.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 95.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 37.0% of cases, informative for 28.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 99.5% of cases, informative for 98.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 99.5% of cases, informative for 98.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 99.5% of cases, informative for 99.5%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 97.4% of cases, informative for 75.6%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 98.1% of cases, informative for 69.7%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.1% of cases, informative for 0.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 99.1% of cases, informative for 77.9%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 85.8% of cases, informative for 77.2%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 0.1% of cases, informative for 0.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 52.7% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 4.1% of cases, informative for 3.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 48.3% of cases, informative for 44.1%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 92.2% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 17.4% of cases, informative for 17.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 92.2% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 96.4% of cases, informative for 96.4%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 96.8% of cases, informative for 84.6%"
+    }
+  ],
+  "measurementTechnique": [
+    "Whole exome sequencing",
+    "Targeted DNA panel sequencing",
+    "Bulk RNA sequencing",
+    "Whole genome sequencing",
+    "microRNA sequencing",
+    "Single-cell RNA sequencing",
+    "DNA methylation array",
+    "Copy Number Variation",
+    "Somatic Structural Variation"
+  ]
+}

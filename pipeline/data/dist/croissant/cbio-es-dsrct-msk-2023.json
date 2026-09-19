@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-es-dsrct-msk-2023",
+  "alternateName": "Ewing Sarcoma (MSK, Cancer Research 2024)",
+  "description": "Targeted Sequencing of 277 Ewing sarcoma and Desmoplastic small round cell patient tumors with their matched normal pairs via MSK-IMPACT platform to detect EWSR1 chromoplexy-associated structural rearrangements.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-es-dsrct-msk-2023",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

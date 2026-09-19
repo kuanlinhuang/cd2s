@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-colon-molecular-atlas-project",
+  "name": "Colon Molecular Atlas Project",
+  "alternateName": [
+    "HTA11"
+  ],
+  "description": "Colon Molecular Atlas Project",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-colon-molecular-atlas-project",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA11%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn36266953",
+    "https://www.synapse.org/#!Synapse:syn38868462",
+    "https://www.synapse.org/#!Synapse:syn38868669",
+    "https://www.synapse.org/#!Synapse:syn39050879",
+    "https://www.synapse.org/#!Synapse:syn39050991",
+    "https://www.synapse.org/#!Synapse:syn39051142",
+    "https://www.synapse.org/#!Synapse:syn39051213",
+    "https://www.synapse.org/#!Synapse:syn39051263",
+    "https://www.synapse.org/#!Synapse:syn39051632",
+    "https://www.synapse.org/#!Synapse:syn39051860",
+    "https://www.synapse.org/#!Synapse:syn39051938"
+  ],
+  "keywords": [
+    "bulk dna",
+    "htan",
+    "rare-modality",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "spatial transcriptomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Vanderbilt University"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-colon-molecular-atlas-project.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Differential pre-malignant programs and microenvironment chart distinct paths to malignancy in human colorectal polyps",
+      "identifier": "https://doi.org/10.1016/j.cell.2021.11.031",
+      "datePublished": "2021"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Molecular cartography uncovers evolutionary and microenvironmental dynamics in sporadic colorectal tumors",
+      "identifier": "https://doi.org/10.1016/j.cell.2023.11.006",
+      "datePublished": "2023"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Temporal recording of mammalian development and precancer",
+      "identifier": "https://doi.org/10.1038/s41586-024-07954-4",
+      "datePublished": "2024"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233291",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233291"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Bulk DNA sequencing",
+    "Single-cell / single-nucleus RNA sequencing",
+    "10x Visium spatial transcriptomics",
+    "Multiplexed tissue imaging"
+  ]
+}

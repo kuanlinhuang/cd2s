@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-kncc-glioblastoma-evolution",
+  "name": "KNCC Glioblastoma Evolution",
+  "alternateName": [
+    "KNCC Glioblastoma Evolution - Phosphoproteome",
+    "KNCC Glioblastoma Evolution - Proteome"
+  ],
+  "description": "KNCC Glioblastoma Evolution",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-kncc-glioblastoma-evolution",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000515",
+    "https://pdc.cancer.gov/pdc/study/PDC000514"
+  ],
+  "keywords": [
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "International Cancer Proteogenome Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000515",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-kncc-glioblastoma-evolution.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Integrated proteogenomic characterization of glioblastoma evolution.",
+      "identifier": "https://doi.org/10.1016/j.ccell.2023.12.015",
+      "datePublished": "2024"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2024-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Phosphoproteome mass spectrometry (TMT11 / DDA)",
+    "Proteome mass spectrometry (TMT11 / DDA)"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-ccle-broad-2019",
+  "name": "Cancer Cell Line Encyclopedia (Broad, 2019)",
+  "alternateName": [
+    "ccle_broad_2019"
+  ],
+  "description": "Cancer Cell Line Encyclopedia from the Broad Institute and Novartis, updated 2019. Data downloaded from the <a href=\"https://portals.broadinstitute.org/ccle/data\">Broad CCLE Portal</a>. For more info about the proteomics data, see the <a href=\"https://github.com/cbioportal/datahub/blob/master/public/ccle_broad_2019/README.md\">README</a>.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ccle-broad-2019",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=ccle_broad_2019"
+  ],
+  "keywords": [
+    "Mixed Cancer Types",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "other",
+    "proteome",
+    "rna seq",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=ccle_broad_2019",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-ccle-broad-2019.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/31068700/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U54CA224068",
+      "name": "An integrated translational approach to overcome drug resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224068"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210950",
+      "name": "Integrated analysis of protein expression data from the Reverse Phase Protein Array (RPPA) platform",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210950"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210949",
+      "name": "Batch effects in molecular profiling data on cancers: detection, quantitation, interpretation, and correction",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210949"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA180922",
+      "name": "Trinity: Transcriptome assembly for genetic and functional analysis of cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA180922"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA217842",
+      "name": "Integrative bioinformatics and functional characterization of oncogenic driver aberrations in cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA217842"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA176058",
+      "name": "The Dana-Farber Cancer Institute Cancer Target Discovery and Development Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA176058"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA221675",
+      "name": "Functional Proteomics by Reverse Phase Protein Array in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA221675"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA211461",
+      "name": "Open Software and Resource Development Leveraging Next-gen Sequencing Data to Facilitate Computational Analysis of Cancer Biology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA211461"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R37CA225191",
+      "name": "Targeting blastic plasmacytoid dendritic cell neoplasm (BPDCN)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA225191"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA219943",
+      "name": "Characterizing TP53 and PPM1D mutations as resistance drivers to radiation therapy in Diffuse Intrinsic Pontine Gliomas",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA219943"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA217685",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA217685"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA098258",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA098258"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016672",
+      "name": "Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016672"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "RNA sequencing expression",
+    "Mass spectrometry proteomics",
+    "Structural variants / fusions"
+  ]
+}

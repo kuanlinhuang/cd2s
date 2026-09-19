@@ -1,0 +1,246 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2016",
+  "name": "Acute Lymphoblastic Leukemia (St Jude, Nat Genet 2016)",
+  "alternateName": [
+    "all_stjude_2016"
+  ],
+  "description": "Whole-genome and/or whole-exome sequencing of ERG-altered B-ALL tumor/normal pairs.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2016",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=all_stjude_2016"
+  ],
+  "keywords": [
+    "B-Lymphoblastic Leukemia/Lymphoma",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "lnm",
+    "nci-funded",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=all_stjude_2016",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-all-stjude-2016.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/27776115/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196172",
+      "name": "ECOG-ACRIN Biospecimen Bank to Support NCTN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196172"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196171",
+      "name": "The Alliance NCTN Biorepository and Biospecimen Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196171"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA114766",
+      "name": "Support for Human Specimen Banking in NCI-Sponsored Clinical Trials-(CGB)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA114766"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180899",
+      "name": "Children's Oncology Group Statistics and Data Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180899"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180886",
+      "name": "COG NCTN Network Group Operations Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180886"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180861",
+      "name": "ITSC for Leukemia: Novel Molecular Strategies for NCTN: \"Individualized\" Therapie",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180861"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180850",
+      "name": "OSU as Network Lead Academic Participating Site for the NCI NCTN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180850"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180827",
+      "name": "ECOG-ACRIN INTEGRATED LEUKEMIA TRANSLATIONAL RESEARCH CENTER",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180827"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180820",
+      "name": "Member Site Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180820"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098543",
+      "name": "Children's Oncology Group Chair's Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098543"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098413",
+      "name": "Children's Oncology Group Statistics and Data Center Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098413"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA157937",
+      "name": "MOLECULAR SIGNATURES FOR OUTCOME PREDICTION AND THERAPEUTIC TARGETING IN ALL",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157937"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA188293",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA188293"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA118100",
+      "name": "Early Career Cancer Clinical Investigator Award (ECIA)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA118100"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016058",
+      "name": "Shared Resource 10: Pharmacoanalytical Shared Resource (PhASR)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016058"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)"
+  ]
+}

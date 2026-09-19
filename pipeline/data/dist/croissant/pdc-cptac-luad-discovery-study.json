@@ -1,0 +1,48 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "pdc-cptac-luad-discovery-study",
+  "alternateName": "CPTAC LUAD Discovery Study",
+  "description": "Ubiquitylation is the scarcest proteomic modification layer in the NCI portfolio: five studies across the whole Proteomic Data Commons carry it, and this is one of them. On 80 of these 115 lung adenocarcinomas, protein degradation signaling can be measured directly rather than inferred, alongside acetylome and phosphoproteome on all 115.\nBecause the ubiquitin-proteasome system is a validated therapeutic axis and degradation state is invisible to transcriptomics, this layer answers questions that no expression cohort can. All of it is open and needs no account.",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-luad-discovery-study",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "A proteogenomic portrait of lung squamous cell carcinoma.",
+  "version": "as-retrieved",
+  "datePublished": "2021-01-01",
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [
+      "Which proteins are regulated by degradation rather than by transcription in lung adenocarcinoma?",
+      "How do acetylation and phosphorylation interact in the same tumor?",
+      "Can degradation signatures identify candidate targets for proteasome or E3 ligase directed therapy?"
+    ],
+    "blockingLimitations": [
+      {
+        "kind": "missing_data",
+        "statement": "No clinical annotation is distributed with the PDC study - no outcome, treatment, stage or smoking history, the last being central to lung adenocarcinoma biology.",
+        "rulesOut": [
+          "Survival analysis",
+          "Smoking-stratified analysis",
+          "Clinical correlation"
+        ]
+      }
+    ],
+    "inappropriateUses": [
+      "Survival or prognostic claims from PDC data alone.",
+      "Treating the ubiquitylome subset as representative of the full cohort without checking."
+    ]
+  }
+}

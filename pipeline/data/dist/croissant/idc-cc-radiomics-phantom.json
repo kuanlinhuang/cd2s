@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-cc-radiomics-phantom",
+  "alternateName": "CC-Radiomics-Phantom",
+  "description": "This collection consists of 17 CT scans of the Credence Cartridge Radiomics (CCR) phantom, which was designed for use in studies of texture feature robustness. The scans were acquired at four medical centers using each center\u2019s chest protocol and were taken using GE (7 scans), Philips (5 scans), Siemens (2 scans), and Toshiba (3 scans) scanners. The CCR phantom has 10 cartridges, each with a unique texture Please see the CC-Radiomics-Phantom wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CC-Radiomics-Phantom",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-lgg-ucsf-2014",
+  "name": "Low-Grade Gliomas (UCSF, Science 2014)",
+  "alternateName": [
+    "lgg_ucsf_2014"
+  ],
+  "description": "Whole exome sequencing of 23 grade II glioma tumor/normal pairs.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lgg-ucsf-2014",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=lgg_ucsf_2014"
+  ],
+  "keywords": [
+    "Diffuse Glioma",
+    "brain",
+    "cbioportal",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "targeted dna",
+    "treatment",
+    "treatment-annotated"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=lgg_ucsf_2014",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-lgg-ucsf-2014.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/24336570/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "T32CA128583",
+      "name": "Research Training in Childhood Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA128583"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA169316",
+      "name": "Imaging Guided Genomics of Malignant Transformation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA169316"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA163336",
+      "name": "Predicting Transcriptional and Epigenetic Networks in Cancer from Sequencing Data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA163336"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA097257",
+      "name": "Administrative Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA097257"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA082103",
+      "name": "Leadership, Planning and Evaluation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA082103"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA081403",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA081403"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Structured treatment records"
+  ]
+}

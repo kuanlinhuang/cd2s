@@ -1,0 +1,125 @@
+id: gdc-organoid-pancreatic
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps, primary_publications]
+one_liner: >-
+  70 patient-derived pancreatic cancer organoids with exome and RNA sequencing, linked to
+  drug-response profiling in the source publication - a living model resource rather than a
+  tissue archive.
+summary: >-
+  Patient-derived organoids occupy a useful middle ground: they retain patient-specific
+  genomics while remaining experimentally tractable, which tissue cohorts are not. This
+  resource profiles 70 pancreatic cancer organoids with exome sequencing on 69, RNA
+  sequencing on 49 and whole genome on 22, with stage recorded for 84% of the source tumors.
+
+  Its distinctive value is that the source publication paired these molecular profiles with
+  pharmacotyping - measured drug responses - which makes it one of the few NCI resources
+  where genotype can be related to an experimentally measured phenotype rather than to a
+  clinical outcome recorded years later.
+primary_publications:
+  - pmid: "29853643"
+    title: Organoid Profiling Identifies Common Responders to Chemotherapy in Pancreatic Cancer
+    journal: Cancer Discovery
+    year: 2018
+    url: https://pubmed.ncbi.nlm.nih.gov/29853643/
+useful_for:
+  - question: Which molecular features predict chemotherapy sensitivity in pancreatic cancer organoids?
+    rationale: >-
+      Exome on 69 and expression on 49 organoids, with measured drug responses reported in
+      the source publication. Because response is measured experimentally rather than
+      inferred from clinical records, this avoids the treatment confounding that defeats
+      observational response analysis.
+    required_modalities: [wxs, rna_seq]
+    feasibility: needs_linkage
+    approx_n: 49
+    statistical_note: >-
+      Pharmacotyping data are in the publication's supplementary material, not in the GDC
+      record. Retrieve and join them before designing the analysis.
+    topics: [drug-response, organoids, pancreatic]
+    exemplar_pmid: "29853643"
+  - question: How faithfully do organoids recapitulate the genomics of the tumors they came from?
+    rationale: >-
+      A model-fidelity question that determines how much weight any organoid result deserves,
+      and one that can be posed here because both the organoid profiles and the source tumor
+      stage information are available.
+    required_modalities: [wxs, wgs]
+    feasibility: needs_access
+    approx_n: 69
+    statistical_note: >-
+      Matched primary tumor sequencing is not uniformly available in this record; check
+      pairing before assuming it.
+    topics: [model-fidelity, organoids]
+  - question: Can organoid expression programs stratify pancreatic cancer subtypes established in tissue cohorts?
+    rationale: >-
+      Expression on 49 organoids can be scored against the basal-like and classical subtype
+      definitions derived from bulk tumor cohorts, testing whether those subtypes survive in
+      culture.
+    required_modalities: [rna_seq]
+    feasibility: needs_access
+    approx_n: 49
+    statistical_note: >-
+      Culture adaptation shifts expression; divergence from tissue subtypes is a finding
+      about the model system as much as about the tumor.
+    topics: [molecular-subtypes, organoids, pancreatic]
+limitations:
+  - kind: missing_data
+    statement: >-
+      Vital status is populated for all 70 cases and informative for none, and progression is
+      likewise uninformative. No clinical outcome endpoint exists in these records.
+    severity: blocking
+    affected_analyses: [Survival analysis, Clinical outcome correlation]
+    mitigation: >-
+      Use the measured organoid drug response as the endpoint instead, obtained from the
+      source publication.
+  - kind: treatment_context
+    statement: >-
+      No treatment fields are populated, so the clinical therapy each donor received is
+      unknown, and prior treatment could affect the derived organoid.
+    severity: major
+    affected_analyses: [Interpreting organoid response in clinical context]
+    mitigation: Consult the source publication for treatment history.
+  - kind: statistical_power
+    statement: 70 organoids with 49 expression profiles limits discovery power sharply.
+    severity: major
+    affected_analyses: [Genome-wide association with drug response]
+    mitigation: Pre-specify candidate genes or pathways.
+  - kind: annotation_quality
+    statement: >-
+      Organoids are a model system. Findings describe cultured cells derived from patients,
+      not the patients themselves, and culture selects for growth-competent clones.
+    severity: major
+    affected_analyses: [Any direct clinical inference]
+    mitigation: State the model-system caveat in any translational claim.
+  - kind: access_constraint
+    statement: 911 of 966 files are controlled access.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: Submit a dbGaP request.
+inappropriate_uses:
+  - statement: Survival or prognostic analysis.
+    reason: Vital status is uninformative for all 70 cases.
+  - statement: Claiming clinical efficacy from organoid drug response.
+    reason: >-
+      Organoid sensitivity is a model-system measurement; the link to patient benefit
+      requires clinical validation this resource does not contain.
+access_steps:
+  - order: 1
+    action: Read the Cancer Discovery paper and retrieve its pharmacotyping supplement
+    detail: >-
+      The drug-response data are the reason to use this resource and they live in the paper,
+      not the repository.
+    url: https://pubmed.ncbi.nlm.nih.gov/29853643/
+    est_time: 2 hours
+  - order: 2
+    action: Scope with the 55 open-access files
+    url: https://portal.gdc.cancer.gov/projects/ORGANOID-PANCREATIC
+    est_time: 30 minutes
+  - order: 3
+    action: Submit a dbGaP data access request for the sequence data
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [organoids, model-system, drug-response, pancreatic, underexplored-candidate]

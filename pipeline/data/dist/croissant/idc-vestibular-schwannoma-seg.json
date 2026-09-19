@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-vestibular-schwannoma-seg",
+  "alternateName": "Vestibular-Schwannoma-SEG",
+  "description": "This collection contains a labelled dataset of MRI images collected on 242 consecutive patients with vestibular schwannoma (VS) undergoing Gamma Knife stereotactic radiosurgery (GK SRS). The structural images included contrast-enhanced T1-weighted (ceT1) images and high-resolution T2-weighted (hrT2) images. Each imaging dataset is accompanied by the patient\u2019s radiation therapy (RT) dataset including the RTDose, RTStructures and RTPlan. Please see the Vestibular-Schwannoma-SEG wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-vestibular-schwannoma-seg",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Vestibular-Schwannoma-SEG",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

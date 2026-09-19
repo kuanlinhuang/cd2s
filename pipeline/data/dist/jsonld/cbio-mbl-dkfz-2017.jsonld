@@ -1,0 +1,108 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mbl-dkfz-2017",
+  "name": "Medulloblastoma (DKFZ, Nature 2017)",
+  "alternateName": [
+    "mbl_dkfz_2017"
+  ],
+  "description": "Whole genome or whole exome sequencing of 491 previously untreated Medulloblastoma tumor/normal pairs.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mbl-dkfz-2017",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=mbl_dkfz_2017"
+  ],
+  "keywords": [
+    "Medulloblastoma",
+    "cbioportal",
+    "embt",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "structural variant",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=mbl_dkfz_2017",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mbl-dkfz-2017.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/28726821/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "R01CA159859",
+      "name": "Dysregulation of the Core Binding Factor Complex Inhibits Differentiation and Drives Group 4 Medulloblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA159859"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA148699",
+      "name": "Medulloblastoma and Metastases",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA148699"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA109467",
+      "name": "Genomic Analysis of Medulloblastomas",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA109467"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Structural variants / fusions"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "name": "HBV-Related Hepatocellular Carcinoma",
+  "alternateName": [
+    "HBV-Related Hepatocellular Carcinoma - Phosphoproteome",
+    "HBV-Related Hepatocellular Carcinoma - Proteome"
+  ],
+  "description": "HBV-Related Hepatocellular Carcinoma",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000199",
+    "https://pdc.cancer.gov/pdc/study/PDC000198"
+  ],
+  "keywords": [
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "International Cancer Proteogenome Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000199",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-hbv-related-hepatocellular-carcinoma.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Tryptophan depletion results in tryptophan-to-phenylalanine substitutants.",
+      "identifier": "https://doi.org/10.1038/s41586-022-04499-2",
+      "datePublished": "2022"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271076",
+      "name": "iPGDAC, An Integrative Proteogenomic Data Analysis Center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271076"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210954",
+      "name": "iPGDAC, An Integrative Proteogenomic Data Analysis Center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210954"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA245903",
+      "name": "Proteogenomics-driven therapeutic discovery in hepatocellular carcinoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA245903"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA125123",
+      "name": "Patient-Derived Xenograft Shared Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA125123"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA188305",
+      "name": "Role of NCOA5 in hepatic steatosis and hepatocarcinogenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA188305"
+    }
+  ],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2022-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Phosphoproteome mass spectrometry (TMT11 / DDA)",
+    "Proteome mass spectrometry (TMT11 / DDA)"
+  ]
+}

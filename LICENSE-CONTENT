@@ -1,0 +1,19 @@
+Curated content licence
+=======================
+
+The curated dataset guides, structured metadata exports, and documentation in this
+repository are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+This covers, among other files:
+
+  pipeline/data/curated/**   curated dataset overlays
+  pipeline/data/dist/**      generated structured exports
+  web/public/data/**         the same exports as served by the site
+  docs/**                    documentation
+
+Software in this repository (everything else, including pipeline/src, web/app,
+web/components, web/lib and workbooks) is licensed under the MIT License; see LICENSE.
+
+Upstream dataset metadata retains the terms of its original repository. Every record
+carries the source and retrieval date of each claim so those terms can be traced.

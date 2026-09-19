@@ -1,0 +1,157 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-and-brain",
+  "name": "Transition to Metastatic State: Lung Cancer, Pancreatic Cancer and Brain Metastasis",
+  "alternateName": [
+    "HTA8"
+  ],
+  "description": "Transition to Metastatic State: Lung Cancer, Pancreatic Cancer and Brain Metastasis",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-and-brain",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA8%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn39253429",
+    "https://www.synapse.org/#!Synapse:syn39253517",
+    "https://www.synapse.org/#!Synapse:syn39253706",
+    "https://www.synapse.org/#!Synapse:syn39253853",
+    "https://www.synapse.org/#!Synapse:syn39253974",
+    "https://www.synapse.org/#!Synapse:syn39254633",
+    "https://www.synapse.org/#!Synapse:syn39255034",
+    "https://www.synapse.org/#!Synapse:syn39255093",
+    "https://www.synapse.org/#!Synapse:syn39255125",
+    "https://www.synapse.org/#!Synapse:syn39255232",
+    "https://www.synapse.org/#!Synapse:syn39255845"
+  ],
+  "keywords": [
+    "htan",
+    "rare-modality",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics",
+    "treatment-linked"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Memorial Sloan Kettering Cancer Center"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-and-brain.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Signatures of plasticity, metastasis, and immunosuppression in an atlas of human small cell lung cancer",
+      "identifier": "https://doi.org/10.1016/j.ccell.2021.09.008",
+      "datePublished": "2021"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Conserved transcriptional connectivity of regulatory T cells in the tumor microenvironment informs new combination cancer therapy strategies",
+      "identifier": "https://doi.org/10.1038/s41590-023-01504-2",
+      "datePublished": "2023"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Transcriptomic Plasticity Is a Hallmark of Metastatic Pancreatic Cancer",
+      "identifier": "https://doi.org/10.1158/0008-5472.CAN-25-1117",
+      "datePublished": "2026"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Progressive plasticity during colorectal cancer metastasis",
+      "identifier": "https://doi.org/10.1038/s41586-024-08150-0",
+      "datePublished": "2024"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U2CCA233284",
+      "name": null,
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=CA233284"
+    }
+  ],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Demographics",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Diagnosis",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Family history",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Follow-up",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapy",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clinical molecular test",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Extended clinical data (tier 2)",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Multiplexed tissue imaging",
+    "Single-cell / single-nucleus RNA sequencing"
+  ]
+}

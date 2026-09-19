@@ -1,0 +1,4 @@
+# Generated artifacts: keep them out of diffs and language statistics.
+pipeline/data/dist/** linguist-generated=true
+web/public/data/** linguist-generated=true
+workbooks/executed/*.ipynb linguist-generated=true

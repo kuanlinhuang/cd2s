@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-stad-study",
+  "name": "CPTAC STAD Study",
+  "alternateName": [
+    "CPTAC STAD Study - Acetylome",
+    "CPTAC STAD Study - DIA Ubiquitylome",
+    "CPTAC STAD Study - Glycoproteome",
+    "CPTAC STAD Study - Metabolome",
+    "CPTAC STAD Study - Phosphoproteome",
+    "CPTAC STAD Study - Protein-protein Interaction"
+  ],
+  "description": "The CPTAC gastric cancer study is the most extensively measured cohort indexed here. Four of its seven layers - acetylome, glycoproteome, ubiquitylome and metabolome - exist in fewer than twenty NCI cohorts each, and the combination on a single set of 193 tumors exists nowhere else. Ubiquitylation data on 184 cases is particularly scarce: only five studies in the entire Proteomic Data Commons carry it.\nIt is also a clear illustration of why reuse measurement is hard. All of it is openly downloadable with no account, and yet a literature search for its accession finds almost nothing - because authors cite the marker paper, not the PDC study identifier. The absence of citation evidence here says more about how proteomics data are referenced than about whether anyone has used them.",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-stad-study",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000622",
+    "https://pdc.cancer.gov/pdc/study/PDC000616",
+    "https://pdc.cancer.gov/pdc/study/PDC000621",
+    "https://pdc.cancer.gov/pdc/study/PDC000615",
+    "https://pdc.cancer.gov/pdc/study/PDC000626",
+    "https://pdc.cancer.gov/pdc/study/PDC000614",
+    "https://pdc.cancer.gov/pdc/study/PDC000617"
+  ],
+  "keywords": [
+    "acetylome",
+    "acetylproteome",
+    "gastric",
+    "glycoproteome",
+    "metabolome",
+    "multi-omic",
+    "open-access",
+    "other",
+    "pdc",
+    "phosphoproteome",
+    "protein-protein-interaction",
+    "proteogenomics",
+    "proteome",
+    "rare-modality",
+    "scarce-modality",
+    "ubiquitylome"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Clinical Proteomic Tumor Analysis Consortium"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000622",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-stad-study.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A 15-layer multi-omics analysis of gastric cancer ecotypes provides therapeutic insights.",
+      "identifier": "https://doi.org/10.1016/j.xcrm.2026.102756",
+      "datePublished": "2026"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2026-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Acetylome mass spectrometry (TMT18 / DDA)",
+    "Glycoproteome mass spectrometry (TMT18 / DDA)",
+    "Metabolome mass spectrometry (Label Free / N/A)",
+    "Phosphoproteome mass spectrometry (TMT18 / DDA)",
+    "Protein-protein interaction mass spectrometry (TMT10 / DDA)",
+    "Proteome mass spectrometry (TMT18 / DDA)",
+    "Ubiquitylome mass spectrometry (Label Free / DIA)"
+  ]
+}

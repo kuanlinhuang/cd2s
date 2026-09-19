@@ -1,0 +1,371 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-fm-ad",
+  "name": "Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)",
+  "alternateName": [
+    "FM-AD"
+  ],
+  "description": "The Foundation Medicine Adult Cancer Clinical Dataset is by a wide margin the largest single cohort indexed here: 18,004 patients across many tumor types, profiled with a targeted DNA panel in a clinical rather than research setting. That scale is genuinely useful for questions about mutation frequency and co-occurrence in a real-world population, which is precisely where research cohorts are least representative.\nIt is also the clearest case in this corpus of a dataset whose catalog entry invites analyses it cannot support. Vital status is populated for 100% of cases and informative for 0% - every value is \"not reported\". Race is \"not reported\" for all 18,004 patients. Every treatment field is empty. Progression and last known disease status are populated for every case and informative for none. A researcher attracted by the sample size will find, after obtaining controlled access to 54,012 files, that no outcome-anchored analysis is possible.",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-fm-ad",
+  "identifier": [
+    "https://portal.gdc.cancer.gov/projects/FM-AD",
+    "gdc_program:FM",
+    "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001179"
+  ],
+  "keywords": [
+    "Acinar Cell Neoplasms",
+    "Adenomas and Adenocarcinomas",
+    "Adnexal and Skin Appendage Neoplasms",
+    "Adrenal gland",
+    "Anus and anal canal",
+    "Basal Cell Neoplasms",
+    "Bladder",
+    "Breast",
+    "Bronchus and lung",
+    "Cervix uteri",
+    "Colon",
+    "Complex Epithelial Neoplasms",
+    "Complex Mixed and Stromal Neoplasms",
+    "Cystic, Mucinous and Serous Neoplasms",
+    "Ductal and Lobular Neoplasms",
+    "Epithelial Neoplasms, NOS",
+    "Esophagus",
+    "Eye and adnexa",
+    "Gallbladder",
+    "Germ Cell Neoplasms",
+    "Gliomas",
+    "Heart, mediastinum, and pleura",
+    "Kidney",
+    "Liver and intrahepatic bile ducts",
+    "Meningiomas",
+    "Mesothelial Neoplasms",
+    "Miscellaneous Tumors",
+    "Mucoepidermoid Neoplasms",
+    "Nasopharynx",
+    "Neuroepitheliomatous Neoplasms",
+    "Nevi and Melanomas",
+    "Not Reported",
+    "Other and ill-defined digestive organs",
+    "Other and ill-defined sites",
+    "Other and unspecified female genital organs",
+    "Other and unspecified major salivary glands",
+    "Other and unspecified parts of biliary tract",
+    "Other and unspecified urinary organs",
+    "Other endocrine glands and related structures",
+    "Ovary",
+    "Pancreas",
+    "Paragangliomas and Glomus Tumors",
+    "Penis",
+    "Peripheral nerves and autonomic nervous system",
+    "Prostate gland",
+    "Rectum",
+    "Retroperitoneum and peritoneum",
+    "Skin",
+    "Small intestine",
+    "Specialized Gonadal Neoplasms",
+    "Spinal cord, cranial nerves, and other parts of central nervous system",
+    "Squamous Cell Neoplasms",
+    "Stomach",
+    "Testis",
+    "Thymic Epithelial Neoplasms",
+    "Thymus",
+    "Thyroid gland",
+    "Trachea",
+    "Transitional Cell Papillomas and Carcinomas",
+    "Unknown",
+    "Ureter",
+    "Uterus, NOS",
+    "Vagina",
+    "Vulva",
+    "annotation-poor",
+    "cautionary",
+    "clinical",
+    "fm",
+    "gdc",
+    "large-cohort",
+    "real-world-evidence",
+    "released",
+    "targeted dna"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "FM"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Genomic Data Commons",
+    "url": "https://portal.gdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "GDC portal",
+      "contentUrl": "https://portal.gdc.cancer.gov/projects/FM-AD",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-fm-ad.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The long tail of oncogenic drivers in prostate cancer.",
+      "identifier": "https://doi.org/10.1038/s41588-018-0078-z",
+      "datePublished": "2018"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA209414",
+      "name": "The Boston Lung Cancer Survival Cohort",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA209414"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009172",
+      "name": "Physician Scientist Training in Cancer Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009172"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA227388",
+      "name": "Integrative Somatic and Germline Computational Biology to Redefine Clinical Actionability in Solid Tumors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA227388"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA203636",
+      "name": "Automated in vivo analysis of tumor growth rate as a guide for therapeutic decisions to advance personalized cancer treatment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA203636"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA234458",
+      "name": "Dissecting Therapeutic Resistance and Progression in Metastatic Melanoma Through Clinical Computational Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA234458"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA247760",
+      "name": "Informatics for Functional Integration of Heterogeneous Cancer Genome and Transcriptome Sequencing Data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA247760"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009666",
+      "name": "T32 Research Training in Academic Medical Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009666"
+    }
+  ],
+  "dateModified": "2026-09-18T02:32:30.425616+00:00",
+  "datePublished": "2017-01-01",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Sex at birth",
+      "description": "Populated for 100.0% of cases, informative for 100.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Race",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ethnicity",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Vital status",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Cause of death",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Population group",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Country of residence",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Primary diagnosis",
+      "description": "Populated for 100.0% of cases, informative for 98.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Morphology (ICD-O)",
+      "description": "Populated for 100.0% of cases, informative for 98.8%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tissue or organ of origin",
+      "description": "Populated for 100.0% of cases, informative for 90.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC pathologic stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AJCC clinical stage",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tumour grade",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior treatment",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Synchronous malignancy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression or recurrence",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Last known disease status",
+      "description": "Populated for 100.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification of tumour",
+      "description": "Populated for 100.0% of cases, informative for 86.3%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment type",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment given",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Therapeutic agents",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Treatment outcome",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Regimen or line of therapy",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Disease response at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Progression at follow-up",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ECOG performance status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tobacco smoking status",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Alcohol history",
+      "description": "Populated for 0.0% of cases, informative for 0.0%"
+    }
+  ],
+  "measurementTechnique": [
+    "Targeted DNA panel sequencing",
+    "Clinical"
+  ]
+}

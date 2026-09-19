@@ -1,0 +1,243 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-difg-glass",
+  "name": "Diffuse Glioma (GLASS Consortium)",
+  "alternateName": [
+    "difg_glass"
+  ],
+  "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at <a href=\"https://www.synapse.org/#!Synapse:syn17038081/wiki/585622\">Synapse</a>.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-difg-glass",
+  "identifier": [
+    "https://www.cbioportal.org/study/summary?id=difg_glass"
+  ],
+  "keywords": [
+    "Diffuse Glioma",
+    "brain",
+    "cbioportal",
+    "copy number",
+    "harmonised-for-reuse",
+    "investigator-cohort",
+    "nci-funded",
+    "rna seq",
+    "targeted dna",
+    "treatment",
+    "treatment-annotated"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Investigator-initiated cohort (harmonised in cBioPortal)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "cBioPortal for Cancer Genomics",
+    "url": "https://www.cbioportal.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "cBioPortal portal",
+      "contentUrl": "https://www.cbioportal.org/study/summary?id=difg_glass",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-difg-glass.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": null,
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/35649412/",
+      "datePublished": null
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA189523",
+      "name": "Cancer imaging phenomics software suite: application to brain and breast cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA189523"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA242871",
+      "name": "The Federated Tumor Segmentation (FeTS) platform: An intuitive tool facilitating secure multi-institutional collaboration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA242871"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R33CA236681",
+      "name": "Advancing Ultra Long-read Sequencing and Chromatin Interaction Analyses for Chromosomal and Extrachromosomal Structural Variation Characterization in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R33CA236681"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R21CA256575",
+      "name": "Characterization of extrachromosomal DNAs in tumors through computational analysis of single-cell and bulk sequencing data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA256575"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA244838",
+      "name": "3-D spatial approach to discover genomic effectors of immunosuppression during malignant transformation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA244838"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA237208",
+      "name": "Extrachromosomal DNA as a Targetable Mechanism in Glioblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA237208"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA222146",
+      "name": "Molecular and clinical evaluation of the glioma patient experience to anticipate modern outcomes and guide patient care",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA222146"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA218144",
+      "name": "Brain Cancer Radio-Pathomics for Predicting Heterogeneous Cytology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA218144"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA188228",
+      "name": "Evolution of gliomas during treatment and resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA188228"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA226387",
+      "name": "Genetic and Epigenetic Strategies for the Acquisition of Telomere Maintenance in Human Cancer Cells",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA226387"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA127001",
+      "name": "SPORE in Brain Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA127001"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA097257",
+      "name": "Administrative Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA097257"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA034196",
+      "name": "Cancer Center Support (CORE) Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA034196"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016672",
+      "name": "Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016672"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA013148",
+      "name": "Protocol Review and Monitoring System",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA013148"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA226387",
+      "name": "Genetic and Epigenetic Strategies for the Acquisition of Telomere Maintenance in Human Cancer Cells",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA226387"
+    }
+  ],
+  "dateModified": "2026-09-18T02:48:40.878054+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Mutation calls (panel, exome or genome)",
+    "Copy number alterations",
+    "RNA sequencing expression",
+    "Structured treatment records"
+  ]
+}

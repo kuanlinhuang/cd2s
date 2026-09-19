@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-mel-iatlas-liu-2019",
+  "alternateName": "Metastatic Melanoma (DFCI, Nat Med. 2019) - iAtlas Harmonized",
+  "description": "Whole-exome sequencing and neoantigen landscape analysis of 122 patients with metastatic melanoma treated with anti-PD1 ICB, along with their matched normal samples. The reprocessing of raw sequencing data is coordinated by <a href=\"https://cri-iatlas.org/\">CRI iAtlas</a>. <br><strong>Related Dataset:</strong> This is a harmonized subset of the <a href=\"https://www.cbioportal.org/study/summary?id=mel_dfci_2019\">original 144-sample DFCI study</a> with standardized mutation calling and extended immunogenomics annotations.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mel-iatlas-liu-2019",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

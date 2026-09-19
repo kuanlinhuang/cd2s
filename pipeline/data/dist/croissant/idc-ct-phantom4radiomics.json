@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-ct-phantom4radiomics",
+  "alternateName": "CT-Phantom4Radiomics",
+  "description": "The aims of this dataset are to determine the stability of radiomics features against computed tomography (CT) parameter variations and to study their discriminative power concerning tissue classification using a 3D-printed CT phantom based on real patient data . 4 tissue types (normal, benign cyst, hemangioma, and metastasis) were manually annotated. 238 CT series with 8 parameter variations of reconstruction algorithms, reconstruction kernels, slice thickness, and slice spacing are available. Please see the CT-Phantom4Radiomics wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-phantom4radiomics",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CT-Phantom4Radiomics",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

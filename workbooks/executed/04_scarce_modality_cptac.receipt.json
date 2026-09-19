@@ -1,0 +1,22 @@
+{
+  "workbook": "04_scarce_modality_cptac",
+  "executed": true,
+  "executed_at": "2026-09-18T14:37:17.261752+00:00",
+  "runtime_seconds": 10.51,
+  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
+  "package_versions": {
+    "python": "3.12.13",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "lifelines": "0.30.0",
+    "scipy": "1.18.1",
+    "requests": "2.34.2",
+    "httpx": "0.28.1"
+  },
+  "n_cells": 5,
+  "n_cells_executed": 5,
+  "output_hash": "851525b2a6a05fc48446e213684ee790",
+  "error": null,
+  "notebook_path": "workbooks/executed/04_scarce_modality_cptac.ipynb"
+}

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-prostate-diagnosis",
+  "alternateName": "PROSTATE-DIAGNOSIS",
+  "description": "Prostate, cancer-confirmed, MRIs obtained using endorectal and phased array surface coils at 1.5T (Philips Achieva). Pulse sequences include T1, T2 and DCE (\u201cBLISS\u201d sequence using Magnevist injected i.v.). Linked clinical information, including matched patient demographics, radiology and pathology reports in XLS format are available. Please see the Prostate-Diagnosis page to learn more about the images and to obtain any supporting metadata for this collection. Data was provided by Boston Medical Center courtesy Dr. Nicolas Bloch.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostate-diagnosis",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "PROSTATE-DIAGNOSIS",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

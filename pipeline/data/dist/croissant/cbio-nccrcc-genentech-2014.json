@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-nccrcc-genentech-2014",
+  "alternateName": "Renal Non-Clear Cell Carcinoma (Genentech, Nat Genet 2014)",
+  "description": "Whole exome sequencing of 139 samples with matched normals and RNA-sequencing of 7 samples (5 samples with matched normals) from 145 Renal Non-Clear Cell Carcinoma (nccRCC) patients.",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nccrcc-genentech-2014",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

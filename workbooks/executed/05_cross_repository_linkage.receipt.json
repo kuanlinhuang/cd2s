@@ -1,0 +1,22 @@
+{
+  "workbook": "05_cross_repository_linkage",
+  "executed": true,
+  "executed_at": "2026-09-18T14:37:24.454645+00:00",
+  "runtime_seconds": 7.19,
+  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
+  "package_versions": {
+    "python": "3.12.13",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "lifelines": "0.30.0",
+    "scipy": "1.18.1",
+    "requests": "2.34.2",
+    "httpx": "0.28.1"
+  },
+  "n_cells": 4,
+  "n_cells_executed": 4,
+  "output_hash": "3ac33e55b57f87cc873bbe682d730fae",
+  "error": null,
+  "notebook_path": "workbooks/executed/05_cross_repository_linkage.ipynb"
+}

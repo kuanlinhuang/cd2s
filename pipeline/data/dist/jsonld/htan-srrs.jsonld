@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/htan-srrs",
+  "name": "SRRS",
+  "alternateName": [
+    "HTA15"
+  ],
+  "description": "SRRS",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-srrs",
+  "identifier": [
+    "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA15%22%7D%5D",
+    "https://www.synapse.org/#!Synapse:syn50295784",
+    "https://www.synapse.org/#!Synapse:syn51607133",
+    "https://www.synapse.org/#!Synapse:syn51607146",
+    "https://www.synapse.org/#!Synapse:syn51757887",
+    "https://www.synapse.org/#!Synapse:syn51757910",
+    "https://www.synapse.org/#!Synapse:syn51907277",
+    "https://www.synapse.org/#!Synapse:syn52588608",
+    "https://www.synapse.org/#!Synapse:syn52590408",
+    "https://www.synapse.org/#!Synapse:syn52702413",
+    "https://www.synapse.org/#!Synapse:syn52751109",
+    "https://www.synapse.org/#!Synapse:syn52799092"
+  ],
+  "keywords": [
+    "htan",
+    "rare-modality",
+    "scatac seq",
+    "scrna seq",
+    "single-cell",
+    "spatial",
+    "spatial proteomics"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": false,
+  "conditionsOfAccess": "Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "CU Anschutz Medical Campus"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Human Tumor Atlas Network (data hosted in Synapse)",
+    "url": "https://humantumoratlas.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HTAN portal",
+      "contentUrl": "https://humantumoratlas.org/explore",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/htan-srrs.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:46:11.906526+00:00",
+  "datePublished": null,
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Extended clinical data (tier 2)",
+      "description": "Populated for None% of cases (one-to-many field; per-case shares not derivable)"
+    }
+  ],
+  "measurementTechnique": [
+    "Multiplexed tissue imaging",
+    "Single-cell / single-nucleus RNA sequencing",
+    "Single-cell ATAC sequencing"
+  ]
+}

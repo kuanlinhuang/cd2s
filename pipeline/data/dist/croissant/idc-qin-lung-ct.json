@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-qin-lung-ct",
+  "alternateName": "QIN LUNG CT",
+  "description": "The Computed tomography (CT) Image data was obtained on patients diagnosed with Non-Small Cell Lung Cancer (NSCLC) with mixed stage & histology from the H. Lee Moffitt Cancer Center and Research Institute. Scans were obtained from patients who underwent surgical resection and had corresponding pre-surgery diagnostic CTs. Please see the QIN LUNG CT page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-qin-lung-ct",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "QIN LUNG CT",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

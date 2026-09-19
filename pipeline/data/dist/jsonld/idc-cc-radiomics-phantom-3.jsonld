@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom-3",
+  "name": "CC-Radiomics-Phantom-3",
+  "alternateName": [
+    "cc_radiomics_phantom_3"
+  ],
+  "description": "CT Phantom Scans for Head, Chest, and Controlled Protocols on 100 Scanners (CC-Radiomics-Phantom-3) This data collection contains one physical phantom, imaged across three protocols, on 100 scanners. CT scans were acquired on 100 scanners at 35 clinics: 51 GE scanners, 20 Philips scanners, 11 Toshiba scanners, and 1 Philips and Neusoft Medical System scanner. The commonly used chest and head protocols of the local clinic were acquired without changing the protocol parameters. Additionally, a controlled protocol was acquired that was designed to minimize radiomics feature differences between manufacturers. Please see the CC-Radiomics-Phantom-3 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom-3",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cc_radiomics_phantom_3",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/tcia.2019.j71i4fah"
+  ],
+  "keywords": [
+    "Chest",
+    "Head",
+    "Phantom",
+    "idc",
+    "imaging",
+    "non-human",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cc_radiomics_phantom_3",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cc-radiomics-phantom-3.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

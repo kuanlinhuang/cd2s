@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-spine-mets-ct-seg",
+  "name": "Spine-Mets-CT-SEG",
+  "alternateName": [
+    "spine_mets_ct_seg"
+  ],
+  "description": "This collection contains a dataset of 55 CT scans collected on patients with a large range of primary cancers and corresponding bone metastatic lesions obtained for patients with metastatic spine disease. It includes longitudinal CT imaging data set of patients' metastatic spines planned for and treated with radiotherapy and associated radiological delineations of lesion and vertebral features. In addition to the imaging, we provide demographic data, lesion, fracture annotations, and manually and semi-automated vertebral segmentation labels. This dataset may serve to promote automatic analysis of pathologic vertebrae from computed tomography (CT) scans to improve diagnostic management, and the advancement of machine-learning methods to analyze pathologic vertebral fracture risk drivers in patients with metastatic spine disease. Please see the Spine-Mets-CT-SEG page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-spine-mets-ct-seg",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=spine_mets_ct_seg",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/kh36-ds04"
+  ],
+  "keywords": [
+    "Bladder Cancer",
+    "Bone",
+    "Breast Cancer",
+    "Colon Cancer",
+    "Kidney Cancer",
+    "Lung Cancer",
+    "Metastatic disease",
+    "Prostate Cancer",
+    "Skin Cancer",
+    "Soft-tissue Sarcoma",
+    "clinical",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=spine_mets_ct_seg",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-spine-mets-ct-seg.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging",
+    "Clinical (accompanying data, per IDC supporting_data)"
+  ]
+}

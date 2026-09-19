@@ -1,0 +1,99 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
+  "alternateName": "Omic and Multidimensional Spatial Atlas of Metastatic Breast Cancers",
+  "description": "This atlas follows metastatic breast cancer patients through treatment with serial biopsies, and measures each one across an unusually wide span: multiplexed tissue imaging, spatial transcriptomics, single-cell RNA and ATAC sequencing, bulk RNA and DNA, protein arrays and electron microscopy. It is the largest HTAN atlas by file count at 120,274 files and the only dataset indexed here carrying electron microscopy.\nThe serial design is what makes it scientifically distinctive. Most spatial resources capture one timepoint; this one captures the same patient before, during and after therapy, which is the only way to observe how spatial organization changes as resistance develops. Therapy and follow-up records are both present as HTAN clinical components.",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "An omic and multidimensional spatial atlas from serial biopsies of an evolving metastatic breast cancer",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Diagnosis",
+          "name": "Diagnosis",
+          "description": "Category: diagnosis. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Exposure",
+          "name": "Exposure history",
+          "description": "Category: exposure. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:FamilyHistory",
+          "name": "Family history",
+          "description": "Category: other. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:FollowUp",
+          "name": "Follow-up",
+          "description": "Category: followup. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Therapy",
+          "name": "Therapy",
+          "description": "Category: treatment. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:MolecularTest",
+          "name": "Clinical molecular test",
+          "description": "Category: molecular_marker. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Demographics",
+          "name": "Demographics",
+          "description": "Category: demographic. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [
+      "How does the spatial organization of a metastatic tumor change as it acquires resistance to therapy?",
+      "Do single-cell chromatin accessibility changes precede the transcriptional changes that accompany resistance?",
+      "Can ultrastructural features from electron microscopy be related to molecular state measured on the same tissue?",
+      "How do multiplexed imaging and spatial transcriptomics agree when applied to the same tissue section?"
+    ],
+    "blockingLimitations": [
+      {
+        "kind": "statistical_power",
+        "statement": "Deep serial profiling means few patients. File counts are large but participant numbers are small, and the portal metadata we ingest does not expose them.",
+        "rulesOut": [
+          "Cohort-level association",
+          "Biomarker discovery",
+          "Any powered comparison"
+        ]
+      }
+    ],
+    "inappropriateUses": [
+      "Population-level or cohort-level statistical inference.",
+      "Assuming all nine modalities are available for every specimen."
+    ]
+  }
+}

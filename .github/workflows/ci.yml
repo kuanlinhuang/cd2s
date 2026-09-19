@@ -1,0 +1,52 @@
+# The same gate that has to pass locally before anything is reported as working.
+#
+# Deliberately does not run the ingestion stages: those talk to five public APIs and
+# would be both slow and rude to run on every push. What CI protects is the logic layered
+# on top of them - the derivations, the labels, the exports and the site that reads them.
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv --python 3.12
+      - run: uv pip install -e ".[dev]"
+      - name: lint
+        run: .venv/bin/ruff check .
+      - name: format
+        run: .venv/bin/ruff format --check .
+      - name: tests
+        run: .venv/bin/python -m pytest
+
+  site:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - name: types
+        run: npm run typecheck
+      - name: lint
+        run: npm run lint
+      - name: build
+        # Needs the generated data in web/public/data, which is committed alongside the
+        # source so the site builds from a clean checkout without running the pipeline.
+        run: npm run build

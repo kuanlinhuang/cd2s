@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "cbio-nepc-wcm-2016",
+  "alternateName": "Neuroendocrine Prostate Cancer (Multi-Institute, Nat Med 2016)",
+  "description": "Whole exome sequencing of 114 metastatic tumor/normal pairs to understand genomic overlap between castration resistant adenocarcinoma (CRPC-Adeno) and neuroendocrine histologies (CRPC-NE).",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nepc-wcm-2016",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": null,
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

@@ -1,0 +1,113 @@
+id: gdc-target-aml
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps, primary_publications]
+one_liner: >-
+  2,492 children and young adults with acute myeloid leukaemia - the largest paediatric
+  cancer genomics cohort in this corpus, with 3.5 years of median follow-up and therapeutic
+  agents recorded for 35% of cases.
+summary: >-
+  TARGET AML is the reference paediatric AML cohort. RNA sequencing covers 2,281 cases and
+  microRNA 1,836, with smaller whole genome, exome, methylation and targeted panel layers.
+  251 patients are recorded as Black or African American, one of the larger absolute numbers
+  in any cohort here, and vital status is informative for 86.6% with a usable overall
+  survival endpoint.
+primary_publications:
+  - pmid: "29227476"
+    title: >-
+      The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural
+      alterations and age-specific mutational interactions
+    journal: Nature Medicine
+    year: 2018
+    url: https://pubmed.ncbi.nlm.nih.gov/29227476/
+useful_for:
+  - question: How does the genomic landscape of paediatric AML differ from adult AML?
+    rationale: >-
+      2,281 RNA-sequenced paediatric cases can be contrasted directly with adult AML cohorts,
+      and the marker paper established that the differences are substantial and age-dependent.
+      This remains the definitive paediatric comparison set.
+    required_modalities: [rna_seq, mirna]
+    feasibility: needs_access
+    approx_n: 2281
+    statistical_note: Adult comparison cohorts differ in platform and processing; model batch explicitly.
+    topics: [paediatric-oncology, leukaemia, age-specific-biology]
+    exemplar_pmid: "29227476"
+  - question: Which molecular features predict survival in paediatric AML?
+    rationale: >-
+      Vital status informative for 86.6% of 2,492 cases with median follow-up of 41.7 months
+      gives a well-powered survival cohort, and therapeutic agents are recorded for 35% so
+      treatment can be partially controlled.
+    required_modalities: [rna_seq, clinical, outcome]
+    required_fields: [demographic.vital_status, diagnoses.days_to_last_follow_up]
+    feasibility: needs_access
+    approx_n: 2159
+    statistical_note: >-
+      Cause of death is not recorded, so competing risks from treatment-related mortality
+      cannot be separated from disease death.
+    topics: [survival, paediatric-oncology]
+  - question: Are there racial differences in paediatric AML biology or outcome?
+    rationale: >-
+      251 Black or African American patients alongside 1,551 white patients is one of the
+      better-powered settings in this corpus for a race-stratified comparison in a paediatric
+      cancer.
+    required_modalities: [rna_seq, clinical]
+    required_fields: [demographic.race, demographic.vital_status]
+    feasibility: needs_access
+    approx_n: 1802
+    statistical_note: >-
+      Race is self-reported; genetic ancestry from germline data is the more defensible
+      variable for biological claims. Treatment differences may confound outcome comparisons.
+    topics: [health-disparities, paediatric-oncology]
+limitations:
+  - kind: missing_data
+    statement: >-
+      Progression or recurrence is populated for 0.3% of cases and informative for none, and
+      cause of death is absent entirely. Relapse - the central clinical event in paediatric
+      AML - cannot be modeled from these records.
+    severity: blocking
+    affected_analyses: [Relapse-free survival, Competing-risk analysis, Relapse biology]
+    mitigation: Restrict to overall survival, or obtain relapse data from the trial group.
+  - kind: treatment_context
+    statement: >-
+      Treatment type is populated for 86% of cases but therapeutic agents only for 35%, and
+      treatment outcome detail is sparse. Protocol era spans many years with evolving therapy.
+    severity: major
+    affected_analyses: [Treatment-stratified analysis, Agent-specific response]
+    mitigation: Adjust for enrolment era; treat agent-level claims cautiously.
+  - kind: statistical_power
+    statement: >-
+      Deeper molecular layers cover far fewer cases than RNA sequencing - whole genome 227,
+      exome 22, methylation 319 - so multi-omic analyses run on a small fraction of the cohort.
+    severity: major
+    affected_analyses: [Multi-omic integration]
+    mitigation: Build the intersection explicitly; do not assume cohort-wide coverage.
+  - kind: access_constraint
+    statement: Most of the 52,213 files are controlled access.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: Submit a dbGaP request early.
+inappropriate_uses:
+  - statement: Relapse or event-free survival analysis.
+    reason: Progression and recurrence fields are effectively empty.
+  - statement: Assuming molecular coverage is uniform across the cohort.
+    reason: >-
+      Whole genome sequencing covers 227 of 2,492 cases; an analysis specified as
+      "TARGET-AML whole genomes" is working with under a tenth of the cohort.
+access_steps:
+  - order: 1
+    action: Scope with open derived expression files
+    url: https://portal.gdc.cancer.gov/projects/TARGET-AML
+    est_time: 1 hour
+  - order: 2
+    action: Check per-layer coverage before designing a multi-omic analysis
+    detail: The assay table on this page shows how sharply coverage drops beyond RNA sequencing.
+    est_time: 30 minutes
+  - order: 3
+    action: Submit a dbGaP data access request
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [paediatric, leukaemia, reference-cohort, survival]

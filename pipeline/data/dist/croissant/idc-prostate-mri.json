@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-prostate-mri",
+  "alternateName": "PROSTATE-MRI",
+  "description": "This is a collection of MRIs of the prostate obtained with an endorectal coil and phased array surface coil at 3T (Philips Achieva). Each patient had biopsy confirmation of cancer and then underwent robotic assisted radical prostatectomy. A mold was generated from each MRI and the prostatectomy specimen was first placed in the mold and then cut in the same plane as the MRI. The data was generated at the National Cancer Institute, Bethesda, Maryland, USA between 2008-2010. Please see the Prostate-MRI page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostate-mri",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "PROSTATE-MRI",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

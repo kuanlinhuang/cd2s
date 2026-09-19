@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-18T14:39:08.222464+00:00",
+  "pipeline_version": "0.1.0",
+  "n_datasets": 602,
+  "n_showcase": 20,
+  "n_underexplored": 18,
+  "n_expert_reviewed": 0,
+  "n_cases_total": 131564,
+  "n_repositories": 5,
+  "n_distinct_modalities": 29,
+  "n_with_survival": 67,
+  "n_with_treatment_response": 58,
+  "n_reuse_assessed": 132,
+  "n_without_citable_accession": 364,
+  "n_with_publication_citations": 341,
+  "median_citation_to_reuse_ratio": 6.3,
+  "n_workbooks": 20,
+  "n_grants_linked": 736,
+  "n_reuse_studies_verified": 778
+}

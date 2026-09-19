@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.uv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+
+# Data. Per-source ingest snapshots are kept so the corpus rebuilds without network
+# access; the derived pipeline stages are pure intermediates and are not.
+pipeline/data/cache/
+pipeline/data/raw/merged.records.jsonl
+pipeline/data/raw/traced.records.jsonl
+pipeline/data/raw/enriched.records.jsonl
+pipeline/data/raw/merged.manifest.json
+pipeline/data/raw/traced.manifest.json
+pipeline/data/raw/enriched.manifest.json
+pipeline/data/dist/*.sqlite
+
+# Local scratch
+.shots/
+
+# Local
+.DS_Store
+.env
+.env.local
+.chrome-profile/
+.lavish/
+scratch/

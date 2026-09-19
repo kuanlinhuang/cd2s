@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-pelvic-reference-data",
+  "name": "Pelvic-Reference-Data",
+  "alternateName": [
+    "pelvic_reference_data"
+  ],
+  "description": "This collection links expertly selected landmark points on clinical image pairs to provide a basis for rigid registration validation. Using combinatorial rigid registration optimization (CORRO) we provide a statistically characterized reference data set for image registration of the pelvis by estimating the optimal ground truth. Landmark points for each CT/CBCT image pair for 58 pelvic cases were identified. The mean and the standard deviation of the registration were used as the final registration for each image pair. Please see the Pelvic-Reference-Data wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pelvic-reference-data",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pelvic_reference_data",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/TCIA.2019.woskq5oo"
+  ],
+  "keywords": [
+    "Anal Cancer",
+    "Anus",
+    "Pelvis",
+    "Prostate",
+    "Prostate Cancer",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pelvic_reference_data",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-pelvic-reference-data.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-midrc-ricord-1c",
+  "alternateName": "MIDRC-RICORD-1C",
+  "description": "The first multi-institutional, multi-national expert annotated COVID-19 imaging dataset made freely available to the machine learning community as a research and educational resource for COVID-19 chest imaging. The Radiological Society of North America (RSNA) assembled the RSNA International COVID-19 Open Radiology Database (RICORD) collection of COVID-related imaging datasets and expert annotations to support research and education. RICORD data will be incorporated in the Medical Imaging and Data Resourc e Center (MIDRC) , a multi-institutional research data repository funded by the National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health. The collection contains 998 Chest x-ray examinations. Please see the MIDRC-RICORD-1c wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-midrc-ricord-1c",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "MIDRC-RICORD-1C",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

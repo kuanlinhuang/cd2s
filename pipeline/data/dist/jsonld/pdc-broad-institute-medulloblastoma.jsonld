@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-broad-institute-medulloblastoma",
+  "name": "Broad Institute - Medulloblastoma",
+  "alternateName": [
+    "Broad Institute - Medulloblastoma - Acetylome",
+    "Broad Institute - Medulloblastoma - Phosphoproteome",
+    "Broad Institute - Medulloblastoma - Proteome"
+  ],
+  "description": "Broad Institute - Medulloblastoma",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-broad-institute-medulloblastoma",
+  "identifier": [
+    "https://pdc.cancer.gov/pdc/study/PDC000430",
+    "https://pdc.cancer.gov/pdc/study/PDC000432",
+    "https://pdc.cancer.gov/pdc/study/PDC000433"
+  ],
+  "keywords": [
+    "acetylome",
+    "acetylproteome",
+    "pdc",
+    "phosphoproteome",
+    "proteogenomics",
+    "proteome",
+    "rare-modality"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Direct download from the PDC portal or its API; no account required",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Broad Institute"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Proteomic Data Commons",
+    "url": "https://pdc.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "PDC portal",
+      "contentUrl": "https://pdc.cancer.gov/pdc/study/PDC000430",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-broad-institute-medulloblastoma.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Discovery of immunotherapy targets for pediatric solid and brain tumors by exon-level expression.",
+      "identifier": "https://doi.org/10.1038/s41467-024-47649-y",
+      "datePublished": "2024"
+    }
+  ],
+  "funding": [],
+  "dateModified": "2026-09-18T02:36:15.354973+00:00",
+  "datePublished": "2024-01-01",
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "Acetylome mass spectrometry (TMT10 / DDA)",
+    "Phosphoproteome mass spectrometry (TMT10 / DDA)",
+    "Proteome mass spectrometry (TMT10 / DDA)"
+  ]
+}

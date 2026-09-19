@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-pediatric-ct-seg",
+  "alternateName": "Pediatric-CT-SEG",
+  "description": "This dataset was collected by a collaboration of researchers from Children\u2019s Wisconsin, Marquette University, Varian Medical Systems, Medical College of Wisconsin, and Stanford University as part of a project funded by the National Institute of Biomedical Imaging and Bioengineering (U01EB023822) to develop tools for rapid, patient-specific CT organ dose estimation. The collection consists of CT images in DICOM format of 359 pediatric chest-abdomen-pelvis or abdomen-pelvis exams acquired from three CT scanners. The datasets represent random pediatric cases based upon routine clinical indications. Each dataset contains expert contours of up to twenty-nine structures in DICOM RTSS format. Please see the Pediatric-CT-SEG page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pediatric-ct-seg",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Pediatric-CT-SEG",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

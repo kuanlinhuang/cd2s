@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "idc-cc-radiomics-phantom-3",
+  "alternateName": "CC-Radiomics-Phantom-3",
+  "description": "CT Phantom Scans for Head, Chest, and Controlled Protocols on 100 Scanners (CC-Radiomics-Phantom-3) This data collection contains one physical phantom, imaged across three protocols, on 100 scanners. CT scans were acquired on 100 scanners at 35 clinics: 51 GE scanners, 20 Philips scanners, 11 Toshiba scanners, and 1 Philips and Neusoft Medical System scanner. The commonly used chest and head protocols of the local clinic were acquired without changing the protocol parameters. Additionally, a controlled protocol was acquired that was designed to minimize radiomics feature differences between manufacturers. Please see the CC-Radiomics-Phantom-3 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom-3",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "CC-Radiomics-Phantom-3",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": []
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}

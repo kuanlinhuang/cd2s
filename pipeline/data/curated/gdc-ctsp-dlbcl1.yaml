@@ -1,0 +1,124 @@
+id: gdc-ctsp-dlbcl1
+is_showcase: true
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-18
+review:
+  status: project_curated
+  sections_reviewed: [useful_for, limitations, inappropriate_uses, access_steps, primary_publications]
+one_liner: >-
+  45 diffuse large B-cell lymphomas from the randomized CALGB 50303 trial - small, but
+  every case has complete vital status, five years of median follow-up, and a known
+  randomized treatment assignment.
+summary: >-
+  What makes this cohort worth knowing about is not its size but its provenance. The
+  samples come from CALGB 50303, a randomized phase III trial comparing dose-adjusted
+  EPOCH-R against R-CHOP as frontline therapy for diffuse large B-cell lymphoma. Molecular
+  data collected inside a randomized trial are scarce: treatment assignment is not
+  confounded with patient characteristics, which is the assumption that almost every
+  observational treatment-response analysis has to make and cannot verify.
+
+  Vital status is informative for 100% of the 45 cases and median follow-up is 60.4 months.
+  RNA sequencing covers 44 cases, exome 44 and a targeted panel all 45.
+primary_publications:
+  - pmid: "30939090"
+    title: >-
+      Dose-Adjusted EPOCH-R Compared With R-CHOP as Frontline Therapy for Diffuse Large
+      B-Cell Lymphoma - Clinical Outcomes of the Phase III Intergroup Trial Alliance/CALGB 50303
+    journal: Journal of Clinical Oncology
+    year: 2019
+    url: https://pubmed.ncbi.nlm.nih.gov/30939090/
+useful_for:
+  - question: >-
+      Do molecular subtypes of diffuse large B-cell lymphoma predict differential benefit
+      from dose-adjusted EPOCH-R versus R-CHOP?
+    rationale: >-
+      This is a predictive-biomarker question, and it requires randomized treatment
+      assignment to answer properly. RNA sequencing on 44 cases supports cell-of-origin and
+      subtype classification, and the trial provides the randomization.
+    required_modalities: [rna_seq, wxs, treatment]
+    feasibility: needs_linkage
+    approx_n: 44
+    statistical_note: >-
+      45 cases split across two arms cannot power a treatment-by-subtype interaction test.
+      This is a design demonstration and a hypothesis-generating analysis, not a definitive
+      one. Trial arm assignment must be obtained from the trial group; it is not in the GDC
+      clinical records.
+    topics: [predictive-biomarkers, lymphoma, trial-linked]
+    exemplar_pmid: "30939090"
+  - question: >-
+      How well do molecular classifiers built on observational DLBCL cohorts perform on
+      uniformly treated trial patients?
+    rationale: >-
+      Classifier performance usually degrades when treatment heterogeneity is removed,
+      because some apparent prognostic signal is really treatment-selection signal. A
+      uniformly treated, randomized cohort is the right place to detect that.
+    required_modalities: [rna_seq]
+    feasibility: direct
+    approx_n: 44
+    statistical_note: Validation only; too small for training.
+    topics: [classifier-validation, lymphoma]
+  - question: >-
+      What is the five-year survival experience of genomically characterized DLBCL patients
+      treated in a controlled setting?
+    rationale: >-
+      Vital status is informative for all 45 cases with 60.4 months of median follow-up and
+      cause of death recorded for 35.6% - unusually complete for a cohort this small.
+    required_modalities: [clinical, outcome]
+    required_fields: [demographic.vital_status, diagnoses.days_to_last_follow_up]
+    feasibility: direct
+    approx_n: 45
+    statistical_note: 45 cases give wide confidence intervals; report them.
+    topics: [survival, lymphoma]
+limitations:
+  - kind: statistical_power
+    statement: >-
+      45 cases is small for any genomic analysis and very small for a treatment-interaction
+      question. Split by trial arm the groups are around twenty patients each.
+    severity: blocking
+    affected_analyses: [Genome-wide discovery, Treatment-by-subtype interaction, Multivariable modeling]
+    mitigation: >-
+      Use this cohort to demonstrate a design or validate a prior hypothesis, and pool with
+      other trial-linked cohorts if a definitive answer is needed.
+  - kind: missing_data
+    statement: >-
+      Treatment fields are populated for only 6.7% of cases in the GDC records, and trial arm
+      assignment is not present at all, even though the cohort comes from a randomized trial.
+    severity: blocking
+    affected_analyses: [Any analysis requiring treatment arm]
+    mitigation: >-
+      Arm assignment must be obtained from the Alliance trial group. Without it, the cohort's
+      main scientific advantage is unavailable.
+  - kind: population_coverage
+    statement: 31 of 45 patients are recorded as white and one as Black or African American.
+    severity: major
+    affected_analyses: [Disparities research]
+    mitigation: Do not use for population comparisons.
+  - kind: access_constraint
+    statement: 441 of 553 files are controlled access.
+    severity: major
+    affected_analyses: [Sequence-level analysis]
+    mitigation: Submit a dbGaP request.
+inappropriate_uses:
+  - statement: Genome-wide biomarker discovery.
+    reason: 45 cases cannot support multiple-testing-corrected genome-wide discovery.
+  - statement: Claiming a treatment interaction without obtaining arm assignment.
+    reason: >-
+      Trial arm is not in these records. Any treatment claim made without it would be
+      asserting a randomization the analysis does not actually use.
+access_steps:
+  - order: 1
+    action: Read the CALGB 50303 primary trial report
+    url: https://pubmed.ncbi.nlm.nih.gov/30939090/
+    est_time: 1-2 hours
+  - order: 2
+    action: Contact the Alliance trial group about arm assignment and trial covariates
+    detail: >-
+      This is the step that determines whether the cohort's randomization is usable. Do it
+      before the data access request, not after.
+    est_time: weeks
+  - order: 3
+    action: Submit a dbGaP data access request for the sequence data
+    url: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+    requires: [eRA Commons account, institutional signing official approval]
+    est_time: days to a few weeks
+tags: [trial-linked, randomized, lymphoma, treatment-response, small-cohort]

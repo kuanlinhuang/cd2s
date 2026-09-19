@@ -1,0 +1,420 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------------------------
+   Design tokens.
+
+   This is a reference work for researchers, so it is built for density and scanning
+   rather than persuasion: a quiet neutral ground, one accent, and semantic color
+   reserved for things that carry meaning - access tier, evidence strength, and whether
+   an analysis is possible at all. Color is never the only signal; every colored state
+   also carries text, so the page survives greyscale printing and color blindness.
+   ------------------------------------------------------------------------------------ */
+
+/* Only the type stack lives in @theme. There used to be full --color-ink-* and
+   --color-accent-* scales here as well, but nothing ever referenced them: the palette
+   the site actually renders is the semantic one below, which has to be redefinable per
+   colour scheme and so cannot live in @theme at all. Two colour systems where one is
+   inert is worse than one, so the inert one is gone. */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Semantic surfaces, redefined for dark mode below. Every color is defined here on
+   bare :root first so nothing depends on a media query being matched. */
+:root {
+  color-scheme: light;
+  --bg: #fbfbfc;
+  --bg-raised: #ffffff;
+  --bg-sunken: #f2f3f6;
+  --border: #e2e5ea;
+  --border-strong: #c9cfd8;
+  --text: #171b21;
+  --text-muted: #59616f;
+  --text-faint: #8b95a4;
+  --accent: #1d4f52;
+  --accent-text: #123739;
+  --accent-bg: #eef6f6;
+
+  /* Access tiers */
+  --open: #1c6b4a;
+  --open-bg: #e8f5ee;
+  --controlled: #8a4b12;
+  --controlled-bg: #fcf0e4;
+  --mixed: #4a4392;
+  --mixed-bg: #eeedf9;
+
+  /* Evidence strength and analysis feasibility */
+  --strong: #1c6b4a;
+  --moderate: #7a6410;
+  --weak: #8a3535;
+  --strong-bg: #e8f5ee;
+  --moderate-bg: #fbf5e0;
+  --weak-bg: #fbecec;
+
+  --shadow-card: 0 1px 2px rgb(13 16 20 / 0.04), 0 1px 3px rgb(13 16 20 / 0.06);
+
+  /* Chart marks. Three hues, each with one job, validated together for colour-vision
+     deficiency in both modes (see components/charts/README.md). Teal is the measured,
+     usable thing; violet is emphasis and means "underexplored" everywhere on the site;
+     amber means "recorded but uninformative". Grey is context. */
+  --viz-1: #1a9a9e;
+  --viz-2: #6a5fc9;
+  --viz-3: #c0891a;
+  --viz-mute: #b7bec9;
+  --viz-track: #eceef2;
+  --viz-grid: #e6e8ec;
+  --viz-axis: #c9cfd8;
+  --viz-1-wash: rgb(26 154 158 / 0.14);
+  --viz-2-wash: rgb(106 95 201 / 0.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0d1014;
+    --bg-raised: #161a20;
+    --bg-sunken: #11151a;
+    --border: #262c35;
+    --border-strong: #3d4450;
+    --text: #e8eaee;
+    --text-muted: #a3acba;
+    --text-faint: #6a7484;
+    --accent: #74b6b8;
+    --accent-text: #a8d3d4;
+    --accent-bg: #16292a;
+
+    --open: #6fc79b;
+    --open-bg: #12241b;
+    --controlled: #e0a464;
+    --controlled-bg: #2a1f12;
+    --mixed: #a49ce8;
+    --mixed-bg: #1d1b2e;
+
+    --strong: #6fc79b;
+    --moderate: #d8c06a;
+    --weak: #e08b8b;
+    --strong-bg: #12241b;
+    --moderate-bg: #26220f;
+    --weak-bg: #2a1616;
+
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px rgb(0 0 0 / 0.2);
+
+    --viz-1: #26a0a4;
+    --viz-2: #8579dc;
+    --viz-3: #a88a2a;
+    --viz-mute: #4a5262;
+    --viz-track: #1f252d;
+    --viz-grid: #222831;
+    --viz-axis: #3d4450;
+    --viz-1-wash: rgb(38 160 164 / 0.18);
+    --viz-2-wash: rgb(133 121 220 / 0.14);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1014;
+  --bg-raised: #161a20;
+  --bg-sunken: #11151a;
+  --border: #262c35;
+  --border-strong: #3d4450;
+  --text: #e8eaee;
+  --text-muted: #a3acba;
+  --text-faint: #6a7484;
+  --accent: #74b6b8;
+  --accent-text: #a8d3d4;
+  --accent-bg: #16292a;
+
+  --open: #6fc79b;
+  --open-bg: #12241b;
+  --controlled: #e0a464;
+  --controlled-bg: #2a1f12;
+  --mixed: #a49ce8;
+  --mixed-bg: #1d1b2e;
+
+  --strong: #6fc79b;
+  --moderate: #d8c06a;
+  --weak: #e08b8b;
+  --strong-bg: #12241b;
+  --moderate-bg: #26220f;
+  --weak-bg: #2a1616;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px rgb(0 0 0 / 0.2);
+
+  --viz-1: #26a0a4;
+  --viz-2: #8579dc;
+  --viz-3: #a88a2a;
+  --viz-mute: #4a5262;
+  --viz-track: #1f252d;
+  --viz-grid: #222831;
+  --viz-axis: #3d4450;
+  --viz-1-wash: rgb(38 160 164 / 0.18);
+  --viz-2-wash: rgb(133 121 220 / 0.14);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect a reduced-motion preference everywhere rather than per-component. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Visible, consistent focus for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Secondary and tertiary text. Written out as inline style objects in 125 places
+   before this existed, which repeated the declaration in the HTML and then again in the
+   serialized React payload on every page. */
+.t-muted {
+  color: var(--text-muted);
+}
+.t-faint {
+  color: var(--text-faint);
+}
+
+/* Numeric columns line up when figures are tabular. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Prose defaults for curated narrative blocks. */
+.prose-cds {
+  max-width: 70ch;
+}
+.prose-cds p {
+  margin-bottom: 0.85em;
+}
+.prose-cds a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* A claim's provenance chip. Sits inline after the claim it supports. */
+.evidence-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-sunken);
+  color: var(--text-faint);
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+.evidence-chip:hover {
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+}
+
+/* Coverage meter: shows how complete a clinical field actually is. */
+.meter {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-sunken);
+  overflow: hidden;
+}
+.meter > span {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  border-radius: 3px;
+}
+
+/* ------------------------------------------------------------------------------------
+   Chart chrome. Marks are thin, text wears text colours (never the series colour), and
+   the surface does the separating: a 2px gap between touching fills, a 2px ring on dots.
+   ------------------------------------------------------------------------------------ */
+.viz-label {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text);
+}
+.viz-value {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  white-space: nowrap;
+}
+.viz-axis-text {
+  font-size: 11px;
+  fill: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.viz-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--text-muted);
+}
+.viz-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.viz-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex: none;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08);
+}
+.viz-swatch.dot {
+  border-radius: 999px;
+}
+.viz-swatch.line {
+  width: 16px;
+  height: 0;
+  border-top: 2px solid currentColor;
+  border-radius: 0;
+}
+.viz-swatch.dashed {
+  border-top-style: dashed;
+}
+
+/* A horizontal bar: track with a rounded data-end, square at the baseline. */
+.bar-track {
+  position: relative;
+  display: block;
+  height: 8px;
+  border-radius: 2px 4px 4px 2px;
+  background: var(--viz-track);
+  overflow: hidden;
+}
+.bar-track > i {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Segmented (part-to-whole) bar: 2px surface gaps, no strokes. */
+.seg-bar {
+  display: flex;
+  gap: 2px;
+  height: 12px;
+  width: 100%;
+}
+.seg-bar > span {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  border-radius: 2px;
+}
+.seg-bar > span:first-child {
+  border-radius: 4px 2px 2px 4px;
+}
+.seg-bar > span:last-child {
+  border-radius: 2px 4px 4px 2px;
+}
+.seg-bar > span:only-child {
+  border-radius: 4px;
+}
+
+/* Scatter tooltip: values lead, labels follow. */
+.viz-tip {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  width: max-content;
+  max-width: 260px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.14);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+.viz-tip .tip-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.viz-tip .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+.viz-tip .row b {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.viz-hit {
+  outline: none;
+  cursor: pointer;
+}
+.viz-hit:focus-visible .viz-dot {
+  stroke: var(--accent);
+}
+
+/* Compare table: a thin bar beneath a number so magnitudes read at a glance. */
+.cmp-bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  max-width: 110px;
+  margin-top: 5px;
+  border-radius: 2px 3px 3px 2px;
+  background: var(--viz-track);
+  overflow: hidden;
+}
+.cmp-bar > i {
+  display: block;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+  background: var(--viz-1);
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

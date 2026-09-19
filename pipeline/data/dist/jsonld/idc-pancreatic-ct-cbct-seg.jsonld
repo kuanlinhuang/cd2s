@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-pancreatic-ct-cbct-seg",
+  "name": "Pancreatic-CT-CBCT-SEG",
+  "alternateName": [
+    "pancreatic_ct_cbct_seg"
+  ],
+  "description": "The objective of this dataset is to provide a means of evaluating the performance of CT-to-CBCT deformable registration and auto-segmentation algorithms for delineating OARs from 40 patients who received ablative radiation therapy for locally advanced pancreatic cancer.The images (one treatment planning CT and two CBCT scans for each of 40 patients) were acquired during a deep inspiration breath-hold verified with an external respiratory monitor. Please see the Pancreatic-CT-CBCT-SEG wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pancreatic-ct-cbct-seg",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pancreatic_ct_cbct_seg",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/tcia.eshq-4d90"
+  ],
+  "keywords": [
+    "Pancreas",
+    "Pancreatic Cancer",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pancreatic_ct_cbct_seg",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-pancreatic-ct-cbct-seg.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "Dataset",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-ct-lymph-nodes",
+  "name": "CT Lymph Nodes",
+  "alternateName": [
+    "ct_lymph_nodes"
+  ],
+  "description": "This collection consists of Computed Tomography (CT) images of the mediastinum and abdomen in which lymph node positions are marked by radiologists at the National Institutes of Health, Clinical Center. Radiologists at the Imaging Biomarkers and Computer-Aided Diagnosis Laboratory labeled a total of 388 mediastinal lymph nodes in CT images of 90 patients and a total of 595 abdominal lymph nodes in 86 patients. Please see the CT Lymph Nodes wiki page to learn more about the images and to obtain supporting data from this collection.",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-lymph-nodes",
+  "identifier": [
+    "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_lymph_nodes",
+    "https://www.cancerimagingarchive.net/collections/",
+    "doi:10.7937/K9/TCIA.2015.AQIIDCNM"
+  ],
+  "keywords": [
+    "Abdomen",
+    "Lymphadenopathy (non-cancer)",
+    "Mediastinum",
+    "idc",
+    "imaging",
+    "radiology"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": "Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "NCI Imaging Data Commons / The Cancer Imaging Archive"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://portal.imaging.datacommons.cancer.gov"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Cancer Data Showcase",
+    "url": "https://cancer-data-showcase.example.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "IDC portal",
+      "contentUrl": "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_lymph_nodes",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cancer Data Showcase structured record",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-ct-lymph-nodes.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "citation": [],
+  "funding": [],
+  "dateModified": "2026-09-18T02:44:36.389375+00:00",
+  "datePublished": null,
+  "variableMeasured": [],
+  "measurementTechnique": [
+    "DICOM medical imaging"
+  ]
+}

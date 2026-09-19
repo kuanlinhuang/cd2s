@@ -1,0 +1,81 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "htan-pre-cancer-atlases-of-cutaneous-and-hematologic-origin",
+  "alternateName": "Pre-Cancer Atlases of Cutaneous and Hematologic Origin",
+  "description": "Pre-Cancer Atlases of Cutaneous and Hematologic Origin",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-pre-cancer-atlases-of-cutaneous-and-hematologic-origin",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "citeAs": "Multiplexed 3D atlas of state transitions and immune interaction in colorectal cancer",
+  "version": "as-retrieved",
+  "datePublished": null,
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clinical",
+      "name": "Clinical variables with measured completeness",
+      "description": "Completeness is measured from the source repository's own records. A field populated entirely with non-answers is reported as populated but not informative, because it blocks an analysis just as surely as an absent field.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Demographics",
+          "name": "Demographics",
+          "description": "Category: demographic. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Diagnosis",
+          "name": "Diagnosis",
+          "description": "Category: diagnosis. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Exposure",
+          "name": "Exposure history",
+          "description": "Category: exposure. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:FamilyHistory",
+          "name": "Family history",
+          "description": "Category: other. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:FollowUp",
+          "name": "Follow-up",
+          "description": "Category: followup. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:Therapy",
+          "name": "Therapy",
+          "description": "Category: treatment. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clinical/htan:MolecularTest",
+          "name": "Clinical molecular test",
+          "description": "Category: molecular_marker. Populated for None% of cases; one-to-many field, per-case shares not derivable.",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "cr:usageGuidance": {
+    "supportedQuestions": [],
+    "blockingLimitations": [],
+    "inappropriateUses": []
+  }
+}
