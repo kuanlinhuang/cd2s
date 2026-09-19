@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { AccessBadge, Chip, UnderexploredBadge } from "@/components/ui";
 import type { AgentAnswer, AgentPick } from "@/lib/agent";
 import { bulletAnchor } from "@/lib/anchors";
+import { showsShortlist } from "@/lib/intent";
 import { SCARCE_MODALITIES, modalityLabel, num } from "@/lib/format";
 import type { AccessTier } from "@/lib/types";
 
@@ -15,10 +16,11 @@ import type { AccessTier } from "@/lib/types";
  * evidence for it. The wording is the agent's, verbatim; this component only adds the
  * links and the routes onward.
  *
- * When the router above has already offered a destination, an empty shortlist renders
- * nothing at all. The alternative is a sentence saying nothing matched printed directly
- * beneath a card naming the dataset that did, and the two surfaces must not be able to
- * disagree about the same question.
+ * When the router above has already offered a destination, the shortlist renders
+ * nothing until it has picks to show - no placeholder cards on the way, and nothing at
+ * all if it finds none. The alternative is a sentence saying nothing matched printed
+ * directly beneath a card naming the dataset that did, and the two surfaces must not be
+ * able to disagree about the same question.
  */
 
 export interface NeedLink {
@@ -66,6 +68,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
   const result = busy ? null : outcome.result;
 
   if (busy) {
+    if (routed) return null;
     return (
       <div aria-live="polite" aria-busy="true">
         <p className="text-[13px] t-muted">Checking each candidate&rsquo;s measured fields.</p>
@@ -86,7 +89,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
     );
   }
   if (!result) return null;
-  if (result.picks.length === 0 && routed) return null;
+  if (!showsShortlist(result.picks.length, routed)) return null;
 
   return (
     <div aria-live="polite">

@@ -84,19 +84,23 @@ function search(): MiniSearch<Doc> {
 }
 
 /**
- * How relevant a record's own text must be, per word of the topic, to be a candidate.
+ * How strongly a record's own text must match one word of the topic to be a candidate.
  *
- * MiniSearch scores are unbounded and sum over the words searched, so the measure is a
- * record's score divided by the number of words in the topic. That is an absolute
- * quantity, unlike relevance read against the best hit, which is 1.0 for the best match
- * of anything at all however badly everything scored. Calibrated against the shipped
- * corpus: the words left over from a question about the site itself score 12 or less
- * per word ("recorded" 6.8, "bulk download JSON" 9.5, "measured" 10.3, "come" 12.0),
- * while a disease or site this corpus holds scores 25 or more ("cervix" 25.3,
- * "lymphoma" 27.3, "melanoma" 30.2, "acute myeloid leukemia" 70.6). 18 sits in the
- * empty band between the two. To recalibrate after the corpus changes, search both
- * families of wording against the rebuilt index and put the floor between the highest
- * incidental score and the lowest score for a subject the corpus really holds.
+ * MiniSearch scores are unbounded and sum over the words that matched, so the measure
+ * is a record's strongest single-word score: an absolute quantity, unlike relevance
+ * read against the best hit, which is 1.0 for the best match of anything at all however
+ * badly everything scored. It is read word by word rather than from the score for the
+ * whole topic, because a sum over the topic divided by its length punishes a record for
+ * words the corpus does not contain: "neuroblastoma kids first" would score half of
+ * "neuroblastoma" and the cohort named in it would drop out.
+ *
+ * Calibrated against the shipped corpus. Words left over from a question about the site
+ * itself score 12 or less ("reuse" 2.2, "download" 4.2, "recorded" 6.8, "measured"
+ * 10.3, "come" 12.0), while a disease, site or programme this corpus holds scores 23 or
+ * more ("kids" 23.9, "cervix" 25.3, "lymphoma" 27.3, "melanoma" 30.2, "neuroblastoma"
+ * 35.1). 18 sits in the empty band between the two. To recalibrate after the corpus
+ * changes, search both families of wording against the rebuilt index and put the floor
+ * between the highest incidental score and the lowest score for a subject it holds.
  */
 const MIN_TEXT_RELEVANCE = 18;
 
@@ -118,20 +122,26 @@ type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unkno
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
   const topic = topicOf(query, needs);
-  const relevance = new Map<string, number>();
-  if (topic) {
-    const words = topic.split(/\s+/).filter(Boolean).length || 1;
-    for (const h of search().search(topic)) {
-      const own = h.score / words;
-      if (own >= MIN_TEXT_RELEVANCE) relevance.set(h.id as string, own);
+  const words = topic ? topic.split(/\s+/).filter(Boolean) : [];
+  const candidates = new Set<string>();
+  for (const word of words) {
+    for (const h of search().search(word)) {
+      if (h.score >= MIN_TEXT_RELEVANCE) candidates.add(h.id as string);
     }
   }
-  if (relevance.size === 0) return { needs, scored: [] };
-  const strongest = Math.max(...relevance.values());
+  if (candidates.size === 0) return { needs, scored: [] };
+  // Admission asks whether any one word matches this record strongly; the order then
+  // asks how much of the whole request it matches, so a record carrying one generic
+  // word of the topic cannot outrank one that matches the subject as well.
+  const whole = new Map<string, number>();
+  for (const h of search().search(topic!)) {
+    if (candidates.has(h.id as string)) whole.set(h.id as string, h.score);
+  }
+  const strongest = Math.max(...whole.values());
   const scored: Scored[] = getIndex()
-    .filter((row) => relevance.has(row.id))
+    .filter((row) => candidates.has(row.id))
     .map((row) => {
-      const text = relevance.get(row.id)! / strongest;
+      const text = (whole.get(row.id) ?? 0) / strongest;
       const met: Need[] = [];
       const failed: Need[] = [];
       const unknown: Need[] = [];
@@ -376,7 +386,7 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
     }
   }
 
-  const top = scored.filter((s) => s.score > -3).slice(0, 4);
+  const top = scored.slice(0, 4);
   const picks = top.map((s, i) => rulesPick(s, i));
   const best = picks.find((p) => p.verdict === "best");
   const summary =

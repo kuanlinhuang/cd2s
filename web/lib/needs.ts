@@ -150,18 +150,23 @@ export function readNeeds(query: string): Need[] {
 /**
  * Words that carry no topic, so their presence should not make a dataset relevant.
  *
- * Two kinds: ordinary function words, and the words that describe a dataset in general
- * rather than a subject - "cohort", "open", "records". The second kind matters more,
- * because almost every page contains them and a query that leans on them would rank by
- * page length.
+ * Two kinds: ordinary function words, and the words that describe a dataset or its
+ * files in general rather than a subject - "cohort", "open", "records", "bulk",
+ * "download", and "cancer" itself, which every record in this corpus is about. The
+ * second kind matters more, because almost every page contains them and a query that
+ * leans on them would rank by page length: "bulk download JSON" asks for the files,
+ * and the one cohort whose title happens to say "bulk" is not an answer to it, just as
+ * a breast screening collection is not an answer to a question about gastric cancer.
  */
 const STOPWORDS = new Set([
-  "a", "access", "all", "an", "and", "any", "are", "as", "at", "available", "be", "by",
-  "can", "cohort", "cohorts", "data", "dataset", "datasets", "do", "does", "find", "for",
-  "from", "get", "have", "how", "i", "in", "into", "is", "it", "its", "large", "like",
-  "looking", "me", "my", "need", "of", "on", "open", "or", "patients", "public",
-  "records", "samples", "show", "small", "some", "study", "studies", "that", "the",
-  "their", "then", "there", "this", "to", "use", "using", "want", "was", "were", "what",
+  "a", "access", "all", "an", "and", "any", "api", "are", "as", "at", "available", "be",
+  "bulk", "by", "can", "cancer", "cancers", "cohort", "cohorts", "croissant", "data",
+  "dataset", "datasets", "do", "does", "download", "downloads", "endpoint", "file",
+  "files", "find", "for", "from", "get", "have", "how", "i", "in", "into", "is", "it",
+  "its", "json", "large", "like", "looking", "me", "my", "need", "neoplasm", "neoplasms",
+  "of", "on", "open", "or", "patients", "public", "records", "samples", "show", "small",
+  "some", "study", "studies", "that", "the", "their", "then", "there", "this", "to",
+  "tumor", "tumors", "tumour", "tumours", "use", "using", "want", "was", "were", "what",
   "which", "with", "would",
 ]);
 

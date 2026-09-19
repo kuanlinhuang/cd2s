@@ -66,7 +66,14 @@ describe("separating the topic from the capability words", () => {
     // leaving them in the text query counted them twice and made every well-annotated
     // cohort look relevant to every clinical question.
     const t = topic("proteogenomic gastric cancer survival with treatment records");
-    expect(t).toBe("gastric cancer");
+    expect(t).toBe("gastric");
+  });
+
+  it("drops the words every record in the corpus shares", () => {
+    // "cancer" and the words for the site's own files say only that the question is
+    // about this corpus, so a record whose text happens to carry one is not an answer.
+    expect(topic("gastric cancer tumours")).toBe("gastric");
+    expect(topic("bulk download JSON")).toBeNull();
   });
 
   it("keeps the disease when the request is only about a disease", () => {
