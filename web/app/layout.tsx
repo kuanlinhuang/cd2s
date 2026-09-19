@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
 import { getStats } from "@/lib/data";
 import { shortDate } from "@/lib/format";
 import { siteUrl } from "@/lib/site";
@@ -27,16 +28,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const NAV = [
-  { href: "/datasets", label: "Datasets" },
-  { href: "/questions", label: "By question" },
-  { href: "/underexplored", label: "Underexplored" },
-  { href: "/compare", label: "Compare" },
-  { href: "/network", label: "Network" },
-  { href: "/agents", label: "For agents" },
-  { href: "/methods", label: "Methods" },
-];
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -52,38 +43,7 @@ export default function RootLayout({
           Skip to content
         </a>
 
-        <header
-          className="sticky top-0 z-40 border-b backdrop-blur no-print"
-          style={{ background: "color-mix(in srgb, var(--bg) 88%, transparent)" }}
-        >
-          <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
-            <div className="flex h-14 items-center gap-4 sm:gap-6">
-              <Link href="/" className="flex items-center gap-2 shrink-0">
-                <span
-                  aria-hidden
-                  className="grid h-6 w-6 place-items-center rounded font-mono text-[11px] font-bold"
-                  style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
-                >
-                  CD
-                </span>
-                <span className="font-semibold tracking-tight whitespace-nowrap">
-                  Cancer Data Showcase
-                </span>
-              </Link>
-              <nav className="ml-auto flex items-center gap-1 overflow-x-auto text-[13px]">
-                {NAV.map((n) => (
-                  <Link
-                    key={n.href}
-                    href={n.href}
-                    className="rounded px-2 py-1.5 whitespace-nowrap hover:underline t-muted"
-                  >
-                    {n.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </div>
-        </header>
+        <SiteHeader />
 
         <main id="main" className="mx-auto max-w-[1180px] px-4 sm:px-6 pb-20">
           {children}

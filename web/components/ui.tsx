@@ -145,24 +145,32 @@ export function AccessBadge({
   );
 }
 
+const CHIP_TONES = {
+  neutral: { color: "var(--text-muted)", background: "var(--bg-sunken)" },
+  accent: { color: "var(--accent)", background: "var(--accent-bg)" },
+  scarce: { color: "var(--mixed)", background: "var(--mixed-bg)" },
+} as const;
+
+export type ChipTone = keyof typeof CHIP_TONES;
+
 export function Chip({
   children,
   tone = "neutral",
   title,
+  wrap = false,
 }: {
   children: ReactNode;
-  tone?: "neutral" | "accent" | "scarce";
+  tone?: ChipTone;
   title?: string;
+  /** Let long labels wrap instead of overflowing a narrow screen. */
+  wrap?: boolean;
 }) {
-  const tones = {
-    neutral: { color: "var(--text-muted)", background: "var(--bg-sunken)" },
-    accent: { color: "var(--accent)", background: "var(--accent-bg)" },
-    scarce: { color: "var(--mixed)", background: "var(--mixed-bg)" },
-  } as const;
   return (
     <span
-      className="inline-flex items-center rounded px-1.5 py-0.5 text-[11px] whitespace-nowrap"
-      style={tones[tone]}
+      className={`inline-flex items-center rounded px-1.5 py-0.5 text-[11px] ${
+        wrap ? "max-w-full [overflow-wrap:anywhere]" : "whitespace-nowrap"
+      }`}
+      style={CHIP_TONES[tone]}
       title={title}
     >
       {children}

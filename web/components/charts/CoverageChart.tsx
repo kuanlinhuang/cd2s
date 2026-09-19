@@ -87,15 +87,15 @@ export function CoverageLegend() {
     <div className="viz-legend">
       <span>
         <span className="viz-swatch" style={{ background: "var(--viz-1)" }} />
-        Informative value
+        Informative - a usable value
       </span>
       <span>
         <span className="viz-swatch" style={{ background: "var(--viz-3)" }} />
-        Recorded as &ldquo;not reported&rdquo; or &ldquo;unknown&rdquo;
+        Present but uninformative - &ldquo;not reported&rdquo; or &ldquo;unknown&rdquo;
       </span>
       <span>
         <span className="viz-swatch" style={{ background: "var(--viz-track)", boxShadow: "inset 0 0 0 1px var(--border)" }} />
-        Missing
+        Absent - no value recorded
       </span>
     </div>
   );
