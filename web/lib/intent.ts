@@ -98,8 +98,9 @@ export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): I
   }
 
   // Grouped by the name the visitor typed, because one name can belong to several
-  // records. Two distinct names is a comparison; one name on several records is an
-  // ambiguous single subject, so each record is offered as a candidate instead.
+  // records. A comparison needs every typed name to resolve to exactly one record;
+  // any name held by several records is ambiguous, so every record that matched is
+  // offered as a candidate rather than one of them chosen by position.
   const byName = new Map<string, IndexRow[]>();
   for (const hit of namedDatasets(query, index)) {
     const key = normalizeName(hit.token);
@@ -107,23 +108,25 @@ export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): I
     rows.push(hit.row);
     byName.set(key, rows);
   }
-  if (byName.size >= 2) {
-    const rows = [...byName.values()].map((r) => r[0]).slice(0, 4);
+  const groups = [...byName.values()];
+  if (groups.length >= 2 && groups.every((rows) => rows.length === 1)) {
+    const rows = groups.map((r) => r[0]).slice(0, 4);
     routes.push({
       kind: "compare",
       href: `/compare?ids=${rows.map((r) => r.id).join(",")}`,
       label: `Compare ${rows.map((r) => r.short_title ?? r.title).join(", ")} side by side`,
       detail: "Only the rows where they differ, with the measurement unique to each starred.",
     });
-  } else if (byName.size === 1) {
-    const rows = [...byName.values()][0];
-    for (const row of rows.slice(0, 4)) {
-      routes.push({
-        kind: "dataset",
-        href: `/datasets/${row.id}`,
-        label: rows.length > 1 && row.short_title ? `${row.title} (${row.short_title})` : row.title,
-        detail: row.one_liner ?? "Can it answer your question, what it cannot tell you, who has used it, how to start.",
-      });
+  } else {
+    for (const rows of groups) {
+      for (const row of rows.slice(0, 4)) {
+        routes.push({
+          kind: "dataset",
+          href: `/datasets/${row.id}`,
+          label: rows.length > 1 && row.short_title ? `${row.title} (${row.short_title})` : row.title,
+          detail: row.one_liner ?? "Can it answer your question, what it cannot tell you, who has used it, how to start.",
+        });
+      }
     }
   }
 

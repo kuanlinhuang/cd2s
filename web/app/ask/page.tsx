@@ -30,7 +30,6 @@ const CAPABILITY_FILTER: Record<string, string> = {
   treatment: "treatment",
   multimodal: "multimodal",
   open: "open",
-  underexplored: "underexplored",
 };
 
 export default async function AskPage({

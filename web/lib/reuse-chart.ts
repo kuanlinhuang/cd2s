@@ -4,10 +4,12 @@ import type { DatasetRecord, Grant, IndexRow } from "@/lib/types";
  * Rows for the home page's "Data reuse" chart: citations to a dataset's paper next to
  * the articles that analysed its data, one dataset per row on one scale.
  *
- * Only datasets with both numbers are rows. A citation count without traceable reuse,
- * or reuse without a citation count, is not a comparison, and drawing the missing side
- * as zero would be a false statement; those datasets are listed separately with the
- * reason the measurement is missing.
+ * Only datasets with both numbers measured are rows. A dataset whose reuse could not
+ * be measured, or which has no citation count, is not a comparison, and drawing the
+ * missing side as zero would be a false statement; the most cited of those are listed
+ * separately with the reason the measurement is missing. A measured zero is a number,
+ * not a gap: a dataset cited and never reused is drawn as a labelled zero, because it
+ * is the sharpest form of the point the chart makes.
  */
 
 export interface ChartAward {
@@ -51,9 +53,13 @@ export function reuseChartRows(
       (r) =>
         (r.n_citations_to_primary_publication ?? 0) > 0 &&
         r.has_citable_accession === true &&
-        (r.n_verified_reuse ?? 0) > 0,
+        r.n_verified_reuse != null,
     )
-    .sort((a, b) => (b.n_verified_reuse ?? 0) - (a.n_verified_reuse ?? 0))
+    .sort(
+      (a, b) =>
+        (b.n_verified_reuse ?? 0) - (a.n_verified_reuse ?? 0) ||
+        (b.n_citations_to_primary_publication ?? 0) - (a.n_citations_to_primary_publication ?? 0),
+    )
     .map((r) => {
       const grants = getRecord(r.id)?.grants ?? [];
       return {

@@ -134,7 +134,7 @@ export default function AskAnswer({ q, needLinks }: { q: string; needLinks: Need
                   ))}
                 </div>
                 <Link href={`/datasets/${p.id}#fit`} className="text-[12px] underline" style={{ color: "var(--accent)" }}>
-                  Where this came from
+                  Measured fit
                 </Link>
               </div>
             </li>

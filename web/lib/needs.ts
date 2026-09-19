@@ -132,16 +132,6 @@ const NEEDS: Need[] = [
     fit: "fully open access, nothing to apply for",
     fail: "needs an access request first",
   },
-  {
-    key: "underexplored",
-    label: "a dataset reused less than comparable ones",
-    test: /under.?explored|under.?used|less (often )?used|few(er)? (people|articles|studies) have/i,
-    // The label is only ever assigned where reuse could be measured, so a dataset
-    // without it is either reused as expected or not measurable; the fail text says so.
-    check: (r) => r.is_underexplored,
-    fit: "reused far less than datasets of similar size, age, breadth and access",
-    fail: "not labelled underexplored: reused about as expected, or reuse not measurable",
-  },
 ];
 
 /** The wording the rule-based explanations use, so the answer page can link each line to its evidence. */

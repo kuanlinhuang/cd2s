@@ -86,6 +86,16 @@ describe("routing a question", () => {
     ]);
   });
 
+  it("offers candidates, not a comparison, when a name in a compare query is ambiguous", () => {
+    const intent = routeIntent("compare Glioblastoma Multiforme and TCGA-BRCA", INDEX);
+    expect(intent.routes.map((r) => r.kind)).toEqual(["dataset", "dataset", "dataset"]);
+    expect(intent.routes.map((r) => r.href)).toEqual([
+      "/datasets/gdc-tcga-brca",
+      "/datasets/gdc-tcga-gbm",
+      "/datasets/pdc-cptac-gbm",
+    ]);
+  });
+
   it("offers one name held by several records as candidates, not as a comparison", () => {
     const intent = routeIntent("Glioblastoma Multiforme", INDEX);
     expect(intent.routes.map((r) => r.kind)).toEqual(["dataset", "dataset"]);

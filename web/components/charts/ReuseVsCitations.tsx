@@ -87,7 +87,7 @@ export function ReuseVsCitations({
       )}
 
       <div className="border-t px-5 py-2.5 text-[12px] t-muted">
-        Attention to the finding. A cited paper does not mean the data were reused.{" "}
+        A cited paper does not mean the data were reused.{" "}
         {num(nNoAccession)} of {num(nDatasets)} datasets have no accession that articles quote, so
         their use cannot be traced.{" "}
         <Link href="/methods#reuse" className="underline">

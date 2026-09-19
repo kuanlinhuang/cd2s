@@ -8,8 +8,9 @@ import { indexRow, record } from "./factories";
 /**
  * The home page's data reuse chart.
  *
- * Two things here can mislead: a missing measurement drawn as zero, and the wrong
- * grant named as a dataset's funder. Both are pinned.
+ * Three things here can mislead: a missing measurement drawn as zero, a measured zero
+ * hidden because it looks like a missing one, and the wrong grant named as a dataset's
+ * funder. All three are pinned.
  */
 
 const grant = (over: Partial<Grant>): Grant =>
@@ -22,16 +23,24 @@ describe("which datasets are rows", () => {
     indexRow({ id: "cited-untraceable", n_citations_to_primary_publication: 6500, has_citable_accession: false, n_verified_reuse: null }),
     indexRow({ id: "reused-uncited", n_citations_to_primary_publication: null, has_citable_accession: true, n_verified_reuse: 3000 }),
     indexRow({ id: "reused-zero", n_citations_to_primary_publication: 12, has_citable_accession: true, n_verified_reuse: 0 }),
+    indexRow({ id: "reuse-unmeasured", n_citations_to_primary_publication: 80, has_citable_accession: true, n_verified_reuse: null }),
   ];
   const rows = reuseChartRows(index, () => record({ grants: [] }));
 
-  it("keeps only datasets with both a citation count and traceable reuse", () => {
-    expect(rows.map((r) => r.id)).toEqual(["both-big", "both-small"]);
+  it("keeps only datasets with both numbers measured", () => {
+    expect(rows.map((r) => r.id)).toEqual(["both-big", "both-small", "reused-zero"]);
   });
 
   it("never turns a missing measurement into a zero bar", () => {
     expect(rows.find((r) => r.id === "cited-untraceable")).toBeUndefined();
     expect(rows.find((r) => r.id === "reused-uncited")).toBeUndefined();
+    expect(rows.find((r) => r.id === "reuse-unmeasured")).toBeUndefined();
+  });
+
+  it("shows a dataset cited but never reused as a measured zero", () => {
+    expect(rows.find((r) => r.id === "reused-zero")).toEqual(
+      expect.objectContaining({ cites: 12, reuse: 0 }),
+    );
   });
 
   it("ranks by data reuse, not by citations", () => {
