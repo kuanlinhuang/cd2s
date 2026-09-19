@@ -169,21 +169,6 @@ export default async function DatasetPage({
         <a href={`/data/datasets/${r.id}.json`} className="font-mono underline">
           record JSON
         </a>
-        {r.agent_package.instructions_url && (
-          <a href={r.agent_package.instructions_url} className="font-mono underline">
-            agent brief
-          </a>
-        )}
-        {r.agent_package.croissant_url && (
-          <a href={r.agent_package.croissant_url} className="font-mono underline">
-            Croissant
-          </a>
-        )}
-        {r.agent_package.jsonld_url && (
-          <a href={r.agent_package.jsonld_url} className="font-mono underline">
-            JSON-LD
-          </a>
-        )}
       </p>
     </article>
   );

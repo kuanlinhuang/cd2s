@@ -83,10 +83,61 @@ function search(): MiniSearch<Doc> {
   return ms;
 }
 
+/**
+ * Words too general to identify a subject, even though the corpus lists them as one.
+ * Every record is about a cancer of some primary site, so matching on these says only
+ * that the query is about this corpus at all.
+ */
+const GENERIC_SUBJECT = new Set([
+  "cancer", "cancers", "tumor", "tumour", "tumors", "tumours", "types", "type", "other",
+  "reported", "mixed", "unknown", "cell", "cells", "disease", "primary", "carcinoma",
+  "neoplasm", "neoplasms",
+]);
+
+let _subjects: Set<string> | null = null;
+
+/** Words that name a disease or a primary site somewhere in the corpus. */
+function subjectWords(): Set<string> {
+  if (_subjects) return _subjects;
+  const words = new Set<string>();
+  const add = (s: string) =>
+    s
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((w) => w.length >= 4 && !GENERIC_SUBJECT.has(w))
+      .forEach((w) => words.add(w));
+  for (const row of getIndex()) {
+    row.cancer_types.forEach(add);
+    row.primary_sites.forEach(add);
+  }
+  _subjects = words;
+  return words;
+}
+
+function namesASubject(query: string): boolean {
+  const vocab = subjectWords();
+  return query
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .some((w) => vocab.has(w));
+}
+
 type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unknown: Need[] };
 
+/**
+ * The candidates worth ranking.
+ *
+ * A dataset is only ranked when the request states something a dataset can be measured
+ * against: a need the wording asked for, or a disease or site the corpus knows. Text
+ * relevance alone cannot carry that decision, because retrieval scores a query against
+ * its own best hit - "how is reuse measured" and "bulk download JSON" both produce a
+ * perfect relative match on a cohort that has nothing to do with the question. Asking
+ * about the method or for the files is answered by the route cards, not by being told
+ * to start with an unrelated cohort.
+ */
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
+  if (needs.length === 0 && !namesASubject(query)) return { needs, scored: [] };
   const index = getIndex();
   const hits = new Map<string, number>();
   let max = 0;

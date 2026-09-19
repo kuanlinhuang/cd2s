@@ -161,7 +161,7 @@ function Bar({
   return (
     <span className="flex items-center gap-2" title={`${num(value)} ${label}`}>
       <span className="bar-track min-w-0 flex-1" style={{ height: 9 }}>
-        <i style={{ width: `${pct}%`, minWidth: MIN_BAR_PX, background: color }} />
+        <i style={{ width: `${pct}%`, minWidth: value > 0 ? MIN_BAR_PX : 0, background: color }} />
       </span>
       <span className={`viz-value w-16 text-right ${strong ? "font-semibold" : "t-muted"}`}>{num(value)}</span>
     </span>

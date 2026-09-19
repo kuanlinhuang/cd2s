@@ -10,6 +10,10 @@ import type { DatasetRecord, Grant, IndexRow } from "@/lib/types";
  * separately with the reason the measurement is missing. A measured zero is a number,
  * not a gap: a dataset cited and never reused is drawn as a labelled zero, because it
  * is the sharpest form of the point the chart makes.
+ *
+ * Rows lead with the most cited dataset, so the reuse count sits beside the attention
+ * the dataset already has. Ordering by reuse instead would put every measured zero
+ * last, hiding exactly the rows that make the point.
  */
 
 export interface ChartAward {
@@ -57,8 +61,8 @@ export function reuseChartRows(
     )
     .sort(
       (a, b) =>
-        (b.n_verified_reuse ?? 0) - (a.n_verified_reuse ?? 0) ||
-        (b.n_citations_to_primary_publication ?? 0) - (a.n_citations_to_primary_publication ?? 0),
+        (b.n_citations_to_primary_publication ?? 0) - (a.n_citations_to_primary_publication ?? 0) ||
+        (b.n_verified_reuse ?? 0) - (a.n_verified_reuse ?? 0),
     )
     .map((r) => {
       const grants = getRecord(r.id)?.grants ?? [];

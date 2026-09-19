@@ -43,9 +43,21 @@ describe("which datasets are rows", () => {
     );
   });
 
-  it("ranks by data reuse, not by citations", () => {
-    const shuffled = [index[1], index[0]];
-    expect(reuseChartRows(shuffled, () => null).map((r) => r.id)).toEqual(["both-big", "both-small"]);
+  it("leads with the most cited dataset, whatever its reuse", () => {
+    const shuffled = [index[4], index[1], index[0]];
+    expect(reuseChartRows(shuffled, () => null).map((r) => r.id)).toEqual([
+      "both-big",
+      "both-small",
+      "reused-zero",
+    ]);
+  });
+
+  it("breaks a citation tie on reuse", () => {
+    const tied = [
+      indexRow({ id: "tied-low", n_citations_to_primary_publication: 100, has_citable_accession: true, n_verified_reuse: 1 }),
+      indexRow({ id: "tied-high", n_citations_to_primary_publication: 100, has_citable_accession: true, n_verified_reuse: 9 }),
+    ];
+    expect(reuseChartRows(tied, () => null).map((r) => r.id)).toEqual(["tied-high", "tied-low"]);
   });
 
   it("lists the most cited untraceable datasets separately, with the reason implied by the flag", () => {
