@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 
 import { Bars, type BarRow } from "@/components/charts/Bars";
 import { FitGrid } from "@/components/FitGrid";
+import ChipList from "@/components/ChipList";
+import SectionNav from "@/components/SectionNav";
 import { AgeBox } from "@/components/charts/AgeBox";
 import { CoverageChart } from "@/components/charts/CoverageChart";
 import { ObservedExpected, reuseSentence } from "@/components/charts/ObservedExpected";
@@ -95,23 +97,7 @@ export default async function DatasetPage({
       <Header record={r} />
 
       {/* in-page navigation */}
-      <nav
-        className="sticky top-14 z-30 -mx-4 mb-2 overflow-x-auto border-b px-4 backdrop-blur no-print sm:-mx-6 sm:px-6"
-        style={{ background: "color-mix(in srgb, var(--bg) 92%, transparent)" }}
-        aria-label="Sections of this page"
-      >
-        <div className="flex gap-1 py-2 text-[12px]">
-          {SECTIONS.map((s) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className="rounded px-2 py-1 whitespace-nowrap hover:underline t-muted"
-            >
-              {s.label}
-            </a>
-          ))}
-        </div>
-      </nav>
+      <SectionNav sections={SECTIONS} />
 
       <Fit record={r} />
       <AtAGlance record={r} />
@@ -340,7 +326,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
       title="At a glance"
       lede="Cohort, measurements, clinical completeness and access. Percentages come from the repository's own records, so they show what is actually filled in."
     >
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         <Card>
           <Stat
             label="Cases"
@@ -423,16 +409,18 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
         {r.cancer_types.length === 0 && r.primary_sites.length === 0 ? (
           <EmptyState>The repository publishes no disease classification for this dataset.</EmptyState>
         ) : (
-          <div className="flex flex-wrap gap-1.5">
-            {r.cancer_types.map((t) => (
-              <Chip key={t.label} tone="accent" title={t.ontology ? `${t.ontology} ${t.code ?? ""}` : undefined}>
-                {t.label}
-              </Chip>
-            ))}
-            {r.primary_sites.map((s) => (
-              <Chip key={s}>{s}</Chip>
-            ))}
-          </div>
+          <ChipList
+            items={[
+              ...r.cancer_types.map((t) => ({
+                key: `type:${t.label}`,
+                label: t.label,
+                tone: "accent" as const,
+                title: t.ontology ? `${t.ontology} ${t.code ?? ""}` : undefined,
+              })),
+              ...r.primary_sites.map((s) => ({ key: `site:${s}`, label: s, tone: "neutral" as const })),
+            ]}
+            what="cancer types and sites"
+          />
         )}
       </div>
 
@@ -1348,7 +1336,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                           href={s.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-2 inline-block text-[13px] underline"
+                          className="mt-2 inline-block max-w-full break-all text-[13px] underline"
                           style={{ color: "var(--accent)" }}
                         >
                           {s.url}

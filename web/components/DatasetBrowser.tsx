@@ -170,6 +170,9 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
   const [sort, setSort] = useState<SortKey>(initial.q ? "relevance" : "size");
   const [limit, setLimit] = useState(40);
   const [compare, setCompare] = useState<string[]>([]);
+  const [filtersOpen, setFiltersOpen] = useState(() =>
+    Object.values(initial).some(Boolean),
+  );
 
   // The searchable text is 40% of the index and is needed only once somebody types, so
   // it is fetched as its own cacheable file after first paint rather than inlined into
@@ -307,9 +310,27 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
   }
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[250px_1fr]">
+    <div className="grid min-w-0 gap-x-8 gap-y-4 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-y-8">
+      <button
+        type="button"
+        aria-expanded={filtersOpen}
+        aria-controls="dataset-filters"
+        onClick={() => setFiltersOpen((open) => !open)}
+        className="flex w-full items-center justify-between rounded-md border px-3 py-2.5 text-[13px] font-medium lg:hidden"
+        style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}
+      >
+        <span>
+          Filters
+          {activeFilters > 0 ? ` (${activeFilters} active)` : ""}
+        </span>
+        <span className="font-normal t-muted">{filtersOpen ? "Hide" : "Show"}</span>
+      </button>
+
       {/* --------------------------------------------------------------- filters */}
-      <aside className="lg:sticky lg:top-20 lg:self-start space-y-5">
+      <aside
+        id="dataset-filters"
+        className={`${filtersOpen ? "block" : "hidden"} min-w-0 space-y-5 lg:sticky lg:top-20 lg:block lg:self-start`}
+      >
         <div>
           <label
             htmlFor="dataset-search"
@@ -326,7 +347,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
               if (e.target.value) setSort("relevance");
             }}
             placeholder="cervical cancer, spatial, resistance..."
-            className="w-full rounded-md border px-2.5 py-1.5 text-[13px]"
+            className="w-full min-w-0 max-w-full rounded-md border px-2.5 py-1.5 text-[13px]"
             style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
           />
           <p className="mt-1.5 text-[11px] t-faint">
@@ -422,7 +443,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
       </aside>
 
       {/* --------------------------------------------------------------- results */}
-      <div>
+      <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <p className="text-[13px] t-muted">
             <span className="tnum font-medium" style={{ color: "var(--text)" }}>
@@ -535,7 +556,7 @@ function FacetSelect({
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-md border px-2 py-1.5 text-[13px]"
+        className="w-full min-w-0 max-w-full rounded-md border px-2 py-1.5 text-[13px]"
         style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
       >
         <option value="">Any</option>

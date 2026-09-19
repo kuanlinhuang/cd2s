@@ -22,7 +22,7 @@ export function RepositoryBars({ rows }: { rows: RepoRow[] }) {
             <li
               key={r.repository}
               className="grid items-center gap-3"
-              style={{ gridTemplateColumns: "minmax(72px, 110px) minmax(0, 1fr) 96px" }}
+              style={{ gridTemplateColumns: "minmax(64px, 110px) minmax(0, 1fr) auto" }}
             >
               <span className="viz-label truncate">{r.repository}</span>
               <span className="block" style={{ width: `${(100 * total) / max}%` }}>
