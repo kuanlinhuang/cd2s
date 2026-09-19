@@ -92,7 +92,7 @@ export default async function AskPage({
       )}
 
       <div className="mt-5">
-        <AskAnswer key={q} q={q} needLinks={needLinks} />
+        <AskAnswer key={q} q={q} needLinks={needLinks} routed={intent.routes.length > 0} />
       </div>
     </>
   );

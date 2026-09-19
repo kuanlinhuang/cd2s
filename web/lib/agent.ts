@@ -84,93 +84,74 @@ function search(): MiniSearch<Doc> {
 }
 
 /**
- * Words too general to identify a subject, even though the corpus lists them as one.
- * Every record is about a cancer of some primary site, so matching on these says only
- * that the query is about this corpus at all.
+ * How relevant a record's own text must be, per word of the topic, to be a candidate.
+ *
+ * MiniSearch scores are unbounded and sum over the words searched, so the measure is a
+ * record's score divided by the number of words in the topic. That is an absolute
+ * quantity, unlike relevance read against the best hit, which is 1.0 for the best match
+ * of anything at all however badly everything scored. Calibrated against the shipped
+ * corpus: the words left over from a question about the site itself score 12 or less
+ * per word ("recorded" 6.8, "bulk download JSON" 9.5, "measured" 10.3, "come" 12.0),
+ * while a disease or site this corpus holds scores 25 or more ("cervix" 25.3,
+ * "lymphoma" 27.3, "melanoma" 30.2, "acute myeloid leukemia" 70.6). 18 sits in the
+ * empty band between the two. To recalibrate after the corpus changes, search both
+ * families of wording against the rebuilt index and put the floor between the highest
+ * incidental score and the lowest score for a subject the corpus really holds.
  */
-const GENERIC_SUBJECT = new Set([
-  "cancer", "cancers", "tumor", "tumour", "tumors", "tumours", "types", "type", "other",
-  "reported", "mixed", "unknown", "cell", "cells", "disease", "primary", "carcinoma",
-  "neoplasm", "neoplasms",
-]);
-
-let _subjects: Set<string> | null = null;
-
-/** Words that name a disease or a primary site somewhere in the corpus. */
-function subjectWords(): Set<string> {
-  if (_subjects) return _subjects;
-  const words = new Set<string>();
-  const add = (s: string) =>
-    s
-      .toLowerCase()
-      .split(/[^a-z0-9]+/)
-      .filter((w) => w.length >= 4 && !GENERIC_SUBJECT.has(w))
-      .forEach((w) => words.add(w));
-  for (const row of getIndex()) {
-    row.cancer_types.forEach(add);
-    row.primary_sites.forEach(add);
-  }
-  _subjects = words;
-  return words;
-}
-
-function namesASubject(query: string): boolean {
-  const vocab = subjectWords();
-  return query
-    .toLowerCase()
-    .split(/[^a-z0-9]+/)
-    .some((w) => vocab.has(w));
-}
+const MIN_TEXT_RELEVANCE = 18;
 
 type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unknown: Need[] };
 
 /**
  * The candidates worth ranking.
  *
- * A dataset is only ranked when the request states something a dataset can be measured
- * against: a need the wording asked for, or a disease or site the corpus knows. Text
- * relevance alone cannot carry that decision, because retrieval scores a query against
- * its own best hit - "how is reuse measured" and "bulk download JSON" both produce a
- * perfect relative match on a cohort that has nothing to do with the question. Asking
- * about the method or for the files is answered by the route cards, not by being told
- * to start with an unrelated cohort.
+ * A dataset is ranked only when the request's own words match it in absolute terms.
+ * Nothing clearing the floor means an empty shortlist, which is the honest answer: a
+ * question about how the site works, or a request for its files, is answered by the
+ * route cards beside the shortlist, not by being told to start with a cohort that
+ * happened to be the least irrelevant record in the corpus.
+ *
+ * The needs read from the wording decide the order and the verdict among those
+ * candidates; they cannot admit one on their own, because "survival" is a word a
+ * question about the method uses as readily as a request for data.
  */
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
-  if (needs.length === 0 && !namesASubject(query)) return { needs, scored: [] };
-  const index = getIndex();
-  const hits = new Map<string, number>();
-  let max = 0;
   const topic = topicOf(query, needs);
+  const relevance = new Map<string, number>();
   if (topic) {
+    const words = topic.split(/\s+/).filter(Boolean).length || 1;
     for (const h of search().search(topic)) {
-      hits.set(h.id as string, h.score);
-      max = Math.max(max, h.score);
+      const own = h.score / words;
+      if (own >= MIN_TEXT_RELEVANCE) relevance.set(h.id as string, own);
     }
   }
-  const scored: Scored[] = index.map((row) => {
-    const text = max > 0 ? (hits.get(row.id) ?? 0) / max : 0;
-    const met: Need[] = [];
-    const failed: Need[] = [];
-    const unknown: Need[] = [];
-    for (const n of needs) {
-      const v = n.check(row);
-      if (v === true) met.push(n);
-      else if (v === false) failed.push(n);
-      else unknown.push(n);
-    }
-    // Topic relevance is weighted above any single capability, because a researcher who
-    // names a disease is not negotiating about it: a gastric cohort meeting two of three
-    // needs should outrank a leukaemia cohort meeting three. It is never decisive on its
-    // own - failing a stated need still costs more than the best possible text match.
-    let score = text * 3.5 + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
-    if (row.is_showcase) score += 0.4;
-    if (row.n_research_questions > 0) score += 0.2;
-    if (row.n_cases && row.n_cases >= 200) score += 0.2;
-    // A dataset that matched nothing in the text and satisfies no need is noise.
-    if (text === 0 && met.length === 0) score -= 5;
-    return { row, score, met, failed, unknown };
-  });
+  if (relevance.size === 0) return { needs, scored: [] };
+  const strongest = Math.max(...relevance.values());
+  const scored: Scored[] = getIndex()
+    .filter((row) => relevance.has(row.id))
+    .map((row) => {
+      const text = relevance.get(row.id)! / strongest;
+      const met: Need[] = [];
+      const failed: Need[] = [];
+      const unknown: Need[] = [];
+      for (const n of needs) {
+        const v = n.check(row);
+        if (v === true) met.push(n);
+        else if (v === false) failed.push(n);
+        else unknown.push(n);
+      }
+      // Among candidates that all cleared the floor, relevance is read against the
+      // strongest of them, because a researcher who names a disease is not negotiating
+      // about it: a gastric cohort meeting two of three needs should outrank a
+      // leukaemia cohort meeting three. It is never decisive on its own - failing a
+      // stated need still costs more than the best possible text match.
+      let score = text * 3.5 + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
+      if (row.is_showcase) score += 0.4;
+      if (row.n_research_questions > 0) score += 0.2;
+      if (row.n_cases && row.n_cases >= 200) score += 0.2;
+      return { row, score, met, failed, unknown };
+    });
   scored.sort((a, b) => b.score - a.score);
   return { needs, scored: scored.slice(0, k) };
 }
@@ -378,9 +359,14 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
     try {
       const ranked = await rankWithModel(query, needs, scored);
       if (ranked) {
-        const picks = ranked.picks
-          .filter((p) => byId.has(p.id))
-          .map((p) => ({ ...rulesPick(byId.get(p.id)!, 1), verdict: p.verdict, why: p.why, watch_out: p.watch_out }));
+        const seen = new Set<string>();
+        const picks: AgentPick[] = [];
+        for (const p of ranked.picks) {
+          const s = byId.get(p.id);
+          if (!s || seen.has(p.id)) continue;
+          seen.add(p.id);
+          picks.push({ ...rulesPick(s, 1), verdict: p.verdict, why: p.why, watch_out: p.watch_out });
+        }
         if (picks.length > 0) {
           return { query, mode: "llm", model: agentModel(), note: null, needs: needLabels, summary: ranked.summary, picks };
         }
@@ -395,7 +381,7 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
   const best = picks.find((p) => p.verdict === "best");
   const summary =
     picks.length === 0
-      ? "Nothing in the corpus matches that description. Try naming the cancer type or the measurement you need."
+      ? "Nothing in the corpus matches that description. Try naming the cancer type or the tissue you are studying."
       : best
         ? `Start with ${best.title}. ${best.why[0] ? sentence(best.why[0]) : ""}${
             best.watch_out[0] ? ` Check first: ${sentence(best.watch_out[0])}` : ""

@@ -14,6 +14,11 @@ import type { AccessTier } from "@/lib/types";
  * one rule: every line links to the section of the dataset page that carries the
  * evidence for it. The wording is the agent's, verbatim; this component only adds the
  * links and the routes onward.
+ *
+ * When the router above has already offered a destination, an empty shortlist renders
+ * nothing at all. The alternative is a sentence saying nothing matched printed directly
+ * beneath a card naming the dataset that did, and the two surfaces must not be able to
+ * disagree about the same question.
  */
 
 export interface NeedLink {
@@ -30,7 +35,7 @@ const VERDICT: Record<AgentPick["verdict"], { label: string; fg: string; bg: str
 /** The outcome of asking one question; `busy` is simply "no outcome yet for this q". */
 type Outcome = { q: string; result: AgentAnswer | null; error: string | null };
 
-export default function AskAnswer({ q, needLinks }: { q: string; needLinks: NeedLink[] }) {
+export default function AskAnswer({ q, needLinks, routed }: { q: string; needLinks: NeedLink[]; routed: boolean }) {
   const [outcome, setOutcome] = useState<Outcome | null>(null);
 
   useEffect(() => {
@@ -81,6 +86,7 @@ export default function AskAnswer({ q, needLinks }: { q: string; needLinks: Need
     );
   }
   if (!result) return null;
+  if (result.picks.length === 0 && routed) return null;
 
   return (
     <div aria-live="polite">
