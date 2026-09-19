@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 
 import { getAllRecordIds, getStats } from "@/lib/data";
+import { siteUrlOrPlaceholder } from "@/lib/site";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://cancer-data-showcase.example.org").replace(/\/$/, "");
+const SITE_URL = siteUrlOrPlaceholder();
 
 const PAGES = ["", "/datasets", "/questions", "/underexplored", "/compare", "/network", "/agents", "/methods"];
 

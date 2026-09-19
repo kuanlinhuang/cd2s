@@ -4,8 +4,9 @@ import Link from "next/link";
 import "./globals.css";
 import { getStats } from "@/lib/data";
 import { shortDate } from "@/lib/format";
+import { siteUrl } from "@/lib/site";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+const SITE_URL = siteUrl();
 
 export const metadata: Metadata = {
   ...(SITE_URL ? { metadataBase: new URL(SITE_URL) } : {}),

@@ -3,4 +3,3 @@ node_modules/
 out/
 .vercel/
 *.tsbuildinfo
-public/data/

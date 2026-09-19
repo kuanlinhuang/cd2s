@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://cancer-data-showcase.example.org").replace(/\/$/, "");
+import { siteUrlOrPlaceholder } from "@/lib/site";
+
+const SITE_URL = siteUrlOrPlaceholder();
 
 export default function robots(): MetadataRoute.Robots {
   return {

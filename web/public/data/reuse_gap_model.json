@@ -1,0 +1,43 @@
+{
+  "model_id": "rgi-huber-v2",
+  "n_records": 602,
+  "n_eligible": 132,
+  "n_excluded_no_citable_accession": 364,
+  "rgi_threshold_log2": -1.5,
+  "absolute_reuse_ceiling": 25,
+  "status": "fitted",
+  "family": "Huber robust regression on log2(observed + 1)",
+  "ols_r_squared_for_reference": 0.853,
+  "n_downweighted_by_robust_fit": 18,
+  "residual_sd_log2": 1.363,
+  "coefficients": {
+    "const": -7.5671,
+    "log_n": 1.0077,
+    "log_years": 2.1797,
+    "log_modalities": 1.5998,
+    "access_mixed": -1.0066,
+    "access_open": 0.9925
+  },
+  "p_values": {
+    "const": 2.42e-18,
+    "log_n": 8.08e-05,
+    "log_years": 2.44e-37,
+    "log_modalities": 6.97e-12,
+    "access_mixed": 0.184,
+    "access_open": 0.134
+  },
+  "observed_reuse_median": 6.0,
+  "observed_reuse_max": 3321,
+  "max_expected_reuse": 662.6,
+  "covariates": [
+    "log10(cohort size)",
+    "log2(1 + years available)",
+    "log2(1 + number of distinct modalities)",
+    "access tier (open / mixed / controlled / unknown)"
+  ],
+  "deliberately_excluded_covariates": [
+    "program membership - this is the disparity being measured, not a nuisance to adjust away"
+  ],
+  "response_note": "Response is log2(analyzing articles + 1). The index is the model residual, so -1 means the dataset sits one log2 unit below the prediction for datasets matched on size, age, breadth and access tier.",
+  "rejected_specification": "A negative binomial GLM on raw counts was fitted first and rejected: reuse counts span four orders of magnitude, so extreme points dominated the fit and predictions extrapolated to hundreds of articles for small collections. Ordinary least squares on the log response fixed the extrapolation but still let the TCGA cluster, which is both the oldest and the most reused group, set the slope on years available."
+}

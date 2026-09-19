@@ -1,3 +1,4 @@
+import { siteUrl } from "@/lib/site";
 import type { DatasetRecord } from "@/lib/types";
 
 /**
@@ -21,15 +22,10 @@ function ids(r: DatasetRecord, scheme: string): string[] {
   return [...new Set(r.identifiers.filter((i) => i.scheme === scheme).map((i) => i.value))];
 }
 
-/** The public origin, when the deployment knows it; a placeholder the reader must fill otherwise. */
-function siteOrigin(): string | null {
-  const v = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  return v ? v.replace(/\/$/, "") : null;
-}
 
 export function starterSnippets(r: DatasetRecord): Snippet[] {
   const out: Snippet[] = [];
-  const site = siteOrigin();
+  const site = siteUrl();
   const gdc = ids(r, "gdc_project_id")[0];
   const pdc = ids(r, "pdc_study_id");
   const idc = ids(r, "idc_collection_id")[0];
