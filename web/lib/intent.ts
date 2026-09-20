@@ -1,6 +1,8 @@
 import { getIndex } from "@/lib/data";
 import type { IndexRow } from "@/lib/types";
 
+export { showsShortlist } from "@/lib/answer-view";
+
 /**
  * Where a question should take the visitor.
  *
@@ -96,17 +98,6 @@ function namedDatasets(query: string, index: IndexRow[]): NameHit[] {
   return hits;
 }
 
-/**
- * Whether the shortlist has anything to say beneath the router's cards.
- *
- * The answer page shows both surfaces. When nothing matched and the router has already
- * offered a destination, the shortlist says nothing at all: a sentence denying that
- * anything matched, printed under a card naming the dataset that did, is the one
- * contradiction the page must not be able to produce.
- */
-export function showsShortlist(pickCount: number, routed: boolean): boolean {
-  return pickCount > 0 || !routed;
-}
 
 export function routeIntent(rawQuery: string, index: IndexRow[] = getIndex()): Intent {
   const query = rawQuery.trim().slice(0, 600);

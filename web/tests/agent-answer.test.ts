@@ -43,12 +43,6 @@ describe("a question no dataset can answer", () => {
     expect(a.summary).toMatch(/nothing in the corpus matches/i);
   });
 
-  it("says nothing when the corpus files the named subject under other words", async () => {
-    const a = await answer("Phosphoproteomics and outcomes in gastric cancer, open access only");
-    expect(a.picks).toEqual([]);
-    expect(getIndex().flatMap((r) => r.cancer_types).some((v) => /^gastric cancer$/i.test(v))).toBe(false);
-  });
-
   it("still reads the needs it recognises, so the page can offer them as filters", async () => {
     const a = await answer("how is survival measured");
     expect(a.needs).toContain("a survival endpoint");
@@ -97,6 +91,19 @@ describe("a question the corpus can answer", () => {
     const a = await answer("Pair radiology images with RNA sequencing in lung adenocarcinoma");
     expect(a.picks.length).toBeGreaterThan(0);
     expect(`${a.picks[0].title} ${a.picks[0].short_title ?? ""}`).toMatch(/lung|luad/i);
+  });
+
+  /**
+   * FAILS TODAY. The corpus files these diseases under category names - "Mesothelial
+   * Neoplasms", "Mesothelium", "Paragangliomas and Glomus Tumors" - and whole-subject
+   * matching cannot reach them from the word a researcher types. Left failing on
+   * purpose: the branch is parked until the corpus carries one subject per record.
+   */
+  it("finds the disease the corpus files under an ICD-O category", async () => {
+    for (const q of ["mesothelioma survival", "pheochromocytoma"]) {
+      const a = await answer(q);
+      expect(a.picks.length).toBeGreaterThan(0);
+    }
   });
 
   it("applies the needs stated alongside the subject", async () => {

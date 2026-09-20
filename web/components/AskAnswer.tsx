@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { AccessBadge, Chip, UnderexploredBadge } from "@/components/ui";
 import type { AgentAnswer, AgentPick } from "@/lib/agent";
 import { bulletAnchor } from "@/lib/anchors";
-import { showsShortlist } from "@/lib/intent";
+import { showsShortlist } from "@/lib/answer-view";
 import { SCARCE_MODALITIES, modalityLabel, num } from "@/lib/format";
 import type { AccessTier } from "@/lib/types";
 
