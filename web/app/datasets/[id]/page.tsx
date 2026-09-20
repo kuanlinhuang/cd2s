@@ -24,7 +24,7 @@ import {
   Stat,
   UnderexploredBadge,
 } from "@/components/ui";
-import { getAllRecordIds, getRecord, getRelated, getSubjects } from "@/lib/data";
+import { getAllRecordIds, getJsonLd, getRecord, getRelated, getSubjects } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { starterSnippets } from "@/lib/starter";
 import {
@@ -90,9 +90,25 @@ export default async function DatasetPage({
   if (!r) notFound();
   const related = getRelated(id, 6);
   const relatedUnder = related.filter((x) => x.is_underexplored);
+  const jsonLd = getJsonLd(id);
 
   return (
     <article>
+      {/*
+        The schema.org/DCAT description, inlined so Google Dataset Search and the other
+        harvesters can read it: they parse JSON-LD in the page and do not follow a link
+        to a .jsonld file. The document is the pipeline's own, byte for byte.
+
+        `<` is escaped because a description carrying "</script>" would otherwise close
+        this element and turn the rest of the document into markup. The text comes from
+        upstream repositories, so that is a real input, not a hypothetical one.
+      */}
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd.replace(/</g, "\\u003c") }}
+        />
+      )}
       <Header record={r} />
 
       {/* in-page navigation */}

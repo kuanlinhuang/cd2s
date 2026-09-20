@@ -24,6 +24,15 @@ describe("published search subject filter", () => {
     expect(body.total).toBeGreaterThan(0);
   });
 
+  it.each(["-5", "0", "abc", "1e9"])("clamps a limit of %j into range", async (limit) => {
+    const response = await GET(
+      new Request(`http://localhost/api/v1/search?limit=${encodeURIComponent(limit)}`),
+    );
+    const body = (await response.json()) as { total: number; returned: number };
+    expect(body.returned).toBeGreaterThan(0);
+    expect(body.returned).toBeLessThanOrEqual(Math.min(body.total, 200));
+  });
+
   it("represents an empty controlled subject result", async () => {
     const response = await GET(
       new Request("http://localhost/api/v1/search?subject=PENIS"),

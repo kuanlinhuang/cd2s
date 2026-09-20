@@ -98,6 +98,9 @@ interface Props {
   };
 }
 
+/** The filter keys that belong in the URL, so a filtered view can be shared. */
+const URL_KEYS = ["q", "modality", "cancer", "site", "subject", "repository", "access", "review"] as const;
+
 /**
  * Free-text search, loaded out of band.
  *
@@ -165,9 +168,9 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
   const [caps, setCaps] = useState<Set<CapabilityKey>>(
     () =>
       new Set(
-        initial.capability && initial.capability in CAPABILITY_FILTERS
-          ? [initial.capability as CapabilityKey]
-          : [],
+        (initial.capability ?? "")
+          .split(",")
+          .filter((c): c is CapabilityKey => c in CAPABILITY_FILTERS),
       ),
   );
   const [sort, setSort] = useState<SortKey>(initial.q ? "relevance" : "size");
@@ -279,6 +282,34 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
     setPrevFilterKey(filterKey);
     setLimit(40);
   }
+
+  // Keep the address bar on the filters actually applied, so a narrowed view can be
+  // sent to a colleague or kept in a notebook. `replaceState` rather than a router
+  // push: the filtering happened in this component with no navigation, and giving each
+  // keystroke its own history entry would make the back button walk the query letter
+  // by letter. The effect runs on the same key the list is derived from, so the URL and
+  // the results cannot disagree.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const sp = new URLSearchParams();
+    const values: Record<(typeof URL_KEYS)[number], string> = {
+      q,
+      modality,
+      cancer,
+      site,
+      subject,
+      repository,
+      access,
+      review,
+    };
+    for (const key of URL_KEYS) if (values[key]) sp.set(key, values[key]);
+    if (caps.size) sp.set("capability", [...caps].sort().join(","));
+    const search = sp.toString();
+    const next = `${window.location.pathname}${search ? `?${search}` : ""}`;
+    if (next !== `${window.location.pathname}${window.location.search}`) {
+      window.history.replaceState(null, "", next);
+    }
+  }, [q, modality, cancer, site, subject, repository, access, review, caps]);
 
   const activeFilters =
     (modality ? 1 : 0) +

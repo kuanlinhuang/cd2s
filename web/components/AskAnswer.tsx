@@ -34,6 +34,14 @@ const VERDICT: Record<AgentPick["verdict"], { label: string; fg: string; bg: str
   caution: { label: "Check first", fg: "var(--controlled)", bg: "var(--controlled-bg)" },
 };
 
+/**
+ * How long the browser waits before giving up.
+ *
+ * Just past the route's own 60s budget, so a server that answered slowly is still
+ * rendered and only a request that never arrives is reported as a timeout.
+ */
+const CLIENT_TIMEOUT_MS = 65_000;
+
 /** The outcome of asking one question; `busy` is simply "no outcome yet for this q". */
 type Outcome = { q: string; result: AgentAnswer | null; error: string | null };
 
@@ -42,6 +50,15 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
 
   useEffect(() => {
     const controller = new AbortController();
+    // The route budgets itself at 60s and gives the model 45s before answering from
+    // rules, so the only way past this is a request that never lands at all. Without a
+    // deadline here the button simply stayed on "checking" for as long as the tab was
+    // open; with one the visitor is told, and can ask again.
+    let timedOut = false;
+    const deadline = setTimeout(() => {
+      timedOut = true;
+      controller.abort();
+    }, CLIENT_TIMEOUT_MS);
     fetch("/api/v1/agent", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -57,10 +74,24 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
       })
       .then((answer) => setOutcome({ q, result: answer, error: null }))
       .catch((e: unknown) => {
+        if (timedOut) {
+          setOutcome({
+            q,
+            result: null,
+            error: "The shortlist took too long to come back. Ask again, or browse the datasets directly.",
+          });
+          return;
+        }
+        // Aborted because the question changed or the page went away: the next run owns
+        // the outcome, so this one must not write an error over it.
         if (controller.signal.aborted) return;
         setOutcome({ q, result: null, error: e instanceof Error ? e.message : "Something went wrong." });
-      });
-    return () => controller.abort();
+      })
+      .finally(() => clearTimeout(deadline));
+    return () => {
+      clearTimeout(deadline);
+      controller.abort();
+    };
   }, [q]);
 
   const busy = outcome === null || outcome.q !== q;
