@@ -43,6 +43,7 @@ from cds.model import (
     ReviewStatus,
 )
 from cds.paths import CURATED_DIR
+from cds.subjects import TISSUES, Subject, SubjectScope
 
 # Scalars a reviewer may override outright.
 SCALAR_FIELDS = {
@@ -125,6 +126,21 @@ def apply_overlay(rec: DatasetRecord, overlay: dict[str, Any]) -> list[str]:
         else None
     )
     ev = _curated_evidence(reviewer, reviewed_at)
+
+    if "subject" in overlay:
+        raw_subject = overlay["subject"] or {}
+        if not isinstance(raw_subject, dict):
+            raise CurationError(f"{rec.id}: 'subject' must be a mapping")
+        tissue_codes = list(raw_subject.get("tissues") or [])
+        unknown = sorted(set(tissue_codes) - set(TISSUES))
+        if unknown:
+            raise CurationError(f"{rec.id}: unknown subject tissue code(s): {', '.join(unknown)}")
+        rec.subject = Subject(
+            tissues=tissue_codes,
+            scope=SubjectScope(raw_subject.get("scope", SubjectScope.SINGLE.value)),
+            evidence=[ev],
+        )
+        changed.append("subject")
 
     for field in SCALAR_FIELDS:
         if field in overlay:

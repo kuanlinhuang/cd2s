@@ -9,6 +9,7 @@ Dataset id: pdc-cptac-rcc-combined-study
 ## What it is
 
 - Cohort: 260 cases
+- Subject: Kidney (derived from title; not stated by repository)
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
 - Access: open. Direct download from the PDC portal or its API; no account required
 

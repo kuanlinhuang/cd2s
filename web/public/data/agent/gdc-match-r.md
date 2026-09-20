@@ -10,6 +10,7 @@ Dataset id: gdc-match-r
 
 - Cohort: 28 cases
 - Cancer types: Neoplasms, NOS, Osseous and Chondromatous Neoplasms, Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas, Mature B-Cell Lymphomas, Mature T- and NK-Cell Lymphomas
+- Subject: pan cancer
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Clinical, Structural Variation
 - Treatment response recorded: False
 - Access: controlled. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

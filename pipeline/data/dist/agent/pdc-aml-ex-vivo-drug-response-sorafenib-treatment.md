@@ -10,6 +10,7 @@ Dataset id: pdc-aml-ex-vivo-drug-response-sorafenib-treatment
 
 - Cohort: 5 cases
 - Cancer types: Acute Myeloid Leukemia
+- Subject: Myeloid
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 10.2 months (derivable for 4 cases)
 - Treatment response recorded: False

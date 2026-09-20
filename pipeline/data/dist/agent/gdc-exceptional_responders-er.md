@@ -10,6 +10,7 @@ Dataset id: gdc-exceptional_responders-er
 
 - Cohort: 84 cases
 - Cancer types: Neoplasms, NOS, Complex Mixed and Stromal Neoplasms, Adenomas and Adenocarcinomas, Gliomas, Myomatous Neoplasms, Nevi and Melanomas
+- Subject: pan cancer
 - Measurements: Whole exome sequencing, Targeted DNA panel sequencing, Bulk RNA sequencing, Clinical, Structural Variation
 - Median follow-up: 64.2 months (derivable for 84 cases)
 - Treatment response recorded: True

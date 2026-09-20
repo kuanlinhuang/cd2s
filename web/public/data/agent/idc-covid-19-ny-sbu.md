@@ -10,6 +10,7 @@ Dataset id: idc-covid-19-ny-sbu
 
 - Cohort: 1,384 cases
 - Cancer types: COVID-19 (non-cancer)
+- Subject: Lung
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

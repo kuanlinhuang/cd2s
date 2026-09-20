@@ -479,14 +479,13 @@ function AwardView({ awardParam, sliceParam }: { awardParam?: string; sliceParam
   const unknownAward = awardParam && !award && !sliceParam;
 
   const data = getNetwork(scope);
-  // Each lane draws its most connected members and reports the rest as `more`, so the
-  // totals in the prose are the sum of the two. Counting the drawn nodes alone said an
-  // award with eighty-five articles had twenty-four.
-  const laneTotal = (lane: number) =>
-    data.nodes.filter((nd) => nd.lane === lane).length + (data.lanes[lane]?.more ?? 0);
-  const nAwards = laneTotal(0);
-  const nDatasets = laneTotal(1);
-  const nPapers = laneTotal(2);
+  // A condensed slice draws fewer nodes than it counts, so the totals in the prose add
+  // back what the condenser set aside. Counting the drawn nodes alone understates a
+  // whole-corpus slice by hundreds.
+  const drawn = (kind: string) => data.nodes.filter((nd) => nd.kind === kind).length;
+  const nAwards = drawn("award") + (data.condensed?.n_awards_omitted ?? 0);
+  const nDatasets = drawn("dataset");
+  const nPapers = drawn("paper") + (data.condensed?.n_papers_omitted ?? 0);
   const topAwards = awards.filter((a) => a.n_datasets >= 3).slice(0, 8);
   const connections = award ? getAwardConnections(award.num) : [];
   const orgs = [...new Set(connections.map((c) => c.org_name).filter(Boolean))] as string[];
@@ -601,8 +600,10 @@ function AwardView({ awardParam, sliceParam }: { awardParam?: string; sliceParam
         ) : (
           <p className="mb-4 max-w-[80ch] text-body t-muted">
             {num(nAwards)} awards, {num(nDatasets)} datasets and {num(nPapers)} articles in
-            this slice. Each column shows its most connected members, so pick one award
-            above to see a whole chain.
+            this slice.{" "}
+            {data.condensed
+              ? `Drawn without the ${num(data.condensed.n_awards_omitted)} awards and ${num(data.condensed.n_papers_omitted)} articles that touch exactly one dataset: a node shared between two is what makes this a network rather than a list. Pick one award above to see a whole chain.`
+              : "Pick one award above to see a whole chain."}
           </p>
         )}
         <FundingFlow data={data} />

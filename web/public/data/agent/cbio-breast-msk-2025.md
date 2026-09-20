@@ -10,6 +10,7 @@ Dataset id: cbio-breast-msk-2025
 
 - Cohort: 3,116 cases
 - Cancer types: Invasive Breast Carcinoma
+- Subject: Breast
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 39.4 months (derivable for 3109 cases)
 - Treatment response recorded: False

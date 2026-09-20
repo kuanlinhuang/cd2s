@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=soft_tissue_msk_2023"
   ],
   "keywords": [
+    "NCIt:C12471",
     "Rhabdomyosarcoma",
     "cbioportal",
     "copy number",

@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study-training
 
 - Cohort: 61 cases
 - Cancer types: Clear Cell Renal Cell Carcinoma, Non-Clear Cell Renal Cell Carcinoma
+- Subject: Kidney
 - Measurements: Metabolome mass spectrometry (Label Free / N/A)
 - Median follow-up: 32.1 months (derivable for 51 cases)
 - Treatment response recorded: False

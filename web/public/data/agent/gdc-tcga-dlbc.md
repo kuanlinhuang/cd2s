@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-dlbc
 
 - Cohort: 58 cases
 - Cancer types: Not Reported, Mature B-Cell Lymphomas
+- Subject: Lymphoid
 - Measurements: Clinical, SNP genotyping array (copy number, germline), Bulk RNA sequencing, Whole exome sequencing, DNA methylation array, DICOM medical imaging, microRNA sequencing, Whole-slide tissue images, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 26.7 months (derivable for 48 cases)
 - Treatment response recorded: True

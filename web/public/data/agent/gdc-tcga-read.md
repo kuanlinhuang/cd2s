@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-read
 
 - Cohort: 172 cases
 - Cancer types: Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms
+- Subject: Colorectal and bowel
 - Measurements: Clinical, Whole-slide tissue images, DICOM medical imaging, Whole exome sequencing, Bulk RNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array, microRNA sequencing, Whole genome sequencing, Reverse phase protein array
 - Median follow-up: 20.0 months (derivable for 170 cases)
 - Treatment response recorded: True

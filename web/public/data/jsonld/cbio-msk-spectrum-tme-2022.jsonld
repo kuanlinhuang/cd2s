@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=msk_spectrum_tme_2022"
   ],
   "keywords": [
+    "NCIt:C12404",
     "Ovary/Fallopian Tube",
     "cbioportal",
     "copy number",

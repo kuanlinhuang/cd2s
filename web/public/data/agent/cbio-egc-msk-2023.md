@@ -10,6 +10,7 @@ Dataset id: cbio-egc-msk-2023
 
 - Cohort: 902 cases
 - Cancer types: Esophagus/Stomach
+- Subject: Esophagus and stomach
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 21.1 months (derivable for 549 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: cbio-blca-mskcc-solit-2012
 
 - Cohort: 97 cases
 - Cancer types: Bladder Urothelial Carcinoma
+- Subject: Bladder and urinary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Microarray expression, DNA methylation (HM27)
 - Median follow-up: 11.6 months (derivable for 38 cases)
 - Treatment response recorded: False

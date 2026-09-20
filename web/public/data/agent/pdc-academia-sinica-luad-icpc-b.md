@@ -10,6 +10,7 @@ Dataset id: pdc-academia-sinica-luad-icpc-b
 
 - Cohort: 127 cases
 - Cancer types: Lung Adenocarcinoma, Lung Squamous Cell Carcinoma
+- Subject: Lung
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 18.5 months (derivable for 12 cases)
 - Treatment response recorded: False

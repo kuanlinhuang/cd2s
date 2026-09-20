@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=rbl_mskcc_2020"
   ],
   "keywords": [
+    "NCIt:C12401",
     "Retinoblastoma",
     "cbioportal",
     "copy number",

@@ -9,6 +9,7 @@ Dataset id: pdc-therapeutic-targets-in-breast-cancer-xenografts
 ## What it is
 
 - Cohort: 27 cases
+- Subject: Breast (derived from title; not stated by repository)
 - Measurements: Phosphoproteome mass spectrometry (iTRAQ4 / DDA), Proteome mass spectrometry (iTRAQ4 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

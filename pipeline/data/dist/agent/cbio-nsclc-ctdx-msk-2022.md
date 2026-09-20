@@ -10,6 +10,7 @@ Dataset id: cbio-nsclc-ctdx-msk-2022
 
 - Cohort: 1,127 cases
 - Cancer types: Non-Small Cell Lung Cancer
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
 - Median follow-up: 16.6 months (derivable for 1127 cases)
 - Treatment response recorded: False

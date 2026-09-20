@@ -84,3 +84,33 @@ def test_the_corpus_still_spans_every_repository(rows):
     assert set(counts) == {"GDC", "PDC", "IDC", "HTAN", "cBioPortal"}, dict(counts)
     for repository, n in counts.items():
         assert n > 0, repository
+
+
+@pytest.mark.parametrize("repository", ["GDC", "PDC", "IDC", "cBioPortal"])
+def test_subject_is_classified_for_most_records_in_each_repository(rows, repository):
+    subset = by_repo(rows, repository)
+    classified = [row for row in subset if row["subject_scope"] != "not_stated"]
+    assert len(classified) / len(subset) >= 0.9
+
+
+def test_subject_not_stated_does_not_silently_grow(rows):
+    missing = [row["id"] for row in rows if row["subject_scope"] == "not_stated"]
+    assert len(missing) <= 30, missing
+
+
+#: The one cohort whose subject is genuinely unstated, rather than unclassified.
+#:
+#: GDC's Cancers of Unknown Primary Project reports `primary_sites: ["Unknown"]` - not
+#: knowing the primary site is the thing the cohort is for. Its twelve cancer_types are
+#: morphology groups carrying no tissue, and picking one of them would assert a site
+#: nobody observed. This record was classified `single / SOFT_TISSUE` until the ICD-O
+#: label fix stopped a lone incidental label standing in for a cohort's tissue; the
+#: committed corpus predates that fix, so this only surfaces on a re-export.
+UNKNOWN_PRIMARY_IDS = {"gdc-ccg-cupp"}
+
+
+def test_all_previously_unstated_records_are_labelled_as_title_derived(rows):
+    derived = [row for row in rows if row["subject_scope"] == "title_derived"]
+    assert len(derived) == 30
+    unstated = {row["id"] for row in rows if row["subject_scope"] == "not_stated"}
+    assert unstated <= UNKNOWN_PRIMARY_IDS, sorted(unstated - UNKNOWN_PRIMARY_IDS)

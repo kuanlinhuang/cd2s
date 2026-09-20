@@ -10,6 +10,7 @@ Dataset id: pdc-ipmn-study-lmd-proteome
 
 - Cohort: 3 cases
 - Cancer types: Ductal and Lobular Neoplasms
+- Subject: Pancreas
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

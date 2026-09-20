@@ -10,6 +10,7 @@ Dataset id: cbio-hnsc-mdanderson-2013
 
 - Cohort: 40 cases
 - Cancer types: Head and Neck Squamous Cell Carcinoma
+- Subject: Head and neck
 - Measurements: Mutation calls (panel, exome or genome)
 - Median follow-up: 29.5 months (derivable for 40 cases)
 - Treatment response recorded: False

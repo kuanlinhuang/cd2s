@@ -10,6 +10,7 @@ Dataset id: gdc-cptac-2
 
 - Cohort: 342 cases
 - Cancer types: Not Reported, Cystic, Mucinous and Serous Neoplasms, Adenomas and Adenocarcinomas, Ductal and Lobular Neoplasms, Squamous Cell Neoplasms
+- Subject: Colorectal and bowel, Breast, Ovary and fallopian tube
 - Measurements: Whole exome sequencing, microRNA sequencing, Bulk RNA sequencing, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

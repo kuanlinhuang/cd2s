@@ -9,6 +9,7 @@ Dataset id: pdc-vu-normal-colon-epithelium
 ## What it is
 
 - Cohort: 30 cases
+- Subject: Colorectal and bowel (derived from title; not stated by repository)
 - Measurements: Proteome mass spectrometry (Label Free / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

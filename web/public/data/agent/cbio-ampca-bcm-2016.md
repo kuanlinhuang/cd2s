@@ -10,6 +10,7 @@ Dataset id: cbio-ampca-bcm-2016
 
 - Cohort: 160 cases
 - Cancer types: Ampullary Carcinoma
+- Subject: Ampulla of Vater
 - Measurements: Mutation calls (panel, exome or genome)
 - Median follow-up: 26.7 months (derivable for 160 cases)
 - Treatment response recorded: False

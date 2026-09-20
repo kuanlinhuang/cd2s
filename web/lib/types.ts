@@ -376,6 +376,7 @@ export interface DatasetRecord {
   landing_page_url?: string | null;
   cancer_types: OntologyTerm[];
   primary_sites: string[];
+  subject: Subject;
   is_pediatric?: boolean | null;
   model_systems: string[];
   cohort: Cohort;
@@ -417,6 +418,8 @@ export interface IndexRow {
   nci_program?: string | null;
   cancer_types: string[];
   primary_sites: string[];
+  subjects: string[];
+  subject_scope: SubjectScope;
   modalities: string[];
   n_modalities: number;
   n_cases?: number | null;
@@ -461,6 +464,8 @@ export type BrowseRow = Pick<
   | "repositories"
   | "cancer_types"
   | "primary_sites"
+  | "subjects"
+  | "subject_scope"
   | "modalities"
   | "n_modalities"
   | "n_cases"
@@ -492,6 +497,35 @@ export interface FacetValue {
 }
 
 export type Facets = Record<string, FacetValue[]>;
+
+export type SubjectScope =
+  | "single"
+  | "several"
+  | "pan_cancer"
+  | "non_cancer"
+  | "not_stated"
+  | "title_derived";
+
+export interface Subject {
+  scope: SubjectScope;
+  tissues: string[];
+  evidence: Evidence[];
+}
+
+export interface SubjectVocabularyEntry {
+  code: string;
+  name: string;
+  label: string;
+  nci: string;
+  synonyms: string[];
+}
+
+export interface SubjectVocabulary {
+  version: string;
+  release_date: string;
+  subjects: SubjectVocabularyEntry[];
+  states: string[];
+}
 
 export interface CorpusStats {
   generated_at: string;
@@ -644,5 +678,11 @@ export interface NetworkLane {
 export interface NetworkData {
   nodes: NetworkNode[];
   edges: NetworkEdge[];
+  /** The columns, left to right, with what each holds and why it matters. */
   lanes: NetworkLane[];
+  /**
+   * What a large slice left out, so the page can say so. Null when the whole slice is
+   * drawn, which is every award page and every small scope.
+   */
+  condensed: { n_awards_omitted: number; n_papers_omitted: number } | null;
 }

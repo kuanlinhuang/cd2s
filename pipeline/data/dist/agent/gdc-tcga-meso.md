@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-meso
 
 - Cohort: 87 cases
 - Cancer types: Mesothelial Neoplasms
+- Subject: Pleura
 - Measurements: Bulk RNA sequencing, microRNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide tissue images, Clinical, DICOM medical imaging, Whole exome sequencing, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 17.3 months (derivable for 85 cases)
 - Treatment response recorded: True

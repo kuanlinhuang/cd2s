@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-pcpg
 
 - Cohort: 179 cases
 - Cancer types: Paragangliomas and Glomus Tumors
+- Subject: Adrenal gland
 - Measurements: Bulk RNA sequencing, Whole exome sequencing, microRNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide tissue images, Clinical, DICOM medical imaging, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 24.8 months (derivable for 179 cases)
 - Treatment response recorded: True

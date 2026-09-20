@@ -14,6 +14,7 @@ Summary: 617 glioblastomas with twelve measurement types including radiology on 
 
 - Cohort: 617 cases
 - Cancer types: Gliomas, Not Reported
+- Subject: Brain and central nervous system
 - Measurements: Clinical, DICOM medical imaging, SNP genotyping array (copy number, germline), DNA methylation array, Whole exome sequencing, Whole-slide diagnostic images, Whole genome sequencing, Somatic Structural Variation, Bulk RNA sequencing, microRNA sequencing
 - Median follow-up: 12.0 months (derivable for 596 cases)
 - Treatment response recorded: True

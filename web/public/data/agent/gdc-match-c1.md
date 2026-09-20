@@ -10,6 +10,7 @@ Dataset id: gdc-match-c1
 
 - Cohort: 11 cases
 - Cancer types: Nevi and Melanomas, Adenomas and Adenocarcinomas, Neoplasms, NOS
+- Subject: pan cancer
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Clinical, Structural Variation
 - Treatment response recorded: False
 - Access: controlled. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

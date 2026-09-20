@@ -10,6 +10,7 @@ Dataset id: pdc-kncc-glioblastoma-evolution
 
 - Cohort: 111 cases
 - Cancer types: Glioblastoma
+- Subject: Brain and central nervous system
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 26.7 months (derivable for 105 cases)
 - Treatment response recorded: False

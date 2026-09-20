@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-cesc
 
 - Cohort: 307 cases
 - Cancer types: Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms, Complex Epithelial Neoplasms, Squamous Cell Neoplasms
+- Subject: Cervix, Ovary and fallopian tube
 - Measurements: microRNA sequencing, DNA methylation array, Clinical, DICOM medical imaging, Whole-slide tissue images, Whole exome sequencing, Bulk RNA sequencing, SNP genotyping array (copy number, germline), Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 21.0 months (derivable for 307 cases)
 - Treatment response recorded: True

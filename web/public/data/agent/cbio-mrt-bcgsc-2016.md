@@ -10,6 +10,7 @@ Dataset id: cbio-mrt-bcgsc-2016
 
 - Cohort: 40 cases
 - Cancer types: Rhabdoid Cancer
+- Subject: Kidney
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

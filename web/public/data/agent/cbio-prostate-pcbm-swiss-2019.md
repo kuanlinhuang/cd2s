@@ -10,6 +10,7 @@ Dataset id: cbio-prostate-pcbm-swiss-2019
 
 - Cohort: 51 cases
 - Cancer types: Prostate
+- Subject: Prostate
 - Measurements: Mutation calls (panel, exome or genome)
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

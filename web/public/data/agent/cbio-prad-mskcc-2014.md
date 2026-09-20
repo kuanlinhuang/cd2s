@@ -10,6 +10,7 @@ Dataset id: cbio-prad-mskcc-2014
 
 - Cohort: 104 cases
 - Cancer types: Prostate Adenocarcinoma
+- Subject: Prostate
 - Measurements: Copy number alterations
 - Median follow-up: 70.1 months (derivable for 104 cases)
 - Treatment response recorded: False

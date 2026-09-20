@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=prad_msk_mdanderson_2023"
   ],
   "keywords": [
+    "NCIt:C12410",
     "Prostate",
     "cbioportal",
     "copy number",

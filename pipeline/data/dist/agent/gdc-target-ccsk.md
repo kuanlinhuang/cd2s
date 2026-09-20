@@ -10,6 +10,7 @@ Dataset id: gdc-target-ccsk
 
 - Cohort: 13 cases
 - Cancer types: Complex Mixed and Stromal Neoplasms
+- Subject: Kidney
 - Measurements: Whole genome sequencing, Bulk RNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Clinical, Structural Variation
 - Median follow-up: 71.9 months (derivable for 13 cases)
 - Treatment response recorded: False

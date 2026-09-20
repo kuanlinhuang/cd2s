@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=prad_organoids_msk_2022"
   ],
   "keywords": [
+    "NCIt:C12410",
     "Prostate Adenocarcinoma",
     "cbioportal",
     "copy number",

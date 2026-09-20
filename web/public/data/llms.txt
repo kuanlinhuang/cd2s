@@ -14,6 +14,7 @@ Every claim carries provenance. Structured records expose measured clinical fiel
 
 - [Search index](https://cancer-data-showcase.vercel.app/data/index.json): one slim row per dataset
 - [Facets](https://cancer-data-showcase.vercel.app/data/facets.json): browse dimensions with counts
+- [Subject vocabulary](https://cancer-data-showcase.vercel.app/data/subjects.json): controlled tissues and query synonyms
 - [Corpus statistics](https://cancer-data-showcase.vercel.app/data/stats.json)
 - [Research questions](https://cancer-data-showcase.vercel.app/data/questions.json): curated questions, flattened
 - [Full record](https://cancer-data-showcase.vercel.app/data/datasets/{id}.json): everything, with evidence
@@ -25,7 +26,7 @@ Every claim carries provenance. Structured records expose measured clinical fiel
 
 ## Live endpoints
 
-- `GET https://cancer-data-showcase.vercel.app/api/v1/search` - filter on measured capability: `survival`, `treatment_response`, `modality`, `access`, `repository`, `min_cases`, `min_modalities`, `underexplored`, `showcase`, `q`, `limit`
+- `GET https://cancer-data-showcase.vercel.app/api/v1/search` - filter on measured capability: `survival`, `treatment_response`, `subject`, `site`, `modality`, `access`, `repository`, `min_cases`, `min_modalities`, `underexplored`, `showcase`, `q`, `limit`
 - `GET https://cancer-data-showcase.vercel.app/api/v1/datasets/{id}` - the full record plus `analysis_fit`, the six verdicts
 - `GET https://cancer-data-showcase.vercel.app/api/v1/agent?q=...` - describe an analysis, get a ranked shortlist with the reasons and the blockers (`POST` with `{"q": "..."}` also works)
 - [OpenAPI description](https://cancer-data-showcase.vercel.app/openapi.json)

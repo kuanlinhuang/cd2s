@@ -9,6 +9,7 @@ Dataset id: pdc-reproducible-proteome-and-phosphoproteome-workflow-pnnl
 ## What it is
 
 - Cohort: 2 cases
+- Subject: title derived
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

@@ -10,6 +10,7 @@ Dataset id: cbio-mel-iatlas-riaz-nivolumab-2017
 
 - Cohort: 64 cases
 - Cancer types: Melanoma
+- Subject: Skin
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
 - Median follow-up: 17.1 months (derivable for 58 cases)
 - Treatment response recorded: True

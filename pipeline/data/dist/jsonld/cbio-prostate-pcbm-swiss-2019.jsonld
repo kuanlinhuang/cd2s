@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=prostate_pcbm_swiss_2019"
   ],
   "keywords": [
+    "NCIt:C12410",
     "Prostate",
     "cbioportal",
     "harmonized-for-reuse",

@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 
 import { Bars, type BarRow } from "@/components/charts/Bars";
 import { FitGrid } from "@/components/FitGrid";
+import ChipList from "@/components/ChipList";
+import SectionNav from "@/components/SectionNav";
 import { AgeBox } from "@/components/charts/AgeBox";
 import { CoverageChart } from "@/components/charts/CoverageChart";
 import { ObservedExpected, reuseSentence } from "@/components/charts/ObservedExpected";
@@ -22,7 +24,7 @@ import {
   Stat,
   UnderexploredBadge,
 } from "@/components/ui";
-import { getAllRecordIds, getRecord, getRelated, getRowById } from "@/lib/data";
+import { getAllRecordIds, getJsonLd, getRecord, getRelated, getSubjects } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { starterSnippets } from "@/lib/starter";
 import {
@@ -86,32 +88,31 @@ export default async function DatasetPage({
   const { id } = await params;
   const r = getRecord(id);
   if (!r) notFound();
-  const row = getRowById(id);
   const related = getRelated(id, 6);
   const relatedUnder = related.filter((x) => x.is_underexplored);
+  const jsonLd = getJsonLd(id);
 
   return (
     <article>
+      {/*
+        The schema.org/DCAT description, inlined so Google Dataset Search and the other
+        harvesters can read it: they parse JSON-LD in the page and do not follow a link
+        to a .jsonld file. The document is the pipeline's own, byte for byte.
+
+        `<` is escaped because a description carrying "</script>" would otherwise close
+        this element and turn the rest of the document into markup. The text comes from
+        upstream repositories, so that is a real input, not a hypothetical one.
+      */}
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd.replace(/</g, "\\u003c") }}
+        />
+      )}
       <Header record={r} />
 
       {/* in-page navigation */}
-      <nav
-        className="sticky top-14 z-30 -mx-4 mb-2 overflow-x-auto border-b px-4 backdrop-blur no-print sm:-mx-6 sm:px-6"
-        style={{ background: "color-mix(in srgb, var(--bg) 92%, transparent)" }}
-        aria-label="Sections of this page"
-      >
-        <div className="flex gap-1 py-2 text-meta">
-          {SECTIONS.map((s) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className="rounded px-2 py-1 whitespace-nowrap hover:underline t-muted"
-            >
-              {s.label}
-            </a>
-          ))}
-        </div>
-      </nav>
+      <SectionNav sections={SECTIONS} />
 
       <Fit record={r} />
       <AtAGlance record={r} />
@@ -176,19 +177,15 @@ export default async function DatasetPage({
         </Section>
       )}
 
-      {row && (
-        <p className="pt-6 text-meta t-faint">
-          Machine-readable version of this page:{" "}
-          <a href={`/data/datasets/${r.id}.json`} className="underline">
-            {r.id}.json
-          </a>{" "}
-          - see{" "}
-          <Link href="/agents" className="underline">
-            the agent API
-          </Link>
-          .
-        </p>
-      )}
+      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 pt-6 text-meta t-faint">
+        <Link href="/agents" className="underline">
+          For software
+        </Link>
+        <span aria-hidden>:</span>
+        <a href={`/data/datasets/${r.id}.json`} className="font-mono underline">
+          record JSON
+        </a>
+      </p>
     </article>
   );
 }
@@ -240,7 +237,7 @@ function Header({ record: r }: { record: DatasetRecord }) {
         </p>
       )}
 
-      {/* the four actions promised on every page */}
+      {/* the three actions promised on every page */}
       <div className="mt-6 flex flex-wrap gap-2 no-print">
         <a
           href="#fit"
@@ -262,13 +259,6 @@ function Header({ record: r }: { record: DatasetRecord }) {
           style={{ borderColor: "var(--border-strong)" }}
         >
           Get the data
-        </a>
-        <a
-          href={`/data/datasets/${r.id}.json`}
-          className="rounded-md border px-3.5 py-2 text-body font-medium"
-          style={{ borderColor: "var(--border-strong)" }}
-        >
-          Agent package (JSON)
         </a>
       </div>
     </header>
@@ -340,7 +330,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
       title="At a glance"
       lede="Cohort, measurements, clinical completeness and access. Percentages come from the repository's own records, so they show what is actually filled in."
     >
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         <Card>
           <Stat
             label="Cases"
@@ -415,24 +405,53 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
         </Card>
       </div>
 
-      {/* cancer types and sites */}
+      {/* controlled subject */}
+      <div className="mt-6">
+        <h3 className="mb-2 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
+          Subject
+          {r.subject.evidence.length > 0 && <EvidenceChip evidence={r.subject.evidence} />}
+        </h3>
+        <div className="flex flex-wrap items-center gap-2">
+          {r.subject.tissues.map((code) => {
+            const item = getSubjects().subjects.find((subject) => subject.code === code);
+            return <Chip key={code}>{item?.label ?? code}</Chip>;
+          })}
+          {r.subject.scope === "pan_cancer" && <Chip>Pan-cancer</Chip>}
+          {r.subject.scope === "non_cancer" && <Chip>Non-cancer</Chip>}
+          {r.subject.scope === "not_stated" && <Chip>Subject not stated</Chip>}
+          {r.subject.scope === "title_derived" && r.subject.tissues.length === 0 && (
+            <Chip>Subject derived from title</Chip>
+          )}
+        </div>
+        {r.subject.scope === "title_derived" && (
+          <p className="mt-2 text-meta t-muted">
+            This subject was derived from the dataset title and was not stated by the
+            repository. It is available for browsing but is never used to place this
+            dataset in an answer shortlist.
+          </p>
+        )}
+      </div>
+
+      {/* cancer types and sites as filed */}
       <div className="mt-6">
         <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
-          Cancer types and sites
+          As filed by the repository
         </h3>
         {r.cancer_types.length === 0 && r.primary_sites.length === 0 ? (
           <EmptyState>The repository publishes no disease classification for this dataset.</EmptyState>
         ) : (
-          <div className="flex flex-wrap gap-1.5">
-            {r.cancer_types.map((t) => (
-              <Chip key={t.label} tone="accent" title={t.ontology ? `${t.ontology} ${t.code ?? ""}` : undefined}>
-                {t.label}
-              </Chip>
-            ))}
-            {r.primary_sites.map((s) => (
-              <Chip key={s}>{s}</Chip>
-            ))}
-          </div>
+          <ChipList
+            items={[
+              ...r.cancer_types.map((t) => ({
+                key: `type:${t.label}`,
+                label: t.label,
+                tone: "accent" as const,
+                title: t.ontology ? `${t.ontology} ${t.code ?? ""}` : undefined,
+              })),
+              ...r.primary_sites.map((s) => ({ key: `site:${s}`, label: s, tone: "neutral" as const })),
+            ]}
+            what="cancer types and sites"
+          />
         )}
       </div>
 
@@ -717,7 +736,7 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
     <Section
       id="limitations"
       title="What it cannot tell you"
-      lede="The most expensive mistake in reuse is finding a blocking gap after the analysis is built."
+      lede="What these data cannot answer, as written by a reviewer against the source."
       aside={
         blocking.length > 0 ? (
           <span className="text-meta font-medium" style={{ color: "var(--weak)" }}>
@@ -1348,7 +1367,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                           href={s.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-2 inline-block text-body underline"
+                          className="mt-2 inline-block max-w-full break-all text-body underline"
                           style={{ color: "var(--accent)" }}
                         >
                           {s.url}
@@ -1362,53 +1381,6 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
         </ol>
       )}
 
-      <div className="mt-5">
-        <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
-          For an agent
-        </h3>
-        <Card>
-          <p className="text-body t-muted">
-            Everything on this page is structured data, including the limitations and
-            the evidence for each claim. Read the limitations before the measurements.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            <a
-              href={`/data/datasets/${r.id}.json`}
-              className="rounded border px-2.5 py-1 font-mono text-meta"
-              style={{ borderColor: "var(--border-strong)" }}
-            >
-              {r.id}.json
-            </a>
-            {r.agent_package.jsonld_url && (
-              <a
-                href={r.agent_package.jsonld_url}
-                className="rounded border px-2.5 py-1 font-mono text-meta"
-                style={{ borderColor: "var(--border-strong)" }}
-              >
-                schema.org JSON-LD
-              </a>
-            )}
-            {r.agent_package.croissant_url && (
-              <a
-                href={r.agent_package.croissant_url}
-                className="rounded border px-2.5 py-1 font-mono text-meta"
-                style={{ borderColor: "var(--border-strong)" }}
-              >
-                Croissant
-              </a>
-            )}
-            {r.agent_package.instructions_url && (
-              <a
-                href={r.agent_package.instructions_url}
-                className="rounded border px-2.5 py-1 font-mono text-meta"
-                style={{ borderColor: "var(--border-strong)" }}
-              >
-                agent brief
-              </a>
-            )}
-          </div>
-        </Card>
-      </div>
     </Section>
   );
 }
@@ -1526,12 +1498,7 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
           <p className="mb-3 max-w-2xl text-meta t-muted">
             Awards resolved through NIH RePORTER. Awards that paid to generate these
             data are listed apart from awards that paid to reuse them. Both are returns on
-            NCI investment, but different ones.{" "}
-            <Link href={`/network?dataset=${r.id}`} className="underline" style={{ color: "var(--accent)" }}>
-              See them as one chain
-            </Link>
-            : what paid for this dataset, what it was used for, and which awards funded
-            that.
+            NCI investment, but different ones.
           </p>
           <div className="space-y-4">
             {[

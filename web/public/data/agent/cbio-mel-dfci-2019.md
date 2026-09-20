@@ -10,6 +10,7 @@ Dataset id: cbio-mel-dfci-2019
 
 - Cohort: 144 cases
 - Cancer types: Melanoma
+- Subject: Skin
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 19.4 months (derivable for 144 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: cbio-lgsoc-mapk-msk-2022
 
 - Cohort: 119 cases
 - Cancer types: Low-Grade Serous Ovarian Cancer
+- Subject: Ovary and fallopian tube
 - Measurements: Mutation calls (panel, exome or genome)
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { NEED_KEYS, readNeeds, topicOf } from "@/lib/agent";
+import { NEED_KEYS, readNeeds } from "@/lib/agent";
 
 import { indexRow } from "./factories";
 
@@ -58,27 +58,3 @@ describe("checking a need against a record", () => {
   });
 });
 
-describe("separating the topic from the capability words", () => {
-  const topic = (q: string) => topicOf(q, readNeeds(q));
-
-  it("removes the words that already became needs", () => {
-    // "survival", "treatment" and "proteogenomic" each triggered a capability check;
-    // leaving them in the text query counted them twice and made every well-annotated
-    // cohort look relevant to every clinical question.
-    const t = topic("proteogenomic gastric cancer survival with treatment records");
-    expect(t).toBe("gastric cancer");
-  });
-
-  it("keeps the disease when the request is only about a disease", () => {
-    expect(topic("nasopharyngeal carcinoma")).toBe("nasopharyngeal carcinoma");
-  });
-
-  it("returns null when the request states a capability and no topic", () => {
-    expect(topic("I need a large open cohort with survival data")).toBeNull();
-    expect(topic("treatment response")).toBeNull();
-  });
-
-  it("does not treat a one or two letter fragment as a topic", () => {
-    expect(topic("survival in a cohort of 20")).toBeNull();
-  });
-});

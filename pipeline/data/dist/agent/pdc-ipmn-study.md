@@ -10,6 +10,7 @@ Dataset id: pdc-ipmn-study
 
 - Cohort: 122 cases
 - Cancer types: Cystic, Mucinous and Serous Neoplasms, Neuroendocrine Neoplasms, Ductal and Lobular Neoplasms, Adenomas and Adenocarcinomas
+- Subject: Pancreas
 - Measurements: Glycoproteome mass spectrometry (Label Free / DIA), Glycoproteome mass spectrometry (Label Free / DIA), Proteome mass spectrometry (Label Free / DIA), Proteome mass spectrometry (Label Free / DIA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

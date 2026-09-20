@@ -10,6 +10,7 @@ Dataset id: cbio-nccrcc-genentech-2014
 
 - Cohort: 145 cases
 - Cancer types: Renal Non-Clear Cell Carcinoma
+- Subject: Kidney
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

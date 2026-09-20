@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-kirc
 
 - Cohort: 537 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Kidney
 - Measurements: Clinical, DICOM medical imaging, DNA methylation array, SNP genotyping array (copy number, germline), Bulk RNA sequencing, microRNA sequencing, Whole-slide diagnostic images, Whole genome sequencing, Reverse phase protein array, Somatic Structural Variation
 - Median follow-up: 38.6 months (derivable for 537 cases)
 - Treatment response recorded: True

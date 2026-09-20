@@ -10,6 +10,7 @@ Dataset id: cbio-mtnn-msk-2022
 
 - Cohort: 132 cases
 - Cancer types: Mature T and NK Neoplasms
+- Subject: Lymphoid
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 8.0 months (derivable for 131 cases)
 - Treatment response recorded: False

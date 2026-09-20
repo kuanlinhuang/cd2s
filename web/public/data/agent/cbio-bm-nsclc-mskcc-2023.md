@@ -10,6 +10,7 @@ Dataset id: cbio-bm-nsclc-mskcc-2023
 
 - Cohort: 233 cases
 - Cancer types: Non-Small Cell Lung Cancer
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 21.5 months (derivable for 233 cases)
 - Treatment response recorded: False

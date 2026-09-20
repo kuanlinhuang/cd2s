@@ -10,6 +10,7 @@ Dataset id: cbio-brca-aurora-2023
 
 - Cohort: 55 cases
 - Cancer types: Invasive Breast Carcinoma
+- Subject: Breast
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structured treatment records
 - Median follow-up: 34.0 months (derivable for 50 cases)
 - Treatment response recorded: False

@@ -11,7 +11,7 @@ import { BarAxis, barScale } from "@/components/charts/BarAxis";
 export type RepoRow = { repository: string; traceable: number; untraceable: number };
 
 /** Repository, bar, total - shared by the rows and the axis beneath them. */
-const COLUMNS = "minmax(72px, 110px) minmax(0, 1fr) 150px";
+const COLUMNS = "minmax(64px, 110px) minmax(0, 1fr) auto";
 
 export function RepositoryBars({ rows }: { rows: RepoRow[] }) {
   const sorted = [...rows].sort(

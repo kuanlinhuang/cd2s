@@ -10,6 +10,7 @@ Dataset id: gdc-match-s2
 
 - Cohort: 3 cases
 - Cancer types: Nevi and Melanomas
+- Subject: Skin
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Clinical, Structural Variation
 - Treatment response recorded: False
 - Access: controlled. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=sarc_mskcc"
   ],
   "keywords": [
+    "NCIt:C12471",
     "Soft Tissue",
     "cbioportal",
     "copy number",

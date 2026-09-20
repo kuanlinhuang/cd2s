@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=npc_nusingapore"
   ],
   "keywords": [
+    "NCIt:C12418",
     "Nasopharyngeal Carcinoma",
     "cbioportal",
     "harmonized-for-reuse",

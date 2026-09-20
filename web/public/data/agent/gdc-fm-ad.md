@@ -20,6 +20,7 @@ Summary: 18,004 patients profiled with a targeted clinical panel - the largest c
 
 - Cohort: 18,004 cases
 - Cancer types: Not Reported, Cystic, Mucinous and Serous Neoplasms, Miscellaneous Tumors, Germ Cell Neoplasms, Complex Mixed and Stromal Neoplasms, Thymic Epithelial Neoplasms
+- Subject: pan cancer
 - Measurements: Targeted DNA panel sequencing, Clinical
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

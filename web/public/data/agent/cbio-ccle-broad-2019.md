@@ -10,6 +10,7 @@ Dataset id: cbio-ccle-broad-2019
 
 - Cohort: 1,739 cases
 - Cancer types: Mixed Cancer Types
+- Subject: pan cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Mass spectrometry proteomics, Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

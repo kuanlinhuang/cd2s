@@ -10,6 +10,7 @@ Dataset id: cbio-histiocytosis-cobi-msk-2019
 
 - Cohort: 18 cases
 - Cancer types: Histiocytic and Dendritic Cell Neoplasms
+- Subject: Myeloid
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 11.7 months (derivable for 18 cases)
 - Treatment response recorded: False

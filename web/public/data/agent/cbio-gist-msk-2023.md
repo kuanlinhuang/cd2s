@@ -10,6 +10,7 @@ Dataset id: cbio-gist-msk-2023
 
 - Cohort: 469 cases
 - Cancer types: Gastrointestinal Stromal Tumor
+- Subject: Soft tissue
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 39.6 months (derivable for 439 cases)
 - Treatment response recorded: False

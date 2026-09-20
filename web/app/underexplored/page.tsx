@@ -27,16 +27,18 @@ export default function UnderexploredPage() {
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Underexplored datasets</h1>
         <p className="mt-3 max-w-3xl text-lede t-muted">
-          Each dataset here is reused far less than datasets of similar size, age,
-          measurement breadth and access tier.
+          Datasets reused far less than datasets of similar size, age, measurement breadth
+          and access tier.{" "}
+          <Link href="/methods#reuse-gap" className="underline">
+            Full method
+          </Link>
+          .
         </p>
         <div className="mt-4 max-w-3xl">
           <Callout tone="info" title="What the label does not mean">
-            It does not mean the data are poor. Most gaps come from discoverability: an
-            unusual measurement, a cohort that is hard to recognize from its catalog
-            entry, or an accession nobody quotes. The{" "}
-            {num(stats.n_without_citable_accession)} datasets with no citable accession
-            are never labeled either way, because their reuse cannot be measured.
+            Underexplored does not mean poor. Most gaps are discoverability. The{" "}
+            {num(stats.n_without_citable_accession)} datasets with no citable accession are
+            never labelled either way: their reuse cannot be measured.
           </Callout>
         </div>
       </div>

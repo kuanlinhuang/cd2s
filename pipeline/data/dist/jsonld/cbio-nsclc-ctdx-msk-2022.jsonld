@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=nsclc_ctdx_msk_2022"
   ],
   "keywords": [
+    "NCIt:C12468",
     "Non-Small Cell Lung Cancer",
     "cbioportal",
     "copy number",

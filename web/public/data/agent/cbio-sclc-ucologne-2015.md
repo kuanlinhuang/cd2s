@@ -10,6 +10,7 @@ Dataset id: cbio-sclc-ucologne-2015
 
 - Cohort: 120 cases
 - Cancer types: Small Cell Lung Cancer
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
 - Median follow-up: 21.5 months (derivable for 110 cases)
 - Treatment response recorded: False

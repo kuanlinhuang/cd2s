@@ -11,6 +11,7 @@ Dataset id: idc-ct4harmonization-multicentric
 
 - Cohort: 1 cases
 - Cancer types: Hemangioma, Pathologically Benign, Metastatic disease
+- Subject: non cancer
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

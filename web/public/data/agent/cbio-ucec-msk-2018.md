@@ -10,6 +10,7 @@ Dataset id: cbio-ucec-msk-2018
 
 - Cohort: 189 cases
 - Cancer types: Endometrial Carcinoma
+- Subject: Uterus
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

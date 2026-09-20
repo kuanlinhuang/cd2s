@@ -15,6 +15,7 @@ Summary: 193 gastric cancers measured seven ways - proteome, phosphoproteome, ac
 
 - Cohort: 193 cases
 - Cancer types: Stomach Adenocarcinoma, Early Onset Gastric Cancer
+- Subject: Esophagus and stomach
 - Measurements: Acetylome mass spectrometry (TMT18 / DDA), Glycoproteome mass spectrometry (TMT18 / DDA), Metabolome mass spectrometry (Label Free / N/A), Phosphoproteome mass spectrometry (TMT18 / DDA), Protein-protein interaction mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT18 / DDA), Ubiquitylome mass spectrometry (Label Free / DIA)
 - Median follow-up: 24.5 months (derivable for 157 cases)
 - Treatment response recorded: True

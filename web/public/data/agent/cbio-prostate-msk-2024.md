@@ -10,6 +10,7 @@ Dataset id: cbio-prostate-msk-2024
 
 - Cohort: 2,257 cases
 - Cancer types: Prostate
+- Subject: Prostate
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 42.2 months (derivable for 2201 cases)
 - Treatment response recorded: False

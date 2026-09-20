@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-coad
 
 - Cohort: 464 cases
 - Cancer types: Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms, Complex Epithelial Neoplasms
+- Subject: Colorectal and bowel
 - Measurements: DICOM medical imaging, Clinical, SNP genotyping array (copy number, germline), Whole-slide tissue images, Bulk RNA sequencing, DNA methylation array, microRNA sequencing, Whole exome sequencing, Whole genome sequencing, Reverse phase protein array
 - Median follow-up: 21.6 months (derivable for 458 cases)
 - Treatment response recorded: True

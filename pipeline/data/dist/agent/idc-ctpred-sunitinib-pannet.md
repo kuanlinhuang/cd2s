@@ -10,6 +10,7 @@ Dataset id: idc-ctpred-sunitinib-pannet
 
 - Cohort: 38 cases
 - Cancer types: Pancreas Cancer
+- Subject: Pancreas
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

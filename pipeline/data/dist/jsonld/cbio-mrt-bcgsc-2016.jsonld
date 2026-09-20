@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=mrt_bcgsc_2016"
   ],
   "keywords": [
+    "NCIt:C12415",
     "Rhabdoid Cancer",
     "cbioportal",
     "harmonized-for-reuse",

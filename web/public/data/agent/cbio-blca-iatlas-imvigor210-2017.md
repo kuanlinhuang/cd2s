@@ -10,6 +10,7 @@ Dataset id: cbio-blca-iatlas-imvigor210-2017
 
 - Cohort: 347 cases
 - Cancer types: Bladder Urothelial Carcinoma
+- Subject: Bladder and urinary tract
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
 - Median follow-up: 8.1 months (derivable for 347 cases)
 - Treatment response recorded: True

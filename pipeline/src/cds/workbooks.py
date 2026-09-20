@@ -20,13 +20,12 @@ import time
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any
-
-import nbformat
-from nbclient import NotebookClient
-from nbformat.v4 import new_code_cell, new_markdown_cell, new_notebook
+from typing import TYPE_CHECKING, Any
 
 from cds.paths import REPO_DIR
+
+if TYPE_CHECKING:
+    import nbformat
 
 WORKBOOK_SRC = REPO_DIR / "workbooks" / "python"
 WORKBOOK_R = REPO_DIR / "workbooks" / "r"
@@ -89,6 +88,8 @@ def parse_percent_script(text: str) -> list[tuple[str, str]]:
 
 
 def build_notebook(script_path: Path) -> nbformat.NotebookNode:
+    from nbformat.v4 import new_code_cell, new_markdown_cell, new_notebook
+
     cells = parse_percent_script(script_path.read_text())
     nb = new_notebook()
     for kind, src in cells:
@@ -129,6 +130,9 @@ TRACKED_PACKAGES = [
 
 
 def execute(script_path: Path, *, timeout: int = 1200, out_dir: Path | None = None) -> Receipt:
+    import nbformat
+    from nbclient import NotebookClient
+
     out_dir = out_dir or WORKBOOK_OUT
     out_dir.mkdir(parents=True, exist_ok=True)
     name = script_path.stem

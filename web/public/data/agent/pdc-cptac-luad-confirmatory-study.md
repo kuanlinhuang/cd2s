@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-luad-confirmatory-study
 
 - Cohort: 131 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Acetylome mass spectrometry (TMT11 / DDA), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA), Ubiquitylome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 18.7 months (derivable for 102 cases)
 - Treatment response recorded: False

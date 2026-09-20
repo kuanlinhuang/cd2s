@@ -10,6 +10,7 @@ Dataset id: cbio-prad-msk-mdanderson-2023
 
 - Cohort: 38 cases
 - Cancer types: Prostate
+- Subject: Prostate
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

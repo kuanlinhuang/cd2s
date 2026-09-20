@@ -11,7 +11,7 @@ import {
   ReviewBadge,
   UnderexploredBadge,
 } from "@/components/ui";
-import type { BrowseRow, Facets, SearchDoc } from "@/lib/types";
+import type { BrowseRow, Facets, SearchDoc, SubjectVocabulary } from "@/lib/types";
 import { REVIEW_STATUS_LABELS, SCARCE_MODALITIES, modalityLabel, months, num } from "@/lib/format";
 
 /**
@@ -84,17 +84,22 @@ const SORTS: Record<SortKey, string> = {
 interface Props {
   rows: BrowseRow[];
   facets: Facets;
+  subjects: SubjectVocabulary;
   initial?: {
     q?: string;
     modality?: string;
     cancer?: string;
     site?: string;
+    subject?: string;
     capability?: string;
     repository?: string;
     access?: string;
     review?: string;
   };
 }
+
+/** The filter keys that belong in the URL, so a filtered view can be shared. */
+const URL_KEYS = ["q", "modality", "cancer", "site", "subject", "repository", "access", "review"] as const;
 
 /**
  * Free-text search, loaded out of band.
@@ -151,25 +156,29 @@ function useSearchIndex(rows: BrowseRow[]) {
   return mini;
 }
 
-export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
+export default function DatasetBrowser({ rows, facets, subjects, initial = {} }: Props) {
   const [q, setQ] = useState(initial.q ?? "");
   const [modality, setModality] = useState(initial.modality ?? "");
   const [cancer, setCancer] = useState(initial.cancer ?? "");
   const [site, setSite] = useState(initial.site ?? "");
+  const [subject, setSubject] = useState(initial.subject ?? "");
   const [repository, setRepository] = useState(initial.repository ?? "");
   const [access, setAccess] = useState(initial.access ?? "");
   const [review, setReview] = useState(initial.review ?? "");
   const [caps, setCaps] = useState<Set<CapabilityKey>>(
     () =>
       new Set(
-        initial.capability && initial.capability in CAPABILITY_FILTERS
-          ? [initial.capability as CapabilityKey]
-          : [],
+        (initial.capability ?? "")
+          .split(",")
+          .filter((c): c is CapabilityKey => c in CAPABILITY_FILTERS),
       ),
   );
   const [sort, setSort] = useState<SortKey>(initial.q ? "relevance" : "size");
   const [limit, setLimit] = useState(40);
   const [compare, setCompare] = useState<string[]>([]);
+  const [filtersOpen, setFiltersOpen] = useState(() =>
+    Object.values(initial).some(Boolean),
+  );
 
   // The searchable text is 40% of the index and is needed only once somebody types, so
   // it is fetched as its own cacheable file after first paint rather than inlined into
@@ -218,6 +227,11 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     if (modality) out = out.filter((r) => r.modalities.includes(modality));
     if (cancer) out = out.filter((r) => r.cancer_types.includes(cancer));
     if (site) out = out.filter((r) => r.primary_sites.includes(site));
+    if (subject) {
+      out = out.filter(
+        (r) => r.subjects.includes(subject) || r.subject_scope === subject,
+      );
+    }
     if (repository) out = out.filter((r) => r.repositories.includes(repository));
     if (access) out = out.filter((r) => r.access_tier === access);
     if (review) out = out.filter((r) => r.review_status === review);
@@ -245,7 +259,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
       sorted.sort((a, b) => a.title.localeCompare(b.title));
     }
     return sorted;
-  }, [rows, scores, modality, cancer, site, repository, access, review, caps, sort]);
+  }, [rows, scores, modality, cancer, site, subject, repository, access, review, caps, sort]);
 
   // Reset pagination whenever the filter set changes. Done during render via React's
   // documented "adjusting state when props change" pattern rather than in an effect:
@@ -256,6 +270,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     modality,
     cancer,
     site,
+    subject,
     repository,
     access,
     review,
@@ -268,10 +283,39 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     setLimit(40);
   }
 
+  // Keep the address bar on the filters actually applied, so a narrowed view can be
+  // sent to a colleague or kept in a notebook. `replaceState` rather than a router
+  // push: the filtering happened in this component with no navigation, and giving each
+  // keystroke its own history entry would make the back button walk the query letter
+  // by letter. The effect runs on the same key the list is derived from, so the URL and
+  // the results cannot disagree.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const sp = new URLSearchParams();
+    const values: Record<(typeof URL_KEYS)[number], string> = {
+      q,
+      modality,
+      cancer,
+      site,
+      subject,
+      repository,
+      access,
+      review,
+    };
+    for (const key of URL_KEYS) if (values[key]) sp.set(key, values[key]);
+    if (caps.size) sp.set("capability", [...caps].sort().join(","));
+    const search = sp.toString();
+    const next = `${window.location.pathname}${search ? `?${search}` : ""}`;
+    if (next !== `${window.location.pathname}${window.location.search}`) {
+      window.history.replaceState(null, "", next);
+    }
+  }, [q, modality, cancer, site, subject, repository, access, review, caps]);
+
   const activeFilters =
     (modality ? 1 : 0) +
     (cancer ? 1 : 0) +
     (site ? 1 : 0) +
+    (subject ? 1 : 0) +
     (repository ? 1 : 0) +
     (access ? 1 : 0) +
     (review ? 1 : 0) +
@@ -300,6 +344,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     setModality("");
     setCancer("");
     setSite("");
+    setSubject("");
     setRepository("");
     setAccess("");
     setReview("");
@@ -307,9 +352,27 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
   }
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[250px_1fr]">
+    <div className="grid min-w-0 gap-x-8 gap-y-4 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-y-8">
+      <button
+        type="button"
+        aria-expanded={filtersOpen}
+        aria-controls="dataset-filters"
+        onClick={() => setFiltersOpen((open) => !open)}
+        className="flex w-full items-center justify-between rounded-md border px-3 py-2.5 text-body font-medium lg:hidden"
+        style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}
+      >
+        <span>
+          Filters
+          {activeFilters > 0 ? ` (${activeFilters} active)` : ""}
+        </span>
+        <span className="font-normal t-muted">{filtersOpen ? "Hide" : "Show"}</span>
+      </button>
+
       {/* --------------------------------------------------------------- filters */}
-      <aside className="lg:sticky lg:top-20 lg:self-start space-y-5">
+      <aside
+        id="dataset-filters"
+        className={`${filtersOpen ? "block" : "hidden"} min-w-0 space-y-5 lg:sticky lg:top-20 lg:block lg:self-start`}
+      >
         <div>
           <label
             htmlFor="dataset-search"
@@ -326,7 +389,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
               if (e.target.value) setSort("relevance");
             }}
             placeholder="cervical cancer, spatial, resistance..."
-            className="w-full rounded-md border px-2.5 py-1.5 text-body"
+            className="w-full min-w-0 max-w-full rounded-md border px-2.5 py-1.5 text-body"
             style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
           />
           <p className="mt-1.5 text-micro t-faint">
@@ -356,6 +419,34 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
           </div>
         </fieldset>
 
+        <FacetSelect
+          label="Subject"
+          value={subject}
+          onChange={setSubject}
+          options={[
+            ...(facets.subject ?? []).map((facet) => ({
+              value: facet.value,
+              label: `${subjects.subjects.find((item) => item.code === facet.value)?.label ?? facet.value} (${facet.count})`,
+            })),
+            ...(facets.subject_scope ?? [])
+              .filter((facet) =>
+                ["pan_cancer", "non_cancer", "not_stated", "title_derived"].includes(
+                  facet.value,
+                ),
+              )
+              .map((facet) => ({
+                value: facet.value,
+                label: `${
+                  {
+                    pan_cancer: "Pan-cancer",
+                    non_cancer: "Non-cancer",
+                    not_stated: "Subject not stated",
+                    title_derived: "Subject derived from title",
+                  }[facet.value] ?? facet.value
+                } (${facet.count})`,
+              })),
+          ]}
+        />
         <FacetSelect
           label="Measurement type"
           value={modality}
@@ -422,7 +513,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
       </aside>
 
       {/* --------------------------------------------------------------- results */}
-      <div>
+      <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <p className="text-body t-muted">
             <span className="tnum font-medium" style={{ color: "var(--text)" }}>
@@ -535,7 +626,7 @@ function FacetSelect({
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-md border px-2 py-1.5 text-body"
+        className="w-full min-w-0 max-w-full rounded-md border px-2 py-1.5 text-body"
         style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
       >
         <option value="">Any</option>

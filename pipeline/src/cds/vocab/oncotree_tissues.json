@@ -1,0 +1,6285 @@
+{
+  "nodes": {
+    "aa": {
+      "code": "AA",
+      "name": "Aggressive Angiomyxoma",
+      "nci": "C6936",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "abc": {
+      "code": "ABC",
+      "name": "Activated B-cell Type",
+      "nci": null,
+      "parent": "DLBCLNOS",
+      "tissue": "Lymphoid"
+    },
+    "abl": {
+      "code": "ABL",
+      "name": "Acute Basophilic Leukemia",
+      "nci": "C3164",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "aca": {
+      "code": "ACA",
+      "name": "Adrenocortical Adenoma",
+      "nci": "C9003",
+      "parent": "ADRENAL_GLAND",
+      "tissue": "Adrenal Gland"
+    },
+    "acbc": {
+      "code": "ACBC",
+      "name": "Adenoid Cystic Breast Cancer",
+      "nci": "C5130",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "acc": {
+      "code": "ACC",
+      "name": "Adrenocortical Carcinoma",
+      "nci": "C9325",
+      "parent": "ADRENAL_GLAND",
+      "tissue": "Adrenal Gland"
+    },
+    "accc": {
+      "code": "ACCC",
+      "name": "Acinic Cell Carcinoma",
+      "nci": "C3768",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "aclg": {
+      "code": "ACLG",
+      "name": "Adenoid Cystic Carcinoma of the Lacrimal Gland",
+      "nci": null,
+      "parent": "LGT",
+      "tissue": "Eye"
+    },
+    "acml": {
+      "code": "ACML",
+      "name": "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+      "nci": "C3519",
+      "parent": "MDS/MPN",
+      "tissue": "Myeloid"
+    },
+    "acn": {
+      "code": "ACN",
+      "name": "Acinar Cell Carcinoma, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "acpg": {
+      "code": "ACPG",
+      "name": "Craniopharyngioma, Adamantinomatous Type",
+      "nci": null,
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "acpp": {
+      "code": "ACPP",
+      "name": "Atypical Choroid Plexus Papilloma",
+      "nci": "C53686",
+      "parent": "CPT",
+      "tissue": "CNS/Brain"
+    },
+    "acrm": {
+      "code": "ACRM",
+      "name": "Acral Melanoma",
+      "nci": "C4022",
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "acyc": {
+      "code": "ACYC",
+      "name": "Adenoid Cystic Carcinoma",
+      "nci": "C2970",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "adifg": {
+      "code": "ADIFG",
+      "name": "Adult-Type Diffuse Glioma",
+      "nci": null,
+      "parent": "DIFG",
+      "tissue": "CNS/Brain"
+    },
+    "adma": {
+      "code": "ADMA",
+      "name": "Adamantinoma",
+      "nci": null,
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "adnos": {
+      "code": "ADNOS",
+      "name": "Adenocarcinoma, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "adpa": {
+      "code": "ADPA",
+      "name": "Aggressive Digital Papillary Adenocarcinoma",
+      "nci": "C27534",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "adrenal_gland": {
+      "code": "ADRENAL_GLAND",
+      "name": "Adrenal Gland",
+      "nci": "C12666",
+      "parent": "TISSUE",
+      "tissue": "Adrenal Gland"
+    },
+    "aeca": {
+      "code": "AECA",
+      "name": "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma",
+      "nci": "C6938",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "afh": {
+      "code": "AFH",
+      "name": "Angiomatoid Fibrous Histiocytoma",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "afx": {
+      "code": "AFX",
+      "name": "Atypical Fibroxanthoma",
+      "nci": "C4246",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "aga": {
+      "code": "AGA",
+      "name": "Anal Gland Adenocarcinoma",
+      "nci": "C5609",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "agng": {
+      "code": "AGNG",
+      "name": "Anaplastic Ganglioglioma",
+      "nci": "C4717",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "ahcd": {
+      "code": "AHCD",
+      "name": "Alpha Heavy-Chain Disease",
+      "nci": "C3132",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "ais": {
+      "code": "AIS",
+      "name": "Adenocarcinoma In Situ",
+      "nci": "C4123",
+      "parent": "OTHER",
+      "tissue": "Other"
+    },
+    "aitl": {
+      "code": "AITL",
+      "name": "Angioimmunoblastic T-Cell Lymphoma",
+      "nci": "C7528",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "alal": {
+      "code": "ALAL",
+      "name": "Acute Leukemias of Ambiguous Lineage",
+      "nci": "C7464",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "alcl": {
+      "code": "ALCL",
+      "name": "Anaplastic Large Cell Lymphoma",
+      "nci": "C3720",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "alclalkn": {
+      "code": "ALCLALKN",
+      "name": "Anaplastic Large-Cell Lymphoma ALK Negative",
+      "nci": "C37194",
+      "parent": "ALCL",
+      "tissue": "Lymphoid"
+    },
+    "alclalkp": {
+      "code": "ALCLALKP",
+      "name": "Anaplastic Large-Cell Lymphoma ALK Positive",
+      "nci": "C37193",
+      "parent": "ALCL",
+      "tissue": "Lymphoid"
+    },
+    "alklbcl": {
+      "code": "ALKLBCL",
+      "name": "ALK Positive Large B-Cell Lymphoma",
+      "nci": "C7225",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "alt": {
+      "code": "ALT",
+      "name": "Atypical Lipomatous Tumor",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "aluca": {
+      "code": "ALUCA",
+      "name": "Atypical Lung Carcinoid",
+      "nci": "C45551",
+      "parent": "LNET",
+      "tissue": "Lung"
+    },
+    "am": {
+      "code": "AM",
+      "name": "AML with Maturation",
+      "nci": "C3250",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "ambl": {
+      "code": "AMBL",
+      "name": "Large Cell/Anaplastic Medulloblastoma",
+      "nci": "C6904",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "amblnos": {
+      "code": "AMBLNOS",
+      "name": "Anaplastic Medulloblastoma, NOS",
+      "nci": null,
+      "parent": "AMBL",
+      "tissue": "CNS/Brain"
+    },
+    "amblnws": {
+      "code": "AMBLNWS",
+      "name": "Anaplastic Medulloblastoma, Non-WNT, Non-SHH",
+      "nci": null,
+      "parent": "AMBL",
+      "tissue": "CNS/Brain"
+    },
+    "amblnwsg3": {
+      "code": "AMBLNWSG3",
+      "name": "Anaplastic Medulloblastoma, Group 3",
+      "nci": null,
+      "parent": "AMBLNWS",
+      "tissue": "CNS/Brain"
+    },
+    "amblnwsg4": {
+      "code": "AMBLNWSG4",
+      "name": "Anaplastic Medulloblastoma, Group 4",
+      "nci": null,
+      "parent": "AMBLNWS",
+      "tissue": "CNS/Brain"
+    },
+    "amblshh": {
+      "code": "AMBLSHH",
+      "name": "Anaplastic Medulloblastoma, SHH Subtype",
+      "nci": null,
+      "parent": "AMBL",
+      "tissue": "CNS/Brain"
+    },
+    "amkl": {
+      "code": "AMKL",
+      "name": "Acute Megakaryoblastic Leukemia",
+      "nci": "C3170",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "aml": {
+      "code": "AML",
+      "name": "Acute Myeloid Leukemia",
+      "nci": "C3171",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "amlbcrabl1": {
+      "code": "AMLBCRABL1",
+      "name": "AML with BCR-ABL1",
+      "nci": "C129785",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlcbfbmyh11": {
+      "code": "AMLCBFBMYH11",
+      "name": "AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22);CBFB-MYH11",
+      "nci": "C9287",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlcebpa": {
+      "code": "AMLCEBPA",
+      "name": "AML with Biallelic Mutations of CEBPA",
+      "nci": "C129782",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amldeknup214": {
+      "code": "AMLDEKNUP214",
+      "name": "AML with t(6;9)(p23;q34.1);DEK-NUP214",
+      "nci": "C82423",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlgata2mecom": {
+      "code": "AMLGATA2MECOM",
+      "name": "AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM",
+      "nci": "C82426",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlmd": {
+      "code": "AMLMD",
+      "name": "AML with Minimal Differentiation",
+      "nci": "C8460",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "amlmllt3kmt2a": {
+      "code": "AMLMLLT3KMT2A",
+      "name": "AML with t(9;11)(p21.3;q23.3);MLLT3-KMT2A",
+      "nci": "C82403",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlmrc": {
+      "code": "AMLMRC",
+      "name": "AML with Myelodysplasia-Related Changes",
+      "nci": "C7600",
+      "parent": "AML",
+      "tissue": "Myeloid"
+    },
+    "amlnos": {
+      "code": "AMLNOS",
+      "name": "AML, NOS",
+      "nci": "C27753",
+      "parent": "AML",
+      "tissue": "Myeloid"
+    },
+    "amlnpm1": {
+      "code": "AMLNPM1",
+      "name": "AML with Mutated NPM1",
+      "nci": "C82431",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlrara": {
+      "code": "AMLRARA",
+      "name": "AML with Variant RARA translocation",
+      "nci": "C36055",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlrbm15mkl1": {
+      "code": "AMLRBM15MKL1",
+      "name": "AML (megakaryoblastic) with t(1;22)(p13.3;q13.3);RBM15-MKL1",
+      "nci": "C82427",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlrga": {
+      "code": "AMLRGA",
+      "name": "AML with Recurrent Genetic Abnormalities",
+      "nci": "C7175",
+      "parent": "AML",
+      "tissue": "Myeloid"
+    },
+    "amlrunx1": {
+      "code": "AMLRUNX1",
+      "name": "AML with Mutated RUNX1",
+      "nci": "C129786",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amlrunx1runx1t1": {
+      "code": "AMLRUNX1RUNX1T1",
+      "name": "AML with t(8;21)(q22;q22.1);RUNX1-RUNX1T1",
+      "nci": "C9288",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "amml": {
+      "code": "AMML",
+      "name": "Acute Myelomonocytic Leukemia",
+      "nci": "C7463",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "amol": {
+      "code": "AMOL",
+      "name": "Acute Monoblastic/Monocytic Leukemia",
+      "nci": "C4861",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "ampca": {
+      "code": "AMPCA",
+      "name": "Ampullary Carcinoma",
+      "nci": "C3908",
+      "parent": "AMPULLA_OF_VATER",
+      "tissue": "Ampulla of Vater"
+    },
+    "ampulla_of_vater": {
+      "code": "AMPULLA_OF_VATER",
+      "name": "Ampulla of Vater",
+      "nci": "C13011",
+      "parent": "TISSUE",
+      "tissue": "Ampulla of Vater"
+    },
+    "an": {
+      "code": "AN",
+      "name": "Atypical Nevus",
+      "nci": null,
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "angl": {
+      "code": "ANGL",
+      "name": "Angiocentric Glioma",
+      "nci": "C92552",
+      "parent": "PDIFLG",
+      "tissue": "CNS/Brain"
+    },
+    "angs": {
+      "code": "ANGS",
+      "name": "Angiosarcoma",
+      "nci": "C3088",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "ankl": {
+      "code": "ANKL",
+      "name": "Aggressive NK-Cell Leukemia",
+      "nci": "C8647",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "anm": {
+      "code": "ANM",
+      "name": "Anaplastic Meningioma",
+      "nci": "C4051",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "ansc": {
+      "code": "ANSC",
+      "name": "Anal Squamous Cell Carcinoma",
+      "nci": "C9161",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "apad": {
+      "code": "APAD",
+      "name": "Appendiceal Adenocarcinoma",
+      "nci": "C7718",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "ape": {
+      "code": "APE",
+      "name": "Anaplastic Ependymoma",
+      "nci": "C4049",
+      "parent": "EPMT",
+      "tissue": "CNS/Brain"
+    },
+    "aplpmlrara": {
+      "code": "APLPMLRARA",
+      "name": "APL with PML-RARA",
+      "nci": "C7968",
+      "parent": "AMLRGA",
+      "tissue": "Myeloid"
+    },
+    "apmf": {
+      "code": "APMF",
+      "name": "Acute Panmyelosis with Myelofibrosis",
+      "nci": "C4344",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "aptad": {
+      "code": "APTAD",
+      "name": "Atypical Pituitary Adenoma",
+      "nci": null,
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "apxa": {
+      "code": "APXA",
+      "name": "Anaplastic Pleomorphic Xanthoastrocytoma",
+      "nci": null,
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "arch": {
+      "code": "ARCH",
+      "name": "Adenocarcinoma in Retrorectal Cystic Hamartoma",
+      "nci": null,
+      "parent": "OTHER",
+      "tissue": "Other"
+    },
+    "armm": {
+      "code": "ARMM",
+      "name": "Anorectal Mucosal Melanoma",
+      "nci": "C4639",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "arms": {
+      "code": "ARMS",
+      "name": "Alveolar Rhabdomyosarcoma",
+      "nci": "C3749",
+      "parent": "RMS",
+      "tissue": "Soft Tissue"
+    },
+    "asct": {
+      "code": "ASCT",
+      "name": "Adenosquamous Carcinoma of the Tongue",
+      "nci": null,
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "asm": {
+      "code": "ASM",
+      "name": "Aggressive Systemic Mastocytosis",
+      "nci": "C9285",
+      "parent": "SM",
+      "tissue": "Myeloid"
+    },
+    "asps": {
+      "code": "ASPS",
+      "name": "Alveolar Soft Part Sarcoma",
+      "nci": "C3750",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "astb": {
+      "code": "ASTB",
+      "name": "Astroblastoma",
+      "nci": "C4324",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "astr": {
+      "code": "ASTR",
+      "name": "Astrocytoma, IDH-Mutant",
+      "nci": "C60781",
+      "parent": "ADIFG",
+      "tissue": "CNS/Brain"
+    },
+    "astr2": {
+      "code": "ASTR2",
+      "name": "Astrocytoma, IDH-Mutant, Grade 2",
+      "nci": null,
+      "parent": "ASTR",
+      "tissue": "CNS/Brain"
+    },
+    "astr3": {
+      "code": "ASTR3",
+      "name": "Astrocytoma, IDH-Mutant, Grade 3",
+      "nci": null,
+      "parent": "ASTR",
+      "tissue": "CNS/Brain"
+    },
+    "astr4": {
+      "code": "ASTR4",
+      "name": "Astrocytoma, IDH-Mutant, Grade 4",
+      "nci": null,
+      "parent": "ASTR",
+      "tissue": "CNS/Brain"
+    },
+    "atll": {
+      "code": "ATLL",
+      "name": "Adult T-Cell Leukemia/Lymphoma",
+      "nci": "C3184",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "atm": {
+      "code": "ATM",
+      "name": "Atypical Meningioma",
+      "nci": "C4723",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "atrt": {
+      "code": "ATRT",
+      "name": "Atypical Teratoid/Rhabdoid Tumor",
+      "nci": "C6906",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "aul": {
+      "code": "AUL",
+      "name": "Acute Undifferentiated Leukemia",
+      "nci": "C9298",
+      "parent": "ALAL",
+      "tissue": "Myeloid"
+    },
+    "awdnet": {
+      "code": "AWDNET",
+      "name": "Well-Differentiated Neuroendocrine Tumor of the Appendix",
+      "nci": "C96422",
+      "parent": "GINET",
+      "tissue": "Bowel"
+    },
+    "awm": {
+      "code": "AWM",
+      "name": "AML without Maturation",
+      "nci": "C3249",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "ba": {
+      "code": "BA",
+      "name": "Breast Angiosarcoma",
+      "nci": "C5184",
+      "parent": "PBS",
+      "tissue": "Breast"
+    },
+    "bcac": {
+      "code": "BCAC",
+      "name": "Basal Cell Adenocarcinoma",
+      "nci": null,
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "bcc": {
+      "code": "BCC",
+      "name": "Basal Cell Carcinoma",
+      "nci": "C2921",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "bcca": {
+      "code": "BCCA",
+      "name": "Choriocarcinoma",
+      "nci": "C2948",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "bccp": {
+      "code": "BCCP",
+      "name": "Basal Cell Carcinoma of Prostate",
+      "nci": null,
+      "parent": "PROSTATE",
+      "tissue": "Prostate"
+    },
+    "bclu": {
+      "code": "BCLU",
+      "name": "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+      "nci": "C179721",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "bec": {
+      "code": "BEC",
+      "name": "Embryonal Carcinoma",
+      "nci": "C7010",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "bfn": {
+      "code": "BFN",
+      "name": "Breast Fibroepithelial Neoplasms",
+      "nci": "C40405",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "bgct": {
+      "code": "BGCT",
+      "name": "Germ Cell Tumor, Brain",
+      "nci": null,
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "bialcl": {
+      "code": "BIALCL",
+      "name": "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+      "nci": "C139012",
+      "parent": "ALCL",
+      "tissue": "Lymphoid"
+    },
+    "biliary_tract": {
+      "code": "BILIARY_TRACT",
+      "name": "Biliary Tract",
+      "nci": "C12678",
+      "parent": "TISSUE",
+      "tissue": "Biliary Tract"
+    },
+    "bimt": {
+      "code": "BIMT",
+      "name": "Immature Teratoma",
+      "nci": "C7014",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "bl": {
+      "code": "BL",
+      "name": "Burkitt Lymphoma",
+      "nci": "C2912",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "blad": {
+      "code": "BLAD",
+      "name": "Bladder Adenocarcinoma",
+      "nci": "C4032",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "bladder": {
+      "code": "BLADDER",
+      "name": "Bladder/Urinary Tract",
+      "nci": "C12414",
+      "parent": "TISSUE",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "blca": {
+      "code": "BLCA",
+      "name": "Bladder Urothelial Carcinoma",
+      "nci": "C39851",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "blclc": {
+      "code": "BLCLC",
+      "name": "Basaloid Large Cell Carcinoma of the Lung",
+      "nci": "C7266",
+      "parent": "LCLC",
+      "tissue": "Lung"
+    },
+    "bll": {
+      "code": "BLL",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma",
+      "nci": "C8936",
+      "parent": "LNM",
+      "tissue": "Lymphoid"
+    },
+    "bll11q": {
+      "code": "BLL11Q",
+      "name": "Burkitt-Like Lymphoma with 11q Aberration",
+      "nci": "C131911",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "bllbcrabl1": {
+      "code": "BLLBCRABL1",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1",
+      "nci": "C80331",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "bllbcrabl1l": {
+      "code": "BLLBCRABL1L",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+      "nci": "C129787",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "blletv6runx1": {
+      "code": "BLLETV6RUNX1",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1",
+      "nci": "C80334",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "bllhyper": {
+      "code": "BLLHYPER",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+      "nci": "C80335",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "bllhypo": {
+      "code": "BLLHYPO",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+      "nci": "C80338",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "blliamp21": {
+      "code": "BLLIAMP21",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+      "nci": "C130039",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "bllil3igh": {
+      "code": "BLLIL3IGH",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH",
+      "nci": null,
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "bllkmt2a": {
+      "code": "BLLKMT2A",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with t(v;11q23.3);KMT2A Rearranged",
+      "nci": "C80332",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "bllnos": {
+      "code": "BLLNOS",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+      "nci": "C80326",
+      "parent": "BLL",
+      "tissue": "Lymphoid"
+    },
+    "bllrga": {
+      "code": "BLLRGA",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+      "nci": "C80328",
+      "parent": "BLL",
+      "tissue": "Lymphoid"
+    },
+    "blltcf3pbx1": {
+      "code": "BLLTCF3PBX1",
+      "name": "B-Lymphoblastic Leukemia/Lymphoma with t(1;19)(q23;p13.3);TCF3-PBX1",
+      "nci": "C80341",
+      "parent": "BLLRGA",
+      "tissue": "Lymphoid"
+    },
+    "blpt": {
+      "code": "BLPT",
+      "name": "Borderline Phyllodes Tumor of the Breast",
+      "nci": "C5316",
+      "parent": "PT",
+      "tissue": "Breast"
+    },
+    "blsc": {
+      "code": "BLSC",
+      "name": "Bladder Squamous Cell Carcinoma",
+      "nci": "C4031",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "bmgct": {
+      "code": "BMGCT",
+      "name": "Mixed Germ Cell Tumor",
+      "nci": "C4290",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "bmgt": {
+      "code": "BMGT",
+      "name": "Malignant Teratoma",
+      "nci": "C7015",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "bmt": {
+      "code": "BMT",
+      "name": "Mature Teratoma",
+      "nci": "C7013",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "bnnos": {
+      "code": "BNNOS",
+      "name": "Breast Neoplasm, NOS",
+      "nci": null,
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "bone": {
+      "code": "BONE",
+      "name": "Bone",
+      "nci": "C12366",
+      "parent": "TISSUE",
+      "tissue": "Bone"
+    },
+    "bowel": {
+      "code": "BOWEL",
+      "name": "Bowel",
+      "nci": "C12736",
+      "parent": "TISSUE",
+      "tissue": "Bowel"
+    },
+    "bpdcn": {
+      "code": "BPDCN",
+      "name": "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+      "nci": "C7203",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "bpll": {
+      "code": "BPLL",
+      "name": "B-Cell Prolymphocytic Leukemia",
+      "nci": "C4753",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "bpscc": {
+      "code": "BPSCC",
+      "name": "Basaloid Penile Squamous Cell Carcinoma",
+      "nci": "C6980",
+      "parent": "PSCC",
+      "tissue": "Penis"
+    },
+    "bpt": {
+      "code": "BPT",
+      "name": "Benign Phyllodes Tumor of the Breast",
+      "nci": "C5196",
+      "parent": "PT",
+      "tissue": "Breast"
+    },
+    "brain": {
+      "code": "BRAIN",
+      "name": "CNS/Brain",
+      "nci": "C12438",
+      "parent": "TISSUE",
+      "tissue": "CNS/Brain"
+    },
+    "brame": {
+      "code": "BRAME",
+      "name": "Adenomyoepithelioma of the Breast",
+      "nci": "C6899",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "brca": {
+      "code": "BRCA",
+      "name": "Invasive Breast Carcinoma",
+      "nci": "C9245",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "brcanos": {
+      "code": "BRCANOS",
+      "name": "Breast Invasive Cancer, NOS",
+      "nci": null,
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "brcnos": {
+      "code": "BRCNOS",
+      "name": "Breast Invasive Carcinoma, NOS",
+      "nci": null,
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "breast": {
+      "code": "BREAST",
+      "name": "Breast",
+      "nci": "C12971",
+      "parent": "TISSUE",
+      "tissue": "Breast"
+    },
+    "brsrcc": {
+      "code": "BRSRCC",
+      "name": "Breast Carcinoma with Signet Ring",
+      "nci": "C5175",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "btbeov": {
+      "code": "BTBEOV",
+      "name": "Brenner Tumor, Benign",
+      "nci": null,
+      "parent": "BTOV",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "btbov": {
+      "code": "BTBOV",
+      "name": "Brenner Tumor, Borderline",
+      "nci": null,
+      "parent": "BTOV",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "btmov": {
+      "code": "BTMOV",
+      "name": "Brenner Tumor, Malignant",
+      "nci": null,
+      "parent": "BTOV",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "btov": {
+      "code": "BTOV",
+      "name": "Brenner Tumor",
+      "nci": "C39954",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "byst": {
+      "code": "BYST",
+      "name": "Yolk Sac Tumor",
+      "nci": null,
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "cabc": {
+      "code": "CABC",
+      "name": "Cervical Adenoid Basal Carcinoma",
+      "nci": "C40213",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "cacc": {
+      "code": "CACC",
+      "name": "Cervical Adenoid Cystic Carcinoma",
+      "nci": "C6346",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "caexpa": {
+      "code": "CAEXPA",
+      "name": "Carcinoma ex Pleomorphic Adenoma",
+      "nci": null,
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "cais": {
+      "code": "CAIS",
+      "name": "Colon Adenocarcinoma In Situ",
+      "nci": null,
+      "parent": "COADREAD",
+      "tissue": "Bowel"
+    },
+    "ccbov": {
+      "code": "CCBOV",
+      "name": "Clear Cell Borderline Ovarian Tumor",
+      "nci": "C40080",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "cce": {
+      "code": "CCE",
+      "name": "Clear Cell Ependymoma",
+      "nci": "C4714",
+      "parent": "EPMT",
+      "tissue": "CNS/Brain"
+    },
+    "cchdm": {
+      "code": "CCHDM",
+      "name": "Conventional Type Chordoma",
+      "nci": null,
+      "parent": "CHDM",
+      "tissue": "Bone"
+    },
+    "cchm": {
+      "code": "CCHM",
+      "name": "Carcinoma with Chondroid Metaplasia",
+      "nci": "C47847",
+      "parent": "MMBC",
+      "tissue": "Breast"
+    },
+    "cclc": {
+      "code": "CCLC",
+      "name": "Clear Cell Carcinoma of the Lung",
+      "nci": "C4451",
+      "parent": "LCLC",
+      "tissue": "Lung"
+    },
+    "ccm": {
+      "code": "CCM",
+      "name": "Clear cell Meningioma",
+      "nci": "C4722",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "ccoc": {
+      "code": "CCOC",
+      "name": "Clear Cell Odontogenic Carcinoma",
+      "nci": "C54300",
+      "parent": "ODGC",
+      "tissue": "Head and Neck"
+    },
+    "ccov": {
+      "code": "CCOV",
+      "name": "Clear Cell Ovarian Cancer",
+      "nci": "C40076",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ccprc": {
+      "code": "CCPRC",
+      "name": "Clear Cell Papillary Renal Cell Carcinoma",
+      "nci": null,
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "ccrcc": {
+      "code": "CCRCC",
+      "name": "Renal Clear Cell Carcinoma",
+      "nci": "C4033",
+      "parent": "RCC",
+      "tissue": "Kidney"
+    },
+    "ccs": {
+      "code": "CCS",
+      "name": "Clear Cell Sarcoma",
+      "nci": "C3745",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "ccsk": {
+      "code": "CCSK",
+      "name": "Clear Cell Sarcoma of Kidney",
+      "nci": null,
+      "parent": "KIDNEY",
+      "tissue": "Kidney"
+    },
+    "cdrcc": {
+      "code": "CDRCC",
+      "name": "Collecting Duct Renal Cell Carcinoma",
+      "nci": "C6194",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "cead": {
+      "code": "CEAD",
+      "name": "Cervical Adenocarcinoma",
+      "nci": "C4029",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "ceais": {
+      "code": "CEAIS",
+      "name": "Cervical Adenocarcinoma In Situ",
+      "nci": "C4520",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "ceas": {
+      "code": "CEAS",
+      "name": "Cervical Adenosquamous Carcinoma",
+      "nci": "C4519",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "cecc": {
+      "code": "CECC",
+      "name": "Cervical Clear Cell Carcinoma",
+      "nci": "C6344",
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "ceen": {
+      "code": "CEEN",
+      "name": "Cervical Endometrioid Carcinoma",
+      "nci": "C3769",
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "cegcc": {
+      "code": "CEGCC",
+      "name": "Glassy Cell Carcinoma of the Cervix",
+      "nci": "C40212",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "celi": {
+      "code": "CELI",
+      "name": "Cervical Leiomyosarcoma",
+      "nci": null,
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "celnos": {
+      "code": "CELNOS",
+      "name": "Chronic Eosinophilic Leukemia, NOS",
+      "nci": "C4563",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "cemn": {
+      "code": "CEMN",
+      "name": "Mesonephric Carcinoma",
+      "nci": null,
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "cemu": {
+      "code": "CEMU",
+      "name": "Mucinous Carcinoma",
+      "nci": "C26712",
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "cene": {
+      "code": "CENE",
+      "name": "Cervical Neuroendocrine Tumor",
+      "nci": "C40214",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "cerms": {
+      "code": "CERMS",
+      "name": "Cervical Rhabdomyosarcoma",
+      "nci": null,
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "cervix": {
+      "code": "CERVIX",
+      "name": "Cervix",
+      "nci": "C12311",
+      "parent": "TISSUE",
+      "tissue": "Cervix"
+    },
+    "cesc": {
+      "code": "CESC",
+      "name": "Cervical Squamous Cell Carcinoma",
+      "nci": "C4028",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "cese": {
+      "code": "CESE",
+      "name": "Cervical Serous Carcinoma",
+      "nci": null,
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "cevg": {
+      "code": "CEVG",
+      "name": "Villoglandular Carcinoma",
+      "nci": "C40208",
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "chbl": {
+      "code": "CHBL",
+      "name": "Chondroblastoma",
+      "nci": "C2945",
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "chdm": {
+      "code": "CHDM",
+      "name": "Chordoma",
+      "nci": "C2947",
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "chgl": {
+      "code": "CHGL",
+      "name": "Chordoid Glioma of the Third Ventricle",
+      "nci": "C5592",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "chl": {
+      "code": "CHL",
+      "name": "Classical Hodgkin Lymphoma",
+      "nci": "C7164",
+      "parent": "HL",
+      "tissue": "Lymphoid"
+    },
+    "chlptld": {
+      "code": "CHLPTLD",
+      "name": "Classical Hodgkin Lymphoma PTLD",
+      "nci": null,
+      "parent": "PTLD",
+      "tissue": "Lymphoid"
+    },
+    "chm": {
+      "code": "CHM",
+      "name": "Complete Hydatidiform Mole",
+      "nci": "C4871",
+      "parent": "MP",
+      "tissue": "Uterus"
+    },
+    "chol": {
+      "code": "CHOL",
+      "name": "Cholangiocarcinoma",
+      "nci": "C4436",
+      "parent": "IPN",
+      "tissue": "Biliary Tract"
+    },
+    "chom": {
+      "code": "CHOM",
+      "name": "Chordoid Meningioma",
+      "nci": "C6908",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "chos": {
+      "code": "CHOS",
+      "name": "Chondroblastic Osteosarcoma",
+      "nci": "C4021",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "chrcc": {
+      "code": "CHRCC",
+      "name": "Chromophobe Renal Cell Carcinoma",
+      "nci": "C4146",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "chs": {
+      "code": "CHS",
+      "name": "Chondrosarcoma",
+      "nci": "C2946",
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "cllsll": {
+      "code": "CLLSLL",
+      "name": "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+      "nci": "C7540",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "clnc": {
+      "code": "CLNC",
+      "name": "Cerebellar Liponeurocytoma",
+      "nci": "C6905",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "clpdnk": {
+      "code": "CLPDNK",
+      "name": "Chronic Lymphoproliferative Disorder of NK Cells",
+      "nci": "C39591",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "cm": {
+      "code": "CM",
+      "name": "Conjunctival Melanoma",
+      "nci": "C4550",
+      "parent": "OM",
+      "tissue": "Eye"
+    },
+    "cmc": {
+      "code": "CMC",
+      "name": "Medullary Carcinoma of the Colon",
+      "nci": "C60641",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "cmcd": {
+      "code": "CMCD",
+      "name": "Cutaneous Mastocytosis",
+      "nci": "C7137",
+      "parent": "MCD",
+      "tissue": "Myeloid"
+    },
+    "cml": {
+      "code": "CML",
+      "name": "Chronic Myelogenous Leukemia",
+      "nci": "C3172",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "cmlbcrabl1": {
+      "code": "CMLBCRABL1",
+      "name": "Chronic Myeloid Leukemia, BCR-ABL1+",
+      "nci": "C3174",
+      "parent": "CML",
+      "tissue": "Myeloid"
+    },
+    "cmml": {
+      "code": "CMML",
+      "name": "Chronic Myelomonocytic Leukemia",
+      "nci": "C3178",
+      "parent": "MDS/MPN",
+      "tissue": "Myeloid"
+    },
+    "cmml0": {
+      "code": "CMML0",
+      "name": "Chronic Myelomonocytic Leukemia-0",
+      "nci": "C130035",
+      "parent": "CMML",
+      "tissue": "Myeloid"
+    },
+    "cmml1": {
+      "code": "CMML1",
+      "name": "Chronic Myelomonocytic Leukemia-1",
+      "nci": "C36061",
+      "parent": "CMML",
+      "tissue": "Myeloid"
+    },
+    "cmml2": {
+      "code": "CMML2",
+      "name": "Chronic Myelomonocytic Leukemia-2",
+      "nci": "C36062",
+      "parent": "CMML",
+      "tissue": "Myeloid"
+    },
+    "cmpt": {
+      "code": "CMPT",
+      "name": "Ciliated Muconodular Papillary Tumor of the Lung",
+      "nci": null,
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "cnc": {
+      "code": "CNC",
+      "name": "Central Neurocytoma",
+      "nci": "C3791",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "cnl": {
+      "code": "CNL",
+      "name": "Chronic Neutrophilic Leukemia",
+      "nci": "C3179",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "coad": {
+      "code": "COAD",
+      "name": "Colon Adenocarcinoma",
+      "nci": "C4349",
+      "parent": "COADREAD",
+      "tissue": "Bowel"
+    },
+    "coadread": {
+      "code": "COADREAD",
+      "name": "Colorectal Adenocarcinoma",
+      "nci": "C5105",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "com": {
+      "code": "COM",
+      "name": "Carcinoma with Osseous Metaplasia",
+      "nci": "C47848",
+      "parent": "MMBC",
+      "tissue": "Breast"
+    },
+    "cpc": {
+      "code": "CPC",
+      "name": "Choroid Plexus Carcinoma",
+      "nci": "C4715",
+      "parent": "CPT",
+      "tissue": "CNS/Brain"
+    },
+    "cpp": {
+      "code": "CPP",
+      "name": "Choroid Plexus Papilloma",
+      "nci": "C3698",
+      "parent": "CPT",
+      "tissue": "CNS/Brain"
+    },
+    "cpt": {
+      "code": "CPT",
+      "name": "Choroid Plexus Tumor",
+      "nci": "C3473",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "cscc": {
+      "code": "CSCC",
+      "name": "Cutaneous Squamous Cell Carcinoma",
+      "nci": "C4819",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "cschw": {
+      "code": "CSCHW",
+      "name": "Cellular Schwannoma",
+      "nci": "C4724",
+      "parent": "SCHW",
+      "tissue": "Peripheral Nervous System"
+    },
+    "csclc": {
+      "code": "CSCLC",
+      "name": "Combined Small Cell Lung Carcinoma",
+      "nci": "C9137",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "csnos": {
+      "code": "CSNOS",
+      "name": "Breast Invasive Carcinosarcoma, NOS",
+      "nci": null,
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "ctaap": {
+      "code": "CTAAP",
+      "name": "Colonic Type Adenocarcinoma of the Appendix",
+      "nci": null,
+      "parent": "APAD",
+      "tissue": "Bowel"
+    },
+    "cup": {
+      "code": "CUP",
+      "name": "Cancer of Unknown Primary",
+      "nci": "C3812",
+      "parent": "OTHER",
+      "tissue": "Other"
+    },
+    "cupnos": {
+      "code": "CUPNOS",
+      "name": "Cancer of Unknown Primary, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "da": {
+      "code": "DA",
+      "name": "Duodenal Adenocarcinoma",
+      "nci": "C7889",
+      "parent": "SBC",
+      "tissue": "Bowel"
+    },
+    "dastr": {
+      "code": "DASTR",
+      "name": "Diffuse Astrocytoma, MYB- or MYBL1-Altered",
+      "nci": "C7173",
+      "parent": "PDIFLG",
+      "tissue": "CNS/Brain"
+    },
+    "dcis": {
+      "code": "DCIS",
+      "name": "Breast Ductal Carcinoma In Situ",
+      "nci": "C2924",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "dcs": {
+      "code": "DCS",
+      "name": "Dendritic Cell Sarcoma",
+      "nci": "C9294",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "ddchdm": {
+      "code": "DDCHDM",
+      "name": "Dedifferentiated Chordoma",
+      "nci": "C48876",
+      "parent": "CHDM",
+      "tissue": "Bone"
+    },
+    "ddchs": {
+      "code": "DDCHS",
+      "name": "Dedifferentiated Chondrosarcoma",
+      "nci": "C6476",
+      "parent": "CHS",
+      "tissue": "Bone"
+    },
+    "ddls": {
+      "code": "DDLS",
+      "name": "Dedifferentiated Liposarcoma",
+      "nci": "C3704",
+      "parent": "LIPO",
+      "tissue": "Soft Tissue"
+    },
+    "des": {
+      "code": "DES",
+      "name": "Desmoid/Aggressive Fibromatosis",
+      "nci": "C9182",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "desm": {
+      "code": "DESM",
+      "name": "Desmoplastic Melanoma",
+      "nci": "C37257",
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "df": {
+      "code": "DF",
+      "name": "Dermatofibroma",
+      "nci": "C6801",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "dfl": {
+      "code": "DFL",
+      "name": "Duodenal-Type Follicular Lymphoma",
+      "nci": "C138185",
+      "parent": "FL",
+      "tissue": "Lymphoid"
+    },
+    "dfsp": {
+      "code": "DFSP",
+      "name": "Dermatofibrosarcoma Protuberans",
+      "nci": "C4683",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "dhg": {
+      "code": "DHG",
+      "name": "Diffuse Hemispheric Glioma, H3 G34-Mutant",
+      "nci": null,
+      "parent": "PDIFHG",
+      "tissue": "CNS/Brain"
+    },
+    "dia": {
+      "code": "DIA",
+      "name": "Desmoplastic Infantile Astrocytoma",
+      "nci": "C9476",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "difg": {
+      "code": "DIFG",
+      "name": "Diffuse Glioma",
+      "nci": null,
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "dig": {
+      "code": "DIG",
+      "name": "Desmoplastic Infantile Ganglioglioma",
+      "nci": "C4738",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "dlbclci": {
+      "code": "DLBCLCI",
+      "name": "DLBCL Associated with Chronic Inflammation",
+      "nci": "C80289",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "dlbclnos": {
+      "code": "DLBCLNOS",
+      "name": "Diffuse Large B-Cell Lymphoma, NOS",
+      "nci": "C45231",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "dlggmapk": {
+      "code": "DLGGMAPK",
+      "name": "Diffuse Low-Grade Glioma, MAPK Pathway-Altered",
+      "nci": null,
+      "parent": "PDIFLG",
+      "tissue": "CNS/Brain"
+    },
+    "dmbl": {
+      "code": "DMBL",
+      "name": "Desmoplastic/Nodular Medulloblastoma",
+      "nci": "C4956",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "dmblnos": {
+      "code": "DMBLNOS",
+      "name": "Desmoplastic/Nodular Medulloblastoma, NOS",
+      "nci": null,
+      "parent": "DMBL",
+      "tissue": "CNS/Brain"
+    },
+    "dmblshh": {
+      "code": "DMBLSHH",
+      "name": "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+      "nci": null,
+      "parent": "DMBL",
+      "tissue": "CNS/Brain"
+    },
+    "dmg": {
+      "code": "DMG",
+      "name": "Diffuse Midline Glioma, H3 K27-Altered",
+      "nci": null,
+      "parent": "PDIFHG",
+      "tissue": "CNS/Brain"
+    },
+    "dnt": {
+      "code": "DNT",
+      "name": "Dysembryoplastic Neuroepithelial Tumor",
+      "nci": "C9505",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "dphgg": {
+      "code": "DPHGG",
+      "name": "Diffuse Pediatric-Type High-Grade Glioma, H3-Wildtype and IDH-Wildtype",
+      "nci": null,
+      "parent": "PDIFHG",
+      "tissue": "CNS/Brain"
+    },
+    "dsrct": {
+      "code": "DSRCT",
+      "name": "Desmoplastic Small-Round-Cell Tumor",
+      "nci": "C8300",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "dstad": {
+      "code": "DSTAD",
+      "name": "Diffuse Type Stomach Adenocarcinoma",
+      "nci": "C9159",
+      "parent": "STAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "dte": {
+      "code": "DTE",
+      "name": "Desmoplastic Trichoepithelioma",
+      "nci": "C27524",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "eatl": {
+      "code": "EATL",
+      "name": "Enteropathy-Associated T-Cell Lymphoma",
+      "nci": "C4737",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "ebov": {
+      "code": "EBOV",
+      "name": "Endometrioid Borderlin Ovarian Tumor",
+      "nci": "C7983",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ebvdlbclnos": {
+      "code": "EBVDLBCLNOS",
+      "name": "EBV Positive DLBCL, NOS",
+      "nci": "C80281",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "ebvmcu": {
+      "code": "EBVMCU",
+      "name": "EBV Positive Mucocutaneous Ulcer",
+      "nci": "C131906",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "ecad": {
+      "code": "ECAD",
+      "name": "Endocervical Adenocarcinoma",
+      "nci": "C28327",
+      "parent": "CEAD",
+      "tissue": "Cervix"
+    },
+    "ecd": {
+      "code": "ECD",
+      "name": "Erdheim-Chester Disease",
+      "nci": "C53972",
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "egc": {
+      "code": "EGC",
+      "name": "Esophagogastric Adenocarcinoma",
+      "nci": "C9296",
+      "parent": "STOMACH",
+      "tissue": "Esophagus/Stomach"
+    },
+    "egct": {
+      "code": "EGCT",
+      "name": "Extra Gonadal Germ Cell Tumor",
+      "nci": null,
+      "parent": "OTHER",
+      "tissue": "Other"
+    },
+    "ehae": {
+      "code": "EHAE",
+      "name": "Epithelioid Hemangioendothelioma",
+      "nci": "C3800",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "ehch": {
+      "code": "EHCH",
+      "name": "Extrahepatic Cholangiocarcinoma",
+      "nci": null,
+      "parent": "CHOL",
+      "tissue": "Biliary Tract"
+    },
+    "emalt": {
+      "code": "EMALT",
+      "name": "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue (MALT lymphoma)",
+      "nci": "C3898",
+      "parent": "MZL",
+      "tissue": "Lymphoid"
+    },
+    "embc": {
+      "code": "EMBC",
+      "name": "Epithelial Type Metaplastic Breast Cancer",
+      "nci": null,
+      "parent": "MBC",
+      "tissue": "Breast"
+    },
+    "embca": {
+      "code": "EMBCA",
+      "name": "Embryonal Carcinoma",
+      "nci": "C6341",
+      "parent": "NSGCT",
+      "tissue": "Testis"
+    },
+    "embt": {
+      "code": "EMBT",
+      "name": "Embryonal Tumor",
+      "nci": "C3264",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "emchs": {
+      "code": "EMCHS",
+      "name": "Extraskeletal Myxoid Chondrosarcoma",
+      "nci": "C27502",
+      "parent": "CHS",
+      "tissue": "Bone"
+    },
+    "empd": {
+      "code": "EMPD",
+      "name": "Extramammary Paget Disease",
+      "nci": "C3302",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "empsgc": {
+      "code": "EMPSGC",
+      "name": "Endocrine Mucin Producing Sweat Gland Carcinoma",
+      "nci": null,
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "emyoca": {
+      "code": "EMYOCA",
+      "name": "Epithelial-Myoepithelial Carcinoma",
+      "nci": "C4199",
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "encg": {
+      "code": "ENCG",
+      "name": "Encapsulated Glioma",
+      "nci": null,
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "enkl": {
+      "code": "ENKL",
+      "name": "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+      "nci": null,
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "eov": {
+      "code": "EOV",
+      "name": "Endometrioid Ovarian Cancer",
+      "nci": "C7979",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ep": {
+      "code": "EP",
+      "name": "Extraosseous Plasmacytoma",
+      "nci": "C4002",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "epdca": {
+      "code": "EPDCA",
+      "name": "Esophageal Poorly Differentiated Carcinoma",
+      "nci": null,
+      "parent": "STOMACH",
+      "tissue": "Esophagus/Stomach"
+    },
+    "epis": {
+      "code": "EPIS",
+      "name": "Epithelioid Sarcoma",
+      "nci": "C3714",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "epm": {
+      "code": "EPM",
+      "name": "Ependymoma",
+      "nci": "C3017",
+      "parent": "EPMT",
+      "tissue": "CNS/Brain"
+    },
+    "epmt": {
+      "code": "EPMT",
+      "name": "Ependymomal Tumor",
+      "nci": "C6770",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "erms": {
+      "code": "ERMS",
+      "name": "Embryonal Rhabdomyosarcoma",
+      "nci": "C8971",
+      "parent": "RMS",
+      "tissue": "Soft Tissue"
+    },
+    "es": {
+      "code": "ES",
+      "name": "Ewing Sarcoma",
+      "nci": "C4817",
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "esca": {
+      "code": "ESCA",
+      "name": "Esophageal Adenocarcinoma",
+      "nci": "C4025",
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "escc": {
+      "code": "ESCC",
+      "name": "Esophageal Squamous Cell Carcinoma",
+      "nci": "C4024",
+      "parent": "STOMACH",
+      "tissue": "Esophagus/Stomach"
+    },
+    "esmm": {
+      "code": "ESMM",
+      "name": "Mucosal Melanoma of the Esophagus",
+      "nci": "C5707",
+      "parent": "STOMACH",
+      "tissue": "Esophagus/Stomach"
+    },
+    "ess": {
+      "code": "ESS",
+      "name": "Endometrial Stromal Sarcoma",
+      "nci": "C8973",
+      "parent": "USARC",
+      "tissue": "Uterus"
+    },
+    "esst": {
+      "code": "ESST",
+      "name": "Ewing Sarcoma of Soft Tissue",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "et": {
+      "code": "ET",
+      "name": "Essential Thrombocythemia",
+      "nci": "C3407",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "etantr": {
+      "code": "ETANTR",
+      "name": "Embryonal Tumor with Abundant Neuropil and True Rosettes",
+      "nci": "C4915",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "etmf": {
+      "code": "ETMF",
+      "name": "Essential Thrombocythemia Myelofibrosis",
+      "nci": null,
+      "parent": "ET",
+      "tissue": "Myeloid"
+    },
+    "etpll": {
+      "code": "ETPLL",
+      "name": "Early T-Cell Precursor Lymphoblastic Leukemia",
+      "nci": "C130043",
+      "parent": "TLL",
+      "tissue": "Lymphoid"
+    },
+    "ett": {
+      "code": "ETT",
+      "name": "Epithelioid Trophoblastic Tumor",
+      "nci": "C6900",
+      "parent": "GTD",
+      "tissue": "Uterus"
+    },
+    "evn": {
+      "code": "EVN",
+      "name": "Extraventricular Neurocytoma",
+      "nci": "C92555",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "eye": {
+      "code": "EYE",
+      "name": "Eye",
+      "nci": "C12401",
+      "parent": "TISSUE",
+      "tissue": "Eye"
+    },
+    "fa": {
+      "code": "FA",
+      "name": "Fibroadenoma",
+      "nci": "C3744",
+      "parent": "BFN",
+      "tissue": "Breast"
+    },
+    "fdcs": {
+      "code": "FDCS",
+      "name": "Follicular Dendritic Cell Sarcoma",
+      "nci": "C9281",
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "fhptld": {
+      "code": "FHPTLD",
+      "name": "Florid Follicular Hyperplasia PTLD",
+      "nci": null,
+      "parent": "PTLD",
+      "tissue": "Lymphoid"
+    },
+    "fhrcc": {
+      "code": "FHRCC",
+      "name": "FH-Deficient Renal Cell Carcinoma",
+      "nci": null,
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "fibs": {
+      "code": "FIBS",
+      "name": "Fibrosarcoma",
+      "nci": "C3043",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "fios": {
+      "code": "FIOS",
+      "name": "Fibroblastic Osteosarcoma",
+      "nci": "C4020",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "fl": {
+      "code": "FL",
+      "name": "Follicular Lymphoma",
+      "nci": "C3209",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "flc": {
+      "code": "FLC",
+      "name": "Fibrolamellar Carcinoma",
+      "nci": "C4131",
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "frct": {
+      "code": "FRCT",
+      "name": "Fibroblastic Reticular Cell Tumor",
+      "nci": null,
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "ft": {
+      "code": "FT",
+      "name": "Fibrothecoma",
+      "nci": null,
+      "parent": "SCST",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ftcl": {
+      "code": "FTCL",
+      "name": "Follicular T-Cell Lymphoma",
+      "nci": "C139005",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "gb": {
+      "code": "GB",
+      "name": "Glioblastoma, IDH-Wildtype",
+      "nci": "C3058",
+      "parent": "ADIFG",
+      "tissue": "CNS/Brain"
+    },
+    "gbad": {
+      "code": "GBAD",
+      "name": "Gallbladder Adenocarcinoma, NOS",
+      "nci": null,
+      "parent": "GBC",
+      "tissue": "Biliary Tract"
+    },
+    "gbasc": {
+      "code": "GBASC",
+      "name": "Adenosquamous Carcinoma of the Gallbladder",
+      "nci": null,
+      "parent": "GBC",
+      "tissue": "Biliary Tract"
+    },
+    "gbc": {
+      "code": "GBC",
+      "name": "Gallbladder Cancer",
+      "nci": "C3844",
+      "parent": "ICPN",
+      "tissue": "Biliary Tract"
+    },
+    "gcb": {
+      "code": "GCB",
+      "name": "Germinal Center B-Cell Type",
+      "nci": "C36080",
+      "parent": "DLBCLNOS",
+      "tissue": "Lymphoid"
+    },
+    "gccap": {
+      "code": "GCCAP",
+      "name": "Goblet Cell Adenocarcinoma of the Appendix",
+      "nci": null,
+      "parent": "APAD",
+      "tissue": "Bowel"
+    },
+    "gcemu": {
+      "code": "GCEMU",
+      "name": "Gastric Type Mucinous Carcinoma",
+      "nci": null,
+      "parent": "CEMU",
+      "tissue": "Cervix"
+    },
+    "gclc": {
+      "code": "GCLC",
+      "name": "Giant Cell Carcinoma of the Lung",
+      "nci": "C4452",
+      "parent": "LCLC",
+      "tissue": "Lung"
+    },
+    "gct": {
+      "code": "GCT",
+      "name": "Granular Cell Tumor",
+      "nci": "C3474",
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "gctb": {
+      "code": "GCTB",
+      "name": "Giant Cell Tumor of Bone",
+      "nci": "C121932",
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "gctstm": {
+      "code": "GCTSTM",
+      "name": "Germ Cell Tumor with Somatic-Type Malignancy",
+      "nci": null,
+      "parent": "NSGCT",
+      "tissue": "Testis"
+    },
+    "gej": {
+      "code": "GEJ",
+      "name": "Adenocarcinoma of the Gastroesophageal Junction",
+      "nci": "C9296",
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "ghcd": {
+      "code": "GHCD",
+      "name": "Gamma Heavy-Chain Disease",
+      "nci": "C3083",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "ginet": {
+      "code": "GINET",
+      "name": "Gastrointestinal Neuroendocrine Tumors",
+      "nci": "C95404",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "ginetes": {
+      "code": "GINETES",
+      "name": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+      "nci": null,
+      "parent": "STOMACH",
+      "tissue": "Esophagus/Stomach"
+    },
+    "gist": {
+      "code": "GIST",
+      "name": "Gastrointestinal Stromal Tumor",
+      "nci": "C3868",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "gmn": {
+      "code": "GMN",
+      "name": "Germinoma",
+      "nci": "C3753",
+      "parent": "BGCT",
+      "tissue": "CNS/Brain"
+    },
+    "gn": {
+      "code": "GN",
+      "name": "Ganglioneuroma",
+      "nci": null,
+      "parent": "PNS",
+      "tissue": "Peripheral Nervous System"
+    },
+    "gnbl": {
+      "code": "GNBL",
+      "name": "Ganglioneuroblastoma",
+      "nci": "C3790",
+      "parent": "PNS",
+      "tissue": "Peripheral Nervous System"
+    },
+    "gnc": {
+      "code": "GNC",
+      "name": "Gangliocytoma",
+      "nci": "C6934",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "gng": {
+      "code": "GNG",
+      "name": "Ganglioglioma",
+      "nci": "C3788",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "gnos": {
+      "code": "GNOS",
+      "name": "Glioma, NOS",
+      "nci": null,
+      "parent": "DIFG",
+      "tissue": "CNS/Brain"
+    },
+    "grc": {
+      "code": "GRC",
+      "name": "Gastric Remnant Adenocarcinoma",
+      "nci": null,
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "grct": {
+      "code": "GRCT",
+      "name": "Granulosa Cell Tumor",
+      "nci": "C3070",
+      "parent": "SCST",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "gs": {
+      "code": "GS",
+      "name": "Glomangiosarcoma",
+      "nci": "C4221",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "gsarc": {
+      "code": "GSARC",
+      "name": "Gliosarcoma",
+      "nci": "C3796",
+      "parent": "GB",
+      "tissue": "CNS/Brain"
+    },
+    "gtd": {
+      "code": "GTD",
+      "name": "Gestational Trophoblastic Disease",
+      "nci": "C4699",
+      "parent": "UTERUS",
+      "tissue": "Uterus"
+    },
+    "hcc": {
+      "code": "HCC",
+      "name": "Hepatocellular Carcinoma",
+      "nci": "C3099",
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "hccihch": {
+      "code": "HCCIHCH",
+      "name": "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma",
+      "nci": "C3828",
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "hcl": {
+      "code": "HCL",
+      "name": "Hairy Cell Leukemia",
+      "nci": "C7402",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "hcl-v": {
+      "code": "HCL-V",
+      "name": "Hairy Cell Leukemia-Variant",
+      "nci": "C7401",
+      "parent": "SBLU",
+      "tissue": "Lymphoid"
+    },
+    "hdcn": {
+      "code": "HDCN",
+      "name": "Histiocytic and Dendritic Cell Neoplasms",
+      "nci": "C3106",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "hdcs": {
+      "code": "HDCS",
+      "name": "Histiocytic Dendritic Cell Sarcoma",
+      "nci": "C27349",
+      "parent": "DCS",
+      "tissue": "Soft Tissue"
+    },
+    "head_neck": {
+      "code": "HEAD_NECK",
+      "name": "Head and Neck",
+      "nci": "C12418",
+      "parent": "TISSUE",
+      "tissue": "Head and Neck"
+    },
+    "hema": {
+      "code": "HEMA",
+      "name": "Hemangioma",
+      "nci": "C3085",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "hgbcl": {
+      "code": "HGBCL",
+      "name": "High-Grade B-Cell Lymphoma, NOS",
+      "nci": "C80291",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "hgbclmycbcl2": {
+      "code": "HGBCLMYCBCL2",
+      "name": "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+      "nci": "C131913",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "hgess": {
+      "code": "HGESS",
+      "name": "High-Grade Endometrial Stromal Sarcoma",
+      "nci": null,
+      "parent": "ESS",
+      "tissue": "Uterus"
+    },
+    "hggnos": {
+      "code": "HGGNOS",
+      "name": "High-Grade Glioma, NOS",
+      "nci": null,
+      "parent": "DIFG",
+      "tissue": "CNS/Brain"
+    },
+    "hgnec": {
+      "code": "HGNEC",
+      "name": "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum",
+      "nci": "C96156",
+      "parent": "GINET",
+      "tissue": "Bowel"
+    },
+    "hgnee": {
+      "code": "HGNEE",
+      "name": "High-Grade Neuroendocrine Carcinoma of the Esophagus",
+      "nci": null,
+      "parent": "GINETES",
+      "tissue": "Esophagus/Stomach"
+    },
+    "hgnes": {
+      "code": "HGNES",
+      "name": "High-Grade Neuroendocrine Carcinoma of the Stomach",
+      "nci": null,
+      "parent": "GINETES",
+      "tissue": "Esophagus/Stomach"
+    },
+    "hgnet": {
+      "code": "HGNET",
+      "name": "High-Grade Neuroepithelial Tumor",
+      "nci": null,
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "hgonec": {
+      "code": "HGONEC",
+      "name": "High-Grade Neuroendocrine Carcinoma of the Ovary",
+      "nci": null,
+      "parent": "OOVC",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "hgsft": {
+      "code": "HGSFT",
+      "name": "High-Grade Serous Fallopian Tube Cancer",
+      "nci": null,
+      "parent": "OOVC",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "hgsoc": {
+      "code": "HGSOC",
+      "name": "High-Grade Serous Ovarian Cancer",
+      "nci": null,
+      "parent": "SOC",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "hgsos": {
+      "code": "HGSOS",
+      "name": "High-Grade Surface Osteosarcoma",
+      "nci": "C53958",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "hhv8dlbcl": {
+      "code": "HHV8DLBCL",
+      "name": "HHV8 Positive DLBCL, NOS",
+      "nci": null,
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "hl": {
+      "code": "HL",
+      "name": "Hodgkin Lymphoma",
+      "nci": "C9357",
+      "parent": "LNM",
+      "tissue": "Lymphoid"
+    },
+    "hmbl": {
+      "code": "HMBL",
+      "name": "Hemangioblastoma",
+      "nci": "C3801",
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "hnmasc": {
+      "code": "HNMASC",
+      "name": "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin",
+      "nci": null,
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "hnmucm": {
+      "code": "HNMUCM",
+      "name": "Head and Neck Mucosal Melanoma",
+      "nci": null,
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "hnne": {
+      "code": "HNNE",
+      "name": "Head and Neck Neuroendocrine Carcinoma",
+      "nci": null,
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "hnsc": {
+      "code": "HNSC",
+      "name": "Head and Neck Squamous Cell Carcinoma",
+      "nci": "C34447",
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "hnscup": {
+      "code": "HNSCUP",
+      "name": "Head and Neck Squamous Cell Carcinoma of Unknown Primary",
+      "nci": null,
+      "parent": "HNSC",
+      "tissue": "Head and Neck"
+    },
+    "hpccns": {
+      "code": "HPCCNS",
+      "name": "Hemangiopericytoma of the Central Nervous System",
+      "nci": "C4660",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "hphsc": {
+      "code": "HPHSC",
+      "name": "Hypopharynx Squamous Cell Carcinoma",
+      "nci": "C4043",
+      "parent": "HNSC",
+      "tissue": "Head and Neck"
+    },
+    "hs": {
+      "code": "HS",
+      "name": "Histiocytic Sarcoma",
+      "nci": null,
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "hstcl": {
+      "code": "HSTCL",
+      "name": "Hepatosplenic T-cell Lymphoma",
+      "nci": "C8459",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "htat": {
+      "code": "HTAT",
+      "name": "Hyalinizing Trabecular Adenoma of the Thyroid",
+      "nci": "C6846",
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "hvll": {
+      "code": "HVLL",
+      "name": "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+      "nci": "C45327",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "iampca": {
+      "code": "IAMPCA",
+      "name": "Intestinal Ampullary Carcinoma",
+      "nci": "C27415",
+      "parent": "AMPCA",
+      "tissue": "Ampulla of Vater"
+    },
+    "ibc": {
+      "code": "IBC",
+      "name": "Inflammatory Breast Cancer",
+      "nci": "C4001",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "icemu": {
+      "code": "ICEMU",
+      "name": "Intestinal Type Mucinous Carcinoma",
+      "nci": "C40203",
+      "parent": "CEMU",
+      "tissue": "Cervix"
+    },
+    "icpn": {
+      "code": "ICPN",
+      "name": "Intracholecystic Papillary Neoplasm",
+      "nci": null,
+      "parent": "BILIARY_TRACT",
+      "tissue": "Biliary Tract"
+    },
+    "idc": {
+      "code": "IDC",
+      "name": "Breast Invasive Ductal Carcinoma",
+      "nci": "C4194",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "idcs": {
+      "code": "IDCS",
+      "name": "Interdigitating Dendritic Cell Sarcoma",
+      "nci": "C9282",
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "idct": {
+      "code": "IDCT",
+      "name": "Indeterminate Dendritic Cell Tumor",
+      "nci": null,
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "ifs": {
+      "code": "IFS",
+      "name": "Infantile Fibrosarcoma",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "ihch": {
+      "code": "IHCH",
+      "name": "Intrahepatic Cholangiocarcinoma",
+      "nci": "C35417",
+      "parent": "CHOL",
+      "tissue": "Biliary Tract"
+    },
+    "ihg": {
+      "code": "IHG",
+      "name": "Infant-Type Hemispheric Glioma",
+      "nci": null,
+      "parent": "PDIFHG",
+      "tissue": "CNS/Brain"
+    },
+    "ihm": {
+      "code": "IHM",
+      "name": "Invasive Hydatidiform Mole",
+      "nci": "C6985",
+      "parent": "MP",
+      "tissue": "Uterus"
+    },
+    "ilc": {
+      "code": "ILC",
+      "name": "Breast Invasive Lobular Carcinoma",
+      "nci": "C7950",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "immc": {
+      "code": "IMMC",
+      "name": "Breast Invasive Mixed Mucinous Carcinoma",
+      "nci": "C9131",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "imptld": {
+      "code": "IMPTLD",
+      "name": "Infectious Mononucleosis PTLD",
+      "nci": null,
+      "parent": "PTLD",
+      "tissue": "Lymphoid"
+    },
+    "ims": {
+      "code": "IMS",
+      "name": "Myofibromatosis",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "imt": {
+      "code": "IMT",
+      "name": "Inflammatory Myofibroblastic Tumor",
+      "nci": "C6481",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "imtb": {
+      "code": "IMTB",
+      "name": "Inflammatory Myofibroblastic Bladder Tumor",
+      "nci": "C6177",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "imtl": {
+      "code": "IMTL",
+      "name": "Inflammatory Myofibroblastic Lung Tumor",
+      "nci": "C39740",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "ints": {
+      "code": "INTS",
+      "name": "Intimal Sarcoma",
+      "nci": "C53677",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "iopn": {
+      "code": "IOPN",
+      "name": "Intraductal Oncocytic Papillary Neoplasm",
+      "nci": null,
+      "parent": "PACT",
+      "tissue": "Pancreas"
+    },
+    "ipmn": {
+      "code": "IPMN",
+      "name": "Intraductal Papillary Mucinous Neoplasm",
+      "nci": "C38342",
+      "parent": "PACT",
+      "tissue": "Pancreas"
+    },
+    "ipn": {
+      "code": "IPN",
+      "name": "Intraductal Papillary Neoplasm of the Bile Duct",
+      "nci": null,
+      "parent": "BILIARY_TRACT",
+      "tissue": "Biliary Tract"
+    },
+    "isfn": {
+      "code": "ISFN",
+      "name": "In Situ Follicular Neoplasia",
+      "nci": "C138181",
+      "parent": "FL",
+      "tissue": "Lymphoid"
+    },
+    "ism": {
+      "code": "ISM",
+      "name": "Indolent Systemic Mastocytosis",
+      "nci": "C9286",
+      "parent": "SM",
+      "tissue": "Myeloid"
+    },
+    "ismcl": {
+      "code": "ISMCL",
+      "name": "In Situ Mantle Cell Neoplasia",
+      "nci": "C138191",
+      "parent": "MCL",
+      "tissue": "Lymphoid"
+    },
+    "istad": {
+      "code": "ISTAD",
+      "name": "Intestinal Type Stomach Adenocarcinoma",
+      "nci": "C9157",
+      "parent": "STAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "itlpdgi": {
+      "code": "ITLPDGI",
+      "name": "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+      "nci": "C139021",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "itpn": {
+      "code": "ITPN",
+      "name": "Intraductal Tubulopapillary Neoplasm",
+      "nci": null,
+      "parent": "PACT",
+      "tissue": "Pancreas"
+    },
+    "iup": {
+      "code": "IUP",
+      "name": "Inverted Urothelial Papilloma",
+      "nci": null,
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "ivbcl": {
+      "code": "IVBCL",
+      "name": "Intravascular Large B-Cell Lymphoma",
+      "nci": "C4342",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "jmml": {
+      "code": "JMML",
+      "name": "Juvenile Myelomonocytic Leukemia",
+      "nci": "C9233",
+      "parent": "MDS/MPN",
+      "tissue": "Myeloid"
+    },
+    "jscb": {
+      "code": "JSCB",
+      "name": "Juvenile Secretory Carcinoma of the Breast",
+      "nci": null,
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "jxg": {
+      "code": "JXG",
+      "name": "Disseminated Juvenile Xanthogranuloma",
+      "nci": null,
+      "parent": "XGA",
+      "tissue": "Myeloid"
+    },
+    "kidney": {
+      "code": "KIDNEY",
+      "name": "Kidney",
+      "nci": "C12415",
+      "parent": "TISSUE",
+      "tissue": "Kidney"
+    },
+    "lais": {
+      "code": "LAIS",
+      "name": "Lung Adenocarcinoma In Situ",
+      "nci": null,
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "lam": {
+      "code": "LAM",
+      "name": "Pulmonary Lymphangiomyomatosis",
+      "nci": "C38153",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "lamn": {
+      "code": "LAMN",
+      "name": "Low-grade Appendiceal Mucinous Neoplasm",
+      "nci": null,
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "latl": {
+      "code": "LATL",
+      "name": "Lymphoid Atypical",
+      "nci": null,
+      "parent": "LYMPH",
+      "tissue": "Lymphoid"
+    },
+    "lbgn": {
+      "code": "LBGN",
+      "name": "Lymphoid Benign",
+      "nci": null,
+      "parent": "LYMPH",
+      "tissue": "Lymphoid"
+    },
+    "lblirf4": {
+      "code": "LBLIRF4",
+      "name": "Large B-Cell Lymphoma with IRF4 Rearrangement",
+      "nci": "C133494",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "lch": {
+      "code": "LCH",
+      "name": "Langerhans Cell Histiocytosis",
+      "nci": "C3107",
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "lcis": {
+      "code": "LCIS",
+      "name": "Breast Lobular Carcinoma In Situ",
+      "nci": "C4018",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "lclc": {
+      "code": "LCLC",
+      "name": "Large Cell Lung Carcinoma",
+      "nci": "C4450",
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "lcs": {
+      "code": "LCS",
+      "name": "Langerhans Cell Sarcoma",
+      "nci": null,
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "ldchl": {
+      "code": "LDCHL",
+      "name": "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+      "nci": null,
+      "parent": "CHL",
+      "tissue": "Lymphoid"
+    },
+    "ldd": {
+      "code": "LDD",
+      "name": "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease",
+      "nci": "C8419",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "leclc": {
+      "code": "LECLC",
+      "name": "Lymphoepithelioma-like Carcinoma of the Lung",
+      "nci": "C45519",
+      "parent": "LCLC",
+      "tissue": "Lung"
+    },
+    "lgcos": {
+      "code": "LGCOS",
+      "name": "Low-Grade Central Osteosarcoma",
+      "nci": "C6474",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "lgess": {
+      "code": "LGESS",
+      "name": "Low-Grade Endometrial Stromal Sarcoma",
+      "nci": "C4263",
+      "parent": "ESS",
+      "tissue": "Uterus"
+    },
+    "lgfms": {
+      "code": "LGFMS",
+      "name": "Low-Grade Fibromyxoid Sarcoma",
+      "nci": "C45202",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "lggnos": {
+      "code": "LGGNOS",
+      "name": "Low-Grade Glioma, NOS",
+      "nci": null,
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "lgnet": {
+      "code": "LGNET",
+      "name": "Polymorphous Low-Grade Neuroepithelial Tumor of the Young",
+      "nci": null,
+      "parent": "PDIFLG",
+      "tissue": "CNS/Brain"
+    },
+    "lgsoc": {
+      "code": "LGSOC",
+      "name": "Low-Grade Serous Ovarian Cancer",
+      "nci": null,
+      "parent": "SOC",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "lgt": {
+      "code": "LGT",
+      "name": "Lacrimal Gland Tumor",
+      "nci": null,
+      "parent": "EYE",
+      "tissue": "Eye"
+    },
+    "liad": {
+      "code": "LIAD",
+      "name": "Hepatocellular Adenoma",
+      "nci": "C3758",
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "lias": {
+      "code": "LIAS",
+      "name": "Liver Angiosarcoma",
+      "nci": "C4438",
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "lihb": {
+      "code": "LIHB",
+      "name": "Hepatoblastoma",
+      "nci": "C3728",
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "limnet": {
+      "code": "LIMNET",
+      "name": "Malignant Nonepithelial Tumor of the Liver",
+      "nci": null,
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "lipo": {
+      "code": "LIPO",
+      "name": "Liposarcoma",
+      "nci": "C3194",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "liver": {
+      "code": "LIVER",
+      "name": "Liver",
+      "nci": "C12392",
+      "parent": "TISSUE",
+      "tissue": "Liver"
+    },
+    "lm": {
+      "code": "LM",
+      "name": "Leiomyoma",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "lms": {
+      "code": "LMS",
+      "name": "Leiomyosarcoma",
+      "nci": "C3158",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "lnet": {
+      "code": "LNET",
+      "name": "Lung Neuroendocrine Tumor",
+      "nci": "C5670",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "lnm": {
+      "code": "LNM",
+      "name": "Lymphoid Neoplasm",
+      "nci": null,
+      "parent": "LYMPH",
+      "tissue": "Lymphoid"
+    },
+    "lpl": {
+      "code": "LPL",
+      "name": "Lymphoplasmacytic Lymphoma",
+      "nci": "C3212",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "lrchl": {
+      "code": "LRCHL",
+      "name": "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+      "nci": null,
+      "parent": "CHL",
+      "tissue": "Lymphoid"
+    },
+    "luacc": {
+      "code": "LUACC",
+      "name": "Adenoid Cystic Carcinoma of the Lung",
+      "nci": "C5666",
+      "parent": "SGTTL",
+      "tissue": "Lung"
+    },
+    "luad": {
+      "code": "LUAD",
+      "name": "Lung Adenocarcinoma",
+      "nci": "C3512",
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "luas": {
+      "code": "LUAS",
+      "name": "Lung Adenosquamous Carcinoma",
+      "nci": "C9133",
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "luca": {
+      "code": "LUCA",
+      "name": "Lung Carcinoid",
+      "nci": "C4038",
+      "parent": "LNET",
+      "tissue": "Lung"
+    },
+    "lumec": {
+      "code": "LUMEC",
+      "name": "Mucoepidermoid Carcinoma of the Lung",
+      "nci": "C45544",
+      "parent": "SGTTL",
+      "tissue": "Lung"
+    },
+    "lune": {
+      "code": "LUNE",
+      "name": "Large Cell Neuroendocrine Carcinoma",
+      "nci": "C6875",
+      "parent": "LNET",
+      "tissue": "Lung"
+    },
+    "lung": {
+      "code": "LUNG",
+      "name": "Lung",
+      "nci": "C12468",
+      "parent": "TISSUE",
+      "tissue": "Lung"
+    },
+    "lupc": {
+      "code": "LUPC",
+      "name": "Pleomorphic Carcinoma of the Lung",
+      "nci": "C45542",
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "lusc": {
+      "code": "LUSC",
+      "name": "Lung Squamous Cell Carcinoma",
+      "nci": "C3493",
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "lxsc": {
+      "code": "LXSC",
+      "name": "Larynx Squamous Cell Carcinoma",
+      "nci": "C4044",
+      "parent": "HNSC",
+      "tissue": "Head and Neck"
+    },
+    "lyg": {
+      "code": "LYG",
+      "name": "Lymphomatoid Granulomatosis",
+      "nci": "C7930",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "lymph": {
+      "code": "LYMPH",
+      "name": "Lymphoid",
+      "nci": "C13252",
+      "parent": "TISSUE",
+      "tissue": "Lymphoid"
+    },
+    "lyp": {
+      "code": "LYP",
+      "name": "Lymphomatoid Papulosis",
+      "nci": "C3721",
+      "parent": "PCLPD",
+      "tissue": "Lymphoid"
+    },
+    "maap": {
+      "code": "MAAP",
+      "name": "Mucinous Adenocarcinoma of the Appendix",
+      "nci": "C43558",
+      "parent": "APAD",
+      "tissue": "Bowel"
+    },
+    "mac": {
+      "code": "MAC",
+      "name": "Microcystic Adnexal Carcinoma",
+      "nci": "C7581",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "macr": {
+      "code": "MACR",
+      "name": "Mucinous Adenocarcinoma of the Colon and Rectum",
+      "nci": "C43585",
+      "parent": "COADREAD",
+      "tissue": "Bowel"
+    },
+    "mampca": {
+      "code": "MAMPCA",
+      "name": "Mixed Ampullary Carcinoma",
+      "nci": null,
+      "parent": "AMPCA",
+      "tissue": "Ampulla of Vater"
+    },
+    "masc": {
+      "code": "MASC",
+      "name": "Metaplastic Adenosquamous Carcinoma",
+      "nci": "C40361",
+      "parent": "EMBC",
+      "tissue": "Breast"
+    },
+    "mascc": {
+      "code": "MASCC",
+      "name": "Metaplastic Adenocarcinoma with Spindle Cell Differentiation",
+      "nci": "C40358",
+      "parent": "EMBC",
+      "tissue": "Breast"
+    },
+    "matpl": {
+      "code": "MATPL",
+      "name": "Myeloid Atypical",
+      "nci": null,
+      "parent": "MYELOID",
+      "tissue": "Myeloid"
+    },
+    "mbc": {
+      "code": "MBC",
+      "name": "Metaplastic Breast Cancer",
+      "nci": "C5164",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "mben": {
+      "code": "MBEN",
+      "name": "Medulloblastoma with Extensive Nodularity",
+      "nci": "C5407",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "mbennos": {
+      "code": "MBENNOS",
+      "name": "Medulloblastoma with Extensive Nodularity, NOS",
+      "nci": null,
+      "parent": "MBEN",
+      "tissue": "CNS/Brain"
+    },
+    "mbenshh": {
+      "code": "MBENSHH",
+      "name": "Medulloblastoma with Extensive Nodularity, SHH Subtype",
+      "nci": null,
+      "parent": "MBEN",
+      "tissue": "CNS/Brain"
+    },
+    "mbgn": {
+      "code": "MBGN",
+      "name": "Myeloid Benign",
+      "nci": null,
+      "parent": "MYELOID",
+      "tissue": "Myeloid"
+    },
+    "mbl": {
+      "code": "MBL",
+      "name": "Medulloblastoma",
+      "nci": "C3222",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "mblg3": {
+      "code": "MBLG3",
+      "name": "Medulloblastoma, Group 3",
+      "nci": null,
+      "parent": "MBLNWS",
+      "tissue": "CNS/Brain"
+    },
+    "mblg4": {
+      "code": "MBLG4",
+      "name": "Medulloblastoma, Group 4",
+      "nci": null,
+      "parent": "MBLNWS",
+      "tissue": "CNS/Brain"
+    },
+    "mblnos": {
+      "code": "MBLNOS",
+      "name": "Medulloblastoma, NOS",
+      "nci": null,
+      "parent": "MBL",
+      "tissue": "CNS/Brain"
+    },
+    "mblnws": {
+      "code": "MBLNWS",
+      "name": "Medulloblastoma, Non-WNT, Non-SHH",
+      "nci": null,
+      "parent": "MBL",
+      "tissue": "CNS/Brain"
+    },
+    "mblshh": {
+      "code": "MBLSHH",
+      "name": "Medulloblastoma, SHH Subtype",
+      "nci": null,
+      "parent": "MBL",
+      "tissue": "CNS/Brain"
+    },
+    "mblwnt": {
+      "code": "MBLWNT",
+      "name": "Medulloblastoma, WNT Subtype",
+      "nci": null,
+      "parent": "MBL",
+      "tissue": "CNS/Brain"
+    },
+    "mbn": {
+      "code": "MBN",
+      "name": "Mature B-Cell Neoplasms",
+      "nci": "C3457",
+      "parent": "NHL",
+      "tissue": "Lymphoid"
+    },
+    "mbov": {
+      "code": "MBOV",
+      "name": "Mucinous Borderline Ovarian Tumor",
+      "nci": "C40036",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "mbt": {
+      "code": "MBT",
+      "name": "Miscellaneous Brain Tumor",
+      "nci": "C6974",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "mcbcl": {
+      "code": "MCBCL",
+      "name": "Monoclonal B-Cell Lymphocytosis",
+      "nci": "C80310",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "mcc": {
+      "code": "MCC",
+      "name": "Merkel Cell Carcinoma",
+      "nci": "C9231",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "mcce": {
+      "code": "MCCE",
+      "name": "Mixed Cervical Carcinoma",
+      "nci": null,
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "mcchl": {
+      "code": "MCCHL",
+      "name": "Mixed Cellularity Classical Hodgkin Lymphoma",
+      "nci": null,
+      "parent": "CHL",
+      "tissue": "Lymphoid"
+    },
+    "mcd": {
+      "code": "MCD",
+      "name": "Mastocytosis",
+      "nci": "C84269",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mchs": {
+      "code": "MCHS",
+      "name": "Mesenchymal Chondrosarcoma",
+      "nci": "C53493",
+      "parent": "CHS",
+      "tissue": "Bone"
+    },
+    "mchscns": {
+      "code": "MCHSCNS",
+      "name": "Mesenchymal Chondrosarcoma of the CNS",
+      "nci": "C3737",
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "mcl": {
+      "code": "MCL",
+      "name": "Mantle Cell Lymphoma",
+      "nci": "C4337",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "mcn": {
+      "code": "MCN",
+      "name": "Mucinous Cystic Neoplasm",
+      "nci": "C41247",
+      "parent": "PACT",
+      "tissue": "Pancreas"
+    },
+    "mcs": {
+      "code": "MCS",
+      "name": "Metaplastic Carcinosarcoma",
+      "nci": null,
+      "parent": "MMBC",
+      "tissue": "Breast"
+    },
+    "mcsl": {
+      "code": "MCSL",
+      "name": "Mast Cell Sarcoma",
+      "nci": "C9348",
+      "parent": "MCD",
+      "tissue": "Myeloid"
+    },
+    "mdep": {
+      "code": "MDEP",
+      "name": "Medulloepithelioma",
+      "nci": "C4327",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "mdlc": {
+      "code": "MDLC",
+      "name": "Breast Mixed Ductal and Lobular Carcinoma",
+      "nci": "C5160",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "mds": {
+      "code": "MDS",
+      "name": "Myelodysplastic Syndromes",
+      "nci": "C3247",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mds/mpn": {
+      "code": "MDS/MPN",
+      "name": "Myelodysplastic/Myeloproliferative Neoplasms",
+      "nci": "C27262",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mdseb": {
+      "code": "MDSEB",
+      "name": "MDS with Excess Blasts",
+      "nci": "C7506",
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "mdseb1": {
+      "code": "MDSEB1",
+      "name": "MDS with excess blasts-1",
+      "nci": "C7167",
+      "parent": "MDSEB",
+      "tissue": "Myeloid"
+    },
+    "mdseb2": {
+      "code": "MDSEB2",
+      "name": "MDS with excess blasts-2",
+      "nci": "C7168",
+      "parent": "MDSEB",
+      "tissue": "Myeloid"
+    },
+    "mdsid5q": {
+      "code": "MDSID5Q",
+      "name": "MDS with Isolated Del(5q)",
+      "nci": "C6867",
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "mdsmd": {
+      "code": "MDSMD",
+      "name": "MDS with Multilineage Dysplasia",
+      "nci": "C8574",
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "mdsmpnrst": {
+      "code": "MDSMPNRST",
+      "name": "MDS/MPN with Ring Sideroblasts and Thrombocytosis",
+      "nci": "C82616",
+      "parent": "MDS/MPN",
+      "tissue": "Myeloid"
+    },
+    "mdsmpnu": {
+      "code": "MDSMPNU",
+      "name": "MDS/MPN, Unclassifiable",
+      "nci": "C27780",
+      "parent": "MDS/MPN",
+      "tissue": "Myeloid"
+    },
+    "mdsrs": {
+      "code": "MDSRS",
+      "name": "MDS with Ring Sideroblasts",
+      "nci": null,
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "mdsrsmd": {
+      "code": "MDSRSMD",
+      "name": "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+      "nci": "C27726",
+      "parent": "MDSRS",
+      "tissue": "Myeloid"
+    },
+    "mdsrssld": {
+      "code": "MDSRSSLD",
+      "name": "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+      "nci": "C130037",
+      "parent": "MDSRS",
+      "tissue": "Myeloid"
+    },
+    "mdssld": {
+      "code": "MDSSLD",
+      "name": "MDS with Single Lineage Dysplasia",
+      "nci": "C82591",
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "mdsu": {
+      "code": "MDSU",
+      "name": "MDS, Unclassifiable",
+      "nci": "C8648",
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "mdswp": {
+      "code": "MDSWP",
+      "name": "Myelodysplastic Workup",
+      "nci": null,
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "meitl": {
+      "code": "MEITL",
+      "name": "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+      "nci": "C96058",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "mel": {
+      "code": "MEL",
+      "name": "Melanoma",
+      "nci": "C3224",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "melc": {
+      "code": "MELC",
+      "name": "Melanocytoma",
+      "nci": null,
+      "parent": "PCNSMT",
+      "tissue": "CNS/Brain"
+    },
+    "mf": {
+      "code": "MF",
+      "name": "Myofibroma",
+      "nci": "C7052",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "mfh": {
+      "code": "MFH",
+      "name": "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma",
+      "nci": "C4247",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "mfs": {
+      "code": "MFS",
+      "name": "Myxofibrosarcoma",
+      "nci": "C6496",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "mgct": {
+      "code": "MGCT",
+      "name": "Mixed Germ Cell Tumor",
+      "nci": "C6347",
+      "parent": "NSGCT",
+      "tissue": "Testis"
+    },
+    "mgst": {
+      "code": "MGST",
+      "name": "Malignant Glomus Tumor",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "mgus": {
+      "code": "MGUS",
+      "name": "Monoclonal Gammopathy of Undetermined Significance",
+      "nci": "C3996",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "mgusiga": {
+      "code": "MGUSIGA",
+      "name": "IgA",
+      "nci": null,
+      "parent": "MGUS",
+      "tissue": "Lymphoid"
+    },
+    "mgusigg": {
+      "code": "MGUSIGG",
+      "name": "IgG",
+      "nci": null,
+      "parent": "MGUS",
+      "tissue": "Lymphoid"
+    },
+    "mgusigm": {
+      "code": "MGUSIGM",
+      "name": "IgM",
+      "nci": null,
+      "parent": "MGUS",
+      "tissue": "Lymphoid"
+    },
+    "mhcd": {
+      "code": "MHCD",
+      "name": "Mu Heavy-Chain Disease",
+      "nci": "C3892",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "midd": {
+      "code": "MIDD",
+      "name": "Monoclonal Immunoglobulin Deposition Diseases",
+      "nci": "C7151",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "midda": {
+      "code": "MIDDA",
+      "name": "Amyloidosis",
+      "nci": "C2868",
+      "parent": "MIDD",
+      "tissue": "Lymphoid"
+    },
+    "middo": {
+      "code": "MIDDO",
+      "name": "Monoclonal Immunoglobulin Deposition Diseases, Other",
+      "nci": null,
+      "parent": "MIDD",
+      "tissue": "Lymphoid"
+    },
+    "mixed": {
+      "code": "MIXED",
+      "name": "Mixed Cancer Types",
+      "nci": null,
+      "parent": "OTHER",
+      "tissue": "Other"
+    },
+    "mlads": {
+      "code": "MLADS",
+      "name": "Myeloid Leukemia Associated with Down Syndrome",
+      "nci": "C43223",
+      "parent": "MPRDS",
+      "tissue": "Myeloid"
+    },
+    "mlner": {
+      "code": "MLNER",
+      "name": "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+      "nci": "C84270",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mlnfgfr1": {
+      "code": "MLNFGFR1",
+      "name": "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+      "nci": "C84277",
+      "parent": "MLNER",
+      "tissue": "Myeloid"
+    },
+    "mlnpcm1jak2": {
+      "code": "MLNPCM1JAK2",
+      "name": "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+      "nci": "C129853",
+      "parent": "MLNER",
+      "tissue": "Myeloid"
+    },
+    "mlnpdgfra": {
+      "code": "MLNPDGFRA",
+      "name": "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement",
+      "nci": "C84275",
+      "parent": "MLNER",
+      "tissue": "Myeloid"
+    },
+    "mlnpdgfrb": {
+      "code": "MLNPDGFRB",
+      "name": "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+      "nci": "C84276",
+      "parent": "MLNER",
+      "tissue": "Myeloid"
+    },
+    "mlym": {
+      "code": "MLYM",
+      "name": "Malignant Lymphoma",
+      "nci": "C3208",
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "mmb": {
+      "code": "MMB",
+      "name": "Medullomyoblastoma",
+      "nci": "C3706",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "mmbc": {
+      "code": "MMBC",
+      "name": "Mixed Type Metaplastic Breast Cancer",
+      "nci": "C40364",
+      "parent": "MBC",
+      "tissue": "Breast"
+    },
+    "mmbl": {
+      "code": "MMBL",
+      "name": "Melanotic Medulloblastoma",
+      "nci": "C9497",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "mnet": {
+      "code": "MNET",
+      "name": "Miscellaneous Neuroepithelial Tumor",
+      "nci": "C7172",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "mng": {
+      "code": "MNG",
+      "name": "Meningioma",
+      "nci": "C3230",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "mnglp": {
+      "code": "MNGLP",
+      "name": "Myeloid Neoplasms with Germ Line Predisposition",
+      "nci": null,
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mngt": {
+      "code": "MNGT",
+      "name": "Meningothelial Tumor",
+      "nci": "C3229",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "mnm": {
+      "code": "MNM",
+      "name": "Myeloid Neoplasm",
+      "nci": null,
+      "parent": "MYELOID",
+      "tissue": "Myeloid"
+    },
+    "mov": {
+      "code": "MOV",
+      "name": "Mucinous Ovarian Cancer",
+      "nci": "C5242",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "mp": {
+      "code": "MP",
+      "name": "Molar Pregnancy",
+      "nci": "C3110",
+      "parent": "GTD",
+      "tissue": "Uterus"
+    },
+    "mpalbcrabl1": {
+      "code": "MPALBCRABL1",
+      "name": "Mixed Phenotype Acute Leukemia with t(9;22)(q34.1;q11.2); BCR-ABL1",
+      "nci": "C82192",
+      "parent": "ALAL",
+      "tissue": "Myeloid"
+    },
+    "mpalbnos": {
+      "code": "MPALBNOS",
+      "name": "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+      "nci": "C82212",
+      "parent": "ALAL",
+      "tissue": "Myeloid"
+    },
+    "mpalkmt2a": {
+      "code": "MPALKMT2A",
+      "name": "Mixed Phenotype Acute Leukemia with t(v;11q23.3); KMT2A Rearranged",
+      "nci": "C82203",
+      "parent": "ALAL",
+      "tissue": "Myeloid"
+    },
+    "mpaltnos": {
+      "code": "MPALTNOS",
+      "name": "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+      "nci": "C82213",
+      "parent": "ALAL",
+      "tissue": "Myeloid"
+    },
+    "mpc": {
+      "code": "MPC",
+      "name": "Myopericytoma",
+      "nci": "C50401",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "mpe": {
+      "code": "MPE",
+      "name": "Myxopapillary Ependymoma",
+      "nci": "C3697",
+      "parent": "EPMT",
+      "tissue": "CNS/Brain"
+    },
+    "mpn": {
+      "code": "MPN",
+      "name": "Myeloproliferative Neoplasms",
+      "nci": "C4345",
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mpnst": {
+      "code": "MPNST",
+      "name": "Malignant Peripheral Nerve Sheath Tumor",
+      "nci": "C3798",
+      "parent": "NST",
+      "tissue": "Peripheral Nervous System"
+    },
+    "mpnu": {
+      "code": "MPNU",
+      "name": "Myeloproliferative Neoplasms, Unclassifiable",
+      "nci": "C27350",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "mpnwp": {
+      "code": "MPNWP",
+      "name": "Myeloproliferative Workup",
+      "nci": null,
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "mprds": {
+      "code": "MPRDS",
+      "name": "Myeloid Proliferations Related to Down Syndrome",
+      "nci": "C82338",
+      "parent": "AML",
+      "tissue": "Myeloid"
+    },
+    "mpt": {
+      "code": "MPT",
+      "name": "Malignant Phyllodes Tumor of the Breast",
+      "nci": "C4504",
+      "parent": "PT",
+      "tissue": "Breast"
+    },
+    "mptld": {
+      "code": "MPTLD",
+      "name": "Monomorphic PTLD (B- and T-/NK-cell types)",
+      "nci": null,
+      "parent": "PTLD",
+      "tissue": "Lymphoid"
+    },
+    "mrc": {
+      "code": "MRC",
+      "name": "Renal Medullary Carcinoma",
+      "nci": null,
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "mrls": {
+      "code": "MRLS",
+      "name": "Myxoid/Round-Cell Liposarcoma",
+      "nci": "C27781",
+      "parent": "LIPO",
+      "tissue": "Soft Tissue"
+    },
+    "mrt": {
+      "code": "MRT",
+      "name": "Rhabdoid Cancer",
+      "nci": "C3808",
+      "parent": "KIDNEY",
+      "tissue": "Kidney"
+    },
+    "mrtl": {
+      "code": "MRTL",
+      "name": "Malignant Rhabdoid Tumor of the Liver",
+      "nci": null,
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "ms": {
+      "code": "MS",
+      "name": "Myeloid Sarcoma",
+      "nci": "C3520",
+      "parent": "AML",
+      "tissue": "Myeloid"
+    },
+    "mscc": {
+      "code": "MSCC",
+      "name": "Metaplastic Squamous Cell Carcinoma",
+      "nci": "C5177",
+      "parent": "EMBC",
+      "tissue": "Breast"
+    },
+    "mschw": {
+      "code": "MSCHW",
+      "name": "Melanotic Schwannoma",
+      "nci": "C6970",
+      "parent": "SCHW",
+      "tissue": "Peripheral Nervous System"
+    },
+    "mstad": {
+      "code": "MSTAD",
+      "name": "Mucinous Stomach Adenocarcinoma",
+      "nci": "C5248",
+      "parent": "STAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "mt": {
+      "code": "MT",
+      "name": "Malignant Tumor",
+      "nci": "C9305",
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "mtnn": {
+      "code": "MTNN",
+      "name": "Mature T and NK Neoplasms",
+      "nci": "C3466",
+      "parent": "NHL",
+      "tissue": "Lymphoid"
+    },
+    "mtscc": {
+      "code": "MTSCC",
+      "name": "Renal Mucinous Tubular Spindle Cell Carcinoma",
+      "nci": "C39807",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "mucc": {
+      "code": "MUCC",
+      "name": "Mucoepidermoid Carcinoma",
+      "nci": "C3772",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "mup": {
+      "code": "MUP",
+      "name": "Melanoma of Unknown Primary",
+      "nci": null,
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "mxov": {
+      "code": "MXOV",
+      "name": "Mixed Ovarian Carcinoma",
+      "nci": "C40090",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "mycf": {
+      "code": "MYCF",
+      "name": "Mycosis Fungoides",
+      "nci": "C3246",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "mychs": {
+      "code": "MYCHS",
+      "name": "Myxoid Chondrosarcoma",
+      "nci": "C4303",
+      "parent": "CHS",
+      "tissue": "Bone"
+    },
+    "myec": {
+      "code": "MYEC",
+      "name": "Myoepithelial Carcinoma",
+      "nci": "C35700",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "myeloid": {
+      "code": "MYELOID",
+      "name": "Myeloid",
+      "nci": "C12434",
+      "parent": "TISSUE",
+      "tissue": "Myeloid"
+    },
+    "myxo": {
+      "code": "MYXO",
+      "name": "Myxoma",
+      "nci": "C6577",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "mzl": {
+      "code": "MZL",
+      "name": "Marginal Zone Lymphoma",
+      "nci": "C4341",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "nbl": {
+      "code": "NBL",
+      "name": "Neuroblastoma",
+      "nci": "C3270",
+      "parent": "PNS",
+      "tissue": "Peripheral Nervous System"
+    },
+    "nccrcc": {
+      "code": "NCCRCC",
+      "name": "Renal Non-Clear Cell Carcinoma",
+      "nci": null,
+      "parent": "RCC",
+      "tissue": "Kidney"
+    },
+    "necnos": {
+      "code": "NECNOS",
+      "name": "Neuroendocrine Carcinoma, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "netnos": {
+      "code": "NETNOS",
+      "name": "Neuroendocrine Tumor, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "nfib": {
+      "code": "NFIB",
+      "name": "Neurofibroma",
+      "nci": "C3272",
+      "parent": "NST",
+      "tissue": "Peripheral Nervous System"
+    },
+    "nhl": {
+      "code": "NHL",
+      "name": "Non-Hodgkin Lymphoma",
+      "nci": "C3211",
+      "parent": "LNM",
+      "tissue": "Lymphoid"
+    },
+    "nkcll": {
+      "code": "NKCLL",
+      "name": "Natural Killer (NK) Cell Lymphoblastic Leukemia/Lymphoma",
+      "nci": "C82217",
+      "parent": "TLL",
+      "tissue": "Lymphoid"
+    },
+    "nlphl": {
+      "code": "NLPHL",
+      "name": "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+      "nci": "C7258",
+      "parent": "HL",
+      "tissue": "Lymphoid"
+    },
+    "nmchn": {
+      "code": "NMCHN",
+      "name": "NUT Midline Carcinoma of the Head and Neck",
+      "nci": "C45716",
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "nmzl": {
+      "code": "NMZL",
+      "name": "Nodal Marginal Zone Lymphoma",
+      "nci": "C8863",
+      "parent": "MZL",
+      "tissue": "Lymphoid"
+    },
+    "npc": {
+      "code": "NPC",
+      "name": "Nasopharyngeal Carcinoma",
+      "nci": "C3871",
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "nptltfh": {
+      "code": "NPTLTFH",
+      "name": "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+      "nci": "C168778",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "nrcc": {
+      "code": "NRCC",
+      "name": "NUTM1 Renal Cell Carcinoma",
+      "nci": null,
+      "parent": "RCC",
+      "tissue": "Kidney"
+    },
+    "nschl": {
+      "code": "NSCHL",
+      "name": "Nodular Sclerosis Classical Hodgkin Lymphoma",
+      "nci": null,
+      "parent": "CHL",
+      "tissue": "Lymphoid"
+    },
+    "nsclc": {
+      "code": "NSCLC",
+      "name": "Non-Small Cell Lung Cancer",
+      "nci": "C2926",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "nsclcpd": {
+      "code": "NSCLCPD",
+      "name": "Poorly Differentiated Non-Small Cell Lung Cancer",
+      "nci": null,
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "nsgct": {
+      "code": "NSGCT",
+      "name": "Non-Seminomatous Germ Cell Tumor",
+      "nci": null,
+      "parent": "TESTIS",
+      "tissue": "Testis"
+    },
+    "nst": {
+      "code": "NST",
+      "name": "Nerve Sheath Tumor",
+      "nci": "C4972",
+      "parent": "PNS",
+      "tissue": "Peripheral Nervous System"
+    },
+    "nutcl": {
+      "code": "NUTCL",
+      "name": "NUT Carcinoma of the Lung",
+      "nci": null,
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "nvrint": {
+      "code": "NVRINT",
+      "name": "Neoplastic Vs Reactive",
+      "nci": null,
+      "parent": "MNM",
+      "tissue": "Myeloid"
+    },
+    "oat": {
+      "code": "OAT",
+      "name": "Oncocytic Adenoma of the Thyroid",
+      "nci": null,
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "ocnos": {
+      "code": "OCNOS",
+      "name": "Ovarian Choriocarcinoma, NOS",
+      "nci": null,
+      "parent": "OOVC",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ocs": {
+      "code": "OCS",
+      "name": "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor",
+      "nci": "C9192",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ocsc": {
+      "code": "OCSC",
+      "name": "Oral Cavity Squamous Cell Carcinoma",
+      "nci": "C4833",
+      "parent": "HNSC",
+      "tissue": "Head and Neck"
+    },
+    "odg": {
+      "code": "ODG",
+      "name": "Oligodendroglioma, IDH-mutant, and 1p/19q-Codeleted",
+      "nci": "C3288",
+      "parent": "ADIFG",
+      "tissue": "CNS/Brain"
+    },
+    "odg2": {
+      "code": "ODG2",
+      "name": "Oligodendroglioma, IDH-mutant, and 1p/19q-Codeleted, Grade 2",
+      "nci": null,
+      "parent": "ODG",
+      "tissue": "CNS/Brain"
+    },
+    "odg3": {
+      "code": "ODG3",
+      "name": "Oligodendroglioma, IDH-mutant, and 1p/19q-Codeleted, Grade 3",
+      "nci": null,
+      "parent": "ODG",
+      "tissue": "CNS/Brain"
+    },
+    "odgc": {
+      "code": "ODGC",
+      "name": "Odontogenic Carcinoma",
+      "nci": "C4812",
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "odys": {
+      "code": "ODYS",
+      "name": "Dysgerminoma",
+      "nci": "C8106",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "oec": {
+      "code": "OEC",
+      "name": "Embryonal Carcinoma",
+      "nci": "C8108",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ofmt": {
+      "code": "OFMT",
+      "name": "Ossifying Fibromyxoid Tumor",
+      "nci": "C6582",
+      "parent": "MYXO",
+      "tissue": "Soft Tissue"
+    },
+    "ogbl": {
+      "code": "OGBL",
+      "name": "Gonadoblastoma",
+      "nci": "C39985",
+      "parent": "SCST",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ogct": {
+      "code": "OGCT",
+      "name": "Ovarian Germ Cell Tumor",
+      "nci": "C3873",
+      "parent": "OVARY",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ohnca": {
+      "code": "OHNCA",
+      "name": "Head and Neck Carcinoma, Other",
+      "nci": null,
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "oimt": {
+      "code": "OIMT",
+      "name": "Immature Teratoma",
+      "nci": "C8111",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "om": {
+      "code": "OM",
+      "name": "Ocular Melanoma",
+      "nci": "C8562",
+      "parent": "EYE",
+      "tissue": "Eye"
+    },
+    "omgct": {
+      "code": "OMGCT",
+      "name": "Mixed Germ Cell Tumor",
+      "nci": "C8114",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "omt": {
+      "code": "OMT",
+      "name": "Mature Teratoma",
+      "nci": "C8112",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "onbl": {
+      "code": "ONBL",
+      "name": "Olfactory Neuroblastoma",
+      "nci": "C3789",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "oovc": {
+      "code": "OOVC",
+      "name": "Ovarian Cancer, Other",
+      "nci": null,
+      "parent": "OVARY",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ope": {
+      "code": "OPE",
+      "name": "Polyembryoma",
+      "nci": "C39990",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ophsc": {
+      "code": "OPHSC",
+      "name": "Oropharynx Squamous Cell Carcinoma",
+      "nci": null,
+      "parent": "HNSC",
+      "tissue": "Head and Neck"
+    },
+    "os": {
+      "code": "OS",
+      "name": "Osteosarcoma",
+      "nci": "C9145",
+      "parent": "BONE",
+      "tissue": "Bone"
+    },
+    "osaca": {
+      "code": "OSACA",
+      "name": "Salivary Carcinoma, Other",
+      "nci": null,
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "osgct": {
+      "code": "OSGCT",
+      "name": "Osteoclastic Giant Cell Tumor",
+      "nci": null,
+      "parent": "UCP",
+      "tissue": "Pancreas"
+    },
+    "osmad": {
+      "code": "OSMAD",
+      "name": "Ovarian Seromucinous Adenoma",
+      "nci": null,
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "osmbt": {
+      "code": "OSMBT",
+      "name": "Ovarian Seromucinous Borderline Tumor",
+      "nci": "C40038",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "osmca": {
+      "code": "OSMCA",
+      "name": "Ovarian Seromucinous Carcinoma",
+      "nci": "C40090",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "osos": {
+      "code": "OSOS",
+      "name": "Osteoblastic Osteosarcoma",
+      "nci": "C53953",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "other": {
+      "code": "OTHER",
+      "name": "Other",
+      "nci": "C17649",
+      "parent": "TISSUE",
+      "tissue": "Other"
+    },
+    "ousarc": {
+      "code": "OUSARC",
+      "name": "Uterine Sarcoma, Other",
+      "nci": null,
+      "parent": "USARC",
+      "tissue": "Uterus"
+    },
+    "outt": {
+      "code": "OUTT",
+      "name": "Other Uterine Tumor",
+      "nci": null,
+      "parent": "UTERUS",
+      "tissue": "Uterus"
+    },
+    "ovary": {
+      "code": "OVARY",
+      "name": "Ovary/Fallopian Tube",
+      "nci": "C12404",
+      "parent": "TISSUE",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "ovt": {
+      "code": "OVT",
+      "name": "Ovarian Epithelial Tumor",
+      "nci": "C4381",
+      "parent": "OVARY",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "oyst": {
+      "code": "OYST",
+      "name": "Yolk Sac Tumor",
+      "nci": "C8107",
+      "parent": "OGCT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "paac": {
+      "code": "PAAC",
+      "name": "Acinar Cell Carcinoma of the Pancreas",
+      "nci": "C7977",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "paad": {
+      "code": "PAAD",
+      "name": "Pancreatic Adenocarcinoma",
+      "nci": "C8294",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "paasc": {
+      "code": "PAASC",
+      "name": "Adenosquamous Carcinoma of the Pancreas",
+      "nci": "C5721",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "pac": {
+      "code": "PAC",
+      "name": "Polymorphous Adenocarcinoma",
+      "nci": null,
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "pact": {
+      "code": "PACT",
+      "name": "Cystic Tumor of the Pancreas",
+      "nci": "C41247",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "pada": {
+      "code": "PADA",
+      "name": "Pleomorphic Adenoma",
+      "nci": null,
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "pampca": {
+      "code": "PAMPCA",
+      "name": "Pancreatobiliary Ampullary Carcinoma",
+      "nci": null,
+      "parent": "AMPCA",
+      "tissue": "Ampulla of Vater"
+    },
+    "pancreas": {
+      "code": "PANCREAS",
+      "name": "Pancreas",
+      "nci": "C12393",
+      "parent": "TISSUE",
+      "tissue": "Pancreas"
+    },
+    "panec": {
+      "code": "PANEC",
+      "name": "Pancreatic Neuroendocrine Carcinoma",
+      "nci": null,
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "panet": {
+      "code": "PANET",
+      "name": "Pancreatic Neuroendocrine Tumor",
+      "nci": "C27720",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "paos": {
+      "code": "PAOS",
+      "name": "Parosteal Osteosarcoma",
+      "nci": "C8969",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "past": {
+      "code": "PAST",
+      "name": "Pilocytic Astrocytoma",
+      "nci": "C4047",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "pb": {
+      "code": "PB",
+      "name": "Pancreatoblastoma",
+      "nci": "C4265",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "pbl": {
+      "code": "PBL",
+      "name": "Pineoblastoma",
+      "nci": "C9344",
+      "parent": "PINT",
+      "tissue": "CNS/Brain"
+    },
+    "pbs": {
+      "code": "PBS",
+      "name": "Breast Sarcoma",
+      "nci": "C4670",
+      "parent": "BREAST",
+      "tissue": "Breast"
+    },
+    "pbt": {
+      "code": "PBT",
+      "name": "Primary Brain Tumor",
+      "nci": "C4952",
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "pcaectcl": {
+      "code": "PCAECTCL",
+      "name": "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+      "nci": "C45339",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "pcalcl": {
+      "code": "PCALCL",
+      "name": "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+      "nci": "C6860",
+      "parent": "PCLPD",
+      "tissue": "Lymphoid"
+    },
+    "pcatcl": {
+      "code": "PCATCL",
+      "name": "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+      "nci": "C139023",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "pcfcl": {
+      "code": "PCFCL",
+      "name": "Primary Cutaneous Follicle Center Lymphoma",
+      "nci": "C7217",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pcgdtcl": {
+      "code": "PCGDTCL",
+      "name": "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+      "nci": "C45340",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "pcgp": {
+      "code": "PCGP",
+      "name": "Craniopharyngioma, Papillary Type",
+      "nci": null,
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "pclbcllt": {
+      "code": "PCLBCLLT",
+      "name": "Primary Cutaneous DLBCL, Leg Type",
+      "nci": "C45194",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pclpd": {
+      "code": "PCLPD",
+      "name": "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+      "nci": null,
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "pcm": {
+      "code": "PCM",
+      "name": "Plasma Cell Myeloma",
+      "nci": "C3242",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pcnsl": {
+      "code": "PCNSL",
+      "name": "Primary DLBCL of the central nervous system",
+      "nci": "C9301",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pcnsm": {
+      "code": "PCNSM",
+      "name": "Primary CNS Melanoma",
+      "nci": "C5505",
+      "parent": "PCNSMT",
+      "tissue": "CNS/Brain"
+    },
+    "pcnsmt": {
+      "code": "PCNSMT",
+      "name": "Primary CNS Melanocytic Tumors",
+      "nci": null,
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "pcsmtpld": {
+      "code": "PCSMTPLD",
+      "name": "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+      "nci": "C45366",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "pd": {
+      "code": "PD",
+      "name": "Paget Disease of the Nipple",
+      "nci": "C3301",
+      "parent": "DCIS",
+      "tissue": "Breast"
+    },
+    "pdc": {
+      "code": "PDC",
+      "name": "Poorly Differentiated Carcinoma, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "pdifhg": {
+      "code": "PDIFHG",
+      "name": "Pediatric-Type Diffuse High-Grade Glioma",
+      "nci": null,
+      "parent": "DIFG",
+      "tissue": "CNS/Brain"
+    },
+    "pdiflg": {
+      "code": "PDIFLG",
+      "name": "Pediatric-Type Diffuse Low-Grade Glioma",
+      "nci": null,
+      "parent": "DIFG",
+      "tissue": "CNS/Brain"
+    },
+    "pecoma": {
+      "code": "PECOMA",
+      "name": "Perivascular Epithelioid Cell Tumor",
+      "nci": "C38150",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "pel": {
+      "code": "PEL",
+      "name": "Primary Effusion Lymphoma",
+      "nci": "C6915",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pemeso": {
+      "code": "PEMESO",
+      "name": "Peritoneal Mesothelioma",
+      "nci": "C7633",
+      "parent": "PERITONEUM",
+      "tissue": "Peritoneum"
+    },
+    "penis": {
+      "code": "PENIS",
+      "name": "Penis",
+      "nci": "C12409",
+      "parent": "TISSUE",
+      "tissue": "Penis"
+    },
+    "peos": {
+      "code": "PEOS",
+      "name": "Periosteal Osteosarcoma",
+      "nci": "C8970",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "peritoneum": {
+      "code": "PERITONEUM",
+      "name": "Peritoneum",
+      "nci": "C12770",
+      "parent": "TISSUE",
+      "tissue": "Peritoneum"
+    },
+    "perl": {
+      "code": "PERL",
+      "name": "Pure Erythroid Leukemia",
+      "nci": "C7467",
+      "parent": "AMLNOS",
+      "tissue": "Myeloid"
+    },
+    "pgng": {
+      "code": "PGNG",
+      "name": "Paraganglioma",
+      "nci": "C3308",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "pgnt": {
+      "code": "PGNT",
+      "name": "Papillary Glioneuronal Tumor",
+      "nci": "C92554",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "phc": {
+      "code": "PHC",
+      "name": "Pheochromocytoma",
+      "nci": "C3326",
+      "parent": "ADRENAL_GLAND",
+      "tissue": "Adrenal Gland"
+    },
+    "phch": {
+      "code": "PHCH",
+      "name": "Perihilar Cholangiocarcinoma",
+      "nci": "C96804",
+      "parent": "CHOL",
+      "tissue": "Biliary Tract"
+    },
+    "phm": {
+      "code": "PHM",
+      "name": "Partial Hydatidiform Mole",
+      "nci": "C4293",
+      "parent": "MP",
+      "tissue": "Uterus"
+    },
+    "phptld": {
+      "code": "PHPTLD",
+      "name": "Plasmacytic Hyperplasia PTLD",
+      "nci": null,
+      "parent": "PTLD",
+      "tissue": "Lymphoid"
+    },
+    "pinc": {
+      "code": "PINC",
+      "name": "Pineocytoma",
+      "nci": "C6966",
+      "parent": "PINT",
+      "tissue": "CNS/Brain"
+    },
+    "pint": {
+      "code": "PINT",
+      "name": "Pineal Tumor",
+      "nci": "C3328",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "plbl": {
+      "code": "PLBL",
+      "name": "Plasmablastic Lymphoma",
+      "nci": "C7224",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "plbmeso": {
+      "code": "PLBMESO",
+      "name": "Pleural Mesothelioma, Biphasic Type",
+      "nci": null,
+      "parent": "PLMESO",
+      "tissue": "Pleura"
+    },
+    "plemeso": {
+      "code": "PLEMESO",
+      "name": "Pleural Mesothelioma, Epithelioid Type",
+      "nci": null,
+      "parent": "PLMESO",
+      "tissue": "Pleura"
+    },
+    "pleura": {
+      "code": "PLEURA",
+      "name": "Pleura",
+      "nci": "C12469",
+      "parent": "TISSUE",
+      "tissue": "Pleura"
+    },
+    "plls": {
+      "code": "PLLS",
+      "name": "Pleomorphic Liposarcoma",
+      "nci": "C3705",
+      "parent": "LIPO",
+      "tissue": "Soft Tissue"
+    },
+    "plmeso": {
+      "code": "PLMESO",
+      "name": "Pleural Mesothelioma",
+      "nci": "C9351",
+      "parent": "PLEURA",
+      "tissue": "Pleura"
+    },
+    "plrms": {
+      "code": "PLRMS",
+      "name": "Pleomorphic Rhabdomyosarcoma",
+      "nci": "C4258",
+      "parent": "RMS",
+      "tissue": "Soft Tissue"
+    },
+    "plsmeso": {
+      "code": "PLSMESO",
+      "name": "Pleural Mesothelioma, Sarcomatoid Type",
+      "nci": null,
+      "parent": "PLMESO",
+      "tissue": "Pleura"
+    },
+    "pma": {
+      "code": "PMA",
+      "name": "Pilomyxoid Astrocytoma",
+      "nci": "C40315",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "pmbl": {
+      "code": "PMBL",
+      "name": "Primary Mediastinal (Thymic) Large B-Cell Lymphoma",
+      "nci": "C9280",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pmf": {
+      "code": "PMF",
+      "name": "Primary Myelofibrosis",
+      "nci": "C2862",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "pmfofs": {
+      "code": "PMFOFS",
+      "name": "Primary Myelofibrosis,Overt Fibrotic Stage",
+      "nci": "C41238",
+      "parent": "PMF",
+      "tissue": "Myeloid"
+    },
+    "pmfpes": {
+      "code": "PMFPES",
+      "name": "Primary Myelofibrosis, Prefibrotic/Early Stage",
+      "nci": "C41237",
+      "parent": "PMF",
+      "tissue": "Myeloid"
+    },
+    "pmhe": {
+      "code": "PMHE",
+      "name": "Pseudomyogenic Hemangioendothelioma",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "pnet": {
+      "code": "PNET",
+      "name": "Primitive Neuroectodermal Tumor",
+      "nci": "C3716",
+      "parent": "EMBT",
+      "tissue": "CNS/Brain"
+    },
+    "pns": {
+      "code": "PNS",
+      "name": "Peripheral Nervous System",
+      "nci": "C12465",
+      "parent": "TISSUE",
+      "tissue": "Peripheral Nervous System"
+    },
+    "poca": {
+      "code": "POCA",
+      "name": "Porocarcinoma/Spiroadenocarcinoma",
+      "nci": "C5560",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "poro": {
+      "code": "PORO",
+      "name": "Poroma/Acrospiroma",
+      "nci": "C27273",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "ppb": {
+      "code": "PPB",
+      "name": "Pleuropulmonary Blastoma",
+      "nci": "C5669",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "ppct": {
+      "code": "PPCT",
+      "name": "Proliferating Pilar Cystic Tumor",
+      "nci": null,
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "ppm": {
+      "code": "PPM",
+      "name": "Papillary Meningioma",
+      "nci": "C3904",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "pptid": {
+      "code": "PPTID",
+      "name": "Pineal Parenchymal Tumor of Intermediate Differentiation",
+      "nci": "C6967",
+      "parent": "PINT",
+      "tissue": "CNS/Brain"
+    },
+    "pptld": {
+      "code": "PPTLD",
+      "name": "Polymorphic PTLD",
+      "nci": null,
+      "parent": "PTLD",
+      "tissue": "Lymphoid"
+    },
+    "prad": {
+      "code": "PRAD",
+      "name": "Prostate Adenocarcinoma",
+      "nci": "C2919",
+      "parent": "PROSTATE",
+      "tissue": "Prostate"
+    },
+    "prcc": {
+      "code": "PRCC",
+      "name": "Papillary Renal Cell Carcinoma",
+      "nci": "C6975",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "prne": {
+      "code": "PRNE",
+      "name": "Prostate Neuroendocrine Carcinoma",
+      "nci": "C5545",
+      "parent": "PROSTATE",
+      "tissue": "Prostate"
+    },
+    "prnet": {
+      "code": "PRNET",
+      "name": "Primary Neuroepithelial Tumor",
+      "nci": "C3787",
+      "parent": "MBT",
+      "tissue": "CNS/Brain"
+    },
+    "prostate": {
+      "code": "PROSTATE",
+      "name": "Prostate",
+      "nci": "C12410",
+      "parent": "TISSUE",
+      "tissue": "Prostate"
+    },
+    "prsc": {
+      "code": "PRSC",
+      "name": "Prostate Squamous Cell Carcinoma",
+      "nci": "C5536",
+      "parent": "PROSTATE",
+      "tissue": "Prostate"
+    },
+    "prscc": {
+      "code": "PRSCC",
+      "name": "Prostate Small Cell Carcinoma",
+      "nci": "C6766",
+      "parent": "PROSTATE",
+      "tissue": "Prostate"
+    },
+    "psc": {
+      "code": "PSC",
+      "name": "Serous Cystadenoma of the Pancreas",
+      "nci": "C5712",
+      "parent": "PACT",
+      "tissue": "Pancreas"
+    },
+    "pscc": {
+      "code": "PSCC",
+      "name": "Penile Squamous Cell Carcinoma",
+      "nci": "C7729",
+      "parent": "PENIS",
+      "tissue": "Penis"
+    },
+    "psec": {
+      "code": "PSEC",
+      "name": "Peritoneal Serous Carcinoma",
+      "nci": null,
+      "parent": "PERITONEUM",
+      "tissue": "Peritoneum"
+    },
+    "pstad": {
+      "code": "PSTAD",
+      "name": "Papillary Stomach Adenocarcinoma",
+      "nci": "C5472",
+      "parent": "STAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "pstt": {
+      "code": "PSTT",
+      "name": "Placental Site Trophoblastic Tumor",
+      "nci": "C3757",
+      "parent": "GTD",
+      "tissue": "Uterus"
+    },
+    "pt": {
+      "code": "PT",
+      "name": "Phyllodes Tumor of the Breast",
+      "nci": "C7575",
+      "parent": "BFN",
+      "tissue": "Breast"
+    },
+    "ptad": {
+      "code": "PTAD",
+      "name": "Pituitary Adenoma",
+      "nci": "C3329",
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "ptca": {
+      "code": "PTCA",
+      "name": "Pituitary Carcinoma",
+      "nci": "C4536",
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "ptcl": {
+      "code": "PTCL",
+      "name": "Peripheral T-Cell lymphoma, NOS",
+      "nci": "C4340",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "ptcy": {
+      "code": "PTCY",
+      "name": "Pituicytoma",
+      "nci": "C94524",
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "ptes": {
+      "code": "PTES",
+      "name": "Proximal-Type Epithelioid Sarcoma",
+      "nci": "C27472",
+      "parent": "EPIS",
+      "tissue": "Soft Tissue"
+    },
+    "ptfl": {
+      "code": "PTFL",
+      "name": "Pediatric-Type Follicular Lymphoma",
+      "nci": "C80297",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "pth": {
+      "code": "PTH",
+      "name": "Parathyroid Cancer",
+      "nci": null,
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "pthc": {
+      "code": "PTHC",
+      "name": "Parathyroid Carcinoma",
+      "nci": null,
+      "parent": "PTH",
+      "tissue": "Head and Neck"
+    },
+    "ptld": {
+      "code": "PTLD",
+      "name": "Posttransplant Lymphoproliferative Disorders",
+      "nci": null,
+      "parent": "LNM",
+      "tissue": "Lymphoid"
+    },
+    "ptpr": {
+      "code": "PTPR",
+      "name": "Papillary Tumor of the Pineal Region",
+      "nci": "C92624",
+      "parent": "PINT",
+      "tissue": "CNS/Brain"
+    },
+    "pv": {
+      "code": "PV",
+      "name": "Polycythemia Vera",
+      "nci": "C3336",
+      "parent": "MPN",
+      "tissue": "Myeloid"
+    },
+    "pvmf": {
+      "code": "PVMF",
+      "name": "Polycythaemia Vera Myelofibrosis",
+      "nci": null,
+      "parent": "PV",
+      "tissue": "Myeloid"
+    },
+    "pxa": {
+      "code": "PXA",
+      "name": "Pleomorphic Xanthoastrocytoma",
+      "nci": "C4323",
+      "parent": "ENCG",
+      "tissue": "CNS/Brain"
+    },
+    "raml": {
+      "code": "RAML",
+      "name": "Renal Angiomyolipoma",
+      "nci": "C3888",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "ras": {
+      "code": "RAS",
+      "name": "Radiation-Associated Sarcoma",
+      "nci": "C93125",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "rbl": {
+      "code": "RBL",
+      "name": "Retinoblastoma",
+      "nci": "C7541",
+      "parent": "EYE",
+      "tissue": "Eye"
+    },
+    "rcc": {
+      "code": "RCC",
+      "name": "Renal Cell Carcinoma",
+      "nci": "C9385",
+      "parent": "KIDNEY",
+      "tissue": "Kidney"
+    },
+    "rcsnos": {
+      "code": "RCSNOS",
+      "name": "Round Cell Sarcoma, NOS",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "rcyc": {
+      "code": "RCYC",
+      "name": "Refractory Cytopenia of Childhood",
+      "nci": "C82596",
+      "parent": "MDS",
+      "tissue": "Myeloid"
+    },
+    "rdd": {
+      "code": "RDD",
+      "name": "Rosai-Dorfman Disease",
+      "nci": "C36075",
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    },
+    "read": {
+      "code": "READ",
+      "name": "Rectal Adenocarcinoma",
+      "nci": "C9383",
+      "parent": "COADREAD",
+      "tissue": "Bowel"
+    },
+    "rgnt": {
+      "code": "RGNT",
+      "name": "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle",
+      "nci": "C67559",
+      "parent": "MNET",
+      "tissue": "CNS/Brain"
+    },
+    "rhm": {
+      "code": "RHM",
+      "name": "Rhabdoid Meningioma",
+      "nci": "C6909",
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "rlclc": {
+      "code": "RLCLC",
+      "name": "Large Cell Lung Carcinoma With Rhabdoid Phenotype",
+      "nci": "C6876",
+      "parent": "LCLC",
+      "tissue": "Lung"
+    },
+    "rms": {
+      "code": "RMS",
+      "name": "Rhabdomyosarcoma",
+      "nci": "C3359",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "rnet": {
+      "code": "RNET",
+      "name": "Renal Neuroendocrine Tumor",
+      "nci": null,
+      "parent": "KIDNEY",
+      "tissue": "Kidney"
+    },
+    "rocy": {
+      "code": "ROCY",
+      "name": "Renal Oncocytoma",
+      "nci": "C4526",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "rscc": {
+      "code": "RSCC",
+      "name": "Renal Small Cell Carcinoma",
+      "nci": null,
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "rwdnet": {
+      "code": "RWDNET",
+      "name": "Well-Differentiated Neuroendocrine Tumor of the Rectum",
+      "nci": "C96159",
+      "parent": "GINET",
+      "tissue": "Bowel"
+    },
+    "saad": {
+      "code": "SAAD",
+      "name": "Salivary Adenocarcinoma",
+      "nci": "C8021",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "saca": {
+      "code": "SACA",
+      "name": "Salivary Carcinoma",
+      "nci": "C9272",
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "sarcl": {
+      "code": "SARCL",
+      "name": "Sarcomatoid Carcinoma of the Lung",
+      "nci": "C45540",
+      "parent": "LUNG",
+      "tissue": "Lung"
+    },
+    "sarcnos": {
+      "code": "SARCNOS",
+      "name": "Sarcoma, NOS",
+      "nci": null,
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "sbc": {
+      "code": "SBC",
+      "name": "Small Bowel Cancer",
+      "nci": "C7724",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "sbl": {
+      "code": "SBL",
+      "name": "Sialoblastoma",
+      "nci": null,
+      "parent": "HEAD_NECK",
+      "tissue": "Head and Neck"
+    },
+    "sblu": {
+      "code": "SBLU",
+      "name": "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+      "nci": "C80308",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "sbmov": {
+      "code": "SBMOV",
+      "name": "Serous Borderline Ovarian Tumor, Micropapillary",
+      "nci": null,
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "sbov": {
+      "code": "SBOV",
+      "name": "Serous Borderline Ovarian Tumor",
+      "nci": null,
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "sbwdnet": {
+      "code": "SBWDNET",
+      "name": "Small Bowel Well-Differentiated Neuroendocrine Tumor",
+      "nci": "C9461",
+      "parent": "GINET",
+      "tissue": "Bowel"
+    },
+    "scb": {
+      "code": "SCB",
+      "name": "Sarcomatoid Carcinoma of the Urinary Bladder",
+      "nci": "C39824",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "scbc": {
+      "code": "SCBC",
+      "name": "Small Cell Bladder Cancer",
+      "nci": "C9461",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "scce": {
+      "code": "SCCE",
+      "name": "Small Cell Carcinoma of the Cervix",
+      "nci": "C7982",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "sccnos": {
+      "code": "SCCNOS",
+      "name": "Squamous Cell Carcinoma, NOS",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "scco": {
+      "code": "SCCO",
+      "name": "Small Cell Carcinoma of the Ovary",
+      "nci": "C27390",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "sccrcc": {
+      "code": "SCCRCC",
+      "name": "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+      "nci": null,
+      "parent": "CCRCC",
+      "tissue": "Kidney"
+    },
+    "scemu": {
+      "code": "SCEMU",
+      "name": "Signet Ring Mucinous Carcinoma",
+      "nci": "C40205",
+      "parent": "CEMU",
+      "tissue": "Cervix"
+    },
+    "scgbc": {
+      "code": "SCGBC",
+      "name": "Small Cell Gallbladder Carcinoma",
+      "nci": null,
+      "parent": "GBC",
+      "tissue": "Biliary Tract"
+    },
+    "scgbm": {
+      "code": "SCGBM",
+      "name": "Small Cell Glioblastoma",
+      "nci": "C125890",
+      "parent": "GB",
+      "tissue": "CNS/Brain"
+    },
+    "schw": {
+      "code": "SCHW",
+      "name": "Schwannoma",
+      "nci": "C3269",
+      "parent": "NST",
+      "tissue": "Peripheral Nervous System"
+    },
+    "sclc": {
+      "code": "SCLC",
+      "name": "Small Cell Lung Cancer",
+      "nci": "C4917",
+      "parent": "LNET",
+      "tissue": "Lung"
+    },
+    "sclg": {
+      "code": "SCLG",
+      "name": "Squamous Cell Carcinoma of the Lacrimal Gland",
+      "nci": null,
+      "parent": "LGT",
+      "tissue": "Eye"
+    },
+    "scoah": {
+      "code": "SCOAH",
+      "name": "Spindle Cell Oncocytoma of the Adenohypophysis",
+      "nci": "C94537",
+      "parent": "SELT",
+      "tissue": "CNS/Brain"
+    },
+    "scos": {
+      "code": "SCOS",
+      "name": "Small Cell Osteosarcoma",
+      "nci": "C4023",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "scrms": {
+      "code": "SCRMS",
+      "name": "Spindle Cell Rhabdomyosarcoma",
+      "nci": "C6519",
+      "parent": "RMS",
+      "tissue": "Soft Tissue"
+    },
+    "scsrms": {
+      "code": "SCSRMS",
+      "name": "Spindle Cell/Sclerosing Rhabdomyosarcoma",
+      "nci": null,
+      "parent": "RMS",
+      "tissue": "Soft Tissue"
+    },
+    "scst": {
+      "code": "SCST",
+      "name": "Sex Cord Stromal Tumor",
+      "nci": "C4862",
+      "parent": "OVARY",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "sct": {
+      "code": "SCT",
+      "name": "Steroid Cell Tumor, NOS",
+      "nci": null,
+      "parent": "SCST",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "scup": {
+      "code": "SCUP",
+      "name": "Small Cell Carcinoma of Unknown Primary",
+      "nci": null,
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "sdca": {
+      "code": "SDCA",
+      "name": "Salivary Duct Carcinoma",
+      "nci": "C5904",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "sdrpl": {
+      "code": "SDRPL",
+      "name": "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+      "nci": "C80309",
+      "parent": "SBLU",
+      "tissue": "Lymphoid"
+    },
+    "seba": {
+      "code": "SEBA",
+      "name": "Sebaceous Carcinoma",
+      "nci": "C40310",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "sebvtlc": {
+      "code": "SEBVTLC",
+      "name": "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+      "nci": null,
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "secos": {
+      "code": "SECOS",
+      "name": "Secondary Osteosarcoma",
+      "nci": "C53704",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "sef": {
+      "code": "SEF",
+      "name": "Sclerosing Epithelioid Fibrosarcoma",
+      "nci": "C49027",
+      "parent": "FIBS",
+      "tissue": "Soft Tissue"
+    },
+    "selt": {
+      "code": "SELT",
+      "name": "Sellar Tumor",
+      "nci": "C4944",
+      "parent": "BRAIN",
+      "tissue": "CNS/Brain"
+    },
+    "sem": {
+      "code": "SEM",
+      "name": "Seminoma",
+      "nci": "C9309",
+      "parent": "TESTIS",
+      "tissue": "Testis"
+    },
+    "sft": {
+      "code": "SFT",
+      "name": "Solitary Fibrous Tumor/Hemangiopericytoma",
+      "nci": "C7634",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "sftcns": {
+      "code": "SFTCNS",
+      "name": "Solitary Fibrous Tumor of the Central Nervous System",
+      "nci": null,
+      "parent": "MNGT",
+      "tissue": "CNS/Brain"
+    },
+    "sgad": {
+      "code": "SGAD",
+      "name": "Sweat Gland Adenocarcinoma",
+      "nci": "C3682",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "sgo": {
+      "code": "SGO",
+      "name": "Salivary Gland Oncocytoma",
+      "nci": "C5932",
+      "parent": "SACA",
+      "tissue": "Head and Neck"
+    },
+    "sgttl": {
+      "code": "SGTTL",
+      "name": "Salivary Gland-Type Tumor of the Lung",
+      "nci": null,
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "sic": {
+      "code": "SIC",
+      "name": "Small Intestinal Carcinoma",
+      "nci": "C7724",
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "skac": {
+      "code": "SKAC",
+      "name": "Skin Adnexal Carcinoma",
+      "nci": "C3775",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "skcm": {
+      "code": "SKCM",
+      "name": "Cutaneous Melanoma",
+      "nci": "C3510",
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "skcn": {
+      "code": "SKCN",
+      "name": "Congenital Nevus",
+      "nci": "C3944",
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "skin": {
+      "code": "SKIN",
+      "name": "Skin",
+      "nci": "C12470",
+      "parent": "TISSUE",
+      "tissue": "Skin"
+    },
+    "sklmm": {
+      "code": "SKLMM",
+      "name": "Lentigo Maligna Melanoma",
+      "nci": "C9151",
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "slct": {
+      "code": "SLCT",
+      "name": "Sertoli-Leydig Cell Tumor",
+      "nci": "C2880",
+      "parent": "SCST",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "sm": {
+      "code": "SM",
+      "name": "Systemic Mastocytosis",
+      "nci": "C9235",
+      "parent": "MCD",
+      "tissue": "Myeloid"
+    },
+    "smahn": {
+      "code": "SMAHN",
+      "name": "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+      "nci": null,
+      "parent": "SM",
+      "tissue": "Myeloid"
+    },
+    "smmcl": {
+      "code": "SMMCL",
+      "name": "Mast Cell Leukemia",
+      "nci": "C3169",
+      "parent": "SM",
+      "tissue": "Myeloid"
+    },
+    "smn": {
+      "code": "SMN",
+      "name": "Smooth Muscle Neoplasm, NOS",
+      "nci": null,
+      "parent": "STOMACH",
+      "tissue": "Esophagus/Stomach"
+    },
+    "smzl": {
+      "code": "SMZL",
+      "name": "Splenic Marginal Zone Lymphoma",
+      "nci": "C4663",
+      "parent": "MZL",
+      "tissue": "Lymphoid"
+    },
+    "sna": {
+      "code": "SNA",
+      "name": "Sinonasal Adenocarcinoma",
+      "nci": null,
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "snsc": {
+      "code": "SNSC",
+      "name": "Sinonasal Squamous Cell Carcinoma",
+      "nci": "C54287",
+      "parent": "HNSC",
+      "tissue": "Head and Neck"
+    },
+    "snuc": {
+      "code": "SNUC",
+      "name": "Sinonasal Undifferentiated Carcinoma",
+      "nci": "C54294",
+      "parent": "OHNCA",
+      "tissue": "Head and Neck"
+    },
+    "soc": {
+      "code": "SOC",
+      "name": "Serous Ovarian Cancer",
+      "nci": "C7550",
+      "parent": "OVT",
+      "tissue": "Ovary/Fallopian Tube"
+    },
+    "soft_tissue": {
+      "code": "SOFT_TISSUE",
+      "name": "Soft Tissue",
+      "nci": "C12471",
+      "parent": "TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "spb": {
+      "code": "SPB",
+      "name": "Solitary Plasmacytoma of Bone",
+      "nci": "C7812",
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "spc": {
+      "code": "SPC",
+      "name": "Solid Papillary Carcinoma of the Breast",
+      "nci": "C6870",
+      "parent": "BRCA",
+      "tissue": "Breast"
+    },
+    "spcc": {
+      "code": "SPCC",
+      "name": "Spindle Cell Carcinoma of the Lung",
+      "nci": "C45541",
+      "parent": "NSCLC",
+      "tissue": "Lung"
+    },
+    "spdac": {
+      "code": "SPDAC",
+      "name": "Poorly Differentiated Carcinoma of the Stomach",
+      "nci": null,
+      "parent": "USTAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "spir": {
+      "code": "SPIR",
+      "name": "Spiroma/Spiradenoma",
+      "nci": "C4170",
+      "parent": "SKIN",
+      "tissue": "Skin"
+    },
+    "spn": {
+      "code": "SPN",
+      "name": "Solid Pseudopapillary Neoplasm of the Pancreas",
+      "nci": "C37212",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "sptcl": {
+      "code": "SPTCL",
+      "name": "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+      "nci": "C6918",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "spzm": {
+      "code": "SPZM",
+      "name": "Spitzoid Melanoma",
+      "nci": null,
+      "parent": "MEL",
+      "tissue": "Skin"
+    },
+    "srap": {
+      "code": "SRAP",
+      "name": "Signet Ring Cell Type of the Appendix",
+      "nci": "C43554",
+      "parent": "APAD",
+      "tissue": "Bowel"
+    },
+    "srcbc": {
+      "code": "SRCBC",
+      "name": "Plasmacytoid/Signet Ring Cell Bladder Carcinoma",
+      "nci": "C39823",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "srcc": {
+      "code": "SRCC",
+      "name": "Sarcomatoid Renal Cell Carcinoma",
+      "nci": "C27893",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "srccr": {
+      "code": "SRCCR",
+      "name": "Signet Ring Cell Adenocarcinoma of the Colon and Rectum",
+      "nci": "C9168",
+      "parent": "COADREAD",
+      "tissue": "Bowel"
+    },
+    "ss": {
+      "code": "SS",
+      "name": "Sezary Syndrome",
+      "nci": "C3366",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "ssm": {
+      "code": "SSM",
+      "name": "Smoldering Systemic Mastocytosis",
+      "nci": "C115460",
+      "parent": "SM",
+      "tissue": "Myeloid"
+    },
+    "ssrcc": {
+      "code": "SSRCC",
+      "name": "Signet Ring Cell Carcinoma of the Stomach",
+      "nci": "C5250",
+      "parent": "USTAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "stad": {
+      "code": "STAD",
+      "name": "Stomach Adenocarcinoma",
+      "nci": "C4004",
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "stas": {
+      "code": "STAS",
+      "name": "Adenosquamous Carcinoma of the Stomach",
+      "nci": "C5474",
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "stmyec": {
+      "code": "STMYEC",
+      "name": "Soft Tissue Myoepithelial Carcinoma",
+      "nci": "C7596",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "stomach": {
+      "code": "STOMACH",
+      "name": "Esophagus/Stomach",
+      "nci": "C12391",
+      "parent": "TISSUE",
+      "tissue": "Esophagus/Stomach"
+    },
+    "stsc": {
+      "code": "STSC",
+      "name": "Small Cell Carcinoma of the Stomach",
+      "nci": "C6764",
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "sube": {
+      "code": "SUBE",
+      "name": "Subependymoma",
+      "nci": "C3795",
+      "parent": "EPMT",
+      "tissue": "CNS/Brain"
+    },
+    "swdnet": {
+      "code": "SWDNET",
+      "name": "Well-Differentiated Neuroendocrine Tumors of the Stomach",
+      "nci": "C95871",
+      "parent": "GINETES",
+      "tissue": "Esophagus/Stomach"
+    },
+    "syns": {
+      "code": "SYNS",
+      "name": "Synovial Sarcoma",
+      "nci": "C3400",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "tac": {
+      "code": "TAC",
+      "name": "Tubular Adenoma of the Colon",
+      "nci": null,
+      "parent": "BOWEL",
+      "tissue": "Bowel"
+    },
+    "tam": {
+      "code": "TAM",
+      "name": "Transient Abnormal Myelopoiesis",
+      "nci": null,
+      "parent": "MPRDS",
+      "tissue": "Myeloid"
+    },
+    "taml": {
+      "code": "TAML",
+      "name": "Therapy-Related Acute Myeloid Leukemia",
+      "nci": "C8252",
+      "parent": "TMN",
+      "tissue": "Myeloid"
+    },
+    "tcca": {
+      "code": "TCCA",
+      "name": "Choriocarcinoma",
+      "nci": "C7733",
+      "parent": "NSGCT",
+      "tissue": "Testis"
+    },
+    "teos": {
+      "code": "TEOS",
+      "name": "Telangiectatic Osteosarcoma",
+      "nci": "C3902",
+      "parent": "OS",
+      "tissue": "Bone"
+    },
+    "testis": {
+      "code": "TESTIS",
+      "name": "Testis",
+      "nci": "C12412",
+      "parent": "TISSUE",
+      "tissue": "Testis"
+    },
+    "tet": {
+      "code": "TET",
+      "name": "Thymic Epithelial Tumor",
+      "nci": "C6450",
+      "parent": "THYMUS",
+      "tissue": "Thymus"
+    },
+    "tgct": {
+      "code": "TGCT",
+      "name": "Tenosynovial Giant Cell Tumor Diffuse Type",
+      "nci": "C3401",
+      "parent": "SOFT_TISSUE",
+      "tissue": "Soft Tissue"
+    },
+    "thap": {
+      "code": "THAP",
+      "name": "Anaplastic Thyroid Cancer",
+      "nci": "C3878",
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "thfo": {
+      "code": "THFO",
+      "name": "Follicular Thyroid Cancer",
+      "nci": "C8054",
+      "parent": "WDTC",
+      "tissue": "Thyroid"
+    },
+    "thhc": {
+      "code": "THHC",
+      "name": "Hurthle Cell Thyroid Cancer",
+      "nci": "C4946",
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "thme": {
+      "code": "THME",
+      "name": "Medullary Thyroid Cancer",
+      "nci": "C3879",
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "thpa": {
+      "code": "THPA",
+      "name": "Papillary Thyroid Cancer",
+      "nci": "C4035",
+      "parent": "WDTC",
+      "tissue": "Thyroid"
+    },
+    "thpd": {
+      "code": "THPD",
+      "name": "Poorly Differentiated Thyroid Cancer",
+      "nci": "C6040",
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "thrlbcl": {
+      "code": "THRLBCL",
+      "name": "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+      "nci": null,
+      "parent": "MBN",
+      "tissue": "Lymphoid"
+    },
+    "thyc": {
+      "code": "THYC",
+      "name": "Thymic Carcinoma",
+      "nci": "C7569",
+      "parent": "TET",
+      "tissue": "Thymus"
+    },
+    "thym": {
+      "code": "THYM",
+      "name": "Thymoma",
+      "nci": "C3411",
+      "parent": "TET",
+      "tissue": "Thymus"
+    },
+    "thymus": {
+      "code": "THYMUS",
+      "name": "Thymus",
+      "nci": "C12433",
+      "parent": "TISSUE",
+      "tissue": "Thymus"
+    },
+    "thyroid": {
+      "code": "THYROID",
+      "name": "Thyroid",
+      "nci": "C12400",
+      "parent": "TISSUE",
+      "tissue": "Thyroid"
+    },
+    "tlgl": {
+      "code": "TLGL",
+      "name": "T-Cell Large Granular Lymphocytic Leukemia",
+      "nci": "C4664",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "tll": {
+      "code": "TLL",
+      "name": "T-Lymphoblastic Leukemia/Lymphoma",
+      "nci": "C8694",
+      "parent": "LNM",
+      "tissue": "Lymphoid"
+    },
+    "tlym": {
+      "code": "TLYM",
+      "name": "Testicular Lymphoma",
+      "nci": "C6810",
+      "parent": "TESTIS",
+      "tissue": "Testis"
+    },
+    "tmds": {
+      "code": "TMDS",
+      "name": "Therapy-Related Myelodysplastic Syndrome",
+      "nci": "C27722",
+      "parent": "TMN",
+      "tissue": "Myeloid"
+    },
+    "tmeso": {
+      "code": "TMESO",
+      "name": "Testicular Mesothelioma",
+      "nci": null,
+      "parent": "TESTIS",
+      "tissue": "Testis"
+    },
+    "tmn": {
+      "code": "TMN",
+      "name": "Therapy-Related Myeloid Neoplasms",
+      "nci": "C27912",
+      "parent": "AML",
+      "tissue": "Myeloid"
+    },
+    "tnet": {
+      "code": "TNET",
+      "name": "Thymic Neuroendocrine Tumor",
+      "nci": null,
+      "parent": "THYMUS",
+      "tissue": "Thymus"
+    },
+    "tpll": {
+      "code": "TPLL",
+      "name": "T-Cell Prolymphocytic Leukemia",
+      "nci": "C4752",
+      "parent": "MTNN",
+      "tissue": "Lymphoid"
+    },
+    "trcc": {
+      "code": "TRCC",
+      "name": "Translocation-Associated Renal Cell Carcinoma",
+      "nci": "C27891",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "tscst": {
+      "code": "TSCST",
+      "name": "Sex Cord Stromal Tumor",
+      "nci": null,
+      "parent": "TESTIS",
+      "tissue": "Testis"
+    },
+    "tstad": {
+      "code": "TSTAD",
+      "name": "Tubular Stomach Adenocarcinoma",
+      "nci": "C5473",
+      "parent": "STAD",
+      "tissue": "Esophagus/Stomach"
+    },
+    "tt": {
+      "code": "TT",
+      "name": "Teratoma",
+      "nci": "C3877",
+      "parent": "NSGCT",
+      "tissue": "Testis"
+    },
+    "tyst": {
+      "code": "TYST",
+      "name": "Yolk Sac Tumor",
+      "nci": "C8000",
+      "parent": "NSGCT",
+      "tissue": "Testis"
+    },
+    "ua": {
+      "code": "UA",
+      "name": "Urachal Adenocarcinoma",
+      "nci": "C39843",
+      "parent": "URCA",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "uad": {
+      "code": "UAD",
+      "name": "Urethral Adenocarcinoma",
+      "nci": "C6167",
+      "parent": "UCA",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "uas": {
+      "code": "UAS",
+      "name": "Uterine Adenosarcoma",
+      "nci": "C6336",
+      "parent": "USARC",
+      "tissue": "Uterus"
+    },
+    "uasc": {
+      "code": "UASC",
+      "name": "Uterine Adenosquamous Carcinoma",
+      "nci": "C4519",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "uca": {
+      "code": "UCA",
+      "name": "Urethral Cancer",
+      "nci": "C9106",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "ucca": {
+      "code": "UCCA",
+      "name": "Choriocarcinoma",
+      "nci": "C27246",
+      "parent": "GTD",
+      "tissue": "Uterus"
+    },
+    "uccc": {
+      "code": "UCCC",
+      "name": "Uterine Clear Cell Carcinoma",
+      "nci": "C6344",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "ucec": {
+      "code": "UCEC",
+      "name": "Endometrial Carcinoma",
+      "nci": "C7558",
+      "parent": "UTERUS",
+      "tissue": "Uterus"
+    },
+    "ucp": {
+      "code": "UCP",
+      "name": "Undifferentiated Carcinoma of the Pancreas",
+      "nci": "C5722",
+      "parent": "PANCREAS",
+      "tissue": "Pancreas"
+    },
+    "ucs": {
+      "code": "UCS",
+      "name": "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+      "nci": "C42700",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "ucu": {
+      "code": "UCU",
+      "name": "Urethral Urothelial Carcinoma",
+      "nci": null,
+      "parent": "UCA",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "uddc": {
+      "code": "UDDC",
+      "name": "Uterine Dedifferentiated Carcinoma",
+      "nci": null,
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "udmn": {
+      "code": "UDMN",
+      "name": "Undifferentiated Malignant Neoplasm",
+      "nci": "C36051",
+      "parent": "CUP",
+      "tissue": "Other"
+    },
+    "uec": {
+      "code": "UEC",
+      "name": "Uterine Endometrioid Carcinoma",
+      "nci": "C6287",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "uelms": {
+      "code": "UELMS",
+      "name": "Uterine Epithelioid Leiomyosarcoma",
+      "nci": "C40174",
+      "parent": "USMT",
+      "tissue": "Uterus"
+    },
+    "uesl": {
+      "code": "UESL",
+      "name": "Undifferentiated Embryonal Sarcoma of the Liver",
+      "nci": null,
+      "parent": "LIVER",
+      "tissue": "Liver"
+    },
+    "ulm": {
+      "code": "ULM",
+      "name": "Uterine Leiomyoma",
+      "nci": "C3434",
+      "parent": "USMT",
+      "tissue": "Uterus"
+    },
+    "ulms": {
+      "code": "ULMS",
+      "name": "Uterine Leiomyosarcoma",
+      "nci": "C6340",
+      "parent": "USMT",
+      "tissue": "Uterus"
+    },
+    "um": {
+      "code": "UM",
+      "name": "Uveal Melanoma",
+      "nci": "C7712",
+      "parent": "OM",
+      "tissue": "Eye"
+    },
+    "umc": {
+      "code": "UMC",
+      "name": "Uterine Mucinous Carcinoma",
+      "nci": "C40144",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "umec": {
+      "code": "UMEC",
+      "name": "Uterine Mixed Endometrial Carcinoma",
+      "nci": null,
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "umlms": {
+      "code": "UMLMS",
+      "name": "Uterine Myxoid Leiomyosarcoma",
+      "nci": "C40175",
+      "parent": "USMT",
+      "tissue": "Uterus"
+    },
+    "umnc": {
+      "code": "UMNC",
+      "name": "Uterine Mesonephric Carcinoma",
+      "nci": null,
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "unec": {
+      "code": "UNEC",
+      "name": "Uterine Neuroendocrine Carcinoma",
+      "nci": null,
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "upa": {
+      "code": "UPA",
+      "name": "Urothelial Papilloma",
+      "nci": null,
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "updc": {
+      "code": "UPDC",
+      "name": "Poorly Differentiated Carcinoma of the Uterus",
+      "nci": null,
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "upecoma": {
+      "code": "UPECOMA",
+      "name": "Uterine Perivascular Epithelioid Cell Tumor",
+      "nci": "C40180",
+      "parent": "USARC",
+      "tissue": "Uterus"
+    },
+    "urca": {
+      "code": "URCA",
+      "name": "Urachal Carcinoma",
+      "nci": "C39842",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "urcc": {
+      "code": "URCC",
+      "name": "Unclassified Renal Cell Carcinoma",
+      "nci": "C27892",
+      "parent": "NCCRCC",
+      "tissue": "Kidney"
+    },
+    "urmm": {
+      "code": "URMM",
+      "name": "Mucosal Melanoma of the Urethra",
+      "nci": null,
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "usarc": {
+      "code": "USARC",
+      "name": "Uterine Sarcoma/Mesenchymal",
+      "nci": "C6339",
+      "parent": "UTERUS",
+      "tissue": "Uterus"
+    },
+    "usc": {
+      "code": "USC",
+      "name": "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+      "nci": "C27838",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "uscc": {
+      "code": "USCC",
+      "name": "Urethral Squamous Cell Carcinoma",
+      "nci": "C6165",
+      "parent": "UCA",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "usmt": {
+      "code": "USMT",
+      "name": "Uterine Smooth Muscle Tumor",
+      "nci": "C40176",
+      "parent": "USARC",
+      "tissue": "Uterus"
+    },
+    "ustad": {
+      "code": "USTAD",
+      "name": "Undifferentiated Stomach Adenocarcinoma",
+      "nci": "C5476",
+      "parent": "EGC",
+      "tissue": "Esophagus/Stomach"
+    },
+    "ustump": {
+      "code": "USTUMP",
+      "name": "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential",
+      "nci": "C40177",
+      "parent": "USMT",
+      "tissue": "Uterus"
+    },
+    "uterus": {
+      "code": "UTERUS",
+      "name": "Uterus",
+      "nci": "C12405",
+      "parent": "TISSUE",
+      "tissue": "Uterus"
+    },
+    "utuc": {
+      "code": "UTUC",
+      "name": "Upper Tract Urothelial Carcinoma",
+      "nci": "C7716",
+      "parent": "BLADDER",
+      "tissue": "Bladder/Urinary Tract"
+    },
+    "uuc": {
+      "code": "UUC",
+      "name": "Uterine Undifferentiated Carcinoma",
+      "nci": "C6345",
+      "parent": "UCEC",
+      "tissue": "Uterus"
+    },
+    "uus": {
+      "code": "UUS",
+      "name": "Undifferentiated Uterine Sarcoma",
+      "nci": "C8972",
+      "parent": "USARC",
+      "tissue": "Uterus"
+    },
+    "va": {
+      "code": "VA",
+      "name": "Vaginal Adenocarcinoma",
+      "nci": "C7981",
+      "parent": "VULVA",
+      "tissue": "Vulva/Vagina"
+    },
+    "vdys": {
+      "code": "VDYS",
+      "name": "Dysgerminoma",
+      "nci": "C8106",
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "vgce": {
+      "code": "VGCE",
+      "name": "Villoglandular Adenocarcinoma of the Cervix",
+      "nci": "C40208",
+      "parent": "CERVIX",
+      "tissue": "Cervix"
+    },
+    "vgct": {
+      "code": "VGCT",
+      "name": "Germ Cell Tumor of the Vulva",
+      "nci": null,
+      "parent": "VULVA",
+      "tissue": "Vulva/Vagina"
+    },
+    "vimt": {
+      "code": "VIMT",
+      "name": "Immature Teratoma",
+      "nci": "C4286",
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "vma": {
+      "code": "VMA",
+      "name": "Mucinous Adenocarcinoma of the Vulva/Vagina",
+      "nci": "C40252",
+      "parent": "VULVA",
+      "tissue": "Vulva/Vagina"
+    },
+    "vmgct": {
+      "code": "VMGCT",
+      "name": "Mixed Germ Cell Tumor",
+      "nci": "C4290",
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "vmm": {
+      "code": "VMM",
+      "name": "Mucosal Melanoma of the Vulva/Vagina",
+      "nci": "C27394",
+      "parent": "VULVA",
+      "tissue": "Vulva/Vagina"
+    },
+    "vmt": {
+      "code": "VMT",
+      "name": "Mature Teratoma",
+      "nci": "C9015",
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "voec": {
+      "code": "VOEC",
+      "name": "Embryonal Carcinoma",
+      "nci": null,
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "vpdc": {
+      "code": "VPDC",
+      "name": "Poorly Differentiated Vaginal Carcinoma",
+      "nci": null,
+      "parent": "VULVA",
+      "tissue": "Vulva/Vagina"
+    },
+    "vpe": {
+      "code": "VPE",
+      "name": "Polyembryoma",
+      "nci": null,
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "vpscc": {
+      "code": "VPSCC",
+      "name": "Verrucous Penile Squamous Cell Carcinoma",
+      "nci": "C6982",
+      "parent": "PSCC",
+      "tissue": "Penis"
+    },
+    "vsc": {
+      "code": "VSC",
+      "name": "Squamous Cell Carcinoma of the Vulva/Vagina",
+      "nci": "C7736",
+      "parent": "VULVA",
+      "tissue": "Vulva/Vagina"
+    },
+    "vulva": {
+      "code": "VULVA",
+      "name": "Vulva/Vagina",
+      "nci": "C12408",
+      "parent": "TISSUE",
+      "tissue": "Vulva/Vagina"
+    },
+    "vyst": {
+      "code": "VYST",
+      "name": "Yolk Sac Tumor",
+      "nci": "C6379",
+      "parent": "VGCT",
+      "tissue": "Vulva/Vagina"
+    },
+    "wdls": {
+      "code": "WDLS",
+      "name": "Well-Differentiated Liposarcoma",
+      "nci": "C4250",
+      "parent": "LIPO",
+      "tissue": "Soft Tissue"
+    },
+    "wdtc": {
+      "code": "WDTC",
+      "name": "Well-Differentiated Thyroid Cancer",
+      "nci": "C7153",
+      "parent": "THYROID",
+      "tissue": "Thyroid"
+    },
+    "wm": {
+      "code": "WM",
+      "name": "Waldenstrom Macroglobulinemia",
+      "nci": "C80307",
+      "parent": "LPL",
+      "tissue": "Lymphoid"
+    },
+    "wpscc": {
+      "code": "WPSCC",
+      "name": "Warty Penile Squamous Cell Carcinoma",
+      "nci": "C6981",
+      "parent": "PSCC",
+      "tissue": "Penis"
+    },
+    "wt": {
+      "code": "WT",
+      "name": "Wilms' Tumor",
+      "nci": null,
+      "parent": "KIDNEY",
+      "tissue": "Kidney"
+    },
+    "xga": {
+      "code": "XGA",
+      "name": "Xanthogranuloma",
+      "nci": null,
+      "parent": "HDCN",
+      "tissue": "Myeloid"
+    }
+  },
+  "release_date": "2025-10-03",
+  "version": "oncotree_latest_stable"
+}

@@ -10,6 +10,7 @@ Dataset id: pdc-academia-sinica-gastric-cancer
 
 - Cohort: 155 cases
 - Cancer types: Stomach Adenocarcinoma
+- Subject: Esophagus and stomach
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

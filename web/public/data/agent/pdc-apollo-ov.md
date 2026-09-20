@@ -10,6 +10,7 @@ Dataset id: pdc-apollo-ov
 
 - Cohort: 72 cases
 - Cancer types: Epithelial Neoplasms, NOS
+- Subject: Ovary and fallopian tube
 - Measurements: Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 40.8 months (derivable for 70 cases)
 - Treatment response recorded: False

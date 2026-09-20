@@ -10,6 +10,7 @@ Dataset id: cbio-mel-iatlas-liu-2019
 
 - Cohort: 122 cases
 - Cancer types: Melanoma
+- Subject: Skin
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
 - Median follow-up: 17.5 months (derivable for 122 cases)
 - Treatment response recorded: True

@@ -74,7 +74,7 @@
   --border-strong: #c9cfd8;
   --text: #171b21;
   --text-muted: #59616f;
-  --text-faint: #8b95a4;
+  --text-faint: #65707e;
   --accent: #1d4f52;
   --accent-text: #123739;
   --accent-bg: #eef6f6;
@@ -123,7 +123,7 @@
     --border-strong: #3d4450;
     --text: #e8eaee;
     --text-muted: #a3acba;
-    --text-faint: #6a7484;
+    --text-faint: #7d8797;
     --accent: #74b6b8;
     --accent-text: #a8d3d4;
     --accent-bg: #16292a;
@@ -166,7 +166,7 @@
   --border-strong: #3d4450;
   --text: #e8eaee;
   --text-muted: #a3acba;
-  --text-faint: #6a7484;
+  --text-faint: #7d8797;
   --accent: #74b6b8;
   --accent-text: #a8d3d4;
   --accent-bg: #16292a;
@@ -229,6 +229,15 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* A horizontally scrolling row fades at its right edge on narrow screens, so it reads
+   as scrollable rather than cut off. */
+@media (max-width: 767px) {
+  .scroll-fade {
+    mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
   }
 }
 

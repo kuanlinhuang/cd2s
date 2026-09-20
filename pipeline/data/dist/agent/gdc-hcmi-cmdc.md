@@ -13,6 +13,7 @@ Summary: 805 next-generation cancer models - organoids and other patient-derived
 
 - Cohort: 805 cases
 - Cancer types: Ductal and Lobular Neoplasms, Complex Mixed and Stromal Neoplasms, Blood Vessel Tumors, Fibromatous Neoplasms, Epithelial Neoplasms, NOS, Mature T- and NK-Cell Lymphomas
+- Subject: pan cancer
 - Measurements: Clinical, Whole genome sequencing, Bulk RNA sequencing, Whole exome sequencing, DNA methylation array, Copy Number Variation, Somatic Structural Variation, microRNA sequencing, Whole-slide tissue images, DICOM medical imaging
 - Median follow-up: 15.8 months (derivable for 544 cases)
 - Treatment response recorded: True

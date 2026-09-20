@@ -10,6 +10,7 @@ Dataset id: cbio-dlbc-broad-2012
 
 - Cohort: 58 cases
 - Cancer types: Diffuse Large B-Cell Lymphoma, NOS
+- Subject: Lymphoid
 - Measurements: Mutation calls (panel, exome or genome)
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

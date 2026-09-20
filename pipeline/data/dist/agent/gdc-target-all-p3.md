@@ -10,6 +10,7 @@ Dataset id: gdc-target-all-p3
 
 - Cohort: 191 cases
 - Cancer types: Leukemias, NOS, Myeloid Leukemias, Not Applicable, Lymphoid Leukemias
+- Subject: Lymphoid, Myeloid
 - Measurements: Whole exome sequencing, microRNA sequencing, Bulk RNA sequencing, Whole genome sequencing, DNA methylation array, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 28.9 months (derivable for 103 cases)
 - Treatment response recorded: False

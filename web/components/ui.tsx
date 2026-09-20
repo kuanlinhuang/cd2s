@@ -89,7 +89,7 @@ export function EvidenceChip({ evidence }: { evidence: Evidence[] }) {
       style={{ color: style.fg, background: style.bg, borderColor: style.fg + "33" }}
       title={detail}
     >
-      <span className="font-mono" style={{ fontSize: 11, letterSpacing: "0.04em" }}>
+      <span className="font-mono" style={{ fontSize: 9, letterSpacing: "0.04em" }}>
         {glyph}
       </span>
       {evidence.length > 1 && <span>{evidence.length}</span>}
@@ -135,7 +135,7 @@ export function AccessBadge({
   return (
     <span
       className={`inline-flex items-center gap-1 rounded font-medium ${
-        size === "md" ? "px-2.5 py-1 text-meta" : "px-2 py-0.5 text-micro"
+        size === "md" ? "px-2 py-1 text-xs" : "px-1.5 py-0.5 text-micro"
       }`}
       style={{ color: s.fg, background: s.bg }}
       title={ACCESS_DESCRIPTIONS[tier]}
@@ -145,24 +145,32 @@ export function AccessBadge({
   );
 }
 
+const CHIP_TONES = {
+  neutral: { color: "var(--text-muted)", background: "var(--bg-sunken)" },
+  accent: { color: "var(--accent)", background: "var(--accent-bg)" },
+  scarce: { color: "var(--mixed)", background: "var(--mixed-bg)" },
+} as const;
+
+export type ChipTone = keyof typeof CHIP_TONES;
+
 export function Chip({
   children,
   tone = "neutral",
   title,
+  wrap = false,
 }: {
   children: ReactNode;
-  tone?: "neutral" | "accent" | "scarce";
+  tone?: ChipTone;
   title?: string;
+  /** Let long labels wrap instead of overflowing a narrow screen. */
+  wrap?: boolean;
 }) {
-  const tones = {
-    neutral: { color: "var(--text-muted)", background: "var(--bg-sunken)" },
-    accent: { color: "var(--accent)", background: "var(--accent-bg)" },
-    scarce: { color: "var(--mixed)", background: "var(--mixed-bg)" },
-  } as const;
   return (
     <span
-      className="inline-flex items-center rounded px-1.5 py-0.5 text-micro whitespace-nowrap"
-      style={tones[tone]}
+      className={`inline-flex items-center rounded px-1.5 py-0.5 text-micro ${
+        wrap ? "max-w-full [overflow-wrap:anywhere]" : "whitespace-nowrap"
+      }`}
+      style={CHIP_TONES[tone]}
       title={title}
     >
       {children}

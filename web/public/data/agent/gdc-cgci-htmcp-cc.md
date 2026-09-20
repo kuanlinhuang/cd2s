@@ -15,6 +15,7 @@ Summary: 212 cervical carcinomas from Ugandan women, 98% Black African and enric
 
 - Cohort: 212 cases
 - Cancer types: Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas, Complex Epithelial Neoplasms, Squamous Cell Neoplasms
+- Subject: Cervix
 - Measurements: Clinical, Whole-slide tissue images, DICOM medical imaging, Whole genome sequencing, Copy Number Variation, Somatic Structural Variation, Bulk RNA sequencing, DNA methylation array, microRNA sequencing, Targeted DNA panel sequencing
 - Median follow-up: 13.2 months (derivable for 212 cases)
 - Treatment response recorded: True

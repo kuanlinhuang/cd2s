@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-tgct
 
 - Cohort: 263 cases
 - Cancer types: Germ Cell Neoplasms
+- Subject: Testis
 - Measurements: Whole-slide tissue images, Clinical, Whole genome sequencing, Somatic Structural Variation, Bulk RNA sequencing, microRNA sequencing, Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, DICOM medical imaging
 - Median follow-up: 51.2 months (derivable for 247 cases)
 - Treatment response recorded: True

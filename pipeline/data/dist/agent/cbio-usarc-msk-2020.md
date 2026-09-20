@@ -10,6 +10,7 @@ Dataset id: cbio-usarc-msk-2020
 
 - Cohort: 107 cases
 - Cancer types: Uterine Sarcoma/Mesenchymal
+- Subject: Uterus
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 37.8 months (derivable for 107 cases)
 - Treatment response recorded: False

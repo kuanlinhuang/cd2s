@@ -6,7 +6,7 @@ import { getLargestUninformativeCohort, getStats } from "@/lib/data";
 import { num } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "For agents",
+  title: "For software",
   description:
     "Structured metadata, a read-only JSON API, and plain-language dataset briefs " +
     "written for language models.",
@@ -62,12 +62,10 @@ export default function AgentsPage() {
   return (
     <>
       <div className="pt-10 pb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">For agents</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">For software</h1>
         <p className="mt-3 max-w-3xl text-lede t-muted">
-          Half of this resource exists for software. An agent choosing a dataset needs
-          the same three things a researcher does: what the data can support, what they
-          cannot, and how to start. It needs them as structured files, not a page to
-          scrape.
+          Everything on this site is also a file: JSON records, agent briefs, Croissant,
+          JSON-LD, and search and agent endpoints. No key, no rate limit.
         </p>
       </div>
 
@@ -182,6 +180,10 @@ export default function AgentsPage() {
             <code>survival</code>, <code>treatment_response</code>,{" "}
             <code>underexplored</code>, <code>showcase</code>, <code>min_cases</code>,{" "}
             <code>min_modalities</code>, <code>limit</code>.
+          </p>
+          <p className="mt-2 text-body t-muted">
+            A side-by-side comparison is also a URL: <code>/compare?ids=a,b,c</code>, up to
+            four dataset ids.
           </p>
           <pre
             className="mt-3 overflow-x-auto rounded border p-3 font-mono text-meta"

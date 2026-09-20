@@ -10,6 +10,7 @@ Dataset id: pdc-ncc-icc
 
 - Cohort: 106 cases
 - Cancer types: Cholangiocarcinoma, Hepatocellular Carcinoma
+- Subject: Biliary tract, Liver
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 21.0 months (derivable for 104 cases)
 - Treatment response recorded: False

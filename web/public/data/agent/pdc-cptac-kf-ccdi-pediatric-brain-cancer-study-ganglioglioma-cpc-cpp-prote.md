@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp
 
 - Cohort: 84 cases
 - Cancer types: Gliomas, Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Proteome mass spectrometry (TMT18 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

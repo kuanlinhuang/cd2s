@@ -10,6 +10,7 @@ Dataset id: cbio-ptad-msk-2024
 
 - Cohort: 92 cases
 - Cancer types: Pituitary Adenoma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
 - Median follow-up: 54.7 months (derivable for 88 cases)
 - Treatment response recorded: False

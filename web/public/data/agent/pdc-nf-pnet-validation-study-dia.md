@@ -10,6 +10,7 @@ Dataset id: pdc-nf-pnet-validation-study-dia
 
 - Cohort: 51 cases
 - Cancer types: Neuroendocrine Neoplasms
+- Subject: Pancreas
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

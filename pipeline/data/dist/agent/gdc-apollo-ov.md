@@ -10,6 +10,7 @@ Dataset id: gdc-apollo-ov
 
 - Cohort: 70 cases
 - Cancer types: Epithelial Neoplasms, NOS
+- Subject: Ovary and fallopian tube
 - Measurements: Whole genome sequencing, Bulk RNA sequencing, Copy Number Variation, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

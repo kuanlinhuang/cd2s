@@ -79,6 +79,21 @@ class Evidence(CDSModel):
         return v.strip() if v else v
 
 
+class SubjectScope(str, Enum):
+    SINGLE = "single"
+    SEVERAL = "several"
+    PAN_CANCER = "pan_cancer"
+    NON_CANCER = "non_cancer"
+    NOT_STATED = "not_stated"
+    TITLE_DERIVED = "title_derived"
+
+
+class Subject(CDSModel):
+    scope: SubjectScope = SubjectScope.NOT_STATED
+    tissues: list[str] = Field(default_factory=list)
+    evidence: list[Evidence] = Field(default_factory=list)
+
+
 # --------------------------------------------------------------------------------------
 # Identity and provenance
 # --------------------------------------------------------------------------------------
@@ -677,6 +692,7 @@ class DatasetRecord(CDSModel):
     # at a glance
     cancer_types: list[OntologyTerm] = Field(default_factory=list)
     primary_sites: list[str] = Field(default_factory=list)
+    subject: Subject = Field(default_factory=Subject)
     is_pediatric: bool | None = None
     model_systems: list[str] = Field(default_factory=list)  # PDX, organoid, cell line
     cohort: Cohort = Field(default_factory=Cohort)

@@ -10,6 +10,7 @@ Dataset id: cbio-appendiceal-msk-2022
 
 - Cohort: 273 cases
 - Cancer types: Appendiceal Adenocarcinoma
+- Subject: Colorectal and bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 25.0 months (derivable for 244 cases)
 - Treatment response recorded: True

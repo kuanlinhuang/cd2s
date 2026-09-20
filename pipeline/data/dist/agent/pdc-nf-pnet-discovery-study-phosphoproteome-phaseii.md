@@ -10,6 +10,7 @@ Dataset id: pdc-nf-pnet-discovery-study-phosphoproteome-phaseii
 
 - Cohort: 53 cases
 - Cancer types: Neuroendocrine Neoplasms
+- Subject: Colorectal and bowel, Pancreas, Esophagus and stomach
 - Measurements: Phosphoproteome mass spectrometry (TMT16 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

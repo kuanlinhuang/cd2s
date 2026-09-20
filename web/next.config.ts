@@ -31,6 +31,32 @@ const nextConfig: NextConfig = {
           { key: "Access-Control-Allow-Methods", value: "GET, OPTIONS" },
         ],
       },
+      // The pages that have to be rendered per request, because the query string is
+      // part of what they show. Nothing about them is per-visitor: the same URL renders
+      // the same document for everyone until the corpus is rebuilt, so the shared cache
+      // can answer for them and the function only runs on a miss. Without this every
+      // visit to the browse page re-rendered six hundred rows in a serverless function.
+      //
+      // The agent endpoint is deliberately not here: its answer depends on a model and
+      // it sets `no-store` itself.
+      {
+        source: "/:path(datasets|compare|network|ask)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        source: "/api/v1/search",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
     ];
   },
 };

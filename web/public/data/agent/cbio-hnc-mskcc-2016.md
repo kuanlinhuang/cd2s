@@ -10,6 +10,7 @@ Dataset id: cbio-hnc-mskcc-2016
 
 - Cohort: 151 cases
 - Cancer types: Head and Neck
+- Subject: Head and neck
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 31.9 months (derivable for 146 cases)
 - Treatment response recorded: False

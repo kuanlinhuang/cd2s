@@ -10,6 +10,7 @@ Dataset id: pdc-ptrc-brca-calgb40601-neoadjuvant-trial
 
 - Cohort: 59 cases
 - Cancer types: Breast Invasive Carcinoma
+- Subject: Breast
 - Measurements: Phosphoproteome mass spectrometry (TMT16 / DDA), Proteome mass spectrometry (TMT16 / DDA)
 - Treatment response recorded: True
 - Access: open. Direct download from the PDC portal or its API; no account required

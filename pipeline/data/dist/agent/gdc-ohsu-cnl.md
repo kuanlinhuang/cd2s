@@ -10,6 +10,7 @@ Dataset id: gdc-ohsu-cnl
 
 - Cohort: 176 cases
 - Cancer types: Chronic Myeloproliferative Disorders
+- Subject: Myeloid
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Structural Variation
 - Median follow-up: 19.1 months (derivable for 118 cases)
 - Treatment response recorded: False

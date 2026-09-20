@@ -10,6 +10,7 @@ Dataset id: pdc-prospective-ovarian-jhu-intact-glycoproteome
 
 - Cohort: 97 cases
 - Cancer types: Ovarian Serous Cystadenocarcinoma
+- Subject: Ovary and fallopian tube
 - Measurements: Glycoproteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

@@ -11,6 +11,7 @@ Dataset id: idc-mouse-astrocytoma
 
 - Cohort: 48 cases
 - Cancer types: Glioblastoma Multiforme
+- Subject: Brain and central nervous system
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

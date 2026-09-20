@@ -10,6 +10,7 @@ Dataset id: pdc-tcga-colon-cancer-proteome
 
 - Cohort: 90 cases
 - Cancer types: Colon Adenocarcinoma, Rectum Adenocarcinoma
+- Subject: Colorectal and bowel
 - Measurements: Proteome mass spectrometry (Label Free / DDA)
 - Median follow-up: 19.0 months (derivable for 89 cases)
 - Treatment response recorded: False

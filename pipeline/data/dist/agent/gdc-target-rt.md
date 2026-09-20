@@ -10,6 +10,7 @@ Dataset id: gdc-target-rt
 
 - Cohort: 69 cases
 - Cancer types: Complex Mixed and Stromal Neoplasms
+- Subject: Head and neck, Kidney, Liver
 - Measurements: Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, DNA methylation array, Clinical, Structural Variation
 - Median follow-up: 8.1 months (derivable for 61 cases)
 - Treatment response recorded: False

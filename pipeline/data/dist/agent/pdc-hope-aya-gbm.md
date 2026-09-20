@@ -10,6 +10,7 @@ Dataset id: pdc-hope-aya-gbm
 
 - Cohort: 89 cases
 - Cancer types: Pediatric/AYA Brain Tumors, Gliomas
+- Subject: Brain and central nervous system
 - Measurements: Glycoproteome mass spectrometry (TMT11 / DDA), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 26.8 months (derivable for 62 cases)
 - Treatment response recorded: False

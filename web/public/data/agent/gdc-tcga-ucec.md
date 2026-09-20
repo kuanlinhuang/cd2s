@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-ucec
 
 - Cohort: 560 cases
 - Cancer types: Not Reported, Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms
+- Subject: Uterus
 - Measurements: Clinical, DICOM medical imaging, SNP genotyping array (copy number, germline), DNA methylation array, Bulk RNA sequencing, Whole exome sequencing, microRNA sequencing, Whole-slide diagnostic images, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 29.5 months (derivable for 546 cases)
 - Treatment response recorded: True

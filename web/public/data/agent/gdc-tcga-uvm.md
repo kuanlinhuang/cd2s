@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-uvm
 
 - Cohort: 80 cases
 - Cancer types: Nevi and Melanomas, Paragangliomas and Glomus Tumors
+- Subject: Eye
 - Measurements: Bulk RNA sequencing, Whole exome sequencing, microRNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide diagnostic images, Clinical, DICOM medical imaging, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 28.1 months (derivable for 80 cases)
 - Treatment response recorded: True

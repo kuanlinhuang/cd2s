@@ -10,6 +10,7 @@ Dataset id: pdc-oral-squamous-cell-carcinoma-study
 
 - Cohort: 39 cases
 - Cancer types: Oral Squamous Cell Carcinoma
+- Subject: Head and neck
 - Measurements: Proteome mass spectrometry (iTRAQ4 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

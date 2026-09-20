@@ -9,6 +9,7 @@ Dataset id: pdc-cptac-ccrcc-discovery-study
 ## What it is
 
 - Cohort: 124 cases
+- Subject: Kidney (derived from title; not stated by repository)
 - Measurements: Glycoproteome mass spectrometry (TMT10 / DDA), Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (Label Free / DIA), Proteome mass spectrometry (TMT10 / DDA)
 - Access: open. Direct download from the PDC portal or its API; no account required
 

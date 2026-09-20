@@ -10,6 +10,7 @@ Dataset id: cbio-gct-msk-2016
 
 - Cohort: 180 cases
 - Cancer types: Testis
+- Subject: Testis
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 8.4 months (derivable for 149 cases)
 - Treatment response recorded: False

@@ -17,6 +17,7 @@ Summary: 449 papillary thyroid carcinomas from Ukrainians exposed to Chernobyl f
 
 - Cohort: 449 cases
 - Cancer types: Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas
+- Subject: Thyroid
 - Measurements: Whole genome sequencing, Bulk RNA sequencing, microRNA sequencing, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 115.0 months (derivable for 12 cases)
 - Treatment response recorded: False

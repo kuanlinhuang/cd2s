@@ -10,6 +10,7 @@ Dataset id: cbio-gbm-cptac-2021
 
 - Cohort: 99 cases
 - Cancer types: Diffuse Glioma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, microRNA expression, Mass spectrometry proteomics
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

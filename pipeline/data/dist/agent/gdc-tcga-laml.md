@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-laml
 
 - Cohort: 200 cases
 - Cancer types: Myeloid Leukemias
+- Subject: Myeloid
 - Measurements: Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Gene expression microarray, Clinical, Structural Variation
 - Median follow-up: 12.0 months (derivable for 188 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: idc-lung-fused-ct-pathology
 
 - Cohort: 6 cases
 - Cancer types: Lung Cancer
+- Subject: Lung
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

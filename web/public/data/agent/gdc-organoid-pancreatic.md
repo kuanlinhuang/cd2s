@@ -14,6 +14,7 @@ Summary: 70 patient-derived pancreatic cancer organoids with exome and RNA seque
 
 - Cohort: 70 cases
 - Cancer types: Unknown, Adenomas and Adenocarcinomas
+- Subject: Pancreas
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Whole genome sequencing, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

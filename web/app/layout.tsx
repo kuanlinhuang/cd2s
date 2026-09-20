@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import "./globals.css";
-import { Nav, type NavItem } from "@/components/Nav";
-import { getIndex, getQuestions, getStats } from "@/lib/data";
+import type { NavItem } from "@/components/Nav";
+import SiteHeader from "@/components/SiteHeader";
+import { getQuestions, getStats } from "@/lib/data";
 import { num, shortDate } from "@/lib/format";
 import { siteUrl } from "@/lib/site";
 
@@ -29,8 +30,9 @@ export const metadata: Metadata = {
 };
 
 /**
- * The same seven destinations the site has always had, now behind one control, each
- * with the one line that says why it is worth opening. See components/Nav.tsx.
+ * The seven destinations, each with the one line that says why it is worth opening and
+ * a count where there is one to give. Computed here because the counts come from the
+ * corpus; rendered by components/Nav.tsx behind a single control.
  */
 function navItems(): NavItem[] {
   const stats = getStats();
@@ -44,8 +46,8 @@ function navItems(): NavItem[] {
     },
     {
       href: "/questions",
-      label: "By question",
-      hint: "Start from a research question and see what can answer it",
+      label: "Research questions",
+      hint: "Start from a question and see what can answer it",
       count: num(getQuestions().length),
       group: "find",
     },
@@ -79,7 +81,7 @@ function navItems(): NavItem[] {
     },
     {
       href: "/methods",
-      label: "Methods",
+      label: "How this was built",
       hint: "How every number is measured, and where the corpus is weak",
       group: "trust",
     },
@@ -90,7 +92,6 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const stats = getStats();
-  const index = getIndex();
   return (
     <html lang="en">
       <body>
@@ -102,75 +103,28 @@ export default function RootLayout({
           Skip to content
         </a>
 
-        <header
-          className="sticky top-0 z-40 border-b backdrop-blur no-print"
-          style={{ background: "color-mix(in srgb, var(--bg) 96%, transparent)" }}
-        >
-          <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
-            <div className="flex h-16 items-center gap-4 sm:gap-6">
-              <Link href="/" className="flex shrink-0 items-center gap-2.5">
-                <span
-                  aria-hidden
-                  className="grid h-8 w-8 place-items-center rounded-md font-mono text-meta font-bold"
-                  style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
-                >
-                  CD
-                </span>
-                <span className="text-title font-semibold tracking-tight whitespace-nowrap">
-                  Cancer Data Showcase
-                </span>
-              </Link>
-              <Nav items={navItems()} />
-            </div>
-          </div>
-        </header>
+        <SiteHeader items={navItems()} />
 
-        <main id="main" className="mx-auto max-w-[1180px] px-4 pb-20 sm:px-6">
+        <main id="main" className="mx-auto max-w-[1180px] px-4 sm:px-6 pb-20">
           {children}
         </main>
 
-        <footer className="border-t py-8 text-meta no-print t-muted">
-          <div className="mx-auto max-w-[1180px] px-4 sm:px-6 grid gap-6 sm:grid-cols-3">
-            <div>
-              <div className="font-medium mb-1" style={{ color: "var(--text)" }}>
-                Cancer Data Showcase
-              </div>
-              <p>
-                A guide to reusing NCI-supported cancer data. Built for the NCI Office of
-                Data Sharing Impact Prize, Track 1.
-              </p>
-            </div>
-            <div>
-              <div className="font-medium mb-1" style={{ color: "var(--text)" }}>
-                Provenance
-              </div>
-              <p>
-                {num(stats.n_datasets)} dataset records from {stats.n_repositories}{" "}
-                repositories, {num(index.length)} of them in the search index. Corpus built{" "}
-                {shortDate(stats.generated_at)} with pipeline v{stats.pipeline_version}.
-              </p>
-              <p className="mt-1">
-                Every claim links to its source. See{" "}
-                <Link href="/methods" className="underline">
-                  Methods
-                </Link>{" "}
-                for how the corpus is built and where it is weak.
-              </p>
-            </div>
-            <div>
-              <div className="font-medium mb-1" style={{ color: "var(--text)" }}>
-                Reuse this
-              </div>
-              <p>
-                Curated text and structured metadata are CC BY 4.0; pipeline code is MIT.
-                Upstream dataset metadata keeps its original terms.
-              </p>
-              <p className="mt-1">
-                <Link href="/agents" className="underline">
-                  Bulk download and agent API
-                </Link>
-              </p>
-            </div>
+        <footer className="border-t py-6 text-meta no-print t-muted">
+          <div className="mx-auto flex max-w-[1180px] flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 sm:px-6">
+            <span className="font-medium" style={{ color: "var(--text)" }}>
+              Cancer Data Showcase
+            </span>
+            <span>
+              {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
+              repositories, corpus built {shortDate(stats.generated_at)}
+            </span>
+            <Link href="/methods" className="underline">
+              How this was built
+            </Link>
+            <Link href="/agents" className="underline">
+              For software
+            </Link>
+            <span>Text CC BY 4.0, code MIT</span>
           </div>
         </footer>
       </body>

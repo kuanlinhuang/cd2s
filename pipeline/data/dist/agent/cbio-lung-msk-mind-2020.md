@@ -10,6 +10,7 @@ Dataset id: cbio-lung-msk-mind-2020
 
 - Cohort: 247 cases
 - Cancer types: Lung
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 2.7 months (derivable for 246 cases)
 - Treatment response recorded: False

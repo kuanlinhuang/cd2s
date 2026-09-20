@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-ov
 
 - Cohort: 608 cases
 - Cancer types: Not Reported, Cystic, Mucinous and Serous Neoplasms
+- Subject: Ovary and fallopian tube
 - Measurements: Clinical, DNA methylation array, SNP genotyping array (copy number, germline), DICOM medical imaging, microRNA sequencing, Whole exome sequencing, Bulk RNA sequencing, Reverse phase protein array, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 32.7 months (derivable for 584 cases)
 - Treatment response recorded: True

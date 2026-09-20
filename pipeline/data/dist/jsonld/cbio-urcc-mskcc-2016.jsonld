@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=urcc_mskcc_2016"
   ],
   "keywords": [
+    "NCIt:C12415",
     "Unclassified Renal Cell Carcinoma",
     "cbioportal",
     "copy number",

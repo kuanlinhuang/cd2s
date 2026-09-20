@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-sarcoma-proteome
 
 - Cohort: 28 cases
 - Cancer types: Sarcoma
+- Subject: Soft tissue
 - Measurements: Proteome mass spectrometry (TMT18 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

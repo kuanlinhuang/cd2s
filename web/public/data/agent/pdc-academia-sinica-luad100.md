@@ -10,6 +10,7 @@ Dataset id: pdc-academia-sinica-luad100
 
 - Cohort: 110 cases
 - Cancer types: Lung Adenocarcinoma, Lung Squamous Cell Carcinoma
+- Subject: Lung
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

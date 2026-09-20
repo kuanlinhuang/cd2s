@@ -10,6 +10,7 @@ Dataset id: cbio-sarcoma-mskcc-2022
 
 - Cohort: 2,138 cases
 - Cancer types: Soft Tissue
+- Subject: Soft tissue
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 22.5 months (derivable for 2000 cases)
 - Treatment response recorded: False

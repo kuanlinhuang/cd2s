@@ -17,6 +17,7 @@ Summary: 101 metastatic castration-resistant prostate cancers with whole genome 
 
 - Cohort: 101 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Prostate
 - Measurements: Bulk RNA sequencing, Whole genome sequencing, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 95.2 months (derivable for 87 cases)
 - Treatment response recorded: False

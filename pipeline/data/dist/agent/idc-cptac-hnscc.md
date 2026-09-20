@@ -11,6 +11,7 @@ Dataset id: idc-cptac-hnscc
 
 - Cohort: 112 cases
 - Cancer types: Head and Neck Cancer
+- Subject: Head and neck
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data), Genomics (accompanying data, per IDC supporting_data), Proteomics (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

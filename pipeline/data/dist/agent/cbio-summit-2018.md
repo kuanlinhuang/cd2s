@@ -10,6 +10,7 @@ Dataset id: cbio-summit-2018
 
 - Cohort: 141 cases
 - Cancer types: Mixed Cancer Types
+- Subject: pan cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 1.9 months (derivable for 141 cases)
 - Treatment response recorded: False

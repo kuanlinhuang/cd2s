@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-luad
 
 - Cohort: 585 cases
 - Cancer types: Cystic, Mucinous and Serous Neoplasms, Ductal and Lobular Neoplasms, Acinar Cell Neoplasms, Adenomas and Adenocarcinomas
+- Subject: Lung
 - Measurements: Clinical, Whole exome sequencing, DNA methylation array, DICOM medical imaging, Bulk RNA sequencing, SNP genotyping array (copy number, germline), Whole-slide tissue images, microRNA sequencing, Whole genome sequencing, Reverse phase protein array
 - Median follow-up: 21.6 months (derivable for 513 cases)
 - Treatment response recorded: True

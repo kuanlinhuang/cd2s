@@ -10,6 +10,7 @@ Dataset id: cbio-dlbcl-duke-2017
 
 - Cohort: 1,001 cases
 - Cancer types: Diffuse Large B-Cell Lymphoma, NOS
+- Subject: Lymphoid
 - Measurements: Mutation calls (panel, exome or genome)
 - Median follow-up: 91.8 months (derivable for 967 cases)
 - Treatment response recorded: False

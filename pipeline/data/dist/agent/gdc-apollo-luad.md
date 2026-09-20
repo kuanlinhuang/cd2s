@@ -10,6 +10,7 @@ Dataset id: gdc-apollo-luad
 
 - Cohort: 87 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Lung
 - Measurements: Bulk RNA sequencing, Whole genome sequencing, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 50.4 months (derivable for 86 cases)
 - Treatment response recorded: False

@@ -9,6 +9,7 @@ Dataset id: pdc-prospective-colon-pnnl-proteome-qeplus
 ## What it is
 
 - Cohort: 102 cases
+- Subject: Colorectal and bowel (derived from title; not stated by repository)
 - Measurements: Proteome mass spectrometry (TMT10 / DDA)
 - Access: open. Direct download from the PDC portal or its API; no account required
 

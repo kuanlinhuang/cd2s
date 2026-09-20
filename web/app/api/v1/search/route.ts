@@ -16,10 +16,29 @@ export const dynamic = "force-dynamic";
  * measured fields on every record, so they are first-class query parameters here rather
  * than something a caller has to infer from a description.
  */
+/**
+ * `search_text` folded to lower case once for the whole index.
+ *
+ * The free-text filter lower-cased all six hundred rows on every request - about half a
+ * megabyte of throwaway strings per query against a corpus that does not change while
+ * the process lives.
+ */
+let _foldedSearchText: Map<string, string> | null = null;
+
+function foldedSearchText(): Map<string, string> {
+  if (_foldedSearchText === null) {
+    _foldedSearchText = new Map(getIndex().map((r) => [r.id, (r.search_text ?? "").toLowerCase()]));
+  }
+  return _foldedSearchText;
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const q = (searchParams.get("q") ?? "").toLowerCase().trim();
-  const limit = Math.min(Number(searchParams.get("limit") ?? 25) || 25, 200);
+  // Clamped low as well as high. `Math.min(n, 200)` alone let a negative through to
+  // `slice(0, limit)`, where it counts from the end: `?limit=-5` quietly returned every
+  // result but the last five, and reported the full total beside them.
+  const limit = Math.min(Math.max(Math.trunc(Number(searchParams.get("limit") ?? 25)) || 25, 1), 200);
 
   const wants = (key: string): boolean | null => {
     const v = searchParams.get(key);
@@ -29,6 +48,7 @@ export async function GET(request: Request) {
 
   const modality = searchParams.get("modality");
   const site = searchParams.get("site");
+  const subject = searchParams.get("subject");
   const access = searchParams.get("access");
   const repository = searchParams.get("repository");
   const survival = wants("survival");
@@ -40,9 +60,14 @@ export async function GET(request: Request) {
 
   let rows: IndexRow[] = getIndex();
 
-  if (q) rows = rows.filter((r) => r.search_text.toLowerCase().includes(q));
+  if (q) {
+    const folded = foldedSearchText();
+    rows = rows.filter((r) => folded.get(r.id)?.includes(q));
+  }
   if (modality) rows = rows.filter((r) => r.modalities.includes(modality));
   if (site) rows = rows.filter((r) => r.primary_sites.includes(site));
+  if (subject)
+    rows = rows.filter((r) => r.subjects.includes(subject) || r.subject_scope === subject);
   if (access) rows = rows.filter((r) => r.access_tier === access);
   if (repository) rows = rows.filter((r) => r.repositories.includes(repository));
   if (survival !== null) rows = rows.filter((r) => (r.has_survival_endpoint === true) === survival);
@@ -69,6 +94,8 @@ export async function GET(request: Request) {
       n_cases: r.n_cases,
       n_samples: r.n_samples,
       modalities: r.modalities,
+      subjects: r.subjects,
+      subject_scope: r.subject_scope,
       access_tier: r.access_tier,
       has_survival_endpoint: r.has_survival_endpoint,
       has_treatment_response: r.has_treatment_response,

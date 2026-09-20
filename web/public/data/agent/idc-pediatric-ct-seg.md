@@ -11,6 +11,7 @@ Dataset id: idc-pediatric-ct-seg
 
 - Cohort: 359 cases
 - Cancer types: Non-Cancer
+- Subject: non cancer
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

@@ -10,6 +10,7 @@ Dataset id: cbio-rcc-iatlas-immotion150-2018
 
 - Cohort: 263 cases
 - Cancer types: Renal Cell Carcinoma
+- Subject: Kidney
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
 - Median follow-up: 5.8 months (derivable for 263 cases)
 - Treatment response recorded: True

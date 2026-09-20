@@ -10,6 +10,7 @@ Dataset id: cbio-blca-dfarber-mskcc-2014
 
 - Cohort: 50 cases
 - Cancer types: Bladder Urothelial Carcinoma
+- Subject: Bladder and urinary tract
 - Measurements: Mutation calls (panel, exome or genome)
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

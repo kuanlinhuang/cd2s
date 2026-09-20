@@ -10,6 +10,7 @@ Dataset id: gdc-target-all-p1
 
 - Cohort: 24 cases
 - Cancer types: Lymphoid Leukemias
+- Subject: Lymphoid
 - Measurements: Bulk RNA sequencing, Whole genome sequencing, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 49.5 months (derivable for 23 cases)
 - Treatment response recorded: False

@@ -13,6 +13,7 @@ Summary: 1,510 children with acute lymphoblastic leukaemia from Children's Oncol
 
 - Cohort: 1,510 cases
 - Cancer types: Acute Lymphoblastic Leukemia, Lymphoid Leukemias
+- Subject: Lymphoid
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Whole genome sequencing, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 100.2 months (derivable for 1510 cases)
 - Treatment response recorded: True

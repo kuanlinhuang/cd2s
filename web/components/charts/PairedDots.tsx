@@ -23,6 +23,12 @@ import { num } from "@/lib/format";
  * wants is now the most visible thing in the chart: the length of the connector is the
  * gap between being cited and being used.
  *
+ * A measured zero sits on the axis origin, with its printed 0 beside it. The decade
+ * scale has no position for it - log 0 is undefined, and giving zero its own step below
+ * the first decade is what costs the even spacing that makes the gridlines line up with
+ * their labels. A dataset cited and never reused is the sharpest row this chart has, so
+ * it is drawn at the origin rather than dropped, and the figure is what states the value.
+ *
  * Colour: grey is the softer signal, teal the measured one, the same meaning those two
  * tokens carry site-wide. Validated as a pair - CVD separation dE 14.1 light and 20.5
  * dark against a target of 8, normal vision 19.8 and 22.7 against a floor of 15 - and

@@ -16,6 +16,7 @@ Summary: 70 diffuse large B-cell lymphomas from an HIV-enriched cohort, half Bla
 
 - Cohort: 70 cases
 - Cancer types: Mature B-Cell Lymphomas
+- Subject: Lymphoid
 - Measurements: Whole genome sequencing, microRNA sequencing, Clinical, Bulk RNA sequencing, Copy Number Variation, Somatic Structural Variation, Whole-slide tissue images, DICOM medical imaging
 - Median follow-up: 11.3 months (derivable for 57 cases)
 - Treatment response recorded: True

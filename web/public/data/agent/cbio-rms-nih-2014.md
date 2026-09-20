@@ -10,6 +10,7 @@ Dataset id: cbio-rms-nih-2014
 
 - Cohort: 43 cases
 - Cancer types: Rhabdomyosarcoma
+- Subject: Soft tissue
 - Measurements: Mutation calls (panel, exome or genome)
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

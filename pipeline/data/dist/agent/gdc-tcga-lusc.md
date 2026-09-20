@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-lusc
 
 - Cohort: 504 cases
 - Cancer types: Adenomas and Adenocarcinomas, Squamous Cell Neoplasms
+- Subject: Lung
 - Measurements: SNP genotyping array (copy number, germline), Clinical, DICOM medical imaging, DNA methylation array, Whole exome sequencing, Bulk RNA sequencing, Whole-slide tissue images, microRNA sequencing, Whole genome sequencing, Reverse phase protein array
 - Median follow-up: 21.7 months (derivable for 499 cases)
 - Treatment response recorded: True

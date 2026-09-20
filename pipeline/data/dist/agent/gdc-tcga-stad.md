@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-stad
 
 - Cohort: 443 cases
 - Cancer types: Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms
+- Subject: Esophagus and stomach
 - Measurements: Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Clinical, DICOM medical imaging, microRNA sequencing, Whole genome sequencing, Somatic Structural Variation, Whole-slide diagnostic images, Bulk RNA sequencing
 - Median follow-up: 13.9 months (derivable for 440 cases)
 - Treatment response recorded: True

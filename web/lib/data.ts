@@ -31,6 +31,7 @@ import type {
   FieldCalibration,
   ReuseGapModel,
   ScatterPoint,
+  SubjectVocabulary,
 } from "./types";
 
 const DATA_DIR = join(process.cwd(), "public", "data");
@@ -66,6 +67,8 @@ const BROWSE_FIELDS = [
   "repositories",
   "cancer_types",
   "primary_sites",
+  "subjects",
+  "subject_scope",
   "modalities",
   "n_modalities",
   "n_cases",
@@ -115,6 +118,19 @@ export function getFacets(): Facets {
   return _facets;
 }
 
+let _subjects: SubjectVocabulary | null = null;
+export function getSubjects(): SubjectVocabulary {
+  if (_subjects === null) {
+    _subjects = readJson<SubjectVocabulary>("subjects.json", {
+      version: "unknown",
+      release_date: "unknown",
+      subjects: [],
+      states: [],
+    });
+  }
+  return _subjects;
+}
+
 let _stats: CorpusStats | null = null;
 export function getStats(): CorpusStats {
   if (_stats === null) {
@@ -161,6 +177,40 @@ export function getRecord(id: string): DatasetRecord | null {
   return record;
 }
 
+/**
+ * The schema.org/DCAT description of one dataset, as the pipeline wrote it.
+ *
+ * Read from the generated file rather than rebuilt here, so the document a crawler
+ * finds in the page and the one served at /data/jsonld/{id}.jsonld are the same
+ * document. Returned as a string because it is inlined verbatim; nothing on the site
+ * reads its fields.
+ *
+ * Inlining is the point. Google Dataset Search and the other harvesters read JSON-LD
+ * embedded in the page and do not follow a link to a .jsonld file, so a dataset
+ * resource that only offered the file was invisible to exactly the discovery surface
+ * it was generated for.
+ */
+const _jsonLd = new Map<string, string | null>();
+
+export function getJsonLd(id: string): string | null {
+  const hit = _jsonLd.get(id);
+  if (hit !== undefined) return hit;
+  const path = join(DATA_DIR, "jsonld", `${id}.jsonld`);
+  let doc: string | null = null;
+  if (existsSync(path)) {
+    // Reserialized compactly: the file is indented for reading and the page is not.
+    // Parsing also means a malformed document fails the build rather than shipping
+    // broken structured data to a crawler.
+    try {
+      doc = JSON.stringify(JSON.parse(readFileSync(path, "utf8")));
+    } catch {
+      doc = null;
+    }
+  }
+  _jsonLd.set(id, doc);
+  return doc;
+}
+
 export function getAllRecordIds(): string[] {
   const dir = join(DATA_DIR, "datasets");
   if (!existsSync(dir)) return [];
@@ -169,8 +219,52 @@ export function getAllRecordIds(): string[] {
     .map((f) => f.slice(0, -5));
 }
 
+let _byId: Map<string, IndexRow> | null = null;
+
 export function getRowById(id: string): IndexRow | undefined {
-  return getIndex().find((r) => r.id === id);
+  if (_byId === null) _byId = new Map(getIndex().map((r) => [r.id, r]));
+  return _byId.get(id);
+}
+
+/**
+ * Lower-cased sites and cancer types per row, built once for the whole index.
+ *
+ * `getRelated` runs for each of the six hundred dataset pages and compared against
+ * every other row, lower-casing both sides on every comparison: a third of a million
+ * comparisons and some two million throwaway strings per build, all of them the same
+ * few hundred values. The corpus is immutable within a process, so the folded form is
+ * computed once and the comparison becomes a set lookup.
+ */
+interface FoldedRow {
+  sites: Set<string>;
+  cancers: Set<string>;
+  modalities: Set<string>;
+}
+
+let _folded: Map<string, FoldedRow> | null = null;
+
+function folded(): Map<string, FoldedRow> {
+  if (_folded === null) {
+    _folded = new Map(
+      getIndex().map((r) => [
+        r.id,
+        {
+          sites: new Set(r.primary_sites.map((x) => x.toLowerCase())),
+          cancers: new Set(r.cancer_types.map((x) => x.toLowerCase())),
+          modalities: new Set(r.modalities),
+        },
+      ]),
+    );
+  }
+  return _folded;
+}
+
+function overlap(a: Set<string>, b: Set<string>): number {
+  // Walk the smaller set: the cost is min(|a|, |b|) lookups rather than |a|.
+  const [small, large] = a.size <= b.size ? [a, b] : [b, a];
+  let n = 0;
+  for (const v of small) if (large.has(v)) n += 1;
+  return n;
 }
 
 /**
@@ -181,23 +275,20 @@ export function getRowById(id: string): IndexRow | undefined {
  */
 export function getRelated(id: string, limit = 6): IndexRow[] {
   const index = getIndex();
-  const self = index.find((r) => r.id === id);
+  const self = getRowById(id);
   if (!self) return [];
 
-  const siteSet = new Set(self.primary_sites.map((s) => s.toLowerCase()));
-  const cancerSet = new Set(self.cancer_types.map((s) => s.toLowerCase()));
-  const modSet = new Set(self.modalities);
+  const fold = folded();
+  const mine = fold.get(id) as FoldedRow;
 
   const scored = index
     .filter((r) => r.id !== id)
     .map((r) => {
-      const siteOverlap = r.primary_sites.filter((s) =>
-        siteSet.has(s.toLowerCase()),
-      ).length;
-      const cancerOverlap = r.cancer_types.filter((s) =>
-        cancerSet.has(s.toLowerCase()),
-      ).length;
-      const newModalities = r.modalities.filter((m) => !modSet.has(m)).length;
+      const theirs = fold.get(r.id) as FoldedRow;
+      const siteOverlap = overlap(theirs.sites, mine.sites);
+      const cancerOverlap = overlap(theirs.cancers, mine.cancers);
+      let newModalities = 0;
+      for (const m of theirs.modalities) if (!mine.modalities.has(m)) newModalities += 1;
       if (siteOverlap + cancerOverlap === 0) return { r, score: -1 };
       const score =
         cancerOverlap * 3 +
@@ -447,18 +538,6 @@ const AWARD_VIEW_LANES: NetworkLane[] = [
 ];
 
 /**
- * Nodes drawn per column before the rest are counted off instead.
- *
- * A cap is needed because a slice of this corpus is not a picture. "Everything" is 796
- * awards against 602 datasets and several thousand articles; the previous version drew
- * all of them as three-pixel dots and told the reader in prose to zoom in before
- * expecting to read a label, which is a chart admitting it does not work. Columns are
- * ordered by how much each node connects, so a cap keeps the part worth reading, and
- * every column says how many it is not showing.
- */
-const LANE_CAP = 24;
-
-/**
  * The columns of the dataset-centred graph: money in, the data, what was published, and
  * the money that paid for publishing it.
  *
@@ -581,38 +660,71 @@ export function getNetwork(scope: NetworkScope): NetworkData {
     }
   }
 
-  // Keep the most connected of each kind, and say how many were left out. Degree is the
-  // right ranking here: the reason to draw this as a network at all is the nodes two
-  // things share, and those are the high-degree ones.
-  const degree = new Map<string, number>();
-  for (const e of edges) {
-    degree.set(e.source, (degree.get(e.source) ?? 0) + 1);
-    degree.set(e.target, (degree.get(e.target) ?? 0) + 1);
-  }
-  const lanes = AWARD_VIEW_LANES.map((lane) => ({ ...lane }));
-  // "Cohorts the award is credited on" is wrong for a slice, where there is no one award.
-  if (!award) lanes[1].hint = "Cohorts these awards are credited on";
-  const kept = new Set<string>();
-  const out: NetworkNode[] = [];
-  for (let i = 0; i < lanes.length; i += 1) {
-    const inLane = [...nodes.values()]
-      .filter((nd) => nd.lane === i)
-      .sort(
-        (a, b) =>
-          (degree.get(b.id) ?? 0) - (degree.get(a.id) ?? 0) || a.label.localeCompare(b.label),
-      );
-    const show = inLane.slice(0, LANE_CAP);
-    for (const nd of show) {
-      kept.add(nd.id);
-      out.push(nd);
-    }
-    if (inLane.length > show.length) lanes[i].more = inLane.length - show.length;
-  }
+  return condense([...nodes.values()], edges, awardViewLanes(award));
+}
 
+/**
+ * The award view's columns. The middle label depends on whether one award is in
+ * view: "Cohorts the award is credited on" is wrong for a whole-repository slice.
+ */
+function awardViewLanes(award: string | null): NetworkLane[] {
+  const lanes = AWARD_VIEW_LANES.map((lane) => ({ ...lane }));
+  if (!award) lanes[1].hint = "Cohorts these awards are credited on";
+  return lanes;
+}
+
+/**
+ * How many nodes a slice may draw before it is condensed to its cross-links.
+ *
+ * Above this the picture stops being one: the whole corpus is 2,125 nodes in three
+ * columns, so the tallest column is some nine hundred rows and sixteen thousand pixels
+ * tall, and the page shipped 2.2 MB of markup to say nothing a reader could see.
+ * Award pages and the reviewed slice sit far below it and are drawn entire.
+ */
+const NETWORK_NODE_BUDGET = 600;
+
+/**
+ * Drop the awards and articles that touch only one dataset, when a slice is too large
+ * to read whole.
+ *
+ * Not an arbitrary truncation, and chosen from the page's own reason for existing: a
+ * node shared between two datasets is what makes this a network rather than a list, and
+ * a node touching exactly one contributes a single spoke. Of the 787 articles in the
+ * whole corpus, 691 touch one dataset. Datasets themselves are never dropped - they are
+ * the subject - and the counts are returned so the page can state what it set aside
+ * rather than quietly showing less than it claims.
+ */
+function condense(
+  nodes: NetworkNode[],
+  edges: NetworkEdge[],
+  lanes: NetworkLane[],
+): NetworkData {
+  if (nodes.length <= NETWORK_NODE_BUDGET) return { nodes, edges, lanes, condensed: null };
+  const datasetsTouched = new Map<string, Set<string>>();
+  for (const e of edges) {
+    const [other, dataset] = e.source.startsWith("dataset:") ? [e.target, e.source] : [e.source, e.target];
+    if (!dataset.startsWith("dataset:")) continue;
+    const seen = datasetsTouched.get(other) ?? new Set<string>();
+    seen.add(dataset);
+    datasetsTouched.set(other, seen);
+  }
+  const keep = new Set<string>();
+  let awardsOmitted = 0;
+  let papersOmitted = 0;
+  for (const n of nodes) {
+    if (n.kind === "dataset" || (datasetsTouched.get(n.id)?.size ?? 0) > 1) {
+      keep.add(n.id);
+    } else if (n.kind === "award") {
+      awardsOmitted += 1;
+    } else {
+      papersOmitted += 1;
+    }
+  }
   return {
-    nodes: out,
-    edges: edges.filter((e) => kept.has(e.source) && kept.has(e.target)),
+    nodes: nodes.filter((n) => keep.has(n.id)),
+    edges: edges.filter((e) => keep.has(e.source) && keep.has(e.target)),
     lanes,
+    condensed: { n_awards_omitted: awardsOmitted, n_papers_omitted: papersOmitted },
   };
 }
 
@@ -947,7 +1059,9 @@ export function getDatasetFunding(id: string): DatasetFunding | null {
     has_citable_accession: rec.reuse_metrics.has_citable_accession !== false,
     marker_paper_inferred: markerInferred,
     has_marker_paper: rec.primary_publications.length > 0,
-    graph: { nodes, edges, lanes: DATASET_VIEW_LANES },
+    // One dataset's own funding is always drawn whole - four lanes of at most a few
+    // dozen - so there is never anything to condense away.
+    graph: { nodes, edges, lanes: DATASET_VIEW_LANES, condensed: null },
   };
 }
 

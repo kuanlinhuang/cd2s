@@ -10,6 +10,7 @@ Dataset id: cbio-nbl-msk-2023
 
 - Cohort: 352 cases
 - Cancer types: Neuroblastoma
+- Subject: Peripheral nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 35.1 months (derivable for 172 cases)
 - Treatment response recorded: False

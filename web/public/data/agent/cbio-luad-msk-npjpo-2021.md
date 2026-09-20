@@ -10,6 +10,7 @@ Dataset id: cbio-luad-msk-npjpo-2021
 
 - Cohort: 426 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

@@ -10,6 +10,7 @@ Dataset id: pdc-hbv-related-hepatocellular-carcinoma
 
 - Cohort: 171 cases
 - Cancer types: Hepatocellular Carcinoma
+- Subject: Liver
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required
