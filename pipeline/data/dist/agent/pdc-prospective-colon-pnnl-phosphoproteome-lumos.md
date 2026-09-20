@@ -10,6 +10,7 @@ Dataset id: pdc-prospective-colon-pnnl-phosphoproteome-lumos
 
 - Cohort: 102 cases
 - Cancer types: Colon Adenocarcinoma
+- Subject: Colorectal and bowel
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

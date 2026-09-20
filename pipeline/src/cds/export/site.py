@@ -21,7 +21,7 @@ from typing import Any
 
 import orjson
 
-from cds import __version__
+from cds import __version__, subjects
 from cds.clinical import VERDICT_FIELDS, is_non_answer
 from cds.model import DatasetRecord, ReuseTier
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
@@ -63,6 +63,8 @@ def search_row(r: DatasetRecord) -> dict[str, Any]:
         "nci_program": r.nci_program,
         "cancer_types": [t.label for t in r.cancer_types][:8],
         "primary_sites": r.primary_sites[:8],
+        "subjects": list(r.subject.tissues),
+        "subject_scope": r.subject.scope.value,
         "modalities": mods,
         "n_modalities": len(mods),
         "n_cases": r.cohort.n_cases,
@@ -195,6 +197,8 @@ def build_facets(rows: list[dict[str, Any]]) -> dict[str, Any]:
         "program": count("program"),
         "cancer_type": count("cancer_types", listlike=True),
         "primary_site": count("primary_sites", listlike=True),
+        "subject": count("subjects", listlike=True),
+        "subject_scope": count("subject_scope"),
         "modality": count("modalities", listlike=True),
         "access_tier": count("access_tier"),
         "population": count("population_flags", listlike=True),
@@ -348,6 +352,8 @@ CSV_COLUMNS = [
     "nci_program",
     "cancer_types",
     "primary_sites",
+    "subjects",
+    "subject_scope",
     "modalities",
     "n_cases",
     "n_samples",
@@ -398,6 +404,9 @@ def write_all(
     records: list[DatasetRecord], *, extra_manifest: dict[str, Any] | None = None
 ) -> dict[str, Any]:
     ensure_dirs()
+    for record in records:
+        if not subjects.is_curated(record.subject):
+            record.subject = subjects.assign(record)
     rows = [search_row(r) for r in records]
     facets = build_facets(rows)
     stats = corpus_stats(records, rows)
@@ -420,6 +429,7 @@ def write_all(
         ("facets.json", facets, False),
         ("stats.json", stats, True),
         ("questions.json", questions, False),
+        ("subjects.json", subjects.vocabulary(), True),
     ):
         for target in (DIST_DIR, WEB_DATA_DIR):
             written[f"{target.name}/{name}"] = _w(target / name, obj, indent=indent)

@@ -15,6 +15,7 @@ Summary: 115 lung adenocarcinomas with proteome, phosphoproteome and acetylome, 
 
 - Cohort: 115 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Acetylome mass spectrometry (TMT10 / DDA), Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA), Ubiquitylome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 15.7 months (derivable for 107 cases)
 - Treatment response recorded: False

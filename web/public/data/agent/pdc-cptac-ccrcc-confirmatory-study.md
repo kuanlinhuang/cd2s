@@ -9,6 +9,7 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study
 ## What it is
 
 - Cohort: 110 cases
+- Subject: Kidney (derived from title; not stated by repository)
 - Measurements: Glycoproteome mass spectrometry (Label Free / DIA), Phosphoproteome mass spectrometry (Label Free / DIA), Proteome mass spectrometry (Label Free / DIA)
 - Access: open. Direct download from the PDC portal or its API; no account required
 

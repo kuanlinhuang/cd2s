@@ -14,6 +14,7 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 - Cohort: 211 cases
 - Cancer types: Non-small Cell Lung Cancer
+- Subject: Lung
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data), Genomics (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

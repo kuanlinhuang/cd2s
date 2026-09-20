@@ -10,6 +10,7 @@ Dataset id: cbio-ihch-msk-2021
 
 - Cohort: 412 cases
 - Cancer types: Intrahepatic Cholangiocarcinoma
+- Subject: Biliary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
 - Median follow-up: 24.5 months (derivable for 412 cases)
 - Treatment response recorded: False

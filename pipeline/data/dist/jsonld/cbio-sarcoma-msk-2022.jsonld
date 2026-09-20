@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=sarcoma_msk_2022"
   ],
   "keywords": [
+    "NCIt:C12471",
     "Soft Tissue",
     "cbioportal",
     "harmonized-for-reuse",

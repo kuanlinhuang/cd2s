@@ -10,6 +10,7 @@ Dataset id: idc-prostatex
 
 - Cohort: 346 cases
 - Cancer types: Prostate Cancer, Non-Cancer
+- Subject: Prostate
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

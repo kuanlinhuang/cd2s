@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-prad
 
 - Cohort: 500 cases
 - Cancer types: Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms, Acinar Cell Neoplasms, Ductal and Lobular Neoplasms
+- Subject: Prostate
 - Measurements: Clinical, DICOM medical imaging, Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, Whole-slide diagnostic images, Somatic Structural Variation
 - Median follow-up: 30.5 months (derivable for 500 cases)
 - Treatment response recorded: True

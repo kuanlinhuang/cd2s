@@ -10,6 +10,7 @@ Dataset id: cbio-cll-broad-2022
 
 - Cohort: 1,149 cases
 - Cancer types: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma
+- Subject: Lymphoid
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structural variants / fusions, Structured treatment records
 - Median follow-up: 79.0 months (derivable for 1009 cases)
 - Treatment response recorded: False

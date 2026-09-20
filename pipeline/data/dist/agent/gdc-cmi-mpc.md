@@ -10,6 +10,7 @@ Dataset id: gdc-cmi-mpc
 
 - Cohort: 63 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Prostate
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

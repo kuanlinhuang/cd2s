@@ -10,6 +10,7 @@ Dataset id: pdc-tcga-breast-cancer-phosphoproteome
 
 - Cohort: 109 cases
 - Cancer types: Breast Invasive Carcinoma
+- Subject: Breast
 - Measurements: Phosphoproteome mass spectrometry (iTRAQ4 / DDA)
 - Median follow-up: 37.5 months (derivable for 105 cases)
 - Treatment response recorded: False

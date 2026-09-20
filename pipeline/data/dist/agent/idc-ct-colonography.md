@@ -11,6 +11,7 @@ Dataset id: idc-ct-colonography
 
 - Cohort: 825 cases
 - Cancer types: Colon Cancer
+- Subject: Colorectal and bowel
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

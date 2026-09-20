@@ -10,6 +10,7 @@ Dataset id: pdc-simm-gallbladder-cancer
 
 - Cohort: 195 cases
 - Cancer types: Epithelial Neoplasms, NOS
+- Subject: Biliary tract
 - Measurements: Phosphoproteome mass spectrometry (TMT16 / DDA), Proteome mass spectrometry (TMT16 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

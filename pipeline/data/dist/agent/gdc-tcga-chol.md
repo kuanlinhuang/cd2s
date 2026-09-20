@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-chol
 
 - Cohort: 51 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Biliary tract, Liver, Pancreas
 - Measurements: Whole exome sequencing, Clinical, DICOM medical imaging, Whole genome sequencing, Somatic Structural Variation, Whole-slide diagnostic images, Bulk RNA sequencing, microRNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array
 - Median follow-up: 22.3 months (derivable for 48 cases)
 - Treatment response recorded: True

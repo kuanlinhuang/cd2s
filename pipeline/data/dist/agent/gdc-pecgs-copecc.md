@@ -10,6 +10,7 @@ Dataset id: gdc-pecgs-copecc
 
 - Cohort: 67 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Colorectal and bowel
 - Measurements: Bulk RNA sequencing, Clinical, Structural Variation
 - Median follow-up: 19.1 months (derivable for 18 cases)
 - Treatment response recorded: False

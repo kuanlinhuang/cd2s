@@ -21,6 +21,7 @@
     "Chest",
     "Lung Cancer",
     "Metastatic disease",
+    "NCIt:C12468",
     "Non-Cancer",
     "clinical",
     "has-clinical-table",

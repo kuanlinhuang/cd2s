@@ -10,6 +10,7 @@ Dataset id: cbio-mbl-sickkids-2016
 
 - Cohort: 46 cases
 - Cancer types: Medulloblastoma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
 - Median follow-up: 45.6 months (derivable for 29 cases)
 - Treatment response recorded: False

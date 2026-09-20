@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-gbm-discovery-study
 
 - Cohort: 111 cases
 - Cancer types: Glioblastoma
+- Subject: Brain and central nervous system
 - Measurements: Acetylome mass spectrometry (TMT11 / DDA), Lipidome mass spectrometry (Label Free / DDA), Metabolome mass spectrometry (Label Free / N/A), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 12.8 months (derivable for 100 cases)
 - Treatment response recorded: True

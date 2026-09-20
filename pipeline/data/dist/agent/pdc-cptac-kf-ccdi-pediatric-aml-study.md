@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-aml-study
 
 - Cohort: 99 cases
 - Cancer types: Acute Myeloid Leukemia
+- Subject: Myeloid
 - Measurements: Phosphoproteome mass spectrometry (TMT18 / DDA), Proteome mass spectrometry (TMT18 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

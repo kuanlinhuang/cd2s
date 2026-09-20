@@ -9,6 +9,7 @@ Dataset id: pdc-buparlisib-treated-xenograft-tumors-of-tnbc
 ## What it is
 
 - Cohort: 7 cases
+- Subject: Breast (derived from title; not stated by repository)
 - Measurements: Phosphoproteome mass spectrometry (TMT6 / DDA), Proteome mass spectrometry (TMT6 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

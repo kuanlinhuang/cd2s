@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-craniopharyngioma-pro
 
 - Cohort: 66 cases
 - Cancer types: Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Proteome mass spectrometry (TMT18 / DDA)
 - Median follow-up: 140.2 months (derivable for 4 cases)
 - Treatment response recorded: False

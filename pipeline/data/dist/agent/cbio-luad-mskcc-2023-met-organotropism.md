@@ -10,6 +10,7 @@ Dataset id: cbio-luad-mskcc-2023-met-organotropism
 
 - Cohort: 2,298 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 36.8 months (derivable for 766 cases)
 - Treatment response recorded: False

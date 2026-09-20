@@ -84,3 +84,21 @@ def test_the_corpus_still_spans_every_repository(rows):
     assert set(counts) == {"GDC", "PDC", "IDC", "HTAN", "cBioPortal"}, dict(counts)
     for repository, n in counts.items():
         assert n > 0, repository
+
+
+@pytest.mark.parametrize("repository", ["GDC", "PDC", "IDC", "cBioPortal"])
+def test_subject_is_classified_for_most_records_in_each_repository(rows, repository):
+    subset = by_repo(rows, repository)
+    classified = [row for row in subset if row["subject_scope"] != "not_stated"]
+    assert len(classified) / len(subset) >= 0.9
+
+
+def test_subject_not_stated_does_not_silently_grow(rows):
+    missing = [row["id"] for row in rows if row["subject_scope"] == "not_stated"]
+    assert len(missing) <= 30, missing
+
+
+def test_all_previously_unstated_records_are_labelled_as_title_derived(rows):
+    derived = [row for row in rows if row["subject_scope"] == "title_derived"]
+    assert len(derived) == 30
+    assert not [row["id"] for row in rows if row["subject_scope"] == "not_stated"]

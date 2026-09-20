@@ -10,6 +10,7 @@ Dataset id: cbio-paad-iatlas-prince-2022
 
 - Cohort: 74 cases
 - Cancer types: Pancreatic Adenocarcinoma
+- Subject: Pancreas
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression
 - Median follow-up: 9.8 months (derivable for 73 cases)
 - Treatment response recorded: True

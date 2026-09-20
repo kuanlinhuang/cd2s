@@ -11,6 +11,7 @@ Dataset id: idc-pelvic-reference-data
 
 - Cohort: 58 cases
 - Cancer types: Prostate Cancer, Anal Cancer
+- Subject: Colorectal and bowel, Prostate
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

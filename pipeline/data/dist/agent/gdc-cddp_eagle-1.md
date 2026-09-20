@@ -10,6 +10,7 @@ Dataset id: gdc-cddp_eagle-1
 
 - Cohort: 50 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Lung
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Whole genome sequencing, Whole-slide tissue images, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 44.3 months (derivable for 50 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-blca
 
 - Cohort: 412 cases
 - Cancer types: Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas, Squamous Cell Neoplasms, Transitional Cell Papillomas and Carcinomas
+- Subject: Bladder and urinary tract
 - Measurements: Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide tissue images, Clinical, DICOM medical imaging, Whole genome sequencing, microRNA sequencing, Bulk RNA sequencing, Somatic Structural Variation
 - Median follow-up: 17.5 months (derivable for 411 cases)
 - Treatment response recorded: True

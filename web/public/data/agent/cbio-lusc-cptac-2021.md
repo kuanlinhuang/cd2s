@@ -10,6 +10,7 @@ Dataset id: cbio-lusc-cptac-2021
 
 - Cohort: 108 cases
 - Cancer types: Lung Squamous Cell Carcinoma
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, microRNA expression
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

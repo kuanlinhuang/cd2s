@@ -10,6 +10,7 @@ Dataset id: pdc-prospective-colon-vu-proteome
 
 - Cohort: 100 cases
 - Cancer types: Colon Adenocarcinoma
+- Subject: Colorectal and bowel
 - Measurements: Proteome mass spectrometry (Label Free / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

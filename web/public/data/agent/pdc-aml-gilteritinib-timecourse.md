@@ -10,6 +10,7 @@ Dataset id: pdc-aml-gilteritinib-timecourse
 
 - Cohort: 2 cases
 - Cancer types: Acute Myeloid Leukemia
+- Subject: Myeloid
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

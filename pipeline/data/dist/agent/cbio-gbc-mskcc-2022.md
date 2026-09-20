@@ -10,6 +10,7 @@ Dataset id: cbio-gbc-mskcc-2022
 
 - Cohort: 233 cases
 - Cancer types: Gallbladder Cancer
+- Subject: Biliary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 19.6 months (derivable for 100 cases)
 - Treatment response recorded: False

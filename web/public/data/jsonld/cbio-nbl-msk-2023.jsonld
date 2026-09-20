@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=nbl_msk_2023"
   ],
   "keywords": [
+    "NCIt:C12465",
     "Neuroblastoma",
     "cbioportal",
     "copy number",

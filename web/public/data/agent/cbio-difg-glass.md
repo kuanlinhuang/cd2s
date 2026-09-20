@@ -10,6 +10,7 @@ Dataset id: cbio-difg-glass
 
 - Cohort: 329 cases
 - Cancer types: Diffuse Glioma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Structured treatment records
 - Median follow-up: 32.0 months (derivable for 313 cases)
 - Treatment response recorded: False

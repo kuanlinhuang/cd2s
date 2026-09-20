@@ -10,6 +10,7 @@ Dataset id: cbio-past-dkfz-heidelberg-2013
 
 - Cohort: 96 cases
 - Cancer types: Pilocytic Astrocytoma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Structural variants / fusions
 - Median follow-up: 11.0 months (derivable for 95 cases)
 - Treatment response recorded: False

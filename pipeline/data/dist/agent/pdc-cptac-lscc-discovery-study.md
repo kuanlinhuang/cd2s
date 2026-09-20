@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-lscc-discovery-study
 
 - Cohort: 115 cases
 - Cancer types: Lung Squamous Cell Carcinoma
+- Subject: Lung
 - Measurements: Acetylome mass spectrometry (TMT11 / DDA), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA), Ubiquitylome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 39.6 months (derivable for 104 cases)
 - Treatment response recorded: False

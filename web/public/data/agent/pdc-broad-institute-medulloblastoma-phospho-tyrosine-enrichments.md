@@ -10,6 +10,7 @@ Dataset id: pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments
 
 - Cohort: 46 cases
 - Cancer types: Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

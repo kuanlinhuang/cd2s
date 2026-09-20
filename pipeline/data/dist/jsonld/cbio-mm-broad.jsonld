@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=mm_broad"
   ],
   "keywords": [
+    "NCIt:C13252",
     "Plasma Cell Myeloma",
     "cbioportal",
     "harmonized-for-reuse",

@@ -10,6 +10,7 @@ Dataset id: cbio-mnm-washu-2016
 
 - Cohort: 116 cases
 - Cancer types: Myeloid Neoplasm
+- Subject: Myeloid
 - Measurements: Mutation calls (panel, exome or genome)
 - Median follow-up: 8.9 months (derivable for 116 cases)
 - Treatment response recorded: False

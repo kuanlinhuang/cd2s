@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-skcm
 
 - Cohort: 470 cases
 - Cancer types: Nevi and Melanomas
+- Subject: Skin
 - Measurements: Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Clinical, DICOM medical imaging, Bulk RNA sequencing, Whole-slide tissue images, microRNA sequencing, Whole genome sequencing, Reverse phase protein array
 - Median follow-up: 36.4 months (derivable for 461 cases)
 - Treatment response recorded: True

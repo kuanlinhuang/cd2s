@@ -10,6 +10,7 @@ Dataset id: cbio-breast-msk-2018
 
 - Cohort: 1,756 cases
 - Cancer types: Breast
+- Subject: Breast
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 40.5 months (derivable for 1756 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-non-ccrcc-study
 
 - Cohort: 44 cases
 - Cancer types: Non-Clear Cell Renal Cell Carcinoma
+- Subject: Kidney
 - Measurements: Glycoproteome mass spectrometry (TMT11 / DDA), Metabolome mass spectrometry (Label Free / N/A), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 53.9 months (derivable for 42 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-hnsc
 
 - Cohort: 528 cases
 - Cancer types: Squamous Cell Neoplasms
+- Subject: Head and neck
 - Measurements: DNA methylation array, Clinical, Whole exome sequencing, SNP genotyping array (copy number, germline), microRNA sequencing, DICOM medical imaging, Bulk RNA sequencing, Whole-slide tissue images, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 21.2 months (derivable for 527 cases)
 - Treatment response recorded: True

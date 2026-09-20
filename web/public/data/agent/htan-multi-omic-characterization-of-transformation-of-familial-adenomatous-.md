@@ -9,6 +9,7 @@ Dataset id: htan-multi-omic-characterization-of-transformation-of-familial-adeno
 ## What it is
 
 - Cohort: 40 cases
+- Subject: Colorectal and bowel (derived from title; not stated by repository)
 - Measurements: Multiplexed tissue imaging, Mass spectrometry proteomics, Bulk DNA sequencing, Single-cell ATAC sequencing, Single-cell / single-nucleus RNA sequencing, Bulk RNA sequencing, Hi-C chromatin conformation
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

@@ -10,6 +10,7 @@ Dataset id: cbio-lgg-ucsf-2014
 
 - Cohort: 23 cases
 - Cancer types: Diffuse Glioma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Structured treatment records
 - Median follow-up: 74.0 months (derivable for 23 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: pdc-ku-pdac-discovery-study
 
 - Cohort: 154 cases
 - Cancer types: Pancreatic Ductal Adenocarcinoma
+- Subject: Pancreas
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 20.4 months (derivable for 153 cases)
 - Treatment response recorded: False

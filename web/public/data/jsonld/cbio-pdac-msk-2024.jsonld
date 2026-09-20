@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=pdac_msk_2024"
   ],
   "keywords": [
+    "NCIt:C12393",
     "Pancreas",
     "cbioportal",
     "copy number",

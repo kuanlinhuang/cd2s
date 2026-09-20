@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosp
 
 - Cohort: 132 cases
 - Cancer types: Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Phosphoproteome mass spectrometry (TMT18 / DDA)
 - Median follow-up: 87.7 months (derivable for 3 cases)
 - Treatment response recorded: False

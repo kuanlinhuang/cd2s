@@ -10,6 +10,7 @@ Dataset id: pdc-ptrc-tnbc-pdx
 
 - Cohort: 11 cases
 - Cancer types: Breast Invasive Carcinoma
+- Subject: Breast
 - Measurements: Proteome mass spectrometry (TMT11 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

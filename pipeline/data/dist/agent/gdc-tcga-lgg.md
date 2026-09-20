@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-lgg
 
 - Cohort: 516 cases
 - Cancer types: Gliomas
+- Subject: Brain and central nervous system
 - Measurements: Bulk RNA sequencing, Whole exome sequencing, DNA methylation array, Clinical, DICOM medical imaging, SNP genotyping array (copy number, germline), Whole-slide tissue images, microRNA sequencing, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 22.3 months (derivable for 514 cases)
 - Treatment response recorded: True

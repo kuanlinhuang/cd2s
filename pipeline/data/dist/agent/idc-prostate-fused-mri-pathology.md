@@ -11,6 +11,7 @@ Dataset id: idc-prostate-fused-mri-pathology
 
 - Cohort: 28 cases
 - Cancer types: Prostate Cancer
+- Subject: Prostate
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

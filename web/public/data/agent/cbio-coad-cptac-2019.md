@@ -10,6 +10,7 @@ Dataset id: cbio-coad-cptac-2019
 
 - Cohort: 110 cases
 - Cancer types: Colon Adenocarcinoma
+- Subject: Colorectal and bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, microRNA expression, Mass spectrometry proteomics
 - Median follow-up: 30.0 months (derivable for 102 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: cbio-hgsoc-msk-2021
 
 - Cohort: 45 cases
 - Cancer types: High-Grade Serous Ovarian Cancer
+- Subject: Ovary and fallopian tube
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 16.7 months (derivable for 45 cases)
 - Treatment response recorded: False

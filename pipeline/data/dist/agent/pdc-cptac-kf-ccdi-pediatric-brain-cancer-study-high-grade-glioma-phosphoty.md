@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-pho
 
 - Cohort: 45 cases
 - Cancer types: Gliomas, Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Phosphoproteome mass spectrometry (TMT18 / DDA)
 - Median follow-up: 130.8 months (derivable for 9 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: cbio-utuc-mskcc-2015
 
 - Cohort: 83 cases
 - Cancer types: Upper Tract Urothelial Carcinoma
+- Subject: Bladder and urinary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 33.0 months (derivable for 71 cases)
 - Treatment response recorded: False

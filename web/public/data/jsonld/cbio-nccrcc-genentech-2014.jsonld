@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=nccrcc_genentech_2014"
   ],
   "keywords": [
+    "NCIt:C12415",
     "Renal Non-Clear Cell Carcinoma",
     "cbioportal",
     "harmonized-for-reuse",

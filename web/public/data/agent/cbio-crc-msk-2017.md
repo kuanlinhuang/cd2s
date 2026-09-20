@@ -10,6 +10,7 @@ Dataset id: cbio-crc-msk-2017
 
 - Cohort: 1,099 cases
 - Cancer types: Colorectal Adenocarcinoma
+- Subject: Colorectal and bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 28.3 months (derivable for 981 cases)
 - Treatment response recorded: False

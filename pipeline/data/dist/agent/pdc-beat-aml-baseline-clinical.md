@@ -10,6 +10,7 @@ Dataset id: pdc-beat-aml-baseline-clinical
 
 - Cohort: 211 cases
 - Cancer types: Acute Myeloid Leukemia, Other Leukemias, Myelodysplastic Syndromes
+- Subject: Myeloid
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 11.0 months (derivable for 207 cases)
 - Treatment response recorded: False

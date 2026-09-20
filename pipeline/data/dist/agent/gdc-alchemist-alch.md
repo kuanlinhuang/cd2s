@@ -10,6 +10,7 @@ Dataset id: gdc-alchemist-alch
 
 - Cohort: 1,176 cases
 - Cancer types: Not Reported
+- Subject: Lung (derived from title; not stated by repository)
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Whole genome sequencing, microRNA sequencing, Whole-slide tissue images, Clinical, Copy Number Variation, Somatic Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

@@ -10,6 +10,7 @@ Dataset id: cbio-glioma-mskcc-2019
 
 - Cohort: 924 cases
 - Cancer types: Diffuse Glioma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions, Structured treatment records
 - Median follow-up: 20.3 months (derivable for 923 cases)
 - Treatment response recorded: False

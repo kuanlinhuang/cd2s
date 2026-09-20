@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=gct_msk_2016"
   ],
   "keywords": [
+    "NCIt:C12412",
     "Testis",
     "cbioportal",
     "copy number",

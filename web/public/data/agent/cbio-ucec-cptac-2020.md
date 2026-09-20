@@ -10,6 +10,7 @@ Dataset id: cbio-ucec-cptac-2020
 
 - Cohort: 95 cases
 - Cancer types: Endometrial Carcinoma
+- Subject: Uterus
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, microRNA expression
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

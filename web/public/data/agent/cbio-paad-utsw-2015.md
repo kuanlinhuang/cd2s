@@ -10,6 +10,7 @@ Dataset id: cbio-paad-utsw-2015
 
 - Cohort: 109 cases
 - Cancer types: Pancreatic Adenocarcinoma
+- Subject: Pancreas
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

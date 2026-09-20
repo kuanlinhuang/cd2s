@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-thym
 
 - Cohort: 124 cases
 - Cancer types: Thymic Epithelial Neoplasms
+- Subject: Thymus
 - Measurements: microRNA sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Clinical, DICOM medical imaging, Whole exome sequencing, Whole-slide diagnostic images, Bulk RNA sequencing, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 41.2 months (derivable for 123 cases)
 - Treatment response recorded: True

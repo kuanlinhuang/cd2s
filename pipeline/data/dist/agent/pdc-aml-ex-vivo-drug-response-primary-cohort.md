@@ -10,6 +10,7 @@ Dataset id: pdc-aml-ex-vivo-drug-response-primary-cohort
 
 - Cohort: 18 cases
 - Cancer types: Acute Myeloid Leukemia
+- Subject: Myeloid
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 20.4 months (derivable for 16 cases)
 - Treatment response recorded: False

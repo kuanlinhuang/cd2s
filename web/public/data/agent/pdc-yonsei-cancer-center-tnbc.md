@@ -10,6 +10,7 @@ Dataset id: pdc-yonsei-cancer-center-tnbc
 
 - Cohort: 52 cases
 - Cancer types: Breast Invasive Carcinoma
+- Subject: Breast
 - Measurements: Phosphoproteome mass spectrometry (TMT16 / DDA), Proteome mass spectrometry (TMT16 / DDA)
 - Median follow-up: 26.9 months (derivable for 50 cases)
 - Treatment response recorded: True

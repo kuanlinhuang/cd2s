@@ -13,6 +13,7 @@ Summary: Serial biopsies from metastatic breast cancer patients measured nine wa
 ## What it is
 
 - Cohort: 33 cases
+- Subject: Breast (derived from title; not stated by repository)
 - Measurements: Electron microscopy, Multiplexed tissue imaging, Bulk DNA sequencing, Bulk RNA sequencing, Single-cell ATAC sequencing, Single-cell / single-nucleus RNA sequencing, Reverse phase protein array, NanoString GeoMx spatial profiling, Other assay
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

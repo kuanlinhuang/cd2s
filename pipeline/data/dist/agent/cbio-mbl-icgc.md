@@ -10,6 +10,7 @@ Dataset id: cbio-mbl-icgc
 
 - Cohort: 125 cases
 - Cancer types: Medulloblastoma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome)
 - Median follow-up: 22.0 months (derivable for 103 cases)
 - Treatment response recorded: False

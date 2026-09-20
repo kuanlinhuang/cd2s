@@ -10,6 +10,7 @@ Dataset id: gdc-rc-ptcl
 
 - Cohort: 58 cases
 - Cancer types: Mature T- and NK-Cell Lymphomas
+- Subject: Lymphoid
 - Measurements: Whole exome sequencing, Whole genome sequencing, Bulk RNA sequencing, microRNA sequencing, DNA methylation array, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 30.8 months (derivable for 58 cases)
 - Treatment response recorded: True

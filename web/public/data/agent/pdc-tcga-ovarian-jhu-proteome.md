@@ -10,6 +10,7 @@ Dataset id: pdc-tcga-ovarian-jhu-proteome
 
 - Cohort: 124 cases
 - Cancer types: Ovarian Serous Cystadenocarcinoma
+- Subject: Ovary and fallopian tube
 - Measurements: Proteome mass spectrometry (iTRAQ4 / DDA)
 - Median follow-up: 29.9 months (derivable for 122 cases)
 - Treatment response recorded: False

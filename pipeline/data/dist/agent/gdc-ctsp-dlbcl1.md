@@ -16,6 +16,7 @@ Summary: 45 diffuse large B-cell lymphomas from the randomized CALGB 50303 trial
 
 - Cohort: 45 cases
 - Cancer types: Mature B-Cell Lymphomas
+- Subject: Lymphoid
 - Measurements: Bulk RNA sequencing, Whole exome sequencing, Targeted DNA panel sequencing, Clinical, Structural Variation
 - Median follow-up: 60.4 months (derivable for 37 cases)
 - Treatment response recorded: True

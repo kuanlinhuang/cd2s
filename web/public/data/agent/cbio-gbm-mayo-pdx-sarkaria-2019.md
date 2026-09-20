@@ -10,6 +10,7 @@ Dataset id: cbio-gbm-mayo-pdx-sarkaria-2019
 
 - Cohort: 105 cases
 - Cancer types: Diffuse Glioma
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression
 - Median follow-up: 17.5 months (derivable for 103 cases)
 - Treatment response recorded: False

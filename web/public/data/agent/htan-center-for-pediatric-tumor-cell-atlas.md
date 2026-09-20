@@ -9,6 +9,7 @@ Dataset id: htan-center-for-pediatric-tumor-cell-atlas
 ## What it is
 
 - Cohort: 69 cases
+- Subject: title derived
 - Measurements: Single-cell / single-nucleus RNA sequencing, Single-cell ATAC sequencing, Bulk DNA sequencing, Multiplexed tissue imaging
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

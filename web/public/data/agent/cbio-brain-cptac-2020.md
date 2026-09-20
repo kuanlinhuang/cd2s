@@ -10,6 +10,7 @@ Dataset id: cbio-brain-cptac-2020
 
 - Cohort: 199 cases
 - Cancer types: CNS/Brain
+- Subject: Brain and central nervous system
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Reverse phase protein array
 - Median follow-up: 35.0 months (derivable for 192 cases)
 - Treatment response recorded: False

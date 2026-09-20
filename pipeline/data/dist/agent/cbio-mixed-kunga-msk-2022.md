@@ -10,6 +10,7 @@ Dataset id: cbio-mixed-kunga-msk-2022
 
 - Cohort: 134 cases
 - Cancer types: Mixed Cancer Types
+- Subject: pan cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 26.4 months (derivable for 95 cases)
 - Treatment response recorded: False

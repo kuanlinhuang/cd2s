@@ -10,6 +10,7 @@ Dataset id: idc-prostate-diagnosis
 
 - Cohort: 92 cases
 - Cancer types: Prostate Cancer
+- Subject: Prostate
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

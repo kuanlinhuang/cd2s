@@ -11,6 +11,7 @@ Dataset id: idc-cptac-sar
 
 - Cohort: 88 cases
 - Cancer types: Sarcomas
+- Subject: Soft tissue
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-sarc
 
 - Cohort: 261 cases
 - Cancer types: Lipomatous Neoplasms, Fibromatous Neoplasms, Synovial-like Neoplasms, Myomatous Neoplasms, Nerve Sheath Tumors, Soft Tissue Tumors and Sarcomas, NOS
+- Subject: Soft tissue
 - Measurements: SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide tissue images, Clinical, DICOM medical imaging, Bulk RNA sequencing, microRNA sequencing, Whole exome sequencing, Whole genome sequencing, Reverse phase protein array
 - Median follow-up: 30.8 months (derivable for 261 cases)
 - Treatment response recorded: False

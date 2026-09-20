@@ -10,6 +10,7 @@ Dataset id: gdc-match-z1a
 
 - Cohort: 45 cases
 - Cancer types: Neoplasms, NOS, Adenomas and Adenocarcinomas, Mesothelial Neoplasms, Epithelial Neoplasms, NOS, Squamous Cell Neoplasms, Transitional Cell Papillomas and Carcinomas
+- Subject: pan cancer
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Clinical, Structural Variation
 - Treatment response recorded: False
 - Access: controlled. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

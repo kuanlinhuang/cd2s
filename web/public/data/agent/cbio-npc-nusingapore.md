@@ -10,6 +10,7 @@ Dataset id: cbio-npc-nusingapore
 
 - Cohort: 56 cases
 - Cancer types: Nasopharyngeal Carcinoma
+- Subject: Head and neck
 - Measurements: Mutation calls (panel, exome or genome)
 - Median follow-up: 24.0 months (derivable for 50 cases)
 - Treatment response recorded: False

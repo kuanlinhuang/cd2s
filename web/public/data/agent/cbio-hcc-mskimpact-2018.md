@@ -10,6 +10,7 @@ Dataset id: cbio-hcc-mskimpact-2018
 
 - Cohort: 127 cases
 - Cancer types: Hepatocellular Carcinoma
+- Subject: Liver
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

@@ -11,6 +11,7 @@ Dataset id: idc-mouse-mammary
 
 - Cohort: 32 cases
 - Cancer types: Breast Cancer
+- Subject: Breast
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

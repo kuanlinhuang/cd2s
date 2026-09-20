@@ -10,6 +10,7 @@ Dataset id: gdc-target-os
 
 - Cohort: 383 cases
 - Cancer types: Osseous and Chondromatous Neoplasms
+- Subject: Bone
 - Measurements: Whole exome sequencing, Whole genome sequencing, Bulk RNA sequencing, Targeted DNA panel sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Clinical, Somatic Structural Variation
 - Median follow-up: 36.5 months (derivable for 277 cases)
 - Treatment response recorded: False

@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study-intratumor-heterogeneity
 
 - Cohort: 40 cases
 - Cancer types: Clear Cell Renal Cell Carcinoma
+- Subject: Kidney
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
 - Median follow-up: 30.7 months (derivable for 36 cases)
 - Treatment response recorded: False

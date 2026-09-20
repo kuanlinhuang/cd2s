@@ -1,0 +1,514 @@
+{
+  "version": "oncotree_2025_10_03",
+  "release_date": "2025-10-03",
+  "subjects": [
+    {
+      "code": "ADRENAL_GLAND",
+      "name": "Adrenal Gland",
+      "label": "Adrenal gland",
+      "nci": "C12666",
+      "synonyms": [
+        "adrenal",
+        "adrenal cancer",
+        "adrenocortical",
+        "paraganglioma",
+        "pcpg",
+        "pheochromocytoma"
+      ]
+    },
+    {
+      "code": "AMPULLA_OF_VATER",
+      "name": "Ampulla of Vater",
+      "label": "Ampulla of Vater",
+      "nci": "C13011",
+      "synonyms": [
+        "ampulla",
+        "ampullary"
+      ]
+    },
+    {
+      "code": "BILIARY_TRACT",
+      "name": "Biliary Tract",
+      "label": "Biliary tract",
+      "nci": "C12678",
+      "synonyms": [
+        "bile duct",
+        "biliary",
+        "biliary tract",
+        "cholangiocarcinoma",
+        "gall bladder",
+        "gallbladder"
+      ]
+    },
+    {
+      "code": "BLADDER",
+      "name": "Bladder/Urinary Tract",
+      "label": "Bladder and urinary tract",
+      "nci": "C12414",
+      "synonyms": [
+        "bladder",
+        "bladder cancer",
+        "renal pelvis",
+        "upper tract urothelial",
+        "ureter",
+        "urinary tract",
+        "urothelial"
+      ]
+    },
+    {
+      "code": "BONE",
+      "name": "Bone",
+      "label": "Bone",
+      "nci": "C12366",
+      "synonyms": [
+        "bone",
+        "bone tumor",
+        "bone tumour",
+        "chondrosarcoma",
+        "ewing",
+        "ewing sarcoma",
+        "osteosarcoma",
+        "sarcoma"
+      ]
+    },
+    {
+      "code": "BOWEL",
+      "name": "Bowel",
+      "label": "Colorectal and bowel",
+      "nci": "C12736",
+      "synonyms": [
+        "anal",
+        "anus",
+        "appendiceal",
+        "appendix",
+        "bowel",
+        "colon",
+        "colon cancer",
+        "colorectal",
+        "colorectal cancer",
+        "crc",
+        "rectal",
+        "rectum",
+        "small bowel",
+        "small intestine"
+      ]
+    },
+    {
+      "code": "BREAST",
+      "name": "Breast",
+      "label": "Breast",
+      "nci": "C12971",
+      "synonyms": [
+        "brca cohort",
+        "breast",
+        "breast cancer",
+        "mammary",
+        "tnbc",
+        "triple negative"
+      ]
+    },
+    {
+      "code": "BRAIN",
+      "name": "CNS/Brain",
+      "label": "Brain and central nervous system",
+      "nci": "C12438",
+      "synonyms": [
+        "astrocytoma",
+        "brain",
+        "brain tumor",
+        "brain tumour",
+        "central nervous system",
+        "cns",
+        "ependymoma",
+        "gbm",
+        "glioblastoma",
+        "glioma",
+        "lower grade glioma",
+        "medulloblastoma",
+        "meningioma",
+        "oligodendroglioma",
+        "pituitary"
+      ]
+    },
+    {
+      "code": "CERVIX",
+      "name": "Cervix",
+      "label": "Cervix",
+      "nci": "C12311",
+      "synonyms": [
+        "cervical",
+        "cervical cancer",
+        "cervix",
+        "cesc"
+      ]
+    },
+    {
+      "code": "STOMACH",
+      "name": "Esophagus/Stomach",
+      "label": "Esophagus and stomach",
+      "nci": "C12391",
+      "synonyms": [
+        "esophageal",
+        "esophagogastric",
+        "esophagus",
+        "gastric",
+        "gastric cancer",
+        "gastroesophageal",
+        "oesophageal",
+        "oesophagus",
+        "stomach"
+      ]
+    },
+    {
+      "code": "EYE",
+      "name": "Eye",
+      "label": "Eye",
+      "nci": "C12401",
+      "synonyms": [
+        "eye",
+        "intraocular",
+        "ocular",
+        "retinoblastoma",
+        "uveal",
+        "uveal melanoma"
+      ]
+    },
+    {
+      "code": "HEAD_NECK",
+      "name": "Head and Neck",
+      "label": "Head and neck",
+      "nci": "C12418",
+      "synonyms": [
+        "head and neck",
+        "head neck",
+        "hnscc",
+        "hypopharyngeal",
+        "laryngeal",
+        "larynx",
+        "mouth cancer",
+        "nasopharyngeal",
+        "nasopharynx",
+        "oral",
+        "oral cavity",
+        "oropharyngeal",
+        "oropharynx",
+        "salivary",
+        "throat cancer",
+        "tongue"
+      ]
+    },
+    {
+      "code": "KIDNEY",
+      "name": "Kidney",
+      "label": "Kidney",
+      "nci": "C12415",
+      "synonyms": [
+        "ccrcc",
+        "chromophobe",
+        "clear cell renal",
+        "kidney",
+        "kidney cancer",
+        "papillary renal",
+        "rcc",
+        "renal",
+        "renal cell",
+        "renal cell carcinoma",
+        "rhabdoid tumor",
+        "rhabdoid tumour",
+        "wilms"
+      ]
+    },
+    {
+      "code": "LIVER",
+      "name": "Liver",
+      "label": "Liver",
+      "nci": "C12392",
+      "synonyms": [
+        "hcc",
+        "hepatic",
+        "hepatoblastoma",
+        "hepatocellular",
+        "lihc",
+        "liver",
+        "liver cancer"
+      ]
+    },
+    {
+      "code": "LUNG",
+      "name": "Lung",
+      "label": "Lung",
+      "nci": "C12468",
+      "synonyms": [
+        "luad",
+        "lung",
+        "lung adenocarcinoma",
+        "lung cancer",
+        "lung squamous",
+        "lusc",
+        "non small cell",
+        "nsclc",
+        "pulmonary",
+        "sclc",
+        "small cell lung"
+      ]
+    },
+    {
+      "code": "LYMPH",
+      "name": "Lymphoid",
+      "label": "Lymphoid",
+      "nci": "C13252",
+      "synonyms": [
+        "acute lymphoblastic",
+        "acute lymphoblastic leukemia",
+        "b cell",
+        "burkitt",
+        "chronic lymphocytic",
+        "chronic lymphocytic leukemia",
+        "cll",
+        "diffuse large b cell",
+        "dlbcl",
+        "follicular lymphoma",
+        "hodgkin",
+        "leukaemia",
+        "leukemia",
+        "lymphoblastic",
+        "lymphoblastic leukemia",
+        "lymphocytic leukemia",
+        "lymphoid",
+        "lymphoma",
+        "multiple myeloma",
+        "myeloma",
+        "non hodgkin",
+        "plasma cell",
+        "t cell lymphoma"
+      ]
+    },
+    {
+      "code": "MYELOID",
+      "name": "Myeloid",
+      "label": "Myeloid",
+      "nci": "C12434",
+      "synonyms": [
+        "acute myeloid",
+        "acute myeloid leukaemia",
+        "acute myeloid leukemia",
+        "aml",
+        "chronic myelogenous leukemia",
+        "chronic myeloid",
+        "chronic myeloid leukemia",
+        "clonal hematopoiesis",
+        "cml",
+        "leukaemia",
+        "leukemia",
+        "mds",
+        "myelodysplastic",
+        "myeloid",
+        "myeloid leukemia",
+        "myeloproliferative"
+      ]
+    },
+    {
+      "code": "OVARY",
+      "name": "Ovary/Fallopian Tube",
+      "label": "Ovary and fallopian tube",
+      "nci": "C12404",
+      "synonyms": [
+        "fallopian",
+        "hgsoc",
+        "high grade serous",
+        "ovarian",
+        "ovarian cancer",
+        "ovary",
+        "serous ovarian"
+      ]
+    },
+    {
+      "code": "PANCREAS",
+      "name": "Pancreas",
+      "label": "Pancreas",
+      "nci": "C12393",
+      "synonyms": [
+        "ipmn",
+        "pancreas",
+        "pancreatic",
+        "pancreatic cancer",
+        "pancreatic ductal",
+        "pancreatic neuroendocrine",
+        "pdac",
+        "pnet"
+      ]
+    },
+    {
+      "code": "PENIS",
+      "name": "Penis",
+      "label": "Penis",
+      "nci": "C12409",
+      "synonyms": [
+        "penile",
+        "penis"
+      ]
+    },
+    {
+      "code": "PNS",
+      "name": "Peripheral Nervous System",
+      "label": "Peripheral nervous system",
+      "nci": "C12465",
+      "synonyms": [
+        "ganglioneuroblastoma",
+        "mpnst",
+        "nerve sheath",
+        "neuroblastoma",
+        "peripheral nerve",
+        "peripheral nervous system",
+        "schwannoma"
+      ]
+    },
+    {
+      "code": "PERITONEUM",
+      "name": "Peritoneum",
+      "label": "Peritoneum",
+      "nci": "C12770",
+      "synonyms": [
+        "peritoneal",
+        "peritoneal mesothelioma",
+        "peritoneum"
+      ]
+    },
+    {
+      "code": "PLEURA",
+      "name": "Pleura",
+      "label": "Pleura",
+      "nci": "C12469",
+      "synonyms": [
+        "mesothelioma",
+        "pleura",
+        "pleural"
+      ]
+    },
+    {
+      "code": "PROSTATE",
+      "name": "Prostate",
+      "label": "Prostate",
+      "nci": "C12410",
+      "synonyms": [
+        "castration resistant",
+        "crpc",
+        "mcrpc",
+        "prostate",
+        "prostate cancer",
+        "prostatic"
+      ]
+    },
+    {
+      "code": "SKIN",
+      "name": "Skin",
+      "label": "Skin",
+      "nci": "C12470",
+      "synonyms": [
+        "basal cell carcinoma",
+        "cutaneous",
+        "cutaneous squamous",
+        "melanoma",
+        "merkel",
+        "skcm",
+        "skin",
+        "skin cancer"
+      ]
+    },
+    {
+      "code": "SOFT_TISSUE",
+      "name": "Soft Tissue",
+      "label": "Soft tissue",
+      "nci": "C12471",
+      "synonyms": [
+        "angiosarcoma",
+        "desmoid",
+        "gastrointestinal stromal",
+        "gist",
+        "leiomyosarcoma",
+        "liposarcoma",
+        "rhabdomyosarcoma",
+        "sarcoma",
+        "soft tissue",
+        "soft tissue sarcoma",
+        "synovial sarcoma"
+      ]
+    },
+    {
+      "code": "TESTIS",
+      "name": "Testis",
+      "label": "Testis",
+      "nci": "C12412",
+      "synonyms": [
+        "germ cell",
+        "germ cell tumor",
+        "germ cell tumour",
+        "seminoma",
+        "testicular",
+        "testicular cancer",
+        "testis",
+        "tgct"
+      ]
+    },
+    {
+      "code": "THYMUS",
+      "name": "Thymus",
+      "label": "Thymus",
+      "nci": "C12433",
+      "synonyms": [
+        "thymic",
+        "thymic carcinoma",
+        "thymoma",
+        "thymus"
+      ]
+    },
+    {
+      "code": "THYROID",
+      "name": "Thyroid",
+      "label": "Thyroid",
+      "nci": "C12400",
+      "synonyms": [
+        "anaplastic thyroid",
+        "papillary thyroid",
+        "thca",
+        "thyroid",
+        "thyroid cancer"
+      ]
+    },
+    {
+      "code": "UTERUS",
+      "name": "Uterus",
+      "label": "Uterus",
+      "nci": "C12405",
+      "synonyms": [
+        "carcinosarcoma",
+        "endometrial",
+        "endometrial cancer",
+        "endometrium",
+        "ucec",
+        "uterine",
+        "uterine cancer",
+        "uterine sarcoma",
+        "uterus"
+      ]
+    },
+    {
+      "code": "VULVA",
+      "name": "Vulva/Vagina",
+      "label": "Vulva and vagina",
+      "nci": "C12408",
+      "synonyms": [
+        "vagina",
+        "vaginal",
+        "vulva",
+        "vulvar"
+      ]
+    }
+  ],
+  "states": [
+    "pan_cancer",
+    "non_cancer",
+    "not_stated",
+    "title_derived"
+  ]
+}

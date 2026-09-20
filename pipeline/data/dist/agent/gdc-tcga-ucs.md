@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-ucs
 
 - Cohort: 57 cases
 - Cancer types: Basal Cell Neoplasms, Complex Mixed and Stromal Neoplasms
+- Subject: Uterus
 - Measurements: Bulk RNA sequencing, microRNA sequencing, Whole exome sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide diagnostic images, Clinical, DICOM medical imaging, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 19.6 months (derivable for 57 cases)
 - Treatment response recorded: True

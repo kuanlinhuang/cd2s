@@ -10,6 +10,7 @@ Dataset id: gdc-ccg-cupp
 
 - Cohort: 272 cases
 - Cancer types: Ductal and Lobular Neoplasms, Transitional Cell Papillomas and Carcinomas, Germ Cell Neoplasms, Neoplasms, NOS, Myomatous Neoplasms, Adnexal and Skin Appendage Neoplasms
+- Subject: Soft tissue
 - Measurements: Whole exome sequencing, Whole genome sequencing, Bulk RNA sequencing, microRNA sequencing, DNA methylation array, Whole-slide tissue images, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 6.5 months (derivable for 272 cases)
 - Treatment response recorded: True

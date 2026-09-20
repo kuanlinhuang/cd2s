@@ -11,6 +11,7 @@ Dataset id: idc-eay131
 
 - Cohort: 2,813 cases
 - Cancer types: Adenocarcinoma, Adrenocortical Carcinoma, Anal Cancer, Anal Squamous Cell Carcinoma, Astrocytoma, Bladder Cancer
+- Subject: pan cancer
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

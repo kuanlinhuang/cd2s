@@ -10,6 +10,7 @@ Dataset id: gdc-apollo-brca-1
 
 - Cohort: 68 cases
 - Cancer types: Ductal and Lobular Neoplasms
+- Subject: Breast
 - Measurements: Bulk RNA sequencing, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

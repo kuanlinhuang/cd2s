@@ -10,6 +10,7 @@ Dataset id: gdc-target-nbl
 
 - Cohort: 1,132 cases
 - Cancer types: Not Applicable, Neuroepitheliomatous Neoplasms
+- Subject: Peripheral nervous system
 - Measurements: Bulk RNA sequencing, Whole genome sequencing, Whole exome sequencing, Targeted DNA panel sequencing, DNA methylation array, Clinical, Structural Variation
 - Median follow-up: 74.6 months (derivable for 1116 cases)
 - Treatment response recorded: False

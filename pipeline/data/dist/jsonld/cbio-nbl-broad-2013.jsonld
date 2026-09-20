@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=nbl_broad_2013"
   ],
   "keywords": [
+    "NCIt:C12465",
     "Neuroblastoma",
     "cbioportal",
     "harmonized-for-reuse",

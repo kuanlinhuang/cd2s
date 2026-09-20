@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-atrt-phosphotyrosine
 
 - Cohort: 32 cases
 - Cancer types: Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Phosphoproteome mass spectrometry (TMT18 / DDA)
 - Median follow-up: 30.3 months (derivable for 3 cases)
 - Treatment response recorded: False

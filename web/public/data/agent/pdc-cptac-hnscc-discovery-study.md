@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-hnscc-discovery-study
 
 - Cohort: 124 cases
 - Cancer types: Head and Neck Squamous Cell Carcinoma
+- Subject: Head and neck
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 24.3 months (derivable for 106 cases)
 - Treatment response recorded: True

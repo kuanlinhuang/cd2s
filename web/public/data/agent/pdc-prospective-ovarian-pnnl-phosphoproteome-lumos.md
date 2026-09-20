@@ -10,6 +10,7 @@ Dataset id: pdc-prospective-ovarian-pnnl-phosphoproteome-lumos
 
 - Cohort: 95 cases
 - Cancer types: Ovarian Serous Cystadenocarcinoma
+- Subject: Ovary and fallopian tube
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

@@ -10,6 +10,7 @@ Dataset id: gdc-cgci-blgsp
 
 - Cohort: 388 cases
 - Cancer types: Mature B-Cell Lymphomas
+- Subject: Lymphoid
 - Measurements: DICOM medical imaging, Whole-slide tissue images, Clinical, Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, Targeted DNA panel sequencing, Somatic Structural Variation, Copy Number Variation
 - Median follow-up: 15.7 months (derivable for 281 cases)
 - Treatment response recorded: True
