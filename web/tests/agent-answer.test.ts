@@ -113,17 +113,22 @@ describe("a question the corpus can answer", () => {
   });
 
   /**
-   * FAILS TODAY. The corpus files these diseases under category names - "Mesothelial
-   * Neoplasms", "Mesothelium", "Paragangliomas and Glomus Tumors" - and whole-subject
-   * matching cannot reach them from the word a researcher types. Left failing on
-   * purpose: the branch is parked until the corpus carries one subject per record.
+   * The corpus files these diseases under ICD-O category names - "Mesothelial
+   * Neoplasms", "Paragangliomas and Glomus Tumors" - so reaching them from the word a
+   * researcher types goes through the subject vocabulary rather than the label.
+   *
+   * Asserting only that some pick came back let this pass while the shortlist led with
+   * a cohort of an entirely different disease, so it names the cohort it must find.
    */
-  it("finds the disease the corpus files under an ICD-O category", async () => {
-    for (const q of ["mesothelioma survival", "pheochromocytoma"]) {
-      const a = await answer(q);
-      expect(a.picks.length).toBeGreaterThan(0);
-    }
+  it.each([
+    ["mesothelioma survival", /mesotheliom/i],
+    ["pheochromocytoma", /pheochromocytoma|paraganglioma/i],
+  ])("finds the disease the corpus files under an ICD-O category: %j", async (q, named) => {
+    const a = await answer(q);
+    expect(a.picks.length).toBeGreaterThan(0);
+    expect(a.picks.some((p) => named.test(`${p.title} ${p.short_title ?? ""}`))).toBe(true);
   });
+
 
   it("applies the needs stated alongside the subject", async () => {
     const a = await answer("lung adenocarcinoma with RNA sequencing");

@@ -216,8 +216,52 @@ export function getAllRecordIds(): string[] {
     .map((f) => f.slice(0, -5));
 }
 
+let _byId: Map<string, IndexRow> | null = null;
+
 export function getRowById(id: string): IndexRow | undefined {
-  return getIndex().find((r) => r.id === id);
+  if (_byId === null) _byId = new Map(getIndex().map((r) => [r.id, r]));
+  return _byId.get(id);
+}
+
+/**
+ * Lower-cased sites and cancer types per row, built once for the whole index.
+ *
+ * `getRelated` runs for each of the six hundred dataset pages and compared against
+ * every other row, lower-casing both sides on every comparison: a third of a million
+ * comparisons and some two million throwaway strings per build, all of them the same
+ * few hundred values. The corpus is immutable within a process, so the folded form is
+ * computed once and the comparison becomes a set lookup.
+ */
+interface FoldedRow {
+  sites: Set<string>;
+  cancers: Set<string>;
+  modalities: Set<string>;
+}
+
+let _folded: Map<string, FoldedRow> | null = null;
+
+function folded(): Map<string, FoldedRow> {
+  if (_folded === null) {
+    _folded = new Map(
+      getIndex().map((r) => [
+        r.id,
+        {
+          sites: new Set(r.primary_sites.map((x) => x.toLowerCase())),
+          cancers: new Set(r.cancer_types.map((x) => x.toLowerCase())),
+          modalities: new Set(r.modalities),
+        },
+      ]),
+    );
+  }
+  return _folded;
+}
+
+function overlap(a: Set<string>, b: Set<string>): number {
+  // Walk the smaller set: the cost is min(|a|, |b|) lookups rather than |a|.
+  const [small, large] = a.size <= b.size ? [a, b] : [b, a];
+  let n = 0;
+  for (const v of small) if (large.has(v)) n += 1;
+  return n;
 }
 
 /**
@@ -228,23 +272,20 @@ export function getRowById(id: string): IndexRow | undefined {
  */
 export function getRelated(id: string, limit = 6): IndexRow[] {
   const index = getIndex();
-  const self = index.find((r) => r.id === id);
+  const self = getRowById(id);
   if (!self) return [];
 
-  const siteSet = new Set(self.primary_sites.map((s) => s.toLowerCase()));
-  const cancerSet = new Set(self.cancer_types.map((s) => s.toLowerCase()));
-  const modSet = new Set(self.modalities);
+  const fold = folded();
+  const mine = fold.get(id) as FoldedRow;
 
   const scored = index
     .filter((r) => r.id !== id)
     .map((r) => {
-      const siteOverlap = r.primary_sites.filter((s) =>
-        siteSet.has(s.toLowerCase()),
-      ).length;
-      const cancerOverlap = r.cancer_types.filter((s) =>
-        cancerSet.has(s.toLowerCase()),
-      ).length;
-      const newModalities = r.modalities.filter((m) => !modSet.has(m)).length;
+      const theirs = fold.get(r.id) as FoldedRow;
+      const siteOverlap = overlap(theirs.sites, mine.sites);
+      const cancerOverlap = overlap(theirs.cancers, mine.cancers);
+      let newModalities = 0;
+      for (const m of theirs.modalities) if (!mine.modalities.has(m)) newModalities += 1;
       if (siteOverlap + cancerOverlap === 0) return { r, score: -1 };
       const score =
         cancerOverlap * 3 +
@@ -559,7 +600,57 @@ export function getNetwork(scope: NetworkScope): NetworkData {
     }
   }
 
-  return { nodes: [...nodes.values()], edges };
+  return condense([...nodes.values()], edges);
+}
+
+/**
+ * How many nodes a slice may draw before it is condensed to its cross-links.
+ *
+ * Above this the picture stops being one: the whole corpus is 2,125 nodes in three
+ * columns, so the tallest column is some nine hundred rows and sixteen thousand pixels
+ * tall, and the page shipped 2.2 MB of markup to say nothing a reader could see.
+ * Award pages and the reviewed slice sit far below it and are drawn entire.
+ */
+const NETWORK_NODE_BUDGET = 600;
+
+/**
+ * Drop the awards and articles that touch only one dataset, when a slice is too large
+ * to read whole.
+ *
+ * Not an arbitrary truncation, and chosen from the page's own reason for existing: a
+ * node shared between two datasets is what makes this a network rather than a list, and
+ * a node touching exactly one contributes a single spoke. Of the 787 articles in the
+ * whole corpus, 691 touch one dataset. Datasets themselves are never dropped - they are
+ * the subject - and the counts are returned so the page can state what it set aside
+ * rather than quietly showing less than it claims.
+ */
+function condense(nodes: NetworkNode[], edges: NetworkEdge[]): NetworkData {
+  if (nodes.length <= NETWORK_NODE_BUDGET) return { nodes, edges, condensed: null };
+  const datasetsTouched = new Map<string, Set<string>>();
+  for (const e of edges) {
+    const [other, dataset] = e.source.startsWith("dataset:") ? [e.target, e.source] : [e.source, e.target];
+    if (!dataset.startsWith("dataset:")) continue;
+    const seen = datasetsTouched.get(other) ?? new Set<string>();
+    seen.add(dataset);
+    datasetsTouched.set(other, seen);
+  }
+  const keep = new Set<string>();
+  let awardsOmitted = 0;
+  let papersOmitted = 0;
+  for (const n of nodes) {
+    if (n.kind === "dataset" || (datasetsTouched.get(n.id)?.size ?? 0) > 1) {
+      keep.add(n.id);
+    } else if (n.kind === "award") {
+      awardsOmitted += 1;
+    } else {
+      papersOmitted += 1;
+    }
+  }
+  return {
+    nodes: nodes.filter((n) => keep.has(n.id)),
+    edges: edges.filter((e) => keep.has(e.source) && keep.has(e.target)),
+    condensed: { n_awards_omitted: awardsOmitted, n_papers_omitted: papersOmitted },
+  };
 }
 
 export interface AwardConnection {

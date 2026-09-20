@@ -49,16 +49,26 @@ function layout(data: NetworkData) {
   const dIndex = new Map(byKind.dataset.map((n, i) => [n.id, i]));
 
   // Awards and papers: ordered by the mean position of the datasets they touch.
-  const bary = (id: string, side: "source" | "target") => {
-    const ys: number[] = [];
-    for (const e of data.edges) {
-      if (side === "source" && e.source === id) ys.push(dIndex.get(e.target) ?? 0);
-      if (side === "target" && e.target === id) ys.push(dIndex.get(e.source) ?? 0);
-    }
-    return ys.length ? ys.reduce((a, b) => a + b, 0) / ys.length : 0;
+  //
+  // Accumulated in one pass over the edges rather than scanning them once per node.
+  // The per-node scan was O(nodes x edges): on the whole-corpus slice, some six million
+  // comparisons on the main thread before the graph can paint, repeated on every
+  // navigation to the page.
+  const sum = new Map<string, number>();
+  const count = new Map<string, number>();
+  const add = (id: string, y: number) => {
+    sum.set(id, (sum.get(id) ?? 0) + y);
+    count.set(id, (count.get(id) ?? 0) + 1);
   };
-  const aBary = new Map(byKind.award.map((n) => [n.id, bary(n.id, "source")]));
-  const pBary = new Map(byKind.paper.map((n) => [n.id, bary(n.id, "target")]));
+  for (const e of data.edges) {
+    const targetRow = dIndex.get(e.target);
+    if (targetRow !== undefined) add(e.source, targetRow);
+    const sourceRow = dIndex.get(e.source);
+    if (sourceRow !== undefined) add(e.target, sourceRow);
+  }
+  const bary = (id: string) => (count.get(id) ? (sum.get(id) as number) / (count.get(id) as number) : 0);
+  const aBary = new Map(byKind.award.map((n) => [n.id, bary(n.id)]));
+  const pBary = new Map(byKind.paper.map((n) => [n.id, bary(n.id)]));
   byKind.award.sort((a, b) => (aBary.get(a.id) ?? 0) - (aBary.get(b.id) ?? 0));
   byKind.paper.sort((a, b) => (pBary.get(a.id) ?? 0) - (pBary.get(b.id) ?? 0));
 

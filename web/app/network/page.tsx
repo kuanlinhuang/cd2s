@@ -168,7 +168,17 @@ export default async function NetworkPage({
             Solid lines are funded data generation and articles that analyzed the data.
             Dashed lines are awards that funded reuse and articles that only mentioned or
             declared use.
-            {scope === "all" && " This is the whole corpus, so zoom in before reading labels."}
+            {data.condensed && (
+              <>
+                {" "}
+                A slice this size is drawn as its cross-links only: every dataset is
+                here, and so is every award and article touching more than one of them,
+                but {num(data.condensed.n_awards_omitted)} awards and{" "}
+                {num(data.condensed.n_papers_omitted)} articles that touch exactly one
+                dataset are left out - a single spoke each, and together more of the
+                picture than it can carry. Each is on its dataset&rsquo;s own page.
+              </>
+            )}
           </p>
         )}
         <p className="mb-2 text-[12px] t-faint">

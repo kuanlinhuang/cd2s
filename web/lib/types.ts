@@ -662,4 +662,9 @@ export interface NetworkEdge {
 export interface NetworkData {
   nodes: NetworkNode[];
   edges: NetworkEdge[];
+  /**
+   * What a large slice left out, so the page can say so. Null when the whole slice is
+   * drawn, which is every award page and every small scope.
+   */
+  condensed: { n_awards_omitted: number; n_papers_omitted: number } | null;
 }
