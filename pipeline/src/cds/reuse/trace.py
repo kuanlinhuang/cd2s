@@ -463,7 +463,6 @@ def refresh_independence(records: list[DatasetRecord]) -> dict[str, int]:
 def build_reuse_records(
     candidates: list[Candidate],
     *,
-    generator_surnames: set[str],
     exclude_pmids: set[str],
     token: str,
     at: datetime | None,
@@ -471,24 +470,28 @@ def build_reuse_records(
 ) -> list[ReuseRecord]:
     """Grade candidates into reuse records, ranked by evidence strength.
 
-    Independence is deliberately *not* decided here. It depends on knowing who made the
-    dataset, and that is only established once generation funding has been attributed
-    from the marker paper - which happens two stages later. Deciding it now produced the
-    answer "unknown" for every article on every record whose awards had not yet been
-    resolved. `refresh_independence` settles it afterwards.
+    Independence is deliberately *not* decided here, and deliberately not ranked on
+    either. It depends on knowing who made the dataset, and that is only established
+    once generation funding has been attributed from the marker paper - which happens
+    two stages later. Deciding it now produced the answer "unknown" for every article on
+    every record whose awards had not yet been resolved. `refresh_independence` settles
+    it afterwards, against author keys rather than bare surnames.
+
+    Ranking on the bare-surname answer was the subtler half of the same bug: the flag it
+    wrote was overwritten later, but the truncation to `max_exemplars` was not, so a
+    highly cited article by "Chen J" could be cut from the list for sharing a surname
+    with a generator while the later, stricter pass would have called it independent.
     """
     out: list[ReuseRecord] = []
     for c in candidates:
         if c.publication.pmid and c.publication.pmid in exclude_pmids:
             continue
         tier = epmc.classify_tier(c.fields)
-        overlap = bool(c.author_surnames & generator_surnames) if generator_surnames else None
         out.append(
             ReuseRecord(
                 publication=c.publication,
                 tier=tier,
                 kind=ReuseKind.SECONDARY_ANALYSIS,
-                independent_of_generators=(None if overlap is None else not overlap),
                 accession_locator=", ".join(sorted(c.fields)),
                 author_keys=sorted(c.author_keys),
                 evidence=[epmc.evidence_for(token, sorted(c.fields)[0], at)],
@@ -499,7 +502,6 @@ def build_reuse_records(
     out.sort(
         key=lambda r: (
             -tier_rank[r.tier],
-            r.independent_of_generators is not True,
             -(r.publication.citation_count or 0),
             -(r.publication.year or 0),
         )

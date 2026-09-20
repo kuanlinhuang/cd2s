@@ -32,12 +32,19 @@ export default function NotebookGallery({
             <div className={compact ? "p-5" : "grid lg:grid-cols-[minmax(0,1fr)_320px]"}>
               <div className={compact ? "" : "p-5 sm:p-6"}>
                 <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <span
-                    className="grid h-8 w-8 place-items-center rounded-full font-mono text-meta font-bold"
-                    style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                  {/*
+                    The ordinal is a position in the library, so it is only shown where
+                    the whole library is on the page. A teaser showing three of six would
+                    number them 01-03 and send a reader from card 03 to card 05.
+                  */}
+                  {!compact && (
+                    <span
+                      className="grid h-8 w-8 place-items-center rounded-full font-mono text-meta font-bold"
+                      style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  )}
                   <Chip tone={guide.level === "beginner" ? "accent" : "neutral"}>
                     {guide.level}
                   </Chip>

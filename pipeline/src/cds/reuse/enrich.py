@@ -242,7 +242,6 @@ def enrich_record(
     # 4. grade the remainder, now that independence is answerable
     exemplars = trace.build_reuse_records(
         candidates,
-        generator_surnames=generator_surnames,
         exclude_pmids=authoritative_pmids,
         token=tokens[0],
         at=at_cands,

@@ -467,8 +467,15 @@ def test_unmeasurable_precision_publishes_nothing_rather_than_a_raw_count():
     )
     assert precision.correct(22, exact) == 22
 
-    measured = exact.model_copy(update={"needs_correction": True, "precision": 0.14})
-    assert precision.correct(270, measured) == 38
+    # The measured precision for TARGET-RT, and the number both the dataset page and the
+    # methods page quote from it. A rounded 0.14 here let the published copy drift.
+    measured = exact.model_copy(update={"needs_correction": True, "precision": 0.1429})
+    assert precision.correct(270, measured) == 39
+
+    # A raw zero is exact. An unmeasurable estimate must not turn it into "unknown".
+    unmeasurable = exact.model_copy(update={"needs_correction": True, "precision": None})
+    assert precision.correct(0, unmeasurable) == 0
+    assert precision.correct(0, measured) == 0
 
 
 def test_wilson_interval_does_not_claim_certainty_from_a_clean_sample():
@@ -522,40 +529,76 @@ def test_citation_count_is_withheld_when_the_marker_paper_was_only_guessed(recor
     assert any(e.source_label == "Citation count withheld" for e in rec.reuse_metrics.evidence)
 
 
-def test_a_curated_marker_paper_displaces_the_guess_and_may_be_counted_from(record_factory):
+def test_a_curated_marker_paper_displaces_the_guess_and_may_be_counted_from(
+    record_factory, tmp_path
+):
+    """A reviewer's entry must throw the nomination out, not sit beside it.
+
+    Driven through `apply_registry` rather than by installing the result by hand: the
+    displacement, the deduplication and the survival of a repository's own publication
+    are all things that function does, and a test that assigns the outcome itself proves
+    none of them.
+    """
     from cds.model import Confidence, Evidence, Method, Publication
     from cds.reuse import markers
 
+    guessed = Publication(
+        pmid="22458606",
+        evidence=[
+            Evidence(
+                method=Method.DERIVED,
+                source_label=markers.INFERRED_LABEL,
+                retrieved_at=_NOW,
+                confidence=Confidence.LOW,
+            )
+        ],
+    )
+    repository_supplied = Publication(
+        pmid="26451490",
+        evidence=[
+            Evidence(
+                method=Method.API,
+                source_label="GDC",
+                retrieved_at=_NOW,
+                confidence=Confidence.HIGH,
+            )
+        ],
+    )
     rec = record_factory("gdc-tcga-ov", identifiers=[(IdScheme.GDC_PROJECT, "TCGA-OV")])
-    rec.primary_publications = [
-        Publication(
-            pmid="22458606",
-            evidence=[
-                Evidence(
-                    method=Method.DERIVED,
-                    source_label=markers.INFERRED_LABEL,
-                    retrieved_at=_NOW,
-                    confidence=Confidence.LOW,
-                )
-            ],
-        )
-    ]
-    registry = {
-        "gdc-tcga-ov": {
-            "pmid": "21720365",
-            "title": "Integrated genomic analyses of ovarian carcinoma",
-            "journal": "Nature",
-            "year": 2011,
-            "_reviewer": "test",
-            "_reviewed_at": None,
-        }
-    }
-    info = markers._registry_publication(registry["gdc-tcga-ov"], "gdc-tcga-ov")
-    rec.primary_publications = [info]
+    rec.primary_publications = [guessed, repository_supplied]
+    other = record_factory("gdc-tcga-brca", identifiers=[(IdScheme.GDC_PROJECT, "TCGA-BRCA")])
 
-    assert markers.authoritative_marker_pmids(rec) == ["21720365"]
-    assert not markers.is_inferred(info)
+    path = tmp_path / "marker_papers.yaml"
+    path.write_text(
+        "reviewer: test\n"
+        "reviewed_at: 2025-01-02\n"
+        "papers:\n"
+        "  gdc-tcga-ov:\n"
+        '    pmid: "21720365"\n'
+        "    title: Integrated genomic analyses of ovarian carcinoma\n"
+        "    journal: Nature\n"
+        "    year: 2011\n"
+        "  gdc-not-in-this-corpus:\n"
+        '    pmid: "1"\n'
+    )
+
+    info = markers.apply_registry([rec, other], path)
+
+    assert info["n_applied"] == 1
+    assert info["n_guesses_displaced"] == 1
+    assert info["n_unmatched"] == 1
+    assert info["unmatched_ids"] == ["gdc-not-in-this-corpus"]
+
+    pmids = [p.pmid for p in rec.primary_publications]
+    assert "22458606" not in pmids, "the nomination must be displaced, not kept alongside"
+    assert pmids == ["21720365", "26451490"], "the repository's own publication survives"
+    assert markers.authoritative_marker_pmids(rec) == ["21720365", "26451490"]
+    assert not markers.is_inferred(rec.primary_publications[0])
     assert markers.withhold_counts_from_guesses([rec])["n_citation_counts_withheld"] == 0
+
+    # Re-applying must not duplicate the entry.
+    markers.apply_registry([rec, other], path)
+    assert [p.pmid for p in rec.primary_publications] == ["21720365", "26451490"]
 
 
 # ---------------------------------------------------------------------------------------

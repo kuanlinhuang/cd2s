@@ -605,7 +605,7 @@ export default function MethodsPage() {
               <span className="t-mono">TARGET-RT</span>: about one in seven.{" "}
               <em>RT</em> is also radiotherapy, retention time, reverse transcription and
               room temperature. The uncorrected count was 270; the corrected one is
-              nearer 38.
+              39.
             </li>
           </ul>
           <p>

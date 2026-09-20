@@ -243,7 +243,14 @@ def measure(
 
 
 def correct(raw: int, est: AccessionPrecision) -> int | None:
-    """Apply a precision estimate to a raw hit count. None means 'do not publish'."""
+    """Apply a precision estimate to a raw hit count. None means 'do not publish'.
+
+    A raw zero needs no correction and survives an unmeasurable estimate: whatever
+    fraction of nothing is still nothing. Dropping it would publish "could not be
+    measured" for the one count the index pass knows exactly.
+    """
+    if raw == 0:
+        return 0
     if not est.needs_correction:
         return raw
     if est.precision is None:
