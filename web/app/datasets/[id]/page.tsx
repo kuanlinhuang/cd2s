@@ -76,7 +76,7 @@ const SECTIONS = [
   { id: "limitations", label: "Cannot tell you" },
   { id: "reuse", label: "Who has used it" },
   { id: "ways", label: "Ways to use it" },
-  { id: "start", label: "Start here" },
+  { id: "start", label: "Get the data" },
   { id: "provenance", label: "Provenance" },
 ];
 
@@ -1334,11 +1334,22 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
     { href: r.agent_package?.jsonld_url, label: "schema.org JSON-LD" },
   ].filter((a): a is { href: string; label: string } => Boolean(a.href));
 
+  // Twenty datasets have a route a reviewer wrote. Telling a reader that one was
+  // generated would understate it, and telling them a generated one was reviewed would
+  // be worse, so the lede says which this is.
+  const reviewedRoute = human.some((s) =>
+    (s.evidence ?? []).some((e) => e.method === "curated"),
+  );
+
   return (
     <Section
       id="start"
       title="Get the data"
-      lede="Two routes to the same files: what a person does, and what an agent runs. Both are generated from this record's own identifiers, and each step cites the policy it applies."
+      lede={
+        reviewedRoute
+          ? "Two routes to the same files. The steps for a person were written by a reviewer who read this dataset's documentation; the machine route is generated from the repository's published policy and this record's identifiers."
+          : "Two routes to the same files: what a person does, and what an agent runs. Both are generated from the repository's published policy and this record's own identifiers, and each step cites the policy it applies."
+      }
     >
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
