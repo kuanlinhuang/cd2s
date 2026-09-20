@@ -466,6 +466,13 @@ def write_all(
     for target in (DIST_DIR, WEB_DATA_DIR):
         notebook_dir = target / "notebooks"
         notebook_dir.mkdir(parents=True, exist_ok=True)
+        # The directory is a pure function of the current workbook set. Without this,
+        # a renamed or retired workbook stays committed and publicly served with no
+        # record pointing at it.
+        keep = {source.name for source in notebook_files.values()}
+        for stale in notebook_dir.glob("*.ipynb"):
+            if stale.name not in keep:
+                stale.unlink()
         for source in notebook_files.values():
             shutil.copyfile(source, notebook_dir / source.name)
         written[f"{target.name}/notebooks/*.ipynb"] = sum(

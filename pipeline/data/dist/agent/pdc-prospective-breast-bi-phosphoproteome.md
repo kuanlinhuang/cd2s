@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Of those, 3 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Of those, 3 were retrieved and graded individually, and the strongest 2 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 2 that analyzed the data had no author in common with the generating team.
 - Reuse gap index: -0.92 (negative means less reused than comparable datasets)
   - SIMSI-Transfer: Software-Assisted Reduction of Missing Values in Phosphoproteomic and Proteomic Isobaric Labeling Data Using Tandem Mass Spectrum Clustering. (2022) PMID 35462064
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932

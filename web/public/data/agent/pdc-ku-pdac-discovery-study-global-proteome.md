@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Of those, 4 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 3 that analyzed the data had no author in common with the generating team.
 - Reuse gap index: +1.77 (negative means less reused than comparable datasets)
   - Lactate dehydrogenase a is a crucial biomarker that affects the prognosis, chemotherapy effect, and immune infiltration of breast cancer. (2025) PMID 41107806
   - CAFs-derived LAM332 promotes CTCs formation and survival via ITGA3 and contributes to the metastasis of pancreatic ductal adenocarcinoma. (2026) PMID 41881953

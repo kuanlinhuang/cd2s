@@ -579,17 +579,19 @@ class ReuseMetrics(CDSModel):
     n_reuse_examined: int = Field(
         default=0,
         description="Articles actually retrieved and graded individually by the deep "
-        "pass. The denominator for n_independent_reuse and n_nci_funded_reuse.",
+        "pass. Larger than the exemplar list, which keeps only the strongest of them.",
     )
     n_independent_reuse: int = Field(
         default=0,
-        description="Of the n_reuse_examined articles, those at T3+ with no author "
-        "overlap with the generating team. A sample count, not a population count.",
+        description="Of the T3+ exemplars retained in `reuse`, those with no author "
+        "overlap with the generating team. Author overlap and funding are resolved only "
+        "for the retained exemplars, so `reuse` - not n_reuse_examined - is the "
+        "denominator this count may be published against.",
     )
     n_nci_funded_reuse: int = Field(
         default=0,
-        description="Of the n_reuse_examined articles, those reported under an NCI "
-        "award in RePORTER. A sample count, not a population count.",
+        description="Of the exemplars retained in `reuse`, those reported under an NCI "
+        "award in RePORTER. Same denominator caveat as n_independent_reuse.",
     )
     first_reuse_year: int | None = Field(
         default=None,

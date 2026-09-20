@@ -69,7 +69,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 25
-- Of those, 51 were retrieved and graded individually; 2 had no author in common with the generating team and 10 were themselves NCI funded.
+- Of those, 51 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 2 of the 10 that analyzed the data had no author in common with the generating team, and 10 were themselves NCI funded.
 - Citations to the dataset's publication: 688 (attention, not reuse)
 - Reuse gap index: -1.42 (negative means less reused than comparable datasets)
   - Proteogenomic Characterization Reveals Therapeutic Vulnerabilities in Lung Adenocarcinoma. (2020) PMID 32649874

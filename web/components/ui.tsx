@@ -102,6 +102,7 @@ export function EvidenceChip({ evidence }: { evidence: Evidence[] }) {
         href={best.source_url}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`Source: ${best.source_label ?? best.source_url}`}
       >
         {label}
       </a>

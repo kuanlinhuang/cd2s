@@ -81,7 +81,9 @@ export default function NotebooksPage() {
         <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-micro font-semibold uppercase tracking-wider t-faint">Notebook library</p>
-            <h2 className="mt-1 text-xl font-semibold tracking-tight">Six reusable research workflows</h2>
+            <h2 className="mt-1 text-xl font-semibold tracking-tight">
+              {num(guides.length)} reusable research workflows
+            </h2>
           </div>
           <p className="max-w-xl text-meta t-muted">
             Each example ran end to end against the public data named in its receipt.

@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 416
-- Of those, 96 were retrieved and graded individually; 10 had no author in common with the generating team.
+- Of those, 96 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 10 of the 10 that analyzed the data had no author in common with the generating team.
 - Citations to the dataset's publication: 1245 (attention, not reuse)
 - Reuse gap index: +1.01 (negative means less reused than comparable datasets)
   - Adenosinergic Signalling in Cervical Cancer Microenvironment. (2025) PMID 39762204

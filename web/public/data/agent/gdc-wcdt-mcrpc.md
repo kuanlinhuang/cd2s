@@ -82,7 +82,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 27
-- Of those, 67 were retrieved and graded individually; 3 had no author in common with the generating team and 9 were themselves NCI funded.
+- Of those, 67 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 3 of the 10 that analyzed the data had no author in common with the generating team, and 9 were themselves NCI funded.
 - Citations to the dataset's publication: 1206 (attention, not reuse)
 - Reuse gap index: +1.86 (negative means less reused than comparable datasets)
   - The Polycomb Repressor Complex 1 Drives Double-Negative Prostate Cancer Metastasis by Coordinating Stemness and Immune Suppression. (2019) PMID 31327655

@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 95
-- Of those, 72 were retrieved and graded individually; 10 had no author in common with the generating team and 2 were themselves NCI funded.
+- Of those, 72 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 10 of the 10 that analyzed the data had no author in common with the generating team, and 2 were themselves NCI funded.
 - Citations to the dataset's publication: 667 (attention, not reuse)
 - Reuse gap index: +0.45 (negative means less reused than comparable datasets)
   - Alternative splicing of &lt;i&gt;GSDMB&lt;/i&gt; modulates killer lymphocyte-triggered pyroptosis. (2023) PMID 37115914

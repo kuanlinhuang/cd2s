@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 641
-- Of those, 110 were retrieved and graded individually; 9 had no author in common with the generating team.
+- Of those, 110 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 9 of the 10 that analyzed the data had no author in common with the generating team.
 - Citations to the dataset's publication: 6322 (attention, not reuse)
 - Reuse gap index: +1.04 (negative means less reused than comparable datasets)
   - Identification of three subtypes of ovarian cancer and construction of prognostic models based on immune-related genes. (2024) PMID 39434163

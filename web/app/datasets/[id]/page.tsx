@@ -1101,11 +1101,13 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
               : "Each was retrieved and graded individually."}
           </p>
         )}
-        {m.n_reuse_examined > 0 && (
+        {analyzed.length > 0 && (
           <p className="mb-2 max-w-2xl text-meta t-muted">
-            Deep-review sample: {num(m.n_independent_reuse)} of {num(m.n_reuse_examined)}
-            {" "}examined articles had no author in common with the generating team, and{" "}
-            {num(m.n_nci_funded_reuse)} of {num(m.n_reuse_examined)} were themselves
+            Deep-review sample: author overlap and funding were resolved for the{" "}
+            {num(r.reuse.length)} articles kept as examples here, not for every article
+            examined. Within them, {num(m.n_independent_reuse)} of the{" "}
+            {num(analyzed.length)} that analyzed the data had no author in common with the
+            generating team, and {num(m.n_nci_funded_reuse ?? 0)} were themselves
             NCI-funded. These are sample counts, not population estimates.
           </p>
         )}

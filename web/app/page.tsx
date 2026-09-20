@@ -5,6 +5,7 @@ import NotebookGallery from "@/components/NotebookGallery";
 import { PairedDots } from "@/components/charts/PairedDots";
 import { Card } from "@/components/ui";
 import {
+  getFacets,
   getIndex,
   getNotebookGuides,
   getQuestions,
@@ -14,8 +15,6 @@ import {
 } from "@/lib/data";
 import { SCARCE_MODALITIES, num } from "@/lib/format";
 import { reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
-
-const REPOSITORIES = ["GDC", "PDC", "IDC", "HTAN", "cBioPortal"];
 
 function ArrowIcon() {
   return (
@@ -64,6 +63,7 @@ export default function Home() {
   const nMultimodal = index.filter((r) => r.n_modalities >= 3).length;
   const nScarce = index.filter((r) => r.modalities.some((m) => SCARCE_MODALITIES.has(m))).length;
   const notebooks = getNotebookGuides();
+  const repositories = getFacets().repository.map((f) => f.value);
 
   const capabilities = [
     { href: "/datasets?capability=survival", label: "Survival analysis", n: stats.n_with_survival },
@@ -93,11 +93,19 @@ export default function Home() {
       values: { cited: r.cites, used: r.reuse },
     }));
   const untraceable = untraceableTopCited(index, 3);
+  // Preferred order when these workbooks exist; any that has been renamed or retired is
+  // backfilled from the rest, so the gallery below never renders empty under its heading.
+  const preferredNotebooks = [
+    "01_can_i_answer_this",
+    "05_cross_repository_linkage",
+    "02_survival_tcga_brca",
+  ];
   const featuredNotebooks = [
-    notebooks.find((guide) => guide.slug === "01_can_i_answer_this"),
-    notebooks.find((guide) => guide.slug === "05_cross_repository_linkage"),
-    notebooks.find((guide) => guide.slug === "02_survival_tcga_brca"),
-  ].filter((guide): guide is NonNullable<typeof guide> => Boolean(guide));
+    ...preferredNotebooks
+      .map((slug) => notebooks.find((guide) => guide.slug === slug))
+      .filter((guide): guide is NonNullable<typeof guide> => Boolean(guide)),
+    ...notebooks.filter((guide) => !preferredNotebooks.includes(guide.slug)),
+  ].slice(0, 3);
 
   return (
     <>
@@ -164,7 +172,7 @@ export default function Home() {
           <div className="border-b px-5 py-4 sm:px-6">
             <div className="flex flex-wrap items-center gap-2">
               <span className="mr-1 text-meta font-medium t-muted">Connected resources</span>
-              {REPOSITORIES.map((repository) => (
+              {repositories.map((repository) => (
                 <span
                   key={repository}
                   className="rounded-full border px-2.5 py-1 font-mono text-micro font-semibold"

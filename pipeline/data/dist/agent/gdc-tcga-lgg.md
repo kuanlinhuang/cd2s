@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 620
-- Of those, 114 were retrieved and graded individually; 10 had no author in common with the generating team and 1 were themselves NCI funded.
+- Of those, 114 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 10 of the 10 that analyzed the data had no author in common with the generating team, and 1 were themselves NCI funded.
 - Citations to the dataset's publication: 2440 (attention, not reuse)
 - Reuse gap index: +1.80 (negative means less reused than comparable datasets)
   - Updating TCGA glioma classification through integration of molecular data following the latest WHO guidelines. (2025) PMID 40467633

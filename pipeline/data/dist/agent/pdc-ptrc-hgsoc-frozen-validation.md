@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Of those, 1 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Of those, 1 were retrieved and graded individually, and the strongest 1 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 1 that analyzed the data had no author in common with the generating team.
 - Reuse gap index: -0.91 (negative means less reused than comparable datasets)
   - Automated sparse feature selection in high-dimensional proteomics data via 1-bit compressed sensing and K-Medoids clustering. (2025) PMID 40597613
 

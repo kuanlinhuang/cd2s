@@ -78,7 +78,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
-- Of those, 10 were retrieved and graded individually; 0 had no author in common with the generating team and 2 were themselves NCI funded.
+- Of those, 10 were retrieved and graded individually, and the strongest 9 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 7 that analyzed the data had no author in common with the generating team, and 2 were themselves NCI funded.
 - Reuse gap index: -2.23 (negative means less reused than comparable datasets)
   - Functional characterization of SMARCA4 variants identified by targeted exome-sequencing of 131,668 cancer patients. (2020) PMID 33144586
   - Genomic analysis of 63,220 tumors reveals insights into tumor uniqueness and targeted cancer immunotherapy strategies. (2017) PMID 28231819
