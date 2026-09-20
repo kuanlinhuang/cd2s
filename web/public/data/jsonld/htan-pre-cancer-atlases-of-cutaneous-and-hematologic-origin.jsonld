@@ -87,12 +87,82 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233262",
-      "name": null,
+      "name": "Molecular, Cellular, and Tissue Characterization Unit",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233262"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA225088",
+      "name": "Systems Pharmacology of Therapeutic and Adverse Responses to ImmuneCheckpoint and Small Molecule Drugs",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA225088"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009216",
+      "name": "Molecular Immunology and Tumor Biology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009216"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA274277",
+      "name": "Advancing technologies for the collection and analysis of high dimensional immunoprofiles and tumor images",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA274277"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA006516",
+      "name": "Dana-Farber/Harvard Cancer Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA006516"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R50CA252138",
+      "name": "High dimensional digital pathology to investigate the tumor micro environment and its impact on response to therapy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA252138"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA256497",
+      "name": "Integrative Prediction of Therapeutic Response in T-cell Lymphoma by Omic and Spatial Modeling",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA256497"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA256497",
+      "name": "Integrative Prediction of Therapeutic Response in T-cell Lymphoma by Omic and Spatial Modeling",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA256497"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

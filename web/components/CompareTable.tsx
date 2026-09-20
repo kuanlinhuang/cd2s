@@ -104,7 +104,7 @@ const ROWS: Row[] = [
     label: "Population notes",
     render: (r) =>
       r.population_flags.length > 0 ? (
-        <span className="text-[12px]">{r.population_flags.join("; ")}</span>
+        <span className="text-meta">{r.population_flags.join("; ")}</span>
       ) : (
         <span className="t-faint">-</span>
       ),
@@ -116,7 +116,7 @@ const ROWS: Row[] = [
     hint: "The accession appears in the methods, results, a table or a figure.",
     render: (r) =>
       r.has_citable_accession === false ? (
-        <span className="text-[12px] t-faint">
+        <span className="text-meta t-faint">
           not traceable
         </span>
       ) : (
@@ -271,7 +271,7 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
   return (
     <div>
       <div className="mb-4 flex flex-wrap items-center gap-4">
-        <label className="flex cursor-pointer items-center gap-2 text-[13px]">
+        <label className="flex cursor-pointer items-center gap-2 text-body">
           <input
             type="checkbox"
             checked={onlyDifferences}
@@ -285,14 +285,14 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-[13px]">
+        <table className="w-full min-w-[640px] border-collapse text-body">
           <thead>
             <tr>
               <th
                 className="sticky left-0 z-10 border-b py-2 pr-4 text-left align-bottom font-medium"
                 style={{ background: "var(--bg)", minWidth: 190 }}
               >
-                <span className="text-[11px] uppercase tracking-wide t-faint">
+                <span className="text-micro uppercase tracking-wide t-faint">
                   Attribute
                 </span>
               </th>
@@ -309,7 +309,7 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
                   >
                     {r.short_title ?? r.title}
                   </Link>
-                  <div className="mt-0.5 line-clamp-2 text-[11px] font-normal t-muted">
+                  <div className="mt-0.5 line-clamp-2 text-micro font-normal t-muted">
                     {r.title}
                   </div>
                   {r.is_underexplored && (
@@ -337,7 +337,7 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
                     {row.hint && (
                       <span
                         aria-hidden
-                        className="ml-1 cursor-help text-[10px] t-faint"
+                        className="ml-1 cursor-help text-micro t-faint"
                         title={row.hint}
                       >
                         ?
@@ -352,7 +352,7 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
                           {row.render(r)}
                           {best?.has(r.id) && (
                             <span
-                              className="text-[10px]"
+                              className="text-micro"
                               style={{ color: "var(--open)" }}
                               title="Highest in this row among the datasets compared"
                             >
@@ -379,7 +379,7 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
               >
                 Measurements
                 <span
-                  className="ml-1 cursor-help text-[10px] t-faint"
+                  className="ml-1 cursor-help text-micro t-faint"
                   title="Starred chips are unique to that column. Usually the deciding difference."
                 >
                   ?
@@ -426,7 +426,7 @@ export default function CompareTable({ rows, fits = {} }: { rows: IndexRow[]; fi
               {rows.map((r) => (
                 <td
                   key={r.id}
-                  className="py-2 pr-4 align-top text-[12px] t-muted"
+                  className="py-2 pr-4 align-top text-meta t-muted"
                 >
                   {r.repositories.join(" + ")}
                 </td>

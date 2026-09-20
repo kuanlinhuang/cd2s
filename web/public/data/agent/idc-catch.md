@@ -11,7 +11,7 @@ Dataset id: idc-catch
 
 - Cohort: 282 cases
 - Cancer types: Melanoma, Squamous Cell Carcinoma, Malignant Peripheral Nerve Sheath Tumor, Skin Fibrous Histiocytoma
-- Subject: Peripheral nervous system, Skin
+- Subject: Skin
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

@@ -358,7 +358,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
         aria-expanded={filtersOpen}
         aria-controls="dataset-filters"
         onClick={() => setFiltersOpen((open) => !open)}
-        className="flex w-full items-center justify-between rounded-md border px-3 py-2.5 text-[13px] font-medium lg:hidden"
+        className="flex w-full items-center justify-between rounded-md border px-3 py-2.5 text-body font-medium lg:hidden"
         style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}
       >
         <span>
@@ -376,7 +376,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
         <div>
           <label
             htmlFor="dataset-search"
-            className="block text-[11px] font-medium uppercase tracking-wide mb-1.5 t-faint"
+            className="block text-micro font-medium uppercase tracking-wide mb-1.5 t-faint"
           >
             Search
           </label>
@@ -389,23 +389,23 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
               if (e.target.value) setSort("relevance");
             }}
             placeholder="cervical cancer, spatial, resistance..."
-            className="w-full min-w-0 max-w-full rounded-md border px-2.5 py-1.5 text-[13px]"
+            className="w-full min-w-0 max-w-full rounded-md border px-2.5 py-1.5 text-body"
             style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
           />
-          <p className="mt-1.5 text-[11px] t-faint">
+          <p className="mt-1.5 text-micro t-faint">
             Titles, summaries, assays, clinical fields and reviewed research questions.
           </p>
         </div>
 
         <fieldset>
-          <legend className="text-[11px] font-medium uppercase tracking-wide mb-1.5 t-faint">
+          <legend className="text-micro font-medium uppercase tracking-wide mb-1.5 t-faint">
             What you need
           </legend>
           <div className="space-y-1">
             {(Object.keys(CAPABILITY_FILTERS) as CapabilityKey[]).map((k) => (
               <label
                 key={k}
-                className="flex cursor-pointer items-start gap-2 text-[13px]"
+                className="flex cursor-pointer items-start gap-2 text-body"
               >
                 <input
                   type="checkbox"
@@ -505,7 +505,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
         {activeFilters > 0 && (
           <button
             onClick={clearAll}
-            className="text-[12px] underline t-muted"
+            className="text-meta underline t-muted"
           >
             Clear {activeFilters} filter{activeFilters > 1 ? "s" : ""}
           </button>
@@ -515,7 +515,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
       {/* --------------------------------------------------------------- results */}
       <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-[13px] t-muted">
+          <p className="text-body t-muted">
             <span className="tnum font-medium" style={{ color: "var(--text)" }}>
               {num(filtered.length)}
             </span>{" "}
@@ -524,7 +524,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
           <div className="flex items-center gap-2">
             <label
               htmlFor="sort"
-              className="text-[12px] t-faint"
+              className="text-meta t-faint"
             >
               Sort
             </label>
@@ -532,7 +532,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
               id="sort"
               value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}
-              className="rounded border px-2 py-1 text-[12px]"
+              className="rounded border px-2 py-1 text-meta"
               style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
             >
               {(Object.keys(SORTS) as SortKey[])
@@ -548,7 +548,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
 
         {compare.length > 0 && (
           <div
-            className="mb-4 flex flex-wrap items-center gap-3 rounded-md border px-3 py-2 text-[13px]"
+            className="mb-4 flex flex-wrap items-center gap-3 rounded-md border px-3 py-2 text-body"
             style={{ background: "var(--accent-bg)", borderColor: "var(--accent)" }}
           >
             <span>
@@ -568,7 +568,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
         )}
 
         {filtered.length === 0 ? (
-          <p className="rounded-md border border-dashed px-4 py-8 text-center text-[13px] t-muted">
+          <p className="rounded-md border border-dashed px-4 py-8 text-center text-body t-muted">
             Nothing matches. Remove a filter, or browse{" "}
             <Link href="/underexplored" className="underline">
               underexplored datasets
@@ -591,7 +591,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
         {filtered.length > limit && (
           <button
             onClick={() => setLimit((l) => l + 60)}
-            className="mt-5 w-full rounded-md border py-2 text-[13px] font-medium"
+            className="mt-5 w-full rounded-md border py-2 text-body font-medium"
             style={{ borderColor: "var(--border-strong)" }}
           >
             Show {Math.min(60, filtered.length - limit)} more
@@ -618,7 +618,7 @@ function FacetSelect({
     <div>
       <label
         htmlFor={id}
-        className="block text-[11px] font-medium uppercase tracking-wide mb-1.5 t-faint"
+        className="block text-micro font-medium uppercase tracking-wide mb-1.5 t-faint"
       >
         {label}
       </label>
@@ -626,7 +626,7 @@ function FacetSelect({
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full min-w-0 max-w-full rounded-md border px-2 py-1.5 text-[13px]"
+        className="w-full min-w-0 max-w-full rounded-md border px-2 py-1.5 text-body"
         style={{ background: "var(--bg-raised)", borderColor: "var(--border)" }}
       >
         <option value="">Any</option>
@@ -712,8 +712,8 @@ function ResultCard({
             </div>
           </div>
 
-          <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] t-muted">
-            <span className="font-mono text-[11px]">{row.short_title}</span>
+          <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-meta t-muted">
+            <span className="font-mono text-micro">{row.short_title}</span>
             {row.repositories.length > 0 && <span>{row.repositories.join(" + ")}</span>}
             {row.n_cases ? <CountPill n={row.n_cases} label="cases" /> : null}
             {!row.n_cases && row.n_samples ? (
@@ -725,14 +725,14 @@ function ResultCard({
           </div>
 
           {reasons.length > 0 && (
-            <p className="mt-2 text-[13px]">
+            <p className="mt-2 text-body">
               <span className="t-faint">Why it fits: </span>
               <span>{reasons.join("; ")}</span>
             </p>
           )}
 
           {row.one_liner && (
-            <p className="mt-1.5 text-[13px] t-muted">
+            <p className="mt-1.5 text-body t-muted">
               {row.one_liner}
             </p>
           )}
@@ -744,7 +744,7 @@ function ResultCard({
               </Chip>
             ))}
             {row.modalities.length > 6 && (
-              <span className="text-[11px] t-faint">
+              <span className="text-micro t-faint">
                 +{row.modalities.length - 6} more
               </span>
             )}
@@ -752,7 +752,7 @@ function ResultCard({
 
           {(row.n_verified_reuse !== null && row.n_verified_reuse !== undefined) ||
           row.has_citable_accession === false ? (
-            <p className="mt-2 text-[12px] t-faint">
+            <p className="mt-2 text-meta t-faint">
               {row.has_citable_accession === false
                 ? "No citable accession, so reuse cannot be traced"
                 : `${num(row.n_verified_reuse)} article${row.n_verified_reuse === 1 ? "" : "s"} analyzed these data` +

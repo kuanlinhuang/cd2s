@@ -51,7 +51,7 @@ export default function SectionNav({ sections }: { sections: SectionItem[] }) {
       style={{ background: "color-mix(in srgb, var(--bg) 92%, transparent)" }}
       aria-label="Sections of this page"
     >
-      <div className="flex gap-1 py-2 text-[12px]">
+      <div className="flex gap-1 py-2 text-meta">
         {sections.map((s) => {
           const isActive = s.id === active;
           return (

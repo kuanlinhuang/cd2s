@@ -76,7 +76,48 @@
       "datePublished": "2018"
     }
   ],
-  "funding": [],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA190214",
+      "name": "Qualification and Deployment of Imaging Biomarkers of Cancer Treatment Response",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA190214"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA187947",
+      "name": "Computing, Optimizing, and Evaluating Quantitative Cancer Imaging Biomarkers",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA187947"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA142555",
+      "name": "Computerized Quantitative Imaging Assessment of Tumor Burden",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA142555"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA160251",
+      "name": "Tools for Linking and Mining image and Genomic Data in Non-Small Cell Lung Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA160251"
+    }
+  ],
   "dateModified": "2026-09-18T02:44:36.389375+00:00",
   "datePublished": "2012-01-01",
   "variableMeasured": [],

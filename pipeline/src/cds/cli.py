@@ -313,6 +313,18 @@ def curate_cmd(
                 console.print(f"[yellow]{r.id}: citation refresh failed: {exc}[/yellow]")
     console.print(f"  citation counts refreshed: {n_recounted}")
 
+    # Which award paid to create each dataset. This runs here, after overlays, because a
+    # reviewer's overlay is one of the two places an authoritative marker paper comes
+    # from, and a marker paper is the only thing that distinguishes an award that funded
+    # the cohort from an award that funded a later analysis of it.
+    from cds.reuse import funding
+
+    with Client("reporter", max_age_days=30.0) as c:
+        fund_stats = funding.link_generation_grants(c, recs)
+        fund_stats |= funding.backfill_award_details(c, recs)
+    for k, v in fund_stats.items():
+        console.print(f"  funding.{k}: {v}")
+
     from cds.metrics import reuse_gap
 
     n_basis = reuse_gap.refresh_underexplored_basis(recs)
@@ -335,7 +347,11 @@ def curate_cmd(
     store.save_source(
         stage_out,
         recs,
-        {"stage": "curate", **{k: v for k, v in stats.items() if k != "fields_changed"}},
+        {
+            "stage": "curate",
+            **{k: v for k, v in stats.items() if k != "fields_changed"},
+            "generation_funding": fund_stats,
+        },
     )
     console.print(f"[green]wrote {len(recs)} records to '{stage_out}'[/green]")
 

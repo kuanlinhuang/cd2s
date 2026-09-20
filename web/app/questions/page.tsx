@@ -19,7 +19,7 @@ export default function QuestionsPage() {
     <>
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Research questions</h1>
-        <p className="mt-3 max-w-3xl text-[14px] t-muted">
+        <p className="mt-3 max-w-3xl text-lede t-muted">
           {questions.length} research questions, each checked against the dataset that can
           answer it, with the usable sample size and any caveat.
         </p>

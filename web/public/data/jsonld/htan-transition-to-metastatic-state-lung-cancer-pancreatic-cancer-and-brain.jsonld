@@ -101,12 +101,162 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233284",
-      "name": null,
+      "name": "Data Processing, Analysis and Modeling Unit",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233284"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA209975",
+      "name": "Systems biology of the tumor immune microenvironment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA209975"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA213274",
+      "name": "Coordinating center for the NCI small cell lung cancer research consortium",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA213274"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA263816",
+      "name": "Novel therapeutic development for small cell lung cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA263816"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA240472",
+      "name": "Targeting SNP BRMS1v2 A273V/A273V to reduce metastases in lung adenocarcinoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA240472"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA217169",
+      "name": "BRMS1-mediated suppression of metastases in p53 mutant lung adenocarcinoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA217169"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA197936",
+      "name": "Determinants of acquired resistance in small cell lung cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA197936"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Antitumor Assessment",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA248723",
+      "name": "Assessment of Tim-4+ Pleural Macrophages as Negative Regulators of Anti-Tumor T Cell Immunity in Lung Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA248723"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA245206",
+      "name": "Exploring the combinatorial efficacy between chemotherapy and T cell checkpoint inhibition and the role of cellular senescence",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA245206"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA274492",
+      "name": "Administrative Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA274492"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009149",
+      "name": "Immunology Research Training",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009149"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA220508",
+      "name": "Interrogating the Evolutionary Dynamics of Cancer for Clinical Benefit and Actionability",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA220508"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA257881",
+      "name": "Homologous recombination deficiency and beyond in pancreatic cancer: evaluating the regulators of response to pembrolizumab and olaparib (POLAR) from the immune and genomic perspectives",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA257881"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R37CA266185",
+      "name": "Mechanisms of Dynamic Transcriptional Reprogramming in Metastasis Stem Cells",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA266185"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA230213",
+      "name": "Investigating L1CAM-dependent stem cell regeneration in metastasis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA230213"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

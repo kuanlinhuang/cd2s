@@ -13,6 +13,7 @@
 import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
+import { num } from "./format";
 import type {
   BrowseRow,
   CorpusStats,
@@ -20,9 +21,11 @@ import type {
   Evidence,
   Facets,
   FundingRole,
+  Grant,
   IndexRow,
   NetworkData,
   NetworkEdge,
+  NetworkLane,
   NetworkNode,
   QuestionRow,
   FieldCalibration,
@@ -513,6 +516,58 @@ function shortTitle(t: string | null | undefined, max = 60): string {
 }
 
 /**
+ * The columns of the award-centred graph: one award's money, the cohorts it bought and
+ * the articles that came out of them.
+ */
+const AWARD_VIEW_LANES: NetworkLane[] = [
+  {
+    label: "NCI awards",
+    hint: "Resolved from each dataset's publications through NIH RePORTER",
+    empty: "No award in this slice could be resolved through RePORTER.",
+  },
+  {
+    label: "Datasets",
+    hint: "Cohorts the award is credited on",
+    empty: "No dataset in this slice carries a resolved award.",
+  },
+  {
+    label: "Articles",
+    hint: "The dataset's own paper plus the reuse studies it ships",
+    empty: "None of these datasets has a traceable article.",
+  },
+];
+
+/**
+ * The columns of the dataset-centred graph: money in, the data, what was published, and
+ * the money that paid for publishing it.
+ *
+ * Read left to right this is the whole argument for tracing funding at all. The first
+ * column is the return NCI already counts - a grant produced a cohort. The last is the
+ * one nothing counts, because it is spread across other people's grants: every award
+ * that got a paper out of data it did not pay to create.
+ */
+const DATASET_VIEW_LANES: NetworkLane[] = [
+  {
+    label: "Awards that paid to create this data",
+    hint: "Credited on the dataset's own marker paper",
+    empty:
+      "No award can be attributed. Either no repository or reviewer names this dataset's marker paper, or RePORTER indexes no NCI award against it.",
+  },
+  { label: "The dataset", hint: "" },
+  {
+    label: "Articles that used it",
+    hint: "The accession appears in their methods, results, a table or a figure",
+    empty:
+      "No article can be traced to this dataset, so nothing it enabled is visible here.",
+  },
+  {
+    label: "Awards those articles were funded by",
+    hint: "NCI money spent on data it did not pay to generate",
+    empty: "None of the traced articles reports an NCI award.",
+  },
+];
+
+/**
  * The funding-to-data-to-findings graph for a slice of the corpus.
  *
  * Awards come from NIH RePORTER links on each record; articles are the record's primary
@@ -550,6 +605,7 @@ export function getNetwork(scope: NetworkScope): NetworkData {
     nodes.set(dId, {
       id: dId,
       kind: "dataset",
+      lane: 1,
       label: rec.short_title ?? rec.title,
       sub: rec.title,
       href: `/datasets/${rec.id}`,
@@ -566,11 +622,14 @@ export function getNetwork(scope: NetworkScope): NetworkData {
         nodes.set(aId, {
           id: aId,
           kind: "award",
+          lane: 0,
           label: num,
           sub: [g.title ? shortTitle(g.title, 80) : null, g.pi_names.slice(0, 2).join(", ") || null]
             .filter(Boolean)
             .join(" \u00b7 "),
           href: g.reporter_url ?? null,
+          // When the whole view is one award, that award is what the view is about.
+          focus: award ? num === award : undefined,
         });
       }
       const kind =
@@ -586,6 +645,7 @@ export function getNetwork(scope: NetworkScope): NetworkData {
         nodes.set(pId, {
           id: pId,
           kind: "paper",
+          lane: 2,
           label: shortTitle(p.title ?? p.doi ?? p.pmid, 70),
           sub: [p.authors_short, p.journal, p.year ? String(p.year) : null].filter(Boolean).join(" \u00b7 "),
           href: p.url ?? (p.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${p.pmid}/` : null),
@@ -600,7 +660,17 @@ export function getNetwork(scope: NetworkScope): NetworkData {
     }
   }
 
-  return condense([...nodes.values()], edges);
+  return condense([...nodes.values()], edges, awardViewLanes(award));
+}
+
+/**
+ * The award view's columns. The middle label depends on whether one award is in
+ * view: "Cohorts the award is credited on" is wrong for a whole-repository slice.
+ */
+function awardViewLanes(award: string | null): NetworkLane[] {
+  const lanes = AWARD_VIEW_LANES.map((lane) => ({ ...lane }));
+  if (!award) lanes[1].hint = "Cohorts these awards are credited on";
+  return lanes;
 }
 
 /**
@@ -624,8 +694,12 @@ const NETWORK_NODE_BUDGET = 600;
  * the subject - and the counts are returned so the page can state what it set aside
  * rather than quietly showing less than it claims.
  */
-function condense(nodes: NetworkNode[], edges: NetworkEdge[]): NetworkData {
-  if (nodes.length <= NETWORK_NODE_BUDGET) return { nodes, edges, condensed: null };
+function condense(
+  nodes: NetworkNode[],
+  edges: NetworkEdge[],
+  lanes: NetworkLane[],
+): NetworkData {
+  if (nodes.length <= NETWORK_NODE_BUDGET) return { nodes, edges, lanes, condensed: null };
   const datasetsTouched = new Map<string, Set<string>>();
   for (const e of edges) {
     const [other, dataset] = e.source.startsWith("dataset:") ? [e.target, e.source] : [e.source, e.target];
@@ -649,6 +723,7 @@ function condense(nodes: NetworkNode[], edges: NetworkEdge[]): NetworkData {
   return {
     nodes: nodes.filter((n) => keep.has(n.id)),
     edges: edges.filter((e) => keep.has(e.source) && keep.has(e.target)),
+    lanes,
     condensed: { n_awards_omitted: awardsOmitted, n_papers_omitted: papersOmitted },
   };
 }
@@ -689,4 +764,388 @@ export function getAwardConnections(num: string): AwardConnection[] {
   }
   const order: Record<FundingRole, number> = { generation: 0, reuse: 1, infrastructure: 2, unknown: 3 };
   return out.sort((a, b) => order[a.role] - order[b.role] || b.n_articles - a.n_articles);
+}
+
+
+// ------------------------------------------------------------------------------------
+// The dataset-centred funding view
+// ------------------------------------------------------------------------------------
+
+/** One award as it appears on a dataset's funding page. */
+export interface FundingAward {
+  num: string;
+  title: string | null;
+  pi: string | null;
+  org: string | null;
+  activity_code: string | null;
+  fiscal_years: number[];
+  award_amount_usd: number | null;
+  reporter_url: string | null;
+  role: FundingRole;
+  evidence: Evidence[];
+  /** Reuse side only: the traced articles this award is credited on. */
+  articles: { title: string; url: string | null; year: number | null }[];
+  /**
+   * Reuse side only: this award also paid to create the data, so it appears on both
+   * sides. A lab reusing its own cohort is a real and common pattern, and reading it as
+   * a duplicated row would be the wrong conclusion.
+   */
+  also_generation?: boolean;
+}
+
+export interface DatasetFunding {
+  id: string;
+  title: string;
+  short_title: string | null;
+  repository: string | null;
+  /** Awards credited on the dataset's own marker paper. */
+  generation: FundingAward[];
+  /** Awards credited on an article that used the data. */
+  enabled: FundingAward[];
+  /** Awards that maintain or redistribute the data rather than create or reuse it. */
+  infrastructure: FundingAward[];
+  n_traced_articles: number;
+  n_articles_with_award: number;
+  has_citable_accession: boolean;
+  /** True when a marker paper exists but only as this pipeline's own nomination. */
+  marker_paper_inferred: boolean;
+  has_marker_paper: boolean;
+  graph: NetworkData;
+}
+
+const INFERRED_MARKER_LABEL = "Candidate primary publication (machine-inferred)";
+
+function awardOf(g: Grant): FundingAward {
+  return {
+    num: (g.core_project_num ?? g.project_num) as string,
+    title: g.title ?? null,
+    pi: g.pi_names.slice(0, 2).join(", ") || null,
+    org: g.org_name ?? null,
+    activity_code: g.activity_code ?? null,
+    fiscal_years: g.fiscal_years,
+    award_amount_usd: g.award_amount_usd ?? null,
+    reporter_url: g.reporter_url ?? null,
+    role: g.role,
+    evidence: g.evidence,
+    articles: [],
+  };
+}
+
+function yearSpan(years: number[]): string | null {
+  if (years.length === 0) return null;
+  const lo = Math.min(...years);
+  const hi = Math.max(...years);
+  return lo === hi ? `FY${lo}` : `FY${lo}\u2013${hi}`;
+}
+
+/** The one-line summary under an award's number, wherever it is drawn. */
+function awardSub(a: FundingAward): string {
+  return [a.title ? shortTitle(a.title, 80) : null, a.pi, yearSpan(a.fiscal_years)]
+    .filter(Boolean)
+    .join(" \u00b7 ");
+}
+
+/**
+ * Money in, the data, what was published from it, and the money that paid for that.
+ *
+ * The four lanes are the answer to a question the corpus could always have answered and
+ * never showed in one place: which award paid to create this cohort, and which awards
+ * got a paper out of it afterwards. Both sides come from the same RePORTER index and are
+ * distinguished only by which paper the award is credited on - the dataset's own marker
+ * paper, or an article that used the data later.
+ *
+ * Either side can be empty, and the lanes say why rather than rendering a blank column.
+ * That is not a shortfall to hide: 364 of the corpus's records carry no accession an
+ * article could quote, so nothing they enabled is traceable, and a record whose marker
+ * paper nobody authoritative names has no attributable generation award at all.
+ */
+export function getDatasetFunding(id: string): DatasetFunding | null {
+  const rec = getRecord(id);
+  if (!rec) return null;
+
+  const grants = rec.grants.filter((g) => g.core_project_num ?? g.project_num);
+  const byNum = new Map<string, Grant>();
+  for (const g of grants) {
+    const key = (g.core_project_num ?? g.project_num) as string;
+    if (!byNum.has(key)) byNum.set(key, g);
+  }
+  const generation = grants.filter((g) => g.role === "generation").map(awardOf);
+  const infrastructure = grants.filter((g) => g.role === "infrastructure").map(awardOf);
+  const generationNums = new Set(generation.map((a) => a.num));
+
+  // The enabled side is derived from the articles, not from the grant roles.
+  //
+  // Those two are not the same set, and the difference is not cosmetic. A grant's role
+  // records how it was first classified; `linked_grants` records which traced article it
+  // is actually credited on. An award can be classified as infrastructure - or upgraded
+  // to generation once its marker paper was known - and still be the award that paid for
+  // a reuse study. Counting roles gave a lane of 18 nodes under a heading that said 10.
+  // Deriving both the lane and the table from the articles makes the number on the page
+  // the number in the graph, by construction.
+  const traced = rec.reuse;
+  const enabledByNum = new Map<string, FundingAward>();
+  let nWithAward = 0;
+  for (const x of traced) {
+    if (x.linked_grants.length > 0) nWithAward += 1;
+    for (const core of x.linked_grants) {
+      let award = enabledByNum.get(core);
+      if (!award) {
+        const g = byNum.get(core);
+        award = g
+          ? { ...awardOf(g), articles: [] }
+          : {
+              num: core,
+              title: null,
+              pi: null,
+              org: null,
+              activity_code: null,
+              fiscal_years: [],
+              award_amount_usd: null,
+              reporter_url: `https://reporter.nih.gov/search/results?text_criteria=${core}`,
+              role: "reuse" as FundingRole,
+              evidence: [],
+              articles: [],
+            };
+        award.also_generation = generationNums.has(core);
+        enabledByNum.set(core, award);
+      }
+      award.articles.push({
+        title: shortTitle(x.publication.title ?? x.publication.doi ?? x.publication.pmid, 90),
+        url:
+          x.publication.url ??
+          (x.publication.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${x.publication.pmid}/` : null),
+        year: x.publication.year ?? null,
+      });
+    }
+  }
+  const articleOrder = new Map<string, number>();
+  {
+    let i = 0;
+    for (const x of traced) {
+      if (x.linked_grants.length === 0) continue;
+      const key = x.publication.pmid ?? x.publication.doi ?? x.publication.title ?? "untitled";
+      if (!articleOrder.has(key)) articleOrder.set(key, i++);
+    }
+  }
+  const barycentre = new Map<string, number>();
+  for (const x of traced) {
+    const key = x.publication.pmid ?? x.publication.doi ?? x.publication.title ?? "untitled";
+    const at = articleOrder.get(key);
+    if (at === undefined) continue;
+    for (const core of x.linked_grants) {
+      const seen = barycentre.get(core);
+      barycentre.set(core, seen === undefined ? at : (seen + at) / 2);
+    }
+  }
+  const enabled = [...enabledByNum.values()].sort(
+    (a, b) =>
+      (barycentre.get(a.num) ?? 0) - (barycentre.get(b.num) ?? 0) ||
+      b.articles.length - a.articles.length ||
+      a.num.localeCompare(b.num),
+  );
+  generation.sort((a, b) => a.num.localeCompare(b.num));
+  infrastructure.sort((a, b) => a.num.localeCompare(b.num));
+
+  // ------------------------------------------------------------------------- the graph
+  const nodes: NetworkNode[] = [];
+  const edges: NetworkEdge[] = [];
+  const dId = `dataset:${rec.id}`;
+
+  for (const a of generation) {
+    nodes.push({
+      id: `gen:${a.num}`,
+      kind: "award",
+      lane: 0,
+      label: a.num,
+      sub: awardSub(a),
+      meta: a.org,
+      href: a.reporter_url,
+    });
+    edges.push({ source: `gen:${a.num}`, target: dId, kind: "generation" });
+  }
+  nodes.push({
+    id: dId,
+    kind: "dataset",
+    lane: 1,
+    label: rec.short_title ?? rec.title,
+    sub: rec.title,
+    meta: rec.repository?.short_name ?? null,
+    href: `/datasets/${rec.id}`,
+    underexplored: rec.underexplored.is_underexplored,
+    repository: rec.repository?.short_name ?? null,
+    focus: true,
+  });
+
+  // Only articles that carry an award reach the graph. An article with no NCI money
+  // behind it connects to nothing in the fourth lane, and a hundred such stubs would
+  // bury the ones that make the chain readable. The full list stays on the dataset page.
+  const articleId = (x: DatasetRecord["reuse"][number]) =>
+    `paper:${x.publication.pmid ?? x.publication.doi ?? x.publication.title ?? "untitled"}`;
+  const drawn = new Set<string>();
+  for (const x of traced) {
+    if (x.linked_grants.length === 0) continue;
+    const pId = articleId(x);
+    if (!drawn.has(pId)) {
+      drawn.add(pId);
+      nodes.push({
+        id: pId,
+        kind: "paper",
+        lane: 2,
+        label: shortTitle(x.publication.title ?? x.publication.doi ?? x.publication.pmid, 84),
+        sub: [x.publication.authors_short, x.publication.journal, x.publication.year]
+          .filter(Boolean)
+          .join(" \u00b7 "),
+        meta:
+          x.publication.citation_count !== null && x.publication.citation_count !== undefined
+            ? `${num(x.publication.citation_count)} citations`
+            : null,
+        href:
+          x.publication.url ??
+          (x.publication.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${x.publication.pmid}/` : null),
+      });
+      edges.push({
+        source: dId,
+        target: pId,
+        kind: x.tier === "t3_analyzed" || x.tier === "t4_confirmed" ? "analyzed" : "weaker",
+      });
+    }
+    for (const core of x.linked_grants) {
+      edges.push({ source: pId, target: `reuse:${core}`, kind: "reuse_funding" });
+    }
+  }
+
+  // The fourth lane is pushed in `enabled` order, not in the order the articles happened
+  // to mention each award: a lane renders in array order, and that order is what decides
+  // whether eighteen connectors read as a flow or as a hatched wall.
+  const nDrawn = drawn.size;
+  for (const a of enabled) {
+    nodes.push({
+      id: `reuse:${a.num}`,
+      kind: "award",
+      lane: 3,
+      label: a.num,
+      sub: awardSub(a) || null,
+      meta:
+        [
+          a.articles.length > 0
+            ? nDrawn === 1
+              ? "funded this article"
+              : `funded ${num(a.articles.length)} of these ${num(nDrawn)} articles`
+            : null,
+          a.also_generation ? "also paid to create this data" : null,
+        ]
+          .filter(Boolean)
+          .join(" \u00b7 ") || null,
+      href: a.reporter_url,
+    });
+  }
+
+  const markerInferred =
+    rec.primary_publications.length > 0 &&
+    rec.primary_publications.every((pub) =>
+      pub.evidence.some((e) => (e.source_label ?? "") === INFERRED_MARKER_LABEL),
+    );
+
+  return {
+    id: rec.id,
+    title: rec.title,
+    short_title: rec.short_title ?? null,
+    repository: rec.repository?.short_name ?? null,
+    generation,
+    enabled,
+    infrastructure,
+    n_traced_articles: traced.length,
+    n_articles_with_award: nWithAward,
+    has_citable_accession: rec.reuse_metrics.has_citable_accession !== false,
+    marker_paper_inferred: markerInferred,
+    has_marker_paper: rec.primary_publications.length > 0,
+    // One dataset's own funding is always drawn whole - four lanes of at most a few
+    // dozen - so there is never anything to condense away.
+    graph: { nodes, edges, lanes: DATASET_VIEW_LANES, condensed: null },
+  };
+}
+
+/** A dataset offered in the funding view's picker, with how much each side holds. */
+export interface FundingCandidate {
+  id: string;
+  title: string;
+  short_title: string | null;
+  repository: string | null;
+  n_generation: number;
+  n_enabled: number;
+  n_articles: number;
+}
+
+let _fundingCandidates: FundingCandidate[] | null = null;
+
+/**
+ * Every dataset with at least one award on either side, best-documented first.
+ *
+ * "Best documented" is deliberately both sides multiplied rather than added: a record
+ * showing money in *and* money out demonstrates something no single-sided one can, and
+ * is what the picker should offer first.
+ */
+export function getFundingCandidates(): FundingCandidate[] {
+  if (_fundingCandidates) return _fundingCandidates;
+  const out: FundingCandidate[] = [];
+  for (const row of getIndex()) {
+    const rec = getRecord(row.id);
+    if (!rec || rec.grants.length === 0) continue;
+    const gen = new Set<string>();
+    for (const g of rec.grants) {
+      const numId = g.core_project_num ?? g.project_num;
+      if (numId && g.role === "generation") gen.add(numId);
+    }
+    // Same definition as the enabled lane: awards credited on a traced article.
+    const reuse = new Set<string>();
+    for (const x of rec.reuse) for (const core of x.linked_grants) reuse.add(core);
+    if (gen.size === 0 && reuse.size === 0) continue;
+    out.push({
+      id: rec.id,
+      title: rec.title,
+      short_title: rec.short_title ?? null,
+      repository: rec.repository?.short_name ?? null,
+      n_generation: gen.size,
+      n_enabled: reuse.size,
+      n_articles: rec.reuse.filter((x) => x.linked_grants.length > 0).length,
+    });
+  }
+  const score = (c: FundingCandidate) =>
+    (c.n_generation > 0 && c.n_enabled > 0 ? 1000 : 0) +
+    Math.min(c.n_generation, 25) * Math.min(c.n_enabled, 25) +
+    c.n_articles;
+  _fundingCandidates = out.sort((a, b) => score(b) - score(a) || a.id.localeCompare(b.id));
+  return _fundingCandidates;
+}
+
+/**
+ * The dataset to open the funding view on: the best-documented one that still fits on a
+ * screen. A cohort with forty awards a side is the truest picture of TCGA and the worst
+ * possible first read of the chart.
+ */
+export function defaultFundingDataset(): FundingCandidate | null {
+  const all = getFundingCandidates();
+  return (
+    all.find(
+      (c) =>
+        c.n_generation > 0 && c.n_enabled > 0 && c.n_generation <= 12 && c.n_enabled <= 22,
+    ) ??
+    all.find((c) => c.n_generation > 0 && c.n_enabled > 0) ??
+    all[0] ??
+    null
+  );
+}
+
+/** Corpus-wide totals for the funding view's own caveats. */
+export function getFundingCoverage() {
+  const cands = getFundingCandidates();
+  const total = getIndex().length;
+  const bothSides = cands.filter((c) => c.n_generation > 0 && c.n_enabled > 0).length;
+  return {
+    total,
+    with_any_award: cands.length,
+    with_generation: cands.filter((c) => c.n_generation > 0).length,
+    with_enabled: cands.filter((c) => c.n_enabled > 0).length,
+    both_sides: bothSides,
+  };
 }

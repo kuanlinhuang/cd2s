@@ -9,15 +9,15 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="mx-auto max-w-xl pt-16 pb-10 text-center">
-      <p className="text-[12px] font-medium uppercase tracking-wide t-faint">Page not found</p>
+      <p className="text-meta font-medium uppercase tracking-wide t-faint">Page not found</p>
       <h1 className="mt-2 text-2xl font-semibold tracking-tight">
         There is nothing at this address.
       </h1>
-      <p className="mt-3 text-[14px] t-muted">
+      <p className="mt-3 text-lede t-muted">
         The link may be out of date, or a dataset id may be misspelled. Dataset pages use
         the id shown in the breadcrumb and in the browse list.
       </p>
-      <div className="mt-6 flex flex-wrap justify-center gap-2 text-[13px]">
+      <div className="mt-6 flex flex-wrap justify-center gap-2 text-body">
         <Link
           href="/datasets"
           className="rounded-md px-3 py-1.5 font-medium"

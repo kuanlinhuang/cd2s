@@ -40,7 +40,7 @@ export default function QuestionBrowser({ questions }: { questions: QuestionRow[
         <div>
           <label
             htmlFor="question-topic"
-            className="mb-1.5 block text-[11px] font-medium uppercase tracking-wide t-faint"
+            className="mb-1.5 block text-micro font-medium uppercase tracking-wide t-faint"
           >
             Topic
           </label>
@@ -48,7 +48,7 @@ export default function QuestionBrowser({ questions }: { questions: QuestionRow[
             id="question-topic"
             value={selectedTopic}
             onChange={(event) => setSelectedTopic(event.target.value)}
-            className="w-full min-w-0 rounded-md border px-2.5 py-2 text-[13px]"
+            className="w-full min-w-0 rounded-md border px-2.5 py-2 text-body"
             style={{ background: "var(--bg)", borderColor: "var(--border-strong)" }}
           >
             <option value="">All topics ({questions.length} questions)</option>
@@ -63,7 +63,7 @@ export default function QuestionBrowser({ questions }: { questions: QuestionRow[
         <div>
           <label
             htmlFor="question-search"
-            className="mb-1.5 block text-[11px] font-medium uppercase tracking-wide t-faint"
+            className="mb-1.5 block text-micro font-medium uppercase tracking-wide t-faint"
           >
             Search questions
           </label>
@@ -73,7 +73,7 @@ export default function QuestionBrowser({ questions }: { questions: QuestionRow[
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="For example: treatment, imaging, gastric cancer"
-            className="w-full min-w-0 rounded-md border px-2.5 py-2 text-[13px]"
+            className="w-full min-w-0 rounded-md border px-2.5 py-2 text-body"
             style={{ background: "var(--bg)", borderColor: "var(--border-strong)" }}
           />
         </div>
@@ -83,7 +83,7 @@ export default function QuestionBrowser({ questions }: { questions: QuestionRow[
         <h2 className="text-lg font-semibold tracking-tight">
           {selectedTopic ? topicLabel(selectedTopic) : "All reviewed questions"}
         </h2>
-        <p className="text-[12px] t-muted" aria-live="polite">
+        <p className="text-meta t-muted" aria-live="polite">
           {filtering ? (
             <>
               Showing <span className="tnum">{visible.length}</span> of{" "}
@@ -156,15 +156,15 @@ function QuestionCard({
           ) : null}
         </div>
       </div>
-      <p className="mt-2 text-[13px] t-muted">{q.rationale}</p>
-      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[13px]">
+      <p className="mt-2 text-body t-muted">{q.rationale}</p>
+      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-body">
         <span className="t-faint">Using</span>
         <DatasetLink id={q.dataset_id}>{q.dataset_title}</DatasetLink>
         {q.modalities.map((m) => (
           <Chip key={m}>{modalityLabel(m)}</Chip>
         ))}
       </div>
-      <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[12px]">
+      <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-meta">
         <span className="t-faint">Topics</span>
         {topicsOf(q).map((t) => {
           const active = t === selectedTopic;
@@ -174,7 +174,7 @@ function QuestionCard({
               type="button"
               onClick={() => onPickTopic(active ? "" : t)}
               aria-pressed={active}
-              className="rounded px-1.5 py-0.5 text-[11px] hover:underline"
+              className="rounded px-1.5 py-0.5 text-micro hover:underline"
               style={{
                 color: active ? "var(--accent-text)" : "var(--text-muted)",
                 background: active ? "var(--accent-bg)" : "var(--bg-sunken)",

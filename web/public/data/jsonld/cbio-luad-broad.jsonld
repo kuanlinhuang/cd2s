@@ -101,7 +101,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA090578",
-      "name": null,
+      "name": "CA: Tissue and Pathology",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -111,7 +111,7 @@
     {
       "@type": "Grant",
       "identifier": "P20CA090578",
-      "name": null,
+      "name": "SPORE in Lung Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

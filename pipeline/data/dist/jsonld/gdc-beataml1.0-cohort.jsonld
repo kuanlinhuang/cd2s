@@ -150,7 +150,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA225231",
-      "name": null,
+      "name": "Identification of therapeutic targets for leukemia stem cells in AML-iPSC models",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -200,7 +200,7 @@
     {
       "@type": "Grant",
       "identifier": "U01CA224013",
-      "name": null,
+      "name": "CSHL-JAX Patient-Derived Models of Pancreatic Cancer as Systems for Investigating Tumor Heterogeneity",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -220,7 +220,7 @@
     {
       "@type": "Grant",
       "identifier": "U01CA188590",
-      "name": null,
+      "name": "Computational Framework for Single-Cell Genomics of Tumors",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -250,7 +250,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA188134",
-      "name": null,
+      "name": "Nrf2 Regulation of Ductal Pancreatic Cancer Etiology and Treatment Response",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -270,7 +270,7 @@
     {
       "@type": "Grant",
       "identifier": "P20CA192996",
-      "name": null,
+      "name": "2/2 Partnership to Study Racial/Ethnic Differences in GI Cancer Biology",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

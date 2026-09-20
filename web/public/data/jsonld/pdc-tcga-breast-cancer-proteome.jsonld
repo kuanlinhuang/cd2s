@@ -121,7 +121,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA202963",
-      "name": null,
+      "name": "Targeting interplay between KLF4 and PRMT5 in carcinogenesis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

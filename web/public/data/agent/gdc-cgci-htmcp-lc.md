@@ -16,7 +16,7 @@ Summary: 39 lung cancers from an HIV-enriched cohort, two thirds Black or Africa
 
 - Cohort: 39 cases
 - Cancer types: Neoplasms, NOS, Complex Epithelial Neoplasms, Adenomas and Adenocarcinomas, Paragangliomas and Glomus Tumors, Epithelial Neoplasms, NOS, Squamous Cell Neoplasms
-- Subject: Adrenal gland
+- Subject: Lung
 - Measurements: Whole genome sequencing, Bulk RNA sequencing, microRNA sequencing, Clinical, Copy Number Variation, Somatic Structural Variation, Whole-slide tissue images, DICOM medical imaging
 - Median follow-up: 6.4 months (derivable for 36 cases)
 - Treatment response recorded: True

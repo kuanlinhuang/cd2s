@@ -37,7 +37,7 @@ export default function ChipList({
           type="button"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={!folded}
-          className="mt-2 text-[12px] underline t-muted"
+          className="mt-2 text-meta underline t-muted"
         >
           {folded
             ? `Show all ${items.length.toLocaleString("en-US")} ${what}`

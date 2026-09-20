@@ -2,7 +2,7 @@
   "site": "Cancer Data Showcase",
   "license_content": "https://creativecommons.org/licenses/by/4.0/",
   "license_code": "https://opensource.org/licenses/MIT",
-  "generated_at": "2026-09-20T01:05:29.512387+00:00",
+  "generated_at": "2026-09-20T15:23:12.734484+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -44,29 +44,29 @@
   "n_workbook_attachments": 20,
   "n_datasets_with_workbook": 15,
   "n_distinct_workbooks": 6,
-  "n_grants_linked": 736,
+  "n_grants_linked": 796,
   "n_reuse_studies_verified": 778,
   "stage": "enriched",
   "agent_packages": {
     "jsonld": 602,
     "croissant": 602,
     "agent": 602,
-    "generated_at": "2026-09-20T01:05:30.130462+00:00"
+    "generated_at": "2026-09-20T15:23:13.540930+00:00"
   },
   "bytes_written": {
-    "dist/index.json": 1317442,
-    "data/index.json": 1317442,
+    "dist/index.json": 1317417,
+    "data/index.json": 1317417,
     "dist/search.json": 584260,
     "data/search.json": 584260,
-    "dist/facets.json": 22824,
-    "data/facets.json": 22824,
+    "dist/facets.json": 22857,
+    "data/facets.json": 22857,
     "dist/stats.json": 1047,
     "data/stats.json": 1047,
     "dist/questions.json": 47127,
     "data/questions.json": 47127,
     "dist/subjects.json": 10489,
     "data/subjects.json": 10489,
-    "dist/datasets/*.json": 16948259,
-    "data/datasets/*.json": 16948259
+    "dist/datasets/*.json": 17154690,
+    "data/datasets/*.json": 17154690
   }
 }

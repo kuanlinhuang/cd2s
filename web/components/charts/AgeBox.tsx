@@ -83,14 +83,14 @@ export function AgeBox({ stats }: { stats: AgeSummary }) {
         {TICKS.map((t) => (
           <span
             key={t}
-            className="absolute -translate-x-1/2 text-[10px] t-faint tnum"
+            className="absolute -translate-x-1/2 text-micro t-faint tnum"
             style={{ left: x(t), top: 36, lineHeight: "10px" }}
           >
             {t === 0 || t === 100 ? "" : t}
           </span>
         ))}
       </div>
-      <p className="mt-1.5 text-[12px] t-muted">
+      <p className="mt-1.5 text-meta t-muted">
         Median <span className="viz-value">{median.toFixed(0)}</span>, middle half{" "}
         <span className="viz-value">
           {q1.toFixed(0)}&ndash;{q3.toFixed(0)}

@@ -135,7 +135,7 @@ export function AccessBadge({
   return (
     <span
       className={`inline-flex items-center gap-1 rounded font-medium ${
-        size === "md" ? "px-2 py-1 text-xs" : "px-1.5 py-0.5 text-[11px]"
+        size === "md" ? "px-2 py-1 text-xs" : "px-1.5 py-0.5 text-micro"
       }`}
       style={{ color: s.fg, background: s.bg }}
       title={ACCESS_DESCRIPTIONS[tier]}
@@ -167,7 +167,7 @@ export function Chip({
 }) {
   return (
     <span
-      className={`inline-flex items-center rounded px-1.5 py-0.5 text-[11px] ${
+      className={`inline-flex items-center rounded px-1.5 py-0.5 text-micro ${
         wrap ? "max-w-full [overflow-wrap:anywhere]" : "whitespace-nowrap"
       }`}
       style={CHIP_TONES[tone]}
@@ -192,7 +192,7 @@ export function ReuseTierBadge({ tier }: { tier: ReuseTier }) {
       : { fg: "var(--text-faint)", bg: "var(--bg-sunken)" };
   return (
     <span
-      className="inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium whitespace-nowrap"
+      className="inline-flex items-center rounded px-1.5 py-0.5 text-micro font-medium whitespace-nowrap"
       style={{ color: s.fg, background: s.bg }}
       title={REUSE_TIER_MEANING[tier]}
     >
@@ -210,7 +210,7 @@ export function SeverityBadge({ severity }: { severity: Severity }) {
         : { fg: "var(--text-faint)", bg: "var(--bg-sunken)" };
   return (
     <span
-      className="inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium"
+      className="inline-flex items-center rounded px-1.5 py-0.5 text-micro font-medium"
       style={{ color: s.fg, background: s.bg }}
       title={SEVERITY_MEANING[severity]}
     >
@@ -230,7 +230,7 @@ export function ReviewBadge({ status }: { status: ReviewStatus }) {
           : { fg: "var(--text-faint)", bg: "var(--bg-sunken)" };
   return (
     <span
-      className="inline-flex items-center rounded px-1.5 py-0.5 text-[11px]"
+      className="inline-flex items-center rounded px-1.5 py-0.5 text-micro"
       style={{ color: s.fg, background: s.bg }}
       title={
         status === "expert_reviewed"
@@ -248,7 +248,7 @@ export function ReviewBadge({ status }: { status: ReviewStatus }) {
 export function UnderexploredBadge() {
   return (
     <span
-      className="inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium"
+      className="inline-flex items-center rounded px-1.5 py-0.5 text-micro font-medium"
       style={{ color: "var(--mixed)", background: "var(--mixed-bg)" }}
       title="Reused far less than datasets of comparable size, age, measurement breadth and access tier. The reuse section shows the numbers behind the label."
     >
@@ -281,7 +281,7 @@ export function Section({
         {aside}
       </div>
       {lede && (
-        <p className="text-[13px] mb-4 t-muted">
+        <p className="text-body mb-4 t-muted">
           {lede}
         </p>
       )}
@@ -305,17 +305,17 @@ export function Stat({
 }) {
   return (
     <div>
-      <div className="text-[11px] uppercase tracking-wide mb-0.5 flex items-center gap-1 t-faint">
+      <div className="text-micro uppercase tracking-wide mb-0.5 flex items-center gap-1 t-faint">
         {label}
         {evidence && <EvidenceChip evidence={evidence} />}
       </div>
       <div
-        className={emphasis ? "text-xl font-semibold" : "tnum text-[15px] font-medium"}
+        className={emphasis ? "text-xl font-semibold" : "tnum text-title font-medium"}
       >
         {value}
       </div>
       {sub && (
-        <div className="text-[12px] mt-0.5 t-muted">
+        <div className="text-meta mt-0.5 t-muted">
           {sub}
         </div>
       )}
@@ -358,7 +358,7 @@ export function Callout({
   const t = tones[tone];
   return (
     <div
-      className="rounded-md border-l-2 px-3 py-2 text-[13px]"
+      className="rounded-md border-l-2 px-3 py-2 text-body"
       style={{ borderLeftColor: t.border, background: t.bg }}
     >
       {title && (
@@ -396,7 +396,7 @@ export function CoverageMeter({
           }}
         />
       </span>
-      <span className="tnum text-[11px] t-muted">
+      <span className="tnum text-micro t-muted">
         {value === null || value === undefined ? "n/a" : `${value.toFixed(0)}%`}
       </span>
     </span>
@@ -423,7 +423,7 @@ export function DatasetLink({
 
 export function CountPill({ n, label }: { n: number | null | undefined; label: string }) {
   return (
-    <span className="text-[12px] t-muted">
+    <span className="text-meta t-muted">
       <span className="tnum font-medium" style={{ color: "var(--text)" }}>
         {num(n)}
       </span>{" "}
@@ -434,7 +434,7 @@ export function CountPill({ n, label }: { n: number | null | undefined; label: s
 
 export function EmptyState({ children }: { children: ReactNode }) {
   return (
-    <p className="text-[13px] italic rounded-md border border-dashed px-3 py-2 t-muted">
+    <p className="text-body italic rounded-md border border-dashed px-3 py-2 t-muted">
       {children}
     </p>
   );

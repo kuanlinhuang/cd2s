@@ -1,110 +1,43 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+
+import { Nav, type NavItem } from "@/components/Nav";
 
 /**
- * A route earns a header slot only if a first-time researcher would use it before
- * asking a question. Compare, the funding network, the underexplored list and the
- * software page all need something in hand first, so the agent, the browse page and
- * the dataset pages route to them instead.
+ * The header: the wordmark, and one control that opens everywhere else.
+ *
+ * This used to carry three links chosen on the rule that a route earns a header slot
+ * only if a first-time researcher would use it before asking a question, with Compare,
+ * the funding network, the underexplored list and the software page reached from the
+ * pages that lead to them. That rule is a reasonable one and this reverses it, on the
+ * product call that all seven destinations stay reachable from every page - but behind
+ * one control rather than as a row, so the header costs a reader one decision instead
+ * of seven and has room to say what each destination holds. See components/Nav.tsx.
+ *
+ * A server component now: the nav's counts come from the corpus, and the only thing
+ * that needed the client was the old mobile menu's open state, which `Nav` owns.
  */
-const NAV = [
-  { href: "/datasets", label: "Datasets" },
-  { href: "/questions", label: "Research questions" },
-  { href: "/methods", label: "How this was built" },
-];
-
-function isActive(pathname: string, href: string) {
-  return pathname === href || (href === "/datasets" && pathname.startsWith("/datasets/"));
-}
-
-function NavLinks({
-  pathname,
-  mobile = false,
-  onNavigate,
-}: {
-  pathname: string;
-  mobile?: boolean;
-  onNavigate?: () => void;
-}) {
-  return NAV.map((item) => {
-    const active = isActive(pathname, item.href);
-    return (
-      <Link
-        key={item.href}
-        href={item.href}
-        aria-current={active ? "page" : undefined}
-        onClick={onNavigate}
-        className={`rounded-md whitespace-nowrap text-[13px] font-medium ${
-          mobile ? "px-3 py-2.5" : "px-2.5 py-1.5"
-        }`}
-        style={{
-          color: active ? "var(--accent-text)" : "var(--text-muted)",
-          background: active ? "var(--accent-bg)" : undefined,
-        }}
-      >
-        {item.label}
-      </Link>
-    );
-  });
-}
-
-export default function SiteHeader() {
-  const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
-
+export default function SiteHeader({ items }: { items: NavItem[] }) {
   return (
     <header
       className="sticky top-0 z-40 border-b backdrop-blur no-print"
-      style={{ background: "color-mix(in srgb, var(--bg) 88%, transparent)" }}
+      style={{ background: "color-mix(in srgb, var(--bg) 96%, transparent)" }}
     >
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
-        <div className="flex h-14 items-center gap-4 sm:gap-6">
-          <Link
-            href="/"
-            className="flex min-w-0 items-center gap-2"
-            onClick={() => setMenuOpen(false)}
-          >
+        <div className="flex h-16 items-center gap-4 sm:gap-6">
+          <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2.5">
             <span
               aria-hidden
-              className="grid h-6 w-6 shrink-0 place-items-center rounded font-mono text-[11px] font-bold"
+              className="grid h-8 w-8 shrink-0 place-items-center rounded-md font-mono text-meta font-bold"
               style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
             >
               CD
             </span>
-            <span className="truncate font-semibold tracking-tight">Cancer Data Showcase</span>
+            <span className="truncate text-title font-semibold tracking-tight">
+              Cancer Data Showcase
+            </span>
           </Link>
-
-          <nav aria-label="Primary" className="ml-auto hidden items-center gap-1 md:flex">
-            <NavLinks pathname={pathname} />
-          </nav>
-
-          <button
-            type="button"
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-            onClick={() => setMenuOpen((open) => !open)}
-            className="ml-auto shrink-0 rounded-md border px-3 py-1.5 text-[13px] font-medium md:hidden"
-            style={{
-              background: "var(--bg-raised)",
-              borderColor: "var(--border-strong)",
-            }}
-          >
-            {menuOpen ? "Close" : "Menu"}
-          </button>
+          <Nav items={items} />
         </div>
-
-        {menuOpen && (
-          <nav
-            id="mobile-navigation"
-            aria-label="Primary"
-            className="grid grid-cols-2 gap-1 border-t py-2 md:hidden"
-          >
-            <NavLinks pathname={pathname} mobile onNavigate={() => setMenuOpen(false)} />
-          </nav>
-        )}
       </div>
     </header>
   );

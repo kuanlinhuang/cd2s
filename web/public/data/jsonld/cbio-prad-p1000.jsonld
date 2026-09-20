@@ -122,7 +122,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA090381",
-      "name": null,
+      "name": "Tissue and Pathology Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

@@ -46,7 +46,7 @@ export default async function AskPage({
     return (
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Ask a question</h1>
-        <p className="mt-2 max-w-2xl text-[14px] t-muted">
+        <p className="mt-2 max-w-2xl text-lede t-muted">
           Describe the analysis you want to run. The answer names the datasets that can
           support it, what would block you, and where each claim comes from.
         </p>
@@ -84,7 +84,7 @@ export default async function AskPage({
                 <span className="font-medium" style={{ color: "var(--accent)" }}>
                   {r.label}
                 </span>
-                <span className="block text-[13px] t-muted">{r.detail}</span>
+                <span className="block text-body t-muted">{r.detail}</span>
               </Link>
             </li>
           ))}
