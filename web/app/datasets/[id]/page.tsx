@@ -33,6 +33,7 @@ import {
   isInferredMarker,
 } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
+import { analyzedArticles, analyzedReuse } from "@/lib/reuse";
 import { starterSnippets } from "@/lib/starter";
 import {
   ACCESS_DESCRIPTIONS,
@@ -828,13 +829,13 @@ const TIER_LABEL = {
 
 function Reuse({ record: r }: { record: DatasetRecord }) {
   const m = r.reuse_metrics;
-  const analyzed = r.reuse.filter((x) => x.tier === "t3_analyzed" || x.tier === "t4_confirmed");
+  const analyzed = analyzedArticles(r.reuse);
   const weaker = r.reuse.filter((x) => x.tier !== "t3_analyzed" && x.tier !== "t4_confirmed");
   // Both properties are resolved per article and are frequently unresolvable: a null flag
   // means nobody checked, which is not the same as a negative answer and must never be
   // published as one.
-  const listIsPartial =
-    m.n_reuse_examined > r.reuse.length || (m.n_by_tier?.t3_analyzed ?? 0) > r.reuse.length;
+  const counts = analyzedReuse(r);
+  const listIsPartial = counts.listIsPartial;
   const overlapChecked = analyzed.filter((x) => x.independent_of_generators != null);
   const fundingChecked = analyzed.filter((x) => x.nci_funded_reuse != null);
   const overlapClause =
@@ -850,10 +851,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
           fundingChecked.length,
         )} we could check were themselves NCI-funded`;
   const tiers = m.n_by_tier ?? {};
-  // A tier is absent, not zero, when the accession-precision correction could not be
-  // estimated. `?? 0` here would turn "we could not measure this" into "nobody used
-  // this", which is the opposite claim and the more damaging one for a dataset.
-  const nAnalyzed = tiers.t3_analyzed ?? m.n_verified_reuse ?? null;
+  const nAnalyzed = counts.counted;
   const prec = m.accession_precision ?? null;
   const wasCorrected = prec?.needs_correction === true && prec.precision != null;
   const rawAnalyzed = m.n_by_tier_raw?.t3_analyzed ?? null;
@@ -1016,6 +1014,27 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
               ? ` (${Math.round(prec!.precision_low * 100)}-${Math.round(prec!.precision_high * 100)}%, 95% interval)`
               : ""}
             . The published figure is the raw count scaled by that fraction.
+          </Callout>
+        </div>
+      )}
+
+      {counts.listExceedsCount && (
+        <div className="mt-4">
+          <Callout tone="neutral" title="More articles are listed below than the count">
+            The headline count is deliberately narrow: one section of one accession
+            {prec?.query ? (
+              <>
+                {" "}
+                (<code className="t-mono">{prec.query}</code>)
+              </>
+            ) : null}
+            , so every dataset in the corpus is counted the same way and the numbers can
+            be compared. The {num(counts.listed)} articles listed below were retrieved
+            and graded one at a time, and an article counts as having analyzed the data
+            wherever the accession sits in the analysis - methods, results, tables,
+            figures or supplement - under any of this dataset&rsquo;s accessions. Read
+            the list as the evidence about these articles, and the count as the number
+            that is comparable across datasets.
           </Callout>
         </div>
       )}
