@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Of those, 4 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 2 that analyzed the data had no author in common with the generating team.
+- Of those, 4 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 2 that analyzed the data, 0 had no author in common with the generating team.
 - Reuse gap index: -0.42 (negative means less reused than comparable datasets)
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
   - SIMD: Synergistic integration mutualistic platform based on single-cell and proteotranscriptomics for drug repositioning. (2025) PMID 41444222

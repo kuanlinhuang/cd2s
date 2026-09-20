@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 19
-- Of those, 25 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 10 that analyzed the data had no author in common with the generating team, and 1 were themselves NCI funded.
+- Of those, 25 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 1 were themselves NCI funded.
 - Reuse gap index: -0.28 (negative means less reused than comparable datasets)
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626

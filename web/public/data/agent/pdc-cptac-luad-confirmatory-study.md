@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Of those, 3 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 3 that analyzed the data had no author in common with the generating team, and 1 were themselves NCI funded.
+- Of those, 3 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 3 that analyzed the data, 0 had no author in common with the generating team, and 1 were themselves NCI funded.
 - Reuse gap index: -1.14 (negative means less reused than comparable datasets)
   - Integrative analysis of lung adenocarcinoma across diverse ethnicities and exposures. (2025) PMID 40749670
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131

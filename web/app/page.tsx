@@ -16,6 +16,15 @@ import {
 import { SCARCE_MODALITIES, num } from "@/lib/format";
 import { reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
 
+// facets.json is count-sorted; this leads the row with the NCI repositories the layer is
+// built on. A repository not named here still renders, after the ones that are.
+const REPOSITORY_ORDER = ["GDC", "PDC", "IDC", "HTAN"];
+
+function repositoryRank(repository: string): number {
+  const i = REPOSITORY_ORDER.indexOf(repository);
+  return i === -1 ? REPOSITORY_ORDER.length : i;
+}
+
 function ArrowIcon() {
   return (
     <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden focusable="false">
@@ -63,7 +72,9 @@ export default function Home() {
   const nMultimodal = index.filter((r) => r.n_modalities >= 3).length;
   const nScarce = index.filter((r) => r.modalities.some((m) => SCARCE_MODALITIES.has(m))).length;
   const notebooks = getNotebookGuides();
-  const repositories = getFacets().repository.map((f) => f.value);
+  const repositories = (getFacets().repository ?? [])
+    .map((f) => f.value)
+    .sort((a, b) => repositoryRank(a) - repositoryRank(b));
 
   const capabilities = [
     { href: "/datasets?capability=survival", label: "Survival analysis", n: stats.n_with_survival },

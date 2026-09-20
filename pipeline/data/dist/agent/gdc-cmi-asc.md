@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Of those, 5 were retrieved and graded individually, and the strongest 4 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 3 that analyzed the data had no author in common with the generating team.
+- Of those, 5 were retrieved and graded individually, and the strongest 4 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 3 that analyzed the data, 0 had no author in common with the generating team.
 - Reuse gap index: -1.54 (negative means less reused than comparable datasets)
   - Tracking of stem cells in vivo for cardiovascular applications. (2014) PMID 24406054
   - The Key Gene Expression Patterns and Prognostic Factors in Malignant Transformation from Enchondroma to Chondrosarcoma. (2021) PMID 34568022

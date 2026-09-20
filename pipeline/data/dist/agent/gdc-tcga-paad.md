@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 854
-- Of those, 114 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 9 of the 10 that analyzed the data had no author in common with the generating team.
+- Of those, 114 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 9 had no author in common with the generating team.
 - Citations to the dataset's publication: 1705 (attention, not reuse)
 - Reuse gap index: +3.05 (negative means less reused than comparable datasets)
   - The immune-related prognostic gene AIM2 promotes pancreatic cancer progression via inflammasome. (2025) PMID 40804050

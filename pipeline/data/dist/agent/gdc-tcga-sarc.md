@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 192
-- Of those, 83 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 10 of the 10 that analyzed the data had no author in common with the generating team, and 2 were themselves NCI funded.
+- Of those, 83 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 10 had no author in common with the generating team, and 2 were themselves NCI funded.
 - Citations to the dataset's publication: 891 (attention, not reuse)
 - Reuse gap index: +1.00 (negative means less reused than comparable datasets)
   - Oncogene-induced matrix reorganization controls CD8+ T cell function in the soft-tissue sarcoma microenvironment. (2024) PMID 38652549

@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Of those, 1 were retrieved and graded individually, and the strongest 1 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 1 that analyzed the data had no author in common with the generating team, and 1 were themselves NCI funded.
+- Of those, 1 were retrieved and graded individually, and the strongest 1 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 1 that analyzed the data, 0 had no author in common with the generating team, and 1 were themselves NCI funded.
 - Reuse gap index: -2.52 (negative means less reused than comparable datasets)
   - Discovery of immunotherapy targets for pediatric solid and brain tumors by exon-level expression. (2024) PMID 38702309
 

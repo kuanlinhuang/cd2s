@@ -357,18 +357,19 @@ def to_agent_brief(rec: DatasetRecord) -> str:
         else:
             lines.append(f"- Articles that analyzed these data: {analyzed}")
         if m.n_reuse_examined and rec.reuse:
-            graded = sum(1 for x in rec.reuse if x.tier == ReuseTier.T3_ANALYZED)
+            graded = [
+                x
+                for x in rec.reuse
+                if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)
+            ]
+            nci_graded = sum(1 for x in graded if x.nci_funded_reuse)
             lines.append(
                 f"- Of those, {m.n_reuse_examined} were retrieved and graded individually, "
                 f"and the strongest {len(rec.reuse)} are kept as exemplars below. Author "
-                f"overlap and funding were resolved for those exemplars only: "
-                f"{m.n_independent_reuse} of the {graded} that analyzed the data had no "
+                f"overlap and funding were resolved for those exemplars only: of the "
+                f"{len(graded)} that analyzed the data, {m.n_independent_reuse} had no "
                 f"author in common with the generating team"
-                + (
-                    f", and {m.n_nci_funded_reuse} were themselves NCI funded"
-                    if m.n_nci_funded_reuse
-                    else ""
-                )
+                + (f", and {nci_graded} were themselves NCI funded" if nci_graded else "")
                 + "."
             )
         if m.n_citations_to_primary_publication:

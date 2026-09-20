@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Of those, 4 were retrieved and graded individually, and the strongest 4 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 4 that analyzed the data had no author in common with the generating team, and 1 were themselves NCI funded.
+- Of those, 4 were retrieved and graded individually, and the strongest 4 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 4 that analyzed the data, 0 had no author in common with the generating team, and 1 were themselves NCI funded.
 - Reuse gap index: -1.63 (negative means less reused than comparable datasets)
   - Genomic landscape of neutrophilic leukemias of ambiguous diagnosis. (2019) PMID 31366621
   - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618

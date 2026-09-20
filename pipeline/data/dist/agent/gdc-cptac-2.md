@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 8
-- Of those, 13 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 10 that analyzed the data had no author in common with the generating team, and 4 were themselves NCI funded.
+- Of those, 13 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 4 were themselves NCI funded.
 - Reuse gap index: -0.06 (negative means less reused than comparable datasets)
   - Proteogenomic Landscape of Breast Cancer Tumorigenesis and Targeted Therapy. (2020) PMID 33212010
   - pyComBat, a Python tool for batch effects correction in high-throughput molecular data using empirical Bayes methods. (2023) PMID 38057718

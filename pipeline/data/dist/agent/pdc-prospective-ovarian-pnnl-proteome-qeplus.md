@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Of those, 5 were retrieved and graded individually, and the strongest 4 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 3 that analyzed the data had no author in common with the generating team.
+- Of those, 5 were retrieved and graded individually, and the strongest 4 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 3 that analyzed the data, 0 had no author in common with the generating team.
 - Reuse gap index: +0.27 (negative means less reused than comparable datasets)
   - Mutation impact on mRNA versus protein expression across human cancers. (2025) PMID 39775839
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932

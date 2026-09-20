@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Of those, 4 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 3 that analyzed the data had no author in common with the generating team.
+- Of those, 4 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 3 that analyzed the data, 0 had no author in common with the generating team.
 - Reuse gap index: -0.18 (negative means less reused than comparable datasets)
   - MetaProD: A Highly-Configurable Mass Spectrometry Analyzer for Multiplexed Proteomic and Metaproteomic Data. (2023) PMID 36688801
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932

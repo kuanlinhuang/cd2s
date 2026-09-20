@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 125
-- Of those, 164 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 10 that analyzed the data had no author in common with the generating team, and 9 were themselves NCI funded.
+- Of those, 164 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 9 were themselves NCI funded.
 - Reuse gap index: +1.31 (negative means less reused than comparable datasets)
   - Identification of novel mutational drivers reveals oncogene dependencies in multiple myeloma. (2018) PMID 29884741
   - Gain of Chromosome 1q is associated with early progression in multiple myeloma patients treated with lenalidomide, bortezomib, and dexamethasone. (2019) PMID 31767829

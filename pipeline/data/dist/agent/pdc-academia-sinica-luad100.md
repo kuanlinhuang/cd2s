@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 10
-- Of those, 16 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 10 that analyzed the data had no author in common with the generating team, and 2 were themselves NCI funded.
+- Of those, 16 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 2 were themselves NCI funded.
 - Reuse gap index: -0.62 (negative means less reused than comparable datasets)
   - Integrative analysis of lung adenocarcinoma across diverse ethnicities and exposures. (2025) PMID 40749670
   - Identification of HMGB2 associated with proliferation, invasion and prognosis in lung adenocarcinoma via weighted gene co-expression network analysis. (2022) PMID 35962344

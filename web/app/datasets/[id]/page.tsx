@@ -830,6 +830,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
   const m = r.reuse_metrics;
   const analyzed = r.reuse.filter((x) => x.tier === "t3_analyzed" || x.tier === "t4_confirmed");
   const weaker = r.reuse.filter((x) => x.tier !== "t3_analyzed" && x.tier !== "t4_confirmed");
+  const nciAnalyzed = analyzed.filter((x) => x.nci_funded_reuse === true).length;
   const tiers = m.n_by_tier ?? {};
   // A tier is absent, not zero, when the accession-precision correction could not be
   // estimated. `?? 0` here would turn "we could not measure this" into "nobody used
@@ -1104,11 +1105,11 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         {analyzed.length > 0 && (
           <p className="mb-2 max-w-2xl text-meta t-muted">
             Deep-review sample: author overlap and funding were resolved for the{" "}
-            {num(r.reuse.length)} articles kept as examples here, not for every article
-            examined. Within them, {num(m.n_independent_reuse)} of the{" "}
-            {num(analyzed.length)} that analyzed the data had no author in common with the
-            generating team, and {num(m.n_nci_funded_reuse ?? 0)} were themselves
-            NCI-funded. These are sample counts, not population estimates.
+            {num(r.reuse.length)} articles listed here, not for every article examined. Of
+            the {num(analyzed.length)} that analyzed the data,{" "}
+            {num(m.n_independent_reuse)} had no author in common with the generating team
+            and {num(nciAnalyzed)} were themselves NCI-funded. These are sample counts,
+            not population estimates.
           </p>
         )}
         {analyzed.length === 0 ? (

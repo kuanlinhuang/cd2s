@@ -16,7 +16,7 @@ Dataset id: pdc-cptac-ccrcc-discovery-study
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
-- Of those, 45 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 10 that analyzed the data had no author in common with the generating team, and 3 were themselves NCI funded.
+- Of those, 45 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 3 were themselves NCI funded.
 - Reuse gap index: -1.50 (negative means less reused than comparable datasets)
   - Analysis and Visualization of Quantitative Proteomics Data Using FragPipe-Analyst. (2024) PMID 39254081
   - Telomere-related gene risk model for prognosis and drug treatment efficiency prediction in kidney cancer. (2022) PMID 36189312

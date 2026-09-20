@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Of those, 3 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 2 that analyzed the data had no author in common with the generating team.
+- Of those, 3 were retrieved and graded individually, and the strongest 3 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 2 that analyzed the data, 0 had no author in common with the generating team.
 - Reuse gap index: -2.83 (negative means less reused than comparable datasets)
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
   - KinPred-RNA-kinase activity inference and cancer type classification using machine learning on RNA-seq data. (2024) PMID 38523792

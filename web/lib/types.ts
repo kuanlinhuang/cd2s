@@ -268,7 +268,11 @@ export interface ReuseMetrics {
   has_citable_accession?: boolean | null;
   /** Null when reuse could not be measured. Never render null as zero. */
   n_verified_reuse?: number | null;
-  /** Articles the deep pass actually read: the denominator for the two counts below. */
+  /**
+   * Articles the deep pass actually read. Larger than the retained exemplar list, and
+   * NOT the denominator for the two counts below: author overlap and funding are
+   * resolved only for the exemplars in `reuse`, so those are what may be published.
+   */
   n_reuse_examined: number;
   n_independent_reuse: number;
   n_nci_funded_reuse?: number;

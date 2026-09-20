@@ -76,7 +76,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Of those, 2 were retrieved and graded individually, and the strongest 2 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 0 of the 2 that analyzed the data had no author in common with the generating team.
+- Of those, 2 were retrieved and graded individually, and the strongest 2 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 2 that analyzed the data, 0 had no author in common with the generating team.
   - Ribosomal DNA copy number loss and sequence variation in cancer. (2017) PMID 28640831
   - Single nucleotide polymorphism rs4961 in the adducin 1 gene is not associated with gastric cancer or preneoplastic cancer lesions. (2024) PMID 39100993
 

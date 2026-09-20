@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 308
-- Of those, 93 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: 10 of the 10 that analyzed the data had no author in common with the generating team.
+- Of those, 93 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 10 had no author in common with the generating team.
 - Citations to the dataset's publication: 1428 (attention, not reuse)
 - Reuse gap index: +1.64 (negative means less reused than comparable datasets)
   - Single-cell RNA sequencing reveals adrb1 as a sympathetic nerve-regulated immune checkpoint driving T cell exhaustion and impacting immunotherapy in esophageal squamous cell carcinoma. (2025) PMID 40406147
