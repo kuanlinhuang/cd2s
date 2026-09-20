@@ -121,7 +121,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA114478",
-      "name": null,
+      "name": "Inherited genetic variation and predisposition to testicular germ cell tumor",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -151,7 +151,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA198291",
-      "name": null,
+      "name": "Preclinical Testing of a Novel Therapy Targeting AXL in Advanced Kidney Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

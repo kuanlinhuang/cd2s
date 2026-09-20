@@ -69,7 +69,7 @@
     {
       "@type": "Grant",
       "identifier": "U19CA084953",
-      "name": null,
+      "name": "TOWARDS A MOLECULAR CLASSIFICATION OF TUMORS",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -89,7 +89,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA070907",
-      "name": null,
+      "name": "Molecular Pathology and Tissue Resource",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

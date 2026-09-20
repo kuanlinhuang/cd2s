@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T04:23:46.515073+00:00",
+  "generated_at": "2026-09-20T11:58:09.573951+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -41,6 +41,6 @@
   "n_workbook_attachments": 20,
   "n_datasets_with_workbook": 15,
   "n_distinct_workbooks": 6,
-  "n_grants_linked": 736,
+  "n_grants_linked": 796,
   "n_reuse_studies_verified": 778
 }

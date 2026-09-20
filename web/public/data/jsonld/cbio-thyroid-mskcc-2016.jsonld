@@ -101,7 +101,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA072597",
-      "name": null,
+      "name": "Oncogenic Events in Thyroid Neoplasia",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -121,7 +121,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA172012",
-      "name": null,
+      "name": "Maximizing Effectiveness of Radioiodine Therapy by Inhibiting MAPK Signaling",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

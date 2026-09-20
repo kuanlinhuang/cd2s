@@ -69,7 +69,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA142538",
-      "name": null,
+      "name": "Statistical Methods for Cancer Clinical Trials",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

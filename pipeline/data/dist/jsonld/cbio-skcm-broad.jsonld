@@ -109,7 +109,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA093459",
-      "name": null,
+      "name": "The University of Texas M. D. Anderson Cancer Center SPORE in Melanoma",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

@@ -79,7 +79,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA077308",
-      "name": null,
+      "name": "STAT Mediated TGF-a/EGFR Signaling in Squamous Cell Carcinomas of Head & Neck",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

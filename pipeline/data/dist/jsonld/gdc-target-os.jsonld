@@ -79,7 +79,7 @@
     {
       "@type": "Grant",
       "identifier": "U10CA098543",
-      "name": null,
+      "name": "Children's Oncology Group Chair's Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -129,7 +129,7 @@
     {
       "@type": "Grant",
       "identifier": "U01CA224766",
-      "name": null,
+      "name": "Protective Role of Nonclassical Monocytes in Immunotherapies for Solid Cancers",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -139,7 +139,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA202987",
-      "name": null,
+      "name": "Functions of Nonclassical Monocytes in the Vasculature",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -209,7 +209,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA180922",
-      "name": null,
+      "name": "Trinity: Transcriptome assembly for genetic and functional analysis of cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -219,7 +219,7 @@
     {
       "@type": "Grant",
       "identifier": "R50CA211461",
-      "name": null,
+      "name": "Open Software and Resource Development Leveraging Next-gen Sequencing Data to Facilitate Computational Analysis of Cancer Biology",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -259,7 +259,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA215452",
-      "name": null,
+      "name": "Identifying and targeting oncogenic Myc enhancer control in pediatric tumors",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

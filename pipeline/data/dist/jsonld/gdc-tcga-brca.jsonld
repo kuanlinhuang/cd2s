@@ -132,7 +132,7 @@
     {
       "@type": "Grant",
       "identifier": "U01CA097096",
-      "name": null,
+      "name": "DNA Polymerases in Nonhomologous End Joining",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -242,7 +242,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA155101",
-      "name": null,
+      "name": "Adding Hispanics to Ongoing GWAS in Colorectal Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -282,12 +282,22 @@
     {
       "@type": "Grant",
       "identifier": "P20CA252733",
-      "name": null,
+      "name": "Translational Research Program in Colorectal Cancer Disparities",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P20CA252733"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
     }
   ],
   "dateModified": "2026-09-18T02:35:47.179829+00:00",

@@ -74,7 +74,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA201382",
-      "name": null,
+      "name": "Overcoming IMiD resistance in Myeloma",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -124,7 +124,7 @@
     {
       "@type": "Grant",
       "identifier": "R35CA197603",
-      "name": null,
+      "name": "HARNESSING HOST RESPONSE TO PREVENT MYELOMA",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -144,7 +144,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA192844",
-      "name": null,
+      "name": "The Role of CD86 in Multiple Myeloma",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -194,7 +194,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA210967",
-      "name": null,
+      "name": "University of Michigan Proteogenomics Data Analysis Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -204,7 +204,7 @@
     {
       "@type": "Grant",
       "identifier": "U01CA214170",
-      "name": null,
+      "name": "Discovery and qualification of transcriptomic biomarkers for the early detection of aggressive prostate cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -224,7 +224,7 @@
     {
       "@type": "Grant",
       "identifier": "R21CA152336",
-      "name": null,
+      "name": "Shared Genomic Segment Analysis for Localizing Multiple Myeloma Genes",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -234,7 +234,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA178765",
-      "name": null,
+      "name": "Transcriptional regulatory mechanisms in B cell development and leukemogenesis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -244,7 +244,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA167824",
-      "name": null,
+      "name": "Whole Genome Sequencing to Discover Familial Myeloma Risk Genes",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -254,7 +254,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA134674",
-      "name": null,
+      "name": "GENETIC EPIDEMIOLOGY OF CHRONIC LYMPHOCYTIC LEUKEMIA",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

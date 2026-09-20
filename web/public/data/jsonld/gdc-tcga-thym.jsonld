@@ -81,7 +81,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA211000",
-      "name": null,
+      "name": "Pathway and Network Integration of Cancer Genomics and Clinical Data",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -91,7 +91,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA210999",
-      "name": null,
+      "name": "Global Infrastructure for Collaborative High-throughput  Cancer Genomics Analysis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -101,7 +101,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA210990",
-      "name": null,
+      "name": "UCSC-Buck Specialized Genomic Data Analysis Center for the Genomic Data Analysis Network",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -111,7 +111,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA210957",
-      "name": null,
+      "name": "OHSU Center for Specialized Data Analysis as part of the GDAN",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -121,7 +121,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA210950",
-      "name": null,
+      "name": "Integrated analysis of protein expression data from the Reverse Phase Protein Array (RPPA) platform",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -131,7 +131,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA210949",
-      "name": null,
+      "name": "Batch effects in molecular profiling data on cancers: detection, quantitation, interpretation, and correction",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -141,7 +141,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA144025",
-      "name": null,
+      "name": "Harvard Genome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -151,7 +151,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143883",
-      "name": null,
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -161,7 +161,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143882",
-      "name": null,
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -171,7 +171,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143867",
-      "name": null,
+      "name": "Genome Characterization Center (GCC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -181,7 +181,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143866",
-      "name": null,
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -191,7 +191,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143848",
-      "name": null,
+      "name": "Gene Expression Patterns in Human Tumors Identified Using Transcript Sequencing",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -201,7 +201,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143845",
-      "name": null,
+      "name": "The Cancer Genome Atlas Data Analysis Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -211,7 +211,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143843",
-      "name": null,
+      "name": "The BCM Tumor Genome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -221,7 +221,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143840",
-      "name": null,
+      "name": "MSKCC Center for Translational Cancer Genomic Analysis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -231,7 +231,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143835",
-      "name": null,
+      "name": "Center for Systems Analysis of the Cancer Regulome",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -241,7 +241,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA143799",
-      "name": null,
+      "name": "TCGA Data Analysis Center at Berkeley",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

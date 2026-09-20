@@ -102,6 +102,156 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=HHSN261201500003I"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009172",
+      "name": "Physician Scientist Training in Cancer Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009172"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA168504",
+      "name": "Project 3: BET bromodomain inhibitor combinations in breast cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA168504"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA225088",
+      "name": "Systems Pharmacology of Therapeutic and Adverse Responses to ImmuneCheckpoint and Small Molecule Drugs",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA225088"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA224068",
+      "name": "An integrated translational approach to overcome drug resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224068"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA224146",
+      "name": "Systematic interrogation of the pancreatic cancer microenvironment in patient-derived specimens",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA224146"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA207021",
+      "name": "Cancer Immunology Training Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA207021"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197735",
+      "name": "Accelerating Transdisciplinary Epidemiology of Colorectal Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197735"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R33CA160344",
+      "name": "Integrated Micro Scale transcriptional profiling of cell communication networks",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R33CA160344"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA208756",
+      "name": "(PQ3) The role of damaged DNA in inter-individual variation of tumor immunity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA208756"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA205406",
+      "name": "Leveraging Novel Randomized Clinical Trials of Vitamin D Supplementation in Patients with Colorectal Cancer: Impact on Survival and Anti-Tumor Immunity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA205406"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA259511",
+      "name": "Malignant Cell Engagement in Immune Circuits of Human Microsatellite-stable and Microsatellite-instable Colorectal Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA259511"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA127003",
+      "name": "Dana Farber/ Harvard Cancer Center SPORE in Gastrointestinal Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA127003"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA259511",
+      "name": "Malignant Cell Engagement in Immune Circuits of Human Microsatellite-stable and Microsatellite-instable Colorectal Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA259511"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA222663",
+      "name": "Dissecting mechanisms of immunotherapy resistance in melanoma patients",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA222663"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA218420",
+      "name": "Functional interrogation of epigenetic vulnerabilities in KRAS-mutant pancreatic cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA218420"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

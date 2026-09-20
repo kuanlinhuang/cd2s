@@ -121,7 +121,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA013287",
-      "name": null,
+      "name": "GENETIC BASIS OF ANTIGENIC VARIATION",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -131,7 +131,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA069568",
-      "name": null,
+      "name": "SPORE in Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

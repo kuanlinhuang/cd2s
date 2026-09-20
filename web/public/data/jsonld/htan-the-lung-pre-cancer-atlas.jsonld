@@ -94,12 +94,42 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233238",
-      "name": null,
+      "name": "The Lung PCA: A Multi-Dimensional Atlas of Pulmonary Premalignancy",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233238"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R21CA253498",
+      "name": "PRISTINE: Pre-cancer histology identification of Endobronchial biopsies using deep learning",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA253498"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214182",
+      "name": "The Boston University-UCLA Lung Cancer Biomarker Development Lab",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214182"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA196408",
+      "name": "Integrated Molecular, Cellular, and Imaging Characterization of NLST detected lung cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA196408"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

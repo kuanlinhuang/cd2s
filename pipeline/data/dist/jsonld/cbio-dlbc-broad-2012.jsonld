@@ -79,7 +79,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA097274",
-      "name": null,
+      "name": "Lymphoma Specialized Program of Research Excellence (SPORE) in Human Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -89,7 +89,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA092625",
-      "name": null,
+      "name": "PROGRAM PROJECT GRANT: Molecular Targets of Germinal Center B-Cell Lymphomas",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

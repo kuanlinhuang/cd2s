@@ -71,7 +71,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA140146",
-      "name": null,
+      "name": "Biostatistics/Bioinformatics Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -81,7 +81,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA047179",
-      "name": null,
+      "name": "Laboratory & Clinical Develpmt of Cell Cycle Active Agents in the Treatmt of STS",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

@@ -97,7 +97,7 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233311",
-      "name": null,
+      "name": "Precancer Atlas of Familial Adenomatous Polyposis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -107,12 +107,32 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233254",
-      "name": null,
+      "name": "Administrative Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233254"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA124435",
+      "name": "Biostatistics",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA124435"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R25CA180993",
+      "name": "Cancer Systems Biology Scholars Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R25CA180993"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

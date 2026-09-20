@@ -94,12 +94,122 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233291",
-      "name": null,
+      "name": "Integrative Single-Cell Atlas of Host and Microenvironment in Colorectal Neoplastic Transformation",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233291"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA215798",
+      "name": "Systems approaches to understanding the relationships between genotype, signaling, and therapeutic efficacy",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA215798"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA119925",
+      "name": "Integrated Biological Systems Training in Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA119925"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA197570",
+      "name": "Early to Late Events in Colorectal Neoplasia: Basic Biology to Clinical Implementation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197570"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA205406",
+      "name": "Leveraging Novel Randomized Clinical Trials of Vitamin D Supplementation in Patients with Colorectal Cancer: Impact on Survival and Anti-Tumor Immunity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA205406"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA097386",
+      "name": "Tumor Markers and Recurrent Adenomas: A Follow-up Study",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA097386"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA236733",
+      "name": "Project 1: Overcoming Immune Exclusion in Microsatellite Stable Colorectal Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA236733"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA068485",
+      "name": "Survey and Biospecimen Shared Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA068485"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K07CA122451",
+      "name": "Diet, Genetics, Epigenetics and Colorectal Adenoma Risk.",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K07CA122451"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA274367",
+      "name": "Shaping of the Microenvironment in Colonic Pre-Cancer by Epithelia and Microbiota",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA274367"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA229123",
+      "name": "Administrative Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA229123"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA217987",
+      "name": "Metabolic barriers to T cell activation in clear cell renal cell carcinoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA217987"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

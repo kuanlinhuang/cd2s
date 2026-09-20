@@ -161,7 +161,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA211024",
-      "name": null,
+      "name": "Project 1: Non-Invasive Clinical Assay for Early Detection of Treatment Resistance in Patients with Metastatic Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
