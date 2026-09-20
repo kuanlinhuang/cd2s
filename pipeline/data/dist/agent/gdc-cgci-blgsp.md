@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 5
-- Of those, 20 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 4 were themselves NCI funded.
+- Of those, 20 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 4 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: -3.06 (negative means less reused than comparable datasets)
   - Genetic subgroups inform on pathobiology in adult and pediatric Burkitt lymphoma. (2023) PMID 36201743
   - Sources of erroneous sequences and artifact chimeric reads in next generation sequencing of genomic DNA from formalin-fixed paraffin-embedded samples. (2019) PMID 30418619

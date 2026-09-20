@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Of those, 7 were retrieved and graded individually, and the strongest 6 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 6 that analyzed the data, 0 had no author in common with the generating team, and 3 were themselves NCI funded.
+- Of those, 7 were retrieved and graded individually, and the strongest 6 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 3 of the 6 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.07 (negative means less reused than comparable datasets)
   - Amplified dosage of the NKX2-1 lineage transcription factor controls its oncogenic role in lung adenocarcinoma. (2025) PMID 40139189
   - Morphological basis of the lung adenocarcinoma subtypes. (2024) PMID 38706836

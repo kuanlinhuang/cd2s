@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 27
-- Of those, 40 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 1 were themselves NCI funded.
+- Of those, 40 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: +1.00 (negative means less reused than comparable datasets)
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Oxidative stress induces extracellular vesicle release by upregulation of HEXB to facilitate tumour growth in experimental hepatocellular carcinoma. (2024) PMID 38944674

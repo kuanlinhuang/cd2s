@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Of those, 15 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 0 had no author in common with the generating team, and 1 were themselves NCI funded.
+- Of those, 15 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.65 (negative means less reused than comparable datasets)
   - Chemical Complementarity of Breast Cancer Resident, T-Cell Receptor CDR3 Domains and the Cancer Antigen, ARMC3, is Associated With Higher Levels of Survival and Granzyme Expression. (2023) PMID 37313373
   - Comprehensive Analysis for Anti-Cancer Target-Indication Prioritization of Placental Growth Factor Inhibitor (PGF) by Use of Omics and Patient Survival Data. (2023) PMID 37508400

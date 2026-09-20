@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 5
-- Of those, 8 were retrieved and graded individually, and the strongest 7 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 7 that analyzed the data, 0 had no author in common with the generating team.
+- Of those, 8 were retrieved and graded individually, and the strongest 7 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 6 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.27 (negative means less reused than comparable datasets)
   - Integrated meta-analysis of colorectal cancer public proteomic datasets for biomarker discovery and validation. (2024) PMID 38252632
   - Mutation impact on mRNA versus protein expression across human cancers. (2025) PMID 39775839

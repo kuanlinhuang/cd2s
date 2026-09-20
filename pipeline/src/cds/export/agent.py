@@ -362,15 +362,27 @@ def to_agent_brief(rec: DatasetRecord) -> str:
                 for x in rec.reuse
                 if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)
             ]
-            nci_graded = sum(1 for x in graded if x.nci_funded_reuse)
+            # A null flag means nobody could check, which is not a negative answer.
+            overlap_checked = [x for x in graded if x.independent_of_generators is not None]
+            funding_checked = [x for x in graded if x.nci_funded_reuse is not None]
+            overlap = (
+                "author overlap with the generating team could not be checked for any of "
+                "them"
+                if not overlap_checked
+                else f"{sum(1 for x in overlap_checked if x.independent_of_generators)} of "
+                f"the {len(overlap_checked)} that could be checked had no author in common "
+                f"with the generating team"
+            )
+            funding = (
+                "none could be checked for NCI funding of their own"
+                if not funding_checked
+                else f"{sum(1 for x in funding_checked if x.nci_funded_reuse)} of the "
+                f"{len(funding_checked)} that could be checked were themselves NCI funded"
+            )
             lines.append(
                 f"- Of those, {m.n_reuse_examined} were retrieved and graded individually, "
-                f"and the strongest {len(rec.reuse)} are kept as exemplars below. Author "
-                f"overlap and funding were resolved for those exemplars only: of the "
-                f"{len(graded)} that analyzed the data, {m.n_independent_reuse} had no "
-                f"author in common with the generating team"
-                + (f", and {nci_graded} were themselves NCI funded" if nci_graded else "")
-                + "."
+                f"and the strongest {len(rec.reuse)} are kept as exemplars. Of the "
+                f"{len(graded)} that analyzed the data, {overlap}, and {funding}."
             )
         if m.n_citations_to_primary_publication:
             lines.append(

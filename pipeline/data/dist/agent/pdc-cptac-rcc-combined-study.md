@@ -16,7 +16,7 @@ Dataset id: pdc-cptac-rcc-combined-study
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Of those, 1 were retrieved and graded individually, and the strongest 1 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 0 that analyzed the data, 0 had no author in common with the generating team.
+- Of those, 1 were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 0 that analyzed the data, author overlap with the generating team could not be checked for any of them, and none could be checked for NCI funding of their own.
 - Reuse gap index: -0.52 (negative means less reused than comparable datasets)
 
 ## Provenance

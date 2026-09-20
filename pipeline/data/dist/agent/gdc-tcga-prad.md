@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 997
-- Of those, 113 were retrieved and graded individually, and the strongest 10 are kept as exemplars below. Author overlap and funding were resolved for those exemplars only: of the 10 that analyzed the data, 10 had no author in common with the generating team.
+- Of those, 113 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 9 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 2610 (attention, not reuse)
 - Reuse gap index: +1.77 (negative means less reused than comparable datasets)
   - Angiogenic Edge of ANGPT2: Genetic Variants Shape Prostate Cancer Prognosis on Androgen Deprivation Therapy. (2025) PMID 41151852

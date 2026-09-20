@@ -830,7 +830,23 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
   const m = r.reuse_metrics;
   const analyzed = r.reuse.filter((x) => x.tier === "t3_analyzed" || x.tier === "t4_confirmed");
   const weaker = r.reuse.filter((x) => x.tier !== "t3_analyzed" && x.tier !== "t4_confirmed");
-  const nciAnalyzed = analyzed.filter((x) => x.nci_funded_reuse === true).length;
+  // Both properties are resolved per article and are frequently unresolvable: a null flag
+  // means nobody checked, which is not the same as a negative answer and must never be
+  // published as one.
+  const overlapChecked = analyzed.filter((x) => x.independent_of_generators != null);
+  const fundingChecked = analyzed.filter((x) => x.nci_funded_reuse != null);
+  const overlapClause =
+    overlapChecked.length === 0
+      ? "author overlap with the generating team could not be checked for any of them"
+      : `${num(overlapChecked.filter((x) => x.independent_of_generators).length)} of the ${num(
+          overlapChecked.length,
+        )} we could check had no author in common with the generating team`;
+  const fundingClause =
+    fundingChecked.length === 0
+      ? "none could be checked for NCI funding of their own"
+      : `${num(fundingChecked.filter((x) => x.nci_funded_reuse).length)} of the ${num(
+          fundingChecked.length,
+        )} we could check were themselves NCI-funded`;
   const tiers = m.n_by_tier ?? {};
   // A tier is absent, not zero, when the accession-precision correction could not be
   // estimated. `?? 0` here would turn "we could not measure this" into "nobody used
@@ -1104,12 +1120,10 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         )}
         {analyzed.length > 0 && (
           <p className="mb-2 max-w-2xl text-meta t-muted">
-            Deep-review sample: author overlap and funding were resolved for the{" "}
-            {num(r.reuse.length)} articles listed here, not for every article examined. Of
-            the {num(analyzed.length)} that analyzed the data,{" "}
-            {num(m.n_independent_reuse)} had no author in common with the generating team
-            and {num(nciAnalyzed)} were themselves NCI-funded. These are sample counts,
-            not population estimates.
+            Deep-review sample: the {num(r.reuse.length)} articles listed here are the
+            ones we graded individually, not every article examined. Of the{" "}
+            {num(analyzed.length)} that analyzed the data, {overlapClause}, and{" "}
+            {fundingClause}. These are sample counts, not population estimates.
           </p>
         )}
         {analyzed.length === 0 ? (
