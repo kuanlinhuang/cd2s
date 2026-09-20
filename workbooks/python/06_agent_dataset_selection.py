@@ -179,10 +179,13 @@ def finish(ax, title):
 # %%
 top = ranked.head(8).iloc[::-1]
 colors = [ACCENT if t == choice["short_title"] else MUTED for t in top["short_title"]]
+pos = list(range(len(top)))
 fig, ax = plt.subplots(figsize=(8.6, 0.5 * len(top) + 1.8))
-ax.barh(top["short_title"], top["fit_score"], color=colors, height=0.62)
+ax.barh(pos, top["fit_score"], color=colors, height=0.62)
+ax.set_yticks(pos)
+ax.set_yticklabels(top["short_title"])
 for i, v in enumerate(top["fit_score"]):
-    ax.text(v, i, f" {v}", va="center", fontsize=8.5, color=INK)
+    ax.text(v, i, f" {v:.2f}", va="center", fontsize=8.5, color=INK)
 ax.set_xlabel("fit score for a treatment-resistance question")
 ax.set_xlim(0, float(top["fit_score"].max()) * 1.14)
 ax.grid(axis="y", visible=False)

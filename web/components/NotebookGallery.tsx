@@ -51,7 +51,14 @@ export default function NotebookGallery({
                 </h3>
                 <p className="mt-2 text-body t-muted">{guide.question}</p>
 
-                {guide.notebook_preview_url &&
+                {/*
+                  Full width only. A compact card is about a third of the grid, and these
+                  are ~1000px figures with 8.5pt axis labels: at that scale the labels and
+                  per-bar counts are smudges, which is worse than showing no figure and
+                  linking to the one a reader can actually read.
+                */}
+                {!compact &&
+                  guide.notebook_preview_url &&
                   guide.notebook_preview_width &&
                   guide.notebook_preview_height && (
                     <figure
@@ -63,7 +70,8 @@ export default function NotebookGallery({
                         alt={guide.figure ?? `Figure produced by ${guide.title}`}
                         width={guide.notebook_preview_width}
                         height={guide.notebook_preview_height}
-                        sizes={compact ? "(min-width: 1024px) 30vw, 100vw" : "(min-width: 1024px) 55vw, 100vw"}
+                        sizes="(min-width: 1024px) 55vw, 100vw"
+                        quality={90}
                         className="block h-auto w-full"
                       />
                     </figure>

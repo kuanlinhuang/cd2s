@@ -219,8 +219,13 @@ ax.set_yticklabels(
     [f"{f} ({e})" for f, e in zip(ordered["fraction"], ordered["experiment"], strict=True)]
 )
 ax.axvline(n_min, color=WARN, lw=1.6, ls="--")
-ax.text(n_min, len(ordered) - 0.35, f" complete-case bound: {n_min} cases",
-        color=WARN, fontsize=8.5, va="center")
+# The bound sits wherever the smallest layer falls. Once that is far to the right the
+# callout has no room left, so it flips to the inside of the line rather than running
+# off the edge and being silently clipped.
+flip = n_min > 0.7 * n_max * 1.18
+bound = f"complete-case bound: {n_min} cases"
+ax.text(n_min, len(ordered) - 0.35, f"{bound} " if flip else f" {bound}",
+        color=WARN, fontsize=8.5, va="center", ha="right" if flip else "left")
 for i, v in enumerate(ordered["cases"]):
     ax.text(v, i, f" {int(v)}", va="center", fontsize=8.5, color=INK)
 ax.set_xlabel("cases with this layer")

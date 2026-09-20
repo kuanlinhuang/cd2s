@@ -1,8 +1,8 @@
 {
   "workbook": "04_scarce_modality_cptac",
   "executed": true,
-  "executed_at": "2026-09-20T20:59:33.870891+00:00",
-  "runtime_seconds": 5.42,
+  "executed_at": "2026-09-20T21:12:07.220192+00:00",
+  "runtime_seconds": 63.17,
   "executor": "nbclient / python 3.14.4 / Darwin 25.5.0 arm64",
   "package_versions": {
     "python": "3.14.4",
