@@ -174,6 +174,40 @@ export function getRecord(id: string): DatasetRecord | null {
   return record;
 }
 
+/**
+ * The schema.org/DCAT description of one dataset, as the pipeline wrote it.
+ *
+ * Read from the generated file rather than rebuilt here, so the document a crawler
+ * finds in the page and the one served at /data/jsonld/{id}.jsonld are the same
+ * document. Returned as a string because it is inlined verbatim; nothing on the site
+ * reads its fields.
+ *
+ * Inlining is the point. Google Dataset Search and the other harvesters read JSON-LD
+ * embedded in the page and do not follow a link to a .jsonld file, so a dataset
+ * resource that only offered the file was invisible to exactly the discovery surface
+ * it was generated for.
+ */
+const _jsonLd = new Map<string, string | null>();
+
+export function getJsonLd(id: string): string | null {
+  const hit = _jsonLd.get(id);
+  if (hit !== undefined) return hit;
+  const path = join(DATA_DIR, "jsonld", `${id}.jsonld`);
+  let doc: string | null = null;
+  if (existsSync(path)) {
+    // Reserialized compactly: the file is indented for reading and the page is not.
+    // Parsing also means a malformed document fails the build rather than shipping
+    // broken structured data to a crawler.
+    try {
+      doc = JSON.stringify(JSON.parse(readFileSync(path, "utf8")));
+    } catch {
+      doc = null;
+    }
+  }
+  _jsonLd.set(id, doc);
+  return doc;
+}
+
 export function getAllRecordIds(): string[] {
   const dir = join(DATA_DIR, "datasets");
   if (!existsSync(dir)) return [];
