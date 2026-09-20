@@ -96,21 +96,34 @@ def trace_index(
     from cds import store
     from cds.reuse import trace
 
-    recs = store.load_source("merged") or store.load_all_sources()
-    recs = recs[start : start + limit] if limit else recs[start:]
+    # `corpus` is always the whole thing and is always what gets written; `targets` is
+    # the window this invocation traces. Slicing the corpus down to the window and
+    # saving that was a resume flag that destroyed what it resumed from: `--start 300`
+    # wrote a "traced" stage holding records 300 onward and nothing before them.
+    # Resuming continues the partially traced corpus; a run from the top starts again
+    # from `merged`, so a regenerated corpus is never traced through a stale one.
+    resuming = start > 0
+    corpus = (
+        (store.load_source("traced") if resuming else [])
+        or store.load_source("merged")
+        or store.load_all_sources()
+    )
+    targets = corpus[start : start + limit] if limit else corpus[start:]
     done = 0
     with Client("epmc", max_age_days=max_age_days) as c:
-        for i, r in enumerate(recs):
+        for r in targets:
             r.reuse_metrics = trace.index_pass(c, r)
             done += 1
             if done % 25 == 0:
                 console.print(
-                    f"  {done}/{len(recs)} live={c.n_live} cached={c.n_cached} "
+                    f"  {done}/{len(targets)} live={c.n_live} cached={c.n_cached} "
                     f"last={r.short_title} t3={r.reuse_metrics.n_by_tier.get('t3_analyzed')}"
                 )
-                store.save_source("traced", recs[: i + 1], {"stage": "trace-index-partial"})
-    store.save_source("traced", recs, {"stage": "trace-index", "n": len(recs)})
-    console.print(f"[green]traced {len(recs)}[/green] records")
+                store.save_source("traced", corpus, {"stage": "trace-index-partial"})
+    store.save_source(
+        "traced", corpus, {"stage": "trace-index", "n": len(corpus), "n_traced": len(targets)}
+    )
+    console.print(f"[green]traced {len(targets)}[/green] of {len(corpus)} records")
 
 
 @app.command("gap")
