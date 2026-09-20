@@ -183,7 +183,9 @@ def refresh_citation_metrics(client: Client, rec: DatasetRecord) -> bool:
 
 def _corrected_tier_counts(
     client: Client, toks: list[str]
-) -> tuple[dict[str, int], dict[str, int], dict[str, str], precision.AccessionPrecision | None]:
+) -> tuple[
+    dict[str, int], dict[str, int], dict[str, str], precision.AccessionPrecision | None, bool
+]:
     """Tier counts for one dataset, corrected for Europe PMC's hyphen tokenization.
 
     Precision is measured once per accession, against the methods-section query, and
@@ -194,6 +196,10 @@ def _corrected_tier_counts(
     Where a tier's best accession has no usable precision estimate the tier is left out
     of the result entirely rather than defaulted to its raw count or to zero. A missing
     tier renders as "not measured"; a zero would read as "nobody used this".
+
+    The last element of the result says whether any hits were dropped that way. A
+    dataset can have an exact zero in one tier and uncorrectable hits in another, and
+    the zero on its own would otherwise let the record claim nobody used it.
 
     Estimating is the expensive half of this - it retrieves a full text per sampled
     article - so an accession is only measured once something has been found under it.
@@ -219,6 +225,7 @@ def _corrected_tier_counts(
     corrected: dict[str, int] = {}
     raw_counts: dict[str, int] = {}
     winning_queries: dict[str, str] = {}
+    dropped = False
     for tier in INDEX_FIELDS:
         best: tuple[int, int, str] | None = None  # (corrected, raw, query)
         for tok in toks:
@@ -228,6 +235,7 @@ def _corrected_tier_counts(
             raw, query = entry
             value = precision.correct(raw, estimates[tok])
             if value is None:
+                dropped = dropped or raw > 0
                 continue
             if best is None or value > best[0]:
                 best = (value, raw, query)
@@ -241,7 +249,7 @@ def _corrected_tier_counts(
         (e for e in estimates.values() if e.query == t3_query),
         estimates.get(toks[0]) if toks else None,
     )
-    return corrected, raw_counts, winning_queries, t3_estimate
+    return corrected, raw_counts, winning_queries, t3_estimate, dropped
 
 
 def index_pass(
@@ -274,7 +282,9 @@ def index_pass(
             ],
         )
 
-    by_tier, raw_by_tier, winning_queries, est = _corrected_tier_counts(client, toks)
+    by_tier, raw_by_tier, winning_queries, est, dropped_hits = _corrected_tier_counts(
+        client, toks
+    )
 
     n_verified = by_tier.get(ReuseTier.T3_ANALYZED.value)
     screened = max(by_tier.values(), default=0)
@@ -293,8 +303,9 @@ def index_pass(
         has_citable_accession=True,
         # "Nobody has used this" is a claim, and it needs a measurement behind it. A
         # dataset whose counts could not be corrected has not been measured, so it does
-        # not get to make the claim.
-        no_reuse_identified=(measured and screened == 0),
+        # not get to make the claim - not even when the tiers that could be corrected
+        # all came back as an exact zero.
+        no_reuse_identified=(measured and screened == 0 and not dropped_hits),
         search_strategy_id=INDEX_STRATEGY_ID,
         searched_at=now,
         evidence=[
@@ -334,7 +345,6 @@ class Candidate:
 
     publication: Publication
     fields: set[str]
-    author_surnames: set[str]
     author_keys: set[str]
 
 
@@ -351,7 +361,7 @@ def deep_candidates(
             cands, qs, ts = epmc.fetch_candidates(client, tok, tier, limit=limit)
             queries.extend(qs)
             at = ts or at
-            for pub, field, surnames, keys in cands:
+            for pub, field, keys in cands:
                 key = pub.pmid or pub.doi or (pub.title or "")[:80]
                 if not key:
                     continue
@@ -360,24 +370,12 @@ def deep_candidates(
                     found[key] = Candidate(
                         publication=pub,
                         fields={field},
-                        author_surnames=surnames,
                         author_keys=keys,
                     )
                 else:
                     existing.fields.add(field)
-                    existing.author_surnames |= surnames
                     existing.author_keys |= keys
     return list(found.values()), queries, at
-
-
-def grant_pi_surnames(rec: DatasetRecord) -> set[str]:
-    out: set[str] = set()
-    for g in rec.grants:
-        for name in g.pi_names:
-            parts = [x for x in name.replace(",", " ").split() if len(x) > 2]
-            if parts:
-                out.add(parts[-1].lower())
-    return out
 
 
 def generator_keys(rec: DatasetRecord) -> set[str]:

@@ -261,22 +261,6 @@ def _short_authors(author_string: str | None) -> str | None:
     return f"{surname} et al." if "," in author_string else surname
 
 
-def author_surnames(author_string: str | None) -> set[str]:
-    """Surnames, lowercased, for author-overlap tests."""
-    if not author_string:
-        return set()
-    out: set[str] = set()
-    for chunk in author_string.split(","):
-        chunk = chunk.strip()
-        if not chunk:
-            continue
-        # Europe PMC formats authors as "Surname AB".
-        surname = chunk.split()[0] if chunk.split() else chunk
-        if len(surname) > 2:
-            out.add(surname.lower())
-    return out
-
-
 def author_keys(author_string: str | None) -> set[str]:
     """Author identities as "surname i", for overlap tests that have to be specific.
 
@@ -312,15 +296,12 @@ def fetch_candidates(
     tier: ReuseTier,
     *,
     limit: int = 40,
-) -> tuple[list[tuple[Publication, str, set[str], set[str]]], list[str], datetime | None]:
+) -> tuple[list[tuple[Publication, str, set[str]]], list[str], datetime | None]:
     """Fetch candidate articles for a token at one tier.
 
-    Returns (publication, matching field, author surnames, author keys) plus the queries
-    run. Both forms of the author list travel together because they answer different
-    questions: surnames are what a grant's PI list can be matched against at all, and
-    "surname initial" keys are what makes that match specific enough to believe.
+    Returns (publication, matching field, author keys) plus the queries run.
     """
-    seen: dict[str, tuple[Publication, str, set[str], set[str]]] = {}
+    seen: dict[str, tuple[Publication, str, set[str]]] = {}
     queries: list[str] = []
     at: datetime | None = None
     for field in TIER_FIELDS.get(tier, ()):
@@ -344,7 +325,6 @@ def fetch_candidates(
                 seen[key] = (
                     _to_publication(h),
                     field,
-                    author_surnames(h.get("authorString")),
                     author_keys(h.get("authorString")),
                 )
             nxt = data.get("nextCursorMark")
@@ -356,7 +336,7 @@ def fetch_candidates(
 
 def most_cited_in_window(
     client: Client, token: str, lo_year: int, hi_year: int, *, field: str = "METHODS"
-) -> tuple[Publication | None, set[str], datetime | None]:
+) -> tuple[Publication | None, datetime | None]:
     """The most-cited article referencing this accession in a given year window.
 
     Needed because a dataset's marker paper will not appear in a relevance-ordered page
@@ -374,16 +354,11 @@ def most_cited_in_window(
     }
     r = client.get(f"{BASE}/search", params=params)
     if not r.ok:
-        return None, set(), r.retrieved_at
+        return None, r.retrieved_at
     hits = (r.json().get("resultList") or {}).get("result") or []
     if not hits:
-        return None, set(), r.retrieved_at
-    top = hits[0]
-    return (
-        _to_publication(top),
-        author_surnames(top.get("authorString")),
-        r.retrieved_at,
-    )
+        return None, r.retrieved_at
+    return _to_publication(hits[0]), r.retrieved_at
 
 
 def classify_tier(matched_fields: set[str]) -> ReuseTier:

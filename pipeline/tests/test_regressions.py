@@ -16,6 +16,7 @@ from pydantic import ValidationError
 from cds.export.site import population_flags
 from cds.metrics import reuse_gap
 from cds.model import (
+    AccessionPrecision,
     DatasetRecord,
     IdScheme,
     Modality,
@@ -737,7 +738,7 @@ def test_a_stale_nomination_is_reconsidered_on_the_next_pass(record_factory, mon
     monkeypatch.setattr(enrich.dating, "years_available", lambda *a, **k: (3, 2015, "how"))
     monkeypatch.setattr(enrich.trace, "deep_candidates", lambda *a, **k: ([], [], None))
     monkeypatch.setattr(
-        epmc, "most_cited_in_window", lambda *a, **k: (stale.model_copy(deep=True), set(), None)
+        epmc, "most_cited_in_window", lambda *a, **k: (stale.model_copy(deep=True), None)
     )
     # The nominee does not name the accession anywhere in its full text, which is exactly
     # the rule the stale guess predates.
@@ -855,3 +856,40 @@ def test_reporter_and_europe_pmc_author_names_reduce_to_the_same_key():
     assert trace._person_key("BELL, DANIEL W") == "bell d"
     assert trace._person_key("STEPHEN B. BAYLIN") == "baylin s"
     assert "bell d" in epmc_mod.author_keys("Bell DW, Zhou Q")
+
+
+def test_an_exact_zero_beside_uncorrectable_hits_is_not_no_reuse(monkeypatch, record_factory):
+    """One exact zero does not license the claim that nobody used the dataset.
+
+    A hyphenated accession whose METHODS query returns nothing but whose INTRO query
+    returns thirty: the zero needs no correction and is published, while the thirty is
+    dropped because too few open-access articles were available to estimate how much of
+    it is really about this dataset. Reading the surviving zero as a complete
+    measurement would put the dataset on the underexplored list with an observed zero,
+    which is the one claim an unmeasurable record is not allowed to make.
+    """
+    counts = {'METHODS:"TARGET-RT"': 0, 'INTRO:"TARGET-RT"': 30}
+    monkeypatch.setattr(
+        trace.epmc,
+        "_search",
+        lambda client, query, **k: ({"hitCount": counts.get(query, 0)}, None, None),
+    )
+    monkeypatch.setattr(
+        trace.precision,
+        "measure",
+        lambda client, token, query, **k: AccessionPrecision(
+            token=token,
+            query=query,
+            strategy_id="test",
+            needs_correction=True,
+            precision=None,
+        ),
+    )
+    rec = record_factory("x", identifiers=[(IdScheme.GDC_PROJECT, "TARGET-RT")])
+
+    m = trace.index_pass(None, rec)
+
+    assert m.n_by_tier["t3_analyzed"] == 0
+    assert "t0_mention" not in m.n_by_tier
+    assert m.n_verified_reuse == 0
+    assert m.no_reuse_identified is False

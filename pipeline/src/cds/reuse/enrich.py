@@ -171,10 +171,6 @@ def enrich_record(
     # inference. Judging independence before this step would leave the generating set
     # empty and mark every article "unknown".
     authoritative_pmids = {p.pmid for p in rec.primary_publications if p.pmid}
-    generator_surnames = trace.grant_pi_surnames(rec)
-    for c in candidates:
-        if c.publication.pmid and c.publication.pmid in authoritative_pmids:
-            generator_surnames |= c.author_surnames
 
     # Re-nominate whenever the record carries nothing but a previous run's own guess.
     #
@@ -188,14 +184,11 @@ def enrich_record(
         rec.primary_publications = sourced
         cand = _pick_primary(candidates, anchor)
         cand_pub = cand.publication if cand else None
-        cand_surnames = cand.author_surnames if cand else set()
         if cand_pub is None and anchor is not None:
             # A relevance-ordered candidate page will not reach back to the marker paper
             # for a heavily used dataset, so ask directly for the most-cited article in
             # the first years of availability.
-            cand_pub, cand_surnames, _ = epmc.most_cited_in_window(
-                client, tokens[0], anchor, anchor + 2
-            )
+            cand_pub, _ = epmc.most_cited_in_window(client, tokens[0], anchor, anchor + 2)
         # A nomination has to be about this dataset at all.
         #
         # Every query behind these candidates is a two-word phrase match, because Europe
@@ -210,7 +203,7 @@ def enrich_record(
         # never names the dataset cannot be the paper that describes it.
         if cand_pub is not None and not _mentions_accession(client, cand_pub, tokens[0]):
             info["rejected_primary_pmid"] = cand_pub.pmid
-            cand_pub, cand_surnames = None, set()
+            cand_pub = None
 
         if cand_pub is not None:
             pub = cand_pub.model_copy(deep=True)
@@ -234,10 +227,7 @@ def enrich_record(
             ]
             rec.primary_publications = [pub]
             authoritative_pmids = {pub.pmid} if pub.pmid else set()
-            generator_surnames |= cand_surnames
             info["inferred_primary_pmid"] = pub.pmid
-
-    info["n_generator_surnames"] = len(generator_surnames)
 
     # 4. grade the remainder, now that independence is answerable
     exemplars = trace.build_reuse_records(
