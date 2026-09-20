@@ -885,6 +885,10 @@ def assign(record: DatasetRecord) -> Subject:
 
     counts = Counter(histology_names)
     competitors = len(histology_names) + morphology_count
+    # A histology statement swamped by the morphology categories filed beside it is
+    # incidental, not a claim about the tissue. Tracked so the fallback below does not
+    # give it the second chance the majority rule just denied it.
+    outvoted_by_morphology = False
     if counts and competitors:
         leader, count = counts.most_common(1)[0]
         tied = len(counts) > 1 and count == counts.most_common(2)[1][1]
@@ -917,7 +921,39 @@ def assign(record: DatasetRecord) -> Subject:
                     )
                 ],
             )
+        # One histology name leads but holds less than two thirds of the competitors,
+        # so what outvoted it is the morphology categories, which name no organ. It is
+        # one incidental label among many and must not outrank the sites the repository
+        # did state; one unanimous site decides instead.
+        #
+        # This is the rule that was missing. CGCI-HTMCP-LC states two primary sites,
+        # "Bronchus and lung" and "lung", and six ICD-O categories, one of which is
+        # "Paragangliomas and Glomus Tumors". That single category is a sixth of the
+        # competitors and the majority rule rejects it - and the fallback below then
+        # used it anyway, filing a lung cohort under the adrenal gland, where it led
+        # the shortlist for "pheochromocytoma" and was unreachable from "lung".
+        #
+        # A tie is not this case: two histology names that tie are both real statements
+        # about the tissue, and they keep the handling above and below.
+        if not tied:
+            outvoted_by_morphology = True
+            if len(unique_sites) == 1:
+                code = NAME_TO_CODE[unique_sites.pop()]
+                return Subject(
+                    scope=SubjectScope.SINGLE,
+                    tissues=[code],
+                    evidence=[
+                        _evidence(
+                            record,
+                            Confidence.MEDIUM,
+                            "Histology was outvoted by morphology categories, so one "
+                            "repository-stated site decided.",
+                        )
+                    ],
+                )
 
+    if outvoted_by_morphology:
+        disease_names = [name for name in disease_names if name not in HISTOLOGY_DECIDES]
     chosen_names = set(disease_names or site_names)
     all_names = set(disease_names) | set(site_names)
     if len(all_names) >= PAN_THRESHOLD:
