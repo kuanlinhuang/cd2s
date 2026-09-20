@@ -5,6 +5,8 @@
 # those data. Execution receipts are read from workbooks/executed/ at build time.
 
 - workbook: 01_can_i_answer_this
+  figure: >-
+    Horizontal bars for each probed clinical field, showing the share of cases the field is populated for against the smaller share that carries an informative value, with one-to-many fields marked as not derivable per case.
   title: Audit whether this dataset can answer your question
   problem: A portal can list a field even when every value is an unusable non-answer.
   lesson: Decide whether the analysis is possible before requesting data or writing a protocol.
@@ -20,6 +22,7 @@
     - Per-field coverage table separating populated from informative values
     - Assay coverage as a percentage of the cohort
     - A yes/no verdict for six common analysis classes
+    - A chart contrasting populated with informative coverage, field by field
   steps:
     - Fetch project summary and per-assay case counts
     - Request facet counts for the clinical fields that gate common analyses
@@ -31,6 +34,8 @@
   datasets: [gdc-cgci-htmcp-cc, gdc-fm-ad, gdc-rebc-thyr, gdc-wcdt-mcrpc, gdc-tcga-brca, gdc-mp2prt-all]
 
 - workbook: 02_survival_tcga_brca
+  figure: >-
+    Kaplan-Meier survival curves against months since diagnosis: one curve for the whole cohort and one per stage group, showing separation between stages and how thin the long follow-up becomes.
   title: Overall survival from open data, with the endpoint derived correctly
   problem: Survival time is split across three fields and includes sentinel values that look numeric.
   lesson: Derive a defensible endpoint, account for exclusions, then fit and interpret the model.
@@ -44,6 +49,7 @@
     - Kaplan-Meier estimates with survival at 12, 36 and 60 months
     - Log-rank test between stage groups
     - Multivariable Cox model with concordance
+    - A Kaplan-Meier plot of overall survival, stratified by stage at diagnosis
   steps:
     - Retrieve case-level clinical fields including all three follow-up locations
     - Derive time and event, guarding against GDC sentinel values
@@ -54,6 +60,8 @@
   datasets: [gdc-tcga-brca]
 
 - workbook: 03_treatment_response_cervical
+  figure: >-
+    Two panels: a bar chart of how many cases carry each response label against how many carry none, and box plots of ECOG performance status for responders against progressors.
   title: Treatment response, after checking the response field is real
   problem: Disease-status codes and true response categories are easy to mix into one misleading outcome.
   lesson: Validate the response field, collapse repeated records, and state what the observational result cannot prove.
@@ -70,6 +78,7 @@
     - Per-case responder/progressor labels under a stated rule
     - Mann-Whitney comparison of ECOG between response groups
     - Agent frequency table
+    - A two-panel chart of response composition and ECOG by response group
   steps:
     - Facet the two response-bearing fields and classify their values
     - Collapse one-to-many treatment records to one label per case
@@ -79,6 +88,8 @@
   datasets: [gdc-cgci-htmcp-cc, gdc-cgci-htmcp-dlbcl, gdc-cgci-htmcp-lc]
 
 - workbook: 04_scarce_modality_cptac
+  figure: >-
+    Horizontal bars of the case count for each measured layer in the target cohort, with a dashed line at the smallest layer marking the ceiling on any analysis needing every layer at once.
   title: Find and use the scarcest measurements in the portfolio
   problem: Rare proteomic layers are scattered across study records and may cover different patients.
   lesson: Find genuinely scarce measurements and bound the complete-case cohort before designing the study.
@@ -95,6 +106,7 @@
     - Cohorts carrying two or more scarce layers
     - Layer overlap bounding a complete-case analysis
     - Citation counts demonstrating that PDC accessions are not quoted
+    - A chart of per-layer coverage with the complete-case ceiling marked
   steps:
     - Enumerate every PDC study through the public GraphQL endpoint
     - Rank analytical fractions by number of studies
@@ -105,6 +117,8 @@
   datasets: [pdc-cptac-stad-study, pdc-cptac-aml-study, pdc-cptac-luad-discovery-study]
 
 - workbook: 05_cross_repository_linkage
+  figure: >-
+    Paired horizontal bars per cohort comparing GDC molecular case counts with IDC imaging patient counts, where the shorter bar is the ceiling on a multimodal study of that cohort.
   title: Join the same patients across two NCI repositories
   problem: Molecular and imaging data for the same cohort live in separate NCI repositories.
   lesson: Join shared patient identifiers and quantify the real multimodal overlap, not the advertised totals.
@@ -120,6 +134,7 @@
     - Patient-level intersection between a GDC project and an IDC collection
     - Counts of molecular-only, imaging-only and joined patients
     - A map of every cohort present in both repositories
+    - A chart comparing molecular and imaging patient counts per linkable cohort
   steps:
     - Retrieve patient identifiers from the GDC project
     - Query IDC's public SQL endpoint for the collection's patient identifiers
@@ -129,6 +144,8 @@
   datasets: [gdc-tcga-brca, gdc-tcga-gbm, idc-nsclc-radiogenomics, gdc-hcmi-cmdc]
 
 - workbook: 06_agent_dataset_selection
+  figure: >-
+    Horizontal bars of the fit score for each shortlisted dataset, with the selected cohort highlighted, showing whether the ranking is decided by overall fit or by one dominant term.
   title: Select a dataset the way an agent should
   problem: Ranking by size or fame can select a large dataset that cannot answer the question.
   lesson: Filter on measured capability, rank on fit, and carry blocking limitations into the analysis brief.
@@ -145,6 +162,7 @@
     - A transparent fit score favoring under-used resources
     - Blocking limitations read before committing
     - A machine-readable task brief for the next step
+    - A chart of the ranked fit scores with the selected cohort highlighted
   steps:
     - Load the structured index
     - Show what a naive size-ranked selection returns

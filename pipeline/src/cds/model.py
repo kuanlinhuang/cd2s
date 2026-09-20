@@ -674,6 +674,10 @@ class AnalysisExample(CDSModel):
         default=None,
         description="What the reader is left holding once it has run, in one sentence.",
     )
+    figure: str | None = Field(
+        default=None,
+        description="What the workbook's figure shows, for readers who cannot see it.",
+    )
     inputs: list[str] = Field(default_factory=list)
     outputs: list[str] = Field(default_factory=list)
     steps: list[str] = Field(default_factory=list)
@@ -683,6 +687,9 @@ class AnalysisExample(CDSModel):
     workbook_path: str | None = None
     workbook_url: str | None = None
     notebook_download_url: str | None = None
+    notebook_preview_url: str | None = None
+    notebook_preview_width: int | None = None
+    notebook_preview_height: int | None = None
     colab_url: str | None = None
     binder_url: str | None = None
     receipt: ExecutionReceipt | None = None

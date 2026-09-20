@@ -433,6 +433,11 @@ def write_all(
     from cds import workbooks as workbook_build
 
     notebook_files = {p.stem: p for p in workbook_build.WORKBOOK_OUT.glob("*.ipynb")}
+    # The figure a workbook produced is the most legible thing it has to offer, and it is
+    # locked inside the .ipynb until it is lifted out. Extracting it here means the site
+    # can show what the analysis looks like without a reader downloading anything.
+    previews = {name: workbook_build.first_figure(p) for name, p in notebook_files.items()}
+    previews = {name: png for name, png in previews.items() if png}
     for record in records:
         for example in record.analysis_examples:
             if not example.workbook_path:
@@ -440,6 +445,11 @@ def write_all(
             name = example.template_source or example.workbook_path.rsplit("/", 1)[-1].removesuffix(".py")
             if name in notebook_files:
                 example.notebook_download_url = f"/data/notebooks/{name}.ipynb"
+            if name in previews:
+                width, height = workbook_build.png_size(previews[name])
+                example.notebook_preview_url = f"/data/notebooks/{name}.png"
+                example.notebook_preview_width = width
+                example.notebook_preview_height = height
 
     # Agent package links are a pure function of the record id, so they are set before
     # anything is serialized. They used to be filled in afterwards, which meant every
@@ -469,15 +479,20 @@ def write_all(
         # The directory is a pure function of the current workbook set. Without this,
         # a renamed or retired workbook stays committed and publicly served with no
         # record pointing at it.
-        keep = {source.name for source in notebook_files.values()}
-        for stale in notebook_dir.glob("*.ipynb"):
+        keep = {source.name for source in notebook_files.values()} | {
+            f"{name}.png" for name in previews
+        }
+        for stale in [*notebook_dir.glob("*.ipynb"), *notebook_dir.glob("*.png")]:
             if stale.name not in keep:
                 stale.unlink()
         for source in notebook_files.values():
             shutil.copyfile(source, notebook_dir / source.name)
+        for name, png in previews.items():
+            (notebook_dir / f"{name}.png").write_bytes(png)
         written[f"{target.name}/notebooks/*.ipynb"] = sum(
             source.stat().st_size for source in notebook_files.values()
         )
+        written[f"{target.name}/notebooks/*.png"] = sum(len(p) for p in previews.values())
 
     # One dump per record, written to both targets. The dump dominates export time.
     n_bytes = 0

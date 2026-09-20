@@ -326,6 +326,7 @@ export interface AnalysisExample {
   question: string;
   problem?: string | null;
   lesson?: string | null;
+  figure?: string | null;
   inputs: string[];
   outputs: string[];
   steps: string[];
@@ -335,6 +336,9 @@ export interface AnalysisExample {
   workbook_path?: string | null;
   workbook_url?: string | null;
   notebook_download_url?: string | null;
+  notebook_preview_url?: string | null;
+  notebook_preview_width?: number | null;
+  notebook_preview_height?: number | null;
   colab_url?: string | null;
   binder_url?: string | null;
   receipt?: ExecutionReceipt | null;

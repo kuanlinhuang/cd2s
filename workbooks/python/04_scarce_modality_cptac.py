@@ -208,13 +208,21 @@ def finish(ax, title):
 
 # %%
 ordered = target.sort_values("cases")
+# One row per study, not per fraction: a cohort can carry the same analytical fraction
+# twice under different experiment types, so the bars sit on numeric positions and the
+# labels name both. Plotting against the fraction alone silently merges those rows.
+pos = list(range(len(ordered)))
 fig, ax = plt.subplots(figsize=(8.8, 0.46 * len(ordered) + 2.0))
-ax.barh(ordered["fraction"], ordered["cases"], color=ACCENT, height=0.6)
+ax.barh(pos, ordered["cases"], color=ACCENT, height=0.6)
+ax.set_yticks(pos)
+ax.set_yticklabels(
+    [f"{f} ({e})" for f, e in zip(ordered["fraction"], ordered["experiment"], strict=True)]
+)
 ax.axvline(n_min, color=WARN, lw=1.6, ls="--")
 ax.text(n_min, len(ordered) - 0.35, f" complete-case bound: {n_min} cases",
         color=WARN, fontsize=8.5, va="center")
-for i, (_, row) in enumerate(ordered.iterrows()):
-    ax.text(row["cases"], i, f" {int(row['cases'])}", va="center", fontsize=8.5, color=INK)
+for i, v in enumerate(ordered["cases"]):
+    ax.text(v, i, f" {int(v)}", va="center", fontsize=8.5, color=INK)
 ax.set_xlabel("cases with this layer")
 ax.set_xlim(0, n_max * 1.18)
 ax.grid(axis="y", visible=False)

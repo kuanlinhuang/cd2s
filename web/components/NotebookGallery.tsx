@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Chip } from "@/components/ui";
@@ -49,6 +50,24 @@ export default function NotebookGallery({
                   {guide.title}
                 </h3>
                 <p className="mt-2 text-body t-muted">{guide.question}</p>
+
+                {guide.notebook_preview_url &&
+                  guide.notebook_preview_width &&
+                  guide.notebook_preview_height && (
+                    <figure
+                      className="mt-4 overflow-hidden rounded-lg border"
+                      style={{ borderColor: "var(--border-strong)", background: "#ffffff" }}
+                    >
+                      <Image
+                        src={guide.notebook_preview_url}
+                        alt={guide.figure ?? `Figure produced by ${guide.title}`}
+                        width={guide.notebook_preview_width}
+                        height={guide.notebook_preview_height}
+                        sizes={compact ? "(min-width: 1024px) 30vw, 100vw" : "(min-width: 1024px) 55vw, 100vw"}
+                        className="block h-auto w-full"
+                      />
+                    </figure>
+                  )}
 
                 {(guide.problem || guide.lesson) && (
                   <div className="mt-4 space-y-3">
