@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-cmi-asc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-asc",
   "name": "Count Me In (CMI): The Angiosarcoma (ASC) Project",
   "alternateName": [
     "CMI-ASC"
   ],
   "description": "Count Me In (CMI): The Angiosarcoma (ASC) Project",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cmi-asc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-asc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CMI-ASC",
     "gdc_program:CMI",
@@ -54,7 +54,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -66,7 +66,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-cmi-asc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cmi-asc.json",
       "encodingFormat": "application/json"
     }
   ],

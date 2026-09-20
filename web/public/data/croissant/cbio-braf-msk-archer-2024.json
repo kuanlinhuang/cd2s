@@ -9,7 +9,7 @@
   "name": "cbio-braf-msk-archer-2024",
   "alternateName": "BRAF Fusions - ARCHER Clinical Sequencing Cohort (MSK, Clin Cancer Res 2024)",
   "description": "Targeted sequencing of 107 clinical cases via ARCHER to characterize the structure and impact of BRAF fusions on clinical course in a tumor-agnostic approach. This study is part of a broader analysis and is complemented by a parallel study using MSK-IMPACT sequencing (see related MSK-IMPACT study).",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-braf-msk-archer-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-braf-msk-archer-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

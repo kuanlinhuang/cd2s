@@ -9,7 +9,7 @@
   "name": "cbio-blca-nmibc-2017",
   "alternateName": "Nonmuscle Invasive Bladder Cancer (MSK Eur Urol 2017)",
   "description": "IMPACT sequencing of 105 High Risk Nonmuscle Invasive Bladder Cancer samples.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-blca-nmibc-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-nmibc-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

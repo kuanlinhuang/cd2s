@@ -9,7 +9,7 @@
   "name": "cbio-acyc-mskcc-2013",
   "alternateName": "Adenoid Cystic Carcinoma (MSK, Nat Genet 2013)",
   "description": "Whole-exome or whole-genome sequencing analysis of 60 ACC tumor/normal pairs",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-acyc-mskcc-2013",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-acyc-mskcc-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

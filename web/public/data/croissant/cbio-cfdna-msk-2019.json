@@ -9,7 +9,7 @@
   "name": "cbio-cfdna-msk-2019",
   "alternateName": "Mixed cfDNA (MSK, Nature Medicine 2019)",
   "description": "Targeted sequencing of 248 samples from 124 patients' cfDNA/WBC and tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-cfdna-msk-2019",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cfdna-msk-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

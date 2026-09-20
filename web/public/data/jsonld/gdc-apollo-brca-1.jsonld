@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-apollo-brca-1",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-apollo-brca-1",
   "name": "Proteogenomic analysis of tumors from young women with breast cancer",
   "alternateName": [
     "APOLLO-BRCA-1"
   ],
   "description": "Proteogenomic analysis of tumors from young women with breast cancer",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-apollo-brca-1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-apollo-brca-1",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/APOLLO-BRCA-1",
     "gdc_program:APOLLO",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-apollo-brca-1.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-apollo-brca-1.json",
       "encodingFormat": "application/json"
     }
   ],

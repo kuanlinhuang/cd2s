@@ -9,7 +9,7 @@
   "name": "gdc-tcga-kich",
   "alternateName": "Kidney Chromophobe",
   "description": "The Cancer Genome Atlas-Kidney Chromophobe (TCGA-KICH) data collection is part of a larger effort to enhance the The Cancer Genome Atlas (TCGA) https://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions has archived a large portion of the radiological images of the genetically-analyzed KICH cases. Please see the TCGA-KICH page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-KICH collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-kich",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-kich",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "The somatic genomic landscape of chromophobe renal cell carcinoma",
   "version": "as-retrieved",

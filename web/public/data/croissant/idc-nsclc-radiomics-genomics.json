@@ -9,7 +9,7 @@
   "name": "idc-nsclc-radiomics-genomics",
   "alternateName": "NSCLC-Radiomics-Genomics",
   "description": "This collection contains images from 89 non-small cell lung cancer (NSCLC) patients that were treated with surgery. For these patients pretreatment CT scans, gene expression, and clinical data are available. This dataset refers to the Lung3 dataset of the study published in Nature Communications. Please see the NSCLC Radiomics Genomics page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiomics-genomics",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics-genomics",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NSCLC-Radiomics-Genomics",
   "version": "as-retrieved",

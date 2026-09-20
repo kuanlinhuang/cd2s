@@ -9,7 +9,7 @@
   "name": "cbio-skcm-yale",
   "alternateName": "Skin Cutaneous Melanoma (Yale, Nat Genet 2012)",
   "description": "Exome sequencing of 147 melanoma samples with 99 matched normals.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-yale",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-yale",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

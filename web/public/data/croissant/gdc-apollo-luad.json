@@ -9,7 +9,7 @@
   "name": "gdc-apollo-luad",
   "alternateName": "APOLLO1: Proteogenomic characterization of lung adenocarcinoma",
   "description": "APOLLO1: Proteogenomic characterization of lung adenocarcinoma",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-apollo-luad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-apollo-luad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic analysis of lung adenocarcinoma reveals tumor heterogeneity, survival determinants, and therapeutically relevant pathways.",
   "version": "as-retrieved",

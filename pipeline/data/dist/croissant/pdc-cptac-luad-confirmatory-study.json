@@ -9,7 +9,7 @@
   "name": "pdc-cptac-luad-confirmatory-study",
   "alternateName": "CPTAC LUAD Confirmatory Study",
   "description": "CPTAC LUAD Confirmatory Study",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-luad-confirmatory-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-luad-confirmatory-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC LUAD Confirmatory Study",
   "version": "as-retrieved",

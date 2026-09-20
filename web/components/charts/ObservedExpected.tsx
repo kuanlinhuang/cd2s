@@ -32,7 +32,7 @@ export function ObservedExpected({
           label: "Analyzed it",
           value: observed,
           tone: underexplored ? "emphasis" : "primary",
-          title: `${observed.toLocaleString("en-US")} articles place the accession in their methods, results, a table or a figure`,
+          title: `${observed.toLocaleString("en-US")} articles place the accession in their methods section`,
         },
         {
           key: "expected",

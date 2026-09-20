@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-ct-colonography",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-colonography",
   "name": "CT COLONOGRAPHY",
   "alternateName": [
     "ct_colonography"
   ],
   "description": "The CT Colonography collection consists of a limited portion of The National CT Colonography Trial (ACRIN PROTOCOL 6664). The collection is offered to enlarge the broader research community''s ability to develop CAD algorithms for polyp detection. Please see the CT COLONOGRAPHY wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-colonography",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-colonography",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_colonography",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-ct-colonography.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ct-colonography.json",
       "encodingFormat": "application/json"
     }
   ],

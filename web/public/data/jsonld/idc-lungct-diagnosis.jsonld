@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-lungct-diagnosis",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-lungct-diagnosis",
   "name": "LungCT-Diagnosis",
   "alternateName": [
     "lungct_diagnosis"
   ],
   "description": "This is a small set of 61 diagnostic contrast enhanced CT scans with known tumors. The images were retrospectively acquired, to ensure sufficient patient follow-up. Slice thickness is variable : between 3 and 6 mm. All images were done at diagnosis and prior to surgery. Please see the LungCT-Diagnosis page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-lungct-diagnosis",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lungct-diagnosis",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=lungct_diagnosis",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-lungct-diagnosis.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-lungct-diagnosis.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-cptac-luad-discovery-study",
   "alternateName": "CPTAC LUAD Discovery Study",
   "description": "Ubiquitylation is the scarcest proteomic modification layer in the NCI portfolio: five studies across the whole Proteomic Data Commons carry it, and this is one of them. On 80 of these 115 lung adenocarcinomas, protein degradation signaling can be measured directly rather than inferred, alongside acetylome and phosphoproteome on all 115.\nBecause the ubiquitin-proteasome system is a validated therapeutic axis and degradation state is invisible to transcriptomics, this layer answers questions that no expression cohort can. All of it is open and needs no account.",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-luad-discovery-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-luad-discovery-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC LUAD Discovery Study",
   "version": "as-retrieved",

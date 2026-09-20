@@ -9,7 +9,7 @@
   "name": "idc-prostate-3t",
   "alternateName": "Prostate-3T",
   "description": "Prostate transversal T2 -weighted MRIs acquired on a 3.0T Siemens TrioTim using only a pelvic phased array coil. Images were acquired for prostate cancer detection. Please see the Prostate-3T page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostate-3t",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-3t",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Prostate-3T",
   "version": "as-retrieved",

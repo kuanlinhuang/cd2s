@@ -9,7 +9,7 @@
   "name": "pdc-cptac-aml-study",
   "alternateName": "CPTAC AML Study",
   "description": "Lipidomics is the scarcest measurement type in the entire corpus indexed here: three studies carry it, all within CPTAC, and this is the largest. Combined with metabolomics on the same 98 patients and four proteomic layers on all 164, it supports metabolic questions in leukaemia that cannot be posed anywhere else with measured rather than inferred data.\nAML is a disease where metabolic state has clear therapeutic relevance, and where measured lipid and metabolite data on primary patient samples are close to unobtainable. The barrier to reuse here is discoverability rather than access: everything is open, and nothing about the PDC catalog entry tells a metabolism researcher that this cohort exists.",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-aml-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-aml-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC AML Study",
   "version": "as-retrieved",

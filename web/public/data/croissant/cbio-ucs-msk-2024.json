@@ -9,7 +9,7 @@
   "name": "cbio-ucs-msk-2024",
   "alternateName": "Endometrial Carcinoma (MSK, Molecular Oncology 2024)",
   "description": "Targeted sequencing of 69 ERBB2-mutant endometrial carcinoma tumors and their matched normal pairs via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ucs-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ucs-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

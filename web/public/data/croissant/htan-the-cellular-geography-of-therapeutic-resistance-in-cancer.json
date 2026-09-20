@@ -9,7 +9,7 @@
   "name": "htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
   "alternateName": "The Cellular Geography of Therapeutic Resistance in Cancer",
   "description": "Of the fourteen HTAN atlases, this is the one whose stated purpose is resistance: mapping where in a tumor resistant cells survive treatment. It carries 20,350 files across multiplexed tissue imaging, single-cell RNA sequencing and bulk DNA, and it is the only atlas in the network carrying the extended clinical data tier alongside therapy, follow-up, exposure, family history and molecular test components.\nIt is also the clearest case in this corpus of a resource that is well built and apparently unused. HTAN maintains its own publication manifest, and this atlas has no entry in it - unlike most atlases, which record three to five publications. The combination of a resistance-focused design, unusually complete clinical annotation and no recorded downstream use makes it the strongest reuse opportunity we identified.",
-  "url": "https://cancer-data-showcase.example.org/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "The Cellular Geography of Therapeutic Resistance in Cancer",
   "version": "as-retrieved",

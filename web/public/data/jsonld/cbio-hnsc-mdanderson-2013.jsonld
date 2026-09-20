@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-hnsc-mdanderson-2013",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnsc-mdanderson-2013",
   "name": "Oral Squamous Cell Carcinoma (MD Anderson, Cancer Discov 2013)",
   "alternateName": [
     "hnsc_mdanderson_2013"
   ],
   "description": "Whole-exome sequencing of 40 oral squamous cell carcinoma tumor/normal sample pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hnsc-mdanderson-2013",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnsc-mdanderson-2013",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=hnsc_mdanderson_2013"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-hnsc-mdanderson-2013.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-hnsc-mdanderson-2013.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
   "alternateName": "Prospective Ovarian PNNL Phosphoproteome Lumos",
   "description": "Prospective Ovarian PNNL Phosphoproteome Lumos",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Prospective Ovarian PNNL Phosphoproteome Lumos",
   "version": "as-retrieved",

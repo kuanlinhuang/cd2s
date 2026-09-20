@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-glioma-mskcc-2019",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-glioma-mskcc-2019",
   "name": "Glioma (MSK, Clin Cancer Res 2019)",
   "alternateName": [
     "glioma_mskcc_2019"
   ],
   "description": "Targeted sequencing on MSK-IMPACT and FMI Panels of 1004 samples (837 with matched normals) from 923 glioma patients.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-glioma-mskcc-2019",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-glioma-mskcc-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=glioma_mskcc_2019"
   ],
@@ -46,7 +46,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -58,7 +58,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-glioma-mskcc-2019.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-glioma-mskcc-2019.json",
       "encodingFormat": "application/json"
     }
   ],

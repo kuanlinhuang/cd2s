@@ -9,7 +9,7 @@
   "name": "pdc-ncc-icc",
   "alternateName": "NCC iCC",
   "description": "NCC iCC",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ncc-icc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ncc-icc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NCC iCC",
   "version": "as-retrieved",

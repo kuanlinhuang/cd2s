@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-ct4harmonization-multicentric",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ct4harmonization-multicentric",
   "name": "CT4Harmonization-Multicentric",
   "alternateName": [
     "ct4harmonization_multicentric"
   ],
   "description": "This collection introduces an open-source, anthropomorphic phantom-based dataset of CT scans for developing harmonization methods for deep learning based models. The phantom mimics human anatomy, allowing repeated scans without radiation delivery to real patients and isolating scanner effects by removing inter- and intra-patient variations. The dataset includes 268 image series from 13 scanners, 4 manufacturers, and 8 institutions, repeated 18-30 times at a 10 mGy dose using a harmonized protocol. An additional 1,378 image series were acquired with the same 13 scanners and harmonized protocol but including additional acquisition doses. The presented phantom scans consist of three compartments from thorax, liver and test patterns. The 3D-printed liver includes three types of abnormal regions of interest, including two cysts, a metastasis, and a hemangioma, with ground truth segmentation masks that could be used for classification and segmentation. Please see the CT4Harmonization-Multicentric landing page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct4harmonization-multicentric",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ct4harmonization-multicentric",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct4harmonization_multicentric",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-ct4harmonization-multicentric.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ct4harmonization-multicentric.json",
       "encodingFormat": "application/json"
     }
   ],

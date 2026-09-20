@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-ctsp-dlbcl1",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-ctsp-dlbcl1",
   "name": "CTSP Diffuse Large B-Cell Lymphoma (DLBCL) CALGB 50303",
   "alternateName": [
     "CTSP-DLBCL1"
   ],
   "description": "What makes this cohort worth knowing about is not its size but its provenance. The samples come from CALGB 50303, a randomized phase III trial comparing dose-adjusted EPOCH-R against R-CHOP as frontline therapy for diffuse large B-cell lymphoma. Molecular data collected inside a randomized trial are scarce: treatment assignment is not confounded with patient characteristics, which is the assumption that almost every observational treatment-response analysis has to make and cannot verify.\nVital status is informative for 100% of the 45 cases and median follow-up is 60.4 months. RNA sequencing covers 44 cases, exome 44 and a targeted panel all 45.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-ctsp-dlbcl1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ctsp-dlbcl1",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CTSP-DLBCL1",
     "gdc_program:CTSP",
@@ -53,7 +53,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -65,7 +65,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-ctsp-dlbcl1.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-ctsp-dlbcl1.json",
       "encodingFormat": "application/json"
     }
   ],

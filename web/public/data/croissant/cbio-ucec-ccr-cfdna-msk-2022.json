@@ -9,7 +9,7 @@
   "name": "cbio-ucec-ccr-cfdna-msk-2022",
   "alternateName": "Endometrial Carcinoma cfDNA (MSK, Clin Cancer Res 2022)",
   "description": "High-sensitivity mutation analysis of cell-free DNA for disease monitoring in endometrial cancer.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ucec-ccr-cfdna-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ucec-ccr-cfdna-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

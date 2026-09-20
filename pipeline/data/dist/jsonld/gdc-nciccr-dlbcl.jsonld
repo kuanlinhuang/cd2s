@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-nciccr-dlbcl",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-nciccr-dlbcl",
   "name": "Genomic Variation in Diffuse Large B Cell Lymphomas",
   "alternateName": [
     "NCICCR-DLBCL"
   ],
   "description": "Genomic Variation in Diffuse Large B Cell Lymphomas",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-nciccr-dlbcl",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-nciccr-dlbcl",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/NCICCR-DLBCL",
     "gdc_program:NCICCR",
@@ -46,7 +46,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -58,7 +58,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-nciccr-dlbcl.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-nciccr-dlbcl.json",
       "encodingFormat": "application/json"
     }
   ],

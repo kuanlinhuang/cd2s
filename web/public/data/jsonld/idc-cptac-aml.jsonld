@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cptac-aml",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-aml",
   "name": "CPTAC-AML",
   "alternateName": [
     "cptac_aml"
   ],
   "description": "This collection contains subjects from the National Cancer Institute\u2019s Clinical Proteomic Tumor Analysis Consortium Acute Myeloid Leukemia (CPTAC-AML) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Please see the DICOM converted Slide Microscopy images for the CPTAC-AML collection wiki page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-cptac-aml",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-aml",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cptac_aml",
     "https://www.cancerimagingarchive.net/collections/",
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cptac-aml.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cptac-aml.json",
       "encodingFormat": "application/json"
     }
   ],

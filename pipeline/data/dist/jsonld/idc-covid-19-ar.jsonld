@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-covid-19-ar",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-covid-19-ar",
   "name": "COVID-19-AR",
   "alternateName": [
     "covid_19_ar"
   ],
   "description": "Radiology imaging is playing an increasingly vital role in the diagnosis of COVID-19 patients and determining therapeutic options, patient care management and new research directions. We have published a collection of radiographic and CT imaging studies for patients who tested positive for COVID-19. Each patient is described by a limited set of clinical data correlates that includes demographics, comorbidities, selected lab data and key radiology findings. These data are cross-linked to SARS-COV-2 cDNA sequence data extracted from clinical isolates from the same population, uploaded to the Genbank repository. Please see the COVID-19-AR page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-covid-19-ar",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-covid-19-ar",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=covid_19_ar",
     "https://www.cancerimagingarchive.net/collections/",
@@ -46,7 +46,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -58,7 +58,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-covid-19-ar.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-covid-19-ar.json",
       "encodingFormat": "application/json"
     }
   ],

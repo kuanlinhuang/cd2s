@@ -9,7 +9,7 @@
   "name": "idc-ct-colonography",
   "alternateName": "CT COLONOGRAPHY",
   "description": "The CT Colonography collection consists of a limited portion of The National CT Colonography Trial (ACRIN PROTOCOL 6664). The collection is offered to enlarge the broader research community''s ability to develop CAD algorithms for polyp detection. Please see the CT COLONOGRAPHY wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-colonography",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-colonography",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CT COLONOGRAPHY",
   "version": "as-retrieved",

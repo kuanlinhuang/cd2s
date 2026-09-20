@@ -83,4 +83,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-cgci-htmcp-dlbcl.json
+- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-dlbcl.json

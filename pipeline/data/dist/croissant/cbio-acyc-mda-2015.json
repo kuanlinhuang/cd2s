@@ -9,7 +9,7 @@
   "name": "cbio-acyc-mda-2015",
   "alternateName": "Adenoid Cystic Carcinoma (MDA, Clin Cancer Res 2015)",
   "description": "WGS of 21 salivary ACCs and targeted molecular analyses of a validation set (81 patients).",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-acyc-mda-2015",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-acyc-mda-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

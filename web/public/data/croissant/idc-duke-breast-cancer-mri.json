@@ -9,7 +9,7 @@
   "name": "idc-duke-breast-cancer-mri",
   "alternateName": "Duke-Breast-Cancer-MRI",
   "description": "Dynamic contrast-enhanced magnetic resonance images of breast cancer patients with tumor locations (Duke-Breast-Cancer-MRI). Please see the Duke-Breast-Cancer-MRI wiki page to learn more about the images and to obtain the supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-duke-breast-cancer-mri",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-duke-breast-cancer-mri",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Duke-Breast-Cancer-MRI",
   "version": "as-retrieved",

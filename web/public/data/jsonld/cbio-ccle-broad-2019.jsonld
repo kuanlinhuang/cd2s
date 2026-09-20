@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-ccle-broad-2019",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-ccle-broad-2019",
   "name": "Cancer Cell Line Encyclopedia (Broad, 2019)",
   "alternateName": [
     "ccle_broad_2019"
   ],
   "description": "Cancer Cell Line Encyclopedia from the Broad Institute and Novartis, updated 2019. Data downloaded from the Broad CCLE Portal. For more info about the proteomics data, see the README.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ccle-broad-2019",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ccle-broad-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=ccle_broad_2019"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-ccle-broad-2019.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-ccle-broad-2019.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-nci-7-cell-line-panel",
   "alternateName": "NCI-7 Cell Line Panel",
   "description": "NCI-7 Cell Line Panel",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-nci-7-cell-line-panel",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-nci-7-cell-line-panel",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NCI-7 Cell Line Panel",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-hnc-mskcc-2016",
   "alternateName": "Recurrent and Metastatic Head & Neck Cancer (MSK, JAMA Oncol 2016)",
   "description": "Targeted sequencing of 151 patients with advanced, treatment resistant head and neck tumors",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hnc-mskcc-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnc-mskcc-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

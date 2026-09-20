@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-pancreas-ct",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-pancreas-ct",
   "name": "Pancreas-CT",
   "alternateName": [
     "pancreas_ct"
   ],
   "description": "The National Institutes of Health Clinical Center performed 82 abdominal contrast enhanced 3D CT scans (~70 seconds after intravenous contrast injection in portal-venous) from 53 male and 27 female subjects. Seventeen of the subjects are healthy kidney donors scanned prior to nephrectomy. The remaining 65 patients were selected by a radiologist from patients who neither had major abdominal pathologies nor pancreatic cancer lesions. A medical student manually performed slice-by-slice segmentations of the pancreas as ground-truth and these were verified/modified by an experienced radiologist. Please see the Pancreas-CT wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-pancreas-ct",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pancreas-ct",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pancreas_ct",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-pancreas-ct.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-pancreas-ct.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-cores",
   "alternateName": "Microscaled Proteogenomic Methods for Precision Oncology PDX cores",
   "description": "Microscaled Proteogenomic Methods for Precision Oncology PDX cores",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-cores",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-cores",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Microscaled Proteogenomic Methods for Precision Oncology PDX cores",
   "version": "as-retrieved",

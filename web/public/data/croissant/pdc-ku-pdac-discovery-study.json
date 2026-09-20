@@ -9,7 +9,7 @@
   "name": "pdc-ku-pdac-discovery-study",
   "alternateName": "KU PDAC Discovery Study",
   "description": "KU PDAC Discovery Study",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ku-pdac-discovery-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ku-pdac-discovery-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "MAP3K1/MAP2K4 mutations drive breast cancer progression by compensating for TP53 loss through inactivation of the JNK2-p53-FOSL1 axis.",
   "version": "as-retrieved",

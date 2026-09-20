@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiomics-interobserver1",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics-interobserver1",
   "name": "NSCLC-Radiomics-Interobserver1",
   "alternateName": [
     "nsclc_radiomics_interobserver1"
   ],
   "description": "NSCLC-Radiomics-Interobserver1 contains clinical data and computed tomography (CT) from 22 non-small cell lung cancer (NSCLC) radiotherapy patients. This dataset refers to the \"Multiple delineation\" dataset of the study published in Nature Communications). In short, the publication used a radiomics approach to computed tomography data of 1,019 patients with lung or head-and-neck cancer. Please see the NSCLC-Radiomics-Interobserver1 page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiomics-interobserver1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics-interobserver1",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiomics_interobserver1",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-nsclc-radiomics-interobserver1.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiomics-interobserver1.json",
       "encodingFormat": "application/json"
     }
   ],

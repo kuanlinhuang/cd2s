@@ -9,7 +9,7 @@
   "name": "cbio-prad-fhcrc",
   "alternateName": "Prostate Adenocarcinoma (Fred Hutchinson CRC, Nat Med 2016)",
   "description": "Whole-exome sequencing, array comparative genomic hybridization (CGH) and RNA transcript profiling of 176 tumors from 63 patients with disseminated prostate cancer with matched normals.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-fhcrc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-fhcrc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

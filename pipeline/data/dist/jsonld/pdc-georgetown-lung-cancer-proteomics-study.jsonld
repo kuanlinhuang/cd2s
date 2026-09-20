@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-georgetown-lung-cancer-proteomics-study",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-georgetown-lung-cancer-proteomics-study",
   "name": "Georgetown Lung Cancer Proteomics Study",
   "alternateName": [
     "Georgetown Lung Cancer Proteomics Study"
   ],
   "description": "Georgetown Lung Cancer Proteomics Study",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-georgetown-lung-cancer-proteomics-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-georgetown-lung-cancer-proteomics-study",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000231"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-georgetown-lung-cancer-proteomics-study.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-georgetown-lung-cancer-proteomics-study.json",
       "encodingFormat": "application/json"
     }
   ],

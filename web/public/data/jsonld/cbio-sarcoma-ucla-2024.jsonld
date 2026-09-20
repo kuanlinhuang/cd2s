@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-sarcoma-ucla-2024",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-sarcoma-ucla-2024",
   "name": "Sarcoma (UCLA, Cell 2024)",
   "alternateName": [
     "sarcoma_ucla_2024"
   ],
   "description": "Targeted sequencing of 63 out of 194 soft tissue sarcoma samples using OncoPanel v3 platform.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-sarcoma-ucla-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-sarcoma-ucla-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=sarcoma_ucla_2024"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-sarcoma-ucla-2024.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-sarcoma-ucla-2024.json",
       "encodingFormat": "application/json"
     }
   ],

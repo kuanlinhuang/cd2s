@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-blca-iatlas-imvigor210-2017",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-iatlas-imvigor210-2017",
   "name": "Metastatic Bladder Urothelial Carcinoma (IMvigor210 Phase II Trial, ESMO Open. 2024) - iAtlas Harmonized",
   "alternateName": [
     "blca_iatlas_imvigor210_2017"
   ],
   "description": "Whole-exome sequencing and neoantigen landscape analysis of 347 metastatic bladder urothelial carcinomas and their matched normals, generated from a phase II trial of atezolizumab monotherapy in cisplatin-ineligible and platinum-pretreated patients. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-blca-iatlas-imvigor210-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-iatlas-imvigor210-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=blca_iatlas_imvigor210_2017"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-blca-iatlas-imvigor210-2017.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-blca-iatlas-imvigor210-2017.json",
       "encodingFormat": "application/json"
     }
   ],

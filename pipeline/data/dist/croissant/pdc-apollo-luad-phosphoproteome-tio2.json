@@ -9,7 +9,7 @@
   "name": "pdc-apollo-luad-phosphoproteome-tio2",
   "alternateName": "APOLLO LUAD - Phosphoproteome - TiO2",
   "description": "APOLLO LUAD - Phosphoproteome - TiO2",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-apollo-luad-phosphoproteome-tio2",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-luad-phosphoproteome-tio2",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "APOLLO LUAD - Phosphoproteome - TiO2",
   "version": "as-retrieved",

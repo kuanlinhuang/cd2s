@@ -9,7 +9,7 @@
   "name": "idc-ct-vs-pet-ventilation-imaging",
   "alternateName": "CT-vs-PET-Ventilation-Imaging",
   "description": "The purpose of the CT Ventilation as a Functional Imaging Modality for Lung Cancer Radiotherapy study was to enable comparisons between: (i) CT ventilation images derived from exhale/inhale BHCT scans, (ii) CT ventilation images derived from free-breathing 4DCT scans, and (iii) Galligas PET (nuclear medicine) ventilation scans. This dataset can build the international capacity for prototyping and evaluating new CT ventilation imaging technologies. For this study, 20 lung cancer patients underwent exhale/inhale breath hold CT (BHCT), free-breathing four-dimensional CT (4DCT) and Galligas PET ventilation scans in a single session on a combined 4DPET/CT scanner.All image acquisitions were performed on a Siemens Biograph mCT.S/64 PET/CT scanner (Siemens, Knoxville, USA) at the Royal North Shore Hospital between 2013 and 2015. A total of 20 4DCT scans, 20 inhale/exhale BHCT scans, 20 Galligas PET scans and 19 attenuation CT scans (missing for CT-PET-VI-07) were successfully acquired for the 20 patients and included in this dataset. Please see the CT-vs-PET-Ventilation-Imaging wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-ct-vs-pet-ventilation-imaging",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-vs-pet-ventilation-imaging",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CT-vs-PET-Ventilation-Imaging",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-msk-mdanderson-2023",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-msk-mdanderson-2023",
   "name": "Prostate Cancer MDA PCa PDX (MD Anderson, Clin Cancer Res 2024)",
   "alternateName": [
     "prad_msk_mdanderson_2023"
   ],
   "description": "Targeted sequencing and whole-genome sequencing of 88 MD Anderson Prostate Cancer PDX models derived from 38 patients with tumor.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-msk-mdanderson-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-msk-mdanderson-2023",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_msk_mdanderson_2023"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-msk-mdanderson-2023.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-msk-mdanderson-2023.json",
       "encodingFormat": "application/json"
     }
   ],

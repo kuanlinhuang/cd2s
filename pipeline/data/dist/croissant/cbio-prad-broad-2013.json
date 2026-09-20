@@ -9,7 +9,7 @@
   "name": "cbio-prad-broad-2013",
   "alternateName": "Prostate Adenocarcinoma (Broad/Cornell, Cell 2013)",
   "description": "Whole genome sequencing of 57 prostate tumor and matches normal tissues.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-broad-2013",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-broad-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

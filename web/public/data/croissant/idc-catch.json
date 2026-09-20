@@ -9,7 +9,7 @@
   "name": "idc-catch",
   "alternateName": "CATCH",
   "description": "This collection contains 350 H&E-stained whole slide images of seven canine cutaneous tumor subtypes from 282 patients. The Pan-tumor CAnine CuTaneous Cancer Histology (CATCH) dataset includes melanoma, mast cell tumor, squamous cell carcinoma, peripheral nerve sheath tumor, trichoblastoma, histiocytoma, and plasmacytoma (50 slides per subtype). The original Aperio SVS images from TCIA were converted to DICOM SM format. Please see the CATCH Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-catch",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-catch",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CATCH",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiogenomics",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiogenomics",
   "name": "NSCLC Radiogenomics",
   "alternateName": [
     "nsclc_radiogenomics"
   ],
   "description": "Radiogenomics needs the same patients measured both ways, and almost no public resource provides it. This collection does: 211 patients imaged with thin-section CT and whole-body PET/CT before surgical excision, with a subset carrying matched microarray expression data deposited separately in the Gene Expression Omnibus.\nThe link between the two is recorded in the collection description as prose, not as a structured cross-reference, which is why the pairing is easy to miss. We extract that accession automatically and surface it here. Everything is openly downloadable with no account.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiogenomics",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiogenomics",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiogenomics",
     "https://www.cancerimagingarchive.net/collections/",
@@ -52,7 +52,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -64,7 +64,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-nsclc-radiogenomics.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiogenomics.json",
       "encodingFormat": "application/json"
     }
   ],

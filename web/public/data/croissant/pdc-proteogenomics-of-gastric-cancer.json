@@ -9,7 +9,7 @@
   "name": "pdc-proteogenomics-of-gastric-cancer",
   "alternateName": "Proteogenomics of Gastric Cancer",
   "description": "Proteogenomics of Gastric Cancer",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-proteogenomics-of-gastric-cancer",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomics of Gastric Cancer",
   "version": "as-retrieved",

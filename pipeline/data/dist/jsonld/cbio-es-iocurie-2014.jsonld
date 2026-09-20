@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-es-iocurie-2014",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-es-iocurie-2014",
   "name": "Ewing Sarcoma (Institut Curie, Cancer Discov 2014)",
   "alternateName": [
     "es_iocurie_2014"
   ],
   "description": "Whole-genome sequencing of 112 Ewing sarcoma samples and matched germ line DNA.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-es-iocurie-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-es-iocurie-2014",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=es_iocurie_2014"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-es-iocurie-2014.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-es-iocurie-2014.json",
       "encodingFormat": "application/json"
     }
   ],

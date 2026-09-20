@@ -9,7 +9,7 @@
   "name": "gdc-wcdt-mcrpc",
   "alternateName": "Genomic Characterization of Metastatic Castration Resistant Prostate Cancer",
   "description": "The West Coast Dream Team cohort is one of the few public resources that sequences metastatic castration-resistant prostate cancer tissue rather than primary tumor, which is what makes it valuable: the biology that drives lethal prostate cancer is not well represented in primary-tumor cohorts. All 101 cases carry whole genome sequencing with copy number and structural variant calls, and 99 carry RNA sequencing.\nThe clinical annotation is unusual in shape. Disease state is recorded with complete consistency - every case is AJCC stage IV, every case has progression or recurrence recorded as \"yes\", and every case's last known disease status is distant metastatic recurrence or progression. But vital status is \"unknown\" for all 101 cases, and no treatment field is populated. The cohort tells you precisely where these patients were in their disease course and nothing about what happened to them next.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-wcdt-mcrpc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-wcdt-mcrpc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic correlates of clinical outcome in advanced prostate cancer",
   "version": "as-retrieved",

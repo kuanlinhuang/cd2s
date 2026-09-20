@@ -9,7 +9,7 @@
   "name": "cbio-mixed-impact-subset-2022",
   "alternateName": "Pan-Cancer MSK-IMPACT MET Validation Cohort (MSK 2022)",
   "description": "Targeted sequencing of validation samples and their matched normal pairs (except 2samples)via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mixed-impact-subset-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mixed-impact-subset-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cbis-ddsm",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cbis-ddsm",
   "name": "CBIS-DDSM",
   "alternateName": [
     "cbis_ddsm"
   ],
   "description": "This CBIS-DDSM (Curated Breast Imaging Subset of DDSM) is an updated and standardized version of the Digital Database for Screening Mammography (DDSM) . The DDSM is a database of 2,620 scanned film mammography studies. It contains normal, benign, and malignant cases with verified pathology information. Please see the CBIS-DDSM page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-cbis-ddsm",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cbis-ddsm",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cbis_ddsm",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cbis-ddsm.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cbis-ddsm.json",
       "encodingFormat": "application/json"
     }
   ],

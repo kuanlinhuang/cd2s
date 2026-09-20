@@ -9,7 +9,7 @@
   "name": "idc-lungct-diagnosis",
   "alternateName": "LungCT-Diagnosis",
   "description": "This is a small set of 61 diagnostic contrast enhanced CT scans with known tumors. The images were retrospectively acquired, to ensure sufficient patient follow-up. Slice thickness is variable : between 3 and 6 mm. All images were done at diagnosis and prior to surgery. Please see the LungCT-Diagnosis page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-lungct-diagnosis",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lungct-diagnosis",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "LungCT-Diagnosis",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-adrenal-acc-ki67-seg",
   "alternateName": "Adrenal-ACC-Ki67-Seg",
   "description": "The Ki-67 index is one of the most important established prognostic markers for local recurrence of ACC. Radiomic feature extraction showed a significant association between radiomic signature and Ki-67 expression status in ACC. This retrospectively acquired data includes contrast enhanced CT imaging studies of 53 confirmed ACC patients between 2006 to 2018 with available clinical and pathological data, including Ki-67 index. Semi-automatic segmentation of the adrenal tumor was created using AMIRA, then manually refined by an experienced radiologist. The segmentations of each contrast-enhanced CT were done for the purpose of radiomic features extraction. Please see the Adrenal-ACC-Ki67-Seg wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-adrenal-acc-ki67-seg",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-adrenal-acc-ki67-seg",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Adrenal-ACC-Ki67-Seg",
   "version": "as-retrieved",

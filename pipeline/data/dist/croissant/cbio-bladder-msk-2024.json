@@ -9,7 +9,7 @@
   "name": "cbio-bladder-msk-2024",
   "alternateName": "Bladder Cancer (MSK, Eur Urol 2024)",
   "description": "Targeted sequencing of 112 bladder cancer patients and their tumor normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-bladder-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bladder-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-lcll-broad-2013",
   "alternateName": "Chronic Lymphocytic Leukemia (Broad, Cell 2013)",
   "description": "Whole-exome sequencing of 160 CLL tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lcll-broad-2013",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lcll-broad-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

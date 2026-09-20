@@ -9,7 +9,7 @@
   "name": "gdc-apollo-brca-1",
   "alternateName": "Proteogenomic analysis of tumors from young women with breast cancer",
   "description": "Proteogenomic analysis of tumors from young women with breast cancer",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-apollo-brca-1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-apollo-brca-1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic analysis of tumors from young women with breast cancer",
   "version": "as-retrieved",

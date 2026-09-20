@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-naf-prostate",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-naf-prostate",
   "name": "NaF PROSTATE",
   "alternateName": [
     "naf_prostate"
   ],
   "description": "This is a collection of F-18 NaF positron emission tomography/computed tomography (PET/CT) images in patients with prostate cancer, with suspected or known bone involvement. Please see the NaF PROSTATE page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-naf-prostate",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-naf-prostate",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=naf_prostate",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-naf-prostate.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-naf-prostate.json",
       "encodingFormat": "application/json"
     }
   ],

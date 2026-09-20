@@ -9,7 +9,7 @@
   "name": "gdc-match-z1i",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm Z1I",
   "description": "Genomic Characterization CS-MATCH-0007 Arm Z1I",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-match-z1i",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-z1i",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic Characterization CS-MATCH-0007 Arm Z1I",
   "version": "as-retrieved",

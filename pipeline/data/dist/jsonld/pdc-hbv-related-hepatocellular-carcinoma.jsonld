@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
   "name": "HBV-Related Hepatocellular Carcinoma",
   "alternateName": [
     "HBV-Related Hepatocellular Carcinoma - Phosphoproteome",
     "HBV-Related Hepatocellular Carcinoma - Proteome"
   ],
   "description": "HBV-Related Hepatocellular Carcinoma",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000199",
     "https://pdc.cancer.gov/pdc/study/PDC000198"
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-hbv-related-hepatocellular-carcinoma.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-hbv-related-hepatocellular-carcinoma.json",
       "encodingFormat": "application/json"
     }
   ],

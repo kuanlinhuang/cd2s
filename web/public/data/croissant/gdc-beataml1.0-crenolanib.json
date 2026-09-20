@@ -9,7 +9,7 @@
   "name": "gdc-beataml1.0-crenolanib",
   "alternateName": "Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms",
   "description": "Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-beataml1.0-crenolanib",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-beataml1.0-crenolanib",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Clinical resistance to crenolanib in acute myeloid leukemia due to diverse molecular mechanisms.",
   "version": "as-retrieved",

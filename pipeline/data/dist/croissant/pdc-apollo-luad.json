@@ -9,7 +9,7 @@
   "name": "pdc-apollo-luad",
   "alternateName": "APOLLO LUAD",
   "description": "APOLLO LUAD",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-apollo-luad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-luad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "APOLLO LUAD",
   "version": "as-retrieved",

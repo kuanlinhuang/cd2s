@@ -9,7 +9,7 @@
   "name": "pdc-simm-gallbladder-cancer",
   "alternateName": "SIMM Gallbladder Cancer",
   "description": "SIMM Gallbladder Cancer",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-simm-gallbladder-cancer",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-simm-gallbladder-cancer",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "SIMM Gallbladder Cancer",
   "version": "as-retrieved",

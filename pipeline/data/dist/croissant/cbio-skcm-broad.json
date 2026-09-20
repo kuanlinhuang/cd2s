@@ -9,7 +9,7 @@
   "name": "cbio-skcm-broad",
   "alternateName": "Skin Cutaneous Melanoma (Broad, Cell 2012)",
   "description": "Whole-exome sequencing of 121 melanoma samples with matched normals.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-broad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-broad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

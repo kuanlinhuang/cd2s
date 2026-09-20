@@ -9,7 +9,7 @@
   "name": "gdc-tcga-stad",
   "alternateName": "Stomach Adenocarcinoma",
   "description": "The Cancer Genome Atlas-Stomach Adenoarcinoma (TCGA-STAD) data collection is part of a larger effort to enhance the TCGA data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed STAD cases. Please see the TCGA-STAD page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-STAD collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-stad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-stad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Comprehensive molecular characterization of gastric adenocarcinoma",
   "version": "as-retrieved",

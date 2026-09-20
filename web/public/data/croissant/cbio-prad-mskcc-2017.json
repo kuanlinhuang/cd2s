@@ -9,7 +9,7 @@
   "name": "cbio-prad-mskcc-2017",
   "alternateName": "Prostate Cancer (MSK, JCO Precis Oncol 2017)",
   "description": "IMPACT sequencing of 504 prostate cancer tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-mskcc-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

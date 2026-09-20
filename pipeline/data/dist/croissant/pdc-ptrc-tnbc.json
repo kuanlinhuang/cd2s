@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-tnbc",
   "alternateName": "PTRC TNBC",
   "description": "PTRC TNBC",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-tnbc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-tnbc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PTRC TNBC",
   "version": "as-retrieved",

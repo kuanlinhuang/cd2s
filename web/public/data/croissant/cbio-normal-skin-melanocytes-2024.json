@@ -9,7 +9,7 @@
   "name": "cbio-normal-skin-melanocytes-2024",
   "alternateName": "Normal Melanocytes (UCSF, Nature 2020)",
   "description": "Whole exome sequencing and targeted sequencing data of 308 normal melanocytes samples from human skin. In addition to data retrieved from four different articles, the study is part of a broader analysis involving three distinct cell types, with findings stratified accordingly (see related fibroblasts and keratinocytes studies).",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-normal-skin-melanocytes-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-normal-skin-melanocytes-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

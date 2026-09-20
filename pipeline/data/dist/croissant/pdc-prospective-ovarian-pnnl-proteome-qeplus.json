@@ -9,7 +9,7 @@
   "name": "pdc-prospective-ovarian-pnnl-proteome-qeplus",
   "alternateName": "Prospective Ovarian PNNL Proteome Qeplus",
   "description": "Prospective Ovarian PNNL Proteome Qeplus",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-ovarian-pnnl-proteome-qeplus",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-pnnl-proteome-qeplus",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Prospective Ovarian PNNL Proteome Qeplus",
   "version": "as-retrieved",

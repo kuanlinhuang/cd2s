@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-brca-aurora-2023",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-aurora-2023",
   "name": "Metastatic Breast Cancer (AURORA US Network, Nat Cancer 2023)",
   "alternateName": [
     "brca_aurora_2023"
   ],
   "description": "Whole exome and low-pass whole genome sequencing of 55 patients with metastatic breast cancer (53 primary cancers and 102 metastases) and their matched normals. Retrospective Tissue Collection; an initiative of the Breast Cancer Research Foundation.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-brca-aurora-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-aurora-2023",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=brca_aurora_2023"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-brca-aurora-2023.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-brca-aurora-2023.json",
       "encodingFormat": "application/json"
     }
   ],

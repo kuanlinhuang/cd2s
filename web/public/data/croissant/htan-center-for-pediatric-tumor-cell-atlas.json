@@ -9,7 +9,7 @@
   "name": "htan-center-for-pediatric-tumor-cell-atlas",
   "alternateName": "Center for Pediatric Tumor Cell Atlas",
   "description": "Center for Pediatric Tumor Cell Atlas",
-  "url": "https://cancer-data-showcase.example.org/datasets/htan-center-for-pediatric-tumor-cell-atlas",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-center-for-pediatric-tumor-cell-atlas",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Single-cell multiomics reveals increased plasticity, resistant populations, and stem-cell-like blasts in KMT2A-rearranged leukemia",
   "version": "as-retrieved",

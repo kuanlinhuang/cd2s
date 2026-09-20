@@ -9,7 +9,7 @@
   "name": "cbio-crc-hta11-htan-2021",
   "alternateName": "Pre-cancer Colorectal Polyps (HTAN Vanderbilt, Cell 2021)",
   "description": "Whole-exome sequencing and single-cell transcriptomics analysis of 61 pre-malignant colorectal polyps (discovery and validation sets) and their matched normal colon tissues.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-crc-hta11-htan-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-hta11-htan-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

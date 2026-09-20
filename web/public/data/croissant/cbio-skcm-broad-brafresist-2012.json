@@ -9,7 +9,7 @@
   "name": "cbio-skcm-broad-brafresist-2012",
   "alternateName": "Skin Cutaneous Melanoma(Broad, Cancer Discov 2014)",
   "description": "Exome Sequencing of tumors (with matched normals) from 45 patients with BRAFV600-mutant metastatic melanoma who received vemurafenib or dabrafenib monotherapy.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-broad-brafresist-2012",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-broad-brafresist-2012",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-mskcc",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc",
   "name": "Prostate Adenocarcinoma (MSK, Cancer Cell 2010)",
   "alternateName": [
     "prad_mskcc"
   ],
   "description": "Comprehensive profiling of 218 prostate tumors (181 primaries, 37 metastases) and 14 prostate cancer cell lines and xenografts. MSKCC Prostate Oncogenome Project.Normalized flat data files. Raw data via GEO (GSE21032).",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-mskcc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_mskcc"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-mskcc.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-mskcc.json",
       "encodingFormat": "application/json"
     }
   ],

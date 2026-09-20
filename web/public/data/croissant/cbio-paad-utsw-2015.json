@@ -9,7 +9,7 @@
   "name": "cbio-paad-utsw-2015",
   "alternateName": "Pancreatic Cancer (UTSW, Nat Commun 2015)",
   "description": "Whole exome sequencing of 109 micro-dissected pancreatic cancer cases and normal control tissue.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-paad-utsw-2015",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-utsw-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

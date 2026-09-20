@@ -9,7 +9,7 @@
   "name": "pdc-hope-aya-gbm",
   "alternateName": "HOPE-AYA GBM",
   "description": "HOPE-AYA GBM",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-hope-aya-gbm",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-hope-aya-gbm",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "HOPE-AYA GBM",
   "version": "as-retrieved",

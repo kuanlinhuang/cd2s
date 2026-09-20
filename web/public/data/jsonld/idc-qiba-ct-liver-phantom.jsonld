@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-qiba-ct-liver-phantom",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-qiba-ct-liver-phantom",
   "name": "QIBA-CT-Liver-Phantom",
   "alternateName": [
     "qiba_ct_liver_phantom"
   ],
   "description": "This database contains a collection of three sets of CT scan images acquired from an anthropomorphic abdominal phantom with removable liver inserts. Please see the QIBA Anthropomorphic Abdominal Phantom CT Scans to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-qiba-ct-liver-phantom",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qiba-ct-liver-phantom",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qiba_ct_liver_phantom",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-qiba-ct-liver-phantom.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-qiba-ct-liver-phantom.json",
       "encodingFormat": "application/json"
     }
   ],

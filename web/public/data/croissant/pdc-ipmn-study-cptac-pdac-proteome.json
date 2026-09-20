@@ -9,7 +9,7 @@
   "name": "pdc-ipmn-study-cptac-pdac-proteome",
   "alternateName": "IPMN Study - CPTAC PDAC Proteome",
   "description": "IPMN Study - CPTAC PDAC Proteome",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ipmn-study-cptac-pdac-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ipmn-study-cptac-pdac-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "IPMN Study - CPTAC PDAC Proteome",
   "version": "as-retrieved",

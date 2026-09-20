@@ -9,7 +9,7 @@
   "name": "cbio-bm-nsclc-mskcc-2023",
   "alternateName": "Non-Small Cell Lung Cancer Brain Metastasis (MSK, Nat Commun 2023)",
   "description": "Targeted sequencing of 322 NSCLC brain metastasis and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-bm-nsclc-mskcc-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bm-nsclc-mskcc-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -2,7 +2,7 @@
   "site": "Cancer Data Showcase",
   "license_content": "https://creativecommons.org/licenses/by/4.0/",
   "license_code": "https://opensource.org/licenses/MIT",
-  "generated_at": "2026-09-20T18:28:47.429211+00:00",
+  "generated_at": "2026-09-20T22:46:28.570445+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -52,7 +52,7 @@
     "jsonld": 602,
     "croissant": 602,
     "agent": 602,
-    "generated_at": "2026-09-20T18:28:48.312676+00:00"
+    "generated_at": "2026-09-20T22:46:29.104734+00:00"
   },
   "bytes_written": {
     "dist/index.json": 1330242,
@@ -67,9 +67,11 @@
     "data/questions.json": 47119,
     "dist/subjects.json": 10489,
     "data/subjects.json": 10489,
-    "dist/notebooks/*.ipynb": 101717,
-    "data/notebooks/*.ipynb": 101717,
-    "dist/datasets/*.json": 18242451,
-    "data/datasets/*.json": 18242451
+    "dist/notebooks/*.ipynb": 506462,
+    "dist/notebooks/*.png": 285193,
+    "data/notebooks/*.ipynb": 506462,
+    "data/notebooks/*.png": 285193,
+    "dist/datasets/*.json": 18254694,
+    "data/datasets/*.json": 18254694
   }
 }

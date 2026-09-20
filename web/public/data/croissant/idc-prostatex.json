@@ -9,7 +9,7 @@
   "name": "idc-prostatex",
   "alternateName": "PROSTATEx",
   "description": "SPIE, along with the support of the American Association of Physicists in Medicine (AAPM) and the National Cancer Institute (NCI), will conduct a \u201cGrand Challenge\u201d on quantitative image analysis methods for the diagnostic classification of clinically significant prostate lesions. As part of the 2017 SPIE Medical Imaging Symposium, the PROSTATEx Challenge will provide a unique opportunity for participants to compare their algorithms with those of others from academia, industry, and government in a structured, direct way using the same data sets. For more details, go to https://www.spie.org/search?&term=PROSTATEx . * Release date of training set cases with truth: November 21, 2016 * Release date of test set cases without truth: December 12, 2016 * Submission date for participants' test set classification output: January 15, 2017 * Challenge results released to participants: January 20, 2017 * SPIE Medical Imaging Symposium: February 13-16, 2017. Please see the PROSTATEx page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostatex",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostatex",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PROSTATEx",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-midrc-ricord-1b",
   "alternateName": "MIDRC-RICORD-1B",
   "description": "The RSNA International COVID-19 Open Annotated Radiology Database (RICORD) release 1b consists of 120 thoracic computed tomography (CT) scans of COVID negative patients from four international sites. Patient selection included patients at least 18 years of age receiving a negative diagnosis for COVID-19. The dataset includes 120 de-identified thoracic CT scans from COVID negative patients, along with supporting clinical variables including age, sex, exam description, image count, modality, symptomatic status, testing result, and specimen source. The dataset was created through a collaboration between the RSNA and the Society of Thoracic Radiology (STR) to support machine learning research and education for COVID-19 chest imaging. Data will be made available through the Medical Imaging Data Resource Center (MIDRC), funded through a contract with the National Institute for Biomedical Imaging and Bioengineering (NIBIB). Please see the MIDRC-RICORD-1B page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-midrc-ricord-1b",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-midrc-ricord-1b",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "MIDRC-RICORD-1B",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cptac-gbm",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-gbm",
   "name": "CPTAC-GBM",
   "alternateName": [
     "cptac_gbm"
   ],
   "description": "This collection contains subjects from the National Cancer Institute\u2019s Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Radiology and pathology images from CPTAC Phase 3 patients are being collected and made publicly available by The Cancer Imaging Archive to enable researchers to investigate cancer phenotypes which may correlate to corresponding proteomic, genomic and clinical data. Please see the CPTAC-GBM wiki page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the CPTAC-GBM collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-cptac-gbm",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-gbm",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cptac_gbm",
     "https://www.cancerimagingarchive.net/collections/",
@@ -48,7 +48,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -60,7 +60,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cptac-gbm.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cptac-gbm.json",
       "encodingFormat": "application/json"
     }
   ],

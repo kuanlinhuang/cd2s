@@ -9,7 +9,7 @@
   "name": "cbio-nsclc-pd1-msk-2018",
   "alternateName": "Non-Small Cell Lung Cancer (MSK, J Clin Oncol 2018)",
   "description": "IMPACT sequencing of 240 NSCLC tumor/normal pairs treated at MSKCC with anti-PD-(L)1 based therapy.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nsclc-pd1-msk-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-nsclc-pd1-msk-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

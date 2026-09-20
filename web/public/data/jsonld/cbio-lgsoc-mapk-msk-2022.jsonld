@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-lgsoc-mapk-msk-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-lgsoc-mapk-msk-2022",
   "name": "Low-Grade Serous Ovarian Cancer (MSK, Clin Cancer Res 2022)",
   "alternateName": [
     "lgsoc_mapk_msk_2022"
   ],
   "description": "Characterization of the somatic mutational landscape of MAPK pathway in 119 low-grade serous ovarian carcinomas and their matched normals.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lgsoc-mapk-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lgsoc-mapk-msk-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=lgsoc_mapk_msk_2022"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-lgsoc-mapk-msk-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-lgsoc-mapk-msk-2022.json",
       "encodingFormat": "application/json"
     }
   ],

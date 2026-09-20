@@ -9,7 +9,7 @@
   "name": "cbio-nccrcc-genentech-2014",
   "alternateName": "Renal Non-Clear Cell Carcinoma (Genentech, Nat Genet 2014)",
   "description": "Whole exome sequencing of 139 samples with matched normals and RNA-sequencing of 7 samples (5 samples with matched normals) from 145 Renal Non-Clear Cell Carcinoma (nccRCC) patients.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nccrcc-genentech-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-nccrcc-genentech-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mnm-washu-2016",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mnm-washu-2016",
   "name": "Acute myeloid leukemia or myelodysplastic syndromes (WashU, 2016)",
   "alternateName": [
     "mnm_washu_2016"
   ],
   "description": "Enhanced exome or targeted sequencing of 116 acute myeloid leukemia (AML) or myelodysplastic syndromes (MDS) patients' tumor/normal pairs .",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mnm-washu-2016",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mnm-washu-2016",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mnm_washu_2016"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mnm-washu-2016.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mnm-washu-2016.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -53,4 +53,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-non-ccrcc-study.json
+- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-non-ccrcc-study.json

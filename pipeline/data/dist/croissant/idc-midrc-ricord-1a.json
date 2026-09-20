@@ -9,7 +9,7 @@
   "name": "idc-midrc-ricord-1a",
   "alternateName": "MIDRC-RICORD-1A",
   "description": "The Radiological Society of North America (RSNA) set out to create the RSNA International COVID-19 Open Radiology Database (RICORD) collection of COVID-related imaging datasets and expert annotations to support research and education. RICORD data will be incorporated in the Medical Imaging and Data Resource Center (MIDRC) , a multi-institutional research data repository funded by the National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health. Please see the MIDRC-RICORD-1a WIKI page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-midrc-ricord-1a",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-midrc-ricord-1a",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "MIDRC-RICORD-1A",
   "version": "as-retrieved",

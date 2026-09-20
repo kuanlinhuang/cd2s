@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom-2",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-radiomics-phantom-2",
   "name": "CC-Radiomics-Phantom-2",
   "alternateName": [
     "cc_radiomics_phantom_2"
   ],
   "description": "Credence Cartridge Radiomics Phantom CT Scans with Controlled Scanning Approach (CC-Radiomics-Phantom-2) This collection consists of 251 CT scans of the Credence Cartridge Radiomic (CCR) phantom. This texture phantom was developed to investigate the feature robustness in the emerging field of radiomics. This phantom dataset was acquired on 4-8 CT scanners using a set of imaging parameters (e.g., reconstruction Field of View, Slice thickness, reconstruction kernels, mAs, and Pitch). A controlled scanning approach was employed to assess the variability in radiomic features due to each imaging parameter. This dataset will be useful to radiomic research community to identify a subset of robust radiomic features and for establishing the ground truths for future clinical investigations. Using this dataset, the numerical values of radiomic features can be cross-validated by other research groups using their own feature extraction tools. Please see the CC-Radiomics-Phantom-2 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom-2",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-radiomics-phantom-2",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cc_radiomics_phantom_2",
     "https://www.cancerimagingarchive.net/collections/",
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cc-radiomics-phantom-2.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cc-radiomics-phantom-2.json",
       "encodingFormat": "application/json"
     }
   ],

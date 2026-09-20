@@ -9,7 +9,7 @@
   "name": "cbio-luad-mskcc-2023-met-organotropism",
   "alternateName": "Lung Adenocarcinoma Met Organotropism (MSK, Cancer Cell 2023)",
   "description": "Targeted and whole-exome sequencing of 2653 lung adenocarcinoma tumor/normal sample pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-luad-mskcc-2023-met-organotropism",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-luad-mskcc-2023-met-organotropism",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

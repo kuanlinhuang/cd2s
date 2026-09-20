@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mixed-cfdna-msk-2020",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mixed-cfdna-msk-2020",
   "name": "Mixed cfDNA (MSK, Genome Med 2021)",
   "alternateName": [
     "mixed_cfdna_msk_2020"
   ],
   "description": "IMPACT sequencing of 229 cell-free DNA (cfDNA) and associated tumor samples with matched normal",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mixed-cfdna-msk-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mixed-cfdna-msk-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mixed_cfdna_msk_2020"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mixed-cfdna-msk-2020.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mixed-cfdna-msk-2020.json",
       "encodingFormat": "application/json"
     }
   ],

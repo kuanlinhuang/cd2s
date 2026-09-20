@@ -9,7 +9,7 @@
   "name": "pdc-tcga-breast-cancer-proteome",
   "alternateName": "TCGA Breast Cancer Proteome",
   "description": "TCGA Breast Cancer Proteome",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-breast-cancer-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-breast-cancer-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TCGA Breast Cancer Proteome",
   "version": "as-retrieved",

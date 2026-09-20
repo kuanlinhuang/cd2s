@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp-pdc000704",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp-pdc000704",
   "name": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Ganglioglioma-CPC-CPP Phosphotyrosine",
   "alternateName": [
     "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Ganglioglioma-CPC-CPP Phosphotyrosine"
   ],
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Ganglioglioma-CPC-CPP Phosphotyrosine",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp-pdc000704",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp-pdc000704",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000704"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp-pdc000704.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp-pdc000704.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "gdc-tcga-brca",
   "alternateName": "Breast Invasive Carcinoma",
   "description": "TCGA breast is the most heavily analyzed dataset indexed here: 2,463 articles reference it in their methods or results. Its continuing value is less about novelty than about being the common denominator - a cohort so widely used that a new method which cannot reproduce known findings on it is not yet credible.\nTwo things about it are less widely appreciated. First, its radiology and pathology imaging lives in the Imaging Data Commons rather than the GDC, so the same 1,098 patients carry twelve measurement types once the repositories are joined, and most analyses use only the genomic subset. Second, its treatment annotation is better than its reputation: therapeutic agents are recorded for 71% of cases and a treatment outcome for 64%, which supports response questions people generally assume require a trial cohort.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-brca",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-brca",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Comprehensive molecular portraits of human breast tumors",
   "version": "as-retrieved",

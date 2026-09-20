@@ -9,7 +9,7 @@
   "name": "cbio-hcc-msk-2024",
   "alternateName": "Hepatocellular Carcinoma (MSK, Clin Cancer Res 2024)",
   "description": "Targeted sequencing of 1,370 hepatobiliary cancer samples (with 1366 matched normals) via MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hcc-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hcc-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

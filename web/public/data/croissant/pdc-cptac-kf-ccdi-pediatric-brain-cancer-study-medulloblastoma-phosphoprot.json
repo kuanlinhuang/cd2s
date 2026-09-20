@@ -9,7 +9,7 @@
   "name": "pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphoprot",
   "alternateName": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphoproteome",
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphoproteome",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphoprot",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphoprot",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphoproteome",
   "version": "as-retrieved",

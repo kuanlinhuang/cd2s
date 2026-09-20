@@ -9,7 +9,7 @@
   "name": "cbio-ctcl-columbia-2015",
   "alternateName": "Cutaneous T Cell Lymphoma (Columbia U, Nat Genet 2015)",
   "description": "Whole-Exome Sequencing (WXS) of tumor-normal sample pairs from 25 patients with Sezary Syndrome and 17 patients with other Cutaneous T Cell Lymphoma (CTCLs).",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ctcl-columbia-2015",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ctcl-columbia-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

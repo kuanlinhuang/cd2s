@@ -601,7 +601,7 @@ const DATASET_VIEW_LANES: NetworkLane[] = [
   { label: "The dataset", hint: "" },
   {
     label: "Articles that used it",
-    hint: "The accession appears in their methods, results, a table or a figure",
+    hint: "The accession appears in their methods section",
     empty:
       "No article can be traced to this dataset, so nothing it enabled is visible here.",
   },

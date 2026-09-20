@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-ovarian-jhu-proteome",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-jhu-proteome",
   "name": "TCGA Ovarian JHU Proteome",
   "alternateName": [
     "TCGA Ovarian JHU Proteome"
   ],
   "description": "TCGA Ovarian JHU Proteome",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-ovarian-jhu-proteome",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-jhu-proteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000113"
   ],
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-ovarian-jhu-proteome.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-ovarian-jhu-proteome.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-hgsoc-frozen-validation",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-frozen-validation",
   "name": "PTRC HGSOC Frozen Validation",
   "alternateName": [
     "PTRC HGSOC Frozen Validation - Phosphoproteome",
     "PTRC HGSOC Frozen Validation - Proteome"
   ],
   "description": "PTRC HGSOC Frozen Validation",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-hgsoc-frozen-validation",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-frozen-validation",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000361",
     "https://pdc.cancer.gov/pdc/study/PDC000362"
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-ptrc-hgsoc-frozen-validation.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-ptrc-hgsoc-frozen-validation.json",
       "encodingFormat": "application/json"
     }
   ],

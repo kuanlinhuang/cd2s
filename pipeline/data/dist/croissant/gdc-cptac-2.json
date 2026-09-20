@@ -9,7 +9,7 @@
   "name": "gdc-cptac-2",
   "alternateName": "CPTAC-Breast, Colon, Ovary",
   "description": "CPTAC-Breast, Colon, Ovary",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cptac-2",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cptac-2",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-Breast, Colon, Ovary",
   "version": "as-retrieved",

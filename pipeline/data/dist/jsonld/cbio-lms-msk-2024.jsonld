@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-lms-msk-2024",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-lms-msk-2024",
   "name": "Leiomyosarcoma  (MSK, Clin Cancer Res 2024)",
   "alternateName": [
     "lms_msk_2024"
   ],
   "description": "Targeted sequencing of 470 Leiomyosarcoma samples and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lms-msk-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lms-msk-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=lms_msk_2024"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-lms-msk-2024.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-lms-msk-2024.json",
       "encodingFormat": "application/json"
     }
   ],

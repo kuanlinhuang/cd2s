@@ -9,7 +9,7 @@
   "name": "gdc-target-all-p3",
   "alternateName": "Acute Lymphoblastic Leukemia - Phase III",
   "description": "Acute Lymphoblastic Leukemia - Phase III",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p3",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p3",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Acute Lymphoblastic Leukemia - Phase III",
   "version": "as-retrieved",

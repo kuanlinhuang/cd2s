@@ -9,7 +9,7 @@
   "name": "idc-nsclc-radiomics",
   "alternateName": "NSCLC-Radiomics",
   "description": "This collection contains images from 422 non-small cell lung cancer (NSCLC) patients. For these patients pretreatment CT scans and clinical outcome data are available. This dataset refers to the Lung1 dataset of the study published in Nature Communications Please see the NSCLC-Radiomics page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiomics",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NSCLC-Radiomics",
   "version": "as-retrieved",

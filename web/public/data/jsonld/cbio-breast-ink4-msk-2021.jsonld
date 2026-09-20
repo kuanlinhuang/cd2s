@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-breast-ink4-msk-2021",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-ink4-msk-2021",
   "name": "Metastatic Breast Cancer (MSK, Cancer Discovery 2022)",
   "alternateName": [
     "breast_ink4_msk_2021"
   ],
   "description": "Targeted Sequencing of 1365 metastatic Breast Cancer tumor/normal pairs via MSK-IMPACT to understand the role of INK4 on CDK4/6 resistance.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-breast-ink4-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-ink4-msk-2021",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=breast_ink4_msk_2021"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-breast-ink4-msk-2021.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-breast-ink4-msk-2021.json",
       "encodingFormat": "application/json"
     }
   ],

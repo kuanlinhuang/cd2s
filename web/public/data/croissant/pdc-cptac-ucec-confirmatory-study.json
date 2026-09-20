@@ -9,7 +9,7 @@
   "name": "pdc-cptac-ucec-confirmatory-study",
   "alternateName": "CPTAC UCEC Confirmatory Study",
   "description": "CPTAC UCEC Confirmatory Study",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ucec-confirmatory-study",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-confirmatory-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC UCEC Confirmatory Study",
   "version": "as-retrieved",

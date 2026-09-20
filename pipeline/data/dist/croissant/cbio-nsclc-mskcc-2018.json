@@ -9,7 +9,7 @@
   "name": "cbio-nsclc-mskcc-2018",
   "alternateName": "Non-Small Cell Lung Cancer (MSK, Cancer Cell 2018)",
   "description": "Whole-exome sequencing of 75 tumor/normal NSCLC pairs treated with PD-1 plus CTLA-4 blockade..",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nsclc-mskcc-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-nsclc-mskcc-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

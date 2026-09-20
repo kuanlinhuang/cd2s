@@ -9,7 +9,7 @@
   "name": "idc-mediastinal-lymph-node-seg",
   "alternateName": "Mediastinal-Lymph-Node-SEG",
   "description": "Accurate lymph node size estimation is critical for staging cancer patients, initial therapeutic management, and in longitudinal scans, assessing response to therapy. Machine learning models for medical image segmentation have shown remarkable progress in recent years, but we know of no tools available to fully quantify lymph nodes. Lymph nodes are often within the intensity profile of normal soft tissue and have ill-defined borders. Additionally, their presentation across subjects can vary significantly, making it difficult to scale from small datasets to a robust tool. This dataset contains chest CT scans from 540 patients acquired during treatment for various cancer types, curated for the LNQ2023 MICCAI Challenge to help develop new segmentation tools from weakly annotated cases. The dataset contains both partially annotated (i.e., one mediastinal lymph node out of several in the case are segmented) as well as fully annotated (i.e., all mediastinal lymph nodes are segmented) cases and clinical data (gender/cancer type). Please see the Mediastinal-Lymph-Node-SEG collection page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-mediastinal-lymph-node-seg",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-mediastinal-lymph-node-seg",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Mediastinal-Lymph-Node-SEG",
   "version": "as-retrieved",

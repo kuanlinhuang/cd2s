@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mbn-sfu-2023",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbn-sfu-2023",
   "name": "Mature B-Cell Neoplasms (Simon Fraser University, Blood 2023)",
   "alternateName": [
     "mbn_sfu_2023"
   ],
   "description": "Comprehensive whole genome sequencing of 297 Burrkitt Lymphoma (BL) and diffuse large B-cell lymphoma (DLBCL) samples and their matched normals.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mbn-sfu-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbn-sfu-2023",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mbn_sfu_2023"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mbn-sfu-2023.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mbn-sfu-2023.json",
       "encodingFormat": "application/json"
     }
   ],

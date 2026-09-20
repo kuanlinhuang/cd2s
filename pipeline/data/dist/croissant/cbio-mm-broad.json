@@ -9,7 +9,7 @@
   "name": "cbio-mm-broad",
   "alternateName": "Multiple Myeloma (Broad, Cancer Cell 2014)",
   "description": "Whole-exome or whole-genome sequencing of 203 multiple myeloma paired tumor/normal sample pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mm-broad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mm-broad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

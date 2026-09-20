@@ -9,7 +9,7 @@
   "name": "cbio-mixed-kunga-msk-2022",
   "alternateName": "Pediatric Pancan Tumors (MSK,Nat Commun. 2022)",
   "description": "Targeted NGS of mixed pediatric tumors from MSK-IMPACT testing.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mixed-kunga-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mixed-kunga-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

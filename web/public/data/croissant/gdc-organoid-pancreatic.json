@@ -9,7 +9,7 @@
   "name": "gdc-organoid-pancreatic",
   "alternateName": "Pancreas Cancer Organoid Profiling",
   "description": "Patient-derived organoids occupy a useful middle ground: they retain patient-specific genomics while remaining experimentally tractable, which tissue cohorts are not. This resource profiles 70 pancreatic cancer organoids with exome sequencing on 69, RNA sequencing on 49 and whole genome on 22, with stage recorded for 84% of the source tumors.\nIts distinctive value is that the source publication paired these molecular profiles with pharmacotyping - measured drug responses - which makes it one of the few NCI resources where genotype can be related to an experimentally measured phenotype rather than to a clinical outcome recorded years later.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-organoid-pancreatic",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-organoid-pancreatic",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Organoid Profiling Identifies Common Responders to Chemotherapy in Pancreatic Cancer",
   "version": "as-retrieved",

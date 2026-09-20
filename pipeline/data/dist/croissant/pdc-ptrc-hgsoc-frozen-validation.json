@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-hgsoc-frozen-validation",
   "alternateName": "PTRC HGSOC Frozen Validation",
   "description": "PTRC HGSOC Frozen Validation",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-hgsoc-frozen-validation",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-frozen-validation",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PTRC HGSOC Frozen Validation",
   "version": "as-retrieved",

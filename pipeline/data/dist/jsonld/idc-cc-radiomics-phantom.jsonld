@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-radiomics-phantom",
   "name": "CC-Radiomics-Phantom",
   "alternateName": [
     "cc_radiomics_phantom"
   ],
   "description": "This collection consists of 17 CT scans of the Credence Cartridge Radiomics (CCR) phantom, which was designed for use in studies of texture feature robustness. The scans were acquired at four medical centers using each center\u2019s chest protocol and were taken using GE (7 scans), Philips (5 scans), Siemens (2 scans), and Toshiba (3 scans) scanners. The CCR phantom has 10 cartridges, each with a unique texture Please see the CC-Radiomics-Phantom wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-cc-radiomics-phantom",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-radiomics-phantom",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cc_radiomics_phantom",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cc-radiomics-phantom.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cc-radiomics-phantom.json",
       "encodingFormat": "application/json"
     }
   ],

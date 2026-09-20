@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2019",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-su2c-2019",
   "name": "Metastatic Prostate Adenocarcinoma (SU2C/PCF Dream Team, PNAS 2019)",
   "alternateName": [
     "prad_su2c_2019"
   ],
   "description": "Whole exome sequencing of 444 castrate resistant prostate cancer tumor/normal pairs. SU2C-PCF Dream Team: Precision Therapy for Advanced Prostate Cancer.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2019",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-su2c-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_su2c_2019"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-su2c-2019.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-su2c-2019.json",
       "encodingFormat": "application/json"
     }
   ],

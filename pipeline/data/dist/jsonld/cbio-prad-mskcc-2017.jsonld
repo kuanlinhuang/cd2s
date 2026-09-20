@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-mskcc-2017",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc-2017",
   "name": "Prostate Cancer (MSK, JCO Precis Oncol 2017)",
   "alternateName": [
     "prad_mskcc_2017"
   ],
   "description": "IMPACT sequencing of 504 prostate cancer tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-mskcc-2017",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_mskcc_2017"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-mskcc-2017.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-mskcc-2017.json",
       "encodingFormat": "application/json"
     }
   ],

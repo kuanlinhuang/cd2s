@@ -9,7 +9,7 @@
   "name": "pdc-apollo-ov",
   "alternateName": "APOLLO-OV",
   "description": "APOLLO-OV",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-apollo-ov",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-ov",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "APOLLO-OV",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
   "alternateName": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphotyrosine",
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphotyrosine",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-medulloblastoma-phosphotyro",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Medulloblastoma Phosphotyrosine",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-prad-msk-stopsack-2021",
   "alternateName": "Race Differences in Prostate Cancer (MSK, 2021)",
   "description": "Targeted sequencing of 2,069 prostate cancers from different races via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-msk-stopsack-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-msk-stopsack-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

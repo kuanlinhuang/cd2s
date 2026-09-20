@@ -9,7 +9,7 @@
   "name": "pdc-hbv-related-hepatocellular-carcinoma",
   "alternateName": "HBV-Related Hepatocellular Carcinoma",
   "description": "HBV-Related Hepatocellular Carcinoma",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "HBV-Related Hepatocellular Carcinoma",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-crc-hta8-htan-2024",
   "alternateName": "Colorectal Cancer (HTAN MSK, Nature 2025)",
   "description": "Targeted genomic and single-cell RNA sequencing of normal colon, primary colorectal cancer, and matched metastatic samples from 29 patients.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-crc-hta8-htan-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-hta8-htan-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

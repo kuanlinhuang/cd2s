@@ -9,7 +9,7 @@
   "name": "cbio-lung-pdx-msk-2021",
   "alternateName": "Thoracic Cancer (MSK, Nat Commun 2021)",
   "description": "Targeted sequencing of tumor and PDX thoracic samples.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lung-pdx-msk-2021",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lung-pdx-msk-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

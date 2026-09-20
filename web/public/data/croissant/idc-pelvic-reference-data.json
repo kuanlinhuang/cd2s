@@ -9,7 +9,7 @@
   "name": "idc-pelvic-reference-data",
   "alternateName": "Pelvic-Reference-Data",
   "description": "This collection links expertly selected landmark points on clinical image pairs to provide a basis for rigid registration validation. Using combinatorial rigid registration optimization (CORRO) we provide a statistically characterized reference data set for image registration of the pelvis by estimating the optimal ground truth. Landmark points for each CT/CBCT image pair for 58 pelvic cases were identified. The mean and the standard deviation of the registration were used as the final registration for each image pair. Please see the Pelvic-Reference-Data wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-pelvic-reference-data",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pelvic-reference-data",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pelvic-Reference-Data",
   "version": "as-retrieved",

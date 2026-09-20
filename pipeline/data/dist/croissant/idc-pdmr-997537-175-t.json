@@ -9,7 +9,7 @@
   "name": "idc-pdmr-997537-175-t",
   "alternateName": "PDMR-997537-175-T",
   "description": "We identified and characterized a patient derived xenograft model with metastatic potential, adenocarcinoma colon xenograft 997537-175-T. In this study we performed a detailed imaging characterization of this model, which develops spontaneous lung metastases. Please see the PDMR-997537-175-T wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-997537-175-t",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-997537-175-t",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PDMR-997537-175-T",
   "version": "as-retrieved",

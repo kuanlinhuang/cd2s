@@ -9,7 +9,7 @@
   "name": "cbio-soft-tissue-msk-2023",
   "alternateName": "Rhabdomyosarcomas (MSK, NPJ Precis Oncol 2023)",
   "description": "Sequential targeted sequencing on 20 rhabdomyosarcoma tumors and their matched normals from the MSK cohort using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-soft-tissue-msk-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-soft-tissue-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

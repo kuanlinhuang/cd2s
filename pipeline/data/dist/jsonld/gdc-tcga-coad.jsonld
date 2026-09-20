@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-coad",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-coad",
   "name": "Colon Adenocarcinoma",
   "alternateName": [
     "tcga_coad"
   ],
   "description": "The Cancer Genome Atlas-Colon Adenocarcinoma (TCGA-COAD) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP), with the cooperation of several of the TCGA tissue-contributing institutions, has archived a large portion of the radiological images of the COAD cases. Please see the TCGA-COAD page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-COAD collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-coad",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-coad",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-COAD",
     "gdc_program:TCGA",
@@ -67,7 +67,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -79,7 +79,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-coad.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-coad.json",
       "encodingFormat": "application/json"
     }
   ],

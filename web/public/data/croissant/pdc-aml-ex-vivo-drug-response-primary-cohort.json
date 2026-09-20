@@ -9,7 +9,7 @@
   "name": "pdc-aml-ex-vivo-drug-response-primary-cohort",
   "alternateName": "AML Ex Vivo Drug Response - Primary Cohort",
   "description": "AML Ex Vivo Drug Response - Primary Cohort",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-primary-cohort",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "AML Ex Vivo Drug Response - Primary Cohort",
   "version": "as-retrieved",

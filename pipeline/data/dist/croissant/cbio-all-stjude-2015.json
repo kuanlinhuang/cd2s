@@ -9,7 +9,7 @@
   "name": "cbio-all-stjude-2015",
   "alternateName": "Acute Lymphoblastic Leukemia (St Jude, Nat Genet 2015)",
   "description": "Comprehensive profiling of infant MLL-rearranged acute lymphoblastic leukemia (MLL-R ALL)",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2015",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-all-stjude-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

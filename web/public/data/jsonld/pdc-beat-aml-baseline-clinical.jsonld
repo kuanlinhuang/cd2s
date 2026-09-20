@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-beat-aml-baseline-clinical",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-beat-aml-baseline-clinical",
   "name": "Beat AML Baseline Clinical",
   "alternateName": [
     "Beat AML Baseline Clinical - Phosphoproteome",
     "Beat AML Baseline Clinical - Proteome"
   ],
   "description": "Beat AML Baseline Clinical",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-beat-aml-baseline-clinical",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-beat-aml-baseline-clinical",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000478",
     "https://pdc.cancer.gov/pdc/study/PDC000477"
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-beat-aml-baseline-clinical.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-beat-aml-baseline-clinical.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-schw-ctf-synodos-2025",
   "alternateName": "Schwannoma (Children's Tumor Foundation, Acta Neuropathologica 2020)",
   "description": "Whole exome sequencing of 30 patients with schwannomatosis-associated schwannomas, along with their matched normal samples. These data originate from the Synodos for Schwannomatosis project and were contributed by researchers supported by the Children's Tumor Foundation. The reprocessing of raw sequencing data is coordinated by the NF Open Science Initiative.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-schw-ctf-synodos-2025",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-schw-ctf-synodos-2025",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

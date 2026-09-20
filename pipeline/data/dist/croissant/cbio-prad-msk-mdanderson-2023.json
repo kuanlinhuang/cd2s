@@ -9,7 +9,7 @@
   "name": "cbio-prad-msk-mdanderson-2023",
   "alternateName": "Prostate Cancer MDA PCa PDX (MD Anderson, Clin Cancer Res 2024)",
   "description": "Targeted sequencing and whole-genome sequencing of 88 MD Anderson Prostate Cancer PDX models derived from 38 patients with tumor.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-msk-mdanderson-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-msk-mdanderson-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-gbc-mskcc-2022",
   "alternateName": "Gallbladder Cancer (MSK, 2022)",
   "description": "Targeted sequencing of 244 Gallbladder cases via MSK-IMPACT where investigators calculated the Overall survival time for 100 metastatic gallbladder patients.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-gbc-mskcc-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gbc-mskcc-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

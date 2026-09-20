@@ -9,7 +9,7 @@
   "name": "cbio-summit-2018",
   "alternateName": "SUMMIT - Neratinib Basket Study (Multi-Institute, Nature 2018)",
   "description": "MSK-IMPACT sequencing of 86 patients with HER2- and HER3-mutant cancers",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-summit-2018",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-summit-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

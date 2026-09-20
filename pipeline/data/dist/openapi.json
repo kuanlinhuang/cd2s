@@ -12,7 +12,7 @@
   },
   "servers": [
     {
-      "url": "https://cancer-data-showcase.example.org"
+      "url": "https://cancer-data-showcase.vercel.app"
     }
   ],
   "paths": {

@@ -9,7 +9,7 @@
   "name": "cbio-msk-chord-2024",
   "alternateName": "MSK-CHORD (MSK, Nature 2024)",
   "description": "Targeted sequencing of 25040 tumors from 24950 patients and their matched normals via MSK-IMPACT, along with clinical annotations, some of which are derived from natural language processing (denoted NLP). This data is available under the Creative Commons BY-NC-ND 4.0 license. For commercial use, please contact datarequests@mskcc.org",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-msk-chord-2024",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-chord-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

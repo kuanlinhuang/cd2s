@@ -9,7 +9,7 @@
   "name": "gdc-cmi-mpc",
   "alternateName": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
   "description": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cmi-mpc",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-mpc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project",
   "version": "as-retrieved",

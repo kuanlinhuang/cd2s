@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
   "name": "Broad Institute - Medulloblastoma - Phospho-tyrosine-enrichments",
   "alternateName": [
     "Broad Institute - Medulloblastoma - Phospho-tyrosine-enrichments"
   ],
   "description": "Broad Institute - Medulloblastoma - Phospho-tyrosine-enrichments",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000431"
   ],
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-broad-institute-medulloblastoma-phospho-tyrosine-enrichments.json",
       "encodingFormat": "application/json"
     }
   ],

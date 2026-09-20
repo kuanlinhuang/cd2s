@@ -9,7 +9,7 @@
   "name": "cbio-escc-ucla-2014",
   "alternateName": "Esophageal Squamous Cell Carcinoma (UCLA, Nat Genet 2014)",
   "description": "Whole exome sequencing (WXS) or targeted deep sequencing (TDS) of 139 paired esophageal squamous cell carcinoma patients.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-escc-ucla-2014",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-escc-ucla-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

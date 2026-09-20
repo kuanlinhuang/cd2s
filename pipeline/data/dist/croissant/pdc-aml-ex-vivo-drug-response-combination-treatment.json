@@ -9,7 +9,7 @@
   "name": "pdc-aml-ex-vivo-drug-response-combination-treatment",
   "alternateName": "AML Ex Vivo Drug Response - Combination Treatment",
   "description": "AML Ex Vivo Drug Response - Combination Treatment",
-  "url": "https://cancer-data-showcase.example.org/datasets/pdc-aml-ex-vivo-drug-response-combination-treatment",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-combination-treatment",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "AML Ex Vivo Drug Response - Combination Treatment",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-prostate-anatomical-edge-cases",
   "alternateName": "Prostate-Anatomical-Edge-Cases",
   "description": "In this single institution retrospective study, we reviewed 950 consecutive patients with prostate adenocarcinoma receiving definitive radiotherapy between 2011 and 2019, and identified among them 112 patients with anatomic variations (edge cases) seen on simulation CT and/or MRI imaging. These variations included hip arthroplasty, prostate median lobe hypertrophy, so-called \u201cdroopy\u201d seminal vesicles, presence of a urinary catheter, and others. A separate cohort of 19 \u201cnormal\u201d cases were randomly selected for inclusion. Prostate, rectum, bladder, and bilateral femoral heads were manually segmented on all CT simulation images (where present) and were ultimately used clinically for radiation treatment planning. Please see the Stress-Testing Pelvic Autosegmentation Algorithms Using Anatomical Edge Cases (Prostate-Anatomical-Edge-Cases) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostate-anatomical-edge-cases",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-anatomical-edge-cases",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Prostate-Anatomical-Edge-Cases",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-paad-iatlas-prince-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-iatlas-prince-2022",
   "name": "Metastatic Pancreatic Adenocarcinoma (PRINCE Trial, Nat Med. 2022) - iAtlas Harmonized",
   "alternateName": [
     "paad_iatlas_prince_2022"
   ],
   "description": "Whole-exome sequencing and neoantigen landscape analysis of 93 metastatic pancreatic adenocarcinomas and their matched normals from a randomized phase 2 trial evaluating the efficacy of nivolumab and/or sotigalimab with gemcitabine/nab-paclitaxel (chemotherapy) as first-line therapy for metastatic pancreatic cancer. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-paad-iatlas-prince-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-iatlas-prince-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=paad_iatlas_prince_2022"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-paad-iatlas-prince-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-paad-iatlas-prince-2022.json",
       "encodingFormat": "application/json"
     }
   ],

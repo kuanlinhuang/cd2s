@@ -9,7 +9,7 @@
   "name": "cbio-msk-ch-2020",
   "alternateName": "Cancer Therapy and Clonal Hematopoiesis (MSK, Nat Genet 2020)",
   "description": "Clonal hematopoiesis mutations identified in blood samples from 24,146 patients whose tumor-blood pairs were analyzed using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-msk-ch-2020",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-ch-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

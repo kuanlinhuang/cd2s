@@ -9,7 +9,7 @@
   "name": "idc-icdc-glioma",
   "alternateName": "ICDC-Glioma",
   "description": "ICDC-Glioma contains treatment-na\u00efve naturally-occurring canine glioma participants from the Integrated Canine Data Commons. Brain radiology (57/81 participant animals) and H&E-stained biopsy or necropsy pathology (76/81 participants) are classified by veterinary and physician neuropathologists. Please see the wiki ICDC-Glioma to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the wiki DICOM converted Slide Microscopy images for the ICDC-Glioma collection to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-icdc-glioma",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-icdc-glioma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "ICDC-Glioma",
   "version": "as-retrieved",

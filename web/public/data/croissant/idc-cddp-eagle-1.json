@@ -9,7 +9,7 @@
   "name": "idc-cddp-eagle-1",
   "alternateName": "CDDP-EAGLE-1",
   "description": "DICOM converted whole slide images of H&E-stained frozen sections of primary lung adenocarcinoma tumor tissue from 49 subjects in the Environment And Genetics in Lung cancer Etiology (EAGLE) study, a population-based case-control study conducted in the Lombardy region of Italy (2002-2005). The original Aperio SVS slide images were obtained from the GDC and converted to DICOM Slide Microscopy format. Please see the CDDP-EAGLE-1 Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.example.org/datasets/idc-cddp-eagle-1",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cddp-eagle-1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CDDP-EAGLE-1",
   "version": "as-retrieved",

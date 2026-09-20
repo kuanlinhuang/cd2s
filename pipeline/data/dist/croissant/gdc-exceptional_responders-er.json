@@ -9,7 +9,7 @@
   "name": "gdc-exceptional_responders-er",
   "alternateName": "Exceptional Responders",
   "description": "Exceptional Responders",
-  "url": "https://cancer-data-showcase.example.org/datasets/gdc-exceptional_responders-er",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-exceptional_responders-er",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Exceptional Responders",
   "version": "as-retrieved",

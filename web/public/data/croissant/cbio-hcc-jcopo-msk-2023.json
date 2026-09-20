@@ -9,7 +9,7 @@
   "name": "cbio-hcc-jcopo-msk-2023",
   "alternateName": "Hepatocellular Carcinoma (MSK, JCO Precis Oncol 2023)",
   "description": "Targeted sequencing of 51 hepatocellular carcinoma patients and their matched normal samples via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hcc-jcopo-msk-2023",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hcc-jcopo-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

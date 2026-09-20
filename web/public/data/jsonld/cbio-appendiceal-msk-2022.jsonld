@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-appendiceal-msk-2022",
+  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-appendiceal-msk-2022",
   "name": "Appendiceal Cancer (MSK, J Clin Oncol 2022)",
   "alternateName": [
     "appendiceal_msk_2022"
   ],
   "description": "Targeted sequencing of 273 appendiceal tumor/normal pairs via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase.example.org/datasets/cbio-appendiceal-msk-2022",
+  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-appendiceal-msk-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=appendiceal_msk_2022"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.example.org"
+    "url": "https://cancer-data-showcase.vercel.app"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-appendiceal-msk-2022.json",
+      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-appendiceal-msk-2022.json",
       "encodingFormat": "application/json"
     }
   ],
