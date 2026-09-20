@@ -327,6 +327,7 @@ export interface AnalysisExample {
   problem?: string | null;
   lesson?: string | null;
   figure?: string | null;
+  featured?: boolean;
   inputs: string[];
   outputs: string[];
   steps: string[];

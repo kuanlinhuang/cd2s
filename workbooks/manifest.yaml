@@ -5,6 +5,7 @@
 # those data. Execution receipts are read from workbooks/executed/ at build time.
 
 - workbook: 01_can_i_answer_this
+  featured: true
   figure: >-
     Horizontal bars for each probed clinical field, showing the share of cases the field is populated for against the smaller share that carries an informative value, with one-to-many fields marked as not derivable per case.
   title: Audit whether this dataset can answer your question
@@ -34,6 +35,7 @@
   datasets: [gdc-cgci-htmcp-cc, gdc-fm-ad, gdc-rebc-thyr, gdc-wcdt-mcrpc, gdc-tcga-brca, gdc-mp2prt-all]
 
 - workbook: 02_survival_tcga_brca
+  featured: true
   figure: >-
     Kaplan-Meier survival curves against months since diagnosis: one curve for the whole cohort and one per stage group, showing separation between stages and how thin the long follow-up becomes.
   title: Overall survival from open data, with the endpoint derived correctly
@@ -117,6 +119,7 @@
   datasets: [pdc-cptac-stad-study, pdc-cptac-aml-study, pdc-cptac-luad-discovery-study]
 
 - workbook: 05_cross_repository_linkage
+  featured: true
   figure: >-
     Paired horizontal bars per cohort comparing GDC molecular case counts with IDC imaging patient counts, where the shorter bar is the ceiling on a multimodal study of that cohort.
   title: Join the same patients across two NCI repositories

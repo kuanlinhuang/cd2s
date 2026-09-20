@@ -16,15 +16,6 @@ import {
 import { SCARCE_MODALITIES, num } from "@/lib/format";
 import { mostReused, reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
 
-// facets.json is count-sorted; this leads the row with the NCI repositories the layer is
-// built on. A repository not named here still renders, after the ones that are.
-const REPOSITORY_ORDER = ["GDC", "PDC", "IDC", "HTAN"];
-
-function repositoryRank(repository: string): number {
-  const i = REPOSITORY_ORDER.indexOf(repository);
-  return i === -1 ? REPOSITORY_ORDER.length : i;
-}
-
 function ArrowIcon() {
   return (
     <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden focusable="false">
@@ -72,9 +63,7 @@ export default function Home() {
   const nMultimodal = index.filter((r) => r.n_modalities >= 3).length;
   const nScarce = index.filter((r) => r.modalities.some((m) => SCARCE_MODALITIES.has(m))).length;
   const notebooks = getNotebookGuides();
-  const repositories = (getFacets().repository ?? [])
-    .map((f) => f.value)
-    .sort((a, b) => repositoryRank(a) - repositoryRank(b));
+  const repositories = (getFacets().repository ?? []).map((f) => f.value);
 
   const capabilities = [
     { href: "/datasets?capability=survival", label: "Survival analysis", n: stats.n_with_survival },
@@ -102,11 +91,7 @@ export default function Home() {
       values: { cited: r.cites, used: r.reuse },
     }));
   const untraceable = untraceableTopCited(index, 3);
-  const featuredNotebooks = [
-    notebooks.find((guide) => guide.slug === "01_can_i_answer_this"),
-    notebooks.find((guide) => guide.slug === "05_cross_repository_linkage"),
-    notebooks.find((guide) => guide.slug === "02_survival_tcga_brca"),
-  ].filter((guide): guide is NonNullable<typeof guide> => Boolean(guide));
+  const featuredNotebooks = notebooks.filter((guide) => guide.featured);
 
   return (
     <>

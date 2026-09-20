@@ -833,6 +833,8 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
   // Both properties are resolved per article and are frequently unresolvable: a null flag
   // means nobody checked, which is not the same as a negative answer and must never be
   // published as one.
+  const listIsPartial =
+    m.n_reuse_examined > r.reuse.length || (m.n_by_tier?.t3_analyzed ?? 0) > r.reuse.length;
   const overlapChecked = analyzed.filter((x) => x.independent_of_generators != null);
   const fundingChecked = analyzed.filter((x) => x.nci_funded_reuse != null);
   const overlapClause =
@@ -1113,7 +1115,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         </h3>
         {analyzed.length > 0 && (
           <p className="mb-2 max-w-2xl text-meta t-muted">
-            {m.n_reuse_examined > 0
+            {listIsPartial
               ? `Examples, not the full list. ${num(m.n_reuse_examined)} articles matching this dataset's accession search were retrieved and graded individually; these are the strongest of those.`
               : "Each was retrieved and graded individually."}
           </p>

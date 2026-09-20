@@ -678,6 +678,10 @@ class AnalysisExample(CDSModel):
         default=None,
         description="What the workbook's figure shows, for readers who cannot see it.",
     )
+    featured: bool = Field(
+        default=False,
+        description="Lead with this example where only a few are shown, e.g. the homepage.",
+    )
     inputs: list[str] = Field(default_factory=list)
     outputs: list[str] = Field(default_factory=list)
     steps: list[str] = Field(default_factory=list)
