@@ -162,14 +162,10 @@ def enrich_record(
     info["n_candidates"] = len(candidates)
     info["n_queries"] = len(queries)
 
-    # 3. establish the generating team *before* judging independence.
-    #
-    # The order matters. Independence is "no author overlaps the people who made the
-    # data", so we need to know who they are first. For repositories that publish a
-    # marker-paper link (HTAN, cBioPortal) we already have it; for the rest we nominate
-    # the earliest heavily cited article that analyzed the data, clearly labeled as an
-    # inference. Judging independence before this step would leave the generating set
-    # empty and mark every article "unknown".
+    # 3. settle which article is the dataset's own, so it is not listed as reuse of
+    # itself. For repositories that publish a marker-paper link (HTAN, cBioPortal) we
+    # already have it; for the rest we nominate the earliest heavily cited article that
+    # analyzed the data, clearly labeled as an inference.
     authoritative_pmids = {p.pmid for p in rec.primary_publications if p.pmid}
 
     # Re-nominate whenever the record carries nothing but a previous run's own guess.
@@ -229,7 +225,8 @@ def enrich_record(
             authoritative_pmids = {pub.pmid} if pub.pmid else set()
             info["inferred_primary_pmid"] = pub.pmid
 
-    # 4. grade the remainder, now that independence is answerable
+    # 4. grade the remainder. Independence is settled later, by `refresh_independence`
+    # during curation, against the specific "surname initial" keys.
     exemplars = trace.build_reuse_records(
         candidates,
         exclude_pmids=authoritative_pmids,

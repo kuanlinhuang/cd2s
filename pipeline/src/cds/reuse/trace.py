@@ -304,8 +304,16 @@ def index_pass(
         # "Nobody has used this" is a claim, and it needs a measurement behind it. A
         # dataset whose counts could not be corrected has not been measured, so it does
         # not get to make the claim - not even when the tiers that could be corrected
-        # all came back as an exact zero.
-        no_reuse_identified=(measured and screened == 0 and not dropped_hits),
+        # all came back as an exact zero. Neither does a dataset whose zero is an
+        # *estimate*: a precision of 0.0 scales hundreds of real hits to nothing, and a
+        # sampled fraction is not evidence that the literature is empty. Only a search
+        # that returned nothing at all supports the claim.
+        no_reuse_identified=(
+            measured
+            and screened == 0
+            and not dropped_hits
+            and max(raw_by_tier.values(), default=0) == 0
+        ),
         search_strategy_id=INDEX_STRATEGY_ID,
         searched_at=now,
         evidence=[

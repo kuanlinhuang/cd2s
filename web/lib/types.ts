@@ -598,7 +598,6 @@ export interface CorpusStats {
   n_without_citable_accession: number;
   /** Has an accession, but the tokenization correction could not be estimated for it. */
   n_reuse_unmeasurable?: number;
-  n_without_authoritative_marker_paper?: number;
   n_with_publication_citations: number;
   median_citation_to_reuse_ratio?: number | null;
   /** One per (dataset, workbook) pair - a workbook attached to three pages counts three times. */

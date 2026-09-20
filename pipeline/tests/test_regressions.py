@@ -893,3 +893,40 @@ def test_an_exact_zero_beside_uncorrectable_hits_is_not_no_reuse(monkeypatch, re
     assert "t0_mention" not in m.n_by_tier
     assert m.n_verified_reuse == 0
     assert m.no_reuse_identified is False
+
+
+def test_an_estimated_zero_does_not_claim_nobody_used_the_dataset(monkeypatch, record_factory):
+    """A precision of 0.0 scales real hits to nothing; that is not an empty literature.
+
+    Two hundred and seventy methods hits, none of the eight sampled full texts carrying
+    the literal accession: the corrected count rounds to zero, but the Wilson interval
+    around 0 of 8 still admits dozens of genuine articles. Publishing the estimate as a
+    count is the point of the correction; publishing it as "nobody has used this" turns
+    a sample into a census.
+    """
+    counts = {'METHODS:"TARGET-RT"': 270, 'INTRO:"TARGET-RT"': 87}
+    monkeypatch.setattr(
+        trace.epmc,
+        "_search",
+        lambda client, query, **k: ({"hitCount": counts.get(query, 0)}, None, None),
+    )
+    monkeypatch.setattr(
+        trace.precision,
+        "measure",
+        lambda client, token, query, **k: AccessionPrecision(
+            token=token,
+            query=query,
+            strategy_id="test",
+            needs_correction=True,
+            precision=0.0,
+            n_checked=8,
+            n_literal=0,
+        ),
+    )
+    rec = record_factory("x", identifiers=[(IdScheme.GDC_PROJECT, "TARGET-RT")])
+
+    m = trace.index_pass(None, rec)
+
+    assert m.n_by_tier["t3_analyzed"] == 0
+    assert m.n_by_tier_raw["t3_analyzed"] == 270
+    assert m.no_reuse_identified is False

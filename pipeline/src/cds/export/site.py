@@ -26,7 +26,6 @@ from cds import __version__, subjects
 from cds.clinical import VERDICT_FIELDS, is_non_answer
 from cds.model import DatasetRecord, ReuseTier
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
-from cds.reuse import markers
 
 SITE_NAME = "Cancer Data Showcase"
 LICENSE_CONTENT = "https://creativecommons.org/licenses/by/4.0/"
@@ -259,7 +258,6 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         if r.reuse_metrics.has_citable_accession is True
         and r.reuse_metrics.n_by_tier.get(ReuseTier.T3_ANALYZED.value) is None
     ]
-    without_marker = [r for r in records if not markers.authoritative_marker_pmids(r)]
     with_cites = [
         r for r in records if (r.reuse_metrics.n_citations_to_primary_publication or 0) > 0
     ]
@@ -300,7 +298,6 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         "n_reuse_assessed": len(assessed),
         "n_without_citable_accession": len(uncitable),
         "n_reuse_unmeasurable": len(unmeasurable),
-        "n_without_authoritative_marker_paper": len(without_marker),
         "n_with_publication_citations": len(with_cites),
         "median_citation_to_reuse_ratio": (
             round(sorted(ratios)[len(ratios) // 2], 1) if ratios else None
