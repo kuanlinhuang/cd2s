@@ -85,12 +85,12 @@ export function FitGrid({ verdicts }: { verdicts: FitVerdict[] }) {
         })}
       </ul>
       <p className="mt-3 text-[12px] t-faint">
-        Judged from the repository&rsquo;s own field completeness with the thresholds in{" "}
+        Judged from the repository&rsquo;s own field completeness (
         <Link href="/methods#fit" className="underline">
-          Methods
+          thresholds
         </Link>
-        . &ldquo;Not measured&rdquo; means we have not probed that field for this record, not
-        that the data lack it. Reviewed pages add written limitations below.
+        ). &ldquo;Not measured&rdquo; means we have not probed that field for this record,
+        not that the data lack it.
       </p>
     </div>
   );

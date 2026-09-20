@@ -4,14 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+/**
+ * A route earns a header slot only if a first-time researcher would use it before
+ * asking a question. Compare, the funding network, the underexplored list and the
+ * software page all need something in hand first, so the agent, the browse page and
+ * the dataset pages route to them instead.
+ */
 const NAV = [
   { href: "/datasets", label: "Datasets" },
-  { href: "/questions", label: "By question" },
-  { href: "/underexplored", label: "Underexplored" },
-  { href: "/compare", label: "Compare" },
-  { href: "/network", label: "Network" },
-  { href: "/agents", label: "For agents" },
-  { href: "/methods", label: "Methods" },
+  { href: "/questions", label: "Research questions" },
+  { href: "/methods", label: "How this was built" },
 ];
 
 function isActive(pathname: string, href: string) {

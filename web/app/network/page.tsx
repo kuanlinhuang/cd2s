@@ -66,9 +66,8 @@ export default async function NetworkPage({
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Funding to data to findings</h1>
         <p className="mt-3 max-w-3xl text-[14px] t-muted">
-          Pick an NCI award. The graph shows the datasets it paid for and the articles
-          that analyzed those datasets. Scroll to zoom, drag to pan, hover a node for its
-          details, click to pin it and list everything it connects to.
+          Pick an NCI award to see the datasets it paid for and the articles that analysed
+          them.
         </p>
       </div>
 
@@ -172,7 +171,20 @@ export default async function NetworkPage({
             {scope === "all" && " This is the whole corpus, so zoom in before reading labels."}
           </p>
         )}
+        <p className="mb-2 text-[12px] t-faint">
+          Scroll to zoom, drag to pan, hover a node for its details, click to pin it and
+          list everything it connects to.
+        </p>
         <NetworkGraph data={data} />
+        <p className="mt-3 text-[12px] t-muted">
+          Datasets with no citable accession have no traceable articles, and datasets whose
+          publications RePORTER does not index have no awards. Absence here is a gap in the
+          record, not proof that nothing was funded or published.{" "}
+          <Link href="/methods#funding" className="underline">
+            Where the links come from
+          </Link>
+          .
+        </p>
       </Card>
 
       {award && connections.length > 0 && (
@@ -225,36 +237,6 @@ export default async function NetworkPage({
         </Card>
       )}
 
-      <div className="mt-6 grid gap-4 text-[13px] lg:grid-cols-3">
-        <Card>
-          <h2 className="font-medium">Where the links come from</h2>
-          <p className="mt-1 t-muted">
-            Awards are resolved through NIH RePORTER from each dataset&rsquo;s
-            publications. Articles are the record&rsquo;s original publication plus the
-            reuse exemplars it ships, at most ten per dataset.
-          </p>
-        </Card>
-        <Card>
-          <h2 className="font-medium">What a shared node means</h2>
-          <p className="mt-1 t-muted">
-            An award touching two datasets paid for both. An article touching two
-            datasets combined them. Those cross-links are the reason to draw this as a
-            network rather than a list.
-          </p>
-        </Card>
-        <Card>
-          <h2 className="font-medium">What is missing</h2>
-          <p className="mt-1 t-muted">
-            Datasets with no citable accession have no traceable articles, and datasets
-            whose publications RePORTER does not index have no awards. Absence here is a
-            gap in the record, not proof that nothing was funded or published. Details on{" "}
-            <Link href="/methods" className="underline">
-              Methods
-            </Link>
-            .
-          </p>
-        </Card>
-      </div>
     </>
   );
 }

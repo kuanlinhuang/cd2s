@@ -24,7 +24,7 @@ import {
   Stat,
   UnderexploredBadge,
 } from "@/components/ui";
-import { getAllRecordIds, getRecord, getRelated, getRowById } from "@/lib/data";
+import { getAllRecordIds, getRecord, getRelated } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { starterSnippets } from "@/lib/starter";
 import {
@@ -88,7 +88,6 @@ export default async function DatasetPage({
   const { id } = await params;
   const r = getRecord(id);
   if (!r) notFound();
-  const row = getRowById(id);
   const related = getRelated(id, 6);
   const relatedUnder = related.filter((x) => x.is_underexplored);
 
@@ -162,19 +161,15 @@ export default async function DatasetPage({
         </Section>
       )}
 
-      {row && (
-        <p className="pt-6 text-[12px] t-faint">
-          Machine-readable version of this page:{" "}
-          <a href={`/data/datasets/${r.id}.json`} className="underline">
-            {r.id}.json
-          </a>{" "}
-          - see{" "}
-          <Link href="/agents" className="underline">
-            the agent API
-          </Link>
-          .
-        </p>
-      )}
+      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 pt-6 text-[12px] t-faint">
+        <Link href="/agents" className="underline">
+          For software
+        </Link>
+        <span aria-hidden>:</span>
+        <a href={`/data/datasets/${r.id}.json`} className="font-mono underline">
+          record JSON
+        </a>
+      </p>
     </article>
   );
 }
@@ -226,7 +221,7 @@ function Header({ record: r }: { record: DatasetRecord }) {
         </p>
       )}
 
-      {/* the four actions promised on every page */}
+      {/* the three actions promised on every page */}
       <div className="mt-6 flex flex-wrap gap-2 no-print">
         <a
           href="#fit"
@@ -248,13 +243,6 @@ function Header({ record: r }: { record: DatasetRecord }) {
           style={{ borderColor: "var(--border-strong)" }}
         >
           Get the data
-        </a>
-        <a
-          href={`/data/datasets/${r.id}.json`}
-          className="rounded-md border px-3.5 py-2 text-[13px] font-medium"
-          style={{ borderColor: "var(--border-strong)" }}
-        >
-          Agent package (JSON)
         </a>
       </div>
     </header>
@@ -705,7 +693,7 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
     <Section
       id="limitations"
       title="What it cannot tell you"
-      lede="The most expensive mistake in reuse is finding a blocking gap after the analysis is built."
+      lede="What these data cannot answer, as written by a reviewer against the source."
       aside={
         blocking.length > 0 ? (
           <span className="text-[12px] font-medium" style={{ color: "var(--weak)" }}>
@@ -1350,53 +1338,6 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
         </ol>
       )}
 
-      <div className="mt-5">
-        <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
-          For an agent
-        </h3>
-        <Card>
-          <p className="text-[13px] t-muted">
-            Everything on this page is structured data, including the limitations and
-            the evidence for each claim. Read the limitations before the measurements.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            <a
-              href={`/data/datasets/${r.id}.json`}
-              className="rounded border px-2.5 py-1 font-mono text-[12px]"
-              style={{ borderColor: "var(--border-strong)" }}
-            >
-              {r.id}.json
-            </a>
-            {r.agent_package.jsonld_url && (
-              <a
-                href={r.agent_package.jsonld_url}
-                className="rounded border px-2.5 py-1 font-mono text-[12px]"
-                style={{ borderColor: "var(--border-strong)" }}
-              >
-                schema.org JSON-LD
-              </a>
-            )}
-            {r.agent_package.croissant_url && (
-              <a
-                href={r.agent_package.croissant_url}
-                className="rounded border px-2.5 py-1 font-mono text-[12px]"
-                style={{ borderColor: "var(--border-strong)" }}
-              >
-                Croissant
-              </a>
-            )}
-            {r.agent_package.instructions_url && (
-              <a
-                href={r.agent_package.instructions_url}
-                className="rounded border px-2.5 py-1 font-mono text-[12px]"
-                style={{ borderColor: "var(--border-strong)" }}
-              >
-                agent brief
-              </a>
-            )}
-          </div>
-        </Card>
-      </div>
     </Section>
   );
 }
