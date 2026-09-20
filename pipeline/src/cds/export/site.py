@@ -482,13 +482,7 @@ def write_all(
     # One dump per record, written to both targets. The dump dominates export time.
     n_bytes = 0
     for r in records:
-        # Keep workbook-bearing records readable in the checked-in corpus. These records
-        # are the ones researchers open most often while adapting an example, and the
-        # existing corpus already stores them with two-space indentation.
-        options = orjson.OPT_NON_STR_KEYS
-        if r.analysis_examples:
-            options |= orjson.OPT_INDENT_2
-        payload = orjson.dumps(r.model_dump(mode="json"), option=options)
+        payload = orjson.dumps(r.model_dump(mode="json"), option=orjson.OPT_NON_STR_KEYS)
         n_bytes += len(payload)
         for target in (DIST_DIR, WEB_DATA_DIR):
             path = target / "datasets" / f"{r.id}.json"

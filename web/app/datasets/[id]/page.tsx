@@ -1120,9 +1120,9 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         )}
         {analyzed.length > 0 && (
           <p className="mb-2 max-w-2xl text-meta t-muted">
-            Deep-review sample: the {num(r.reuse.length)} articles listed here are the
-            ones we graded individually, not every article examined. Of the{" "}
-            {num(analyzed.length)} that analyzed the data, {overlapClause}, and{" "}
+            Deep-review sample: author overlap and funding were checked only for the{" "}
+            {num(r.reuse.length)} articles listed here, not for every article examined. Of
+            the {num(analyzed.length)} that analyzed the data, {overlapClause}, and{" "}
             {fundingClause}. These are sample counts, not population estimates.
           </p>
         )}

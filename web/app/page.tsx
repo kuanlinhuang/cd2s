@@ -104,19 +104,11 @@ export default function Home() {
       values: { cited: r.cites, used: r.reuse },
     }));
   const untraceable = untraceableTopCited(index, 3);
-  // Preferred order when these workbooks exist; any that has been renamed or retired is
-  // backfilled from the rest, so the gallery below never renders empty under its heading.
-  const preferredNotebooks = [
-    "01_can_i_answer_this",
-    "05_cross_repository_linkage",
-    "02_survival_tcga_brca",
-  ];
   const featuredNotebooks = [
-    ...preferredNotebooks
-      .map((slug) => notebooks.find((guide) => guide.slug === slug))
-      .filter((guide): guide is NonNullable<typeof guide> => Boolean(guide)),
-    ...notebooks.filter((guide) => !preferredNotebooks.includes(guide.slug)),
-  ].slice(0, 3);
+    notebooks.find((guide) => guide.slug === "01_can_i_answer_this"),
+    notebooks.find((guide) => guide.slug === "05_cross_repository_linkage"),
+    notebooks.find((guide) => guide.slug === "02_survival_tcga_brca"),
+  ].filter((guide): guide is NonNullable<typeof guide> => Boolean(guide));
 
   return (
     <>
