@@ -10,6 +10,7 @@ Dataset id: pdc-tcga-ovarian-pnnl-proteome
 
 - Cohort: 85 cases
 - Cancer types: Ovarian Serous Cystadenocarcinoma
+- Subject: Ovary and fallopian tube
 - Measurements: Proteome mass spectrometry (iTRAQ4 / DDA)
 - Median follow-up: 42.0 months (derivable for 84 cases)
 - Treatment response recorded: False

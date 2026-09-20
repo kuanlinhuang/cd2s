@@ -13,6 +13,7 @@ Summary: An HTAN atlas built explicitly around therapeutic resistance, with mult
 ## What it is
 
 - Cohort: 156 cases
+- Subject: title derived
 - Measurements: Multiplexed tissue imaging, Single-cell / single-nucleus RNA sequencing, Bulk DNA sequencing
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

@@ -10,6 +10,7 @@ Dataset id: gdc-mp2prt-wt
 
 - Cohort: 52 cases
 - Cancer types: Neoplasms, NOS
+- Subject: Kidney
 - Measurements: Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, Clinical, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 22.5 months (derivable for 13 cases)
 - Treatment response recorded: False

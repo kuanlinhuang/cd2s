@@ -11,6 +11,7 @@ Dataset id: idc-cddp-eagle-1
 
 - Cohort: 49 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

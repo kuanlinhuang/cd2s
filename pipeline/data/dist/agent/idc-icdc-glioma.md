@@ -11,6 +11,7 @@ Dataset id: idc-icdc-glioma
 
 - Cohort: 80 cases
 - Cancer types: Glioma
+- Subject: Brain and central nervous system
 - Measurements: DICOM medical imaging, Genomics (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

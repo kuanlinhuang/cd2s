@@ -10,6 +10,7 @@ Dataset id: cbio-skcm-vanderbilt-mskcc-2015
 
 - Cohort: 66 cases
 - Cancer types: Cutaneous Melanoma
+- Subject: Skin
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 14.6 months (derivable for 66 cases)
 - Treatment response recorded: False

@@ -9,6 +9,7 @@ Dataset id: htan-the-lung-pre-cancer-atlas
 ## What it is
 
 - Cohort: 484 cases
+- Subject: Lung (derived from title; not stated by repository)
 - Measurements: Bulk RNA sequencing, Multiplexed tissue imaging, Bulk DNA sequencing, Single-cell / single-nucleus RNA sequencing
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

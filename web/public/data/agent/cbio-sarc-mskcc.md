@@ -10,6 +10,7 @@ Dataset id: cbio-sarc-mskcc
 
 - Cohort: 207 cases
 - Cancer types: Soft Tissue
+- Subject: Soft tissue
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Microarray expression
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

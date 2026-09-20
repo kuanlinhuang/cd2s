@@ -10,6 +10,7 @@ Dataset id: gdc-cmi-asc
 
 - Cohort: 36 cases
 - Cancer types: Soft Tissue Tumors and Sarcomas, NOS
+- Subject: Soft tissue
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Clinical, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

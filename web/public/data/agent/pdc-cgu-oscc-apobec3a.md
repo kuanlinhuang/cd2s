@@ -10,6 +10,7 @@ Dataset id: pdc-cgu-oscc-apobec3a
 
 - Cohort: 107 cases
 - Cancer types: Oral Squamous Cell Carcinoma
+- Subject: Head and neck
 - Measurements: Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 33.5 months (derivable for 105 cases)
 - Treatment response recorded: False

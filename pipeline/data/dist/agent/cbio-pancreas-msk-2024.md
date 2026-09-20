@@ -10,6 +10,7 @@ Dataset id: cbio-pancreas-msk-2024
 
 - Cohort: 395 cases
 - Cancer types: Pancreas
+- Subject: Pancreas
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 27.5 months (derivable for 393 cases)
 - Treatment response recorded: False

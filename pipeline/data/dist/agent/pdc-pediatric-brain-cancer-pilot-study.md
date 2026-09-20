@@ -10,6 +10,7 @@ Dataset id: pdc-pediatric-brain-cancer-pilot-study
 
 - Cohort: 207 cases
 - Cancer types: Pediatric/AYA Brain Tumors
+- Subject: Brain and central nervous system
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 141.2 months (derivable for 172 cases)
 - Treatment response recorded: False

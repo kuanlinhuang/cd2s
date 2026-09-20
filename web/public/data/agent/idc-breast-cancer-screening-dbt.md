@@ -11,6 +11,7 @@ Dataset id: idc-breast-cancer-screening-dbt
 
 - Cohort: 5,060 cases
 - Cancer types: Breast Cancer, Non-Cancer
+- Subject: Breast
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

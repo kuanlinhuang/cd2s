@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=prad_msk_stopsack_2021"
   ],
   "keywords": [
+    "NCIt:C12410",
     "Prostate Adenocarcinoma",
     "cbioportal",
     "copy number",

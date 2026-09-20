@@ -11,6 +11,7 @@ Dataset id: idc-4d-lung
 
 - Cohort: 20 cases
 - Cancer types: Non-small Cell Lung Cancer
+- Subject: Lung
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

@@ -10,6 +10,7 @@ Dataset id: cbio-escc-ucla-2014
 
 - Cohort: 139 cases
 - Cancer types: Esophageal Squamous Cell Carcinoma
+- Subject: Esophagus and stomach
 - Measurements: Mutation calls (panel, exome or genome)
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

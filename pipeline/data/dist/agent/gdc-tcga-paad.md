@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-paad
 
 - Cohort: 185 cases
 - Cancer types: Epithelial Neoplasms, NOS, Ductal and Lobular Neoplasms, Cystic, Mucinous and Serous Neoplasms, Adenomas and Adenocarcinomas
+- Subject: Pancreas
 - Measurements: Whole exome sequencing, SNP genotyping array (copy number, germline), Whole-slide tissue images, Clinical, DICOM medical imaging, DNA methylation array, Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 15.3 months (derivable for 185 cases)
 - Treatment response recorded: True

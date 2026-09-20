@@ -21,6 +21,7 @@
     "Acute Myeloid Leukemia",
     "Blood",
     "Marrow",
+    "NCIt:C12434",
     "clinical",
     "has-clinical-table",
     "idc",

@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=sarcoma_mskcc_2022"
   ],
   "keywords": [
+    "NCIt:C12471",
     "Soft Tissue",
     "cbioportal",
     "copy number",

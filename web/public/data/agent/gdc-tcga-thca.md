@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-thca
 
 - Cohort: 507 cases
 - Cancer types: Epithelial Neoplasms, NOS, Adenomas and Adenocarcinomas, Squamous Cell Neoplasms
+- Subject: Thyroid
 - Measurements: DNA methylation array, Clinical, DICOM medical imaging, microRNA sequencing, Whole-slide tissue images, Bulk RNA sequencing, SNP genotyping array (copy number, germline), Whole exome sequencing, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 31.0 months (derivable for 507 cases)
 - Treatment response recorded: True

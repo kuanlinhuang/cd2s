@@ -14,6 +14,7 @@ Summary: 1,866 tumors across six cancer types with genomics in the GDC and prote
 
 - Cohort: 1,866 cases
 - Cancer types: Not Applicable, Transitional Cell Papillomas and Carcinomas, Ductal and Lobular Neoplasms, Adenomas and Adenocarcinomas, Gliomas, Epithelial Neoplasms, NOS
+- Subject: pan cancer
 - Measurements: Whole exome sequencing, Targeted DNA panel sequencing, Bulk RNA sequencing, Whole genome sequencing, microRNA sequencing, Single-cell RNA sequencing, DNA methylation array, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 22.9 months (derivable for 1763 cases)
 - Treatment response recorded: True

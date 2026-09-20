@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=rcc_iatlas_immotion150_2018"
   ],
   "keywords": [
+    "NCIt:C12415",
     "Renal Cell Carcinoma",
     "cbioportal",
     "harmonized-for-reuse",

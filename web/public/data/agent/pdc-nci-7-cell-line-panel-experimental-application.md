@@ -9,6 +9,7 @@ Dataset id: pdc-nci-7-cell-line-panel-experimental-application
 ## What it is
 
 - Cohort: 1 cases
+- Subject: title derived
 - Measurements: Proteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

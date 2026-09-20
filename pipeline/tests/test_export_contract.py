@@ -102,6 +102,16 @@ def _interface_fields(source: str, name: str) -> set[str]:
     return set(re.findall(r"^\s{2}(\w+)\??:", block.group(1), re.M))
 
 
+def test_subject_vocabulary_matches_the_site_interface():
+    from cds.subjects import vocabulary
+
+    types_src = (WEB_DIR / "lib" / "types.ts").read_text()
+    assert set(vocabulary()) == _interface_fields(types_src, "SubjectVocabulary")
+    assert set(vocabulary()["subjects"][0]) == _interface_fields(
+        types_src, "SubjectVocabularyEntry"
+    )
+
+
 @pytest.mark.skipif(not DATA_TS.exists(), reason="site not present")
 def test_every_corpus_stat_the_site_reads_is_written(record_factory):
     """The landing page, the methods page and the agents page all read stats.json.

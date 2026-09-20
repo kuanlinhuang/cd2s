@@ -10,6 +10,7 @@ Dataset id: cbio-crc-orion-2024
 
 - Cohort: 74 cases
 - Cancer types: Bowel
+- Subject: Colorectal and bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 64.6 months (derivable for 74 cases)
 - Treatment response recorded: False

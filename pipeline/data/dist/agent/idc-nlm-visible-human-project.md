@@ -11,6 +11,7 @@ Dataset id: idc-nlm-visible-human-project
 
 - Cohort: 2 cases
 - Cancer types: Normal (non-cancer)
+- Subject: non cancer
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

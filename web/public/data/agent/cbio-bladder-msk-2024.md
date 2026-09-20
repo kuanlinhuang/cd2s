@@ -10,6 +10,7 @@ Dataset id: cbio-bladder-msk-2024
 
 - Cohort: 112 cases
 - Cancer types: Bladder/Urinary Tract
+- Subject: Bladder and urinary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 52.6 months (derivable for 88 cases)
 - Treatment response recorded: False

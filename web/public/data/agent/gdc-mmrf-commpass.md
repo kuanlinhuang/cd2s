@@ -10,6 +10,7 @@ Dataset id: gdc-mmrf-commpass
 
 - Cohort: 995 cases
 - Cancer types: Plasma Cell Tumors
+- Subject: Lymphoid
 - Measurements: Whole exome sequencing, Bulk RNA sequencing, Whole genome sequencing, Copy Number Variation, Somatic Structural Variation
 - Median follow-up: 25.6 months (derivable for 994 cases)
 - Treatment response recorded: False

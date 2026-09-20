@@ -10,6 +10,7 @@ Dataset id: pdc-microscaled-proteogenomic-methods-for-precision-oncology-pdx-bul
 
 - Cohort: 6 cases
 - Cancer types: Breast Invasive Carcinoma
+- Subject: Breast
 - Measurements: Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

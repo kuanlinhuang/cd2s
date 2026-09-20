@@ -10,6 +10,7 @@ Dataset id: cbio-soft-tissue-msk-2023
 
 - Cohort: 20 cases
 - Cancer types: Rhabdomyosarcoma
+- Subject: Soft tissue
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 31.9 months (derivable for 19 cases)
 - Treatment response recorded: False

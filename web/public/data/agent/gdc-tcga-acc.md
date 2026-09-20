@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-acc
 
 - Cohort: 92 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Adrenal gland
 - Measurements: Whole exome sequencing, SNP genotyping array (copy number, germline), Clinical, DICOM medical imaging, microRNA sequencing, DNA methylation array, Bulk RNA sequencing, Whole genome sequencing, Somatic Structural Variation, Whole-slide diagnostic images
 - Median follow-up: 38.8 months (derivable for 92 cases)
 - Treatment response recorded: True

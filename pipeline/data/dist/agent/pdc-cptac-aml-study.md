@@ -15,6 +15,7 @@ Summary: 164 acute myeloid leukaemias with proteome, phosphoproteome, acetylome 
 
 - Cohort: 164 cases
 - Cancer types: Acute Myeloid Leukemia
+- Subject: Myeloid
 - Measurements: Acetylome mass spectrometry (TMT18 / DDA), Glycoproteome mass spectrometry (TMT18 / DDA), Lipidome mass spectrometry (Label Free / DDA), Metabolome mass spectrometry (Label Free / DDA), Phosphoproteome mass spectrometry (TMT18 / DDA), Proteome mass spectrometry (TMT18 / DDA)
 - Median follow-up: 12.1 months (derivable for 162 cases)
 - Treatment response recorded: True

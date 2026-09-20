@@ -11,6 +11,7 @@ Dataset id: idc-pdmr-texture-analysis
 
 - Cohort: 175 cases
 - Cancer types: Ewing sarcoma - Peripheral PNET, Melanoma, Neuroendocrine cancer (NOS), Osteosarcoma, Anal Squamous Cell Carcinoma, Urothelial - bladder cancer (NOS)
+- Subject: pan cancer
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

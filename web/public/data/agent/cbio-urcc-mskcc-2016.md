@@ -10,6 +10,7 @@ Dataset id: cbio-urcc-mskcc-2016
 
 - Cohort: 62 cases
 - Cancer types: Unclassified Renal Cell Carcinoma
+- Subject: Kidney
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 11.9 months (derivable for 23 cases)
 - Treatment response recorded: False

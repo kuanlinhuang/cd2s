@@ -10,6 +10,7 @@ Dataset id: gdc-varepop-apollo
 
 - Cohort: 41 cases
 - Cancer types: Epithelial Neoplasms, NOS, Squamous Cell Neoplasms
+- Subject: pan cancer
 - Measurements: DICOM medical imaging, Targeted DNA panel sequencing
 - Median follow-up: 13.2 months (derivable for 7 cases)
 - Treatment response recorded: False

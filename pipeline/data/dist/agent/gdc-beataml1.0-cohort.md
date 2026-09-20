@@ -10,6 +10,7 @@ Dataset id: gdc-beataml1.0-cohort
 
 - Cohort: 826 cases
 - Cancer types: Myeloid Leukemias, Leukemias, NOS, Unknown, Chronic Myeloproliferative Disorders, Plasma Cell Tumors, Myelodysplastic Syndromes
+- Subject: Myeloid
 - Measurements: Whole exome sequencing, Targeted DNA panel sequencing, Bulk RNA sequencing, Single-cell RNA sequencing, Structural Variation
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

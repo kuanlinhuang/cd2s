@@ -10,6 +10,7 @@ Dataset id: gdc-beataml1.0-crenolanib
 
 - Cohort: 56 cases
 - Cancer types: Myeloid Leukemias
+- Subject: Myeloid
 - Measurements: Whole exome sequencing
 - Treatment response recorded: False
 - Access: controlled. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

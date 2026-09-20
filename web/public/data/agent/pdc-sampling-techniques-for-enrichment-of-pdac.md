@@ -10,6 +10,7 @@ Dataset id: pdc-sampling-techniques-for-enrichment-of-pdac
 
 - Cohort: 7 cases
 - Cancer types: Pancreatic Ductal Adenocarcinoma
+- Subject: Pancreas
 - Measurements: Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 10.5 months (derivable for 6 cases)
 - Treatment response recorded: False

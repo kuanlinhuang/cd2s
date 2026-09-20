@@ -27,6 +27,7 @@ from typing import Any
 from cds import __version__
 from cds.model import DatasetRecord, ReuseTier, Severity
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
+from cds.subjects import TISSUES
 
 # The public origin baked into every agent package, JSON-LD document and llms.txt.
 # Set CDS_SITE_URL to the deployed host before `cds export`; the placeholder is what a
@@ -63,6 +64,7 @@ def to_schema_org(rec: DatasetRecord) -> dict[str, Any]:
     keywords = sorted(
         {t.label for t in rec.cancer_types}
         | set(rec.primary_sites)
+        | {f"NCIt:{TISSUES[code]['nci']}" for code in rec.subject.tissues}
         | {a.modality.value.replace("_", " ") for a in rec.assays}
         | set(rec.tags)
     )
@@ -259,6 +261,16 @@ def to_agent_brief(rec: DatasetRecord) -> str:
     )
     if rec.cancer_types:
         lines.append(f"- Cancer types: {', '.join(t.label for t in rec.cancer_types[:6])}")
+    if rec.subject.tissues:
+        labels = [TISSUES[code]["label"] for code in rec.subject.tissues]
+        suffix = (
+            " (derived from title; not stated by repository)"
+            if rec.subject.scope.value == "title_derived"
+            else ""
+        )
+        lines.append(f"- Subject: {', '.join(labels)}{suffix}")
+    else:
+        lines.append(f"- Subject: {rec.subject.scope.value.replace('_', ' ')}")
     if rec.assays:
         lines.append(f"- Measurements: {', '.join(a.label for a in rec.assays[:10])}")
     lo = rec.longitudinal
@@ -426,6 +438,7 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         "",
         f"- [Search index]({SITE_URL}/data/index.json): one slim row per dataset",
         f"- [Facets]({SITE_URL}/data/facets.json): browse dimensions with counts",
+        f"- [Subject vocabulary]({SITE_URL}/data/subjects.json): controlled tissues and query synonyms",
         f"- [Corpus statistics]({SITE_URL}/data/stats.json)",
         f"- [Research questions]({SITE_URL}/data/questions.json): curated questions, flattened",
         f"- [Full record]({SITE_URL}/data/datasets/{{id}}.json): everything, with evidence",
@@ -439,7 +452,7 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         "## Live endpoints",
         "",
         f"- `GET {SITE_URL}/api/v1/search` - filter on measured capability: `survival`, "
-        "`treatment_response`, `modality`, `access`, `repository`, `min_cases`, "
+        "`treatment_response`, `subject`, `site`, `modality`, `access`, `repository`, `min_cases`, "
         "`min_modalities`, `underexplored`, `showcase`, `q`, `limit`",
         f"- `GET {SITE_URL}/api/v1/datasets/{{id}}` - the full record plus `analysis_fit`, "
         "the six verdicts",
@@ -621,6 +634,11 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
                                 "Measurement type, as in /data/facets.json",
                             ),
                             ("site", {"type": "string"}, "Primary anatomic site"),
+                            (
+                                "subject",
+                                {"type": "string"},
+                                "Controlled tissue code or subject state, as in /data/subjects.json",
+                            ),
                             (
                                 "access",
                                 {

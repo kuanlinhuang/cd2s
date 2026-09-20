@@ -10,6 +10,7 @@ Dataset id: gdc-ccdi-mci
 
 - Cohort: 4,407 cases
 - Cancer types: Cystic, Mucinous and Serous Neoplasms, Granular Cell Tumors and Alveolar Soft Part Sarcomas, Specialized Gonadal Neoplasms, Neoplasms, NOS, Adenomas and Adenocarcinomas, Gliomas
+- Subject: pan cancer
 - Measurements: DICOM medical imaging, Whole exome sequencing, DNA methylation array
 - Treatment response recorded: False
 - Access: mixed. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

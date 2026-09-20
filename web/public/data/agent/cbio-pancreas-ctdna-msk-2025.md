@@ -10,6 +10,7 @@ Dataset id: cbio-pancreas-ctdna-msk-2025
 
 - Cohort: 412 cases
 - Cancer types: Pancreatic Adenocarcinoma
+- Subject: Pancreas
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 12.6 months (derivable for 403 cases)
 - Treatment response recorded: False

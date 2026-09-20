@@ -10,6 +10,7 @@ Dataset id: cbio-bowel-colitis-msk-2022
 
 - Cohort: 175 cases
 - Cancer types: Bowel
+- Subject: Colorectal and bowel
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 21.4 months (derivable for 128 cases)
 - Treatment response recorded: False

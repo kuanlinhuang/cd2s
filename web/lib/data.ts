@@ -28,6 +28,7 @@ import type {
   FieldCalibration,
   ReuseGapModel,
   ScatterPoint,
+  SubjectVocabulary,
 } from "./types";
 
 const DATA_DIR = join(process.cwd(), "public", "data");
@@ -63,6 +64,8 @@ const BROWSE_FIELDS = [
   "repositories",
   "cancer_types",
   "primary_sites",
+  "subjects",
+  "subject_scope",
   "modalities",
   "n_modalities",
   "n_cases",
@@ -110,6 +113,19 @@ export function getFacets(): Facets {
     _facets = readJson<Facets>("facets.json", {});
   }
   return _facets;
+}
+
+let _subjects: SubjectVocabulary | null = null;
+export function getSubjects(): SubjectVocabulary {
+  if (_subjects === null) {
+    _subjects = readJson<SubjectVocabulary>("subjects.json", {
+      version: "unknown",
+      release_date: "unknown",
+      subjects: [],
+      states: [],
+    });
+  }
+  return _subjects;
 }
 
 let _stats: CorpusStats | null = null;

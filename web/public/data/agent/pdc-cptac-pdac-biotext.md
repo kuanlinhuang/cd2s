@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-pdac-biotext
 
 - Cohort: 15 cases
 - Cancer types: Pancreatic Ductal Adenocarcinoma
+- Subject: Pancreas
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
 - Median follow-up: 19.1 months (derivable for 14 cases)
 - Treatment response recorded: False

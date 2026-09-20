@@ -10,6 +10,7 @@ Dataset id: cbio-es-dsrct-msk-2023
 
 - Cohort: 277 cases
 - Cancer types: Ewing Sarcoma
+- Subject: Bone
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 19.7 months (derivable for 264 cases)
 - Treatment response recorded: False

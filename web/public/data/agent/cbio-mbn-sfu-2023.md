@@ -10,6 +10,7 @@ Dataset id: cbio-mbn-sfu-2023
 
 - Cohort: 297 cases
 - Cancer types: Mature B-Cell Neoplasms
+- Subject: Lymphoid
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structural variants / fusions
 - Median follow-up: 10.2 months (derivable for 254 cases)
 - Treatment response recorded: False

@@ -30,14 +30,14 @@ export default function NotFound() {
           className="rounded-md border px-3 py-1.5 font-medium"
           style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}
         >
-          Browse by research question
+          Research questions
         </Link>
         <Link
           href="/"
           className="rounded-md border px-3 py-1.5 font-medium"
           style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}
         >
-          Home
+          Ask a question
         </Link>
       </div>
     </div>

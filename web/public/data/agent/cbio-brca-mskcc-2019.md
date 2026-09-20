@@ -10,6 +10,7 @@ Dataset id: cbio-brca-mskcc-2019
 
 - Cohort: 68 cases
 - Cancer types: Invasive Breast Carcinoma
+- Subject: Breast
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Treatment response recorded: True
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

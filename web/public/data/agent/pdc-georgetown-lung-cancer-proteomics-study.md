@@ -10,6 +10,7 @@ Dataset id: pdc-georgetown-lung-cancer-proteomics-study
 
 - Cohort: 11 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Proteome mass spectrometry (iTRAQ8 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

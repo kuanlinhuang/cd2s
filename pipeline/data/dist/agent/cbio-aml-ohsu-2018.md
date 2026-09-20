@@ -10,6 +10,7 @@ Dataset id: cbio-aml-ohsu-2018
 
 - Cohort: 562 cases
 - Cancer types: Acute Myeloid Leukemia
+- Subject: Myeloid
 - Measurements: Mutation calls (panel, exome or genome), RNA sequencing expression, Structural variants / fusions
 - Median follow-up: 10.2 months (derivable for 497 cases)
 - Treatment response recorded: False

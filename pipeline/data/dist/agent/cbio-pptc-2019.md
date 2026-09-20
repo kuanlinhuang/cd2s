@@ -10,6 +10,7 @@ Dataset id: cbio-pptc-2019
 
 - Cohort: 244 cases
 - Cancer types: Mixed Cancer Types
+- Subject: pan cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, RNA sequencing expression, Structural variants / fusions
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

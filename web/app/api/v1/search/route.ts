@@ -29,6 +29,7 @@ export async function GET(request: Request) {
 
   const modality = searchParams.get("modality");
   const site = searchParams.get("site");
+  const subject = searchParams.get("subject");
   const access = searchParams.get("access");
   const repository = searchParams.get("repository");
   const survival = wants("survival");
@@ -43,6 +44,8 @@ export async function GET(request: Request) {
   if (q) rows = rows.filter((r) => r.search_text.toLowerCase().includes(q));
   if (modality) rows = rows.filter((r) => r.modalities.includes(modality));
   if (site) rows = rows.filter((r) => r.primary_sites.includes(site));
+  if (subject)
+    rows = rows.filter((r) => r.subjects.includes(subject) || r.subject_scope === subject);
   if (access) rows = rows.filter((r) => r.access_tier === access);
   if (repository) rows = rows.filter((r) => r.repositories.includes(repository));
   if (survival !== null) rows = rows.filter((r) => (r.has_survival_endpoint === true) === survival);
@@ -69,6 +72,8 @@ export async function GET(request: Request) {
       n_cases: r.n_cases,
       n_samples: r.n_samples,
       modalities: r.modalities,
+      subjects: r.subjects,
+      subject_scope: r.subject_scope,
       access_tier: r.access_tier,
       has_survival_endpoint: r.has_survival_endpoint,
       has_treatment_response: r.has_treatment_response,

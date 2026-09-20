@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-hcmi-organoids-phase-1
 
 - Cohort: 71 cases
 - Cancer types: Glioblastoma, Colon Adenocarcinoma, Pancreatic Ductal Adenocarcinoma, Pancreatic Adenocarcinoma, Rectum Adenocarcinoma
+- Subject: Brain and central nervous system
 - Measurements: Acetylome mass spectrometry (TMT16 / DDA), Phosphoproteome mass spectrometry (TMT16 / DDA), Proteome mass spectrometry (TMT16 / DDA), Ubiquitylome mass spectrometry (TMT16 / DDA)
 - Median follow-up: 13.2 months (derivable for 69 cases)
 - Treatment response recorded: False

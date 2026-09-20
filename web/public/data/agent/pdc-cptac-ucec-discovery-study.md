@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-ucec-discovery-study
 
 - Cohort: 123 cases
 - Cancer types: Uterine Corpus Endometrial Carcinoma
+- Subject: Uterus
 - Measurements: Acetylome mass spectrometry (TMT10 / DDA), Phosphoproteome mass spectrometry (TMT10 / DDA), Proteome mass spectrometry (TMT10 / DDA)
 - Median follow-up: 28.7 months (derivable for 103 cases)
 - Treatment response recorded: False

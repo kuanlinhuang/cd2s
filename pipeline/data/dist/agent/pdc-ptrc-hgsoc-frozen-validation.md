@@ -10,6 +10,7 @@ Dataset id: pdc-ptrc-hgsoc-frozen-validation
 
 - Cohort: 66 cases
 - Cancer types: Ovarian Serous Cystadenocarcinoma
+- Subject: Ovary and fallopian tube
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

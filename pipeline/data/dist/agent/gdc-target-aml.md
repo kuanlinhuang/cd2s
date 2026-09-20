@@ -14,6 +14,7 @@ Summary: 2,492 children and young adults with acute myeloid leukaemia - the larg
 
 - Cohort: 2,492 cases
 - Cancer types: Myeloid Leukemias, Not Applicable
+- Subject: Myeloid
 - Measurements: Bulk RNA sequencing, microRNA sequencing, Whole genome sequencing, Whole exome sequencing, Targeted DNA panel sequencing, SNP genotyping array (copy number, germline), DNA methylation array, Clinical, Somatic Structural Variation
 - Median follow-up: 41.7 months (derivable for 2158 cases)
 - Treatment response recorded: True

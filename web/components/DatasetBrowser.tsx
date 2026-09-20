@@ -11,7 +11,7 @@ import {
   ReviewBadge,
   UnderexploredBadge,
 } from "@/components/ui";
-import type { BrowseRow, Facets, SearchDoc } from "@/lib/types";
+import type { BrowseRow, Facets, SearchDoc, SubjectVocabulary } from "@/lib/types";
 import { REVIEW_STATUS_LABELS, SCARCE_MODALITIES, modalityLabel, months, num } from "@/lib/format";
 
 /**
@@ -84,11 +84,13 @@ const SORTS: Record<SortKey, string> = {
 interface Props {
   rows: BrowseRow[];
   facets: Facets;
+  subjects: SubjectVocabulary;
   initial?: {
     q?: string;
     modality?: string;
     cancer?: string;
     site?: string;
+    subject?: string;
     capability?: string;
     repository?: string;
     access?: string;
@@ -151,11 +153,12 @@ function useSearchIndex(rows: BrowseRow[]) {
   return mini;
 }
 
-export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
+export default function DatasetBrowser({ rows, facets, subjects, initial = {} }: Props) {
   const [q, setQ] = useState(initial.q ?? "");
   const [modality, setModality] = useState(initial.modality ?? "");
   const [cancer, setCancer] = useState(initial.cancer ?? "");
   const [site, setSite] = useState(initial.site ?? "");
+  const [subject, setSubject] = useState(initial.subject ?? "");
   const [repository, setRepository] = useState(initial.repository ?? "");
   const [access, setAccess] = useState(initial.access ?? "");
   const [review, setReview] = useState(initial.review ?? "");
@@ -221,6 +224,11 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     if (modality) out = out.filter((r) => r.modalities.includes(modality));
     if (cancer) out = out.filter((r) => r.cancer_types.includes(cancer));
     if (site) out = out.filter((r) => r.primary_sites.includes(site));
+    if (subject) {
+      out = out.filter(
+        (r) => r.subjects.includes(subject) || r.subject_scope === subject,
+      );
+    }
     if (repository) out = out.filter((r) => r.repositories.includes(repository));
     if (access) out = out.filter((r) => r.access_tier === access);
     if (review) out = out.filter((r) => r.review_status === review);
@@ -248,7 +256,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
       sorted.sort((a, b) => a.title.localeCompare(b.title));
     }
     return sorted;
-  }, [rows, scores, modality, cancer, site, repository, access, review, caps, sort]);
+  }, [rows, scores, modality, cancer, site, subject, repository, access, review, caps, sort]);
 
   // Reset pagination whenever the filter set changes. Done during render via React's
   // documented "adjusting state when props change" pattern rather than in an effect:
@@ -259,6 +267,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     modality,
     cancer,
     site,
+    subject,
     repository,
     access,
     review,
@@ -275,6 +284,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     (modality ? 1 : 0) +
     (cancer ? 1 : 0) +
     (site ? 1 : 0) +
+    (subject ? 1 : 0) +
     (repository ? 1 : 0) +
     (access ? 1 : 0) +
     (review ? 1 : 0) +
@@ -303,6 +313,7 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
     setModality("");
     setCancer("");
     setSite("");
+    setSubject("");
     setRepository("");
     setAccess("");
     setReview("");
@@ -377,6 +388,34 @@ export default function DatasetBrowser({ rows, facets, initial = {} }: Props) {
           </div>
         </fieldset>
 
+        <FacetSelect
+          label="Subject"
+          value={subject}
+          onChange={setSubject}
+          options={[
+            ...(facets.subject ?? []).map((facet) => ({
+              value: facet.value,
+              label: `${subjects.subjects.find((item) => item.code === facet.value)?.label ?? facet.value} (${facet.count})`,
+            })),
+            ...(facets.subject_scope ?? [])
+              .filter((facet) =>
+                ["pan_cancer", "non_cancer", "not_stated", "title_derived"].includes(
+                  facet.value,
+                ),
+              )
+              .map((facet) => ({
+                value: facet.value,
+                label: `${
+                  {
+                    pan_cancer: "Pan-cancer",
+                    non_cancer: "Non-cancer",
+                    not_stated: "Subject not stated",
+                    title_derived: "Subject derived from title",
+                  }[facet.value] ?? facet.value
+                } (${facet.count})`,
+              })),
+          ]}
+        />
         <FacetSelect
           label="Measurement type"
           value={modality}

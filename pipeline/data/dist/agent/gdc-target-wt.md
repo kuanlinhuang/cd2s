@@ -10,6 +10,7 @@ Dataset id: gdc-target-wt
 
 - Cohort: 652 cases
 - Cancer types: Complex Mixed and Stromal Neoplasms
+- Subject: Kidney
 - Measurements: microRNA sequencing, Whole genome sequencing, Bulk RNA sequencing, Whole exome sequencing, Targeted DNA panel sequencing, DNA methylation array, Clinical, Structural Variation
 - Median follow-up: 71.0 months (derivable for 651 cases)
 - Treatment response recorded: False

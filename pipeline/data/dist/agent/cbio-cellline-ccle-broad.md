@@ -10,6 +10,7 @@ Dataset id: cbio-cellline-ccle-broad
 
 - Cohort: 1,020 cases
 - Cancer types: Mixed Cancer Types
+- Subject: pan cancer
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Microarray expression
 - Treatment response recorded: False
 - Access: open. Processed data download from the cBioPortal study page or its public REST API; no account required. Primary raw data remain wherever the original investigators deposited them.

@@ -10,6 +10,7 @@ Dataset id: cbio-prad-organoids-msk-2022
 
 - Cohort: 39 cases
 - Cancer types: Prostate Adenocarcinoma
+- Subject: Prostate
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 12.9 months (derivable for 17 cases)
 - Treatment response recorded: False

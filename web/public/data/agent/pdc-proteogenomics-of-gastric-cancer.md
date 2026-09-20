@@ -10,6 +10,7 @@ Dataset id: pdc-proteogenomics-of-gastric-cancer
 
 - Cohort: 80 cases
 - Cancer types: Early Onset Gastric Cancer
+- Subject: Esophagus and stomach
 - Measurements: Glycoproteome mass spectrometry (iTRAQ4 / DDA), Phosphoproteome mass spectrometry (iTRAQ4 / DDA), Proteome mass spectrometry (iTRAQ4 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

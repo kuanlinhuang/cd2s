@@ -10,6 +10,7 @@ Dataset id: idc-c4kc-kits
 
 - Cohort: 210 cases
 - Cancer types: Kidney Cancer
+- Subject: Kidney
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

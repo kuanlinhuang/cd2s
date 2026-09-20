@@ -10,6 +10,7 @@ Dataset id: pdc-apollo-brca-1
 
 - Cohort: 70 cases
 - Cancer types: Ductal and Lobular Neoplasms
+- Subject: Breast
 - Measurements: Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 93.9 months (derivable for 68 cases)
 - Treatment response recorded: False

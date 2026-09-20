@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-gbm-confirmatory-study
 
 - Cohort: 118 cases
 - Cancer types: Glioblastoma, Gliomas, Lung Adenocarcinoma, Skin Cutaneous Melanoma, Epithelial Neoplasms, NOS, Breast Invasive Carcinoma
+- Subject: pan cancer
 - Measurements: Acetylome mass spectrometry (TMT11 / DDA), Glycoproteome mass spectrometry (TMT11 / DDA), Lipidome mass spectrometry (Label Free / N/A), Metabolome mass spectrometry (Label Free / N/A), Phosphoproteome mass spectrometry (TMT11 / DDA), Proteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 14.4 months (derivable for 112 cases)
 - Treatment response recorded: True

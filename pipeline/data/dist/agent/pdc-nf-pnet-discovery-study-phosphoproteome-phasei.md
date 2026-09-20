@@ -10,6 +10,7 @@ Dataset id: pdc-nf-pnet-discovery-study-phosphoproteome-phasei
 
 - Cohort: 138 cases
 - Cancer types: Neuroendocrine Neoplasms
+- Subject: Pancreas
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

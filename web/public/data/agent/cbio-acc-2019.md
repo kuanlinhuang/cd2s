@@ -10,6 +10,7 @@ Dataset id: cbio-acc-2019
 
 - Cohort: 1,045 cases
 - Cancer types: Adenoid Cystic Carcinoma
+- Subject: Head and neck
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 48.8 months (derivable for 144 cases)
 - Treatment response recorded: False

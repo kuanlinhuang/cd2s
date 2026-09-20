@@ -10,6 +10,7 @@ Dataset id: cbio-panet-msk-2018
 
 - Cohort: 80 cases
 - Cancer types: Pancreatic Neuroendocrine Tumor
+- Subject: Pancreas
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 39.2 months (derivable for 79 cases)
 - Treatment response recorded: False

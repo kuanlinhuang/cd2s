@@ -10,6 +10,7 @@ Dataset id: pdc-apollo-luad-phosphoproteome-tio2
 
 - Cohort: 101 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 50.4 months (derivable for 86 cases)
 - Treatment response recorded: False

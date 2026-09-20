@@ -9,6 +9,7 @@ Dataset id: pdc-cptac-deep-proteomics-2d-dia
 ## What it is
 
 - Cohort: 3 cases
+- Subject: title derived
 - Measurements: Proteome mass spectrometry (Label Free / DIA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

@@ -49,49 +49,22 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="border-t py-8 text-[12px] no-print t-muted">
-          <div className="mx-auto max-w-[1180px] px-4 sm:px-6 grid gap-6 sm:grid-cols-3">
-            <div>
-              <div className="font-medium mb-1" style={{ color: "var(--text)" }}>
-                Cancer Data Showcase
-              </div>
-              <p>
-                A guide to reusing NCI-supported cancer data. Built for the NCI Office of
-                Data Sharing Impact Prize, Track 1.
-              </p>
-            </div>
-            <div>
-              <div className="font-medium mb-1" style={{ color: "var(--text)" }}>
-                Provenance
-              </div>
-              <p>
-                {stats.n_datasets.toLocaleString()} dataset records from{" "}
-                {stats.n_repositories} repositories. Corpus built{" "}
-                {shortDate(stats.generated_at)} with pipeline v
-                {stats.pipeline_version}.
-              </p>
-              <p className="mt-1">
-                Every claim links to its source. See{" "}
-                <Link href="/methods" className="underline">
-                  Methods
-                </Link>{" "}
-                for how the corpus is built and where it is weak.
-              </p>
-            </div>
-            <div>
-              <div className="font-medium mb-1" style={{ color: "var(--text)" }}>
-                Reuse this
-              </div>
-              <p>
-                Curated text and structured metadata are CC BY 4.0; pipeline code is MIT.
-                Upstream dataset metadata keeps its original terms.
-              </p>
-              <p className="mt-1">
-                <Link href="/agents" className="underline">
-                  Bulk download and agent API
-                </Link>
-              </p>
-            </div>
+        <footer className="border-t py-6 text-[12px] no-print t-muted">
+          <div className="mx-auto flex max-w-[1180px] flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 sm:px-6">
+            <span className="font-medium" style={{ color: "var(--text)" }}>
+              Cancer Data Showcase
+            </span>
+            <span>
+              {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
+              repositories, corpus built {shortDate(stats.generated_at)}
+            </span>
+            <Link href="/methods" className="underline">
+              How this was built
+            </Link>
+            <Link href="/agents" className="underline">
+              For software
+            </Link>
+            <span>Text CC BY 4.0, code MIT</span>
           </div>
         </footer>
       </body>

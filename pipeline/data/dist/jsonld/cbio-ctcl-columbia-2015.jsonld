@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=ctcl_columbia_2015"
   ],
   "keywords": [
+    "NCIt:C13252",
     "Non-Hodgkin Lymphoma",
     "cbioportal",
     "harmonized-for-reuse",

@@ -1,18 +1,25 @@
-import MiniSearch from "minisearch";
 import { z } from "zod";
 
 import { getIndex, getRecord } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { modalityLabel, num } from "@/lib/format";
+import { type Need, readNeeds } from "@/lib/needs";
+import { subjectsNamedIn } from "@/lib/subjects";
 import type { IndexRow } from "@/lib/types";
+
+// The need definitions live in lib/needs.ts so the browser can share them; the agent's
+// public surface is unchanged.
+export { NEED_KEYS, NEED_PHRASES, readNeeds } from "@/lib/needs";
+export type { Need } from "@/lib/needs";
 
 /**
  * The dataset agent.
  *
  * A researcher describes the analysis they want to run. The agent reads the request for
  * what it needs (a survival endpoint, recorded treatment response, imaging, and so on),
- * searches the corpus, checks each candidate's measured capabilities against those
- * needs, and returns a short ranked list with the reasons and the blockers.
+ * reads it for the subject it names, checks each record filed under that subject
+ * against those needs, and returns a short ranked list with the reasons and the
+ * blockers.
  *
  * Two stages. Retrieval and the capability checks are deterministic and always run,
  * because "vital status is populated for every case and informative for none" is a
@@ -21,6 +28,20 @@ import type { IndexRow } from "@/lib/types";
  * then ranks the shortlist and writes the explanation in the researcher's own terms.
  * Without a key, the same shortlist is returned with rule-based explanations, and the
  * response says so.
+ *
+ * THE CLAIM INVARIANT, which every part of this site obeys and which is written down
+ * only here. Every function that produces a label, a verdict, a ranking or a link a
+ * visitor will read takes an ABSOLUTE bar on a measured quantity, and has a NO-CLAIM
+ * return that some real input reaches. Not a position in a sorted list, not a
+ * comparison against whatever else this query happened to return, not the mere presence
+ * of a field: a stated bar, applied to something measured, with "nothing here qualifies"
+ * as an outcome the code can actually produce and a test actually pins. Ranking by
+ * position makes the first row a recommendation however bad it is; scoring against the
+ * best hit of the moment makes every query produce a perfect match; both are ways of
+ * claiming something the data does not say. Here the bar is membership: the request
+ * must name a subject in the exported vocabulary, and a record's repository-stated
+ * controlled subject must contain it. The verdicts below, the router's name matching in lib/intent.ts and the
+ * provenance anchors in lib/anchors.ts conform to this rather than restating it.
  */
 
 export type Verdict = "best" | "good" | "caution";
@@ -48,255 +69,75 @@ export interface AgentAnswer {
   needs: string[];
   summary: string;
   picks: AgentPick[];
+  pan_cancer_count: number;
 }
-
-// ------------------------------------------------------------------------------------
-// what the request needs
-// ------------------------------------------------------------------------------------
-
-export type Need = {
-  key: string;
-  label: string;
-  test: RegExp;
-  /** true = satisfied, false = ruled out, null = unknown from the record. */
-  check: (r: IndexRow) => boolean | null;
-  fit: string;
-  fail: string;
-};
-
-const PROTEOMIC = new Set(["proteome", "phosphoproteome", "acetylproteome", "glycoproteome", "ubiquitylome", "metabolome", "lipidome"]);
-
-const NEEDS: Need[] = [
-  {
-    key: "survival",
-    label: "a survival endpoint",
-    test: /surviv|prognos|progression.?free|kaplan|hazard|mortalit|death|time.to.event|outcome/i,
-    check: (r) => r.has_survival_endpoint ?? null,
-    fit: "vital status and follow-up time are populated, so a survival endpoint can be derived",
-    fail: "no usable survival endpoint: vital status or follow-up is missing or uninformative",
-  },
-  {
-    key: "treatment",
-    label: "recorded treatment and response",
-    test: /treat|therap|drug|respon|resist|chemo|immunother|inhibitor|regimen|relapse/i,
-    check: (r) => r.has_treatment_response ?? null,
-    fit: "treatment given and a response or outcome field are recorded",
-    fail: "no treatment response is recorded",
-  },
-  {
-    key: "imaging",
-    label: "imaging",
-    test: /\bimag|radiol|\bCT\b|\bMRI\b|\bPET\b|histopath|slide|whole.slide|patholog|H&E/i,
-    check: (r) => r.modalities.some((m) => m === "radiology" || m === "histopathology"),
-    fit: "radiology or whole-slide images are available",
-    fail: "no imaging",
-  },
-  {
-    key: "expression",
-    label: "transcriptomics",
-    test: /rna|expression|transcript/i,
-    check: (r) => r.modalities.some((m) => m === "rna_seq" || m === "scrna_seq"),
-    fit: "RNA sequencing is available",
-    fail: "no RNA sequencing",
-  },
-  {
-    key: "methylation",
-    label: "DNA methylation",
-    test: /methylat|epigen/i,
-    check: (r) => r.modalities.includes("methylation"),
-    fit: "DNA methylation arrays are available",
-    fail: "no methylation data",
-  },
-  {
-    key: "genome",
-    label: "whole genome or exome sequencing",
-    test: /whole.genome|\bWGS\b|exome|\bWES\b|germline|mutation|variant|somatic/i,
-    check: (r) => r.modalities.some((m) => ["wgs", "wxs", "targeted_dna", "bulk_dna"].includes(m)),
-    fit: "DNA sequencing is available",
-    fail: "no DNA sequencing",
-  },
-  {
-    key: "proteomics",
-    label: "proteomics",
-    test: /proteom|phospho|mass.spec|acetyl|glyco|ubiquit|metabolom|lipidom/i,
-    check: (r) => r.modalities.some((m) => PROTEOMIC.has(m)),
-    fit: "mass-spectrometry proteomics is available",
-    fail: "no proteomics",
-  },
-  {
-    key: "singlecell",
-    label: "single-cell or spatial data",
-    test: /single.?cell|scrna|spatial|multiplex|imaging mass/i,
-    check: (r) => r.modalities.some((m) => m.startsWith("sc") || m.startsWith("spatial") || m === "imaging_mass_cytometry"),
-    fit: "single-cell or spatial measurements are available",
-    fail: "no single-cell or spatial data",
-  },
-  {
-    key: "multimodal",
-    label: "several measurement types on the same patients",
-    test: /multi.?omic|multi.?modal|integrat|proteogenom|combine|pair/i,
-    check: (r) => r.n_modalities >= 3,
-    fit: "three or more measurement types on the same cohort",
-    fail: "fewer than three measurement types",
-  },
-  {
-    key: "pediatric",
-    label: "a pediatric cohort",
-    test: /p(a)?ediatric|child|adolescent|young adult|infant/i,
-    check: (r) =>
-      r.is_pediatric ??
-      (/p(a)?ediatric|childhood|children|adolescent|young adult|\bTARGET\b|Kids First/i.test(
-        `${r.title} ${r.summary ?? ""} ${r.program ?? ""} ${r.tags.join(" ")}`,
-      )
-        ? true
-        : null),
-    fit: "a pediatric cohort",
-    fail: "not a pediatric cohort",
-  },
-  {
-    key: "population",
-    label: "a diverse or non-US population",
-    test: /black|african|hispanic|latino|asian|non.?white|dispar|equity|ancestr|diverse|underrepresent/i,
-    check: (r) => (r.population_flags.length > 0 ? true : null),
-    fit: "the cohort has recorded non-white or non-US representation",
-    fail: "race or ethnicity is not recorded, so no analysis by population is possible",
-  },
-  {
-    key: "large",
-    label: "a large cohort",
-    test: /large|largest|big|thousand|well.powered|statistical power|many (patients|cases)/i,
-    check: (r) => (r.n_cases ?? r.n_samples ?? 0) >= 1000,
-    fit: "a cohort of a thousand cases or more",
-    fail: "fewer than a thousand cases",
-  },
-  {
-    key: "open",
-    label: "open access",
-    test: /open.access|without (an )?approval|no dbgap|download(able)? (directly|now)|openly/i,
-    check: (r) => r.access_tier === "open",
-    fit: "fully open access, nothing to apply for",
-    fail: "needs an access request first",
-  },
-];
 
 // ------------------------------------------------------------------------------------
 // retrieval
 // ------------------------------------------------------------------------------------
 
-type Doc = { id: string; title: string; short: string; text: string };
-let _search: MiniSearch<Doc> | null = null;
-
-function search(): MiniSearch<Doc> {
-  if (_search) return _search;
-  const ms = new MiniSearch<Doc>({
-    fields: ["title", "short", "text"],
-    storeFields: ["id"],
-    idField: "id",
-    searchOptions: { boost: { title: 3, short: 2 }, prefix: true, fuzzy: 0.15 },
-  });
-  ms.addAll(
-    getIndex().map((r) => ({
-      id: r.id,
-      title: r.title,
-      short: r.short_title ?? "",
-      text: [r.summary ?? "", r.cancer_types.join(" "), r.primary_sites.join(" "), r.search_text ?? ""].join(" "),
-    })),
-  );
-  _search = ms;
-  return ms;
-}
-
 type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unknown: Need[] };
 
 /**
- * What the request asks for, read from its wording.
+ * The candidates worth ranking.
  *
- * Exported because it is the step that decides which datasets can be ruled out, and a
- * missed need is silent: the agent simply stops checking for it. Tested directly.
+ * A dataset is ranked only when the request names a subject the corpus holds and the
+ * record is filed under it. That membership is the absolute bar this module applies
+ * before it labels anything: it is a fact about the record, not a score relative to
+ * whatever else the query happened to return, and a request naming no such subject - a
+ * question about the method, a request for the files, a bare award number, a request
+ * stated only as capabilities - reaches no record at all and is answered by the route
+ * cards beside the shortlist and by the honest sentence in `answer`.
+ *
+ * The needs read from the wording then decide the order and the verdict among records
+ * that are equally on the subject; they cannot admit one on their own, because
+ * "survival" is a word a question about the method uses as readily as a request for
+ * data. Ordering below that runs on measured facts - a reviewed showcase record, then
+ * reviewed research questions, then cohort size - and never on the strength of a word.
  */
-export function readNeeds(query: string): Need[] {
-  return NEEDS.filter((n) => n.test.test(query));
-}
-
-/**
- * Words that carry no topic, so their presence should not make a dataset relevant.
- *
- * Two kinds: ordinary function words, and the words that describe a dataset in general
- * rather than a subject - "cohort", "open", "records". The second kind matters more,
- * because almost every page contains them and a query that leans on them would rank by
- * page length.
- */
-const STOPWORDS = new Set([
-  "a", "access", "all", "an", "and", "any", "are", "as", "at", "available", "be", "by",
-  "can", "cohort", "cohorts", "data", "dataset", "datasets", "do", "does", "find", "for",
-  "from", "get", "have", "how", "i", "in", "into", "is", "it", "its", "large", "like",
-  "looking", "me", "my", "need", "of", "on", "open", "or", "patients", "public",
-  "records", "samples", "show", "small", "some", "study", "studies", "that", "the",
-  "their", "then", "there", "this", "to", "use", "using", "want", "was", "were", "what",
-  "which", "with", "would",
-]);
-
-/**
- * What the request is *about*, with the words that already became needs removed.
- *
- * Those words are counted once as a capability check, which is the reliable measurement.
- * Leaving them in the text query counted them a second time, and because well-curated
- * pages discuss survival and treatment at length it made every well-annotated cohort
- * look textually relevant to every clinical question: "proteogenomic gastric cancer
- * survival with treatment records" ranked a paediatric leukaemia trial above the gastric
- * cohort that answers it.
- *
- * Returns null when nothing but capability words is left. There is then no topic, and
- * text relevance is not used at all rather than being read out of noise.
- */
-export function topicOf(query: string, needs: Need[]): string | null {
-  const words = query.split(/[^A-Za-z0-9+-]+/).filter(Boolean);
-  const kept = words.filter(
-    (w) => !STOPWORDS.has(w.toLowerCase()) && !needs.some((n) => n.test.test(w)),
-  );
-  return kept.some((w) => w.length >= 3) ? kept.join(" ") : null;
-}
-
-/** Every need the agent knows how to check, for tests and for documentation. */
-export const NEED_KEYS = NEEDS.map((n) => n.key);
-
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
-  const index = getIndex();
-  const hits = new Map<string, number>();
-  let max = 0;
-  const topic = topicOf(query, needs);
-  if (topic) {
-    for (const h of search().search(topic)) {
-      hits.set(h.id as string, h.score);
-      max = Math.max(max, h.score);
-    }
-  }
-  const scored: Scored[] = index.map((row) => {
-    const text = max > 0 ? (hits.get(row.id) ?? 0) / max : 0;
-    const met: Need[] = [];
-    const failed: Need[] = [];
-    const unknown: Need[] = [];
-    for (const n of needs) {
-      const v = n.check(row);
-      if (v === true) met.push(n);
-      else if (v === false) failed.push(n);
-      else unknown.push(n);
-    }
-    // Topic relevance is weighted above any single capability, because a researcher who
-    // names a disease is not negotiating about it: a gastric cohort meeting two of three
-    // needs should outrank a leukaemia cohort meeting three. It is never decisive on its
-    // own - failing a stated need still costs more than the best possible text match.
-    let score = text * 3.5 + met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
-    if (row.is_showcase) score += 0.4;
-    if (row.n_research_questions > 0) score += 0.2;
-    if (row.n_cases && row.n_cases >= 200) score += 0.2;
-    // A dataset that matched nothing in the text and satisfies no need is noise.
-    if (text === 0 && met.length === 0) score -= 5;
-    return { row, score, met, failed, unknown };
-  });
+  const named = subjectsNamedIn(query);
+  if (named.size === 0) return { needs, scored: [] };
+  const scored: Scored[] = getIndex()
+    .filter(
+      (row) =>
+        (row.subject_scope === "single" || row.subject_scope === "several") &&
+        row.subjects.some((subject) => named.has(subject)),
+    )
+    .map((row) => {
+      const met: Need[] = [];
+      const failed: Need[] = [];
+      const unknown: Need[] = [];
+      for (const n of needs) {
+        const v = n.check(row);
+        if (v === true) met.push(n);
+        else if (v === false) failed.push(n);
+        else unknown.push(n);
+      }
+      let score = met.length * 1.5 - failed.length * 2 - unknown.length * 0.4;
+      if (row.is_showcase) score += 0.4;
+      if (row.n_research_questions > 0) score += 0.2;
+      score += Math.min((row.n_cases ?? row.n_samples ?? 0) / 1000, 1) * 0.3;
+      return { row, score, met, failed, unknown };
+    });
   scored.sort((a, b) => b.score - a.score);
   return { needs, scored: scored.slice(0, k) };
+}
+
+/**
+ * What the card claims about a candidate.
+ *
+ * "Start here" is a recommendation, so it takes more than leading the list: every need
+ * the request stated must be measured for this record and met by it. A need the record
+ * fails makes it "check first"; a need nobody has measured for it leaves it "good fit",
+ * because the page cannot recommend a dataset on a field that was never read. When no
+ * candidate clears that bar the shortlist still shows what it found and no row claims
+ * to be the place to start.
+ */
+function verdictFor(s: Scored, rank: number): Verdict {
+  if (s.failed.length > 0) return "caution";
+  return rank === 0 && s.unknown.length === 0 ? "best" : "good";
 }
 
 function rulesPick(s: Scored, rank: number): AgentPick {
@@ -320,7 +161,7 @@ function rulesPick(s: Scored, rank: number): AgentPick {
   if (r.has_citable_accession === false) watch.push("no citable accession, so prior reuse cannot be traced");
   // A reviewer's blocking limitation is surfaced under "check first" but does not by
   // itself demote a dataset that meets every stated need: it is why the page exists.
-  const verdict: Verdict = s.failed.length > 0 ? "caution" : rank === 0 ? "best" : "good";
+  const verdict = verdictFor(s, rank);
   return {
     id: r.id,
     title: r.title,
@@ -486,21 +327,43 @@ async function rankWithModel(
 // entry point
 // ------------------------------------------------------------------------------------
 
+/** A clause as a sentence: capitalised, ending in exactly one full stop. */
+function sentence(clause: string): string {
+  const t = clause.trim().replace(/\.+$/, "");
+  return t ? t[0].toUpperCase() + t.slice(1) + "." : "";
+}
+
 export async function answer(rawQuery: string): Promise<AgentAnswer> {
   const query = rawQuery.trim().slice(0, 600);
   const { needs, scored } = shortlist(query, 6);
   const needLabels = needs.map((n) => n.label);
   const byId = new Map(scored.map((s) => [s.row.id, s]));
+  const panCancerCount = getIndex().filter((row) => row.subject_scope === "pan_cancer").length;
 
   if (process.env.OPENROUTER_API_KEY && scored.length > 0) {
     try {
       const ranked = await rankWithModel(query, needs, scored);
       if (ranked) {
-        const picks = ranked.picks
-          .filter((p) => byId.has(p.id))
-          .map((p) => ({ ...rulesPick(byId.get(p.id)!, 1), verdict: p.verdict, why: p.why, watch_out: p.watch_out }));
+        const seen = new Set<string>();
+        const picks: AgentPick[] = [];
+        for (const p of ranked.picks) {
+          const s = byId.get(p.id);
+          if (!s || seen.has(p.id)) continue;
+          seen.add(p.id);
+          const claimed = p.verdict === "best" && verdictFor(s, 0) !== "best" ? verdictFor(s, 0) : p.verdict;
+          picks.push({ ...rulesPick(s, 1), verdict: claimed, why: p.why, watch_out: p.watch_out });
+        }
         if (picks.length > 0) {
-          return { query, mode: "llm", model: agentModel(), note: null, needs: needLabels, summary: ranked.summary, picks };
+          return {
+            query,
+            mode: "llm",
+            model: agentModel(),
+            note: null,
+            needs: needLabels,
+            summary: ranked.summary,
+            picks,
+            pan_cancer_count: panCancerCount,
+          };
         }
       }
     } catch (err) {
@@ -508,17 +371,17 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
     }
   }
 
-  const top = scored.filter((s) => s.score > -3).slice(0, 4);
+  const top = scored.slice(0, 4);
   const picks = top.map((s, i) => rulesPick(s, i));
   const best = picks.find((p) => p.verdict === "best");
   const summary =
     picks.length === 0
-      ? "Nothing in the corpus matches that description. Try naming the cancer type or the measurement you need."
+      ? "Nothing in the corpus matches that description. Try naming the cancer type or the tissue you are studying."
       : best
-        ? `Start with ${best.title}. ${best.why[0] ? best.why[0][0].toUpperCase() + best.why[0].slice(1) + "." : ""}${
-            best.watch_out[0] ? ` Check first: ${best.watch_out[0]}.` : ""
+        ? `Start with ${best.title}. ${best.why[0] ? sentence(best.why[0]) : ""}${
+            best.watch_out[0] ? ` Check first: ${sentence(best.watch_out[0])}` : ""
           }`
-        : `No dataset meets every need as stated. ${picks[0].title} is the closest; ${picks[0].watch_out[0] ?? "read its limitations"}.`;
+        : `Nothing here is a clear place to start. ${picks[0].title} is the closest; ${picks[0].watch_out[0] ?? "read its limitations"}.`;
   return {
     query,
     mode: "rules",
@@ -529,5 +392,6 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
     needs: needLabels,
     summary,
     picks,
+    pan_cancer_count: panCancerCount,
   };
 }

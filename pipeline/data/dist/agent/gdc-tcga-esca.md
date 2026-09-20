@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-esca
 
 - Cohort: 185 cases
 - Cancer types: Adenomas and Adenocarcinomas, Cystic, Mucinous and Serous Neoplasms, Squamous Cell Neoplasms
+- Subject: Esophagus and stomach
 - Measurements: SNP genotyping array (copy number, germline), DNA methylation array, Clinical, DICOM medical imaging, Whole exome sequencing, microRNA sequencing, Bulk RNA sequencing, Whole-slide tissue images, Reverse phase protein array, Whole genome sequencing
 - Median follow-up: 13.1 months (derivable for 185 cases)
 - Treatment response recorded: True

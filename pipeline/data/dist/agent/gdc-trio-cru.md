@@ -10,6 +10,7 @@ Dataset id: gdc-trio-cru
 
 - Cohort: 339 cases
 - Cancer types: Not Applicable
+- Subject: title derived
 - Measurements: Whole genome sequencing
 - Treatment response recorded: False
 - Access: controlled. Data Access Request through dbGaP using an eRA Commons account; institutional signing official approval required

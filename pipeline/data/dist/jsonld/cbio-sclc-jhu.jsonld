@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=sclc_jhu"
   ],
   "keywords": [
+    "NCIt:C12468",
     "Small Cell Lung Cancer",
     "cbioportal",
     "harmonized-for-reuse",

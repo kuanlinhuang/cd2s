@@ -11,6 +11,7 @@ Dataset id: idc-lung-phantom
 
 - Cohort: 1 cases
 - Cancer types: Phantom
+- Subject: non cancer
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

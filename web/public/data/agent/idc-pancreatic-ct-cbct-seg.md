@@ -11,6 +11,7 @@ Dataset id: idc-pancreatic-ct-cbct-seg
 
 - Cohort: 40 cases
 - Cancer types: Pancreatic Cancer
+- Subject: Pancreas
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

@@ -10,6 +10,7 @@ Dataset id: cbio-biliary-tract-msk-2026
 
 - Cohort: 1,254 cases
 - Cancer types: Biliary Tract
+- Subject: Biliary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 10.6 months (derivable for 213 cases)
 - Treatment response recorded: False

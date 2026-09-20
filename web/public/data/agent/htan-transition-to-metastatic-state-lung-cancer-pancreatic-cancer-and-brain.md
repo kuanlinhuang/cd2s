@@ -9,6 +9,7 @@ Dataset id: htan-transition-to-metastatic-state-lung-cancer-pancreatic-cancer-an
 ## What it is
 
 - Cohort: 202 cases
+- Subject: Brain and central nervous system, Lung, Pancreas (derived from title; not stated by repository)
 - Measurements: Multiplexed tissue imaging, Single-cell / single-nucleus RNA sequencing
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

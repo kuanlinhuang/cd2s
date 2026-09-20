@@ -10,6 +10,7 @@ Dataset id: cbio-egc-msk-2017
 
 - Cohort: 305 cases
 - Cancer types: Esophagogastric Adenocarcinoma
+- Subject: Esophagus and stomach
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 24.1 months (derivable for 305 cases)
 - Treatment response recorded: False

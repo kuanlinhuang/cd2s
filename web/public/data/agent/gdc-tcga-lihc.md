@@ -10,6 +10,7 @@ Dataset id: gdc-tcga-lihc
 
 - Cohort: 377 cases
 - Cancer types: Adenomas and Adenocarcinomas
+- Subject: Liver
 - Measurements: SNP genotyping array (copy number, germline), DNA methylation array, Whole-slide tissue images, Clinical, DICOM medical imaging, Whole exome sequencing, microRNA sequencing, Bulk RNA sequencing, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 19.7 months (derivable for 376 cases)
 - Treatment response recorded: True

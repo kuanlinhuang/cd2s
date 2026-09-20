@@ -10,6 +10,7 @@ Dataset id: cbio-luad-mskcc-2020
 
 - Cohort: 604 cases
 - Cancer types: Lung Adenocarcinoma
+- Subject: Lung
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 23.4 months (derivable for 604 cases)
 - Treatment response recorded: False

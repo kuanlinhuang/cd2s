@@ -9,6 +9,7 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition
 ## What it is
 
 - Cohort: 5 cases
+- Subject: Kidney (derived from title; not stated by repository)
 - Measurements: Phosphoproteome mass spectrometry (Label Free / DIA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

@@ -10,6 +10,7 @@ Dataset id: cbio-chol-msk-2018
 
 - Cohort: 192 cases
 - Cancer types: Cholangiocarcinoma
+- Subject: Biliary tract
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 31.6 months (derivable for 192 cases)
 - Treatment response recorded: False

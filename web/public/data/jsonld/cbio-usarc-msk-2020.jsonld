@@ -16,6 +16,7 @@
     "https://www.cbioportal.org/study/summary?id=usarc_msk_2020"
   ],
   "keywords": [
+    "NCIt:C12405",
     "Uterine Sarcoma/Mesenchymal",
     "cbioportal",
     "copy number",

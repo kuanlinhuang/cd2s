@@ -10,6 +10,7 @@ Dataset id: cbio-cervix-msk-2023
 
 - Cohort: 177 cases
 - Cancer types: Cervix
+- Subject: Cervix
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 25.0 months (derivable for 174 cases)
 - Treatment response recorded: False

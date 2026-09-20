@@ -10,6 +10,7 @@ Dataset id: idc-cbis-ddsm
 
 - Cohort: 6,671 cases
 - Cancer types: Breast Cancer, Non-Cancer
+- Subject: Breast
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

@@ -9,6 +9,7 @@ Dataset id: htan-human-tumor-atlas-pilot-project-htapp
 ## What it is
 
 - Cohort: 205 cases
+- Subject: title derived
 - Measurements: Expansion sequencing (ExSeq) in situ transcriptomics, Single-cell / single-nucleus RNA sequencing, Multiplexed tissue imaging, 10x Visium spatial transcriptomics, Bulk DNA sequencing, Bulk RNA sequencing, Other assay
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

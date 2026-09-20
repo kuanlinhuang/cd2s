@@ -9,6 +9,7 @@ Dataset id: htan-colon-molecular-atlas-project
 ## What it is
 
 - Cohort: 195 cases
+- Subject: Colorectal and bowel (derived from title; not stated by repository)
 - Measurements: Bulk DNA sequencing, Single-cell / single-nucleus RNA sequencing, 10x Visium spatial transcriptomics, Multiplexed tissue imaging
 - Access: mixed. Level 1-2 sequencing data are controlled through dbGaP; level 3-4 derived data and most imaging are downloadable from Synapse after registering and accepting the HTAN data use terms.
 

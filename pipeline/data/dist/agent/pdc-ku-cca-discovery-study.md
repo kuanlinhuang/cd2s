@@ -10,6 +10,7 @@ Dataset id: pdc-ku-cca-discovery-study
 
 - Cohort: 151 cases
 - Cancer types: Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+- Subject: Cervix
 - Measurements: Phosphoproteome mass spectrometry (TMT11 / DDA)
 - Median follow-up: 38.2 months (derivable for 142 cases)
 - Treatment response recorded: False

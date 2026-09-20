@@ -10,6 +10,7 @@ Dataset id: pdc-cptac-kf-ccdi-pediatric-t-all-study
 
 - Cohort: 114 cases
 - Cancer types: Acute Lymphoblastic Leukemia
+- Subject: Lymphoid
 - Measurements: Phosphoproteome mass spectrometry (TMT18 / DDA), Proteome mass spectrometry (TMT18 / DDA)
 - Treatment response recorded: False
 - Access: open. Direct download from the PDC portal or its API; no account required

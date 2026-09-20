@@ -10,6 +10,7 @@ Dataset id: idc-prostate-mri-us-biopsy
 
 - Cohort: 1,151 cases
 - Cancer types: Prostate Cancer
+- Subject: Prostate
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

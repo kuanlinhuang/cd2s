@@ -10,6 +10,7 @@ Dataset id: cbio-pcnsl-msk-2024
 
 - Cohort: 44 cases
 - Cancer types: Primary DLBCL of the central nervous system
+- Subject: Lymphoid
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 20.4 months (derivable for 44 cases)
 - Treatment response recorded: False

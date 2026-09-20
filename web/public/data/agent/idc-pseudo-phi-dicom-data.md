@@ -11,6 +11,7 @@ Dataset id: idc-pseudo-phi-dicom-data
 
 - Cohort: 42 cases
 - Cancer types: Various
+- Subject: pan cancer
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

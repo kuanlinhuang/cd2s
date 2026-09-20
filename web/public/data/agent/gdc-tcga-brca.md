@@ -14,6 +14,7 @@ Summary: 1,098 breast tumors measured twelve ways across GDC and IDC, with treat
 
 - Cohort: 1,098 cases
 - Cancer types: Cystic, Mucinous and Serous Neoplasms, Adenomas and Adenocarcinomas, Fibroepithelial Neoplasms, Basal Cell Neoplasms, Ductal and Lobular Neoplasms, Epithelial Neoplasms, NOS
+- Subject: Breast
 - Measurements: SNP genotyping array (copy number, germline), Clinical, DICOM medical imaging, DNA methylation array, Bulk RNA sequencing, microRNA sequencing, Whole exome sequencing, Whole-slide diagnostic images, Whole genome sequencing, Somatic Structural Variation
 - Median follow-up: 27.1 months (derivable for 1096 cases)
 - Treatment response recorded: True

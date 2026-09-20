@@ -10,6 +10,7 @@ Dataset id: idc-nlst
 
 - Cohort: 26,410 cases
 - Cancer types: Lung Cancer, Non-Cancer
+- Subject: Lung
 - Measurements: DICOM medical imaging, Clinical (accompanying data, per IDC supporting_data)
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

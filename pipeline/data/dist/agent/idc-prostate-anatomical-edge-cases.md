@@ -11,6 +11,7 @@ Dataset id: idc-prostate-anatomical-edge-cases
 
 - Cohort: 131 cases
 - Cancer types: Prostate Cancer
+- Subject: Prostate
 - Measurements: DICOM medical imaging
 - Access: open. Public DICOM download from the IDC portal, its API, or the idc-index Python package; no account required for public collections.
 

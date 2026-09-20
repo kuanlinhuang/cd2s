@@ -10,6 +10,7 @@ Dataset id: cbio-ucs-msk-2024
 
 - Cohort: 69 cases
 - Cancer types: Endometrial Carcinoma
+- Subject: Uterus
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 40.3 months (derivable for 66 cases)
 - Treatment response recorded: False

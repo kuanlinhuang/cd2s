@@ -10,6 +10,7 @@ Dataset id: cbio-hcc-msk-2024
 
 - Cohort: 1,370 cases
 - Cancer types: Hepatocellular Carcinoma
+- Subject: Liver
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations, Structural variants / fusions
 - Median follow-up: 18.4 months (derivable for 1357 cases)
 - Treatment response recorded: False

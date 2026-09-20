@@ -10,6 +10,7 @@ Dataset id: cbio-thyroid-gatci-2024
 
 - Cohort: 158 cases
 - Cancer types: Thyroid
+- Subject: Thyroid
 - Measurements: Mutation calls (panel, exome or genome), Copy number alterations
 - Median follow-up: 4.1 months (derivable for 142 cases)
 - Treatment response recorded: False
