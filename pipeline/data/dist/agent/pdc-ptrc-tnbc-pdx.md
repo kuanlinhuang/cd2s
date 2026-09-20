@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- 1 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 1 that could be checked were themselves NCI funded.
+- 1 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 1 that could be checked were themselves NCI funded.
 - Reuse gap index: -0.15 (negative means less reused than comparable datasets)
   - Proteogenomic Markers of Chemotherapy Resistance and Response in Triple-Negative Breast Cancer. (2022) PMID 36001024
 

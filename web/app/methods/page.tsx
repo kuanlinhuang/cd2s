@@ -860,6 +860,14 @@ RGI    = y - fitted`}</code>
               "Some datasets are simply untraceable",
               `${num(stats.n_without_citable_accession)} records have no accession specific enough to search for. PDC study identifiers, for instance, are almost never quoted, so proteomic reuse is close to invisible to any citation-based method including this one.`,
             ],
+            ...((stats.n_reuse_unmeasurable ?? 0) > 0
+              ? [
+                  [
+                    "Some counts cannot be corrected",
+                    `${num(stats.n_reuse_unmeasurable ?? 0)} further records have a citable accession, but too few of the articles matching it are open access to estimate how much of the count is Europe PMC matching the accession's words separately. Those datasets show no reuse count at all. That is a gap in the measurement and it is not the same as a zero, so it is never drawn as one.`,
+                  ],
+                ]
+              : []),
             [
               "Inferred primary publications",
               "Where a repository publishes no marker-paper link we nominate the earliest heavily cited article that analyzed the data. That nomination is structurally unreliable, not merely uncertain: it can only choose among articles that quote the accession, and a marker paper published in 2011 does not quote a project identifier introduced years later. So the true marker paper is never a candidate and the heuristic can only ever pick a reuse paper. It is shown as a reading suggestion at low confidence and nothing is counted from it - no citation count, no funding attribution. Where a reviewer has named the real marker paper, the site counts from that instead; where nobody has, the citation count is left blank rather than filled from a guess.",

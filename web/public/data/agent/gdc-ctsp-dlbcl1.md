@@ -72,7 +72,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
-- 13 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 6 of the 10 that could be checked were themselves NCI funded.
+- 13 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 6 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 333 (attention, not reuse)
 - Reuse gap index: -1.04 (negative means less reused than comparable datasets)
   - A multiprotein supercomplex controlling oncogenic signalling in lymphoma. (2018) PMID 29925955

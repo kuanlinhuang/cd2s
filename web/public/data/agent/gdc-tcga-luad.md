@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2831
-- 118 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- 118 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 4700 (attention, not reuse)
 - Reuse gap index: +3.19 (negative means less reused than comparable datasets)
   - Unveiling the prognostic and immunotherapeutic role of Tregs in lung cancer using integrated analysis of single-cell and bulk RNA-sequencing. (2026) PMID 42038348

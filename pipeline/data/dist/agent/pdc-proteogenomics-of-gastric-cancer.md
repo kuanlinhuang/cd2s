@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
-- 8 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 8 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 7 that could be checked were themselves NCI funded.
+- 8 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 8 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 7 that could be checked were themselves NCI funded.
 - Reuse gap index: -1.88 (negative means less reused than comparable datasets)
   - Human gastric cancer progression and stabilization of ATG2B through RNF5 binding facilitated by autophagy-associated CircDHX8. (2024) PMID 38866787
   - Hyperactivation of mTOR/eIF4E Signaling Pathway Promotes the Production of Tryptophan-To-Phenylalanine Substitutants in EBV-Positive Gastric Cancer. (2024) PMID 38994917

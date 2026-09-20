@@ -17,6 +17,8 @@ import json
 from collections import Counter, defaultdict
 from urllib.request import Request, urlopen
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import pandas as pd
 
 PDC = "https://proteomic.datacommons.cancer.gov/graphql"
@@ -162,6 +164,62 @@ print(f"\nlargest layer  : {n_max} cases")
 print(f"smallest layer : {n_min} cases")
 print(f"complete-case analysis across every layer is bounded above by {n_min} cases")
 print(f"  -> that is {100 * n_min / n_max:.0f}% of the largest layer")
+
+# %%
+# One house style for every figure below: a single accent, one contrast colour for the
+# thing the reader must not miss, and nothing else. Defined here rather than imported so
+# the downloaded notebook runs on its own.
+INK, ACCENT, WARN, MUTED = "#1f2430", "#2f6f6b", "#b4762a", "#9aa3b2"
+mpl.rcParams.update(
+    {
+        "figure.dpi": 120,
+        "savefig.dpi": 120,
+        "font.size": 9.5,
+        "axes.titlesize": 11,
+        "axes.titleweight": "semibold",
+        "axes.labelcolor": INK,
+        "axes.titlecolor": INK,
+        "text.color": INK,
+        "axes.edgecolor": MUTED,
+        "xtick.color": MUTED,
+        "ytick.color": MUTED,
+        "axes.grid": True,
+        "grid.color": "#e6e9ef",
+        "grid.linewidth": 0.8,
+        "axes.axisbelow": True,
+    }
+)
+
+
+def finish(ax, title):
+    ax.set_title(title, loc="left")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.figure.tight_layout()
+    return ax
+
+
+# %% [markdown]
+# ### Where the complete-case cohort actually stops
+#
+# Each bar is one measured layer. The dashed line is the smallest of them, and it is the
+# real ceiling on any analysis that needs every layer at once - usually far to the left
+# of the cohort size the portal advertises.
+
+# %%
+ordered = target.sort_values("cases")
+fig, ax = plt.subplots(figsize=(8.8, 0.46 * len(ordered) + 2.0))
+ax.barh(ordered["fraction"], ordered["cases"], color=ACCENT, height=0.6)
+ax.axvline(n_min, color=WARN, lw=1.6, ls="--")
+ax.text(n_min, len(ordered) - 0.35, f" complete-case bound: {n_min} cases",
+        color=WARN, fontsize=8.5, va="center")
+for i, (_, row) in enumerate(ordered.iterrows()):
+    ax.text(row["cases"], i, f" {int(row['cases'])}", va="center", fontsize=8.5, color=INK)
+ax.set_xlabel("cases with this layer")
+ax.set_xlim(0, n_max * 1.18)
+ax.grid(axis="y", visible=False)
+finish(ax, f"{TARGET}: layer coverage is not uniform")
+plt.show()
 
 # %% [markdown]
 # ## 4. How much reuse do these scarce datasets get?

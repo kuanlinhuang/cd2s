@@ -16,7 +16,7 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- 3 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 3 that could be checked were themselves NCI funded.
+- 3 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 3 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.00 (negative means less reused than comparable datasets)
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
   - Identification of non-canonical peptides with moPepGen. (2026) PMID 40523945

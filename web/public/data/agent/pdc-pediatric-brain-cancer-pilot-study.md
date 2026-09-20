@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
-- 9 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 9 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 6 that could be checked were themselves NCI funded.
+- 9 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 9 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 6 that could be checked were themselves NCI funded.
 - Reuse gap index: -0.49 (negative means less reused than comparable datasets)
   - METTL1-modulated LSM14A facilitates proliferation and migration in glioblastoma via the stabilization of DDX5. (2024) PMID 39040050
   - Integrative multi-omics reveals two biologically distinct groups of pilocytic astrocytoma. (2023) PMID 37656187

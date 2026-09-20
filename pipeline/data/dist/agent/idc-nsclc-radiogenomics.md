@@ -49,7 +49,7 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- 4 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 4 are kept as exemplars. Of the 4 that analyzed the data, 3 of the 4 that could be checked had no author in common with the generating team, and 1 of the 4 that could be checked were themselves NCI funded.
+- 4 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 4 are kept as exemplars. Of the 4 that analyzed the data, 3 of the 4 that could be checked had no author in common with the generating team, and 1 of the 4 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 202 (attention, not reuse)
 - Reuse gap index: -5.97 (negative means less reused than comparable datasets)
   - Prognostic PET 18F-FDG uptake imaging features are associated with major oncogenomic alterations in patients with resected non-small cell lung cancer. (2012) PMID 22710433

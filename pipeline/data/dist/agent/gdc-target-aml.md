@@ -70,7 +70,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 137
-- 129 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 3 of the 10 that could be checked had no author in common with the generating team, and 9 of the 10 that could be checked were themselves NCI funded.
+- 129 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 3 of the 10 that could be checked had no author in common with the generating team, and 9 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 695 (attention, not reuse)
 - Reuse gap index: -2.00 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755

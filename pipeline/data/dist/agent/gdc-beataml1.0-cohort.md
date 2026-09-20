@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 22
-- 47 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 5 of the 10 that could be checked were themselves NCI funded.
+- 47 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 5 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 1161 (attention, not reuse)
 - Reuse gap index: -0.44 (negative means less reused than comparable datasets)
   - Characteristics and prognostic impact of IDH mutations in AML: a COG, SWOG, and ECOG analysis. (2023) PMID 37267439

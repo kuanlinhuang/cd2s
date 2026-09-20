@@ -296,6 +296,8 @@ def attach_workbooks(records: list[DatasetRecord]) -> dict[str, Any]:
                     level=WorkbookLevel(entry.get("level", "intermediate")),
                     title=entry["title"],
                     question=entry["question"],
+                    problem=entry.get("problem"),
+                    lesson=entry.get("lesson"),
                     inputs=entry.get("inputs", []),
                     outputs=entry.get("outputs", []),
                     steps=entry.get("steps", []),

@@ -1,11 +1,11 @@
 {
   "workbook": "02_survival_tcga_brca",
   "executed": true,
-  "executed_at": "2026-09-18T14:37:04.478693+00:00",
-  "runtime_seconds": 6.04,
-  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
+  "executed_at": "2026-09-20T20:50:10.935117+00:00",
+  "runtime_seconds": 8.46,
+  "executor": "nbclient / python 3.14.4 / Darwin 25.5.0 arm64",
   "package_versions": {
-    "python": "3.12.13",
+    "python": "3.14.4",
     "pandas": "3.0.6",
     "numpy": "2.5.3",
     "matplotlib": "3.11.2",
@@ -14,9 +14,9 @@
     "requests": "2.34.2",
     "httpx": "0.28.1"
   },
-  "n_cells": 6,
-  "n_cells_executed": 6,
-  "output_hash": "1f109e46f983e88a92180fc041f8238d",
+  "n_cells": 8,
+  "n_cells_executed": 8,
+  "output_hash": "1e5c923f6b2b2d86843ef42960b7f603",
   "error": null,
   "notebook_path": "workbooks/executed/02_survival_tcga_brca.ipynb"
 }

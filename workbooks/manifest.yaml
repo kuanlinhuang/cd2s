@@ -6,6 +6,8 @@
 
 - workbook: 01_can_i_answer_this
   title: Audit whether this dataset can answer your question
+  problem: A portal can list a field even when every value is an unusable non-answer.
+  lesson: Decide whether the analysis is possible before requesting data or writing a protocol.
   level: beginner
   language: python
   question: >-
@@ -30,6 +32,8 @@
 
 - workbook: 02_survival_tcga_brca
   title: Overall survival from open data, with the endpoint derived correctly
+  problem: Survival time is split across three fields and includes sentinel values that look numeric.
+  lesson: Derive a defensible endpoint, account for exclusions, then fit and interpret the model.
   level: beginner
   language: python
   question: Which molecular and clinical factors are associated with survival?
@@ -51,6 +55,8 @@
 
 - workbook: 03_treatment_response_cervical
   title: Treatment response, after checking the response field is real
+  problem: Disease-status codes and true response categories are easy to mix into one misleading outcome.
+  lesson: Validate the response field, collapse repeated records, and state what the observational result cannot prove.
   level: intermediate
   language: python
   question: >-
@@ -74,6 +80,8 @@
 
 - workbook: 04_scarce_modality_cptac
   title: Find and use the scarcest measurements in the portfolio
+  problem: Rare proteomic layers are scattered across study records and may cover different patients.
+  lesson: Find genuinely scarce measurements and bound the complete-case cohort before designing the study.
   level: intermediate
   language: python
   question: >-
@@ -98,6 +106,8 @@
 
 - workbook: 05_cross_repository_linkage
   title: Join the same patients across two NCI repositories
+  problem: Molecular and imaging data for the same cohort live in separate NCI repositories.
+  lesson: Join shared patient identifiers and quantify the real multimodal overlap, not the advertised totals.
   level: advanced
   language: python
   question: >-
@@ -120,6 +130,8 @@
 
 - workbook: 06_agent_dataset_selection
   title: Select a dataset the way an agent should
+  problem: Ranking by size or fame can select a large dataset that cannot answer the question.
+  lesson: Filter on measured capability, rank on fit, and carry blocking limitations into the analysis brief.
   level: advanced
   language: python
   question: >-

@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 13
-- 23 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 10 that could be checked were themselves NCI funded.
+- 23 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: -0.63 (negative means less reused than comparable datasets)
   - Proteogenomic insights suggest druggable pathways in endometrial carcinoma. (2023) PMID 37567170
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626

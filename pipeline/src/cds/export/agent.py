@@ -380,8 +380,8 @@ def to_agent_brief(rec: DatasetRecord) -> str:
                 f"{len(funding_checked)} that could be checked were themselves NCI funded"
             )
             lines.append(
-                f"- {m.n_reuse_examined} articles referencing this dataset's accession "
-                f"were retrieved and graded individually, and the strongest "
+                f"- {m.n_reuse_examined} articles matching this dataset's accession "
+                f"search were retrieved and graded individually, and the strongest "
                 f"{len(rec.reuse)} are kept as exemplars. Of the "
                 f"{len(graded)} that analyzed the data, {overlap}, and {funding}."
             )

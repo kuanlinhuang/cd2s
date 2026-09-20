@@ -1,11 +1,11 @@
 {
   "workbook": "03_treatment_response_cervical",
   "executed": true,
-  "executed_at": "2026-09-18T14:37:06.753524+00:00",
-  "runtime_seconds": 2.27,
-  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
+  "executed_at": "2026-09-20T20:50:14.838383+00:00",
+  "runtime_seconds": 3.9,
+  "executor": "nbclient / python 3.14.4 / Darwin 25.5.0 arm64",
   "package_versions": {
-    "python": "3.12.13",
+    "python": "3.14.4",
     "pandas": "3.0.6",
     "numpy": "2.5.3",
     "matplotlib": "3.11.2",
@@ -14,9 +14,9 @@
     "requests": "2.34.2",
     "httpx": "0.28.1"
   },
-  "n_cells": 5,
-  "n_cells_executed": 5,
-  "output_hash": "ac8a09ff3c12cd843c4baeb18a2290f7",
+  "n_cells": 7,
+  "n_cells_executed": 7,
+  "output_hash": "2739a8afdd17892ef7f6e7f9c7ef43dc",
   "error": null,
   "notebook_path": "workbooks/executed/03_treatment_response_cervical.ipynb"
 }

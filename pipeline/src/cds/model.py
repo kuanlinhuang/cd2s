@@ -666,6 +666,14 @@ class AnalysisExample(CDSModel):
     level: WorkbookLevel
     title: str
     question: str
+    problem: str | None = Field(
+        default=None,
+        description="The mistake this example stops a reader making, in one sentence.",
+    )
+    lesson: str | None = Field(
+        default=None,
+        description="What the reader is left holding once it has run, in one sentence.",
+    )
     inputs: list[str] = Field(default_factory=list)
     outputs: list[str] = Field(default_factory=list)
     steps: list[str] = Field(default_factory=list)

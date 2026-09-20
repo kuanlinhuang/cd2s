@@ -25,6 +25,8 @@ import json
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from lifelines import CoxPHFitter, KaplanMeierFitter
@@ -192,6 +194,62 @@ if len(groups) >= 2:
     print(f"\nlog-rank {a} vs {b}: p = {res.p_value:.4g} (n={len(ga)} vs {len(gb)})")
 else:
     print("\nnot enough staged cases for a log-rank comparison")
+
+# %%
+# One house style for every figure below: a single accent, one contrast colour for the
+# thing the reader must not miss, and nothing else. Defined here rather than imported so
+# the downloaded notebook runs on its own.
+INK, ACCENT, WARN, MUTED = "#1f2430", "#2f6f6b", "#b4762a", "#9aa3b2"
+mpl.rcParams.update(
+    {
+        "figure.dpi": 120,
+        "savefig.dpi": 120,
+        "font.size": 9.5,
+        "axes.titlesize": 11,
+        "axes.titleweight": "semibold",
+        "axes.labelcolor": INK,
+        "axes.titlecolor": INK,
+        "text.color": INK,
+        "axes.edgecolor": MUTED,
+        "xtick.color": MUTED,
+        "ytick.color": MUTED,
+        "axes.grid": True,
+        "grid.color": "#e6e9ef",
+        "grid.linewidth": 0.8,
+        "axes.axisbelow": True,
+    }
+)
+
+
+def finish(ax, title):
+    ax.set_title(title, loc="left")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.figure.tight_layout()
+    return ax
+
+
+# %% [markdown]
+# ### The curves themselves
+#
+# A log-rank p-value says the curves differ. It does not say how, or from when. The plot
+# does both, and it shows how thin the tail of the follow-up really is.
+
+# %%
+fig, ax = plt.subplots(figsize=(8.6, 4.8))
+overall = KaplanMeierFitter().fit(df["time_months"], df["event"], label=f"all cases (n={len(df)})")
+overall.plot_survival_function(ax=ax, color=INK, ci_show=False, lw=2.2)
+for color, g in zip([ACCENT, WARN, "#7a5ea8", MUTED], groups, strict=False):
+    sub = df[df["stage_group"] == g]
+    KaplanMeierFitter().fit(
+        sub["time_months"], sub["event"], label=f"{g} (n={len(sub)})"
+    ).plot_survival_function(ax=ax, color=color, ci_show=False, lw=1.6)
+ax.set_xlabel("months since diagnosis")
+ax.set_ylabel("survival probability")
+ax.set_ylim(0, 1.02)
+ax.legend(frameon=False, fontsize=8.5, loc="lower left")
+finish(ax, f"{PROJECT_ID}: overall survival, and by stage at diagnosis")
+plt.show()
 
 # %% [markdown]
 # ## 5. Multivariable Cox model

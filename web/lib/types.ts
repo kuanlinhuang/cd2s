@@ -324,6 +324,8 @@ export interface AnalysisExample {
   level: "beginner" | "intermediate" | "advanced";
   title: string;
   question: string;
+  problem?: string | null;
+  lesson?: string | null;
   inputs: string[];
   outputs: string[];
   steps: string[];

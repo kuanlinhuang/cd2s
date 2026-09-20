@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- 4 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 3 that could be checked were themselves NCI funded.
+- 4 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 3 that could be checked were themselves NCI funded.
 - Reuse gap index: -2.12 (negative means less reused than comparable datasets)
   - The proteogenomic landscape of the human kidney and implications for cardio-kidney-metabolic health. (2025) PMID 40796935
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131

@@ -27,6 +27,8 @@ import json
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import pandas as pd
 
 GDC = "https://api.gdc.cancer.gov"
@@ -155,6 +157,70 @@ for field, label in PROBES.items():
 
 coverage = pd.DataFrame(rows)
 print(coverage.to_string(index=False))
+
+# %%
+# One house style for every figure below: a single accent, one contrast colour for the
+# thing the reader must not miss, and nothing else. Defined here rather than imported so
+# the downloaded notebook runs on its own.
+INK, ACCENT, WARN, MUTED = "#1f2430", "#2f6f6b", "#b4762a", "#9aa3b2"
+mpl.rcParams.update(
+    {
+        "figure.dpi": 120,
+        "savefig.dpi": 120,
+        "font.size": 9.5,
+        "axes.titlesize": 11,
+        "axes.titleweight": "semibold",
+        "axes.labelcolor": INK,
+        "axes.titlecolor": INK,
+        "text.color": INK,
+        "axes.edgecolor": MUTED,
+        "xtick.color": MUTED,
+        "ytick.color": MUTED,
+        "axes.grid": True,
+        "grid.color": "#e6e9ef",
+        "grid.linewidth": 0.8,
+        "axes.axisbelow": True,
+    }
+)
+
+
+def finish(ax, title):
+    ax.set_title(title, loc="left")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.figure.tight_layout()
+    return ax
+
+
+# %% [markdown]
+# ### The same table, read at a glance
+#
+# The gap between the two bars is the whole point of this workbook. A field can be
+# populated for every case and still be worthless, because "not reported" is a value.
+
+# %%
+plot_df = coverage.dropna(subset=["populated_pct"]).sort_values("populated_pct")
+if len(plot_df):
+    pos = range(len(plot_df))
+    fig, ax = plt.subplots(figsize=(8.6, 0.46 * len(plot_df) + 1.8))
+    ax.barh([i + 0.19 for i in pos], plot_df["populated_pct"], height=0.36,
+            color=MUTED, label="populated")
+    ax.barh([i - 0.19 for i in pos], plot_df["informative_pct"].fillna(0), height=0.36,
+            color=ACCENT, label="informative (non-answers removed)")
+    for i, (_, row) in enumerate(plot_df.iterrows()):
+        if row["one_to_many"]:
+            ax.text(1.5, i - 0.19, "one-to-many: per-case share not derivable",
+                    va="center", fontsize=8, color=WARN)
+    ax.set_yticks(list(pos))
+    ax.set_yticklabels(plot_df["field"])
+    ax.set_xlim(0, 100)
+    ax.set_xlabel("% of cases")
+    ax.legend(frameon=False, loc="lower right", fontsize=8.5)
+    ax.grid(axis="y", visible=False)
+    finish(ax, f"{PROJECT_ID}: populated is not the same as informative")
+    plt.show()
+else:
+    print("no probed field returned counts for this project")
 
 # %% [markdown]
 # ## 3. Is there a usable survival endpoint?

@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { Chip } from "@/components/ui";
 import { num, shortDate } from "@/lib/format";
-import { NOTEBOOK_NOTES } from "@/lib/notebook-notes";
 import type { NotebookGuide } from "@/lib/types";
 
 function runtime(seconds: number | null | undefined): string | null {
@@ -21,7 +20,6 @@ export default function NotebookGallery({
   return (
     <div className={compact ? "grid gap-4 lg:grid-cols-3" : "space-y-5"}>
       {guides.map((guide, index) => {
-        const note = NOTEBOOK_NOTES[guide.slug];
         const receipt = guide.receipt;
         return (
           <article
@@ -52,20 +50,24 @@ export default function NotebookGallery({
                 </h3>
                 <p className="mt-2 text-body t-muted">{guide.question}</p>
 
-                {note && (
+                {(guide.problem || guide.lesson) && (
                   <div className="mt-4 space-y-3">
-                    <div>
-                      <div className="text-micro font-semibold uppercase tracking-wider t-faint">
-                        The trap it prevents
+                    {guide.problem && (
+                      <div>
+                        <div className="text-micro font-semibold uppercase tracking-wider t-faint">
+                          The trap it prevents
+                        </div>
+                        <p className="mt-0.5 text-body">{guide.problem}</p>
                       </div>
-                      <p className="mt-0.5 text-body">{note.problem}</p>
-                    </div>
-                    <div>
-                      <div className="text-micro font-semibold uppercase tracking-wider t-faint">
-                        What you leave with
+                    )}
+                    {guide.lesson && (
+                      <div>
+                        <div className="text-micro font-semibold uppercase tracking-wider t-faint">
+                          What you leave with
+                        </div>
+                        <p className="mt-0.5 text-body">{guide.lesson}</p>
                       </div>
-                      <p className="mt-0.5 text-body">{note.lesson}</p>
-                    </div>
+                    )}
                   </div>
                 )}
 
