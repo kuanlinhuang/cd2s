@@ -99,29 +99,49 @@ def pmids_to_core_projects(
     return out, at
 
 
+#: Rows per projects/search request. RePORTER's documented ceiling.
+PROJ_PAGE = 500
+
+
 def fetch_project_details(
-    client: Client, core_project_nums: list[str], *, batch: int = 40
+    client: Client, core_project_nums: list[str], *, batch: int = 40, max_pages: int = 12
 ) -> tuple[dict[str, dict[str, Any]], datetime | None]:
-    """Titles, PIs, institutes, years and amounts for a set of core project numbers."""
+    """Titles, PIs, institutes, years and amounts for a set of core project numbers.
+
+    One request per batch is not enough and used to lose awards silently. The endpoint
+    returns one row per project *year*, so forty project numbers can be eight hundred
+    rows against a page size of five hundred, and the rows are sorted by fiscal year
+    descending - so what falls off the end is every year of the awards that ended
+    longest ago. A closed R01 came back with no title, no PI and no institution, and the
+    site drew it as a bare grant number.
+
+    Each batch is therefore paged until the endpoint stops returning a full page.
+    """
     details: dict[str, dict[str, Any]] = {}
     at: datetime | None = None
     uniq = sorted({c.strip().upper() for c in core_project_nums if c})
     for group in _chunks(list(range(len(uniq))), batch):
         nums = [uniq[i] for i in group]
-        r = client.post(
-            PROJ_API,
-            body={
-                "criteria": {"project_nums": nums},
-                "limit": 500,
-                "offset": 0,
-                "sort_field": "fiscal_year",
-                "sort_order": "desc",
-            },
-        )
-        at = r.retrieved_at
-        if not r.ok:
-            continue
-        for row in r.json().get("results") or []:
+        rows: list[dict[str, Any]] = []
+        for page in range(max_pages):
+            r = client.post(
+                PROJ_API,
+                body={
+                    "criteria": {"project_nums": nums},
+                    "limit": PROJ_PAGE,
+                    "offset": page * PROJ_PAGE,
+                    "sort_field": "fiscal_year",
+                    "sort_order": "desc",
+                },
+            )
+            at = r.retrieved_at
+            if not r.ok:
+                break
+            got = r.json().get("results") or []
+            rows += got
+            if len(got) < PROJ_PAGE:
+                break
+        for row in rows:
             core = (row.get("core_project_num") or "").strip().upper()
             if not core:
                 continue
