@@ -439,7 +439,9 @@ def write_all(
         for example in record.analysis_examples:
             if not example.workbook_path:
                 continue
-            name = example.template_source or example.workbook_path.rsplit("/", 1)[-1].removesuffix(".py")
+            name = example.template_source or example.workbook_path.rsplit("/", 1)[-1].removesuffix(
+                ".py"
+            )
             if name in notebook_files:
                 example.notebook_download_url = f"/data/notebooks/{name}.ipynb"
             if name in previews:

@@ -608,7 +608,7 @@ def test_a_curated_marker_paper_displaces_the_guess_and_may_be_counted_from(
 
 
 def test_deep_pass_records_how_many_articles_it_actually_read(record_factory):
-    """"10 independent" read as 10 of 652. It was 10 of 12."""
+    """ "10 independent" read as 10 of 652. It was 10 of 12."""
     from cds.model import Publication, ReuseRecord, ReuseTier
 
     rec = record_factory("gdc-tcga-ov", identifiers=[(IdScheme.GDC_PROJECT, "TCGA-OV")])
@@ -690,7 +690,10 @@ def test_a_nominated_marker_paper_must_actually_name_the_accession():
             self.text = text
 
     def fake_full_text(_client, pmcid):
-        return {"PMC_GOOD": "we downloaded TARGET-RT from the GDC", "PMC_BAD": "timed picture naming"}.get(pmcid)
+        return {
+            "PMC_GOOD": "we downloaded TARGET-RT from the GDC",
+            "PMC_BAD": "timed picture naming",
+        }.get(pmcid)
 
     original = enrich.precision._full_text
     enrich.precision._full_text = fake_full_text

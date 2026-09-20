@@ -264,9 +264,7 @@ def enrich_record(
                             at,
                         )
                     )
-            rec.reuse_metrics.n_nci_funded_reuse = sum(
-                1 for x in rec.reuse if x.nci_funded_reuse
-            )
+            rec.reuse_metrics.n_nci_funded_reuse = sum(1 for x in rec.reuse if x.nci_funded_reuse)
             info["n_nci_funded_reuse"] = rec.reuse_metrics.n_nci_funded_reuse
 
     # Recompute the headline counts now that exemplars carry independence flags.

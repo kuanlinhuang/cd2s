@@ -1,7 +1,7 @@
 # Supporting Evidence - Cancer Data Showcase
 
 **Track 1, NCI ODS Impact Prize.** All figures below were produced by the working prototype
-and are reproducible from the public repository. Corpus built 2026-09-18, pipeline v0.1.0.
+and are reproducible from the public repository. Corpus built 2026-09-20, pipeline v0.1.0.
 
 ## Prototype and code
 
@@ -21,8 +21,9 @@ Reproduce end to end: `cds ingest all && cds merge && cds trace-index && cds enr
 602 dataset records across 5 repositories and 29 distinct measurement types · clinical field
 completeness measured for 385 of them in one shared vocabulary · 206 with a survival endpoint
 that can actually be derived · 20 deeply curated showcase pages, 14 of them less-known
-resources · 69 reviewed research questions · 778 verified reuse studies (accession located in
-methods, results, a table or a figure) · 736 NCI awards resolved through NIH RePORTER ·
+resources · 69 reviewed research questions · 796 verified reuse studies (accession located in
+a methods section, corrected for Europe PMC indexing a hyphenated accession as separate
+words) · 865 NCI awards resolved through NIH RePORTER ·
 6 workbooks executed end to end against live public APIs · 124 of 124 links on curated pages
 resolving.
 
@@ -40,11 +41,11 @@ resolving.
   patient-level join is 1,098 of 1,098 - complete multimodal coverage, openly available.
 - **Chernobyl thyroid cohort** (`REBC-THYR`, 449 cases): reported median follow-up 115 months,
   derivable for 12 cases; vital status informative for none.
-- **21 datasets fall materially below modeled expected reuse** (Huber robust regression of
+- **24 datasets fall materially below modeled expected reuse** (Huber robust regression of
   log2 analyzing articles over 142 datasets; years available the strongest predictor,
-  p = 2.0 × 10⁻⁴¹; residual SD 1.49 log2 units; program membership deliberately excluded as a
-  covariate. A robust fit yields no R²; the 0.83 published alongside is an OLS reference. The
-  model ships its own worst case: `TARGET-NBL` is predicted 586 analyzing articles against 55
+  p = 3.0 × 10⁻²⁶; residual SD 1.61 log2 units; program membership deliberately excluded as a
+  covariate. A robust fit yields no R²; the 0.77 published alongside is an OLS reference. The
+  model ships its own worst case: `TARGET-AML` is predicted 552 analyzing articles against 137
   observed, which is why the label also requires a small absolute count.)
 
 ## Method validation

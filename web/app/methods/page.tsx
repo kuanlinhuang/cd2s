@@ -535,10 +535,10 @@ export default function MethodsPage() {
             returns over a thousand articles, almost none of which used that study.
           </Callout>
           <Callout tone="neutral" title="Independence">
-            An article is independent when no author surname overlaps the dataset&rsquo;s
-            generating team or its grant investigators. A follow-up by the people who
-            produced the data is a continuation, not someone else finding the resource
-            useful.
+            An article is independent when none of its authors, matched as surname plus
+            first initial, appears on the dataset&rsquo;s generating team or among its
+            grant investigators. A follow-up by the people who produced the data is a
+            continuation, not someone else finding the resource useful.
           </Callout>
         </div>
       </section>
@@ -878,7 +878,7 @@ RGI    = y - fitted`}</code>
             ],
             [
               "Author-overlap independence is a proxy",
-              "Surname matching will miss consortium reuse by different members of the same network and will occasionally mark a common surname as overlapping when it is not.",
+              "Author matching will miss consortium reuse by different members of the same network, and matching on surname plus first initial will occasionally read two different people as one.",
             ],
             [
               "Discovery of the long tail is not exhaustive",

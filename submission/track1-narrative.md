@@ -153,8 +153,8 @@ technical step that nobody is currently taking.
 
 **Graded reuse evidence.** Citing a dataset's paper is not reusing its data, yet reuse
 statistics in the field routinely treat them as one. We grade by where an accession appears in
-an article: methods, results, a table or a figure means the reported findings depend on the
-data; a reference-list mention does not. Europe PMC indexes article sections separately, which
+an article: the published count asks the methods section alone, so every dataset is counted
+the same way, while a reference-list mention is counted separately and never called reuse. Europe PMC indexes article sections separately, which
 makes the distinction tractable. Crucially, the field choice was calibrated against the live
 index rather than assumed, and it is re-measured on every build rather than quoted from a note.
 In the current build, Europe PMC's broad AVAILABILITY field matched 3,953 of the 5,146 articles
@@ -194,7 +194,7 @@ same method that surfaces it in the data.
 
 **Feasibility is demonstrated rather than asserted.** The prototype exists and runs: 602
 dataset records, clinical field completeness measured for 385 of them, 20 deeply curated pages
-(14 of them less-known resources), 736 NCI awards resolved through RePORTER, 778 verified reuse
+(14 of them less-known resources), 865 NCI awards resolved through RePORTER, 796 verified reuse
 studies, and six workbooks executed end to end against live public APIs. Each workbook ships a receipt recording when it ran, with which
 package versions, how long it took, and a hash of its outputs, so "independently executed" is a
 claim a reviewer can check. A link check across the curated pages resolves 124 of 124 URLs. All

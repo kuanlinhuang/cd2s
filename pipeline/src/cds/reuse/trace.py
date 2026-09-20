@@ -282,9 +282,7 @@ def index_pass(
             ],
         )
 
-    by_tier, raw_by_tier, winning_queries, est, dropped_hits = _corrected_tier_counts(
-        client, toks
-    )
+    by_tier, raw_by_tier, winning_queries, est, dropped_hits = _corrected_tier_counts(client, toks)
 
     n_verified = by_tier.get(ReuseTier.T3_ANALYZED.value)
     screened = max(by_tier.values(), default=0)
@@ -411,7 +409,7 @@ def generator_keys(rec: DatasetRecord) -> set[str]:
 
 
 def _person_key(name: str) -> str | None:
-    """"Raju S. Kucherlapati" and "KUCHERLAPATI, RAJU S" both become "kucherlapati r"."""
+    """ "Raju S. Kucherlapati" and "KUCHERLAPATI, RAJU S" both become "kucherlapati r"."""
     surname_first, comma, rest = name.partition(",")
     if comma:
         surname = surname_first.strip()
@@ -456,9 +454,7 @@ def refresh_independence(records: list[DatasetRecord]) -> dict[str, int]:
             x.independent_of_generators = not overlaps
             stats["n_overlapping" if overlaps else "n_independent"] += 1
         verified = [
-            x
-            for x in rec.reuse
-            if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)
+            x for x in rec.reuse if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)
         ]
         rec.reuse_metrics.n_independent_reuse = sum(
             1 for x in verified if x.independent_of_generators is True

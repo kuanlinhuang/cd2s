@@ -56,10 +56,10 @@ a snapshot of the build described there.
 | Clinical fields measured | 385 records, in one harmonized vocabulary |
 | Survival endpoint derivable | 206 records, measured rather than asserted |
 | Deeply curated pages | 20 (14 of them less-known resources) |
-| Verified reuse studies | 778 (accession in methods, results, a table or a figure) |
-| NCI awards linked | 796, resolved through NIH RePORTER |
-| Datasets with an award credited with creating them | 247, from a repository-supplied or reviewer-supplied marker paper only |
-| Datasets with awards credited with using them | 76; 7 have awards on both sides |
+| Verified reuse studies | 796 (accession in a methods section, corrected for how Europe PMC indexes hyphenated accessions) |
+| NCI awards linked | 865, resolved through NIH RePORTER |
+| Datasets with an award credited with creating them | 283, from a repository-supplied or reviewer-supplied marker paper only |
+| Datasets with awards credited with using them | 80; 31 have awards on both sides |
 | Executed workbooks | 6, attached to 15 dataset pages, each with an execution receipt |
 | Datasets with no citable accession | 364 - their reuse cannot be traced at all |
 | People across the corpus | 349,817 patients or subjects, in the 601 records that report a count |
@@ -171,14 +171,28 @@ is graded, how the reuse gap model is fitted, and - deliberately, at the end - w
 approach is weak. Two decisions worth knowing about up front:
 
 **Citation is not reuse.** We grade by where an accession appears in an article.
-Methods, results, a table or a figure means the reported findings depend on the data; a
-reference-list mention does not.
+The published count asks one section field, `METHODS`, so every dataset is counted the same
+way rather than by whichever field happened to return the most; a reference-list mention is
+counted separately and never called reuse.
+Articles listed individually on a dataset page are graded on a wider set - an accession in
+results, a table, a figure or the supplement also shows the data were analysed - so an example
+can name a section the count never asked about.
 Field choice is calibrated against the live index on every build rather than quoted from a
 note: `cds calibrate` re-measures how many articles each candidate field matches for the
 corpus's most reused accession, checks that an unindexed field name returns zero hits, and
 publishes the result as `field_calibration.json`.
 The broad `AVAILABILITY` field matches most articles that mention a dataset at all and so
 cannot discriminate; the narrow `DATA_AVAILABILITY` field can.
+
+**A hit count is not an exact match.** Europe PMC splits a hyphenated accession into separate
+indexed words, so a raw count for `TARGET-RT` also counts prose about radiotherapy or room
+temperature.
+Every count on the site is therefore corrected individually: the articles a query returns are
+sampled, their open-access full text is tested for the literal accession, and the count is
+scaled by the fraction that pass, with the sample size shown beside the number it produced.
+Where too few articles are open access to estimate the correction, the dataset shows no count
+rather than an inflated one, and that is never drawn as a zero.
+The Methods page sets out the measurement and its two known biases.
 
 **A marker paper describes one cohort.** Where a repository publishes no marker-paper link,
 the earliest heavily cited article that analysed the accession is nominated as a candidate at
@@ -188,6 +202,9 @@ nominated a pan-tissue DNA methylation clock as the marker paper for eleven TCGA
 once.
 An inference claimed by more than one dataset is therefore withdrawn from all of them, and the
 record records why.
+A nomination is a reading suggestion and nothing is counted from it: citation counts and
+generation funding are computed only from a marker paper the repository publishes or a
+reviewer has named in `pipeline/data/marker_papers.yaml`, and are left blank otherwise.
 
 **An endpoint needs a time.** Overall survival is reported as possible only where a time to
 event is derivable for at least 20 cases and at least 10 events are observed - the thresholds

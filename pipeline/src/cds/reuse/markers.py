@@ -143,9 +143,7 @@ def _registry_publication(entry: dict[str, Any], rid: str) -> Publication:
     )
 
 
-def apply_registry(
-    records: list[DatasetRecord], path: Path | None = None
-) -> dict[str, Any]:
+def apply_registry(records: list[DatasetRecord], path: Path | None = None) -> dict[str, Any]:
     """Install curated marker papers, displacing any guess for the same record.
 
     A registry entry wins over a machine nomination outright: that is the whole point of

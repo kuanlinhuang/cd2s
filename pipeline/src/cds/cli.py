@@ -331,8 +331,10 @@ def curate_cmd(
     # A count computed against a paper this pipeline merely nominated is not the
     # quantity its label claims, so it is withheld rather than shown.
     withheld = markers.withhold_counts_from_guesses(recs)
-    console.print(f"  citation counts withheld (no authoritative marker paper): "
-                  f"{withheld['n_citation_counts_withheld']}")
+    console.print(
+        f"  citation counts withheld (no authoritative marker paper): "
+        f"{withheld['n_citation_counts_withheld']}"
+    )
 
     # Which award paid to create each dataset. This runs here, after overlays, because a
     # reviewer's overlay is one of the two places an authoritative marker paper comes

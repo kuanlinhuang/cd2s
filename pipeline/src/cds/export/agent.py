@@ -356,18 +356,13 @@ def to_agent_brief(rec: DatasetRecord) -> str:
             )
         else:
             lines.append(f"- Articles that analyzed these data: {analyzed}")
-        graded = [
-            x
-            for x in rec.reuse
-            if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)
-        ]
+        graded = [x for x in rec.reuse if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)]
         if m.n_reuse_examined and graded:
             # A null flag means nobody could check, which is not a negative answer.
             overlap_checked = [x for x in graded if x.independent_of_generators is not None]
             funding_checked = [x for x in graded if x.nci_funded_reuse is not None]
             overlap = (
-                "author overlap with the generating team could not be checked for any of "
-                "them"
+                "author overlap with the generating team could not be checked for any of them"
                 if not overlap_checked
                 else f"{sum(1 for x in overlap_checked if x.independent_of_generators)} of "
                 f"the {len(overlap_checked)} that could be checked had no author in common "
