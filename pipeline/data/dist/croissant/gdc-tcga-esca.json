@@ -9,7 +9,7 @@
   "name": "gdc-tcga-esca",
   "alternateName": "Esophageal Carcinoma",
   "description": "The Cancer Genome Atlas-Esophageal Carcinoma (TCGA-ESCA) data collection is part of a larger effort to enhance the TCGA data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed ESCA cases. Please see the TCGA-ESCA page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-ESCA collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-esca",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-esca",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Esophageal Carcinoma",
   "version": "as-retrieved",

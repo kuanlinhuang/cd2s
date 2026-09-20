@@ -42,7 +42,7 @@ import {
   num,
   shortDate,
 } from "@/lib/format";
-import type { DatasetRecord } from "@/lib/types";
+import type { AccessStep, DatasetRecord } from "@/lib/types";
 
 export const dynamicParams = false;
 
@@ -1266,121 +1266,177 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
 // 6. start here
 // ====================================================================================
 
+function AccessStepCard({ step, n }: { step: AccessStep; n: number }) {
+  return (
+    <Card>
+      <div className="flex items-start gap-3">
+        <span
+          className="tnum grid h-6 w-6 shrink-0 place-items-center rounded-full text-[12px] font-semibold"
+          style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
+        >
+          {n}
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <span className="font-medium">{step.action}</span>
+            <span className="flex items-baseline gap-2">
+              {step.est_time && <span className="text-[12px] t-faint">{step.est_time}</span>}
+              <EvidenceChip evidence={step.evidence ?? []} />
+            </span>
+          </div>
+          {step.detail && <p className="mt-1 text-[13px] t-muted">{step.detail}</p>}
+          {step.requires.length > 0 && (
+            <p className="mt-1 text-[12px] t-faint">Requires: {step.requires.join(", ")}</p>
+          )}
+          {step.cli_snippet && (
+            <pre
+              className="mt-2 overflow-x-auto rounded border p-2 font-mono text-[12px]"
+              style={{ background: "var(--bg-sunken)" }}
+            >
+              <code>{step.cli_snippet}</code>
+            </pre>
+          )}
+          {step.url && (
+            <a
+              href={step.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block max-w-full break-all text-[13px] underline"
+              style={{ color: "var(--accent)" }}
+            >
+              {step.url}
+            </a>
+          )}
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+/**
+ * Two routes to the same files, side by side rather than one after the other.
+ *
+ * A person clicks through a portal and, for controlled data, waits weeks for a signature.
+ * An agent calls an API, and what it most needs to know is which of those calls return a
+ * subset instead of an error when it has no credentials. Presenting one route as the main
+ * path and the other as an appendix makes whichever reader arrived second do the work of
+ * translating.
+ */
 function StartHere({ record: r }: { record: DatasetRecord }) {
   const snippets = starterSnippets(r);
+  const steps = r.access_steps.slice().sort((a, b) => a.order - b.order);
+  const human = steps.filter((s) => s.audience !== "agent");
+  const machine = steps.filter((s) => s.audience === "agent");
+  const artifacts = [
+    { href: `/data/datasets/${r.id}.json`, label: "Full record (JSON)" },
+    { href: r.agent_package?.instructions_url, label: "Brief, constraints first (Markdown)" },
+    { href: r.agent_package?.croissant_url, label: "Croissant" },
+    { href: r.agent_package?.jsonld_url, label: "schema.org JSON-LD" },
+  ].filter((a): a is { href: string; label: string } => Boolean(a.href));
+
   return (
     <Section
       id="start"
-      title="Start here"
-      lede="The shortest path from this page to data on your disk: starter code generated from this record's identifiers, then the access steps."
+      title="Get the data"
+      lede="Two routes to the same files: what a person does, and what an agent runs. Both are generated from this record's own identifiers, and each step cites the policy it applies."
     >
-      <div className="mb-6">
-        <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
-          Get the data in code
-        </h3>
-        <div className="space-y-2">
-          {snippets.map((sn, i) => (
-            <details key={sn.key} open={i === 0} className="rounded-lg border" style={{ background: "var(--bg-raised)" }}>
-              <summary className="flex cursor-pointer flex-wrap items-center gap-2 px-4 py-2.5 text-[13px] font-medium">
-                {sn.label}
-                <Chip>{sn.language}</Chip>
-              </summary>
-              <div className="border-t px-4 py-3">
-                {sn.note && <p className="mb-2 text-[12px] t-muted">{sn.note}</p>}
-                <pre
-                  className="overflow-x-auto rounded border p-3 font-mono text-[12px] leading-relaxed"
-                  style={{ background: "var(--bg-sunken)" }}
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div>
+          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+            As a person
+          </h3>
+          {human.length === 0 ? (
+            <Card>
+              <p className="text-[13px]">
+                {r.access.mechanism ?? "Access route not yet documented for this dataset."}
+              </p>
+              {r.landing_page_url && (
+                <a
+                  href={r.landing_page_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block rounded-md px-3 py-1.5 text-[13px] font-medium"
+                  style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
                 >
-                  <code>{sn.code}</code>
-                </pre>
-              </div>
-            </details>
-          ))}
+                  Open in {r.repository?.short_name ?? "repository"}
+                </a>
+              )}
+            </Card>
+          ) : (
+            <ol className="space-y-3">
+              {human.map((s, i) => (
+                <li key={s.order}>
+                  <AccessStepCard step={s} n={i + 1} />
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+
+        <div>
+          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+            From code
+          </h3>
+          {machine.length > 0 && (
+            <ol className="mb-4 space-y-3">
+              {machine.map((s, i) => (
+                <li key={s.order}>
+                  <AccessStepCard step={s} n={i + 1} />
+                </li>
+              ))}
+            </ol>
+          )}
+
+          <h3 className="mt-5 mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+            Starter code
+          </h3>
+          <div className="space-y-2">
+            {snippets.map((sn, i) => (
+              <details
+                key={sn.key}
+                open={i === 0 && machine.length === 0}
+                className="rounded-lg border"
+                style={{ background: "var(--bg-raised)" }}
+              >
+                <summary className="flex cursor-pointer flex-wrap items-center gap-2 px-4 py-2.5 text-[13px] font-medium">
+                  {sn.label}
+                  <Chip>{sn.language}</Chip>
+                </summary>
+                <div className="border-t px-4 py-3">
+                  {sn.note && <p className="mb-2 text-[12px] t-muted">{sn.note}</p>}
+                  <pre
+                    className="overflow-x-auto rounded border p-3 font-mono text-[12px] leading-relaxed"
+                    style={{ background: "var(--bg-sunken)" }}
+                  >
+                    <code>{sn.code}</code>
+                  </pre>
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <h3 className="mt-5 mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+            Machine-readable record
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {artifacts.map((a) => (
+              <a
+                key={a.href}
+                href={a.href}
+                className="rounded border px-2.5 py-1 text-[12px]"
+                style={{ borderColor: "var(--border-strong)" }}
+              >
+                {a.label}
+              </a>
+            ))}
+          </div>
+          <p className="mt-2 text-[12px] t-faint">
+            The brief states the limitations before the measurements, because an agent that
+            reads only the top of a record will otherwise plan an analysis these data cannot
+            support.
+          </p>
         </div>
       </div>
-
-      <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
-        Access steps
-      </h3>
-      {r.access_steps.length === 0 ? (
-        <Card>
-          <p className="text-[13px]">
-            {r.access.mechanism ??
-              "Access route not yet documented for this dataset."}
-          </p>
-          {r.landing_page_url && (
-            <a
-              href={r.landing_page_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-block rounded-md px-3 py-1.5 text-[13px] font-medium"
-              style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
-            >
-              Open in {r.repository?.short_name ?? "repository"}
-            </a>
-          )}
-        </Card>
-      ) : (
-        <ol className="space-y-3">
-          {r.access_steps
-            .slice()
-            .sort((a, b) => a.order - b.order)
-            .map((s) => (
-              <li key={s.order}>
-                <Card>
-                  <div className="flex items-start gap-3">
-                    <span
-                      className="tnum grid h-6 w-6 shrink-0 place-items-center rounded-full text-[12px] font-semibold"
-                      style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
-                    >
-                      {s.order}
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex flex-wrap items-baseline justify-between gap-2">
-                        <span className="font-medium">{s.action}</span>
-                        {s.est_time && (
-                          <span className="text-[12px] t-faint">
-                            {s.est_time}
-                          </span>
-                        )}
-                      </div>
-                      {s.detail && (
-                        <p className="mt-1 text-[13px] t-muted">
-                          {s.detail}
-                        </p>
-                      )}
-                      {s.requires.length > 0 && (
-                        <p className="mt-1 text-[12px] t-faint">
-                          Requires: {s.requires.join(", ")}
-                        </p>
-                      )}
-                      {s.cli_snippet && (
-                        <pre
-                          className="mt-2 overflow-x-auto rounded border p-2 font-mono text-[12px]"
-                          style={{ background: "var(--bg-sunken)" }}
-                        >
-                          <code>{s.cli_snippet}</code>
-                        </pre>
-                      )}
-                      {s.url && (
-                        <a
-                          href={s.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-block max-w-full break-all text-[13px] underline"
-                          style={{ color: "var(--accent)" }}
-                        >
-                          {s.url}
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </Card>
-              </li>
-            ))}
-        </ol>
-      )}
-
     </Section>
   );
 }

@@ -9,7 +9,7 @@
   "name": "cbio-pdac-msk-2024",
   "alternateName": "Pancreatic Adenocarcinoma (MSK, Nat Med 2024)",
   "description": "Targeted sequencing of 2,336 pancreatic adenocarcinoma samples and their matched normals via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pdac-msk-2024",
+  "url": "https://cd2s.vercel.app/datasets/cbio-pdac-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

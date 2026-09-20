@@ -1,4 +1,4 @@
-# Cancer Data Showcase
+# CD2S - Cancer Data to Study
 
 A question-first guide to NCI-supported cancer research outputs: what each dataset is actually
 good for, who has already reused it, what it cannot answer, and a runnable starting point - for
@@ -34,6 +34,9 @@ For every dataset it ingests:
   derived from that completeness with the thresholds of the executed audit workbook, and
   an explicit *not measured* status that is never folded into *not supported*
 - **States** the research questions the data support and the limitations that rule analyses out
+- **Routes** you to the files twice over: an ordered access route for a person and a runnable
+  one for an agent, generated from the repository's documented policy and this record's own
+  identifiers, including the calls that answer with an empty result rather than an error
 - **Traces** reuse with graded evidence, distinguishing articles that analyzed the data from
   articles that cited the paper
 - **Links** funding through NIH RePORTER, separating NCI-funded generation from NCI-funded reuse
@@ -56,6 +59,7 @@ a snapshot of the build described there.
 | Deeply curated pages | 20 (14 of them less-known resources) |
 | Verified reuse studies | 778 (accession in methods, results, a table or a figure) |
 | NCI awards linked | 736, resolved through NIH RePORTER |
+| Access routes | 602 datasets: 20 routes written by a reviewer, 582 generated from repository policy, every one of them with a machine route |
 | Executed workbooks | 6, attached to 15 dataset pages, each with an execution receipt |
 | Datasets with no citable accession | 364 - their reuse cannot be traced at all |
 | People across the corpus | 349,817 patients or subjects, in the 601 records that report a count |
@@ -76,6 +80,7 @@ Measurement coverage by repository, because how far it reaches is part of the re
 | --- | --- |
 | `pipeline/` | Python ingestion, linkage, reuse tracing, metrics, export |
 | `pipeline/src/cds/clinical.py` | The shared clinical vocabulary every adapter reports into |
+| `pipeline/src/cds/normalize/access.py` | The route to the data, per repository, for a person and for an agent |
 | `pipeline/src/cds/sources/` | One adapter per repository (GDC, PDC, IDC, HTAN, cBioPortal, RePORTER) |
 | `pipeline/src/cds/reuse/` | Europe PMC section-scoped reuse tracing and availability dating |
 | `pipeline/src/cds/metrics/` | The reuse gap model |
@@ -190,6 +195,13 @@ of the executed audit workbook, applied by one shared function so the three meas
 repositories cannot drift apart.
 A cohort whose only endpoint is progression-free is not a cohort that supports overall
 survival, and the page says which of the two it has.
+
+**A route is policy, not a claim about this dataset.** Twenty datasets have an access route
+because a reviewer wrote one. The other 582 have one generated from the repository's published
+policy and the record's own identifiers, and each step carries derived evidence pointing at the
+policy page it applies, so the two are never confused. Generated steps do not count toward a
+record's curation score. Where a reviewer wrote a route for a person and none for a machine, the
+generated machine steps are appended rather than replacing anything.
 
 **"Underexplored" is a measurement.** Raw reuse counts are not comparable across datasets of
 different size, age and access tier, so we model expected reuse and report the residual.

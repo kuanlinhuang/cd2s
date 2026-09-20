@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome",
   "name": "Prospective Ovarian JHU Intact Glycoproteome",
   "alternateName": [
     "Prospective Ovarian JHU Intact Glycoproteome"
   ],
   "description": "Prospective Ovarian JHU Intact Glycoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome",
+  "url": "https://cd2s.vercel.app/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000250"
   ],
@@ -40,8 +40,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -52,8 +52,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome.json",
       "encodingFormat": "application/json"
     }
   ],

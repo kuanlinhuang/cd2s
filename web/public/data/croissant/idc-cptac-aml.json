@@ -9,7 +9,7 @@
   "name": "idc-cptac-aml",
   "alternateName": "CPTAC-AML",
   "description": "This collection contains subjects from the National Cancer Institute\u2019s Clinical Proteomic Tumor Analysis Consortium Acute Myeloid Leukemia (CPTAC-AML) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Please see the DICOM converted Slide Microscopy images for the CPTAC-AML collection wiki page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-aml",
+  "url": "https://cd2s.vercel.app/datasets/idc-cptac-aml",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-AML",
   "version": "as-retrieved",

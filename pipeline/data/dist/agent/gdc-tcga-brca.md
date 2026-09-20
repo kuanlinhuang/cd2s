@@ -64,14 +64,51 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
+### For a person
+
 1. Download open derived matrices from the GDC (1 hour)
    Expression, copy number, methylation and clinical files need no account.
    https://portal.gdc.cancer.gov/projects/TCGA-BRCA
+
+   ```
+   curl -s 'https://api.gdc.cancer.gov/files' --get \
+     --data-urlencode 'filters={"op":"and","content":[
+       {"op":"in","content":{"field":"cases.project.project_id","value":["TCGA-BRCA"]}},
+       {"op":"in","content":{"field":"access","value":["open"]}},
+       {"op":"in","content":{"field":"data_type","value":["Gene Expression Quantification"]}}]}' \
+     --data-urlencode 'fields=file_id,file_name,cases.submitter_id' \
+     --data-urlencode 'size=2000' \
+     --data-urlencode 'format=TSV' > brca_expression_files.tsv
+   ```
 2. Add the imaging from the Imaging Data Commons if you need it (1-2 hours)
    Same patients, different repository, also open. Most users never make this join.
    https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=tcga_brca
 3. Request controlled access only if you need sequence-level data (days to a few weeks)
+   Requires: eRA Commons account, institutional signing official approval
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+
+### From code
+
+4. Query the project from code, with no credentials
+   The file index is public even where the files are not, so an agent can size a cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
+   ```
+   curl -s 'https://api.gdc.cancer.gov/files' --get \
+     --data-urlencode 'filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.project_id","value":["TCGA-BRCA"]}},{"op":"in","content":{"field":"access","value":["open"]}}]}' \
+     --data-urlencode 'fields=file_id,file_name,data_type' \
+     --data-urlencode 'size=10000' \
+     --data-urlencode 'format=TSV' > files.tsv
+   ```
+5. Pass the token when the agent needs controlled files
+   Without a token the same endpoints return the open subset and HTTP 200. An agent that treats a short result as the whole cohort will silently under-count; filter on access and compare against the counts on this page.
+   Requires: GDC authentication token
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
+   ```
+   curl -H "X-Auth-Token: $GDC_TOKEN" \
+     'https://api.gdc.cancer.gov/data/<file_id>' -o file.bam
+   ```
 
 ## Verified runnable starting points
 
@@ -97,4 +134,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-brca.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-tcga-brca.json

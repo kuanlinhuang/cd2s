@@ -62,12 +62,38 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
+### For a person
+
 1. Confirm which trial protocols the cohort draws from (2-3 hours)
    The regimen field contains protocol arm names. Reading the corresponding COG protocol publications is what turns those strings into an interpretable treatment variable.
 2. Scope with the 7,459 open-access files (1-2 hours)
    https://portal.gdc.cancer.gov/projects/MP2PRT-ALL
 3. Submit a dbGaP data access request (days to a few weeks)
+   Requires: eRA Commons account, institutional signing official approval
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+
+### From code
+
+4. Query the project from code, with no credentials
+   The file index is public even where the files are not, so an agent can size a cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
+   ```
+   curl -s 'https://api.gdc.cancer.gov/files' --get \
+     --data-urlencode 'filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.project_id","value":["MP2PRT-ALL"]}},{"op":"in","content":{"field":"access","value":["open"]}}]}' \
+     --data-urlencode 'fields=file_id,file_name,data_type' \
+     --data-urlencode 'size=10000' \
+     --data-urlencode 'format=TSV' > files.tsv
+   ```
+5. Pass the token when the agent needs controlled files
+   Without a token the same endpoints return the open subset and HTTP 200. An agent that treats a short result as the whole cohort will silently under-count; filter on access and compare against the counts on this page.
+   Requires: GDC authentication token
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
+   ```
+   curl -H "X-Auth-Token: $GDC_TOKEN" \
+     'https://api.gdc.cancer.gov/data/<file_id>' -o file.bam
+   ```
 
 ## Verified runnable starting points
 
@@ -91,4 +117,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-mp2prt-all.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-mp2prt-all.json

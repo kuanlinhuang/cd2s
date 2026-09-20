@@ -5,7 +5,7 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-luad-discovery-study",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-cptac-luad-discovery-study",
   "name": "CPTAC LUAD Discovery Study",
   "alternateName": [
     "CPTAC LUAD Discovery Study - Acetylome",
@@ -14,7 +14,7 @@
     "CPTAC LUAD Discovery Study - Ubiquitylome"
   ],
   "description": "Ubiquitylation is the scarcest proteomic modification layer in the NCI portfolio: five studies across the whole Proteomic Data Commons carry it, and this is one of them. On 80 of these 115 lung adenocarcinomas, protein degradation signaling can be measured directly rather than inferred, alongside acetylome and phosphoproteome on all 115.\nBecause the ubiquitin-proteasome system is a validated therapeutic axis and degradation state is invisible to transcriptomics, this layer answers questions that no expression cohort can. All of it is open and needs no account.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-luad-discovery-study",
+  "url": "https://cd2s.vercel.app/datasets/pdc-cptac-luad-discovery-study",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000224",
     "https://pdc.cancer.gov/pdc/study/PDC000149",
@@ -53,8 +53,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -65,8 +65,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json",
       "encodingFormat": "application/json"
     }
   ],

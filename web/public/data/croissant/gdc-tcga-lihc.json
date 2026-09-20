@@ -9,7 +9,7 @@
   "name": "gdc-tcga-lihc",
   "alternateName": "Liver Hepatocellular Carcinoma",
   "description": "The Cancer Imaging Program (CIP) is working directly with primary investigators from institutes participating in TCGA to obtain and load images relating to the genomic, clinical, and pathological data being stored within the TCGA Data Portal. Currently this CT and MR multi-sequence image collection of liver hepatocellular carcinoma (LIHC) patients can be matched by each unique case identifier with the extensive gene and expression data of the same case from The Cancer Genome Atlas Data Portal to research the link between clinical phenome and tissue genome. Please see the TCGA-LIHC page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-LIHC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-lihc",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-lihc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Liver Hepatocellular Carcinoma",
   "version": "as-retrieved",

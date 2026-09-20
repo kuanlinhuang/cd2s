@@ -9,7 +9,7 @@
   "name": "cbio-lgg-ucsf-2014",
   "alternateName": "Low-Grade Gliomas (UCSF, Science 2014)",
   "description": "Whole exome sequencing of 23 grade II glioma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lgg-ucsf-2014",
+  "url": "https://cd2s.vercel.app/datasets/cbio-lgg-ucsf-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

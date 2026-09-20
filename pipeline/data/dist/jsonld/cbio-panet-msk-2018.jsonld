@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-panet-msk-2018",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-panet-msk-2018",
   "name": "Metastatic Pancreatic Neuroendocrine Tumor (MSK, JCO Precis Oncol 2018)",
   "alternateName": [
     "panet_msk_2018"
   ],
   "description": "Targeted sequencing of 96 metastatic pancreatic neuroendocrine tumors from 80 patients and their matched normals using MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-panet-msk-2018",
+  "url": "https://cd2s.vercel.app/datasets/cbio-panet-msk-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=panet_msk_2018"
   ],
@@ -42,8 +42,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -54,8 +54,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-panet-msk-2018.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-panet-msk-2018.json",
       "encodingFormat": "application/json"
     }
   ],

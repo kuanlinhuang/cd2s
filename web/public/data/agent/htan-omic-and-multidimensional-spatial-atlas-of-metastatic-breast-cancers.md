@@ -44,13 +44,29 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
+### For a person
+
 1. Explore the atlas in the HTAN Data Portal (1 hour)
    https://humantumoratlas.org/explore
 2. Register with Synapse and accept the HTAN data use terms (1 day)
    This unlocks the level 3 and 4 derived data and most imaging without a formal data access request.
+   Requires: Synapse account
    https://humantumoratlas.org/data-access
 3. Request dbGaP access only if you need level 1 or 2 sequence data (days to a few weeks)
+   Requires: eRA Commons account, institutional signing official approval
    https://humantumoratlas.org/data-access
+
+### From code
+
+4. Give the agent a Synapse token, not a password
+   Unauthenticated calls return metadata and nothing to download, so an agent reports an empty atlas rather than a permission error.
+   Requires: SYNAPSE_AUTH_TOKEN
+   https://help.synapse.org/docs/Getting-Started.2055471150.html
+
+   ```
+   export SYNAPSE_AUTH_TOKEN=...
+   python -c "import synapseclient; syn = synapseclient.login(); print(syn.get('syn35465046', downloadFile=False).name)"
+   ```
 
 ## Evidence of prior reuse
 
@@ -62,4 +78,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers.json

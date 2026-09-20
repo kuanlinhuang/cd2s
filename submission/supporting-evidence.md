@@ -1,4 +1,4 @@
-# Supporting Evidence - Cancer Data Showcase
+# Supporting Evidence - CD2S (Cancer Data to Study)
 
 **Track 1, NCI ODS Impact Prize.** All figures below were produced by the working prototype
 and are reproducible from the public repository. Corpus built 2026-09-18, pipeline v0.1.0.
@@ -7,7 +7,7 @@ and are reproducible from the public repository. Corpus built 2026-09-18, pipeli
 
 | Artifact | Location | License |
 | --- | --- | --- |
-| Pipeline, site, workbooks, curated overlays | `github.com/<org>/cancer-data-showcase` *(to be published)* | MIT (code) |
+| Pipeline, site, workbooks, curated overlays | `github.com/kuanlinhuang/cd2s` *(to be published)* | MIT (code) |
 | Curated dataset guides and structured exports | `/data/` in the repository and on the site | CC BY 4.0 |
 | Executed notebooks with receipts | `workbooks/executed/*.ipynb` + `*.receipt.json` | MIT |
 | Reuse model coefficients and diagnostics | `pipeline/data/dist/reuse_gap_model.json` | CC BY 4.0 |
@@ -91,7 +91,7 @@ limitations) · `/data/jsonld/{id}.jsonld` (schema.org/Dataset + DCAT) · `/llms
 ## Status and limitations
 
 This is a working prototype, not a production service. It is publicly deployed at
-<https://cancer-data-showcase.vercel.app>; the source repository is not yet public, which is
+<https://cd2s.vercel.app>; the source repository is not yet public, which is
 why dataset pages name their executed workbook and its receipt rather than linking to it.
 
 Clinical field completeness, and so the six analysis verdicts, is measured for 385 of 602

@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-hgsoc-frozen-validation",
   "alternateName": "PTRC HGSOC Frozen Validation",
   "description": "PTRC HGSOC Frozen Validation",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-frozen-validation",
+  "url": "https://cd2s.vercel.app/datasets/pdc-ptrc-hgsoc-frozen-validation",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Automated sparse feature selection in high-dimensional proteomics data via 1-bit compressed sensing and K-Medoids clustering.",
   "version": "as-retrieved",

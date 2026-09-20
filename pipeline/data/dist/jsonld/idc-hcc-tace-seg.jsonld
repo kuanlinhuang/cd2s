@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-hcc-tace-seg",
+  "@id": "https://cd2s.vercel.app/datasets/idc-hcc-tace-seg",
   "name": "HCC-TACE-Seg",
   "alternateName": [
     "hcc_tace_seg"
   ],
   "description": "Despite surveillance, the majority of HCC cases are diagnosed at advanced stages that can be treated only using (Transarterial chemoembolization) TACE, or systemic therapy. TACE failure can occur to 60% of patients receiving the procedure, with subsequent financial and emotional burden. Radiomics have emerged as a new tool capable of predicting tumor response to TACE from pre-procedural CT study. This retrospectively acquired data collection includes pre- and post-procedure CT imaging studies of 105 confirmed HCC patients who underwent TACE between 2002 and 2012 with an available treatment outcome, in the form of time-to-progression and overall survival. Please see the HCC-TACE-Seg wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-hcc-tace-seg",
+  "url": "https://cd2s.vercel.app/datasets/idc-hcc-tace-seg",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=hcc_tace_seg",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,8 +44,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -56,8 +56,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-hcc-tace-seg.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-hcc-tace-seg.json",
       "encodingFormat": "application/json"
     }
   ],

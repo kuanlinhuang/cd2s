@@ -98,7 +98,16 @@ def test_subject_not_stated_does_not_silently_grow(rows):
     assert len(missing) <= 30, missing
 
 
+# Cancers of Unknown Primary states twelve ICD-O morphology categories and a primary site
+# of "Unknown". There is no tissue to assign and the title claims none either, so "not
+# stated" is the right answer rather than a gap to close. Filing it under soft tissue -
+# the one histology category among the twelve - is exactly what the morphology rule in
+# cds.subjects exists to stop.
+UNSTATED_BY_NATURE = {"gdc-ccg-cupp"}
+
+
 def test_all_previously_unstated_records_are_labelled_as_title_derived(rows):
     derived = [row for row in rows if row["subject_scope"] == "title_derived"]
     assert len(derived) == 30
-    assert not [row["id"] for row in rows if row["subject_scope"] == "not_stated"]
+    unstated = {row["id"] for row in rows if row["subject_scope"] == "not_stated"}
+    assert unstated <= UNSTATED_BY_NATURE, sorted(unstated - UNSTATED_BY_NATURE)

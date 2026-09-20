@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-eay131",
+  "@id": "https://cd2s.vercel.app/datasets/idc-eay131",
   "name": "EAY131",
   "alternateName": [
     "eay131"
   ],
   "description": "This collection contains imaging and clinical data for \"unmatched\" patients who didn't meet the criteria for the genetic sub-studies in the \"Targeted Therapy Directed by Genetic Testing in Treating Patients With Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).\" This trial was sponsored by the National Cancer Institute and performed by the ECOG-ACRIN Cancer Research Group under study numbers NCT02465060 and EAY131. The Study Chair was Keith T Flaherty, MD. Please see the EAY131 wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-eay131",
+  "url": "https://cd2s.vercel.app/datasets/idc-eay131",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=eay131",
     "https://www.cancerimagingarchive.net/collections/",
@@ -87,8 +87,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -99,8 +99,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-eay131.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-eay131.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -1,6 +1,6 @@
 id: gdc-cgci-htmcp-cc
 is_showcase: true
-reviewer: Cancer Data Showcase project curation
+reviewer: CD2S project curation
 reviewed_at: 2026-09-18
 review:
   status: project_curated
@@ -262,7 +262,8 @@ access_steps:
           {"op":"in","content":{"field":"cases.project.project_id","value":["CGCI-HTMCP-CC"]}},
           {"op":"in","content":{"field":"access","value":["open"]}}]}' \
         --data-urlencode 'fields=file_id,file_name,data_category,data_type' \
-        --data-urlencode 'size=2000&format=TSV' > htmcp_cc_open_files.tsv
+        --data-urlencode 'size=2000' \
+        --data-urlencode 'format=TSV' > htmcp_cc_open_files.tsv
 
   - order: 3
     action: Submit a dbGaP data access request for the controlled tier

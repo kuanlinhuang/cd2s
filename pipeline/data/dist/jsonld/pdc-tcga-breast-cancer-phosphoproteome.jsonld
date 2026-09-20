@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
   "name": "TCGA Breast Cancer Phosphoproteome",
   "alternateName": [
     "TCGA Breast Cancer Phosphoproteome"
   ],
   "description": "TCGA Breast Cancer Phosphoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
+  "url": "https://cd2s.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000174"
   ],
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-breast-cancer-phosphoproteome.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-tcga-breast-cancer-phosphoproteome.json",
       "encodingFormat": "application/json"
     }
   ],

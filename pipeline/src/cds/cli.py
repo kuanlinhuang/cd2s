@@ -9,7 +9,7 @@ from rich.table import Table
 from cds.http import Client
 from cds.paths import ensure_dirs
 
-app = typer.Typer(add_completion=False, help="Cancer Data Showcase pipeline")
+app = typer.Typer(add_completion=False, help="CD2S (Cancer Data to Study) pipeline")
 console = Console()
 
 SOURCES = ["gdc", "pdc", "htan", "idc", "cbioportal"]
@@ -318,6 +318,16 @@ def curate_cmd(
     n_basis = reuse_gap.refresh_underexplored_basis(recs)
     console.print(f"  underexplored labels gaining the citation sentence: {n_basis}")
 
+    # A route to the data for every record, not only the twenty a reviewer wrote up.
+    # This runs after overlays so a reviewed route is never overwritten by a generated
+    # one, and generated steps are excluded from the completeness score: a derived route
+    # is repository policy, not curation.
+    from cds.normalize import access as access_mod
+
+    access_stats = access_mod.apply_all(recs)
+    for k, v in access_stats.items():
+        console.print(f"  access.{k}: {v}")
+
     wb_stats = curate.attach_workbooks(recs)
     for k, v in wb_stats.items():
         console.print(f"  workbooks.{k}: {v}")
@@ -335,7 +345,11 @@ def curate_cmd(
     store.save_source(
         stage_out,
         recs,
-        {"stage": "curate", **{k: v for k, v in stats.items() if k != "fields_changed"}},
+        {
+            "stage": "curate",
+            **{k: v for k, v in stats.items() if k != "fields_changed"},
+            "access_routes": access_stats,
+        },
     )
     console.print(f"[green]wrote {len(recs)} records to '{stage_out}'[/green]")
 

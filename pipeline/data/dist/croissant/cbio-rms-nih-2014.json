@@ -9,7 +9,7 @@
   "name": "cbio-rms-nih-2014",
   "alternateName": "Rhabdomyosarcoma (NIH, Cancer Discov 2014)",
   "description": "Whole-genome or whole-exome sequencing of 43 rhabdomyosarcoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-rms-nih-2014",
+  "url": "https://cd2s.vercel.app/datasets/cbio-rms-nih-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

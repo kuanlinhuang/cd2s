@@ -9,7 +9,7 @@
   "name": "idc-lung-phantom",
   "alternateName": "Lung Phantom",
   "description": "The FDA anthropomorphic thorax phantom with 12 phantom lesions of different sizes (10 and 20 mm in effective diameter), shapes (spherical, elliptical, lobulated, and spiculated), and densities (\u2212630,\u221210, and +100 HU) was scanned at Columbia University Medical Center on a 64-detector row scanner (LightSpeed VCT, GE Healthcare, Milwaukee, WI). The CT scanning parameters were 120 kVp, 100 mAs, 64x0.625 collimation, and pitch of 1.375. The images were reconstructed with the lung kernel using 1.25 mm slice thickness. Please see the Lung Phantom wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lung-phantom",
+  "url": "https://cd2s.vercel.app/datasets/idc-lung-phantom",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Lung Phantom",
   "version": "as-retrieved",

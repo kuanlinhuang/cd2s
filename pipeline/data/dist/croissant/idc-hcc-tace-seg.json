@@ -9,7 +9,7 @@
   "name": "idc-hcc-tace-seg",
   "alternateName": "HCC-TACE-Seg",
   "description": "Despite surveillance, the majority of HCC cases are diagnosed at advanced stages that can be treated only using (Transarterial chemoembolization) TACE, or systemic therapy. TACE failure can occur to 60% of patients receiving the procedure, with subsequent financial and emotional burden. Radiomics have emerged as a new tool capable of predicting tumor response to TACE from pre-procedural CT study. This retrospectively acquired data collection includes pre- and post-procedure CT imaging studies of 105 confirmed HCC patients who underwent TACE between 2002 and 2012 with an available treatment outcome, in the form of time-to-progression and overall survival. Please see the HCC-TACE-Seg wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-hcc-tace-seg",
+  "url": "https://cd2s.vercel.app/datasets/idc-hcc-tace-seg",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "HCC-TACE-Seg",
   "version": "as-retrieved",

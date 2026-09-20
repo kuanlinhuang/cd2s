@@ -9,7 +9,7 @@
   "name": "pdc-reproducible-proteome-and-phosphoproteome-workflow-pnnl",
   "alternateName": "Reproducible Proteome and Phosphoproteome Workflow PNNL",
   "description": "Reproducible Proteome and Phosphoproteome Workflow PNNL",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-pnnl",
+  "url": "https://cd2s.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-pnnl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Reproducible Proteome and Phosphoproteome Workflow PNNL",
   "version": "as-retrieved",

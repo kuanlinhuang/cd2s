@@ -63,14 +63,43 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
+### For a person
+
 1. Browse the study in the PDC portal (30 minutes)
    No account is required. All seven fractions are openly downloadable.
    https://pdc.cancer.gov/pdc/browse
 2. Pull the study manifest from the PDC GraphQL API (1 hour)
    The API is public and needs no key, which makes this cohort unusually easy to script against.
+
+   ```
+   curl -s https://proteomic.datacommons.cancer.gov/graphql \
+     -H 'Content-Type: application/json' \
+     -d '{"query":"{ allPrograms { name projects { name studies { pdc_study_id study_name analytical_fraction experiment_type cases_count } } } }"}' \
+     | python3 -m json.tool | grep -A4 'CPTAC STAD'
+   ```
 3. Retrieve the matching clinical and genomic data from the GDC (2-3 hours)
    This is the step people skip. Without it the proteomic layers have no clinical context at all.
    https://portal.gdc.cancer.gov/projects/CPTAC-3
+
+### From code
+
+4. Resolve the study UUID, then fetch the file manifest
+   filesPerStudy keys on the version UUID, not on PDC000622. Passing the PDC study id returns one row per file with every field null - a successful call that looks like a study whose files carry no metadata. Resolve the latest version through studyCatalog first. acceptDUA: true is the programmatic form of the portal's terms click; without it there are no signed download URLs.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+
+   ```
+   python3 - <<'PY'
+   import requests
+   STUDY = "PDC000622"
+   GQL = "https://pdc.cancer.gov/graphql"
+   catalog = requests.post(GQL, json={"query": "{ studyCatalog(acceptDUA: true) { pdc_study_id versions { study_id is_latest_version } } }"}).json()["data"]["studyCatalog"]
+   uuid = next(v["study_id"] for s in catalog if s["pdc_study_id"] == STUDY
+               for v in s["versions"] if v["is_latest_version"] == "yes")
+   q = '{ filesPerStudy(study_id: "%s" acceptDUA: true) { file_id file_name file_type data_category } }' % uuid
+   files = requests.post(GQL, json={"query": q}).json()["data"]["filesPerStudy"]
+   print(len(files), "files")
+   PY
+   ```
 
 ## Verified runnable starting points
 
@@ -87,4 +116,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-stad-study.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-cptac-stad-study.json

@@ -9,7 +9,7 @@
   "name": "cbio-rcc-iatlas-immotion150-2018",
   "alternateName": "Renal Cell Carcinoma (IMmotion150 Clinical Trial, Nat Med. 2018) - iAtlas Harmonized",
   "description": "A randomized phase 2 study of atezolizumab (anti-PD-L1) alone or combined with bevacizumab (anti-VEGF) versus sunitinib in 263 patients with treatment-naive metastatic renal cell carcinoma. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-rcc-iatlas-immotion150-2018",
+  "url": "https://cd2s.vercel.app/datasets/cbio-rcc-iatlas-immotion150-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

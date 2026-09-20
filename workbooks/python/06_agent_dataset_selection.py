@@ -11,7 +11,7 @@
 #
 # This workbook shows the selection an agent should make instead: filter on measured
 # capability, rank on fit, and read the blocking limitations *before* committing. It
-# runs against the Cancer Data Showcase structured export, which is the machine-readable
+# runs against the CD2S structured export, which is the machine-readable
 # form of every dataset page.
 
 # %%

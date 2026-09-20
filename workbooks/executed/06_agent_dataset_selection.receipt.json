@@ -1,8 +1,8 @@
 {
   "workbook": "06_agent_dataset_selection",
   "executed": true,
-  "executed_at": "2026-09-18T14:37:25.229420+00:00",
-  "runtime_seconds": 0.77,
+  "executed_at": "2026-09-20T15:32:05.672858+00:00",
+  "runtime_seconds": 1.79,
   "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
   "package_versions": {
     "python": "3.12.13",
@@ -16,7 +16,7 @@
   },
   "n_cells": 6,
   "n_cells_executed": 6,
-  "output_hash": "59e296dfc4ec1d1a0acd3419a767419a",
+  "output_hash": "75f46f6537fad6bed919d480e7b47518",
   "error": null,
   "notebook_path": "workbooks/executed/06_agent_dataset_selection.ipynb"
 }

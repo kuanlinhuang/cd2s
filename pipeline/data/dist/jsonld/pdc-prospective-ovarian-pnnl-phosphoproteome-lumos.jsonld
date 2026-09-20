@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
   "name": "Prospective Ovarian PNNL Phosphoproteome Lumos",
   "alternateName": [
     "Prospective Ovarian PNNL Phosphoproteome Lumos"
   ],
   "description": "Prospective Ovarian PNNL Phosphoproteome Lumos",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
+  "url": "https://cd2s.vercel.app/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000119"
   ],
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-prospective-ovarian-pnnl-phosphoproteome-lumos.json",
       "encodingFormat": "application/json"
     }
   ],

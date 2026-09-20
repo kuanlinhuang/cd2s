@@ -9,7 +9,7 @@
   "name": "gdc-tcga-ucec",
   "alternateName": "Uterine Corpus Endometrial Carcinoma",
   "description": "The Cancer Genome Atlas-Uterine Corpus Endometrial Carcinoma (TCGA-UCEC) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed UCEC cases. Please see the TCGA-UCEC page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-UCEC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-ucec",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-ucec",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Uterine Corpus Endometrial Carcinoma",
   "version": "as-retrieved",

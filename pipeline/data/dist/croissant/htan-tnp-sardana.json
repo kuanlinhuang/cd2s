@@ -9,7 +9,7 @@
   "name": "htan-tnp-sardana",
   "alternateName": "TNP SARDANA",
   "description": "TNP SARDANA",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-tnp-sardana",
+  "url": "https://cd2s.vercel.app/datasets/htan-tnp-sardana",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TNP SARDANA",
   "version": "as-retrieved",

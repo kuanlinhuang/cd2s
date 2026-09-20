@@ -1,4 +1,4 @@
-# Cancer Data Showcase: answering "what research can I do with this dataset?"
+# CD2S - Cancer Data to Study: answering "what research can I do with this dataset?"
 
 **NCI Office of Data Sharing Impact Prize - Track 1: Research Output Sharing and Reuse Ideas**
 

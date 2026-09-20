@@ -9,7 +9,7 @@
   "name": "idc-prostate-diagnosis",
   "alternateName": "PROSTATE-DIAGNOSIS",
   "description": "Prostate, cancer-confirmed, MRIs obtained using endorectal and phased array surface coils at 1.5T (Philips Achieva). Pulse sequences include T1, T2 and DCE (\u201cBLISS\u201d sequence using Magnevist injected i.v.). Linked clinical information, including matched patient demographics, radiology and pathology reports in XLS format are available. Please see the Prostate-Diagnosis page to learn more about the images and to obtain any supporting metadata for this collection. Data was provided by Boston Medical Center courtesy Dr. Nicolas Bloch.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-diagnosis",
+  "url": "https://cd2s.vercel.app/datasets/idc-prostate-diagnosis",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PROSTATE-DIAGNOSIS",
   "version": "as-retrieved",

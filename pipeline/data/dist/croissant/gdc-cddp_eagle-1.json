@@ -9,7 +9,7 @@
   "name": "gdc-cddp_eagle-1",
   "alternateName": "CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2)",
   "description": "CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cddp_eagle-1",
+  "url": "https://cd2s.vercel.app/datasets/gdc-cddp_eagle-1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Machine Learning-Driven Integration of Cancer Cell Phenotypes Predicts Cisplatin Sensitivity.",
   "version": "as-retrieved",

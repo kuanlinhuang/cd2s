@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-genentech",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-coadread-genentech",
   "name": "Colorectal Adenocarcinoma (Genentech, Nature 2012)",
   "alternateName": [
     "coadread_genentech"
   ],
   "description": "Whole-genome sequencing of 74 paired colon tumor-normal samples.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-genentech",
+  "url": "https://cd2s.vercel.app/datasets/cbio-coadread-genentech",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=coadread_genentech"
   ],
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-coadread-genentech.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-coadread-genentech.json",
       "encodingFormat": "application/json"
     }
   ],

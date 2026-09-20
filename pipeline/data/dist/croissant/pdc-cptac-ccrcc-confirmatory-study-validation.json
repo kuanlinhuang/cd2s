@@ -9,7 +9,7 @@
   "name": "pdc-cptac-ccrcc-confirmatory-study-validation",
   "alternateName": "CPTAC CCRCC Confirmatory Study - Validation",
   "description": "CPTAC CCRCC Confirmatory Study - Validation",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-confirmatory-study-validation",
+  "url": "https://cd2s.vercel.app/datasets/pdc-cptac-ccrcc-confirmatory-study-validation",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC CCRCC Confirmatory Study - Validation",
   "version": "as-retrieved",

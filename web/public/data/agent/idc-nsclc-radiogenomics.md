@@ -34,12 +34,34 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 ## How to get the data
 
+### For a person
+
 1. Explore the collection in the Imaging Data Commons (30 minutes)
    Fully open. No account, no data access request.
    https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiogenomics
 2. Pull DICOM with the idc-index Python package (1-2 hours)
+
+   ```
+   pip install idc-index
+   python -c "
+   from idc_index import index
+   c = index.IDCClient()
+   df = c.get_series_size('nsclc_radiogenomics')
+   print(df.head())
+   "
+   ```
 3. Retrieve the matched expression series from GEO and verify the identifier join (2 hours)
    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28827
+
+### From code
+
+4. List the series before pulling any pixels
+   One row per DICOM series, with modality and size, so an agent can decide what to fetch instead of fetching everything.
+   https://learn.canceridc.dev/
+
+   ```
+   python -c "from idc_index import IDCClient; df = IDCClient().get_series(collection_id='nsclc_radiogenomics'); print(len(df), df['Modality'].value_counts().to_dict())"
+   ```
 
 ## Verified runnable starting points
 
@@ -59,4 +81,4 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiogenomics.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/idc-nsclc-radiogenomics.json

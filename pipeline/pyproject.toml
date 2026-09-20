@@ -1,5 +1,5 @@
 [project]
-name = "cancer-data-showcase"
+name = "cd2s"
 version = "0.1.0"
 description = "Question-first guide to NCI-supported cancer research outputs: ingestion, linkage, reuse tracing, and export."
 # 3.12 is the floor because that is what the pipeline is developed and run against, and

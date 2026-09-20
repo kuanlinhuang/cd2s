@@ -241,7 +241,7 @@ def test_no_citable_accession_is_never_labelled_underexplored(record_factory):
 
 
 def test_no_workbook_url_until_a_repository_is_published(monkeypatch):
-    """The published URL was github.com/cancer-data-showcase/blob/main/... - missing the
+    """The published URL was github.com/cd2s/blob/main/... - missing the
     repository segment, so every 'View notebook' button on every showcase page 404'd."""
     monkeypatch.setattr("cds.normalize.curate.REPO_BASE_URL", "")
     assert _workbook_url("01_can_i_answer_this") is None

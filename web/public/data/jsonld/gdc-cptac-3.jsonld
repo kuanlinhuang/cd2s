@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cptac-3",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-cptac-3",
   "name": "CPTAC-Brain, Head and Neck, Kidney, Lung, Pancreas, Uterus",
   "alternateName": [
     "CPTAC-3"
   ],
   "description": "CPTAC-3 is the genomic half of a cohort whose proteomic half lives in a different repository. That split is the single most important practical fact about it: the GDC record carries exome on 1,844 cases, whole genome on 1,827, RNA sequencing on 1,824 and methylation on 1,817, while proteome, phosphoproteome and the scarcer modification layers are distributed through the Proteomic Data Commons under different study identifiers.\nIts clinical annotation is unusually strong for a multi-cancer cohort. Vital status is informative for 95.8%, progression or recurrence for 77.9%, and last known disease status for 77.2% - which makes recurrence-based endpoints genuinely available, not just nominally present.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cptac-3",
+  "url": "https://cd2s.vercel.app/datasets/gdc-cptac-3",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CPTAC-3",
     "gdc_program:CPTAC",
@@ -86,8 +86,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -98,8 +98,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cptac-3.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-cptac-3.json",
       "encodingFormat": "application/json"
     }
   ],

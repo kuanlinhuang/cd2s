@@ -82,14 +82,24 @@ open("${gdc}_clinical.tsv", "w").write(tsv)`,
       note: pdc.length > 1 ? `This cohort spans ${pdc.length} PDC studies (${pdc.join(", ")}). Repeat for each.` : undefined,
       code: `import requests
 
+# filesPerStudy keys on the version UUID. Handed "${first}" it still answers, with one
+# row per file and every field null - a call that succeeds and tells you nothing. So
+# resolve the latest version through studyCatalog first.
 STUDY = "${first}"
+GQL = "https://pdc.cancer.gov/graphql"
+catalog = requests.post(GQL, timeout=120, json={"query": """{
+  studyCatalog(acceptDUA: true) { pdc_study_id versions { study_id is_latest_version } }
+}"""}).json()["data"]["studyCatalog"]
+uuid = next(v["study_id"] for s in catalog if s["pdc_study_id"] == STUDY
+            for v in s["versions"] if v["is_latest_version"] == "yes")
+
 query = """query ($id: String!) {
-  filesPerStudy(pdc_study_id: $id, acceptDUA: true) {
+  filesPerStudy(study_id: $id, acceptDUA: true) {
     file_id file_name file_type data_category md5sum file_size signedUrl { url }
   }
 }"""
-r = requests.post("https://pdc.cancer.gov/graphql", json={"query": query, "variables": {"id": STUDY}}, timeout=120)
-files = r.json()["data"]["filesPerStudy"]
+files = requests.post(GQL, timeout=120,
+                      json={"query": query, "variables": {"id": uuid}}).json()["data"]["filesPerStudy"]
 print(len(files), "files")
 for f in files[:3]:
     print(f["file_name"], f["data_category"], f["file_size"])
@@ -128,7 +138,9 @@ patients = pd.DataFrame(clin).pivot_table(index="patientId", columns="clinicalAt
 print(patients.shape)
 profiles = requests.get(f"{base}/studies/{STUDY}/molecular-profiles", timeout=60).json()
 print([p["molecularProfileId"] for p in profiles])
-# Whole study as flat files: https://cbioportal-datahub.s3.amazonaws.com/${cbio}.tar.gz`,
+# Whole study as flat files: the zip on https://www.cbioportal.org/datasets, or
+# git -c lfs.fetchexclude="" lfs pull -I public/${cbio} in github.com/cBioPortal/datahub.
+# The datahub S3 bucket older guides quote no longer serves anonymous requests.`,
     });
   }
 

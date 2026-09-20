@@ -126,7 +126,7 @@
     Given a research goal, which dataset should an agent choose, and what must it refuse
     to do with it?
   inputs:
-    - The Cancer Data Showcase structured export
+    - The CD2S structured export
     - pandas
   outputs:
     - Contrast between a size-ranked and a capability-ranked selection

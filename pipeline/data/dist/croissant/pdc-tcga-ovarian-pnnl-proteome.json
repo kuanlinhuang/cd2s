@@ -9,7 +9,7 @@
   "name": "pdc-tcga-ovarian-pnnl-proteome",
   "alternateName": "TCGA Ovarian PNNL Proteome",
   "description": "TCGA Ovarian PNNL Proteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-pnnl-proteome",
+  "url": "https://cd2s.vercel.app/datasets/pdc-tcga-ovarian-pnnl-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Automated imaging and identification of proteoforms directly from ovarian cancer tissue.",
   "version": "as-retrieved",

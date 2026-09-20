@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-ccg-cupp",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-ccg-cupp",
   "name": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
   "alternateName": [
     "CCG-CUPP"
   ],
   "description": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ccg-cupp",
+  "url": "https://cd2s.vercel.app/datasets/gdc-ccg-cupp",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CCG-CUPP",
     "gdc_program:CCG",
@@ -26,7 +26,6 @@
     "Epithelial Neoplasms, NOS",
     "Germ Cell Neoplasms",
     "Myomatous Neoplasms",
-    "NCIt:C12471",
     "Neoplasms, NOS",
     "Soft Tissue Tumors and Sarcomas, NOS",
     "Squamous Cell Neoplasms",
@@ -61,8 +60,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -73,8 +72,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-ccg-cupp.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-ccg-cupp.json",
       "encodingFormat": "application/json"
     }
   ],

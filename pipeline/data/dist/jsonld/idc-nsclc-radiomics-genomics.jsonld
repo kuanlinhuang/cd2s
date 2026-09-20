@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics-genomics",
+  "@id": "https://cd2s.vercel.app/datasets/idc-nsclc-radiomics-genomics",
   "name": "NSCLC-Radiomics-Genomics",
   "alternateName": [
     "nsclc_radiomics_genomics"
   ],
   "description": "This collection contains images from 89 non-small cell lung cancer (NSCLC) patients that were treated with surgery. For these patients pretreatment CT scans, gene expression, and clinical data are available. This dataset refers to the Lung3 dataset of the study published in Nature Communications. Please see the NSCLC Radiomics Genomics page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics-genomics",
+  "url": "https://cd2s.vercel.app/datasets/idc-nsclc-radiomics-genomics",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiomics_genomics",
     "https://www.cancerimagingarchive.net/collections/",
@@ -46,8 +46,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -58,8 +58,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiomics-genomics.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-nsclc-radiomics-genomics.json",
       "encodingFormat": "application/json"
     }
   ],

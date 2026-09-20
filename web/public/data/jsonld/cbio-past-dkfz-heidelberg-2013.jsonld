@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-past-dkfz-heidelberg-2013",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-past-dkfz-heidelberg-2013",
   "name": "Pilocytic Astrocytoma (ICGC, Nature Genetics 2013)",
   "alternateName": [
     "past_dkfz_heidelberg_2013"
   ],
   "description": "Whole-genome sequencing of 96 pilocytic astrocytoma tumor/normal pairs. Conducted by the International Cancer Genome Consortium (ICGC) PedBrain Tumor Project.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-past-dkfz-heidelberg-2013",
+  "url": "https://cd2s.vercel.app/datasets/cbio-past-dkfz-heidelberg-2013",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=past_dkfz_heidelberg_2013"
   ],
@@ -42,8 +42,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -54,8 +54,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-past-dkfz-heidelberg-2013.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-past-dkfz-heidelberg-2013.json",
       "encodingFormat": "application/json"
     }
   ],

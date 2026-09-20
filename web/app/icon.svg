@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Cancer Data Showcase">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="CD2S">
   <rect width="32" height="32" rx="6" fill="#1d4f52"/>
-  <text x="16" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
-        font-size="15" font-weight="700" fill="#ffffff">CD</text>
+  <text x="16" y="15" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-size="13" font-weight="700" fill="#ffffff">CD</text>
+  <text x="16" y="27" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-size="13" font-weight="700" fill="#ffffff">2S</text>
 </svg>

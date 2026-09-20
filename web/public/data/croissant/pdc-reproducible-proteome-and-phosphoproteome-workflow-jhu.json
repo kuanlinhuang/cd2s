@@ -9,7 +9,7 @@
   "name": "pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
   "alternateName": "Reproducible Proteome and Phosphoproteome Workflow JHU",
   "description": "Reproducible Proteome and Phosphoproteome Workflow JHU",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
+  "url": "https://cd2s.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-jhu",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Reproducible Proteome and Phosphoproteome Workflow JHU",
   "version": "as-retrieved",

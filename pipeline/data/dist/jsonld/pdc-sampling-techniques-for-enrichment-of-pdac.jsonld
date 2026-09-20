@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-sampling-techniques-for-enrichment-of-pdac",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-sampling-techniques-for-enrichment-of-pdac",
   "name": "Sampling techniques for enrichment of PDAC",
   "alternateName": [
     "Sampling techniques for enrichment of PDAC - Proteome"
   ],
   "description": "Sampling techniques for enrichment of PDAC",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-sampling-techniques-for-enrichment-of-pdac",
+  "url": "https://cd2s.vercel.app/datasets/pdc-sampling-techniques-for-enrichment-of-pdac",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000393"
   ],
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-sampling-techniques-for-enrichment-of-pdac.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-sampling-techniques-for-enrichment-of-pdac.json",
       "encodingFormat": "application/json"
     }
   ],

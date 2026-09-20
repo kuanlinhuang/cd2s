@@ -1,4 +1,4 @@
-"""Core data model for the Cancer Data Showcase.
+"""Core data model for CD2S.
 
 Design principle: every statement the site makes about a dataset is either (a) pulled
 directly from a machine-readable source, (b) extracted from a document, or (c) asserted
@@ -547,6 +547,19 @@ class UnderexploredLabel(CDSModel):
 # --------------------------------------------------------------------------------------
 
 
+class AccessAudience(str, Enum):
+    """Who a step is written for.
+
+    A person and an agent take different routes to the same files: one clicks through a
+    portal and signs a data use agreement, the other calls an API and needs to know which
+    calls stop returning data without credentials. Keeping the two apart lets a page show
+    both without either reading as a detour from the other.
+    """
+
+    HUMAN = "human"
+    AGENT = "agent"
+
+
 class AccessStep(CDSModel):
     order: int
     action: str
@@ -555,6 +568,8 @@ class AccessStep(CDSModel):
     requires: list[str] = Field(default_factory=list)
     est_time: str | None = None
     cli_snippet: str | None = None
+    audience: AccessAudience = AccessAudience.HUMAN
+    evidence: list[Evidence] = Field(default_factory=list)
 
 
 class WorkbookLevel(str, Enum):

@@ -1,6 +1,6 @@
 id: gdc-tcga-brca
 is_showcase: true
-reviewer: Cancer Data Showcase project curation
+reviewer: CD2S project curation
 reviewed_at: 2026-09-18
 review:
   status: project_curated
@@ -143,7 +143,8 @@ access_steps:
           {"op":"in","content":{"field":"access","value":["open"]}},
           {"op":"in","content":{"field":"data_type","value":["Gene Expression Quantification"]}}]}' \
         --data-urlencode 'fields=file_id,file_name,cases.submitter_id' \
-        --data-urlencode 'size=2000&format=TSV' > brca_expression_files.tsv
+        --data-urlencode 'size=2000' \
+        --data-urlencode 'format=TSV' > brca_expression_files.tsv
   - order: 2
     action: Add the imaging from the Imaging Data Commons if you need it
     detail: Same patients, different repository, also open. Most users never make this join.

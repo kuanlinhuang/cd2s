@@ -9,7 +9,7 @@
   "name": "cbio-sarcoma-ucla-2024",
   "alternateName": "Sarcoma (UCLA, Cell 2024)",
   "description": "Targeted sequencing of 63 out of 194 soft tissue sarcoma samples using OncoPanel v3 platform.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-sarcoma-ucla-2024",
+  "url": "https://cd2s.vercel.app/datasets/cbio-sarcoma-ucla-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

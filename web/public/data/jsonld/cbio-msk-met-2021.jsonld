@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-met-2021",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-msk-met-2021",
   "name": "MSK MetTropism (MSK, Cell 2021)",
   "alternateName": [
     "msk_met_2021"
   ],
   "description": "MSK-MET (Memorial Sloan Kettering - Metastatic Events and Tropisms) is a pan-cancer cohort of tumor genomic and clinical outcome data from 25,000 patients. The dataset identifies associations between tumor genomic alterations and patterns of metastatic dissemination across 50 tumor types; showing that chromosomal instability is strongly correlated with metastatic burden in some tumor types, like prostate and lung adenocarcinomas and HR+/HER2+ breast ductal carcinoma, but not in others, such as colorectal MSS, pancreatic adenocarcinoma and high-grade serous ovarian cancer. The study also identifies somatic alterations associated with increased metastatic burden and routes of metastatic spread. Our data offers a resource for the investigation of the biologic basis for metastatic spread and highlights the role of chromosomal instability in cancer progression. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-met-2021",
+  "url": "https://cd2s.vercel.app/datasets/cbio-msk-met-2021",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=msk_met_2021"
   ],
@@ -42,8 +42,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -54,8 +54,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-msk-met-2021.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-msk-met-2021.json",
       "encodingFormat": "application/json"
     }
   ],

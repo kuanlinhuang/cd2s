@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-icdc-glioma",
+  "@id": "https://cd2s.vercel.app/datasets/idc-icdc-glioma",
   "name": "ICDC-Glioma",
   "alternateName": [
     "icdc_glioma"
   ],
   "description": "ICDC-Glioma contains treatment-na\u00efve naturally-occurring canine glioma participants from the Integrated Canine Data Commons. Brain radiology (57/81 participant animals) and H&E-stained biopsy or necropsy pathology (76/81 participants) are classified by veterinary and physician neuropathologists. Please see the wiki ICDC-Glioma to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the wiki DICOM converted Slide Microscopy images for the ICDC-Glioma collection to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-icdc-glioma",
+  "url": "https://cd2s.vercel.app/datasets/idc-icdc-glioma",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=icdc_glioma",
     "https://www.cancerimagingarchive.net/collections/",
@@ -45,8 +45,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -57,8 +57,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-icdc-glioma.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-icdc-glioma.json",
       "encodingFormat": "application/json"
     }
   ],

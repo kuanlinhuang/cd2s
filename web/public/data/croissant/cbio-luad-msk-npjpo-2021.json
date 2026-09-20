@@ -9,7 +9,7 @@
   "name": "cbio-luad-msk-npjpo-2021",
   "alternateName": "Lung Adenocarcinoma (MSK, NPJ Precision Oncology 2021)",
   "description": "Targeted sequencing of 426 matched normal samples from 426 lung adenocarcinoma patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-luad-msk-npjpo-2021",
+  "url": "https://cd2s.vercel.app/datasets/cbio-luad-msk-npjpo-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

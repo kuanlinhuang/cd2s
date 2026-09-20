@@ -42,6 +42,7 @@ from cds.model import (
     Review,
     ReviewStatus,
 )
+from cds.normalize import access
 from cds.paths import CURATED_DIR
 from cds.subjects import TISSUES, Subject, SubjectScope
 
@@ -233,7 +234,7 @@ def apply_all(
 
 
 # Base URL of the published source repository, e.g.
-# "https://github.com/some-org/cancer-data-showcase". Left unset while the repository is
+# "https://github.com/some-org/cd2s". Left unset while the repository is
 # local: a "View notebook" button that 404s is worse than no button, and this project
 # claims every link on a page resolves.
 REPO_BASE_URL = os.environ.get("CDS_REPO_URL", "").rstrip("/")
@@ -308,7 +309,7 @@ def attach_workbooks(records: list[DatasetRecord]) -> dict[str, Any]:
                     evidence=[
                         Evidence(
                             method=Method.CURATED,
-                            source_label="Cancer Data Showcase workbook",
+                            source_label="CD2S workbook",
                             retrieved_at=datetime.now(UTC),
                             locator=f"workbooks/python/{name}.py",
                             confidence=Confidence.HIGH,
@@ -344,7 +345,9 @@ def completeness(rec: DatasetRecord) -> float:
         (1.5, any(a.receipt and a.receipt.executed for a in rec.analysis_examples)),
         (1.0, bool(rec.primary_publications)),
         (1.0, bool(rec.reuse) or rec.reuse_metrics.no_reuse_identified),
-        (1.0, bool(rec.access_steps)),
+        # A derived route is repository policy applied to this dataset; it says nothing
+        # about whether a person has reviewed this dataset, which is what this scores.
+        (1.0, any(not access.is_derived(s) for s in rec.access_steps)),
         (1.0, bool(rec.grants)),
         (0.75, bool(rec.clinical_variables)),
         (0.75, bool(rec.assays)),

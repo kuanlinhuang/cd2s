@@ -59,12 +59,38 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
+### For a person
+
 1. Decide which half you need first (30 minutes)
    The proteomic half is open and immediately usable; the genomic half is largely controlled. If your question is proteomic, start at the PDC and avoid the access delay entirely.
 2. Retrieve the matching PDC studies (2-3 hours)
    https://pdc.cancer.gov/pdc/browse
 3. Submit a dbGaP request for the controlled genomic tier (days to a few weeks)
+   Requires: eRA Commons account, institutional signing official approval
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+
+### From code
+
+4. Query the project from code, with no credentials
+   The file index is public even where the files are not, so an agent can size a cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
+   ```
+   curl -s 'https://api.gdc.cancer.gov/files' --get \
+     --data-urlencode 'filters={"op":"and","content":[{"op":"in","content":{"field":"cases.project.project_id","value":["CPTAC-3"]}},{"op":"in","content":{"field":"access","value":["open"]}}]}' \
+     --data-urlencode 'fields=file_id,file_name,data_type' \
+     --data-urlencode 'size=10000' \
+     --data-urlencode 'format=TSV' > files.tsv
+   ```
+5. Pass the token when the agent needs controlled files
+   Without a token the same endpoints return the open subset and HTTP 200. An agent that treats a short result as the whole cohort will silently under-count; filter on access and compare against the counts on this page.
+   Requires: GDC authentication token
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
+   ```
+   curl -H "X-Auth-Token: $GDC_TOKEN" \
+     'https://api.gdc.cancer.gov/data/<file_id>' -o file.bam
+   ```
 
 ## Evidence of prior reuse
 
@@ -81,4 +107,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cptac-3.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-cptac-3.json

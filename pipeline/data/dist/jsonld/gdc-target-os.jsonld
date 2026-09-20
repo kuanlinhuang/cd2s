@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-os",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-target-os",
   "name": "Osteosarcoma",
   "alternateName": [
     "TARGET-OS"
   ],
   "description": "Osteosarcoma",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-os",
+  "url": "https://cd2s.vercel.app/datasets/gdc-target-os",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-OS",
     "gdc_program:TARGET",
@@ -51,8 +51,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -63,8 +63,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-os.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-target-os.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -43,12 +43,27 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
+### For a person
+
 1. Contact the atlas team through the HTAN portal (days)
    With no marker publication recorded, this is the fastest route to the design details you would normally get from a paper.
    https://humantumoratlas.org/
 2. Register with Synapse and accept the HTAN data use terms (1 day)
+   Requires: Synapse account
    https://humantumoratlas.org/data-access
 3. Verify participant counts and clinical field coverage before designing (2-3 hours)
+
+### From code
+
+4. Give the agent a Synapse token, not a password
+   Unauthenticated calls return metadata and nothing to download, so an agent reports an empty atlas rather than a permission error.
+   Requires: SYNAPSE_AUTH_TOKEN
+   https://help.synapse.org/docs/Getting-Started.2055471150.html
+
+   ```
+   export SYNAPSE_AUTH_TOKEN=...
+   python -c "import synapseclient; syn = synapseclient.login(); print(syn.get('syn39259236', downloadFile=False).name)"
+   ```
 
 ## Verified runnable starting points
 
@@ -63,4 +78,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer.json

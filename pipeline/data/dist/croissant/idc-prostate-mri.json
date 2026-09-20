@@ -9,7 +9,7 @@
   "name": "idc-prostate-mri",
   "alternateName": "PROSTATE-MRI",
   "description": "This is a collection of MRIs of the prostate obtained with an endorectal coil and phased array surface coil at 3T (Philips Achieva). Each patient had biopsy confirmation of cancer and then underwent robotic assisted radical prostatectomy. A mold was generated from each MRI and the prostatectomy specimen was first placed in the mold and then cut in the same plane as the MRI. The data was generated at the National Cancer Institute, Bethesda, Maryland, USA between 2008-2010. Please see the Prostate-MRI page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-mri",
+  "url": "https://cd2s.vercel.app/datasets/idc-prostate-mri",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PROSTATE-MRI",
   "version": "as-retrieved",

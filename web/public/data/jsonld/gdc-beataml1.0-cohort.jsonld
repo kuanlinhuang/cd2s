@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-beataml1.0-cohort",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-beataml1.0-cohort",
   "name": "Functional Genomic Landscape of Acute Myeloid Leukemia",
   "alternateName": [
     "BEATAML1.0-COHORT"
   ],
   "description": "Functional Genomic Landscape of Acute Myeloid Leukemia",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-beataml1.0-cohort",
+  "url": "https://cd2s.vercel.app/datasets/gdc-beataml1.0-cohort",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/BEATAML1.0-COHORT",
     "gdc_program:BEATAML1.0",
@@ -51,8 +51,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -63,8 +63,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-beataml1.0-cohort.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-beataml1.0-cohort.json",
       "encodingFormat": "application/json"
     }
   ],

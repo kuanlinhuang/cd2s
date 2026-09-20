@@ -272,6 +272,9 @@ export interface AccessStep {
   requires: string[];
   est_time?: string | null;
   cli_snippet?: string | null;
+  /** Who the step is written for. Absent on records exported before the split. */
+  audience?: "human" | "agent";
+  evidence?: Evidence[];
 }
 
 export interface ExecutionReceipt {

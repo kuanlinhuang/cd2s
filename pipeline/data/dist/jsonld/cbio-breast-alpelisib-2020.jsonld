@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-alpelisib-2020",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-breast-alpelisib-2020",
   "name": "Breast Cancer (MSK, Nature Cancer 2020)",
   "alternateName": [
     "breast_alpelisib_2020"
   ],
   "description": "Targeted sequencing of pre- and post-treatment tumor/cfDNA samples from 51 Breast Cancer patients to understand the mechanisms of resistance to Alepelisib.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-alpelisib-2020",
+  "url": "https://cd2s.vercel.app/datasets/cbio-breast-alpelisib-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=breast_alpelisib_2020"
   ],
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-breast-alpelisib-2020.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-breast-alpelisib-2020.json",
       "encodingFormat": "application/json"
     }
   ],

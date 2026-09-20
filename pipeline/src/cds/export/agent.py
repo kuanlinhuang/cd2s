@@ -25,14 +25,14 @@ from datetime import UTC, datetime
 from typing import Any
 
 from cds import __version__
-from cds.model import DatasetRecord, ReuseTier, Severity
+from cds.model import AccessAudience, DatasetRecord, ReuseTier, Severity
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
 from cds.subjects import TISSUES
 
 # The public origin baked into every agent package, JSON-LD document and llms.txt.
 # Set CDS_SITE_URL to the deployed host before `cds export`; the placeholder is what a
 # reader sees when nobody did.
-SITE_URL = os.environ.get("CDS_SITE_URL", "https://cancer-data-showcase.example.org").rstrip("/")
+SITE_URL = os.environ.get("CDS_SITE_URL", "https://cd2s.example.org").rstrip("/")
 LICENSE = "https://creativecommons.org/licenses/by/4.0/"
 
 
@@ -50,7 +50,7 @@ def _distributions(rec: DatasetRecord) -> list[dict[str, Any]]:
     out.append(
         {
             "@type": "DataDownload",
-            "name": "Cancer Data Showcase structured record",
+            "name": "CD2S structured record",
             "contentUrl": f"{SITE_URL}/data/datasets/{rec.id}.json",
             "encodingFormat": "application/json",
         }
@@ -119,7 +119,7 @@ def to_schema_org(rec: DatasetRecord) -> dict[str, Any]:
         },
         "includedInDataCatalog": {
             "@type": "DataCatalog",
-            "name": "Cancer Data Showcase",
+            "name": "CD2S",
             "url": SITE_URL,
         },
         "distribution": _distributions(rec),
@@ -318,15 +318,33 @@ def to_agent_brief(rec: DatasetRecord) -> str:
         lines.append("")
 
     if rec.access_steps:
+        # Split by audience: a reader acting on this brief is usually the agent, and the
+        # command it can run should not be buried among steps that need a web browser and
+        # an institutional signature.
+        human = [s for s in rec.access_steps if s.audience != AccessAudience.AGENT]
+        machine = [s for s in rec.access_steps if s.audience == AccessAudience.AGENT]
         lines.append("## How to get the data")
         lines.append("")
-        for s in sorted(rec.access_steps, key=lambda s: s.order):
-            lines.append(f"{s.order}. {s.action}" + (f" ({s.est_time})" if s.est_time else ""))
-            if s.detail:
-                lines.append(f"   {s.detail}")
-            if s.url:
-                lines.append(f"   {s.url}")
-        lines.append("")
+        for heading, steps in (("For a person", human), ("From code", machine)):
+            if not steps:
+                continue
+            lines.append(f"### {heading}")
+            lines.append("")
+            for s in sorted(steps, key=lambda s: s.order):
+                lines.append(f"{s.order}. {s.action}" + (f" ({s.est_time})" if s.est_time else ""))
+                if s.detail:
+                    lines.append(f"   {s.detail}")
+                if s.requires:
+                    lines.append(f"   Requires: {', '.join(s.requires)}")
+                if s.url:
+                    lines.append(f"   {s.url}")
+                if s.cli_snippet:
+                    lines.append("")
+                    lines.append("   ```")
+                    for line in s.cli_snippet.splitlines():
+                        lines.append(f"   {line}")
+                    lines.append("   ```")
+            lines.append("")
 
     runnable = [a for a in rec.analysis_examples if a.receipt and a.receipt.executed]
     if runnable:
@@ -416,7 +434,7 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         "supports no analysis at any sample size."
     )
     lines = [
-        "# Cancer Data Showcase",
+        "# CD2S: Cancer Data to Study",
         "",
         "> A question-first guide to NCI-supported cancer datasets: what each one can "
         "answer, what it cannot, who has already reused it, and a runnable way to start. "
@@ -488,11 +506,11 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
     return {
         "openapi": "3.1.0",
         "info": {
-            "title": "Cancer Data Showcase API",
+            "title": "CD2S API",
             "version": __version__,
             "summary": "Question-first metadata for NCI-supported cancer datasets.",
             "description": (
-                "A read-only JSON surface over the Cancer Data Showcase corpus. Every "
+                "A read-only JSON surface over the CD2S corpus. Every "
                 "endpoint is a static file, so it is cacheable, archivable and has no "
                 "rate limit. Records expose measured clinical field completeness and "
                 "graded reuse evidence, not only descriptive metadata."

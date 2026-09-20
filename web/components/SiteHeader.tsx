@@ -67,14 +67,21 @@ export default function SiteHeader() {
             className="flex min-w-0 items-center gap-2"
             onClick={() => setMenuOpen(false)}
           >
+            {/* The monogram stacks so four characters stay legible at 24px; the
+                expansion sits beside it on wide screens and drops on a phone, where
+                the name alone has to carry the header. */}
             <span
               aria-hidden
-              className="grid h-6 w-6 shrink-0 place-items-center rounded font-mono text-[11px] font-bold"
+              className="grid h-6 w-6 shrink-0 place-items-center rounded font-mono text-[9px] font-bold leading-[1.05]"
               style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
             >
-              CD
+              <span>CD</span>
+              <span>2S</span>
             </span>
-            <span className="truncate font-semibold tracking-tight">Cancer Data Showcase</span>
+            <span className="truncate font-semibold tracking-tight">CD2S</span>
+            <span className="hidden truncate text-[13px] lg:inline t-faint">
+              Cancer Data to Study
+            </span>
           </Link>
 
           <nav aria-label="Primary" className="ml-auto hidden items-center gap-1 md:flex">

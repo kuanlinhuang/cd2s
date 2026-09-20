@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-su2c-2015",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-prad-su2c-2015",
   "name": "Metastatic Prostate Cancer (SU2C/PCF Dream Team, Cell 2015)",
   "alternateName": [
     "prad_su2c_2015"
   ],
   "description": "Whole-exome sequencing of 150 metastatic prostate cancer tumor/normal pairs by the SU2C/PCF Dream Team.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-su2c-2015",
+  "url": "https://cd2s.vercel.app/datasets/cbio-prad-su2c-2015",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_su2c_2015"
   ],
@@ -44,8 +44,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -56,8 +56,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-su2c-2015.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-prad-su2c-2015.json",
       "encodingFormat": "application/json"
     }
   ],

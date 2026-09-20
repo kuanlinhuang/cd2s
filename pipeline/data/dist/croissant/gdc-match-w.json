@@ -9,7 +9,7 @@
   "name": "gdc-match-w",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm W",
   "description": "Genomic Characterization CS-MATCH-0007 Arm W",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-w",
+  "url": "https://cd2s.vercel.app/datasets/gdc-match-w",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic Characterization CS-MATCH-0007 Arm W",
   "version": "as-retrieved",

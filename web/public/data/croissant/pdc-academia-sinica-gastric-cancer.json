@@ -9,7 +9,7 @@
   "name": "pdc-academia-sinica-gastric-cancer",
   "alternateName": "Academia Sinica Gastric Cancer",
   "description": "Academia Sinica Gastric Cancer",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-academia-sinica-gastric-cancer",
+  "url": "https://cd2s.vercel.app/datasets/pdc-academia-sinica-gastric-cancer",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Academia Sinica Gastric Cancer",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-acrin-6698",
   "alternateName": "ACRIN-6698",
   "description": "The American College of Radiology Imaging Network (ACRIN) trial 6698 was a multi-center study to evaluate the effectiveness of quantitative diffusion weighted imaging (DWI) for assessing breast cancer response to neoadjuvant chemotherapy (NAC). ACRIN 6698 was performed as a sub-study of the ongoing I-SPY 2 TRIAL (Investigation of Serial studies to Predict Your Therapeutic Response with Imaging And moLecular Analysis 2), an adaptive, multi-agent phase II trial designed to quickly identify new agents for breast cancer. Please see the ACRIN 6698/I-SPY2 Breast DWI wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-6698",
+  "url": "https://cd2s.vercel.app/datasets/idc-acrin-6698",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "ACRIN-6698",
   "version": "as-retrieved",

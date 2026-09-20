@@ -9,7 +9,7 @@
   "name": "gdc-tcga-uvm",
   "alternateName": "Uveal Melanoma",
   "description": "Uveal (intraocular or eye) melanoma develops in the pigment cells of the uvea, which is the middle layer of the eye. The uvea consists of three main parts: the iris, ciliary body, and choroid. Compared to tumors of the iris, tumors of the ciliary body and choroid tend to be larger and more likely to spread to other parts of the body. TCGA studied tumors from all three parts of the uvea. Please see the DICOM converted Slide Microscopy images for the TCGA-UVM collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-uvm",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-uvm",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Uveal Melanoma",
   "version": "as-retrieved",

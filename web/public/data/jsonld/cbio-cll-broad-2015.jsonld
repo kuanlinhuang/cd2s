@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-cll-broad-2015",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-cll-broad-2015",
   "name": "Chronic Lymphocytic Leukemia (Broad, Nature 2015)",
   "alternateName": [
     "cll_broad_2015"
   ],
   "description": "Whole exome sequencing of 537 chronic lymphocytic leukemia tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cll-broad-2015",
+  "url": "https://cd2s.vercel.app/datasets/cbio-cll-broad-2015",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=cll_broad_2015"
   ],
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-cll-broad-2015.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-cll-broad-2015.json",
       "encodingFormat": "application/json"
     }
   ],

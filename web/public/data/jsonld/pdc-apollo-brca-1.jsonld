@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-brca-1",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-apollo-brca-1",
   "name": "APOLLO-BRCA-1",
   "alternateName": [
     "APOLLO-BRCA-1 - Proteome"
   ],
   "description": "APOLLO-BRCA-1",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-brca-1",
+  "url": "https://cd2s.vercel.app/datasets/pdc-apollo-brca-1",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000757"
   ],
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-apollo-brca-1.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-apollo-brca-1.json",
       "encodingFormat": "application/json"
     }
   ],

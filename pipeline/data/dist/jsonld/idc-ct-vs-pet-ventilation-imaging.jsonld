@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-vs-pet-ventilation-imaging",
+  "@id": "https://cd2s.vercel.app/datasets/idc-ct-vs-pet-ventilation-imaging",
   "name": "CT-vs-PET-Ventilation-Imaging",
   "alternateName": [
     "ct_vs_pet_ventilation_imaging"
   ],
   "description": "The purpose of the CT Ventilation as a Functional Imaging Modality for Lung Cancer Radiotherapy study was to enable comparisons between: (i) CT ventilation images derived from exhale/inhale BHCT scans, (ii) CT ventilation images derived from free-breathing 4DCT scans, and (iii) Galligas PET (nuclear medicine) ventilation scans. This dataset can build the international capacity for prototyping and evaluating new CT ventilation imaging technologies. For this study, 20 lung cancer patients underwent exhale/inhale breath hold CT (BHCT), free-breathing four-dimensional CT (4DCT) and Galligas PET ventilation scans in a single session on a combined 4DPET/CT scanner.All image acquisitions were performed on a Siemens Biograph mCT.S/64 PET/CT scanner (Siemens, Knoxville, USA) at the Royal North Shore Hospital between 2013 and 2015. A total of 20 4DCT scans, 20 inhale/exhale BHCT scans, 20 Galligas PET scans and 19 attenuation CT scans (missing for CT-PET-VI-07) were successfully acquired for the 20 patients and included in this dataset. Please see the CT-vs-PET-Ventilation-Imaging wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ct-vs-pet-ventilation-imaging",
+  "url": "https://cd2s.vercel.app/datasets/idc-ct-vs-pet-ventilation-imaging",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ct_vs_pet_ventilation_imaging",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ct-vs-pet-ventilation-imaging.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-ct-vs-pet-ventilation-imaging.json",
       "encodingFormat": "application/json"
     }
   ],

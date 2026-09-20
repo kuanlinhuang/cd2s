@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-dd-2022",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-crc-dd-2022",
   "name": "Colorectal Cancer (MSK, JCO Precis Oncol 2022)",
   "alternateName": [
     "crc_dd_2022"
   ],
   "description": "Molecular characterization of 47 BRAF inhibitor-naive colorectal cancer patients with dual RAS hotspot/BRAF V600E mutations.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-dd-2022",
+  "url": "https://cd2s.vercel.app/datasets/cbio-crc-dd-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=crc_dd_2022"
   ],
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-crc-dd-2022.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-crc-dd-2022.json",
       "encodingFormat": "application/json"
     }
   ],

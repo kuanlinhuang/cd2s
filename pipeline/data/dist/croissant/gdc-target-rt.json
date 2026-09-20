@@ -9,7 +9,7 @@
   "name": "gdc-target-rt",
   "alternateName": "Rhabdoid Tumor",
   "description": "Rhabdoid Tumor",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-rt",
+  "url": "https://cd2s.vercel.app/datasets/gdc-target-rt",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Timed picture naming in seven languages.",
   "version": "as-retrieved",

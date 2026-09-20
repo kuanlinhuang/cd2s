@@ -9,7 +9,7 @@
   "name": "idc-4d-lung",
   "alternateName": "4D-Lung",
   "description": "This data collection consists of images acquired during chemoradiotherapy of 20 locally-advanced, non-small cell lung cancer patients. The images include four-dimensional (4D) fan beam (4D-FBCT) and 4D cone beam CT (4D-CBCT). All patients underwent concurrent radiochemotherapy to a total dose of 64.8-70 Gy using daily 1.8 or 2 Gy fractions. A single Radiation Oncologist delineated targets and organs at risk in all 4D-FBCT and a limited number of 4D-CBCT images. All patients underwent concurrent radiochemotherapy to a total dose of 64.8-70 Gy using daily 1.8 or 2 Gy fractions. Please see the 4D-Lung page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-4d-lung",
+  "url": "https://cd2s.vercel.app/datasets/idc-4d-lung",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "4D-Lung",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "gdc-tcga-paad",
   "alternateName": "Pancreatic Adenocarcinoma",
   "description": "Pancreatic ductal adenocarcinoma is the most common form of pancreatic cancer, making up more than 80% of cases. The disease begins in the cells of the pancreas\u2019s ducts, which transport juices containing digestive enzymes into the small intestine. Pancreatic cancer is the fourth most common cause of global cancer-related deaths and is almost always fatal. In 2012, it was estimated that around 44,000 new cases of pancreatic cancer were diagnosed and more than 37,000 deaths from this disease occurred in the United States alone, affecting both men and women. Please see the DICOM converted Slide Microscopy images for the TCGA-PAAD collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-paad",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-paad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pancreatic Adenocarcinoma",
   "version": "as-retrieved",

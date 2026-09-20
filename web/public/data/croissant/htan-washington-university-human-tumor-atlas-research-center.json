@@ -9,7 +9,7 @@
   "name": "htan-washington-university-human-tumor-atlas-research-center",
   "alternateName": "Washington University Human Tumor Atlas Research Center",
   "description": "Washington University Human Tumor Atlas Research Center",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-washington-university-human-tumor-atlas-research-center",
+  "url": "https://cd2s.vercel.app/datasets/htan-washington-university-human-tumor-atlas-research-center",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Differential chromatin accessibility and transcriptional dynamics define breast cancer subtypes and their lineages",
   "version": "as-retrieved",

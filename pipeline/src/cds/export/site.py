@@ -26,7 +26,7 @@ from cds.clinical import VERDICT_FIELDS, is_non_answer
 from cds.model import DatasetRecord, ReuseTier
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
 
-SITE_NAME = "Cancer Data Showcase"
+SITE_NAME = "CD2S"
 LICENSE_CONTENT = "https://creativecommons.org/licenses/by/4.0/"
 LICENSE_CODE = "https://opensource.org/licenses/MIT"
 

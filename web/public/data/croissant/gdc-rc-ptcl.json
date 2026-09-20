@@ -9,7 +9,7 @@
   "name": "gdc-rc-ptcl",
   "alternateName": "Refractory Cancers (RC) - Peripheral T-Cell Lymphoma (PTCL)",
   "description": "Refractory Cancers (RC) - Peripheral T-Cell Lymphoma (PTCL)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-rc-ptcl",
+  "url": "https://cd2s.vercel.app/datasets/gdc-rc-ptcl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Refractory Cancers (RC) - Peripheral T-Cell Lymphoma (PTCL)",
   "version": "as-retrieved",

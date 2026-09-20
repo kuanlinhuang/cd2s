@@ -9,7 +9,7 @@
   "name": "pdc-proteogenomics-of-gastric-cancer",
   "alternateName": "Proteogenomics of Gastric Cancer",
   "description": "Proteogenomics of Gastric Cancer",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
+  "url": "https://cd2s.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pangenomic analysis of Chinese gastric cancer.",
   "version": "as-retrieved",

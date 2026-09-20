@@ -9,7 +9,7 @@
   "name": "cbio-mbn-sfu-2023",
   "alternateName": "Mature B-Cell Neoplasms (Simon Fraser University, Blood 2023)",
   "description": "Comprehensive whole genome sequencing of 297 Burrkitt Lymphoma (BL) and diffuse large B-cell lymphoma (DLBCL) samples and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbn-sfu-2023",
+  "url": "https://cd2s.vercel.app/datasets/cbio-mbn-sfu-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

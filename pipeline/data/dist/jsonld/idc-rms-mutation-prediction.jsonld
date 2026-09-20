@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-rms-mutation-prediction",
+  "@id": "https://cd2s.vercel.app/datasets/idc-rms-mutation-prediction",
   "name": "RMS-Mutation-Prediction",
   "alternateName": [
     "rms_mutation_prediction"
   ],
   "description": "RMS is an aggressive soft tissue tumor which is associated with a broad range of pathological mutations. Multiple studies have identified recurrent mutations and chromosomal translocations which are associated with poor outcome in RMS patients. Since not all patients are screened for these mutations with molecular testing, there is a need to develop tools which accurately identify these alterations at diagnosis. Our study associated with these images applied deep learning with convolutional neural networks to learn mutation-associated histological features from H&E images from diagnostic RMS specimens. Please see the RMS-Mutation-Prediction information page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-rms-mutation-prediction",
+  "url": "https://cd2s.vercel.app/datasets/idc-rms-mutation-prediction",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=rms_mutation_prediction",
     "https://www.cancerimagingarchive.net/collections/",
@@ -46,8 +46,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -58,8 +58,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-rms-mutation-prediction.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-rms-mutation-prediction.json",
       "encodingFormat": "application/json"
     }
   ],
