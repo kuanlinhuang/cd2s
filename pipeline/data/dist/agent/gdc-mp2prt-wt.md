@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Of those, 2 were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and none could be checked for NCI funding of their own.
+- 2 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and none could be checked for NCI funding of their own.
 - Reuse gap index: -1.18 (negative means less reused than comparable datasets)
   - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None
 

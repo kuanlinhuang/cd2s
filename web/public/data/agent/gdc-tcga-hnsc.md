@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 758
-- Of those, 112 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- 112 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 3314 (attention, not reuse)
 - Reuse gap index: +1.35 (negative means less reused than comparable datasets)
   - Drug repurposing targeting miRNA-mRNA networks to mitigate areca nut-induced head and neck cancer. (2026) PMID 40639775

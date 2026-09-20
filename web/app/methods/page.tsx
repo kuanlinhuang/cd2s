@@ -129,7 +129,7 @@ const TIERS = [
   },
   {
     tier: "Mentioned only",
-    fields: "INTRO, DISCUSS, REF, ACK_FUND",
+    fields: "REF, INTRO",
     meaning:
       "Named in framing text or the bibliography. Counted, shown, and deliberately not called reuse.",
   },
@@ -434,11 +434,18 @@ export default function MethodsPage() {
             did with it.
           </p>
           <p>
-            Each tier asks exactly one section field, the same one for every dataset.
-            Asking several and taking the largest answer, which is what this used to do,
-            hands the count to whichever field has the most false positives - and
-            &nbsp;<code>RESULTS</code>, the field that usually returns the most, is the
+            Every tier asks a fixed set of section fields, the same set for every dataset,
+            and the tier reported as reuse asks&nbsp;<code>METHODS</code> alone. Asking
+            several and taking the largest answer, which is what this used to do, hands
+            the count to whichever field has the most false positives -
+            and&nbsp;<code>RESULTS</code>, the field that usually returns the most, is the
             field we already knew to be least reliable.
+          </p>
+          <p>
+            The table describes the counts. Individual articles listed on a dataset page
+            are graded on a wider set - an accession in&nbsp;<code>RESULTS</code>, a
+            table, a figure or the supplement still shows the data were analyzed - so an
+            example can name a section the count never asked about.
           </p>
         </div>
 
@@ -852,10 +859,6 @@ RGI    = y - fitted`}</code>
             [
               "Some datasets are simply untraceable",
               `${num(stats.n_without_citable_accession)} records have no accession specific enough to search for. PDC study identifiers, for instance, are almost never quoted, so proteomic reuse is close to invisible to any citation-based method including this one.`,
-            ],
-            [
-              "Some counts cannot be corrected",
-              `${num(stats.n_reuse_unmeasurable ?? 0)} further records have a citable accession, but too few of the articles matching it are open access to estimate how much of the count is Europe PMC matching the accession's words separately. Those datasets show no reuse count at all. That is a gap in the measurement and it is not the same as a zero, so it is never drawn as one.`,
             ],
             [
               "Inferred primary publications",

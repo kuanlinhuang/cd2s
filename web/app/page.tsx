@@ -14,7 +14,7 @@ import {
   getUnderexplored,
 } from "@/lib/data";
 import { SCARCE_MODALITIES, num } from "@/lib/format";
-import { reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
+import { mostReused, reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
 
 // facets.json is count-sorted; this leads the row with the NCI repositories the layer is
 // built on. A repository not named here still renders, after the ones that are.
@@ -84,9 +84,7 @@ export default function Home() {
   ];
 
   const reuseRows = reuseChartRows(index, getRecord);
-  const successStories = [...reuseRows]
-    .sort((a, b) => b.reuse - a.reuse || b.cites - a.cites)
-    .slice(0, 3);
+  const successStories = mostReused(index, 3);
   const opportunities = getUnderexplored(3);
   const citedAndUsed = [...reuseRows]
     .sort((a, b) => b.reuse - a.reuse || b.cites - a.cites)

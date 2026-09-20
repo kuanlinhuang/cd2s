@@ -48,6 +48,37 @@ export function generatingAwards(grants: Grant[], max = 2): ChartAward[] {
     .map((g) => ({ num: g.core_project_num as string, url: g.reporter_url ?? null }));
 }
 
+export interface MostReusedRow {
+  id: string;
+  title: string;
+  short: string | null;
+  reuse: number;
+}
+
+/**
+ * The most reused datasets, ranked on reuse alone.
+ *
+ * Deliberately not `reuseChartRows`: that selector exists for the citation-vs-reuse
+ * scatter and so requires a citation count, which is withheld wherever no authoritative
+ * marker paper names one. A heavily reused dataset must not drop off a reuse ranking
+ * because nobody has verified its marker paper.
+ */
+export function mostReused(index: IndexRow[], limit = 3): MostReusedRow[] {
+  return index
+    .filter(
+      (r): r is IndexRow & { n_verified_reuse: number } =>
+        r.has_citable_accession === true && r.n_verified_reuse != null,
+    )
+    .sort((a, b) => b.n_verified_reuse - a.n_verified_reuse)
+    .slice(0, limit)
+    .map((r) => ({
+      id: r.id,
+      title: r.title,
+      short: r.short_title ?? null,
+      reuse: r.n_verified_reuse,
+    }));
+}
+
 export function reuseChartRows(
   index: IndexRow[],
   getRecord: (id: string) => DatasetRecord | null,

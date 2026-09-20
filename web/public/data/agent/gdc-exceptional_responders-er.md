@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Of those, 4 were retrieved and graded individually, and the strongest 4 are kept as exemplars. Of the 4 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 4 that could be checked were themselves NCI funded.
+- 4 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 4 are kept as exemplars. Of the 4 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 4 that could be checked were themselves NCI funded.
 - Reuse gap index: -1.38 (negative means less reused than comparable datasets)
   - Molecular Features of Cancers Exhibiting Exceptional Responses to Treatment. (2021) PMID 33217343
   - Decreased SPTBN2 expression regulated by the ceRNA network is associated with poor prognosis and immune infiltration in low‑grade glioma. (2023) PMID 37153896

@@ -73,7 +73,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 22
-- Of those, 38 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 4 of the 10 that could be checked were themselves NCI funded.
+- 38 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 4 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: -1.02 (negative means less reused than comparable datasets)
   - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796

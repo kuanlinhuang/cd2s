@@ -1113,8 +1113,8 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         </h3>
         {analyzed.length > 0 && (
           <p className="mb-2 max-w-2xl text-meta t-muted">
-            {nAnalyzed !== null && m.n_reuse_examined > 0 && nAnalyzed > m.n_reuse_examined
-              ? `Examples, not the full list. Of the ${num(nAnalyzed)} articles counted above, ${num(m.n_reuse_examined)} were retrieved and graded individually; these are the strongest of those.`
+            {m.n_reuse_examined > 0
+              ? `Examples, not the full list. ${num(m.n_reuse_examined)} articles referencing this dataset's accession were retrieved and graded individually; these are the strongest of those.`
               : "Each was retrieved and graded individually."}
           </p>
         )}

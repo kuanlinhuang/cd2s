@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
-- Of those, 8 were retrieved and graded individually, and the strongest 7 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 6 that could be checked were themselves NCI funded.
+- 8 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 7 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 6 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.32 (negative means less reused than comparable datasets)
   - Automated imaging and identification of proteoforms directly from ovarian cancer tissue. (2023) PMID 37838706
   - Model Cell Lines and Tissues of Different HGSOC Subtypes Differ in Local Estrogen Biosynthesis. (2022) PMID 35681563

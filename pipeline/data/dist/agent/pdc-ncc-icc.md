@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Of those, 3 were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 3 that could be checked were themselves NCI funded.
+- 3 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 3 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.42 (negative means less reused than comparable datasets)
   - Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets. (2025) PMID 40250426
   - An SLCO2B1 mRNA Isoform Acts as a Noncoding RNA to Drive Cancer Progression by Triggering Protein Biosynthesis. (2026) PMID 41886603

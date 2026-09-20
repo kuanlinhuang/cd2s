@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 387
-- Of those, 104 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- 104 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 4497 (attention, not reuse)
 - Reuse gap index: +0.34 (negative means less reused than comparable datasets)
   - Mutational scanning reveals oncogenic CTNNB1 mutations have diverse effects on signaling. (2026) PMID 41629672

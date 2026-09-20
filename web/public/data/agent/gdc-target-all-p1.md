@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 14
-- Of those, 23 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 8 of the 10 that could be checked were themselves NCI funded.
+- 23 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 8 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: +0.29 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - Transcriptional landscape of B cell precursor acute lymphoblastic leukemia based on an international study of 1,223 cases. (2018) PMID 30487223

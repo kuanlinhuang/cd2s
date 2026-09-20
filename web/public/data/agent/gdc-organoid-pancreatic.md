@@ -70,7 +70,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Of those, 22 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 4 of the 10 that could be checked were themselves NCI funded.
+- 22 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 4 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 898 (attention, not reuse)
 - Reuse gap index: +0.60 (negative means less reused than comparable datasets)
   - Tryptophan-derived microbial metabolites activate the aryl hydrocarbon receptor in tumor-associated macrophages to suppress anti-tumor immunity. (2022) PMID 35139353

@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Of those, 2 were retrieved and graded individually, and the strongest 2 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
+- 2 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 2 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
 - Reuse gap index: +1.78 (negative means less reused than comparable datasets)
   - Evidence for a transgenerational mutational signature from ionizing radiation exposure in humans. (2025) PMID 40550869
 

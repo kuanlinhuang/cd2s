@@ -83,7 +83,7 @@ def years_available(rec: DatasetRecord, today: date | None = None) -> float | No
 
 
 def observed_reuse(rec: DatasetRecord) -> int | None:
-    """Articles whose methods or results reference this dataset's accession."""
+    """Articles whose methods reference this dataset's accession."""
     if rec.reuse_metrics.has_citable_accession is False:
         return None
     v = rec.reuse_metrics.n_by_tier.get("t3_analyzed")
@@ -357,7 +357,7 @@ def apply_to_records(
             n_flagged += 1
             basis.append(
                 f"{observed} article(s) reference this dataset's accession in a methods "
-                f"or results section, against {m.expected_reuse:.1f} predicted for "
+                f"section, against {m.expected_reuse:.1f} predicted for "
                 f"datasets of comparable size, age, modality breadth and access tier "
                 f"(reuse gap index {m.reuse_gap_index:+.2f} on a log2 scale, "
                 f"{_ordinal(m.reuse_gap_percentile)} percentile of the assessed corpus)."

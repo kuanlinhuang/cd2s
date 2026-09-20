@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 105
-- Of those, 144 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 7 of the 10 that could be checked were themselves NCI funded.
+- 144 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 7 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: -0.11 (negative means less reused than comparable datasets)
   - The genomic landscape of pediatric acute lymphoblastic leukemia. (2022) PMID 36050548
   - Epithelial-mesenchymal transition and its transcription factors. (2022) PMID 34708244

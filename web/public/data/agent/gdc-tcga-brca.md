@@ -85,7 +85,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2373
-- Of those, 114 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- 114 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 9914 (attention, not reuse)
 - Reuse gap index: +2.59 (negative means less reused than comparable datasets)
   - Tumor necrosis associates with aggressive breast cancer features, increased hypoxia signaling and reduced patient survival. (2025) PMID 41310191

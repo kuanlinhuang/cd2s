@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 43
-- Of those, 67 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 3 of the 10 that could be checked were themselves NCI funded.
+- 67 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 3 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 638 (attention, not reuse)
 - Reuse gap index: -1.15 (negative means less reused than comparable datasets)
   - mTORC1 upregulates B7-H3/CD276 to inhibit antitumor T cells and drive tumor immune evasion. (2023) PMID 36869048

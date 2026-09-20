@@ -41,7 +41,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Of those, 6 were retrieved and graded individually, and the strongest 5 are kept as exemplars. Of the 5 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 5 that could be checked were themselves NCI funded.
+- 6 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 5 are kept as exemplars. Of the 5 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 5 that could be checked were themselves NCI funded.
 - Reuse gap index: +2.00 (negative means less reused than comparable datasets)
   - Federated Deep Learning Enables Cancer Subtyping by Proteomics. (2025) PMID 40488620
   - Multi-Omics Characterization of E3 Regulatory Patterns in Different Cancer Types. (2024) PMID 39062881

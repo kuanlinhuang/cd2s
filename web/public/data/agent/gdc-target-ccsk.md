@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
-- Of those, 10 were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 9 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 5 of the 9 that could be checked were themselves NCI funded.
+- 10 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 9 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 5 of the 9 that could be checked were themselves NCI funded.
 - Reuse gap index: -1.65 (negative means less reused than comparable datasets)
   - Immuno-transcriptomic profiling of extracranial pediatric solid malignancies. (2021) PMID 34818552
   - Targeted &lt;i&gt;in silico&lt;/i&gt; characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575

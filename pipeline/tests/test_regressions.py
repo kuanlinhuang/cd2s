@@ -662,34 +662,82 @@ def test_a_nominated_marker_paper_must_actually_name_the_accession():
         enrich.precision._full_text = original
 
 
-def test_a_stale_nomination_is_reconsidered_on_the_next_pass(record_factory):
+def test_a_stale_nomination_is_reconsidered_on_the_next_pass(record_factory, monkeypatch):
     """`enrich` reads and writes the same stage, so its own guesses came back forever.
 
     The nomination step was guarded on `not rec.primary_publications`, which is false as
     soon as a previous run has nominated something. A guess made before a new rejection
     rule existed therefore survived that rule entirely, and the rule appeared to work
-    while changing nothing.
+    while changing nothing. Driving `enrich_record` with a record that already carries a
+    stale guess is the only way to see that: the guess must be put back through the
+    rejection rule and dropped, not carried forward untested.
     """
     from cds.model import Confidence, Evidence, Method, Publication
-    from cds.reuse import markers
+    from cds.reuse import enrich, epmc, markers
 
+    stale = Publication(
+        pmid="12921412",
+        title="Timed picture naming in seven languages.",
+        year=2003,
+        evidence=[
+            Evidence(
+                method=Method.DERIVED,
+                source_label=markers.INFERRED_LABEL,
+                retrieved_at=_NOW,
+                confidence=Confidence.LOW,
+            )
+        ],
+    )
     rec = record_factory("x", identifiers=[(IdScheme.GDC_PROJECT, "TARGET-RT")])
-    rec.primary_publications = [
-        Publication(
-            pmid="12921412",
-            title="Timed picture naming in seven languages.",
-            evidence=[
-                Evidence(
-                    method=Method.DERIVED,
-                    source_label=markers.INFERRED_LABEL,
-                    retrieved_at=_NOW,
-                    confidence=Confidence.LOW,
-                )
-            ],
-        )
-    ]
-    sourced = [p for p in rec.primary_publications if not markers.is_inferred(p)]
-    assert sourced == [], "a guess must not count as an existing publication"
+    rec.primary_publications = [stale.model_copy(deep=True)]
+
+    monkeypatch.setattr(enrich.dating, "years_available", lambda *a, **k: (3, 2015, "how"))
+    monkeypatch.setattr(enrich.trace, "deep_candidates", lambda *a, **k: ([], [], None))
+    monkeypatch.setattr(
+        epmc, "most_cited_in_window", lambda *a, **k: (stale.model_copy(deep=True), set(), None)
+    )
+    # The nominee does not name the accession anywhere in its full text, which is exactly
+    # the rule the stale guess predates.
+    monkeypatch.setattr(enrich, "_mentions_accession", lambda *a, **k: False)
+
+    info = enrich.enrich_record(None, rec, link_grants=False)
+
+    assert rec.primary_publications == [], "a stale guess must be re-tested, not inherited"
+    assert info["rejected_primary_pmid"] == "12921412"
+
+
+def test_a_sourced_publication_is_never_re_nominated(record_factory, monkeypatch):
+    """Only this pipeline's own guesses are reconsidered; a repository's stays put."""
+    from cds.model import Confidence, Evidence, Method, Publication
+    from cds.reuse import enrich, epmc
+
+    sourced = Publication(
+        pmid="99",
+        title="The marker paper the repository publishes.",
+        year=2011,
+        evidence=[
+            Evidence(
+                method=Method.API,
+                source_label="GDC",
+                retrieved_at=_NOW,
+                confidence=Confidence.HIGH,
+            )
+        ],
+    )
+    rec = record_factory("x", identifiers=[(IdScheme.GDC_PROJECT, "TARGET-RT")])
+    rec.primary_publications = [sourced.model_copy(deep=True)]
+
+    monkeypatch.setattr(enrich.dating, "years_available", lambda *a, **k: (3, 2015, "how"))
+    monkeypatch.setattr(enrich.trace, "deep_candidates", lambda *a, **k: ([], [], None))
+
+    def _must_not_be_called(*a, **k):
+        raise AssertionError("a sourced publication must not trigger a nomination")
+
+    monkeypatch.setattr(epmc, "most_cited_in_window", _must_not_be_called)
+
+    enrich.enrich_record(None, rec, link_grants=False)
+
+    assert [p.pmid for p in rec.primary_publications] == ["99"]
 
 
 def test_independence_is_decided_after_the_generating_team_is_known(record_factory):

@@ -42,7 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Of those, 2 were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
+- 2 articles referencing this dataset's accession were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
 - Reuse gap index: -2.53 (negative means less reused than comparable datasets)
   - FocusedON-BC: A Robust Deep Learning Framework for Automated Body Composition Assessment. (2026) PMID 42124078
 
