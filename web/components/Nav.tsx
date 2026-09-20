@@ -1,10 +1,10 @@
 "use client";
 
 /**
- * One menu, opened from one button, instead of a row of seven tabs.
+ * One menu, opened from one button, instead of a row of tabs.
  *
- * The destinations are unchanged - they were the right seven - but as a row they cost a
- * reader the same seven decisions on every page, in 13px type, with nothing to say what
+ * As a row the destinations cost a reader the same set of decisions on every page, in
+ * small type, with nothing to say what
  * any of them held. A single control collapses that to one decision, and buys the space
  * to answer the only question a visitor actually has about a nav item: why would I click
  * this. So every entry carries a one-line hint and a count where there is one to give.
@@ -55,7 +55,7 @@ export function Nav({ items }: { items: NavItem[] }) {
   const panelId = useId();
 
   const current = items.find((n) => isActive(pathname, n.href));
-  const label = current?.label ?? "Explore";
+  const label = current?.label ?? "Explore resources";
 
   useEffect(() => {
     if (!open) return;
@@ -93,7 +93,8 @@ export function Nav({ items }: { items: NavItem[] }) {
             <rect key={y} x="0" y={y - 1} width="16" height="2" rx="1" fill="currentColor" />
           ))}
         </svg>
-        <span className="whitespace-nowrap">{label}</span>
+        <span className="hidden whitespace-nowrap sm:inline">{label}</span>
+        <span className="whitespace-nowrap sm:hidden">Explore</span>
         <svg
           width="11"
           height="7"

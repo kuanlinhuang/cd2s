@@ -156,7 +156,7 @@ export default function ReuseScatter({
         viewBox={`0 0 ${width} ${height}`}
         className="block max-w-full select-none"
         role="img"
-        aria-label={`Scatter of ${points.length} datasets: articles that analyzed the data against the number expected. ${nUnder} fall in the underexplored zone.`}
+        aria-label={`Scatter of ${points.length} datasets: articles that analyzed the data against the number expected. ${nUnder} fall in the underused opportunity zone.`}
         onPointerMove={(e) => setHover(nearest(e.clientX, e.clientY))}
         onPointerLeave={() => setHover(null)}
       >
@@ -293,7 +293,7 @@ export default function ReuseScatter({
           )}
           {hover.underexplored && (
             <div className="mt-1 font-medium" style={{ color: "var(--viz-2)" }}>
-              Underexplored
+              Underused opportunity
             </div>
           )}
         </div>
@@ -302,7 +302,7 @@ export default function ReuseScatter({
       <div className="viz-legend mt-2">
         <span>
           <span className="viz-swatch dot" style={{ background: "var(--viz-2)" }} />
-          Underexplored ({nUnder})
+          Underused opportunities ({nUnder})
         </span>
         <span>
           <span className="viz-swatch dot" style={{ background: "var(--viz-mute)" }} />
@@ -344,7 +344,7 @@ export default function ReuseScatter({
                         </a>
                         {p.underexplored && (
                           <span className="ml-1.5 text-micro" style={{ color: "var(--viz-2)" }}>
-                            underexplored
+                            underused opportunity
                           </span>
                         )}
                       </td>

@@ -672,6 +672,7 @@ class AnalysisExample(CDSModel):
     est_compute: str | None = None
     workbook_path: str | None = None
     workbook_url: str | None = None
+    notebook_download_url: str | None = None
     colab_url: str | None = None
     binder_url: str | None = None
     receipt: ExecutionReceipt | None = None

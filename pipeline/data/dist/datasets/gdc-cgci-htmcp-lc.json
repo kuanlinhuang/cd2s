@@ -1973,6 +1973,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/03_treatment_response_cervical.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/03_treatment_response_cervical.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {

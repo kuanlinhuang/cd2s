@@ -5,7 +5,7 @@ import { siteUrlOrPlaceholder } from "@/lib/site";
 
 const SITE_URL = siteUrlOrPlaceholder();
 
-const PAGES = ["", "/datasets", "/questions", "/underexplored", "/compare", "/network", "/agents", "/methods"];
+const PAGES = ["", "/datasets", "/questions", "/underexplored", "/notebooks", "/compare", "/network", "/agents", "/methods"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const built = new Date(getStats().generated_at);

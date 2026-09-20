@@ -82,7 +82,7 @@ const SECTIONS = [
   { id: "useful-for", label: "Good for" },
   { id: "limitations", label: "Cannot tell you" },
   { id: "reuse", label: "Who has used it" },
-  { id: "ways", label: "Ways to use it" },
+  { id: "ways", label: "Analysis notebooks" },
   { id: "start", label: "Start here" },
   { id: "provenance", label: "Provenance" },
 ];
@@ -839,7 +839,6 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
   const wasCorrected = prec?.needs_correction === true && prec.precision != null;
   const rawAnalyzed = m.n_by_tier_raw?.t3_analyzed ?? null;
   const hasExpected = m.expected_reuse !== null && m.expected_reuse !== undefined;
-  const showGap = hasExpected && nAnalyzed !== null;
   const ladder: BarRow[] = [
     ...(m.n_citations_to_primary_publication !== null && m.n_citations_to_primary_publication !== undefined
       ? [
@@ -863,6 +862,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
       })),
   ];
   const showLadder = m.has_citable_accession !== false && ladder.some((x) => x.value > 0);
+  const showGap = hasExpected && nAnalyzed !== null;
 
   return (
     <Section
@@ -953,7 +953,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
               </p>
               <ObservedExpected
                 observed={nAnalyzed!}
-                expected={m.expected_reuse ?? 0}
+                expected={m.expected_reuse!}
                 underexplored={r.underexplored.is_underexplored}
               />
             </Card>
@@ -1016,7 +1016,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         <div className="mt-4">
           <Callout
             tone={r.underexplored.is_underexplored ? "info" : "neutral"}
-            title={r.underexplored.is_underexplored ? "Why it is labeled underexplored" : "Reuse assessment"}
+            title={r.underexplored.is_underexplored ? "Why this is an underused opportunity" : "Reuse assessment"}
           >
             <ul className="space-y-1">
               {r.underexplored.basis.map((b, i) => (
@@ -1099,8 +1099,14 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
             {nAnalyzed !== null && m.n_reuse_examined > 0 && nAnalyzed > m.n_reuse_examined
               ? `Examples, not the full list. Of the ${num(nAnalyzed)} articles counted above, ${num(m.n_reuse_examined)} were retrieved and graded individually; these are the strongest of those.`
               : "Each was retrieved and graded individually."}
-            {m.n_independent_reuse > 0 &&
-              ` ${num(m.n_independent_reuse)} of the ${num(m.n_reuse_examined)} examined had no author in common with the generating team.`}
+          </p>
+        )}
+        {m.n_reuse_examined > 0 && (
+          <p className="mb-2 max-w-2xl text-meta t-muted">
+            Deep-review sample: {num(m.n_independent_reuse)} of {num(m.n_reuse_examined)}
+            {" "}examined articles had no author in common with the generating team, and{" "}
+            {num(m.n_nci_funded_reuse)} of {num(m.n_reuse_examined)} were themselves
+            NCI-funded. These are sample counts, not population estimates.
           </p>
         )}
         {analyzed.length === 0 ? (
@@ -1226,8 +1232,8 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
   return (
     <Section
       id="ways"
-      title="Ways to use it"
-      lede="Worked analyses at three levels. An executed workbook ran end to end against live data, and its receipt records when, with which packages, and how long it took."
+      title="Analysis notebooks and worked examples"
+      lede="Go beyond the download. Each executed workbook retrieves, cleans and analyzes real data end to end, with a receipt recording when it ran, which packages it used and how long it took."
     >
       {examples.length === 0 ? (
         <EmptyState>
@@ -1322,6 +1328,16 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
               )}
 
               <div className="mt-3 flex flex-wrap gap-2">
+                {ex.notebook_download_url && (
+                  <a
+                    href={ex.notebook_download_url}
+                    download
+                    className="rounded border px-2.5 py-1 text-meta font-medium"
+                    style={{ borderColor: "var(--border-strong)" }}
+                  >
+                    Download executed notebook
+                  </a>
+                )}
                 {ex.workbook_url && (
                   <a
                     href={ex.workbook_url}

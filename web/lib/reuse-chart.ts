@@ -54,7 +54,7 @@ export function reuseChartRows(
 ): ReuseChartRow[] {
   return index
     .filter(
-      (r) =>
+      (r): r is IndexRow & { n_verified_reuse: number } =>
         (r.n_citations_to_primary_publication ?? 0) > 0 &&
         r.has_citable_accession === true &&
         r.n_verified_reuse != null,
@@ -62,7 +62,7 @@ export function reuseChartRows(
     .sort(
       (a, b) =>
         (b.n_citations_to_primary_publication ?? 0) - (a.n_citations_to_primary_publication ?? 0) ||
-        (b.n_verified_reuse ?? 0) - (a.n_verified_reuse ?? 0),
+        b.n_verified_reuse - a.n_verified_reuse,
     )
     .map((r) => {
       const grants = getRecord(r.id)?.grants ?? [];
@@ -71,7 +71,7 @@ export function reuseChartRows(
         title: r.title,
         short: r.short_title ?? null,
         cites: r.n_citations_to_primary_publication ?? 0,
-        reuse: r.n_verified_reuse ?? 0,
+        reuse: r.n_verified_reuse,
         awards: generatingAwards(grants),
         nAwards: grants.length,
       };

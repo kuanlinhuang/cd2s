@@ -3372,6 +3372,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/05_cross_repository_linkage.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/05_cross_repository_linkage.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {

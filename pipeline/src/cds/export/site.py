@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import io
+import shutil
 from collections import Counter
 from datetime import UTC, datetime
 from typing import Any
@@ -426,6 +427,20 @@ def write_all(
     stats = corpus_stats(records, rows)
     questions = question_index(records)
 
+    # Executed notebooks are part of the public product, not only repository artifacts.
+    # Attach a stable local download before serializing records, then copy the notebooks
+    # beside the other generated data so this also works while the source repo is private.
+    from cds import workbooks as workbook_build
+
+    notebook_files = {p.stem: p for p in workbook_build.WORKBOOK_OUT.glob("*.ipynb")}
+    for record in records:
+        for example in record.analysis_examples:
+            if not example.workbook_path:
+                continue
+            name = example.template_source or example.workbook_path.rsplit("/", 1)[-1].removesuffix(".py")
+            if name in notebook_files:
+                example.notebook_download_url = f"/data/notebooks/{name}.ipynb"
+
     # Agent package links are a pure function of the record id, so they are set before
     # anything is serialized. They used to be filled in afterwards, which meant every
     # record had to be dumped and written a second time to both targets - four full
@@ -448,10 +463,25 @@ def write_all(
         for target in (DIST_DIR, WEB_DATA_DIR):
             written[f"{target.name}/{name}"] = _w(target / name, obj, indent=indent)
 
+    for target in (DIST_DIR, WEB_DATA_DIR):
+        notebook_dir = target / "notebooks"
+        notebook_dir.mkdir(parents=True, exist_ok=True)
+        for source in notebook_files.values():
+            shutil.copyfile(source, notebook_dir / source.name)
+        written[f"{target.name}/notebooks/*.ipynb"] = sum(
+            source.stat().st_size for source in notebook_files.values()
+        )
+
     # One dump per record, written to both targets. The dump dominates export time.
     n_bytes = 0
     for r in records:
-        payload = orjson.dumps(r.model_dump(mode="json"), option=orjson.OPT_NON_STR_KEYS)
+        # Keep workbook-bearing records readable in the checked-in corpus. These records
+        # are the ones researchers open most often while adapting an example, and the
+        # existing corpus already stores them with two-space indentation.
+        options = orjson.OPT_NON_STR_KEYS
+        if r.analysis_examples:
+            options |= orjson.OPT_INDENT_2
+        payload = orjson.dumps(r.model_dump(mode="json"), option=options)
         n_bytes += len(payload)
         for target in (DIST_DIR, WEB_DATA_DIR):
             path = target / "datasets" / f"{r.id}.json"

@@ -1852,6 +1852,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/04_scarce_modality_cptac.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/04_scarce_modality_cptac.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {

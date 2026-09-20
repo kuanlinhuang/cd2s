@@ -102,7 +102,6 @@ export function EvidenceChip({ evidence }: { evidence: Evidence[] }) {
         href={best.source_url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Source: ${best.source_label ?? best.source_url}`}
       >
         {label}
       </a>
@@ -252,7 +251,7 @@ export function UnderexploredBadge() {
       style={{ color: "var(--mixed)", background: "var(--mixed-bg)" }}
       title="Reused far less than datasets of comparable size, age, measurement breadth and access tier. The reuse section shows the numbers behind the label."
     >
-      Underexplored
+      Underused opportunity
     </span>
   );
 }

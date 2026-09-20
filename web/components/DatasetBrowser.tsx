@@ -49,7 +49,7 @@ const CAPABILITY_FILTERS = {
   },
   open: { label: "Open access", test: (r: BrowseRow) => r.access_tier === "open" },
   underexplored: {
-    label: "Underexplored",
+    label: "Underused opportunity",
     test: (r: BrowseRow) => r.is_underexplored,
   },
   workbook: {
@@ -571,7 +571,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
           <p className="rounded-md border border-dashed px-4 py-8 text-center text-body t-muted">
             Nothing matches. Remove a filter, or browse{" "}
             <Link href="/underexplored" className="underline">
-              underexplored datasets
+              underused research opportunities
             </Link>
             .
           </p>

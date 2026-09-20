@@ -2497,6 +2497,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/01_can_i_answer_this.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/01_can_i_answer_this.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {
@@ -2563,6 +2564,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/06_agent_dataset_selection.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/06_agent_dataset_selection.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {

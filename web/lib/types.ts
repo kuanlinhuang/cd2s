@@ -328,11 +328,21 @@ export interface AnalysisExample {
   est_compute?: string | null;
   workbook_path?: string | null;
   workbook_url?: string | null;
+  notebook_download_url?: string | null;
   colab_url?: string | null;
   binder_url?: string | null;
   receipt?: ExecutionReceipt | null;
   template_source?: string | null;
   evidence: Evidence[];
+}
+
+export interface NotebookGuide extends AnalysisExample {
+  slug: string;
+  datasets: Array<{
+    id: string;
+    title: string;
+    short_title?: string | null;
+  }>;
 }
 
 export interface AgentPackage {

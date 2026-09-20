@@ -3320,6 +3320,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/01_can_i_answer_this.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/01_can_i_answer_this.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {
@@ -3384,6 +3385,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/02_survival_tcga_brca.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/02_survival_tcga_brca.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {
@@ -3447,6 +3449,7 @@
       "est_compute": null,
       "workbook_path": "workbooks/python/05_cross_repository_linkage.py",
       "workbook_url": null,
+      "notebook_download_url": "/data/notebooks/05_cross_repository_linkage.ipynb",
       "colab_url": null,
       "binder_url": null,
       "receipt": {
