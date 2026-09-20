@@ -9,7 +9,7 @@
   "name": "pdc-tcga-colon-cancer-proteome",
   "alternateName": "TCGA Colon Cancer Proteome",
   "description": "TCGA Colon Cancer Proteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-colon-cancer-proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-colon-cancer-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TCGA Colon Cancer Proteome",
   "version": "as-retrieved",

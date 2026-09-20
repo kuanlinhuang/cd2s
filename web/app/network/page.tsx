@@ -157,6 +157,13 @@ function FundingCaveats({ coverage }: { coverage?: ReturnType<typeof getFundingC
           marker paper that gives the awards which created it; on an article that used the
           data, the awards which funded that use.
         </p>
+        <p className="mt-1.5 t-muted">
+          The two sides are not measured alike. Generation is complete: a dataset has one
+          marker paper and every award on it is resolved. Reuse is a sample - the articles
+          using a dataset can number in the thousands, and only the few dozen strongest are
+          retrieved and looked up. Every award shown here funded reuse; there are more that
+          are not shown.
+        </p>
       </Card>
       <Card>
         <h2 className="text-body font-semibold">How far it reaches</h2>
@@ -400,7 +407,7 @@ function DatasetView({ datasetParam }: { datasetParam?: string }) {
                         ? "This dataset has no accession that articles quote, so no reuse can be traced and nothing it enabled is visible."
                         : funding.n_traced_articles === 0
                           ? "No article naming this dataset's accession has been found."
-                          : `${num(funding.n_traced_articles)} articles used this dataset, but none of them reports an NCI award.`}
+                          : `${num(funding.n_traced_articles)} of the articles using this dataset were retrieved and checked against RePORTER, and none of them reports an NCI award.`}
                     </li>
                   )}
                 </ul>

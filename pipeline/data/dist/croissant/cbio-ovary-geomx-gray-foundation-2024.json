@@ -9,7 +9,7 @@
   "name": "cbio-ovary-geomx-gray-foundation-2024",
   "alternateName": "Ovarian Cancer (Gray Foundation, Cancer Discov 2024)",
   "description": "Microregion transcriptomic data (GeoMx) and multiplex imaging (CyCIF) for High-Grade Serous ovarian Cancer Cases (HGSOC). This resource was supported by the Gray Foundation.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ovary-geomx-gray-foundation-2024",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ovary-geomx-gray-foundation-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

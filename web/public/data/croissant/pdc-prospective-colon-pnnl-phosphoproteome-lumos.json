@@ -9,7 +9,7 @@
   "name": "pdc-prospective-colon-pnnl-phosphoproteome-lumos",
   "alternateName": "Prospective Colon PNNL Phosphoproteome Lumos",
   "description": "Prospective Colon PNNL Phosphoproteome Lumos",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-colon-pnnl-phosphoproteome-lumos",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-colon-pnnl-phosphoproteome-lumos",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Network-based elucidation of colon cancer drug resistance mechanisms by phosphoproteomic time-series analysis.",
   "version": "as-retrieved",

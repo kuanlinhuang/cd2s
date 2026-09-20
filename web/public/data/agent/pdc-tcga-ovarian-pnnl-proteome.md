@@ -42,8 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 7
-- Citations to the dataset's publication: 29 (attention, not reuse)
-- Reuse gap index: +0.52 (negative means less reused than comparable datasets)
+- Of those, 9 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +0.72 (negative means less reused than comparable datasets)
   - Starvation-inactivated MTOR triggers cell migration via a ULK1-SH3PXD2A/TKS5-MMP14 pathway in ovarian carcinoma. (2023) PMID 37505094
   - Model Cell Lines and Tissues of Different HGSOC Subtypes Differ in Local Estrogen Biosynthesis. (2022) PMID 35681563
   - Machine Learning-Enhanced Extraction of Biomarkers for High-Grade Serous Ovarian Cancer from Proteomics Data. (2024) PMID 38918474
@@ -55,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-ovarian-pnnl-proteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-ovarian-pnnl-proteome.json

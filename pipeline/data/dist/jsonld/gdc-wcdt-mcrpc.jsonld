@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-wcdt-mcrpc",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-wcdt-mcrpc",
   "name": "Genomic Characterization of Metastatic Castration Resistant Prostate Cancer",
   "alternateName": [
     "WCDT-MCRPC"
   ],
   "description": "The West Coast Dream Team cohort is one of the few public resources that sequences metastatic castration-resistant prostate cancer tissue rather than primary tumor, which is what makes it valuable: the biology that drives lethal prostate cancer is not well represented in primary-tumor cohorts. All 101 cases carry whole genome sequencing with copy number and structural variant calls, and 99 carry RNA sequencing.\nThe clinical annotation is unusual in shape. Disease state is recorded with complete consistency - every case is AJCC stage IV, every case has progression or recurrence recorded as \"yes\", and every case's last known disease status is distant metastatic recurrence or progression. But vital status is \"unknown\" for all 101 cases, and no treatment field is populated. The cohort tells you precisely where these patients were in their disease course and nothing about what happened to them next.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-wcdt-mcrpc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-wcdt-mcrpc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/WCDT-MCRPC",
     "gdc_program:WCDT",
@@ -50,7 +50,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -62,7 +62,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-wcdt-mcrpc.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-wcdt-mcrpc.json",
       "encodingFormat": "application/json"
     }
   ],
@@ -77,78 +77,188 @@
   "funding": [
     {
       "@type": "Grant",
-      "identifier": "U54CA224079",
-      "name": "Project 2: Reversing resistance caused by lineage plasticity through epigenetic therapy",
+      "identifier": "R35CA197566",
+      "name": "Mechanisms governing metastatic dormancy and reactivation",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224079"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197566"
     },
     {
       "@type": "Grant",
-      "identifier": "R37CA230617",
-      "name": "Hormone signaling and translation control in advanced prostate cancer",
+      "identifier": "R00CA194289",
+      "name": "MDSC-Tumor Crosstalk in Prostate Cancer Progression and Castration Resistance",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA230617"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA194289"
     },
     {
       "@type": "Grant",
-      "identifier": "R35CA231989",
-      "name": "The MYC Transcription Factor Network and the Path to Cancer",
+      "identifier": "P50CA140388",
+      "name": "Administrative Supplement to MD Anderson Cancer Center Prostate Cancer SPORE",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA231989"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA140388"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA234715",
-      "name": "Defining and Targeting Lineage Transition Programs Operative in AR Pathway Independent Prostate Cancer",
+      "identifier": "P50CA092629",
+      "name": "Project 2: Overcoming Microenvironment-Mediated Resistance to AR Pathway Inhibition in High-Risk Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA234715"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA092629"
     },
     {
       "@type": "Grant",
-      "identifier": "P50CA097186",
-      "name": "Developmental Research Program",
+      "identifier": "P30CA016672",
+      "name": "The University of Texas MD Anderson Cancer Center Support Grant (CCSG)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA097186"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016672"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA015704",
-      "name": "Hematologic Malignancies",
+      "identifier": "P30CA008748",
+      "name": "Cancer Center Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA015704"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
     },
     {
       "@type": "Grant",
-      "identifier": "F31CA260920",
-      "name": "Elucidating the role of somatic 3\u2019UTR mutations in prostate cancer pathogenesis",
+      "identifier": "P01CA094060",
+      "name": "TGF&, PI3K and HER2 Pathways in Breast Cancer Metastasis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=F31CA260920"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA094060"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA108462",
+      "name": "Molecular and Cellular Mechanisms in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA108462"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA251245",
+      "name": "Targeting Prostate Cancer Lineage Plasticity with BET Bromodomain Inhibition",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA251245"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA230516",
+      "name": "DNA repair alterations in metastatic prostate cancer: functional and therapeutic implications",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA230516"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA227025",
+      "name": "Molecular Mechanisms of Castration Resistant Prostate Cancer Recurrence & Therapeutic Strategies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA227025"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA186786",
+      "name": "Michigan Prostate SPORE 2025-2030",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA186786"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA093373",
+      "name": "Integrated Cancer Biology Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA093373"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA082103",
+      "name": "Leadership, Planning and Evaluation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA082103"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA156732",
+      "name": "The University of Massachusetts, Boston - Dana-Farber/Harvard Cancer Center U54 Comprehensive Partnership for Cancer Disparities Research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA156732"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA251555",
+      "name": "Elucidation of the genetic mechanisms driving prostate tumorigenesis through integrative computational and functional approaches",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA251555"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA193910",
+      "name": "Defining the epigenetic landscape in human prostate cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193910"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA135592",
+      "name": "Androgen Receptor Regulation by Phosphorylation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA135592"
     },
     {
       "@type": "Grant",
       "identifier": "P50CA090381",
-      "name": "Tissue and Pathology Core",
+      "name": "Gleason-based mRNA and Metabolomic Profiling to Predict Prostate Cancer Progress",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -164,116 +274,6 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA163227"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "T32CA009138",
-      "name": "Molecular, Genetic and Cellular Targets of Cancer Training Program",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009138"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R35CA197292",
-      "name": "Viral priming and targeting NK cells against solid tumor malignancies",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197292"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA276308",
-      "name": "Transcriptional-translational conflict in bladder epithelial homeostasis and cancer",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA276308"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA257258",
-      "name": "Small molecule probes of MYC stability and function intumorigenesis",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA257258"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P50CA180995",
-      "name": "Project 1: Targeting the MYC Pathway in Prostate Cancer",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA180995"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "F30CA250196",
-      "name": "Elucidation of a structural rationale for the binding of Myc by small molecule inhibitors",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=F30CA250196"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "T32CA193145",
-      "name": "Opportunities for Pathology Trainees in Cancer Research",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA193145"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P50CA058236",
-      "name": "Administrative Core",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA058236"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA006973",
-      "name": "Flow Cytometry and Technology Development",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA006973"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA155169",
-      "name": "Understanding Resistance to Next Generation Antiandrogens",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155169"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA125612",
-      "name": "Towards Understanding Prostate Cancer Heterogeneity",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA125612"
     }
   ],
   "dateModified": "2026-09-18T02:36:57.247285+00:00",

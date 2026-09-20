@@ -41,9 +41,9 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 270
-- Citations to the dataset's publication: 275 (attention, not reuse)
-- Reuse gap index: +0.42 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 39
+- Of those, 67 were retrieved and graded individually; 0 had no author in common with the generating team and 4 were themselves NCI funded.
+- Reuse gap index: -1.70 (negative means less reused than comparable datasets)
   - Comprehensive Molecular Characterization Identifies Distinct Genomic and Immune Hallmarks of Renal Medullary Carcinoma. (2020) PMID 32359397
   - Identification and Analyses of Extra-Cranial and Cranial Rhabdoid Tumor Molecular Subgroups Reveal Tumors with Cytotoxic T Cell Infiltration. (2019) PMID 31708418
   - Emergence and potential transmission route of avian influenza A (H5N1) virus in domestic cats in Poland, June 2023. (2023) PMID 37535471
@@ -55,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-rt.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-target-rt.json

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-b-mode-and-ceus-liver",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-b-mode-and-ceus-liver",
   "name": "B-mode-and-CEUS-Liver",
   "alternateName": [
     "b_mode_and_ceus_liver"
   ],
   "description": "This Collection contains contrast-enhanced ultrasound to a) characterize liver lesions and b) monitor treatment response. Sagittal and transverse plane ultrasound data was obtained with curvilinear probe. Please see the B-mode-and-CEUS-Liver wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-b-mode-and-ceus-liver",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-b-mode-and-ceus-liver",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=b_mode_and_ceus_liver",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-b-mode-and-ceus-liver.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-b-mode-and-ceus-liver.json",
       "encodingFormat": "application/json"
     }
   ],

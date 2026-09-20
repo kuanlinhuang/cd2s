@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-prad",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-prad",
   "name": "Prostate Adenocarcinoma",
   "alternateName": [
     "tcga_prad"
   ],
   "description": "The Cancer Imaging Program (CIP) is working directly with primary investigators from institutes participating in TCGA to obtain and load images relating to the genomic, clinical, and pathological data being stored within the TCGA Data Portal. Currently this image collection of prostate adenocarcinoma (PRAD) patients can be matched by each unique case identifier with the extensive gene and expression data of the same case from The Cancer Genome Atlas Data Portal to research the link between clinical phenome and tissue genome. Please see the TCGA-PRAD page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-PRAD collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-prad",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-prad",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-PRAD",
     "gdc_program:TCGA",
@@ -67,7 +67,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -79,205 +79,202 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-prad.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-prad.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The Molecular Taxonomy of Primary Prostate Cancer",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/26544944/",
+      "datePublished": "2015"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
-      "identifier": "U24CA264032",
-      "name": "The joint WCM-NYGC Center for Functional and Clinical Interpretation of Tumor Profiles",
+      "identifier": "U24CA199461",
+      "name": "Next-Generation Clustered Heat Maps for fluent, interactive exploration of omic data",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA264032"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA199461"
     },
     {
       "@type": "Grant",
-      "identifier": "R37CA229861",
-      "name": "Cell-of-Origin Footprints of Passenger Mutations in Human Lung Cancer",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA229861"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "identifier": "U24CA143883",
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143883"
     },
     {
       "@type": "Grant",
-      "identifier": "U01CA097096",
-      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "identifier": "U24CA143882",
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA097096"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143882"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA097096",
-      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "identifier": "U24CA143867",
+      "name": "Genome Characterization Center (GCC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA097096"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143867"
     },
     {
       "@type": "Grant",
-      "identifier": "P01CA247773",
-      "name": "Project 2: TMEJ Regulation in Cancer and Treatment Resistance",
+      "identifier": "U24CA143866",
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA247773"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143866"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA240139",
-      "name": "Behavioral and Community-Based Research Shared Resource",
+      "identifier": "U24CA143858",
+      "name": "UCSC-Buck Inst. Genome Data Analysis Center for TCGA Research Network (GDAC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA240139"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143858"
     },
     {
       "@type": "Grant",
-      "identifier": "K12CA226330",
-      "name": "UM Calabresi Clinical Oncology Research Career Development Award",
+      "identifier": "U24CA143848",
+      "name": "Gene Expression Patterns in Human Tumors Identified Using Transcript Sequencing",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA226330"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143848"
     },
     {
       "@type": "Grant",
-      "identifier": "U54CA233465",
-      "name": "Community Outreach Core (COC)",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA233465"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
     },
     {
       "@type": "Grant",
-      "identifier": "U54CA163071",
-      "name": "Research Education Core",
+      "identifier": "U24CA143843",
+      "name": "The BCM Tumor Genome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA163071"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143843"
     },
     {
       "@type": "Grant",
-      "identifier": "U54CA163068",
-      "name": "Shared Resource Core: Quantitative Sciences Core",
+      "identifier": "U24CA143840",
+      "name": "MSKCC Center for Translational Cancer Genomic Analysis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA163068"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143840"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA284732",
-      "name": "Elucidating the role of transcriptomics in driving ethnicity and ancestry-related disparities in colorectal cancer",
+      "identifier": "U24CA143835",
+      "name": "Center for Systems Analysis of the Cancer Regulome",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA284732"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143835"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA248931",
-      "name": "Variation in tumor-associated immune profiles and colorectal cancer outcomes",
+      "identifier": "U24CA143799",
+      "name": "TCGA Data Analysis Center at Berkeley",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA248931"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143799"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA238087",
-      "name": "Biological determinants of colorectal cancer outcomes in Latinos of diverse\u00fdancestral origins",
+      "identifier": "R01CA193837",
+      "name": "Role of ETS factors in specifying prostate luminal cell identity and androgen receptor dependence",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA238087"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193837"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA155101",
-      "name": "Adding Hispanics to Ongoing GWAS in Colorectal Cancer",
+      "identifier": "R01CA183793",
+      "name": "Statistical methods for genomic analysis of heterogeneous tumors",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155101"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA183793"
     },
     {
       "@type": "Grant",
-      "identifier": "P50CA285275",
-      "name": "Developmental Research Project",
+      "identifier": "R01CA182503",
+      "name": "Defining Response and Resistance to PI3K and AR inhibition in Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA285275"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA182503"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA076292",
-      "name": "Administrative Core",
+      "identifier": "R01CA175491",
+      "name": "Improving prostate cancer screening by integration of SNPs with blood biomarkers",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA076292"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA175491"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA014089",
-      "name": "Leadership, Planning and Evaluation",
+      "identifier": "R01CA131945",
+      "name": "Molecular Link Between Metabolic Syndrome and Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA014089"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P20CA252733",
-      "name": "Translational Research Program in Colorectal Cancer Disparities",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P20CA252733"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA131945"
     }
   ],
   "dateModified": "2026-09-18T02:36:19.174886+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2013-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

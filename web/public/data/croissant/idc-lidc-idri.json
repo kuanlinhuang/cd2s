@@ -9,7 +9,7 @@
   "name": "idc-lidc-idri",
   "alternateName": "LIDC-IDRI",
   "description": "The Lung Image Database Consortium (LIDC-IDRI) image collection consists of diagnostic and lung cancer screening thoracic CT scans with marked-up annotated lesions. It is a web-accessible international resource for development, training, and evaluation of computer-assisted diagnostic (CAD) methods for lung cancer detection and diagnosis. Please see the LIDC-IDRI page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lidc-idri",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-lidc-idri",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "LIDC-IDRI",
   "version": "as-retrieved",

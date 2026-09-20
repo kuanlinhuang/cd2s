@@ -9,7 +9,7 @@
   "name": "cbio-mrt-bcgsc-2016",
   "alternateName": "Rhabdoid Cancer (BCGSC, Cancer Cell 2016)",
   "description": "Whole-genome sequencing of tumor-normal sample pairs from 40 patients with Malignant Rhabdoid Cancer.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mrt-bcgsc-2016",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mrt-bcgsc-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

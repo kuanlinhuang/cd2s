@@ -73,15 +73,16 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 22
-- Reuse gap index: -1.00 (negative means less reused than comparable datasets)
+- Of those, 38 were retrieved and graded individually; 0 had no author in common with the generating team and 4 were themselves NCI funded.
+- Reuse gap index: -1.02 (negative means less reused than comparable datasets)
+  - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
+  - Proteogenomic analysis of lung adenocarcinoma reveals tumor heterogeneity, survival determinants, and therapeutically relevant pathways. (2022) PMID 36384096
   - ALDH2 as a potential stem cell-related biomarker in lung adenocarcinoma: Comprehensive multi-omics analysis. (2023) PMID 36936815
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
-  - SIMSI-Transfer: Software-Assisted Reduction of Missing Values in Phosphoproteomic and Proteomic Isobaric Labeling Data Using Tandem Mass Spectrum Clustering. (2022) PMID 35462064
-  - Inflammation-related citrullination of matrisome proteins in human cancer. (2022) PMID 36531007
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-luad-discovery-study.json

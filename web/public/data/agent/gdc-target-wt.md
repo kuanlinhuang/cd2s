@@ -41,9 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 171
-- Citations to the dataset's publication: 47 (attention, not reuse)
-- Reuse gap index: -1.50 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 72
+- Of those, 79 were retrieved and graded individually; 4 had no author in common with the generating team and 7 were themselves NCI funded.
+- Citations to the dataset's publication: 296 (attention, not reuse)
+- Reuse gap index: -2.36 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - A Children's Oncology Group and TARGET initiative exploring the genetic landscape of Wilms tumor. (2017) PMID 28825729
   - Recurrent DGCR8, DROSHA, and SIX homeodomain mutations in favorable histology Wilms tumors. (2015) PMID 25670082
@@ -55,4 +56,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-wt.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-target-wt.json

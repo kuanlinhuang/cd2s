@@ -25,6 +25,7 @@ from cds import __version__, subjects
 from cds.clinical import VERDICT_FIELDS, is_non_answer
 from cds.model import DatasetRecord, ReuseTier
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
+from cds.reuse import markers
 
 SITE_NAME = "Cancer Data Showcase"
 LICENSE_CONTENT = "https://creativecommons.org/licenses/by/4.0/"
@@ -77,6 +78,7 @@ def search_row(r: DatasetRecord) -> dict[str, Any]:
         "is_pediatric": r.is_pediatric,
         "population_flags": population_flags(r),
         "n_verified_reuse": m.n_by_tier.get(ReuseTier.T3_ANALYZED.value),
+        "n_reuse_examined": m.n_reuse_examined,
         "n_citations_to_primary_publication": m.n_citations_to_primary_publication,
         "reuse_gap_index": m.reuse_gap_index,
         "expected_reuse": m.expected_reuse,
@@ -247,6 +249,16 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
     n_cases = sum(r.cohort.n_cases or 0 for r in with_case_count)
     assessed = [r for r in records if r.reuse_metrics.reuse_gap_index is not None]
     uncitable = [r for r in records if r.reuse_metrics.has_citable_accession is False]
+    # Has an accession, but Europe PMC's tokenization could not be corrected for it, so
+    # no count is published. A different gap from "no accession", and one the site has to
+    # be able to size rather than leave as a silent blank on some pages and not others.
+    unmeasurable = [
+        r
+        for r in records
+        if r.reuse_metrics.has_citable_accession is True
+        and r.reuse_metrics.n_by_tier.get(ReuseTier.T3_ANALYZED.value) is None
+    ]
+    without_marker = [r for r in records if not markers.authoritative_marker_pmids(r)]
     with_cites = [
         r for r in records if (r.reuse_metrics.n_citations_to_primary_publication or 0) > 0
     ]
@@ -286,6 +298,8 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         "n_with_treatment_response": sum(1 for r in rows if r.get("has_treatment_response")),
         "n_reuse_assessed": len(assessed),
         "n_without_citable_accession": len(uncitable),
+        "n_reuse_unmeasurable": len(unmeasurable),
+        "n_without_authoritative_marker_paper": len(without_marker),
         "n_with_publication_citations": len(with_cites),
         "median_citation_to_reuse_ratio": (
             round(sorted(ratios)[len(ratios) // 2], 1) if ratios else None

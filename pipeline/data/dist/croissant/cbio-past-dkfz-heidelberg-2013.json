@@ -9,7 +9,7 @@
   "name": "cbio-past-dkfz-heidelberg-2013",
   "alternateName": "Pilocytic Astrocytoma (ICGC, Nature Genetics 2013)",
   "description": "Whole-genome sequencing of 96 pilocytic astrocytoma tumor/normal pairs. Conducted by the International Cancer Genome Consortium (ICGC) PedBrain Tumor Project.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-past-dkfz-heidelberg-2013",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-past-dkfz-heidelberg-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

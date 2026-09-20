@@ -27,6 +27,7 @@ import type {
   NetworkEdge,
   NetworkLane,
   NetworkNode,
+  Publication,
   QuestionRow,
   FieldCalibration,
   ReuseGapModel,
@@ -815,6 +816,15 @@ export interface DatasetFunding {
 
 const INFERRED_MARKER_LABEL = "Candidate primary publication (machine-inferred)";
 
+/**
+ * Whether a publication is the pipeline's own nomination rather than one a repository
+ * or a reviewer supplied. Nothing may be counted from one, and no heading may call one
+ * the dataset's original publication.
+ */
+export function isInferredMarker(pub: Publication): boolean {
+  return (pub.evidence ?? []).some((e) => (e.source_label ?? "") === INFERRED_MARKER_LABEL);
+}
+
 function awardOf(g: Grant): FundingAward {
   return {
     num: (g.core_project_num ?? g.project_num) as string,
@@ -1043,7 +1053,7 @@ export function getDatasetFunding(id: string): DatasetFunding | null {
   const markerInferred =
     rec.primary_publications.length > 0 &&
     rec.primary_publications.every((pub) =>
-      pub.evidence.some((e) => (e.source_label ?? "") === INFERRED_MARKER_LABEL),
+      isInferredMarker(pub),
     );
 
   return {

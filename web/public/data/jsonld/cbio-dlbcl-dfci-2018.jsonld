@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbcl-dfci-2018",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-dlbcl-dfci-2018",
   "name": "Diffuse Large B cell Lymphoma (DFCI, Nat Med 2018)",
   "alternateName": [
     "dlbcl_dfci_2018"
   ],
   "description": "Whole-exome sequencing of tumor/matching normal sample pairs from 135 DLBCL patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbcl-dfci-2018",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-dlbcl-dfci-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=dlbcl_dfci_2018"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-dlbcl-dfci-2018.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-dlbcl-dfci-2018.json",
       "encodingFormat": "application/json"
     }
   ],

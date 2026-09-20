@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.30 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 192
+- Of those, 83 were retrieved and graded individually; 10 had no author in common with the generating team and 2 were themselves NCI funded.
+- Citations to the dataset's publication: 891 (attention, not reuse)
+- Reuse gap index: +1.00 (negative means less reused than comparable datasets)
   - Oncogene-induced matrix reorganization controls CD8+ T cell function in the soft-tissue sarcoma microenvironment. (2024) PMID 38652549
   - Identifying specific TLS-associated genes as potential biomarkers for predicting prognosis and evaluating the efficacy of immunotherapy in soft tissue sarcoma. (2024) PMID 38720884
   - Integration of ubiquitination-related genes in predictive signatures for prognosis and immunotherapy response in sarcoma. (2024) PMID 39469643
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - MO-GCAN: multi-omics integration based on graph convolutional and attention networks. (2025) PMID 40692180
+  - A web-based calculator for predicting the prognosis of patients with sarcoma on the basis of antioxidant gene signatures. (2022) PMID 35143416
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-sarc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-sarc.json

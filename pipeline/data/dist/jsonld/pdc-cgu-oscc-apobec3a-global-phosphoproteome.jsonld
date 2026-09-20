@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome",
   "name": "CGU OSCC APOBEC3A - Global Phosphoproteome",
   "alternateName": [
     "CGU OSCC APOBEC3A - Global Phosphoproteome"
   ],
   "description": "CGU OSCC APOBEC3A - Global Phosphoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000520"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cgu-oscc-apobec3a-global-phosphoproteome.json",
       "encodingFormat": "application/json"
     }
   ],

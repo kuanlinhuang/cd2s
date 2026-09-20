@@ -41,8 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.27 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 43
+- Of those, 67 were retrieved and graded individually; 10 had no author in common with the generating team and 3 were themselves NCI funded.
+- Citations to the dataset's publication: 638 (attention, not reuse)
+- Reuse gap index: -1.15 (negative means less reused than comparable datasets)
   - mTORC1 upregulates B7-H3/CD276 to inhibit antitumor T cells and drive tumor immune evasion. (2023) PMID 36869048
   - IL-33-activated ILC2s induce tertiary lymphoid structures in pancreatic cancer. (2025) PMID 39814891
   - DIANA-miTED: a microRNA tissue expression database. (2022) PMID 34469540
@@ -54,4 +56,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-pcpg.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-pcpg.json

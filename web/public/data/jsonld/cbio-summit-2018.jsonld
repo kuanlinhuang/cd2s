@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-summit-2018",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-summit-2018",
   "name": "SUMMIT - Neratinib Basket Study (Multi-Institute, Nature 2018)",
   "alternateName": [
     "summit_2018"
   ],
   "description": "MSK-IMPACT sequencing of 86 patients with HER2- and HER3-mutant cancers",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-summit-2018",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-summit-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=summit_2018"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-summit-2018.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-summit-2018.json",
       "encodingFormat": "application/json"
     }
   ],

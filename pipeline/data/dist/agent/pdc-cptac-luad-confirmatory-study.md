@@ -42,7 +42,9 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Reuse gap index: -0.89 (negative means less reused than comparable datasets)
+- Of those, 3 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -1.14 (negative means less reused than comparable datasets)
+  - Integrative analysis of lung adenocarcinoma across diverse ethnicities and exposures. (2025) PMID 40749670
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
   - SysML: adaptive recommendation system for heterogeneous biomedical data preprocessing and modeling workflows. (2025) PMID 41115212
 
@@ -51,4 +53,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-luad-confirmatory-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-luad-confirmatory-study.json

@@ -5,7 +5,7 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-discovery-study",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ucec-discovery-study",
   "name": "CPTAC UCEC Discovery Study",
   "alternateName": [
     "CPTAC UCEC Discovery Study - Acetylome",
@@ -13,7 +13,7 @@
     "CPTAC UCEC Discovery Study - Proteome"
   ],
   "description": "CPTAC UCEC Discovery Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-discovery-study",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ucec-discovery-study",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000226",
     "https://pdc.cancer.gov/pdc/study/PDC000126",
@@ -48,7 +48,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -60,19 +60,203 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-ucec-discovery-study.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ucec-discovery-study.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
+  "citation": [],
+  "funding": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "Proteogenomic insights suggest druggable pathways in endometrial carcinoma.",
-      "identifier": "https://doi.org/10.1016/j.ccell.2023.07.007",
-      "datePublished": "2023"
+      "@type": "Grant",
+      "identifier": "U24CA271114",
+      "name": "Proteogenomic translator for cancer biomarker discovery towards precision medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271076",
+      "name": "iPGDAC, An Integrative Proteogenomic Data Analysis Center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271076"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271075",
+      "name": "Center for comprehensive proteogenomic data analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271075"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271012",
+      "name": "Center for Advanced Multi-Omic Characterization of Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271012"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210993",
+      "name": "Systems Biology based Proteogenomic Translator for Cancer Marker Discovery towards Precision Medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210993"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210986",
+      "name": "Center of Excellence for High Throughput Proteogenomic Characterization",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210986"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210985",
+      "name": "The Comprehensive Proteome Characterization Center at Johns Hopkins: High Precision Discovery and Confirmation of Genoproteomic Targets",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210985"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210979",
+      "name": "Integrated high throughput proteogenomic data analysis center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210979"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210972",
+      "name": "Proteogenomic Data Analysis for Cancer Systems Biology and Clinical Translation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210972"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210967",
+      "name": "University of Michigan Proteogenomics Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210967"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210955",
+      "name": "PNNL Proteome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210955"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210954",
+      "name": "iPGDAC, An Integrative Proteogenomic Data Analysis Center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210954"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214125",
+      "name": "MICROSCALED PROTEOGENOMICS FOR CANCER CLINICAL TRIALS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214125"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214116",
+      "name": "Proteogenomic Translational Research Center for Clinical Proteomic",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214116"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214114",
+      "name": "Proteogenomic studies aimed at understanding ovarian tumor responses to agents targeting the DNA damage response and translating this knowledge into clinical benefit",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA203690",
+      "name": "Translational Breast Cancer Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA203690"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA046592",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA046592"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA245903",
+      "name": "Proteogenomics-driven therapeutic discovery in hepatocellular carcinoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA245903"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA125123",
+      "name": "Baylor College of Medicine Cancer Center - Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA125123"
     }
   ],
-  "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2022-01-01",
   "variableMeasured": [

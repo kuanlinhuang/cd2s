@@ -9,7 +9,7 @@
   "name": "cbio-breast-alpelisib-2020",
   "alternateName": "Breast Cancer (MSK, Nature Cancer 2020)",
   "description": "Targeted sequencing of pre- and post-treatment tumor/cfDNA samples from 51 Breast Cancer patients to understand the mechanisms of resistance to Alepelisib.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-alpelisib-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-breast-alpelisib-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "gdc-match-q",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm Q",
   "description": "Genomic Characterization CS-MATCH-0007 Arm Q",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-q",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-match-q",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic Characterization CS-MATCH-0007 Arm Q",
   "version": "as-retrieved",

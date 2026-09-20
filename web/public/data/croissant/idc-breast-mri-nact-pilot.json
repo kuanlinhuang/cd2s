@@ -9,7 +9,7 @@
   "name": "idc-breast-mri-nact-pilot",
   "alternateName": "Breast-MRI-NACT-Pilot",
   "description": "This pilot study to investigate the use of serial DCE MRI examinations during neoadjuvant chemotherapy (NACT) for invasive breast cancer recruited 68 patients with stage II or III locally advanced breast cancer. Longitudinal DCE MRI studies of 64 patients are available. Please see the wiki page Breast-MRI-NACT-Pilot to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-breast-mri-nact-pilot",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-breast-mri-nact-pilot",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Breast-MRI-NACT-Pilot",
   "version": "as-retrieved",

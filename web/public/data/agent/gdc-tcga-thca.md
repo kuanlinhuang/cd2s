@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: -0.23 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 363
+- Of those, 99 were retrieved and graded individually; 10 had no author in common with the generating team and 1 were themselves NCI funded.
+- Citations to the dataset's publication: 2365 (attention, not reuse)
+- Reuse gap index: +0.31 (negative means less reused than comparable datasets)
   - Developing a named entity framework for thyroid cancer staging and risk level classification using large language models. (2025) PMID 40025285
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Annexin A1-FPR1 Interaction in dendritic cells promotes immune microenvironment modulation in Thyroid Cancer. (2025) PMID 40483281
   - Impact of age on genomic alterations and the tumor immune microenvironment in papillary thyroid cancer. (2024) PMID 39315956
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+  - A comprehensive analysis to reveal the underlying molecular mechanisms of natural killer cell in thyroid carcinoma based on single-cell RNA sequencing data. (2025) PMID 39808350
+  - Investigation of risk signatures associated with anoikis in thyroid cancer through integrated transcriptome and Mendelian randomization analysis. (2024) PMID 39568815
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-thca.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-thca.json

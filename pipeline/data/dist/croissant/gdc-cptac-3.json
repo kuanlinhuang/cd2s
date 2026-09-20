@@ -9,7 +9,7 @@
   "name": "gdc-cptac-3",
   "alternateName": "CPTAC-Brain, Head and Neck, Kidney, Lung, Pancreas, Uterus",
   "description": "CPTAC-3 is the genomic half of a cohort whose proteomic half lives in a different repository. That split is the single most important practical fact about it: the GDC record carries exome on 1,844 cases, whole genome on 1,827, RNA sequencing on 1,824 and methylation on 1,817, while proteome, phosphoproteome and the scarcer modification layers are distributed through the Proteomic Data Commons under different study identifiers.\nIts clinical annotation is unusually strong for a multi-cancer cohort. Vital status is informative for 95.8%, progression or recurrence for 77.9%, and last known disease status for 77.2% - which makes recurrence-based endpoints genuinely available, not just nominally present.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cptac-3",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cptac-3",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic Characterization Reveals Therapeutic Vulnerabilities in Lung Adenocarcinoma",
   "version": "as-retrieved",

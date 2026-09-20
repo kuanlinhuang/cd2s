@@ -9,7 +9,7 @@
   "name": "cbio-utuc-mskcc-2015",
   "alternateName": "Upper Tract Urothelial Cancer (MSK, Eur Urol 2015)",
   "description": "Next-generation sequencing (MSK-IMPACT) on all protein-coding exons of 300 cancer associated genes of 85 Upper Tract Urothelial Carcinoma tumor samples and paired normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-utuc-mskcc-2015",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-utuc-mskcc-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

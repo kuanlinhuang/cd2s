@@ -9,7 +9,7 @@
   "name": "pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
   "alternateName": "Reproducible Proteome and Phosphoproteome Workflow BI",
   "description": "Reproducible Proteome and Phosphoproteome Workflow BI",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Reproducible Proteome and Phosphoproteome Workflow BI",
   "version": "as-retrieved",

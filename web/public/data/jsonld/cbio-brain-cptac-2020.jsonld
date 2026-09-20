@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-brain-cptac-2020",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-brain-cptac-2020",
   "name": "Pediatric Brain Cancer (CPTAC/CHOP, Cell 2020)",
   "alternateName": [
     "brain_cptac_2020"
   ],
   "description": "Integrated proteogenomic characterization across major histological types of pediatric brain cancer . We report a comprehensive proteogenomics analysis, including whole-genome sequencing, RNA sequencing, and proteomics and phosphoproteomics profiling, of 218 tumors across 7 histological types of childhood brain cancer: low-grade glioma (n = 93), ependymoma (32), high-grade glioma (25), medulloblastoma (22), ganglio-glioma (18), craniopharyngioma (16), and atypical teratoid rhabdoid tumor (12). Proteomics data identify common biological themes that span histological boundaries, suggesting that treatments used for one histological type may be applied effectively to other tumors sharing similar proteomics features. Immune landscape characterization reveals diverse tumor microenvironments across and within diagnoses. Proteomics data further reveal functional effects of somatic mutations and copy number variations (CNVs) not evident in transcriptomics data.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brain-cptac-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-brain-cptac-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=brain_cptac_2020"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-brain-cptac-2020.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-brain-cptac-2020.json",
       "encodingFormat": "application/json"
     }
   ],

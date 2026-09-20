@@ -9,7 +9,7 @@
   "name": "pdc-tcga-breast-cancer-phosphoproteome",
   "alternateName": "TCGA Breast Cancer Phosphoproteome",
   "description": "TCGA Breast Cancer Phosphoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-breast-cancer-phosphoproteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-tcga-breast-cancer-phosphoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TCGA Breast Cancer Phosphoproteome",
   "version": "as-retrieved",

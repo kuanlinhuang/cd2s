@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnsc-broad",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-hnsc-broad",
   "name": "Head and Neck Squamous Cell Carcinoma (Broad, Science 2011)",
   "alternateName": [
     "hnsc_broad"
   ],
   "description": "Whole-exome sequencing of 74 head and neck squamous cell carcinoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnsc-broad",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hnsc-broad",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=hnsc_broad"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-hnsc-broad.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-hnsc-broad.json",
       "encodingFormat": "application/json"
     }
   ],

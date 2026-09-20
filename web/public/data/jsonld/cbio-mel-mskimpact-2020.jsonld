@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-mskimpact-2020",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-mel-mskimpact-2020",
   "name": "Melanoma (MSK, Clin Cancer Res 2021)",
   "alternateName": [
     "mel_mskimpact_2020"
   ],
   "description": "Targeted sequencing (MSK-IMPACT) of 696 melanoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-mskimpact-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mel-mskimpact-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mel_mskimpact_2020"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mel-mskimpact-2020.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-mel-mskimpact-2020.json",
       "encodingFormat": "application/json"
     }
   ],

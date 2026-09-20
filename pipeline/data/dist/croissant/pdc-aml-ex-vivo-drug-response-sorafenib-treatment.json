@@ -9,7 +9,7 @@
   "name": "pdc-aml-ex-vivo-drug-response-sorafenib-treatment",
   "alternateName": "AML Ex Vivo Drug Response - Sorafenib Treatment",
   "description": "AML Ex Vivo Drug Response - Sorafenib Treatment",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-ex-vivo-drug-response-sorafenib-treatment",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-aml-ex-vivo-drug-response-sorafenib-treatment",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "AML Ex Vivo Drug Response - Sorafenib Treatment",
   "version": "as-retrieved",

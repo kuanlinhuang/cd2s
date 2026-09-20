@@ -42,8 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 44 (attention, not reuse)
-- Reuse gap index: -2.04 (negative means less reused than comparable datasets)
+- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -2.12 (negative means less reused than comparable datasets)
   - The proteogenomic landscape of the human kidney and implications for cardio-kidney-metabolic health. (2025) PMID 40796935
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
   - A Pan-Cancer Analysis of Natriuretic Peptide Receptor 3 (NPR3) with Clinical Cohort and in vitro Validation. (2025) PMID 40740975
@@ -53,4 +53,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-non-ccrcc-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-non-ccrcc-study.json

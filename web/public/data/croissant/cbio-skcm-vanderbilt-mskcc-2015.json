@@ -9,7 +9,7 @@
   "name": "cbio-skcm-vanderbilt-mskcc-2015",
   "alternateName": "Metastatic Melanoma (MSK, JCO Precis Oncol 2017)",
   "description": "Targeted sequencing of pre-treatment 66 Melanoma tumor samples. PubMed",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-vanderbilt-mskcc-2015",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-vanderbilt-mskcc-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

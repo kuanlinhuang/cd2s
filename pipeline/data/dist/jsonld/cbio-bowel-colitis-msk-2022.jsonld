@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-bowel-colitis-msk-2022",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-bowel-colitis-msk-2022",
   "name": "Colorectal Adenocarcinoma (MSK, Nat Commun 2022)",
   "alternateName": [
     "bowel_colitis_msk_2022"
   ],
   "description": "Targeted sequencing of 180 colitis-associated cancers and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bowel-colitis-msk-2022",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-bowel-colitis-msk-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=bowel_colitis_msk_2022"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-bowel-colitis-msk-2022.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-bowel-colitis-msk-2022.json",
       "encodingFormat": "application/json"
     }
   ],

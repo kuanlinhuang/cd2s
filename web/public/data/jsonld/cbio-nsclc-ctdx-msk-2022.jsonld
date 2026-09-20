@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-nsclc-ctdx-msk-2022",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-nsclc-ctdx-msk-2022",
   "name": "Metastatic Non-Small Cell Lung Cancer (MSK, Nature Medicine 2022)",
   "alternateName": [
     "nsclc_ctdx_msk_2022"
   ],
   "description": "Targeted sequencing of ctDNA samples drawn from patients with metastatic NSCLC using the Resolution ctDx Lung platform. For more information contact jeej@mskcc.org or lib1@mskcc.org",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-nsclc-ctdx-msk-2022",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nsclc-ctdx-msk-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=nsclc_ctdx_msk_2022"
   ],
@@ -46,7 +46,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -58,7 +58,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-nsclc-ctdx-msk-2022.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-nsclc-ctdx-msk-2022.json",
       "encodingFormat": "application/json"
     }
   ],

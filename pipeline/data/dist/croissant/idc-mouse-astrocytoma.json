@@ -9,7 +9,7 @@
   "name": "idc-mouse-astrocytoma",
   "alternateName": "Mouse-Astrocytoma",
   "description": "This collection consists of magnetic resonance images (MRI) of genetically engineered mouse models (GEMMs) of high grade astrocytoma, including glioblastoma multiforme (GBM). The MRI data contained herein includes anatomic T2 weighted images and dynamic contrast enhanced MRI. Please see the Mouse-Astrocytoma page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-mouse-astrocytoma",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-mouse-astrocytoma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Mouse-Astrocytoma",
   "version": "as-retrieved",

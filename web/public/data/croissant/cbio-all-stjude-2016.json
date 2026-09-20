@@ -9,7 +9,7 @@
   "name": "cbio-all-stjude-2016",
   "alternateName": "Acute Lymphoblastic Leukemia (St Jude, Nat Genet 2016)",
   "description": "Whole-genome and/or whole-exome sequencing of ERG-altered B-ALL tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-all-stjude-2016",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

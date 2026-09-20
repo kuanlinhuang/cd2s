@@ -9,7 +9,7 @@
   "name": "gdc-ccg-cupp",
   "alternateName": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
   "description": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ccg-cupp",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-ccg-cupp",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Center for Cancer Genomics (CCG) Cancers of Unknown Primary Project (CUPP)",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-prospective-breast-bi-acetylome",
   "alternateName": "Prospective Breast BI Acetylome",
   "description": "Prospective Breast BI Acetylome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-breast-bi-acetylome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-breast-bi-acetylome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Prospective Breast BI Acetylome",
   "version": "as-retrieved",

@@ -42,15 +42,16 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Citations to the dataset's publication: 85 (attention, not reuse)
-- Reuse gap index: -1.77 (negative means less reused than comparable datasets)
+- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -1.38 (negative means less reused than comparable datasets)
+  - Molecular Features of Cancers Exhibiting Exceptional Responses to Treatment. (2021) PMID 33217343
+  - Decreased SPTBN2 expression regulated by the ceRNA network is associated with poor prognosis and immune infiltration in low‑grade glioma. (2023) PMID 37153896
   - Single nucleotide polymorphism rs4961 in the adducin 1 gene is not associated with gastric cancer or preneoplastic cancer lesions. (2024) PMID 39100993
   - Case Report: The molecular fingerprint and the clinical implication of an exceptional response to neoadjuvant therapy in a metastatic cardia adenocarcinoma. (2024) PMID 38689602
-  - Decreased SPTBN2 expression regulated by the ceRNA network is associated with poor prognosis and immune infiltration in low‑grade glioma. (2023) PMID 37153896
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-exceptional_responders-er.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-exceptional_responders-er.json

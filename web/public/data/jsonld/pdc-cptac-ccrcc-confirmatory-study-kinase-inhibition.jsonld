@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
   "name": "CPTAC CCRCC Confirmatory Study - Kinase Inhibition",
   "alternateName": [
     "CPTAC CCRCC Confirmatory Study - Kinase Inhibition - DIA Phosphoproteome"
   ],
   "description": "CPTAC CCRCC Confirmatory Study - Kinase Inhibition",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000415"
   ],
@@ -38,7 +38,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -50,7 +50,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition.json",
       "encodingFormat": "application/json"
     }
   ],

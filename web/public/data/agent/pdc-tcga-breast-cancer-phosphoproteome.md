@@ -42,7 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Reuse gap index: -0.60 (negative means less reused than comparable datasets)
+- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -0.42 (negative means less reused than comparable datasets)
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
   - SIMD: Synergistic integration mutualistic platform based on single-cell and proteotranscriptomics for drug repositioning. (2025) PMID 41444222
 
@@ -51,4 +52,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-breast-cancer-phosphoproteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-breast-cancer-phosphoproteome.json

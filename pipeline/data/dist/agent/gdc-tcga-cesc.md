@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 481
-- Reuse gap index: +0.30 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Deep learning for predicting prognostic consensus molecular subtypes in cervical cancer from histology images. (2025) PMID 39799271
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
+- Articles that analyzed these data: 416
+- Of those, 96 were retrieved and graded individually; 10 had no author in common with the generating team.
+- Citations to the dataset's publication: 1245 (attention, not reuse)
+- Reuse gap index: +1.01 (negative means less reused than comparable datasets)
+  - Adenosinergic Signalling in Cervical Cancer Microenvironment. (2025) PMID 39762204
+  - Prediction of the Prognosis and Treatment Responses Based on the Characteristics of Disulfidptosis-Related Genes in Patients with Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma (2026) PMID 39945255
+  - Exploration and validation of the prognostic value of mitophagy and mitochondrial dynamics-related genes in cervical cancer. (2025) PMID 40640353
+  - Identification of N6-methyladenosine-associated ferroptosis biomarkers in cervical cancer. (2025) PMID 40197384
+  - Development of a Mitochondrial Permeability Transition-Driven Necrosis-Related Prognostic Signature in Cervical Cancer: Integrating Bulk Transcriptomic and Single-Cell Data. (2025) PMID 40747615
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-cesc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-cesc.json

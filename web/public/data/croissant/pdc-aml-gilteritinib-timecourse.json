@@ -9,7 +9,7 @@
   "name": "pdc-aml-gilteritinib-timecourse",
   "alternateName": "AML Gilteritinib TimeCourse",
   "description": "AML Gilteritinib TimeCourse",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-gilteritinib-timecourse",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-aml-gilteritinib-timecourse",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "AML Gilteritinib TimeCourse",
   "version": "as-retrieved",

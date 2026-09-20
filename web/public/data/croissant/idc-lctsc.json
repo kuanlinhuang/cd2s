@@ -9,7 +9,7 @@
   "name": "idc-lctsc",
   "alternateName": "LCTSC",
   "description": "This Lung CT and Radiation therapy data set was provided in association with an autocontouring challenge competition and related conference session conducted at the AAPM 2017 Annual Meeting Please see the LCTSC wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lctsc",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-lctsc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "LCTSC",
   "version": "as-retrieved",

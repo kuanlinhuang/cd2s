@@ -9,7 +9,7 @@
   "name": "idc-htan-tnp-sardana",
   "alternateName": "HTAN-TNP-SARDANA",
   "description": "DICOM converted cyclic immunofluorescence (CyCIF) and H&E whole slide images of a single formalin- fixed paraffin-embedded colorectal cancer specimen from the Human Tumor Atlas Network (HTAN) SARDANA Trans-Network Project (TNP). The dataset comprises one H&E section and one adjacent CyCIF section imaged with ~20 markers targeting immune, epithelial, and stromal cell populations. Please see the HTAN-TNP-SARDANA Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-htan-tnp-sardana",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-htan-tnp-sardana",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "HTAN-TNP-SARDANA",
   "version": "as-retrieved",

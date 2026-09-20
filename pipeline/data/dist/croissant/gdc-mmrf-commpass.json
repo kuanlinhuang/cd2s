@@ -9,9 +9,9 @@
   "name": "gdc-mmrf-commpass",
   "alternateName": "Multiple Myeloma CoMMpass Study",
   "description": "Multiple Myeloma CoMMpass Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-mmrf-commpass",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-mmrf-commpass",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Alu-dependent RNA editing of GLI1 promotes malignant regeneration in multiple myeloma.",
+  "citeAs": "Multiple Myeloma CoMMpass Study",
   "version": "as-retrieved",
   "datePublished": "2016-01-01",
   "recordSet": [

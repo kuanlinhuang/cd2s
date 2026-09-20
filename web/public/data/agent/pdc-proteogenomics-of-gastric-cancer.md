@@ -41,17 +41,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
-- Citations to the dataset's publication: 19 (attention, not reuse)
-- Reuse gap index: -1.91 (negative means less reused than comparable datasets)
-  - Multi-Omics Characterization of E3 Regulatory Patterns in Different Cancer Types. (2024) PMID 39062881
-  - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
+- Of those, 8 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -1.88 (negative means less reused than comparable datasets)
   - Human gastric cancer progression and stabilization of ATG2B through RNF5 binding facilitated by autophagy-associated CircDHX8. (2024) PMID 38866787
   - Hyperactivation of mTOR/eIF4E Signaling Pathway Promotes the Production of Tryptophan-To-Phenylalanine Substitutants in EBV-Positive Gastric Cancer. (2024) PMID 38994917
   - Comprehensive landscape of m6A regulator-related gene patterns and tumor microenvironment infiltration characterization in gastric cancer. (2024) PMID 39013954
+  - A data-driven pan-cancer proteogenomic analysis reveals the characteristics of human cancer protein expression. (2026) PMID 41550727
+  - Multi-Omics Characterization of E3 Regulatory Patterns in Different Cancer Types. (2024) PMID 39062881
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-proteogenomics-of-gastric-cancer.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-proteogenomics-of-gastric-cancer.json

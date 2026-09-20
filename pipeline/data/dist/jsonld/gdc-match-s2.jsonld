@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-s2",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-match-s2",
   "name": "Genomic Characterization CS-MATCH-0007 Arm S2",
   "alternateName": [
     "MATCH-S2"
   ],
   "description": "Genomic Characterization CS-MATCH-0007 Arm S2",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-s2",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-match-s2",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/MATCH-S2",
     "gdc_program:MATCH",
@@ -47,7 +47,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -59,7 +59,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-match-s2.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-match-s2.json",
       "encodingFormat": "application/json"
     }
   ],

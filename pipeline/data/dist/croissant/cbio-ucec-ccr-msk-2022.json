@@ -9,7 +9,7 @@
   "name": "cbio-ucec-ccr-msk-2022",
   "alternateName": "Endometrial Carcinoma MSI (MSK, Clin Cancer Res 2022)",
   "description": "Clinical and genetic features of microsatellite instability-high endometrial cancers harboring germline or somatic mutations in MMR genes or MLH1 promoter hypermethylation.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ucec-ccr-msk-2022",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ucec-ccr-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

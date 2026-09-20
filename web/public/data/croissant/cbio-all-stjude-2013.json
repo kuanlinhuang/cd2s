@@ -9,7 +9,7 @@
   "name": "cbio-all-stjude-2013",
   "alternateName": "Hypodiploid Acute Lymphoid Leukemia (St Jude, Nat Genet 2013)",
   "description": "Whole genome or exome sequencing of 44 (20 whole genome, 20 exome) ALL tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-all-stjude-2013",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2013",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-kncc-medulloblastoma-kncc",
   "alternateName": "KNCC Medulloblastoma - KNCC",
   "description": "KNCC Medulloblastoma - KNCC",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-kncc-medulloblastoma-kncc",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-kncc-medulloblastoma-kncc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "KNCC Medulloblastoma - KNCC",
   "version": "as-retrieved",

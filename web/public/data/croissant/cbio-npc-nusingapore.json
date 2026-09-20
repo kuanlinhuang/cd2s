@@ -9,7 +9,7 @@
   "name": "cbio-npc-nusingapore",
   "alternateName": "Nasopharyngeal Carcinoma (Singapore, Nat Genet 2014)",
   "description": "Whole exome sequencing of 56 NPC tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-npc-nusingapore",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-npc-nusingapore",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

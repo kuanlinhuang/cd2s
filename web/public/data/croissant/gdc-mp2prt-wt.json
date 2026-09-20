@@ -9,7 +9,7 @@
   "name": "gdc-mp2prt-wt",
   "alternateName": "Molecular Profiling to Predict Response to Treatment - Wilms Tumor",
   "description": "Molecular Profiling to Predict Response to Treatment - Wilms Tumor",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-mp2prt-wt",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-mp2prt-wt",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genetic changes associated with relapse in favorable histology Wilms tumor: A Children's Oncology Group AREN03B2 study.",
   "version": "as-retrieved",

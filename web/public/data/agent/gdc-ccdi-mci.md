@@ -41,8 +41,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 46 (attention, not reuse)
-- Reuse gap index: +1.98 (negative means less reused than comparable datasets)
+- Of those, 3 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +1.79 (negative means less reused than comparable datasets)
   - Activity of Direct KRAS(G12C) Inhibitors in Preclinical Models of Pediatric Cancer. (2026) PMID 41340466
   - Building Pediatric Cancer Cohorts and Accessing Data Using Childhood Cancer Data Initiative Tools. (2025) PMID 41370779
 
@@ -51,4 +51,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-ccdi-mci.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-ccdi-mci.json

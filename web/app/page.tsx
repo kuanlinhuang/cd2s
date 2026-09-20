@@ -116,7 +116,7 @@ export default function Home() {
                 label: "Articles that used the data",
                 shortLabel: "Used",
                 color: "var(--viz-1)",
-                note: "the accession appears in their methods, results, a table or a figure",
+                note: "the accession appears in their methods section",
               },
             ]}
             unit="articles"
@@ -128,9 +128,13 @@ export default function Home() {
             data being used.
           </p>
           <p className="mt-2 text-meta t-muted">
-            {num(stats.n_without_citable_accession)} of {num(stats.n_datasets)} datasets
-            quote no accession an article could cite, so their reuse cannot be measured and
-            they are absent here rather than at zero - the most cited of them being{" "}
+            A dataset is drawn here only when both numbers were measured.{" "}
+            {num(stats.n_without_citable_accession)} of {num(stats.n_datasets)} quote no
+            accession an article could cite, so their reuse cannot be measured. Others carry
+            no citation count, because no repository or reviewer names their marker paper and
+            counting citations to a paper we guessed at would not be the quantity the label
+            claims. Either way they are absent rather than at zero - the most cited of the
+            untraceable being{" "}
             {untraceable.map((u, i) => (
               <span key={u.id}>
                 {i > 0 ? ", " : ""}

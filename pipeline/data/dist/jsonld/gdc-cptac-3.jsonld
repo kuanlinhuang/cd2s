@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cptac-3",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-cptac-3",
   "name": "CPTAC-Brain, Head and Neck, Kidney, Lung, Pancreas, Uterus",
   "alternateName": [
     "CPTAC-3"
   ],
   "description": "CPTAC-3 is the genomic half of a cohort whose proteomic half lives in a different repository. That split is the single most important practical fact about it: the GDC record carries exome on 1,844 cases, whole genome on 1,827, RNA sequencing on 1,824 and methylation on 1,817, while proteome, phosphoproteome and the scarcer modification layers are distributed through the Proteomic Data Commons under different study identifiers.\nIts clinical annotation is unusually strong for a multi-cancer cohort. Vital status is informative for 95.8%, progression or recurrence for 77.9%, and last known disease status for 77.2% - which makes recurrence-based endpoints genuinely available, not just nominally present.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cptac-3",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cptac-3",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CPTAC-3",
     "gdc_program:CPTAC",
@@ -87,7 +87,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -99,7 +99,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cptac-3.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-cptac-3.json",
       "encodingFormat": "application/json"
     }
   ],
@@ -112,106 +112,6 @@
     }
   ],
   "funding": [
-    {
-      "@type": "Grant",
-      "identifier": "R21CA248122",
-      "name": "Inference of tumor growth dynamics using genomic data",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA248122"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA072720",
-      "name": "Clinical Protocol and Data Management",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA072720"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA237404",
-      "name": "Lineage specifiers governing pancreatic cancer growth and molecular subtype",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA237404"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "T32CA009172",
-      "name": "Physician Scientist Training in Cancer Research",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009172"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R50CA265182",
-      "name": "Molecular origins and evolution to treatment resistance in genitourinary cancers",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA265182"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R35CA220449",
-      "name": "Human metabolic variation as a window into cancer initiation and progression",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA220449"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA285336",
-      "name": "Construction of A Lung Cancer Preclinical Model Cross-comparison Platform",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA285336"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA273585",
-      "name": "The role of translation initiation factor eIF5B in lung cancer pathogenesis",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA273585"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA142543",
-      "name": "UT Southwestern Medical Center Simmons Comprehensive Cancer Center",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA142543"
-    },
     {
       "@type": "Grant",
       "identifier": "U24CA210993",
@@ -301,6 +201,116 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214125"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271037",
+      "name": "Michigan Center for Translational Cancer Proteogenomics",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271037"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214116",
+      "name": "Proteogenomic Translational Research Center for Clinical Proteomic",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214116"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214114",
+      "name": "Proteogenomic studies aimed at understanding ovarian tumor responses to agents targeting the DNA damage response and translating this knowledge into clinical benefit",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA203690",
+      "name": "Translational Breast Cancer Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA203690"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA240139",
+      "name": "Cancer Research Training and Education Coordination",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA240139"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA118948",
+      "name": "Outreach Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA118948"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA125123",
+      "name": "Baylor College of Medicine Cancer Center - Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA125123"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271075",
+      "name": "Center for comprehensive proteogenomic data analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271075"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271012",
+      "name": "Center for Advanced Multi-Omic Characterization of Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271012"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA270823",
+      "name": "Center of Excellence for High Throughput Proteogenomic Characterization",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA270823"
     }
   ],
   "dateModified": "2026-09-18T02:35:37.301850+00:00",

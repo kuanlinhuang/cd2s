@@ -9,7 +9,7 @@
   "name": "cbio-prad-mskcc",
   "alternateName": "Prostate Adenocarcinoma (MSK, Cancer Cell 2010)",
   "description": "Comprehensive profiling of 218 prostate tumors (181 primaries, 37 metastases) and 14 prostate cancer cell lines and xenografts. MSKCC Prostate Oncogenome Project.Normalized flat data files. Raw data via GEO (GSE21032).",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-mskcc",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-mskcc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

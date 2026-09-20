@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1125
-- Reuse gap index: +1.29 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
-  - RIPK3 modulates sarcoma through immune checkpoint HAVCR2. (2022) PMID 36238358
+- Articles that analyzed these data: 997
+- Of those, 113 were retrieved and graded individually; 10 had no author in common with the generating team.
+- Citations to the dataset's publication: 2610 (attention, not reuse)
+- Reuse gap index: +1.77 (negative means less reused than comparable datasets)
+  - Angiogenic Edge of ANGPT2: Genetic Variants Shape Prostate Cancer Prognosis on Androgen Deprivation Therapy. (2025) PMID 41151852
+  - Developing a prognostic signature with cancer-associated fibroblasts for predicting the prognosis and immune landscape of prostate cancer. (2026) PMID 42697951
+  - Multi omics network toxicology and &lt;i&gt;in vitro&lt;/i&gt; experiments elucidate the role of benzo [a] pyrene in prostate cancer. (2026) PMID 41970950
+  - Identification and validation of critical mitochondrial hub genes for prostate cancer. (2026) PMID 41415479
+  - Age-Related Epigenetic Drift Shapes Coordinated microRNA Promoter Methylation and Expression in Prostate Cancer. (2026) PMID 42029641
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-prad.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-prad.json

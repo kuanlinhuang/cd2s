@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.62 (negative means less reused than comparable datasets)
-  - Redefining malignant pleural mesothelioma types as a continuum uncovers immune-vascular interactions. (2019) PMID 31648983
+- Articles that analyzed these data: 67
+- Of those, 71 were retrieved and graded individually; 9 had no author in common with the generating team and 2 were themselves NCI funded.
+- Citations to the dataset's publication: 521 (attention, not reuse)
+- Reuse gap index: +0.19 (negative means less reused than comparable datasets)
   - Identification of cancer-associated fibroblasts subtypes in prostate cancer. (2023) PMID 37033924
   - Single-Cell View of Tumor Microenvironment Gradients in Pleural Mesothelioma. (2024) PMID 38959428
   - Genomic and transcriptomic analyses identify a prognostic gene signature and predict response to therapy in pleural and peritoneal mesothelioma. (2023) PMID 36773602
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
+  - Epigenetic Silencing of <i>LRP2</i> Is Associated with Dedifferentiation and Poor Survival in Multiple Solid Tumor Types. (2023) PMID 36980716
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-meso.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-meso.json

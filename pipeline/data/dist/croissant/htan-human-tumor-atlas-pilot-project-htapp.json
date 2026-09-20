@@ -9,7 +9,7 @@
   "name": "htan-human-tumor-atlas-pilot-project-htapp",
   "alternateName": "Human Tumor Atlas Pilot Project (HTAPP)",
   "description": "Human Tumor Atlas Pilot Project (HTAPP)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-human-tumor-atlas-pilot-project-htapp",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-human-tumor-atlas-pilot-project-htapp",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "A multi-modal single-cell and spatial expression map of metastatic breast cancer biopsies across clinicopathological features",
   "version": "as-retrieved",

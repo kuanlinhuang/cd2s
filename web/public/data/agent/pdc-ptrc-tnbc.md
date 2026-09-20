@@ -41,15 +41,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Reuse gap index: -1.34 (negative means less reused than comparable datasets)
+- Of those, 5 were retrieved and graded individually; 0 had no author in common with the generating team and 3 were themselves NCI funded.
+- Reuse gap index: -1.21 (negative means less reused than comparable datasets)
+  - Proteogenomic Markers of Chemotherapy Resistance and Response in Triple-Negative Breast Cancer. (2022) PMID 36001024
   - Carbonic anhydrases reduce the acidity of the tumor microenvironment, promote immune infiltration, decelerate tumor growth, and improve survival in ErbB2/HER2-enriched breast cancer. (2023) PMID 37098526
-  - A Validated Proteomic Signature of Basal-like Triple-Negative Breast Cancer Subtypes Obtained from Publicly Available Data. (2025) PMID 40867231
   - MGAT1-Guided complex N-Glycans on CD73 regulate immune evasion in triple-negative breast cancer. (2025) PMID 40229283
   - Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets. (2025) PMID 40250426
+  - A Validated Proteomic Signature of Basal-like Triple-Negative Breast Cancer Subtypes Obtained from Publicly Available Data. (2025) PMID 40867231
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-ptrc-tnbc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-ptrc-tnbc.json

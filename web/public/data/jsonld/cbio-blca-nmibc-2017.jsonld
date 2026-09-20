@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-nmibc-2017",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-blca-nmibc-2017",
   "name": "Nonmuscle Invasive Bladder Cancer (MSK Eur Urol 2017)",
   "alternateName": [
     "blca_nmibc_2017"
   ],
   "description": "IMPACT sequencing of 105 High Risk Nonmuscle Invasive Bladder Cancer samples.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-nmibc-2017",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-blca-nmibc-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=blca_nmibc_2017"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-blca-nmibc-2017.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-blca-nmibc-2017.json",
       "encodingFormat": "application/json"
     }
   ],

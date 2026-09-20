@@ -40,9 +40,9 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 7
-- Citations to the dataset's publication: 20 (attention, not reuse)
-- Reuse gap index: +1.31 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 3
+- Of those, 15 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +0.65 (negative means less reused than comparable datasets)
   - Chemical Complementarity of Breast Cancer Resident, T-Cell Receptor CDR3 Domains and the Cancer Antigen, ARMC3, is Associated With Higher Levels of Survival and Granzyme Expression. (2023) PMID 37313373
   - Comprehensive Analysis for Anti-Cancer Target-Indication Prioritization of Placental Growth Factor Inhibitor (PGF) by Use of Omics and Patient Survival Data. (2023) PMID 37508400
   - Multimodal data integration in early-stage breast cancer. (2025) PMID 39922065
@@ -54,4 +54,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cmi-mbc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-cmi-mbc.json

@@ -42,17 +42,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 42
-- Citations to the dataset's publication: 761 (attention, not reuse)
-- Reuse gap index: -1.20 (negative means less reused than comparable datasets)
-  - 14q32 rearrangements deregulating BCL11B mark a distinct subgroup of T-lymphoid and myeloid immature acute leukemia. (2021) PMID 33876209
-  - Survival Genie, a web platform for survival analysis across pediatric and adult cancers. (2022) PMID 35197510
-  - Targeting Pim kinases in hematological cancers: molecular and clinical review. (2023) PMID 36694243
-  - The enhancer RNA <i>ARIEL</i> activates the oncogenic transcriptional program in T-cell acute lymphoblastic leukemia. (2019) PMID 31076442
-  - 13q12.2 deletions in acute lymphoblastic leukemia lead to upregulation of FLT3 through enhancer hijacking. (2020) PMID 32384149
+- Of those, 101 were retrieved and graded individually; 0 had no author in common with the generating team and 8 were themselves NCI funded.
+- Reuse gap index: -1.02 (negative means less reused than comparable datasets)
+  - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
+  - The genomic landscape of pediatric and young adult T-lineage acute lymphoblastic leukemia. (2017) PMID 28671688
+  - Transcriptional landscape of B cell precursor acute lymphoblastic leukemia based on an international study of 1,223 cases. (2018) PMID 30487223
+  - The genomic basis of childhood T-lineage acute lymphoblastic leukaemia. (2024) PMID 39143224
+  - Network-based systems pharmacology reveals heterogeneity in LCK and BCL2 signaling and therapeutic sensitivity of T-cell acute lymphoblastic leukemia. (2021) PMID 34151288
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-all-p2.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-target-all-p2.json

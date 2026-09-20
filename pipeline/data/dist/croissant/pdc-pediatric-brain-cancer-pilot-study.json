@@ -9,9 +9,9 @@
   "name": "pdc-pediatric-brain-cancer-pilot-study",
   "alternateName": "Pediatric Brain Cancer Pilot Study",
   "description": "Pediatric Brain Cancer Pilot Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-pediatric-brain-cancer-pilot-study",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-pediatric-brain-cancer-pilot-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "METTL1-modulated LSM14A facilitates proliferation and migration in glioblastoma via the stabilization of DDX5.",
+  "citeAs": "Pediatric Brain Cancer Pilot Study",
   "version": "as-retrieved",
   "datePublished": "2023-01-01",
   "recordSet": [

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-425362-245-t",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-425362-245-t",
   "name": "PDMR-425362-245-T",
   "alternateName": [
     "pdmr_425362_245_t"
   ],
   "description": "We identified and characterized a patient derived xenograft model with metastatic potential, melanoma xenograft 425362-245-T. In this study we performed a detailed imaging characterization of this model, which develops spontaneous lung metastases. Please see the PDMR-425362-245-T wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-425362-245-t",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-425362-245-t",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=pdmr_425362_245_t",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-pdmr-425362-245-t.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-pdmr-425362-245-t.json",
       "encodingFormat": "application/json"
     }
   ],

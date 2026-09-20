@@ -9,7 +9,7 @@
   "name": "pdc-prospective-ovarian-jhu-intact-glycoproteome",
   "alternateName": "Prospective Ovarian JHU Intact Glycoproteome",
   "description": "Prospective Ovarian JHU Intact Glycoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-ovarian-jhu-intact-glycoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Federated Deep Learning Enables Cancer Subtyping by Proteomics.",
   "version": "as-retrieved",

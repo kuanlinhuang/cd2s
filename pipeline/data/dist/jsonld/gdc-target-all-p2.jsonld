@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p2",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p2",
   "name": "Acute Lymphoblastic Leukemia - Phase II",
   "alternateName": [
     "TARGET-ALL-P2"
   ],
   "description": "Acute Lymphoblastic Leukemia - Phase II",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p2",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p2",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-ALL-P2",
     "gdc_program:TARGET",
@@ -49,7 +49,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -61,118 +61,211 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-all-p2.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-all-p2.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours.",
-      "identifier": "https://doi.org/10.1038/nature25795",
-      "datePublished": "2018"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",
-      "identifier": "P30CA138292",
-      "name": "Clinical Protocol and Data Management",
+      "identifier": "U10CA098543",
+      "name": "Children's Oncology Group Chair's Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA138292"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098543"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA201309",
-      "name": "How HTLV-I Tax and HBZ control telomerase activity to induce adult T-cell leukemia",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA201309"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
     },
     {
       "@type": "Grant",
-      "identifier": "R35CA197697",
-      "name": "Mechanisms of regulation by RNA in acute myeloid leukemia",
+      "identifier": "U24CA114766",
+      "name": "Support for Human Specimen Banking in NCI-Sponsored Clinical Trials-(CGB)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197697"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA114766"
     },
     {
       "@type": "Grant",
-      "identifier": "U24CA258406",
-      "name": "The Integrative Genomics Viewer (IGV) for Cancer Research",
+      "identifier": "U10CA180899",
+      "name": "Children's Oncology Group Statistics and Data Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA258406"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180899"
     },
     {
       "@type": "Grant",
-      "identifier": "U24CA180922",
-      "name": "Trinity: Transcriptome assembly for genetic and functional analysis of cancer",
+      "identifier": "U10CA098413",
+      "name": "Children's Oncology Group Statistics and Data Center Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA180922"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098413"
     },
     {
       "@type": "Grant",
-      "identifier": "R50CA211461",
-      "name": "Open Software and Resource Development Leveraging Next-gen Sequencing Data to Facilitate Computational Analysis of Cancer Biology",
+      "identifier": "U01CA157937",
+      "name": "MOLECULAR SIGNATURES FOR OUTCOME PREDICTION AND THERAPEUTIC TARGETING IN ALL",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA211461"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157937"
     },
     {
       "@type": "Grant",
-      "identifier": "K08CA273527",
-      "name": "Pathogenic role of human papillomavirus (HPV) DNA Integration and clonal expansion in cervical tumorigenesis",
+      "identifier": "R35CA197695",
+      "name": "Translating genomic discoveries to improved outcomes for high risk acute leukemia",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA273527"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA197695"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA175737",
-      "name": "Perinatal immune development and risk of childhood acute lymphoblastic leukemia",
+      "identifier": "P30CA016058",
+      "name": "Shared Resource 10: Pharmacoanalytical Shared Resource (PhASR)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA175737"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016058"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA155461",
-      "name": "Genome-Wide Association Study of Childhood Leukemia by Hispanic Status",
+      "identifier": "R37CA036401",
+      "name": "PHARMACOGENOMICS OF CHILDHOOD LEUKEMIA (ALL)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155461"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA036401"
     },
     {
       "@type": "Grant",
-      "identifier": "T32CA009056",
-      "name": "Tumor Cell Biology Training Program",
+      "identifier": "R01CA036401",
+      "name": "Pharmacogenomics of Childhood Leukemia ALL",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009056"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA036401"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA243124",
+      "name": "Experimental and preclinical modeling of NUP98-rearranged acute leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA243124"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196173",
+      "name": "COG U24 Funding 2026-2027",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196173"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180886",
+      "name": "COG NCTN Network Group Operations Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180886"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA236748",
+      "name": "Childhood Hematological Malignancies Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA236748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009615",
+      "name": "Cancer Center Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009615"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R03CA256550",
+      "name": "Genomic Profiling of T-cell Acute Lymphoblastic Leukemia in Children",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R03CA256550"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA264837",
+      "name": "Biomarkers of dasatinib response and resistance in T-cell acute lymphoblastic leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA264837"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA193776",
+      "name": "Improving risk allocation and developing novel therapies for children with T-ALL and T-LL",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA193776"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA279756",
+      "name": "Role of BCL11B in lineage ambiguous leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA279756"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K12CA076931",
+      "name": "Physician Scientist Training in Clinical Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA076931"
     }
   ],
   "dateModified": "2026-09-18T02:35:39.262746+00:00",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-dfci-2016",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-coadread-dfci-2016",
   "name": "Colorectal Adenocarcinoma (DFCI, Cell Reports 2016)",
   "alternateName": [
     "coadread_dfci_2016"
   ],
   "description": "Whole-exome sequencing of 619 colorectal cancers with clinicopathologic annotations.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-dfci-2016",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-coadread-dfci-2016",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=coadread_dfci_2016"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-coadread-dfci-2016.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-coadread-dfci-2016.json",
       "encodingFormat": "application/json"
     }
   ],

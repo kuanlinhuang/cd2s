@@ -42,17 +42,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 13
-- Citations to the dataset's publication: 48 (attention, not reuse)
+- Of those, 23 were retrieved and graded individually; 0 had no author in common with the generating team and 2 were themselves NCI funded.
 - Reuse gap index: -0.63 (negative means less reused than comparable datasets)
+  - Proteogenomic insights suggest druggable pathways in endometrial carcinoma. (2023) PMID 37567170
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
+  - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
   - SIMSI-Transfer: Software-Assisted Reduction of Missing Values in Phosphoproteomic and Proteomic Isobaric Labeling Data Using Tandem Mass Spectrum Clustering. (2022) PMID 35462064
-  - Inflammation-related citrullination of matrisome proteins in human cancer. (2022) PMID 36531007
-  - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
-  - Algorithmically Reconstructed Molecular Pathways as the New Generation of Prognostic Molecular Biomarkers in Human Solid Cancers. (2023) PMID 37755705
+  - Pan-Cancer Proteomics Analysis to Identify Tumor-Enriched and Highly Expressed Cell Surface Antigens as Potential Targets for Cancer Therapeutics. (2023) PMID 37517589
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-ucec-discovery-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ucec-discovery-study.json

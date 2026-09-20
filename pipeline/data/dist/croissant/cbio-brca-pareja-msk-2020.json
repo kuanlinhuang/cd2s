@@ -9,7 +9,7 @@
   "name": "cbio-brca-pareja-msk-2020",
   "alternateName": "Breast Cancer (MSK, Clinical Cancer Res 2020)",
   "description": "Whole-exome and MSK-IMPACT sequencing of 60 tumor/normal matched samples.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-pareja-msk-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-brca-pareja-msk-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -42,16 +42,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 19
-- Reuse gap index: -1.21 (negative means less reused than comparable datasets)
+- Of those, 26 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -1.22 (negative means less reused than comparable datasets)
+  - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
-  - Inflammation-related citrullination of matrisome proteins in human cancer. (2022) PMID 36531007
-  - SiRCle (Signature Regulatory Clustering) model integration reveals mechanisms of phenotype regulation in renal cancer. (2024) PMID 39633487
-  - Cytidine diphosphate diacylglycerol synthase 2 is a synthetic lethal target in mesenchymal-like cancers. (2025) PMID 40615674
+  - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
+  - Pan-Cancer Proteomics Analysis to Identify Tumor-Enriched and Highly Expressed Cell Surface Antigens as Potential Targets for Cancer Therapeutics. (2023) PMID 37517589
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-lscc-discovery-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-lscc-discovery-study.json

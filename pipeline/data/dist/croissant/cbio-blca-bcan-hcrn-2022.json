@@ -9,7 +9,7 @@
   "name": "cbio-blca-bcan-hcrn-2022",
   "alternateName": "Urothelial Carcinoma (BCAN/HCRN, Nat Commun 2022)",
   "description": "Urothelial Cancer-GENOmic analysis to improve patient outcomes and research.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-bcan-hcrn-2022",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-blca-bcan-hcrn-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

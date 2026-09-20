@@ -42,7 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 105
-- Reuse gap index: -0.51 (negative means less reused than comparable datasets)
+- Of those, 144 were retrieved and graded individually; 0 had no author in common with the generating team and 7 were themselves NCI funded.
+- Reuse gap index: -0.11 (negative means less reused than comparable datasets)
   - The genomic landscape of pediatric acute lymphoblastic leukemia. (2022) PMID 36050548
   - Epithelial-mesenchymal transition and its transcription factors. (2022) PMID 34708244
   - Cancer gene mutation frequencies for the U.S. population. (2021) PMID 34645806
@@ -54,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-all-p3.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-target-all-p3.json

@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-hgsoc-ffpe-validation",
   "alternateName": "PTRC HGSOC FFPE Validation",
   "description": "PTRC HGSOC FFPE Validation",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-hgsoc-ffpe-validation",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-hgsoc-ffpe-validation",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PTRC HGSOC FFPE Validation",
   "version": "as-retrieved",

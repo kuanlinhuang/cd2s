@@ -9,7 +9,7 @@
   "name": "pdc-ku-cca-discovery-study-global-proteome",
   "alternateName": "KU CCA Discovery Study - Global proteome",
   "description": "KU CCA Discovery Study - Global proteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ku-cca-discovery-study-global-proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ku-cca-discovery-study-global-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "KU CCA Discovery Study - Global proteome",
   "version": "as-retrieved",

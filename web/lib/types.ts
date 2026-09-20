@@ -235,14 +235,43 @@ export interface ReuseRecord {
   evidence: Evidence[];
 }
 
+/**
+ * How much of a Europe PMC hit count is really about this dataset.
+ *
+ * Europe PMC splits a hyphenated accession into separate indexed words, so a search
+ * for TARGET-RT also matches "target RT". The pipeline samples the hits and checks the
+ * full text for the literal accession; this is the receipt.
+ */
+export interface AccessionPrecision {
+  token: string;
+  query: string;
+  strategy_id: string;
+  needs_correction: boolean;
+  precision?: number | null;
+  precision_low?: number | null;
+  precision_high?: number | null;
+  n_sampled: number;
+  n_checked: number;
+  n_literal: number;
+  note?: string | null;
+}
+
 export interface ReuseMetrics {
   n_candidates_screened: number;
+  /** Corrected counts. A tier is ABSENT, not zero, when it could not be measured. */
   n_by_tier: Record<string, number>;
+  /** The same counts as Europe PMC returned them, before correction. */
+  n_by_tier_raw?: Record<string, number>;
+  accession_precision?: AccessionPrecision | null;
   n_citations_to_primary_publication?: number | null;
   citation_to_reuse_ratio?: number | null;
   has_citable_accession?: boolean | null;
-  n_verified_reuse: number;
+  /** Null when reuse could not be measured. Never render null as zero. */
+  n_verified_reuse?: number | null;
+  /** Articles the deep pass actually read: the denominator for the two counts below. */
+  n_reuse_examined: number;
   n_independent_reuse: number;
+  n_nci_funded_reuse?: number;
   first_reuse_year?: number | null;
   latest_reuse_year?: number | null;
   years_since_release?: number | null;
@@ -432,6 +461,7 @@ export interface IndexRow {
   is_pediatric?: boolean | null;
   population_flags: string[];
   n_verified_reuse?: number | null;
+  n_reuse_examined?: number | null;
   n_citations_to_primary_publication?: number | null;
   reuse_gap_index?: number | null;
   expected_reuse?: number | null;
@@ -545,6 +575,9 @@ export interface CorpusStats {
   n_with_treatment_response: number;
   n_reuse_assessed: number;
   n_without_citable_accession: number;
+  /** Has an accession, but the tokenization correction could not be estimated for it. */
+  n_reuse_unmeasurable?: number;
+  n_without_authoritative_marker_paper?: number;
   n_with_publication_citations: number;
   median_citation_to_reuse_ratio?: number | null;
   /** One per (dataset, workbook) pair - a workbook attached to three pages counts three times. */

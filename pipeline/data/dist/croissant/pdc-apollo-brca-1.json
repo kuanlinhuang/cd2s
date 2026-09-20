@@ -9,7 +9,7 @@
   "name": "pdc-apollo-brca-1",
   "alternateName": "APOLLO-BRCA-1",
   "description": "APOLLO-BRCA-1",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-brca-1",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-apollo-brca-1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "APOLLO-BRCA-1",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-psma-pet-ct-lesions",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-psma-pet-ct-lesions",
   "name": "PSMA-PET-CT-Lesions",
   "alternateName": [
     "psma_pet_ct_lesions"
   ],
   "description": "597 whole-body PSMA-PET/CT studies from 378 male patients with suspected or diagnosed prostate carcinoma, acquired at LMU University Hospital Munich (2014-2022). All PSMA-avid tumor lesions were manually segmented on PET images in 3D. The dataset includes DICOM images, DICOM SEG segmentation masks, and a TSV metadata file. Used in the autoPET III and IV Grand Challenges. Please see the PSMA-PET-CT-Lesions page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-psma-pet-ct-lesions",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-psma-pet-ct-lesions",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=psma_pet_ct_lesions",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-psma-pet-ct-lesions.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-psma-pet-ct-lesions.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -41,7 +41,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 15
-- Reuse gap index: +1.46 (negative means less reused than comparable datasets)
+- Of those, 19 were retrieved and graded individually; 0 had no author in common with the generating team and 2 were themselves NCI funded.
+- Reuse gap index: +1.64 (negative means less reused than comparable datasets)
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
   - Model Cell Lines and Tissues of Different HGSOC Subtypes Differ in Local Estrogen Biosynthesis. (2022) PMID 35681563
   - FAP is critical for ovarian cancer cell survival by sustaining NF-κB activation through recruitment of PRKDC in lipid rafts. (2023) PMID 36494579
@@ -53,4 +54,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-ovarian-jhu-proteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-prospective-ovarian-jhu-proteome.json

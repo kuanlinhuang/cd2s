@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Logo from "@/components/Logo";
 import { Nav, type NavItem } from "@/components/Nav";
 
 /**
@@ -25,13 +26,7 @@ export default function SiteHeader({ items }: { items: NavItem[] }) {
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
         <div className="flex h-16 items-center gap-4 sm:gap-6">
           <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2.5">
-            <span
-              aria-hidden
-              className="grid h-8 w-8 shrink-0 place-items-center rounded-md font-mono text-meta font-bold"
-              style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
-            >
-              CD
-            </span>
+            <Logo size={34} className="shrink-0" />
             <span className="truncate text-title font-semibold tracking-tight">
               Cancer Data Showcase
             </span>

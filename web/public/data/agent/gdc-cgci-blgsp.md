@@ -41,18 +41,18 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 8
-- Citations to the dataset's publication: 62 (attention, not reuse)
-- Reuse gap index: -2.65 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 5
+- Of those, 20 were retrieved and graded individually; 0 had no author in common with the generating team and 4 were themselves NCI funded.
+- Reuse gap index: -3.06 (negative means less reused than comparable datasets)
+  - Genetic subgroups inform on pathobiology in adult and pediatric Burkitt lymphoma. (2023) PMID 36201743
+  - Sources of erroneous sequences and artifact chimeric reads in next generation sequencing of genomic DNA from formalin-fixed paraffin-embedded samples. (2019) PMID 30418619
   - Developmental Deconvolution for Classification of Cancer Origin. (2022) PMID 36041084
-  - Epstein-Barr Virus in Burkitt Lymphoma in Africa Reveals a Limited Set of Whole Genome and &lt;i&gt;LMP-1&lt;/i&gt; Sequence Patterns: Analysis of Archival Datasets and Field Samples From Uganda, Tanzania, and Kenya. (2022) PMID 35340265
-  - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618
-  - Cytokine-Induced Killer Cells in Combination with Heat Shock Protein 90 Inhibitors Functioning via the Fas/FasL Axis Provides Rationale for a Potential Clinical Benefit in Burkitt's lymphoma. (2023) PMID 37569852
-  - Incorporation of Epstein-Barr viral variation implicates significance of Latent Membrane Protein 1 in survival prediction and prognostic subgrouping in Burkitt lymphoma. (2025) PMID 40047459
+  - Evaluation of protocols for rRNA depletion-based RNA sequencing of nanogram inputs of mammalian total RNA. (2019) PMID 31671154
+  - Genetic regulation of TERT splicing affects cancer risk by altering cellular longevity and replicative potential. (2025) PMID 39956830
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-blgsp.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-cgci-blgsp.json

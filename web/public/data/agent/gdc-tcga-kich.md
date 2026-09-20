@@ -41,8 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.70 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 95
+- Of those, 72 were retrieved and graded individually; 10 had no author in common with the generating team and 2 were themselves NCI funded.
+- Citations to the dataset's publication: 667 (attention, not reuse)
+- Reuse gap index: +0.45 (negative means less reused than comparable datasets)
   - Alternative splicing of &lt;i&gt;GSDMB&lt;/i&gt; modulates killer lymphocyte-triggered pyroptosis. (2023) PMID 37115914
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
   - Loss of CDKN1A mRNA and Protein Expression Are Independent Predictors of Poor Outcome in Chromophobe Renal Cell Carcinoma Patients. (2020) PMID 32079343
@@ -54,4 +56,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-kich.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-kich.json

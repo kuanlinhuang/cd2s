@@ -49,8 +49,10 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
+- Of those, 4 were retrieved and graded individually; 3 had no author in common with the generating team and 1 were themselves NCI funded.
 - Citations to the dataset's publication: 202 (attention, not reuse)
-- Reuse gap index: -6.17 (negative means less reused than comparable datasets)
+- Reuse gap index: -5.97 (negative means less reused than comparable datasets)
+  - Prognostic PET 18F-FDG uptake imaging features are associated with major oncogenomic alterations in patients with resected non-small cell lung cancer. (2012) PMID 22710433
   - Integrative analysis of imaging and transcriptomic data of the immune landscape associated with tumor metabolism in lung adenocarcinoma: Clinical and prognostic implications. (2018) PMID 29556367
   - Synergies of Radiomics and Transcriptomics in Lung Cancer Diagnosis: A Pilot Study. (2023) PMID 36832225
   - Radiogenomics Based on PET Imaging. (2020) PMID 32582396
@@ -59,4 +61,4 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiogenomics.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/idc-nsclc-radiogenomics.json

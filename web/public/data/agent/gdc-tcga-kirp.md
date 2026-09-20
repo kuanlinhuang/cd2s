@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.04 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 163
+- Of those, 85 were retrieved and graded individually; 10 had no author in common with the generating team and 1 were themselves NCI funded.
+- Citations to the dataset's publication: 1012 (attention, not reuse)
+- Reuse gap index: -0.54 (negative means less reused than comparable datasets)
   - An automated surgical decision-making framework for partial or radical nephrectomy based on 3D-CT multi-level anatomical features in renal cell carcinoma. (2023) PMID 37289245
   - A Cluster of Metabolic-Related Genes Serve as Potential Prognostic Biomarkers for Renal Cell Carcinoma. (2022) PMID 35873461
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Spatially-resolved analyses of muscle invasive bladder cancer microenvironment unveil a distinct fibroblast cluster associated with prognosis. (2024) PMID 39759522
   - Construction and verification of a novel prognostic risk model for kidney renal clear cell carcinoma based on immunity-related genes. (2023) PMID 36741315
+  - GAiN: An integrative tool utilizing generative adversarial neural networks for augmented gene expression analysis. (2024) PMID 38370125
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-kirp.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-kirp.json

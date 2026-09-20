@@ -41,8 +41,9 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +1.02 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 83
+- Of those, 70 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: +0.94 (negative means less reused than comparable datasets)
   - Predicting lymphoma prognosis using machine learning-based genes associated with lactylation. (2024) PMID 39146596
   - 5-Hydroxymethylcytosine profiles of cfDNA are highly predictive of R-CHOP treatment response in diffuse large B cell lymphoma patients. (2021) PMID 33573703
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
@@ -54,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-dlbc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-dlbc.json

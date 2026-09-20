@@ -9,7 +9,7 @@
   "name": "idc-cmmd",
   "alternateName": "CMMD",
   "description": "This collection contains clinical data and 3,728 mammographies (MG) from 1,775 patients, with biopsy-confirmed benign or malignant breast tumors. For a subset of 749 patients (D2-####), molecular subtype is included. Please see the CMMD wiki page for further detail and associated metadata.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cmmd",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cmmd",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CMMD",
   "version": "as-retrieved",

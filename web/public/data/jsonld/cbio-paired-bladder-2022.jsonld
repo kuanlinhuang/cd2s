@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-paired-bladder-2022",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-paired-bladder-2022",
   "name": "Bladder Cancer (MSK, Cell Reports 2022)",
   "alternateName": [
     "paired_bladder_2022"
   ],
   "description": "Targeted sequencing of 1659 Bladder Cancer tumor/normal samples via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paired-bladder-2022",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-paired-bladder-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=paired_bladder_2022"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-paired-bladder-2022.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-paired-bladder-2022.json",
       "encodingFormat": "application/json"
     }
   ],

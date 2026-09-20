@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-kirp",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-kirp",
   "name": "Kidney Renal Papillary Cell Carcinoma",
   "alternateName": [
     "tcga_kirp"
   ],
   "description": "The Cancer Imaging Program (CIP) is working directly with primary investigators from institutes participating in TCGA to obtain and load images relating to the genomic, clinical, and pathological data being stored within the TCGA Data Portal. Currently this large CT and MR multi-sequence image collection of kidney renal papillary cell carcinoma (KIRP) patients can be matched by each unique case identifier with the extensive gene and expression data of the same case from The Cancer Genome Atlas Data Portal to research the link between clinical phenome and tissue genome. Please see theTCGA-KIRP page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-KIRP collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-kirp",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-kirp",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-KIRP",
     "gdc_program:TCGA",
@@ -64,7 +64,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -76,11 +76,18 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-kirp.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-kirp.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Comprehensive Molecular Characterization of Papillary Renal-Cell Carcinoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/26536169/",
+      "datePublished": "2016"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
@@ -134,37 +141,157 @@
     },
     {
       "@type": "Grant",
-      "identifier": "U24CA264032",
-      "name": "The joint WCM-NYGC Center for Functional and Clinical Interpretation of Tumor Profiles",
+      "identifier": "U24CA199461",
+      "name": "Next-Generation Clustered Heat Maps for fluent, interactive exploration of omic data",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA264032"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA199461"
     },
     {
       "@type": "Grant",
-      "identifier": "R37CA229861",
-      "name": "Cell-of-Origin Footprints of Passenger Mutations in Human Lung Cancer",
+      "identifier": "U24CA180951",
+      "name": "Cloud Based Resource for Data Hosting, Visualization and Analysis Using UCSC Canc",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA229861"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA180951"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143883",
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143883"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143882",
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143882"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143867",
+      "name": "Genome Characterization Center (GCC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143867"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143866",
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143866"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143858",
+      "name": "UCSC-Buck Inst. Genome Data Analysis Center for TCGA Research Network (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143858"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143848",
+      "name": "Gene Expression Patterns in Human Tumors Identified Using Transcript Sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143848"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143843",
+      "name": "The BCM Tumor Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143843"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143840",
+      "name": "MSKCC Center for Translational Cancer Genomic Analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143840"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143835",
+      "name": "Center for Systems Analysis of the Cancer Regulome",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143835"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143799",
+      "name": "TCGA Data Analysis Center at Berkeley",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143799"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA169172",
+      "name": "Inhibiting VHL-positive kidney cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA169172"
     }
   ],
   "dateModified": "2026-09-18T02:36:40.682849+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2013-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

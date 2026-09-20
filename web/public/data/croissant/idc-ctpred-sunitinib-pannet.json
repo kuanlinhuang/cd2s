@@ -9,7 +9,7 @@
   "name": "idc-ctpred-sunitinib-pannet",
   "alternateName": "CTpred-Sunitinib-panNET",
   "description": "The Prediction of Sunitinib Efficacy using Computed Tomography in Patients with Pancreatic Neuroendocrine Tumors study aimed to develop and validate a computed tomography (CT)-based method to predict the efficacy of sunitinib in Pretreatment CT images of 171 lesions from 38 patients with metastatic or locally advanced pancreatic neuroendocrine tumors (panNET). The dataset can be used to validate the findings of the study. More importantly, researchers can use this dataset to study the imaging characteristics of panNET. Please see the CTpred-Sunitinib-panNET wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ctpred-sunitinib-pannet",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ctpred-sunitinib-pannet",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CTpred-Sunitinib-panNET",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-pdmr-292921-168-r",
   "alternateName": "PDMR-292921-168-R",
   "description": "We identified and characterized a patient derived xenograft model with metastatic potential, adenocarcinoma pancreas xenograft 292921-168-R. In this study we performed a detailed imaging characterization of this model, which develops spontaneous lung metastases. Please see the Imaging characterization of a metastatic patient derived model of adenocarcinoma pancreas: PDMR-292921-168-R wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-292921-168-r",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-292921-168-r",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PDMR-292921-168-R",
   "version": "as-retrieved",

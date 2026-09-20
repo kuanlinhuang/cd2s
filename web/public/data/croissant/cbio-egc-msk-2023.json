@@ -9,7 +9,7 @@
   "name": "cbio-egc-msk-2023",
   "alternateName": "Esophagogastric Cancer (MSK, J Natl Cancer Inst 2023)",
   "description": "Targeted sequencing of 902 patients with early-onset and average-onset esophagogastric cancers and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-egc-msk-2023",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-egc-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

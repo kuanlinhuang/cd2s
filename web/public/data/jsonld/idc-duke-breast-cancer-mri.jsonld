@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-duke-breast-cancer-mri",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-duke-breast-cancer-mri",
   "name": "Duke-Breast-Cancer-MRI",
   "alternateName": [
     "duke_breast_cancer_mri"
   ],
   "description": "Dynamic contrast-enhanced magnetic resonance images of breast cancer patients with tumor locations (Duke-Breast-Cancer-MRI). Please see the Duke-Breast-Cancer-MRI wiki page to learn more about the images and to obtain the supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-duke-breast-cancer-mri",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-duke-breast-cancer-mri",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=duke_breast_cancer_mri",
     "https://www.cancerimagingarchive.net/collections/",
@@ -47,7 +47,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -59,7 +59,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-duke-breast-cancer-mri.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-duke-breast-cancer-mri.json",
       "encodingFormat": "application/json"
     }
   ],

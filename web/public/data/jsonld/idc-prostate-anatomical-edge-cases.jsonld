@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-anatomical-edge-cases",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-prostate-anatomical-edge-cases",
   "name": "Prostate-Anatomical-Edge-Cases",
   "alternateName": [
     "prostate_anatomical_edge_cases"
   ],
   "description": "In this single institution retrospective study, we reviewed 950 consecutive patients with prostate adenocarcinoma receiving definitive radiotherapy between 2011 and 2019, and identified among them 112 patients with anatomic variations (edge cases) seen on simulation CT and/or MRI imaging. These variations included hip arthroplasty, prostate median lobe hypertrophy, so-called \u201cdroopy\u201d seminal vesicles, presence of a urinary catheter, and others. A separate cohort of 19 \u201cnormal\u201d cases were randomly selected for inclusion. Prostate, rectum, bladder, and bilateral femoral heads were manually segmented on all CT simulation images (where present) and were ultimately used clinically for radiation treatment planning. Please see the Stress-Testing Pelvic Autosegmentation Algorithms Using Anatomical Edge Cases (Prostate-Anatomical-Edge-Cases) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-anatomical-edge-cases",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostate-anatomical-edge-cases",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=prostate_anatomical_edge_cases",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-prostate-anatomical-edge-cases.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-prostate-anatomical-edge-cases.json",
       "encodingFormat": "application/json"
     }
   ],

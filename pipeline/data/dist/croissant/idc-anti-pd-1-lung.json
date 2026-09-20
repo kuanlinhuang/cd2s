@@ -9,7 +9,7 @@
   "name": "idc-anti-pd-1-lung",
   "alternateName": "Anti-PD-1_Lung",
   "description": "This collection includes 46 lung cases treated with anti-PD1 immunotherapy in 2016, each with pre-treatment imaging (CT,PT,SC) and most with 1 imaging follow-up timepoint. Please see the Anti-PD-1_Lung wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-anti-pd-1-lung",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-anti-pd-1-lung",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Anti-PD-1_Lung",
   "version": "as-retrieved",

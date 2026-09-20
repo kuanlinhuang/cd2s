@@ -9,7 +9,7 @@
   "name": "htan-tnp-tma",
   "alternateName": "TNP - TMA",
   "description": "TNP - TMA",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-tnp-tma",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-tnp-tma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TNP - TMA",
   "version": "as-retrieved",

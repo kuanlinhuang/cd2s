@@ -9,7 +9,7 @@
   "name": "cbio-difg-glass-2019",
   "alternateName": "Diffuse Glioma (GLASS Consortium, Nature 2019)",
   "description": "Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 222 adult patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-glass-2019",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-difg-glass-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

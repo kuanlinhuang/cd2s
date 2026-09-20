@@ -9,7 +9,7 @@
   "name": "cbio-hnsc-a5consortium-2025",
   "alternateName": "Hereditary SDHB-Mutant Pheochromocytomas and Paragangliomas (A5 Consortium, Nature Comm 2025)",
   "description": "Whole genome sequencing of 94 Hereditary SDHB-mutant pheochromocytomas (PC) and paragangliomas (PG) tumors and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hnsc-a5consortium-2025",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hnsc-a5consortium-2025",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

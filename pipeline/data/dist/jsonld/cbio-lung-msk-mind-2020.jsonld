@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-lung-msk-mind-2020",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-lung-msk-mind-2020",
   "name": "Lung Adenocarcinoma (MSK Mind,Nature Cancer 2022)",
   "alternateName": [
     "lung_msk_mind_2020"
   ],
   "description": "Multimodality tools to predict response to PD-(L)1 blockade in patients with lung adenocarcinoma.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lung-msk-mind-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lung-msk-mind-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=lung_msk_mind_2020"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-lung-msk-mind-2020.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-lung-msk-mind-2020.json",
       "encodingFormat": "application/json"
     }
   ],

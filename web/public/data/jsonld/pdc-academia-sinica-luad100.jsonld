@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-academia-sinica-luad100",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-academia-sinica-luad100",
   "name": "Academia Sinica LUAD100",
   "alternateName": [
     "Academia Sinica LUAD100-Phosphoproteome",
     "Academia Sinica LUAD100-Proteome"
   ],
   "description": "Academia Sinica LUAD100",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-academia-sinica-luad100",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-academia-sinica-luad100",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000220",
     "https://pdc.cancer.gov/pdc/study/PDC000219"
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,39 +56,12 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-academia-sinica-luad100.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-academia-sinica-luad100.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Identification of HMGB2 associated with proliferation, invasion and prognosis in lung adenocarcinoma via weighted gene co-expression network analysis.",
-      "identifier": "https://doi.org/10.1186/s12890-022-02110-y",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [
-    {
-      "@type": "Grant",
-      "identifier": "U24CA271079",
-      "name": "Proteogenomic Characterization of Tumor Tissues and Preclinical Models with High Precision",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271079"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA274514",
-      "name": "Development of a panel of multiplex biomarkers for the early detection of pancreatic ductal adenocarcinoma and high-risk lesions",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA274514"
-    },
     {
       "@type": "Grant",
       "identifier": "U24CA271114",
@@ -98,6 +71,16 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271079",
+      "name": "Proteogenomic Characterization of Tumor Tissues and Preclinical Models with High Precision",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271079"
     },
     {
       "@type": "Grant",
@@ -268,6 +251,16 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210967"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210955",
+      "name": "PNNL Proteome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210955"
     }
   ],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",

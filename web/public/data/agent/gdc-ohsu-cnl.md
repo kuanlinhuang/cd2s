@@ -41,9 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 3
-- Citations to the dataset's publication: 74 (attention, not reuse)
-- Reuse gap index: -1.09 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 1
+- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -1.63 (negative means less reused than comparable datasets)
+  - Genomic landscape of neutrophilic leukemias of ambiguous diagnosis. (2019) PMID 31366621
   - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618
   - Transcriptomic signature can distinguish chronic neutrophilic leukemia from ambiguous neutrophilic leukemias. (2025) PMID 40255485
   - Identification of a Novel miR-122-5p/CDC25A Axis and Potential Therapeutic Targets for Chronic Myeloid Leukemia. (2025) PMID 41373559
@@ -53,4 +54,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-ohsu-cnl.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-ohsu-cnl.json

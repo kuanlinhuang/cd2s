@@ -9,7 +9,7 @@
   "name": "cbio-mbl-sickkids-2016",
   "alternateName": "Medulloblastoma (Sickkids, Nature 2016)",
   "description": "Whole-genome sequencing of 46 recurrent medulloblastoma samples.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-sickkids-2016",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mbl-sickkids-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

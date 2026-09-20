@@ -42,8 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 27 (attention, not reuse)
-- Reuse gap index: -1.48 (negative means less reused than comparable datasets)
+- Of those, 2 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -1.18 (negative means less reused than comparable datasets)
   - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None
 
 ## Provenance
@@ -51,4 +51,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-mp2prt-wt.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-mp2prt-wt.json

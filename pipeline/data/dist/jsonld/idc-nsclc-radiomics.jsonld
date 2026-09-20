@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiomics",
   "name": "NSCLC-Radiomics",
   "alternateName": [
     "nsclc_radiomics"
   ],
   "description": "This collection contains images from 422 non-small cell lung cancer (NSCLC) patients. For these patients pretreatment CT scans and clinical outcome data are available. This dataset refers to the Lung1 dataset of the study published in Nature Communications Please see the NSCLC-Radiomics page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiomics",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-nsclc-radiomics",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiomics",
     "https://www.cancerimagingarchive.net/collections/",
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiomics.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-nsclc-radiomics.json",
       "encodingFormat": "application/json"
     }
   ],

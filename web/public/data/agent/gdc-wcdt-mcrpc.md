@@ -82,16 +82,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 27
+- Of those, 67 were retrieved and graded individually; 3 had no author in common with the generating team and 9 were themselves NCI funded.
 - Citations to the dataset's publication: 1206 (attention, not reuse)
-- Reuse gap index: +1.41 (negative means less reused than comparable datasets)
-  - Multiplexed functional genomic analysis of 5' untranslated region mutations across the spectrum of prostate cancer. (2021) PMID 34244513
-  - Assessment of Androgen Receptor Splice Variant-7 as a Biomarker of Clinical Response in Castration-Sensitive Prostate Cancer. (2022) PMID 35695870
-  - Integrative molecular analyses define correlates of high B7-H3 expression in metastatic castrate-resistant prostate cancer. (2022) PMID 36323882
-  - Multi-level functional genomics reveals molecular and cellular oncogenicity of patient-based 3' untranslated region mutations. (2023) PMID 37516102
-  - Mechanism-centric regulatory network identifies NME2 and MYC programs as markers of Enzalutamide resistance in CRPC. (2024) PMID 38191557
+- Reuse gap index: +1.86 (negative means less reused than comparable datasets)
+  - The Polycomb Repressor Complex 1 Drives Double-Negative Prostate Cancer Metastasis by Coordinating Stemness and Immune Suppression. (2019) PMID 31327655
+  - The Genomic and Epigenomic Landscape of Double-Negative Metastatic Prostate Cancer. (2023) PMID 37289025
+  - Androgen receptor and MYC equilibration centralizes on developmental super-enhancer. (2021) PMID 34911936
+  - DNA hypomethylation silences anti-tumor immune genes in early prostate cancer and CTCs. (2023) PMID 37327786
+  - Mesenchymal and stem-like prostate cancer linked to therapy-induced lineage plasticity and metastasis. (2022) PMID 35385726
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-wcdt-mcrpc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-wcdt-mcrpc.json

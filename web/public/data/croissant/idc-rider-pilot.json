@@ -9,7 +9,7 @@
   "name": "idc-rider-pilot",
   "alternateName": "RIDER Pilot",
   "description": "This data collection was originally supported under supplemental funding for the Lung Image Database Consortium (LIDC) U01 project and focused on the collection of longitudinal studies using X-ray CT for monitoring the response to therapy. The data came primarily from the M.D. Anderson Cancer Center and several of the LIDC academic sites. The data is not annotated. A small subset of the data (8 subjects) which were analyzed in QIBA-VolCT-1B have been re-released on TCIA. Please see the RIDER Pilot page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-rider-pilot",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-rider-pilot",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "RIDER Pilot",
   "version": "as-retrieved",

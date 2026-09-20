@@ -9,7 +9,7 @@
   "name": "idc-upenn-gbm",
   "alternateName": "UPENN-GBM",
   "description": "This collection comprises multi-parametric magnetic resonance imaging (mpMRI) scans for de novo Glioblastoma (GBM) patients coupled with patient demographics, clinical outcome (e.g., overall survival, genomic information, tumor progression), as well as computer-aided and manually-corrected segmentation labels of multiple histologically distinct tumor sub-regions, computer-aided and manually-corrected segmentations of the whole brain, a rich panel of radiomic features along with their corresponding co-registered mpMRI volumes in NIfTI format. Please see the Multi-parametric magnetic resonance imaging (mpMRI) scans for de novo Glioblastoma (GBM) patients from the University of Pennsylvania Health System wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-upenn-gbm",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-upenn-gbm",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "UPENN-GBM",
   "version": "as-retrieved",

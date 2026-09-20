@@ -9,7 +9,7 @@
   "name": "idc-ldct-and-projection-data",
   "alternateName": "LDCT-and-Projection-data",
   "description": "Low-dose CT images and projection data from 200 patients, including non-contrast head CT, low-dose chest CT for pulmonary nodule screening, and contrast-enhanced abdominal CT for metastatic liver lesion detection. CT projection data is provided in the open DICOM-CT-PD format alongside reconstructed images, patient age/gender, and pathology annotations. Please see the LDCT-and-Projection-data page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ldct-and-projection-data",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ldct-and-projection-data",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "LDCT-and-Projection-data",
   "version": "as-retrieved",

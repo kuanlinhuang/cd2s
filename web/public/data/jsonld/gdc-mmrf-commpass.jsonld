@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-mmrf-commpass",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-mmrf-commpass",
   "name": "Multiple Myeloma CoMMpass Study",
   "alternateName": [
     "MMRF-COMMPASS"
   ],
   "description": "Multiple Myeloma CoMMpass Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-mmrf-commpass",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-mmrf-commpass",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/MMRF-COMMPASS",
     "gdc_program:MMRF",
@@ -47,7 +47,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -59,18 +59,11 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-mmrf-commpass.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-mmrf-commpass.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Alu-dependent RNA editing of GLI1 promotes malignant regeneration in multiple myeloma.",
-      "identifier": "https://doi.org/10.1038/s41467-017-01890-w",
-      "datePublished": "2017"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",
@@ -85,7 +78,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA138292",
-      "name": "Clinical Protocol and Data Management",
+      "name": "Winship Cancer Institute Cancer Center Support Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -105,7 +98,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "name": "Cancer Center Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -115,7 +108,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA155258",
-      "name": "Core 1: Administrative Core",
+      "name": "Project 1: Developing MRD-based therapeutic strategy in newly diagnosed multiple myeloma",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -135,7 +128,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA240139",
-      "name": "Behavioral and Community-Based Research Shared Resource",
+      "name": "Cancer Research Training and Education Coordination",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -165,7 +158,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA076292",
-      "name": "Administrative Core",
+      "name": "Immuno-Oncology",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -175,7 +168,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA016087",
-      "name": "Cancer Genome Dynamics (CGD) Research Program",
+      "name": "Cancer Center Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -194,83 +187,53 @@
     },
     {
       "@type": "Grant",
-      "identifier": "U24CA210967",
-      "name": "University of Michigan Proteogenomics Data Analysis Center",
+      "identifier": "R21CA194679",
+      "name": "(PQC2) Niche-responsive RNA editing by ADAR1 in dormant multiple myeloma initiating cell maintenance",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210967"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA194679"
     },
     {
       "@type": "Grant",
-      "identifier": "U01CA214170",
-      "name": "Discovery and qualification of transcriptomic biomarkers for the early detection of aggressive prostate cancer",
+      "identifier": "R21CA189705",
+      "name": "Identifying microRNA Targets for Early Detection of Myeloproliferative Neoplasms",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214170"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA189705"
     },
     {
       "@type": "Grant",
-      "identifier": "R35CA231996",
-      "name": "Exploring Precision Oncology: From Gene Fusions to lncRNAs",
+      "identifier": "R01CA205944",
+      "name": "Characterization of the Role of ADAR1 in Oncogenic Transformation of Progenitors",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA231996"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA205944"
     },
     {
       "@type": "Grant",
-      "identifier": "R21CA152336",
-      "name": "Shared Genomic Segment Analysis for Localizing Multiple Myeloma Genes",
+      "identifier": "R01CA183968",
+      "name": "The Role of Cereblon Pathways in Myeloma",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA152336"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA183968"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA178765",
-      "name": "Transcriptional regulatory mechanisms in B cell development and leukemogenesis",
+      "identifier": "P30CA023100",
+      "name": "Solid Tumor Therapeutics Program",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA178765"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA167824",
-      "name": "Whole Genome Sequencing to Discover Familial Myeloma Risk Genes",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA167824"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA134674",
-      "name": "GENETIC EPIDEMIOLOGY OF CHRONIC LYMPHOCYTIC LEUKEMIA",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA134674"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA042014",
-      "name": "Cancer Biostatistics (CB)",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA042014"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA023100"
     }
   ],
   "dateModified": "2026-09-18T02:35:50.534485+00:00",

@@ -9,7 +9,7 @@
   "name": "cbio-paired-bladder-2022",
   "alternateName": "Bladder Cancer (MSK, Cell Reports 2022)",
   "description": "Targeted sequencing of 1659 Bladder Cancer tumor/normal samples via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paired-bladder-2022",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-paired-bladder-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -42,15 +42,15 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 11 (attention, not reuse)
-- Reuse gap index: -1.86 (negative means less reused than comparable datasets)
+- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -2.14 (negative means less reused than comparable datasets)
+  - KinPred-RNA-kinase activity inference and cancer type classification using machine learning on RNA-seq data. (2024) PMID 38523792
   - Nitrogen metabolism profiling reveals cell state-specific pyrimidine synthesis pathway choice. (2026) PMID 42056505
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
-  - KinPred-RNA-kinase activity inference and cancer type classification using machine learning on RNA-seq data. (2024) PMID 38523792
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-gbm-discovery-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-gbm-discovery-study.json

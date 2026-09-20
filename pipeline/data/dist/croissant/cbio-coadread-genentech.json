@@ -9,7 +9,7 @@
   "name": "cbio-coadread-genentech",
   "alternateName": "Colorectal Adenocarcinoma (Genentech, Nature 2012)",
   "description": "Whole-genome sequencing of 74 paired colon tumor-normal samples.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-genentech",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-coadread-genentech",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

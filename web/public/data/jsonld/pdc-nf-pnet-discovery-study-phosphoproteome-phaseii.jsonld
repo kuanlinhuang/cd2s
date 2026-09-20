@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
   "name": "NF-PNET Discovery Study - Phosphoproteome - PhaseII",
   "alternateName": [
     "NF-PNET Discovery Study - Phosphoproteome - PhaseII"
   ],
   "description": "NF-PNET Discovery Study - Phosphoproteome - PhaseII",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000589"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii.json",
       "encodingFormat": "application/json"
     }
   ],

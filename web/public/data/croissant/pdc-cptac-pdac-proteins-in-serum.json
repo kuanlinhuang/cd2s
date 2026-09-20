@@ -9,7 +9,7 @@
   "name": "pdc-cptac-pdac-proteins-in-serum",
   "alternateName": "CPTAC PDAC Proteins in Serum",
   "description": "CPTAC PDAC Proteins in Serum",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-pdac-proteins-in-serum",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-pdac-proteins-in-serum",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC PDAC Proteins in Serum",
   "version": "as-retrieved",

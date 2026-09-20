@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-luad-phosphoproteome-tio2",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-apollo-luad-phosphoproteome-tio2",
   "name": "APOLLO LUAD - Phosphoproteome - TiO2",
   "alternateName": [
     "APOLLO LUAD - Phosphoproteome - TiO2"
   ],
   "description": "APOLLO LUAD - Phosphoproteome - TiO2",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-apollo-luad-phosphoproteome-tio2",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-apollo-luad-phosphoproteome-tio2",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000435"
   ],
@@ -40,7 +40,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -52,7 +52,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-apollo-luad-phosphoproteome-tio2.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-apollo-luad-phosphoproteome-tio2.json",
       "encodingFormat": "application/json"
     }
   ],

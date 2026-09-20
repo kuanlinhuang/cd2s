@@ -41,8 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.65 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 41
+- Of those, 67 were retrieved and graded individually; 9 had no author in common with the generating team and 2 were themselves NCI funded.
+- Citations to the dataset's publication: 318 (attention, not reuse)
+- Reuse gap index: -0.48 (negative means less reused than comparable datasets)
   - The Integrated Genomic Landscape of Thymic Epithelial Tumors. (2018) PMID 29438696
   - Myasthenia gravis-specific aberrant neuromuscular gene expression by medullary thymic epithelial cells in thymoma. (2022) PMID 35869073
   - A cfDNA methylation-based tissue-of-origin classifier for cancers of unknown primary. (2024) PMID 38632274
@@ -54,4 +56,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-thym.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-thym.json

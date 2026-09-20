@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-breast-bi-acetylome",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-breast-bi-acetylome",
   "name": "Prospective Breast BI Acetylome",
   "alternateName": [
     "Prospective Breast BI Acetylome"
   ],
   "description": "Prospective Breast BI Acetylome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-breast-bi-acetylome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-prospective-breast-bi-acetylome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000239"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-breast-bi-acetylome.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-prospective-breast-bi-acetylome.json",
       "encodingFormat": "application/json"
     }
   ],

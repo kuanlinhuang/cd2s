@@ -9,7 +9,7 @@
   "name": "cbio-ucec-ancestry-cds-msk-2023",
   "alternateName": "Endometrial Cancer (MSK, Cancer Discovery 2023)",
   "description": "Targeted sequencing of 1882 endometrial cancers and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ucec-ancestry-cds-msk-2023",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-ucec-ancestry-cds-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

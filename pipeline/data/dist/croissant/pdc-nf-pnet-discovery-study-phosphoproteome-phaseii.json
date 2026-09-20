@@ -9,7 +9,7 @@
   "name": "pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
   "alternateName": "NF-PNET Discovery Study - Phosphoproteome - PhaseII",
   "description": "NF-PNET Discovery Study - Phosphoproteome - PhaseII",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-nf-pnet-discovery-study-phosphoproteome-phaseii",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NF-PNET Discovery Study - Phosphoproteome - PhaseII",
   "version": "as-retrieved",

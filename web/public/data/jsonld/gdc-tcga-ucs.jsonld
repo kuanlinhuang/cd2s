@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-ucs",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-ucs",
   "name": "Uterine Carcinosarcoma",
   "alternateName": [
     "tcga_ucs"
   ],
   "description": "Uterine carcinosarcoma (UCS) is a cancer that develops in the uterus. Carcinosarcoma signifies that, when looked at under a microscope, the tumor displays histological features of both endometrial carcinoma and sarcoma. Endometrial carcinoma starts in the endometrium, the inner layer of tissue lining the uterus, while sarcoma begins in the outer layer of muscle of the uterus. A rare cancer, UCS makes up less than 5% of all uterine cancers. In the U.S., about two per 100,000 women develop UCS annually. Roughly only 35% of patients survive five years after diagnosis. Please see the DICOM converted Slide Microscopy images for the TCGA-UCS collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-ucs",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-ucs",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-UCS",
     "gdc_program:TCGA",
@@ -61,7 +61,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -73,11 +73,18 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-ucs.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-ucs.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Integrated Molecular Characterization of Uterine Carcinosarcoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/28292439/",
+      "datePublished": "2017"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
@@ -111,37 +118,177 @@
     },
     {
       "@type": "Grant",
-      "identifier": "R21CA191848",
-      "name": "Dissection of Tumor Evolution Using Patient-Derived Xenografts",
+      "identifier": "R21CA214845",
+      "name": "Statistical Evaluation and Selection of Normalization Methods for microRNA Sequencing Data in Cancer Biomarker Studies",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA191848"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA214845"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA230031",
-      "name": "Quantitative Computational Methods to Accurately Measure Tumor Heterogeneity in Solid Tumors to Inform Development of Evolution-based Treatment Strategies",
+      "identifier": "U24CA210974",
+      "name": "Visualization hub for genomics data exploration and translational discovery",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA230031"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210974"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA034196",
-      "name": "Cancer Center Support (CORE) Grant",
+      "identifier": "U24CA210950",
+      "name": "Integrated analysis of protein expression data from the Reverse Phase Protein Array (RPPA) platform",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA034196"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210950"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210949",
+      "name": "Batch effects in molecular profiling data on cancers: detection, quantitation, interpretation, and correction",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210949"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA199461",
+      "name": "Next-Generation Clustered Heat Maps for fluent, interactive exploration of omic data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA199461"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA180951",
+      "name": "Cloud Based Resource for Data Hosting, Visualization and Analysis Using UCSC Canc",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA180951"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143883",
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143883"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143882",
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143882"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143867",
+      "name": "Genome Characterization Center (GCC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143867"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143866",
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143866"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143858",
+      "name": "UCSC-Buck Inst. Genome Data Analysis Center for TCGA Research Network (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143858"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143848",
+      "name": "Gene Expression Patterns in Human Tumors Identified Using Transcript Sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143848"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143843",
+      "name": "The BCM Tumor Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143843"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143840",
+      "name": "MSKCC Center for Translational Cancer Genomic Analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143840"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143835",
+      "name": "Center for Systems Analysis of the Cancer Regulome",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143835"
     }
   ],
   "dateModified": "2026-09-18T02:37:12.977265+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2017-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

@@ -9,9 +9,9 @@
   "name": "pdc-cptac-ccrcc-discovery-study",
   "alternateName": "CPTAC CCRCC Discovery Study",
   "description": "CPTAC CCRCC Discovery Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-discovery-study",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-discovery-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Analysis of DIA proteomics data using MSFragger-DIA and FragPipe computational platform.",
+  "citeAs": "CPTAC CCRCC Discovery Study",
   "version": "as-retrieved",
   "datePublished": "2023-01-01",
   "recordSet": [

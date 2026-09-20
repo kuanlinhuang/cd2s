@@ -9,7 +9,7 @@
   "name": "pdc-aml-gilteritinib-resistance",
   "alternateName": "AML Gilteritinib Resistance",
   "description": "AML Gilteritinib Resistance",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-aml-gilteritinib-resistance",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-aml-gilteritinib-resistance",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "AML Gilteritinib Resistance",
   "version": "as-retrieved",

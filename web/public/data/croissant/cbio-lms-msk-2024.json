@@ -9,7 +9,7 @@
   "name": "cbio-lms-msk-2024",
   "alternateName": "Leiomyosarcoma  (MSK, Clin Cancer Res 2024)",
   "description": "Targeted sequencing of 470 Leiomyosarcoma samples and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lms-msk-2024",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-lms-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

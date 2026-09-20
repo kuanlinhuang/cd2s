@@ -9,7 +9,7 @@
   "name": "cbio-msk-access-2021",
   "alternateName": "MSK-IMPACT and MSK-ACCESS Mixed Cohort (MSK, Nat Commun 2021)",
   "description": "Targeted sequencing of 1446 Tumor and cfDNA samples (1440 with matched normals) from MSK-IMPACT and MSK-ACCESS.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-access-2021",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-msk-access-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

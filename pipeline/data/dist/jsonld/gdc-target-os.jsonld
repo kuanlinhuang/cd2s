@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-os",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-os",
   "name": "Osteosarcoma",
   "alternateName": [
     "TARGET-OS"
   ],
   "description": "Osteosarcoma",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-os",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-os",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-OS",
     "gdc_program:TARGET",
@@ -52,7 +52,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -64,16 +64,16 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-os.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-os.json",
       "encodingFormat": "application/json"
     }
   ],
   "citation": [
     {
       "@type": "ScholarlyArticle",
-      "name": "DCMTB: a virtual appliance DICOM toolbox.",
-      "identifier": "https://doi.org/10.1007/s10278-009-9230-8",
-      "datePublished": "2010"
+      "name": "Recurrent somatic structural variations contribute to tumorigenesis in pediatric osteosarcoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/24703847/",
+      "datePublished": "2014"
     }
   ],
   "funding": [

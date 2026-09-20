@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-aml",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-aml",
   "name": "Acute Myeloid Leukemia",
   "alternateName": [
     "TARGET-AML"
   ],
   "description": "TARGET AML is the reference paediatric AML cohort. RNA sequencing covers 2,281 cases and microRNA 1,836, with smaller whole genome, exome, methylation and targeted panel layers. 251 patients are recorded as Black or African American, one of the larger absolute numbers in any cohort here, and vital status is informative for 86.6% with a usable overall survival endpoint.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-aml",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-aml",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-AML",
     "gdc_program:TARGET",
@@ -57,7 +57,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -69,7 +69,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-aml.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-aml.json",
       "encodingFormat": "application/json"
     }
   ],
@@ -154,6 +154,16 @@
     },
     {
       "@type": "Grant",
+      "identifier": "T32CA009351",
+      "name": "Pediatric Oncology Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009351"
+    },
+    {
+      "@type": "Grant",
       "identifier": "R01CA204396",
       "name": "ABERRANT SIGNALING IN ACUTE MYELOID LEUKEMIA",
       "funder": {
@@ -165,7 +175,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "name": "Cancer Center Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -235,7 +245,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA096832",
-      "name": "NORMAL & NEOPLASTIC GROWTH IN THE BRAIN",
+      "name": "CORE A - Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -245,42 +255,12 @@
     {
       "@type": "Grant",
       "identifier": "P30CA015704",
-      "name": "Hematologic Malignancies",
+      "name": "Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA015704"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U24CA196172",
-      "name": "ECOG-ACRIN Biospecimen Bank to Support NCTN",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196172"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U10CA180888",
-      "name": "SWOG Network Group Operations Center of the NCTN",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180888"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U10CA180820",
-      "name": "Member Site Core",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180820"
     }
   ],
   "dateModified": "2026-09-18T02:35:31.572614+00:00",

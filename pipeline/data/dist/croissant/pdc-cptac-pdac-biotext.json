@@ -9,7 +9,7 @@
   "name": "pdc-cptac-pdac-biotext",
   "alternateName": "CPTAC PDAC BioTExt",
   "description": "CPTAC PDAC BioTExt",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-pdac-biotext",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-pdac-biotext",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Frozen tissue coring and layered histological analysis improves cell type-specific proteogenomic characterization of pancreatic adenocarcinoma.",
   "version": "as-retrieved",

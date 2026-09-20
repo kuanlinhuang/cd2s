@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-lung-fused-ct-pathology",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-lung-fused-ct-pathology",
   "name": "Lung-Fused-CT-Pathology",
   "alternateName": [
     "lung_fused_ct_pathology"
   ],
   "description": "This is the first attempt of mapping the extent of Invasive Adenocarcinoma onto *in vivo* lung CT. The mappings constitute ground truth of disease and may be used to further investigate the imaging signatures of Invasive Adenocarcinoma in ground glass pulmonary nodules. Please see the Lung-Fused-CT-Pathology Collection page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lung-fused-ct-pathology",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-lung-fused-ct-pathology",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=lung_fused_ct_pathology",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-lung-fused-ct-pathology.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-lung-fused-ct-pathology.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -41,8 +41,9 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 22
+- Of those, 47 were retrieved and graded individually; 10 had no author in common with the generating team and 5 were themselves NCI funded.
 - Citations to the dataset's publication: 1161 (attention, not reuse)
-- Reuse gap index: -0.71 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.44 (negative means less reused than comparable datasets)
   - Characteristics and prognostic impact of IDH mutations in AML: a COG, SWOG, and ECOG analysis. (2023) PMID 37267439
   - Acute Myeloid Leukemia iPSCs Reveal a Role for RUNX1 in the Maintenance of Human Leukemia Stem Cells. (2020) PMID 32492433
   - Cohesin regulates alternative splicing. (2023) PMID 36857449
@@ -54,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-beataml1.0-cohort.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-beataml1.0-cohort.json

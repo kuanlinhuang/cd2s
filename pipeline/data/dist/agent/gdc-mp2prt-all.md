@@ -78,17 +78,17 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 2
-- Citations to the dataset's publication: 17 (attention, not reuse)
-- Reuse gap index: +0.05 (negative means less reused than comparable datasets)
-  - Pseudogene Coexpression Networks Reveal a Robust Prognostic Signature for Pediatric B-ALL Survival. (2026) PMID 41802009
-  - Increased activity of PRMT5-MEP50 complex improves survival of chromosomally unstable cancer cells by increasing tolerance to protein aggregation and proteotoxicity (2025) PMID None
-  - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None
+- Articles that analyzed these data: 0
+- Of those, 6 were retrieved and graded individually; 0 had no author in common with the generating team and 2 were themselves NCI funded.
+- Reuse gap index: -1.66 (negative means less reused than comparable datasets)
+  - Molecular and pharmacological heterogeneity of ETV6::RUNX1 acute lymphoblastic leukemia. (2025) PMID 39880832
   - Relapse Thresholds (12/24 Mo) Define Survival Disparity in Pediatric B-ALL. (2026) PMID 42383304
+  - Pseudogene Coexpression Networks Reveal a Robust Prognostic Signature for Pediatric B-ALL Survival. (2026) PMID 41802009
   - Uncovering the genomic complexity of PAX5 intragenic tandem multiplication via long-read and short-read sequencing. (2026) PMID 41587071
+  - Increased activity of PRMT5-MEP50 complex improves survival of chromosomally unstable cancer cells by increasing tolerance to protein aggregation and proteotoxicity (2025) PMID None
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-mp2prt-all.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-mp2prt-all.json

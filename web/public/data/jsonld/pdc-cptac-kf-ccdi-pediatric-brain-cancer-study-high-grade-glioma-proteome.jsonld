@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-proteome",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-proteome",
   "name": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - High-Grade Glioma Proteome",
   "alternateName": [
     "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - High-Grade Glioma Proteome"
   ],
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - High-Grade Glioma Proteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-proteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-proteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000687"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-proteome.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-high-grade-glioma-proteome.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-gist-msk-2023",
   "alternateName": "Gastrointestinal Stromal Tumors (MSK, Clin Cancer Res 2023)",
   "description": "Targeted sequencing of 469 gastrointestinal stromal tumors and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gist-msk-2023",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-gist-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

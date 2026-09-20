@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-trio-cru",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-trio-cru",
   "name": "Ukrainian National Research Center for Radiation Medicine Trio Study",
   "alternateName": [
     "TRIO-CRU"
   ],
   "description": "Ukrainian National Research Center for Radiation Medicine Trio Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-trio-cru",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-trio-cru",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TRIO-CRU",
     "gdc_program:TRIO",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -53,18 +53,11 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-trio-cru.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-trio-cru.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Risk of clonal hematopoiesis in families exposed to radiation following the Chornobyl accident.",
-      "identifier": "https://doi.org/10.1093/carcin/bgaf056",
-      "datePublished": "2025"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:36:36.484634+00:00",
   "datePublished": "2025-01-01",

@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-simm-gallbladder-cancer",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-simm-gallbladder-cancer",
   "name": "SIMM Gallbladder Cancer",
   "alternateName": [
     "SIMM Gallbladder Cancer - Phosphoproteome",
     "SIMM Gallbladder Cancer - Proteome"
   ],
   "description": "SIMM Gallbladder Cancer",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-simm-gallbladder-cancer",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-simm-gallbladder-cancer",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000607",
     "https://pdc.cancer.gov/pdc/study/PDC000606"
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-simm-gallbladder-cancer.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-simm-gallbladder-cancer.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-coadread-mskcc",
   "alternateName": "Colorectal Adenocarcinoma Triplets (MSK, Genome Biol 2014)",
   "description": "Targeted sequencing of primary, metastatic, and normal tissues from 69 colorectal adenocarcinoma patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-coadread-mskcc",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-coadread-mskcc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

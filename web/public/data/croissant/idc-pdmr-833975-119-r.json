@@ -9,7 +9,7 @@
   "name": "idc-pdmr-833975-119-r",
   "alternateName": "PDMR-833975-119-R",
   "description": "PDMR-833975-119-R is a dataset of detailed MRI, PET/CT (FDG and FLT) in patient-derived xenograft in mouse model of pancreatic adenocarcinoma from the National Cancer Institute Patient-Derived Models Repository with baseline and bi-weekly monitoring imaging. Please see the PDMR-833975-119-R wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pdmr-833975-119-r",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pdmr-833975-119-r",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "PDMR-833975-119-R",
   "version": "as-retrieved",

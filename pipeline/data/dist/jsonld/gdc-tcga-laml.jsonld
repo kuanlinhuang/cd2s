@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-laml",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-laml",
   "name": "Acute Myeloid Leukemia",
   "alternateName": [
     "TCGA-LAML"
   ],
   "description": "Acute Myeloid Leukemia",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-laml",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-laml",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-LAML",
     "gdc_program:TCGA",
@@ -50,7 +50,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -62,75 +62,182 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-laml.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-laml.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Genomic and epigenomic landscapes of adult de novo acute myeloid leukemia",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/23634996/",
+      "datePublished": "2013"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
-      "identifier": "U24CA264032",
-      "name": "The joint WCM-NYGC Center for Functional and Clinical Interpretation of Tumor Profiles",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA264032"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
     },
     {
       "@type": "Grant",
-      "identifier": "R37CA229861",
-      "name": "Cell-of-Origin Footprints of Passenger Mutations in Human Lung Cancer",
+      "identifier": "U24CA143883",
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA229861"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143883"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "identifier": "U24CA143882",
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143882"
     },
     {
       "@type": "Grant",
-      "identifier": "U01CA097096",
-      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "identifier": "U24CA143867",
+      "name": "Genome Characterization Center (GCC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA097096"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143867"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA097096",
-      "name": "DNA Polymerases in Nonhomologous End Joining",
+      "identifier": "U24CA143866",
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA097096"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143866"
     },
     {
       "@type": "Grant",
-      "identifier": "P01CA247773",
-      "name": "Project 2: TMEJ Regulation in Cancer and Treatment Resistance",
+      "identifier": "U24CA143858",
+      "name": "UCSC-Buck Inst. Genome Data Analysis Center for TCGA Research Network (GDAC)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA247773"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143858"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143848",
+      "name": "Gene Expression Patterns in Human Tumors Identified Using Transcript Sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143848"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143843",
+      "name": "The BCM Tumor Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143843"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143840",
+      "name": "MSKCC Center for Translational Cancer Genomic Analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143840"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143835",
+      "name": "Center for Systems Analysis of the Cancer Regulome",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143835"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143799",
+      "name": "TCGA Data Analysis Center at Berkeley",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143799"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA162086",
+      "name": "DNMT3A MUTATIONS IN ACUTE MYELOID LEUKEMIA",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA162086"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA083962",
+      "name": "THE BIOLOGY OF PROMYELOCYTIC LEUKEMIA IN A MOUSE MODEL",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA083962"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA091842",
+      "name": "Clinical Protocol and Data Management",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA091842"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA016672",
+      "name": "Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016672"
     }
   ],
   "dateModified": "2026-09-18T02:36:47.097704+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2016-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

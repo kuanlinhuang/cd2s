@@ -9,7 +9,7 @@
   "name": "cbio-msk-ctdna-vte-2024",
   "alternateName": "MSK ctDNA Sequencing Cohort (MSK, Nature Medicine 2024)",
   "description": "Targeted sequencing of 5,567 cancer patient ctDNA samples via MSK-ACCESS. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-ctdna-vte-2024",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-msk-ctdna-vte-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

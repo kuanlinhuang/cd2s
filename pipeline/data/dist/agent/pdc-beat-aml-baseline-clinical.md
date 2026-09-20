@@ -42,8 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Citations to the dataset's publication: 19 (attention, not reuse)
-- Reuse gap index: -0.90 (negative means less reused than comparable datasets)
+- Of those, 2 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -0.96 (negative means less reused than comparable datasets)
   - High <i>SEC61A1</i> expression predicts poor outcome of acute myeloid leukemia. (2024) PMID 38584833
 
 ## Provenance
@@ -51,4 +51,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-beat-aml-baseline-clinical.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-beat-aml-baseline-clinical.json

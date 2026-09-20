@@ -42,16 +42,18 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 441
-- Reuse gap index: +1.32 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Of those, 112 were retrieved and graded individually; 10 had no author in common with the generating team.
+- Citations to the dataset's publication: 4096 (attention, not reuse)
+- Reuse gap index: +2.86 (negative means less reused than comparable datasets)
   - Integrated multiomics analysis and machine learning refine neutrophil extracellular trap-related molecular subtypes and prognostic models for acute myeloid leukemia. (2025) PMID 40066454
   - Inhibition of PI3K/AKT/mTOR signaling enhances autophagy in HL-60 acute myeloid leukemia cells: An integrative bioinformatic and in vitro study. (2025) PMID 40917720
   - CLEVER-1 targeting antibody, bexmarilimab, supports HLA-DR expression and alters ex vivo responsiveness to azacitidine and venetoclax in myeloid malignancies. (2025) PMID 40369178
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+  - PRC2-Related Epigenetic Age Acceleration in Acute Myeloid Leukemia with DNMT3A and IDH2 Mutations. (2026) PMID 41556261
+  - Identification of the prognostic effect of mitophagy-related genes in acute myeloid leukemia. (2025) PMID 40873580
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-laml.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-laml.json

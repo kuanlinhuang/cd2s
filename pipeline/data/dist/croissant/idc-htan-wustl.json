@@ -9,7 +9,7 @@
   "name": "idc-htan-wustl",
   "alternateName": "HTAN-WUSTL",
   "description": "Please see the DICOM converted Slide Microscopy images for the HTAN-WUSTL collection information page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-htan-wustl",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-htan-wustl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "HTAN-WUSTL",
   "version": "as-retrieved",

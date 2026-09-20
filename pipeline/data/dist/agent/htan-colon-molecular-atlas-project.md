@@ -29,11 +29,11 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 415 (attention, not reuse)
-- Reuse gap index: -2.55 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.23 (negative means less reused than comparable datasets)
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/htan-colon-molecular-atlas-project.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/htan-colon-molecular-atlas-project.json

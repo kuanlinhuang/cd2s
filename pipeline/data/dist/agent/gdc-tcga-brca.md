@@ -84,17 +84,18 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 2463
+- Articles that analyzed these data: 2373
+- Of those, 114 were retrieved and graded individually; 9 had no author in common with the generating team.
 - Citations to the dataset's publication: 9914 (attention, not reuse)
-- Reuse gap index: +2.04 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+- Reuse gap index: +2.59 (negative means less reused than comparable datasets)
   - Tumor necrosis associates with aggressive breast cancer features, increased hypoxia signaling and reduced patient survival. (2025) PMID 41310191
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
+  - Exercise-related genes predicts overall survival and tumor immune microenvironment, and identifies the biological role of SLC52A2 in breast cancer. (2026) PMID 42215809
+  - Proteasome Assembly Chaperone 3 Defines Metabolic-Immune Programs and Poor Prognosis in Breast Cancer via Multi-Omics Approaches. (2026) PMID 41869439
+  - TMEM70 drives breast cancer progression via mitochondrial oxidative phosphorylation and microenvironment remodeling. (2026) PMID 41998594
+  - When complexity does not pay: benchmarking deep learning and ensemble methods for biomarker discovery. (2026) PMID 42101927
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-brca.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-brca.json

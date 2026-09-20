@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-yonsei-cancer-center-tnbc",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-yonsei-cancer-center-tnbc",
   "name": "Yonsei Cancer Center - TNBC",
   "alternateName": [
     "Yonsei Cancer Center - TNBC - Phosphoproteome",
     "Yonsei Cancer Center - TNBC - Proteome"
   ],
   "description": "Yonsei Cancer Center - TNBC",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-yonsei-cancer-center-tnbc",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-yonsei-cancer-center-tnbc",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000696",
     "https://pdc.cancer.gov/pdc/study/PDC000695"
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-yonsei-cancer-center-tnbc.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-yonsei-cancer-center-tnbc.json",
       "encodingFormat": "application/json"
     }
   ],

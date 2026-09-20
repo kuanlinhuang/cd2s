@@ -9,7 +9,7 @@
   "name": "cbio-panet-msk-2018",
   "alternateName": "Metastatic Pancreatic Neuroendocrine Tumor (MSK, JCO Precis Oncol 2018)",
   "description": "Targeted sequencing of 96 metastatic pancreatic neuroendocrine tumors from 80 patients and their matched normals using MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-panet-msk-2018",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-panet-msk-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

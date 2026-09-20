@@ -346,8 +346,27 @@ def to_agent_brief(rec: DatasetRecord) -> str:
             "evidence of absence."
         )
     else:
-        analyzed = m.n_by_tier.get(ReuseTier.T3_ANALYZED.value, 0)
-        lines.append(f"- Articles that analyzed these data: {analyzed}")
+        analyzed = m.n_by_tier.get(ReuseTier.T3_ANALYZED.value)
+        if analyzed is None:
+            lines.append(
+                "- Reuse of these data could not be measured. Europe PMC indexes this "
+                "dataset's accession as separate words, and too few of the matching "
+                "articles are open access to estimate how many of them are really about "
+                "this dataset. No count is given rather than an inflated one."
+            )
+        else:
+            lines.append(f"- Articles that analyzed these data: {analyzed}")
+        if m.n_reuse_examined:
+            lines.append(
+                f"- Of those, {m.n_reuse_examined} were retrieved and graded individually; "
+                f"{m.n_independent_reuse} had no author in common with the generating team"
+                + (
+                    f" and {m.n_nci_funded_reuse} were themselves NCI funded"
+                    if m.n_nci_funded_reuse
+                    else ""
+                )
+                + "."
+            )
         if m.n_citations_to_primary_publication:
             lines.append(
                 f"- Citations to the dataset's publication: "

@@ -9,7 +9,7 @@
   "name": "cbio-cscc-ucsf-2021",
   "alternateName": "Cutaneous Squamous Cell Carcinoma (UCSF, NPJ Genom Med 2021)",
   "description": "Catalogue of driver genes in cutaneous squamous cell carcinoma. Meta-analysis of 105 normal/tumor pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cscc-ucsf-2021",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-cscc-ucsf-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

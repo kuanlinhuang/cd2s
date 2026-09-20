@@ -9,7 +9,7 @@
   "name": "cbio-mixed-cfdna-msk-2020",
   "alternateName": "Mixed cfDNA (MSK, Genome Med 2021)",
   "description": "IMPACT sequencing of 229 cell-free DNA (cfDNA) and associated tumor samples with matched normal",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mixed-cfdna-msk-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-mixed-cfdna-msk-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

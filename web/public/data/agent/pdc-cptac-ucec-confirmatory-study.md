@@ -42,13 +42,14 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Citations to the dataset's publication: 3 (attention, not reuse)
-- Reuse gap index: -2.65 (negative means less reused than comparable datasets)
+- Of those, 3 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -2.83 (negative means less reused than comparable datasets)
   - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
+  - KinPred-RNA-kinase activity inference and cancer type classification using machine learning on RNA-seq data. (2024) PMID 38523792
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-ucec-confirmatory-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ucec-confirmatory-study.json

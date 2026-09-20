@@ -9,7 +9,7 @@
   "name": "gdc-match-n",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm N",
   "description": "Genomic Characterization CS-MATCH-0007 Arm N",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-n",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-match-n",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic Characterization CS-MATCH-0007 Arm N",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-prostate-mri-us-biopsy",
   "alternateName": "Prostate-MRI-US-Biopsy",
   "description": "This dataset was derived from tracked biopsy sessions using the Artemis biopsy system, many of which included image fusion with MRI targets. Patients received a 3D transrectal ultrasound scan, after which nonrigid registration (e.g. \u201cfusion\u201d) was performed between real-time ultrasound and preoperative MRI, enabling biopsy cores to be sampled from MR regions of interest. Most cases also included sampling of systematic biopsy cores using a 12-core digital template. The Artemis system tracked targeted and systematic core locations using encoder kinematics of a mechanical arm, and recorded locations relative to the Ultrasound scan. MRI biopsy coordinates were also recorded for most cases. Please see the Prostate-MRI-US-Biopsy page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-mri-us-biopsy",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-prostate-mri-us-biopsy",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Prostate-MRI-US-Biopsy",
   "version": "as-retrieved",

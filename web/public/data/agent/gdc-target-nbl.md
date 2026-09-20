@@ -41,9 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 55
-- Citations to the dataset's publication: 24 (attention, not reuse)
-- Reuse gap index: -3.39 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 49
+- Of those, 109 were retrieved and graded individually; 8 had no author in common with the generating team and 8 were themselves NCI funded.
+- Citations to the dataset's publication: 989 (attention, not reuse)
+- Reuse gap index: -3.16 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - ONECUT2 is a driver of neuroendocrine prostate cancer. (2019) PMID 30655535
   - <i>MYC</i> Drives a Subset of High-Risk Pediatric Neuroblastomas and Is Activated through Mechanisms Including Enhancer Hijacking and Focal Enhancer Amplification. (2018) PMID 29284669
@@ -55,4 +56,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-nbl.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-target-nbl.json

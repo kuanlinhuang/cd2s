@@ -9,11 +9,11 @@
   "name": "gdc-tcga-cesc",
   "alternateName": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma",
   "description": "The Cancer Genome Atlas-Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma (TCGA-CESC) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed CESC cases. Please see the TCGA-CESC page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-CESC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-cesc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-cesc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma",
+  "citeAs": "Integrated genomic and molecular characterization of cervical cancer",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2014-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

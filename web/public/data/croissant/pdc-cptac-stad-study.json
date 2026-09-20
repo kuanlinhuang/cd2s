@@ -9,7 +9,7 @@
   "name": "pdc-cptac-stad-study",
   "alternateName": "CPTAC STAD Study",
   "description": "The CPTAC gastric cancer study is the most extensively measured cohort indexed here. Four of its seven layers - acetylome, glycoproteome, ubiquitylome and metabolome - exist in fewer than twenty NCI cohorts each, and the combination on a single set of 193 tumors exists nowhere else. Ubiquitylation data on 184 cases is particularly scarce: only five studies in the entire Proteomic Data Commons carry it.\nIt is also a clear illustration of why reuse measurement is hard. All of it is openly downloadable with no account, and yet a literature search for its accession finds almost nothing - because authors cite the marker paper, not the PDC study identifier. The absence of citation evidence here says more about how proteomics data are referenced than about whether anyone has used them.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-stad-study",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-stad-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "A 15-layer multi-omics analysis of gastric cancer ecotypes provides therapeutic insights.",
   "version": "as-retrieved",

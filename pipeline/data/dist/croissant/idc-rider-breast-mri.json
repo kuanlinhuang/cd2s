@@ -9,7 +9,7 @@
   "name": "idc-rider-breast-mri",
   "alternateName": "RIDER Breast MRI",
   "description": "NSCLC-Radiomics-Interobserver1 contains clinical data and computed tomography (CT) from 22 non-small cell lung cancer (NSCLC) radiotherapy patients. This dataset refers to the \"Multiple delineation\" dataset of the study published in Nature Communications). In short, the publication used a radiomics approach to computed tomography data of 1,019 patients with lung or head-and-neck cancer. Please see the NSCLC-Radiomics-Interobserver1 page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-rider-breast-mri",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-rider-breast-mri",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "RIDER Breast MRI",
   "version": "as-retrieved",

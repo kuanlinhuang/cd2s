@@ -42,7 +42,9 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Reuse gap index: +0.52 (negative means less reused than comparable datasets)
+- Of those, 3 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +0.42 (negative means less reused than comparable datasets)
+  - Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets. (2025) PMID 40250426
   - An SLCO2B1 mRNA Isoform Acts as a Noncoding RNA to Drive Cancer Progression by Triggering Protein Biosynthesis. (2026) PMID 41886603
   - Automated sparse feature selection in high-dimensional proteomics data via 1-bit compressed sensing and K-Medoids clustering. (2025) PMID 40597613
 
@@ -51,4 +53,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-ncc-icc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-ncc-icc.json

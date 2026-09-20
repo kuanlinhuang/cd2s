@@ -16,8 +16,9 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Citations to the dataset's publication: 18 (attention, not reuse)
-- Reuse gap index: +0.18 (negative means less reused than comparable datasets)
+- Of those, 3 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +0.00 (negative means less reused than comparable datasets)
+  - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
   - Identification of non-canonical peptides with moPepGen. (2026) PMID 40523945
   - Targeting PLOD2 induces epithelioid differentiation and improves therapeutic response in sarcomatoid renal cell carcinoma. (2026) PMID 41109566
 
@@ -26,4 +27,4 @@ Dataset id: pdc-cptac-ccrcc-confirmatory-study
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-ccrcc-confirmatory-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ccrcc-confirmatory-study.json

@@ -9,7 +9,7 @@
   "name": "cbio-es-dsrct-msk-2023",
   "alternateName": "Ewing Sarcoma (MSK, Cancer Research 2024)",
   "description": "Targeted Sequencing of 277 Ewing sarcoma and Desmoplastic small round cell patient tumors with their matched normal pairs via MSK-IMPACT platform to detect EWSR1 chromoplexy-associated structural rearrangements.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-es-dsrct-msk-2023",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-es-dsrct-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

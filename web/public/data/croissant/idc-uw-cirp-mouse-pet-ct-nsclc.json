@@ -9,7 +9,7 @@
   "name": "idc-uw-cirp-mouse-pet-ct-nsclc",
   "alternateName": "UW-CIRP-Mouse-PET-CT-NSCLC",
   "description": "18F-FDG PET/CT imaging of 14 genetically-engineered mouse models (GEMM) of lung squamous cell carcinoma (LUSQ) from the NCI Co-Clinical Imaging Resource Program (Co-CIRP). 11 animals were imaged before and after a novel combination therapy (anti-PD-L1 + CXCR2 antagonist), with 3 additional baseline-only animals. The dataset includes 25 imaging sessions with 75 DICOM series (25 PT, 25 CT, 25 RTSTRUCT segmentations) acquired on a Siemens Inveon PET/CT system. Please see the UW-CIRP-Mouse-PET-CT-NSCLC Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-uw-cirp-mouse-pet-ct-nsclc",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-uw-cirp-mouse-pet-ct-nsclc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "UW-CIRP-Mouse-PET-CT-NSCLC",
   "version": "as-retrieved",

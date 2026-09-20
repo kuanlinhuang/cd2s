@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-exceptional_responders-er",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-exceptional_responders-er",
   "name": "Exceptional Responders",
   "alternateName": [
     "EXCEPTIONAL_RESPONDERS-ER"
   ],
   "description": "Exceptional Responders",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-exceptional_responders-er",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-exceptional_responders-er",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/EXCEPTIONAL_RESPONDERS-ER",
     "gdc_program:EXCEPTIONAL_RESPONDERS",
@@ -73,7 +73,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -85,19 +85,43 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-exceptional_responders-er.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-exceptional_responders-er.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
+  "citation": [],
+  "funding": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "Molecular Features of Cancers Exhibiting Exceptional Responses to Treatment.",
-      "identifier": "https://doi.org/10.1016/j.ccell.2020.10.015",
-      "datePublished": "2021"
+      "@type": "Grant",
+      "identifier": "U24CA210988",
+      "name": "RNA sequencing analysis of Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210988"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210969",
+      "name": "Integrative Cancer Epigenomic Data Analysis Center (ICE-DAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210969"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143843",
+      "name": "The BCM Tumor Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143843"
     }
   ],
-  "funding": [],
   "dateModified": "2026-09-18T02:37:01.154014+00:00",
   "datePublished": "2020-01-01",
   "variableMeasured": [

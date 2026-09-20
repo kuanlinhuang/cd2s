@@ -42,16 +42,18 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 758
-- Reuse gap index: +0.69 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Of those, 112 were retrieved and graded individually; 9 had no author in common with the generating team.
+- Citations to the dataset's publication: 3314 (attention, not reuse)
+- Reuse gap index: +1.35 (negative means less reused than comparable datasets)
   - Drug repurposing targeting miRNA-mRNA networks to mitigate areca nut-induced head and neck cancer. (2026) PMID 40639775
   - Multi-omics analysis to uncover the molecular basis of tumor budding in head and neck squamous cell carcinoma. (2025) PMID 40082664
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
   - Clinical and molecular characterizations of HNSCC patients with occult lymph node metastasis. (2025) PMID 40652069
+  - A multi-omics pipeline integrating machine learning and spatial-cellular analysis identifies SASH1 as a prognostic biomarker and therapeutic target in head and neck squamous cell carcinoma. (2025) PMID 41099090
+  - Identification of m6 A-regulated ferroptosis biomarkers for prognosis in laryngeal cancer. (2025) PMID 40229748
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-hnsc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-hnsc.json

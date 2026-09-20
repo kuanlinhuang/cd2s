@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-nlm-visible-human-project",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-nlm-visible-human-project",
   "name": "NLM-Visible-Human-Project",
   "alternateName": [
     "nlm_visible_human_project"
   ],
   "description": "The NLM Visible Human Project has created publicly-available complete, anatomically detailed, three-dimensional representations of a human male body and a human female body. Specifically, the VHP provides a public-domain library of cross-sectional cryosection, CT, and MRI images obtained from one male cadaver and one female cadaver. The Visible Man data set was publicly released in 1994 and the Visible Woman in 1995. The data sets were designed to serve as (1) a reference for the study of human anatomy, (2) public-domain data for testing medical imaging algorithms, and (3) a test bed and model for the construction of network-accessible image libraries. The VHP data sets have been applied to a wide range of educational, diagnostic, treatment planning, virtual reality, artistic, mathematical, and industrial uses. About 4,000 licensees from 66 countries were authorized to access the datasets. As of 2019, a license is no longer required to access the VHP datasets. Courtesy of the U.S. National Library of Medicine. Release of this collection by IDC does not indicate or imply that NLM has endorsed its products/services/applications. Please see the DICOM converted images for the NLM-Visible-Human-Project collection information page to learn more about the images and to obtain any supporting metadata for this collection. Note that this collection may not reflect the most current/accurate data available from NLM.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-nlm-visible-human-project",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-nlm-visible-human-project",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nlm_visible_human_project",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-nlm-visible-human-project.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-nlm-visible-human-project.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-cellline-ccle-broad",
   "alternateName": "Cancer Cell Line Encyclopedia (Novartis/Broad, Nature 2012)",
   "description": "Targeted sequencing of 1020 samples from Cancer Cell Line Encyclopedia from the Broad Institute and Novartis.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cellline-ccle-broad",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-cellline-ccle-broad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

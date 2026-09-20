@@ -9,7 +9,7 @@
   "name": "pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
   "alternateName": "CPTAC CCRCC Confirmatory Study - Kinase Inhibition",
   "description": "CPTAC CCRCC Confirmatory Study - Kinase Inhibition",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-confirmatory-study-kinase-inhibition",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC CCRCC Confirmatory Study - Kinase Inhibition",
   "version": "as-retrieved",

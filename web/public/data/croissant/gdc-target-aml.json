@@ -9,7 +9,7 @@
   "name": "gdc-target-aml",
   "alternateName": "Acute Myeloid Leukemia",
   "description": "TARGET AML is the reference paediatric AML cohort. RNA sequencing covers 2,281 cases and microRNA 1,836, with smaller whole genome, exome, methylation and targeted panel layers. 251 patients are recorded as Black or African American, one of the larger absolute numbers in any cohort here, and vital status is informative for 86.6% with a usable overall survival endpoint.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-aml",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-aml",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural alterations and age-specific mutational interactions",
   "version": "as-retrieved",

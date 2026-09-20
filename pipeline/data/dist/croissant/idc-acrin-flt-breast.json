@@ -9,7 +9,7 @@
   "name": "idc-acrin-flt-breast",
   "alternateName": "ACRIN-FLT-Breast",
   "description": "ACRIN 6688, a 18F -fluorothymidine (FLT) imaging study using positron emission tomography (PET), was designed to evaluate the relationship between 18F FLT uptake parameters and pathologic complete response to neoadjuvant therapy of the primary tumor in patients with locally advanced breast cancer. Participant Eligibility and Enrollment: Criteria for inclusion were patients with pathologically confirmed breast cancer and determined to be a candidate for primary systemic (neoadjuvant) therapy and for whom surgical resection of residual primary tumor following completion of neoadjuvant therapy is planned. Please see the ACRIN-FLT-Breast wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-flt-breast",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-acrin-flt-breast",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "ACRIN-FLT-Breast",
   "version": "as-retrieved",

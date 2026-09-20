@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-ctsp-dlbcl1",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-ctsp-dlbcl1",
   "name": "CTSP Diffuse Large B-Cell Lymphoma (DLBCL) CALGB 50303",
   "alternateName": [
     "CTSP-DLBCL1"
   ],
   "description": "What makes this cohort worth knowing about is not its size but its provenance. The samples come from CALGB 50303, a randomized phase III trial comparing dose-adjusted EPOCH-R against R-CHOP as frontline therapy for diffuse large B-cell lymphoma. Molecular data collected inside a randomized trial are scarce: treatment assignment is not confounded with patient characteristics, which is the assumption that almost every observational treatment-response analysis has to make and cannot verify.\nVital status is informative for 100% of the 45 cases and median follow-up is 60.4 months. RNA sequencing covers 44 cases, exome 44 and a targeted panel all 45.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ctsp-dlbcl1",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-ctsp-dlbcl1",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CTSP-DLBCL1",
     "gdc_program:CTSP",
@@ -53,7 +53,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -65,7 +65,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-ctsp-dlbcl1.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-ctsp-dlbcl1.json",
       "encodingFormat": "application/json"
     }
   ],
@@ -78,6 +78,36 @@
     }
   ],
   "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA157581",
+      "name": "Molecular Diagnosis and Prognosis in Aggressive Lymphoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157581"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA229100",
+      "name": "Preclinical Models and Therapeutics Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA229100"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA023108",
+      "name": "Signaling, Genomes, and Networks",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA023108"
+    },
     {
       "@type": "Grant",
       "identifier": "U54CA137788",
@@ -180,36 +210,6 @@
     },
     {
       "@type": "Grant",
-      "identifier": "P01CA229100",
-      "name": "Preclinical Models and Therapeutics Core",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA229100"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA157581",
-      "name": "Molecular Diagnosis and Prognosis in Aggressive Lymphoma",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157581"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA023108",
-      "name": "Signaling, Genomes, and Networks",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA023108"
-    },
-    {
-      "@type": "Grant",
       "identifier": "U10CA180888",
       "name": "SWOG Network Group Operations Center of the NCTN",
       "funder": {
@@ -261,7 +261,7 @@
     {
       "@type": "Grant",
       "identifier": "U10CA180820",
-      "name": "Member Site Core",
+      "name": "ECOG-ACRIN Network Group Operations Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

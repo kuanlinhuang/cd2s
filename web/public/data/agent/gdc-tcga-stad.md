@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1582
-- Reuse gap index: +1.84 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
-  - RIPK3 modulates sarcoma through immune checkpoint HAVCR2. (2022) PMID 36238358
+- Articles that analyzed these data: 1405
+- Of those, 108 were retrieved and graded individually; 10 had no author in common with the generating team and 1 were themselves NCI funded.
+- Citations to the dataset's publication: 5063 (attention, not reuse)
+- Reuse gap index: +2.33 (negative means less reused than comparable datasets)
+  - Migrasome-Related Prognostic Genes in Gastric Cancer: A Transcriptomic and Immunotherapeutic Analysis. (2025) PMID 40827133
+  - Loss of Kmt2c/d promotes gastric cancer and confers vulnerability to mTORC1 and PD-1 inhibition. (2026) PMID 42118591
+  - A prognostic model for gastric cancer based on histamine-associated prognostic genes. (2026) PMID 41814388
+  - Cellular senescence in gastric cancer: a novel prognostic stratification and immune predictor. (2026) PMID 41808162
+  - Amino acid metabolism-related model for prognosis and immunity in gastric cancer. (2026) PMID 41784817
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-stad.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-stad.json

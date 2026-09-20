@@ -9,7 +9,7 @@
   "name": "cbio-prad-su2c-2019",
   "alternateName": "Metastatic Prostate Adenocarcinoma (SU2C/PCF Dream Team, PNAS 2019)",
   "description": "Whole exome sequencing of 444 castrate resistant prostate cancer tumor/normal pairs. SU2C-PCF Dream Team: Precision Therapy for Advanced Prostate Cancer.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-su2c-2019",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-su2c-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "pdc-vu-normal-colon-epithelium",
   "alternateName": "VU Normal Colon Epithelium",
   "description": "VU Normal Colon Epithelium",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-vu-normal-colon-epithelium",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-vu-normal-colon-epithelium",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Identification of microbial species and proteins associated with colorectal cancer by reanalyzing CPTAC proteomic datasets.",
   "version": "as-retrieved",

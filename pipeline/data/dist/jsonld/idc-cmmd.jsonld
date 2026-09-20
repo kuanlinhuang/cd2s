@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-cmmd",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-cmmd",
   "name": "CMMD",
   "alternateName": [
     "cmmd"
   ],
   "description": "This collection contains clinical data and 3,728 mammographies (MG) from 1,775 patients, with biopsy-confirmed benign or malignant breast tumors. For a subset of 749 patients (D2-####), molecular subtype is included. Please see the CMMD wiki page for further detail and associated metadata.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cmmd",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cmmd",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=cmmd",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-cmmd.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-cmmd.json",
       "encodingFormat": "application/json"
     }
   ],

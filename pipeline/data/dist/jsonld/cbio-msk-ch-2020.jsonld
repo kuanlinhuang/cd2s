@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-ch-2020",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-msk-ch-2020",
   "name": "Cancer Therapy and Clonal Hematopoiesis (MSK, Nat Genet 2020)",
   "alternateName": [
     "msk_ch_2020"
   ],
   "description": "Clonal hematopoiesis mutations identified in blood samples from 24,146 patients whose tumor-blood pairs were analyzed using MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-ch-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-msk-ch-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=msk_ch_2020"
   ],
@@ -41,7 +41,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -53,7 +53,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-msk-ch-2020.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-msk-ch-2020.json",
       "encodingFormat": "application/json"
     }
   ],
@@ -89,7 +89,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA172012",
-      "name": "Maximizing Effectiveness of Radioiodine Therapy by Inhibiting MAPK Signaling",
+      "name": "Elucidating and Targeting the Molecular Foundations of Hurthle Cell Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

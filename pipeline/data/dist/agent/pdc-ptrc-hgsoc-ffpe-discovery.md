@@ -40,7 +40,8 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1
+- Articles that analyzed these data: 0
+- Of those, 1 were retrieved and graded individually; 0 had no author in common with the generating team.
   - Active Macropinocytosis, Lipid Catabolism, and Exhausting Immune Microenvironment of Ascites Tumor Cells Are Involved in Resistance to Platinum-Based Therapy in Patients With High-Grade Serous Ovarian Cancer. (2026) PMID 41799929
 
 ## Provenance
@@ -48,4 +49,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-ptrc-hgsoc-ffpe-discovery.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-ptrc-hgsoc-ffpe-discovery.json

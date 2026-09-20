@@ -42,17 +42,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
-- Citations to the dataset's publication: 10 (attention, not reuse)
-- Reuse gap index: -0.48 (negative means less reused than comparable datasets)
+- Of those, 9 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -0.49 (negative means less reused than comparable datasets)
+  - METTL1-modulated LSM14A facilitates proliferation and migration in glioblastoma via the stabilization of DDX5. (2024) PMID 39040050
   - Integrative multi-omics reveals two biologically distinct groups of pilocytic astrocytoma. (2023) PMID 37656187
-  - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
-  - Surface Proteomic Analysis Reveals the Presence of Noncanonical Cell Membrane Endoplasmic Reticulum Chaperones in High-Grade Gliomas. (2026) PMID 41287960
   - A data-driven pan-cancer proteogenomic analysis reveals the characteristics of human cancer protein expression. (2026) PMID 41550727
   - Germline pathogenic variation impacts somatic alterations and patient outcomes in pediatric central nervous system tumors. (2025) PMID 41271695
+  - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-pediatric-brain-cancer-pilot-study.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-pediatric-brain-cancer-pilot-study.json

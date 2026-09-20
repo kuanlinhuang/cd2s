@@ -9,11 +9,11 @@
   "name": "gdc-tcga-acc",
   "alternateName": "Adrenocortical Carcinoma",
   "description": "Adrenocortical carcinoma is a rare cancer that develops in the outer layer of tissue of the adrenal glands, organs that lie on top of each kidney. This outer layer known as the adrenal cortex produces important hormones called steroids that help the body deal with stress, regulate blood pressure and the amount of salt in the blood, as well as cause the body to acquire masculine or feminine characteristics. A tumor of the adrenal cortex can produce either no hormones or excess hormones. Please see the DICOM converted Slide Microscopy images for the TCGA-ACC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-acc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-acc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Adrenocortical Carcinoma",
+  "citeAs": "Comprehensive Pan-Genomic Characterization of Adrenocortical Carcinoma",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2016-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

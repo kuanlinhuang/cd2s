@@ -9,11 +9,11 @@
   "name": "gdc-tcga-read",
   "alternateName": "Rectum Adenocarcinoma",
   "description": "The Cancer Genome Atlas-Rectum Adenocarcinoma (TCGA-READ) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP), with the cooperation of several TCGA tissue-contributing institutions, has archived a large portion of the radiological images of the genetically-analyzed READ cases. Please see the TCGA-READ wiki page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-READ collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-read",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-read",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Rectum Adenocarcinoma",
+  "citeAs": "Comprehensive molecular characterization of human colon and rectal cancer",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2016-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

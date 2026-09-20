@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-6698",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-acrin-6698",
   "name": "ACRIN-6698",
   "alternateName": [
     "acrin_6698"
   ],
   "description": "The American College of Radiology Imaging Network (ACRIN) trial 6698 was a multi-center study to evaluate the effectiveness of quantitative diffusion weighted imaging (DWI) for assessing breast cancer response to neoadjuvant chemotherapy (NAC). ACRIN 6698 was performed as a sub-study of the ongoing I-SPY 2 TRIAL (Investigation of Serial studies to Predict Your Therapeutic Response with Imaging And moLecular Analysis 2), an adaptive, multi-agent phase II trial designed to quickly identify new agents for breast cancer. Please see the ACRIN 6698/I-SPY2 Breast DWI wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-6698",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-acrin-6698",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=acrin_6698",
     "https://www.cancerimagingarchive.net/collections/",
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-acrin-6698.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-acrin-6698.json",
       "encodingFormat": "application/json"
     }
   ],

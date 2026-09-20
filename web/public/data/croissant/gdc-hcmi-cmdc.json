@@ -9,9 +9,9 @@
   "name": "gdc-hcmi-cmdc",
   "alternateName": "NCI Cancer Model Development for the Human Cancer Model Initiative",
   "description": "The Human Cancer Models Initiative exists to replace ageing immortalised cell lines with models that retain patient genomics and come with their source tumor characterized. Coverage is exceptionally uniform: whole genome on 804 of 805, RNA sequencing on 781, exome on 721, methylation on 703, and both histopathology and radiology on 382.\nIts distinctive value is breadth across tumor types, including rare cancers that have no established model system at all. Prior treatment is recorded for 92% of donors, which matters because it determines what the derived model actually represents.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-hcmi-cmdc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-hcmi-cmdc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Patient-Derived Triple-Negative Breast Cancer Organoids Provide Robust Model Systems That Recapitulate Tumor Intrinsic Characteristics.",
+  "citeAs": "NCI Cancer Model Development for the Human Cancer Model Initiative",
   "version": "as-retrieved",
   "datePublished": "2022-01-01",
   "recordSet": [

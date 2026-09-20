@@ -9,7 +9,7 @@
   "name": "pdc-cptac-ccrcc-confirmatory-study-training",
   "alternateName": "CPTAC CCRCC Confirmatory Study - Training",
   "description": "CPTAC CCRCC Confirmatory Study - Training",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-confirmatory-study-training",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ccrcc-confirmatory-study-training",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC CCRCC Confirmatory Study - Training",
   "version": "as-retrieved",

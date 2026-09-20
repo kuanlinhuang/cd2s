@@ -9,7 +9,7 @@
   "name": "idc-cptac-pda",
   "alternateName": "CPTAC-PDA",
   "description": "This collection contains subjects from the National Cancer Institute\u2019s Clinical Proteomic Tumor Analysis Consortium Pancreatic Ductal Adenocarcinoma (CPTAC-PDA) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Radiology and pathology images from CPTAC Phase 3 patients are being collected and made publicly available by The Cancer Imaging Archive to enable researchers to investigate cancer phenotypes which may correlate to corresponding proteomic, genomic and clinical data. Please see the CPTAC-PDA wiki page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the CPTAC-PDA collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-pda",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cptac-pda",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-PDA",
   "version": "as-retrieved",

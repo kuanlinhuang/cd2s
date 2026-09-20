@@ -41,11 +41,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Reuse gap index: +1.93 (negative means less reused than comparable datasets)
+- Of those, 1 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +2.09 (negative means less reused than comparable datasets)
+  - Phase II Study of Adavosertib in Patients With Tumors Containing BRCA1 and BRCA2 Mutations: Results From the NCI-MATCH ECOG-ACRIN Cancer Research Group (EAY131) Subprotocol Z1I. (2026) PMID 42308463
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-match-z1i.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-match-z1i.json

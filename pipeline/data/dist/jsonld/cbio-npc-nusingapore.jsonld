@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-npc-nusingapore",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-npc-nusingapore",
   "name": "Nasopharyngeal Carcinoma (Singapore, Nat Genet 2014)",
   "alternateName": [
     "npc_nusingapore"
   ],
   "description": "Whole exome sequencing of 56 NPC tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-npc-nusingapore",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-npc-nusingapore",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=npc_nusingapore"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-npc-nusingapore.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-npc-nusingapore.json",
       "encodingFormat": "application/json"
     }
   ],

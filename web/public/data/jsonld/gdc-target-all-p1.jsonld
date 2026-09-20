@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p1",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p1",
   "name": "Acute Lymphoblastic Leukemia - Phase I",
   "alternateName": [
     "TARGET-ALL-P1"
   ],
   "description": "Acute Lymphoblastic Leukemia - Phase I",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p1",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-target-all-p1",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-ALL-P1",
     "gdc_program:TARGET",
@@ -47,7 +47,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -59,19 +59,162 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-all-p1.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-target-all-p1.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Deregulation of DUX4 and ERG in acute lymphoblastic leukemia.",
-      "identifier": "https://doi.org/10.1038/ng.3691",
-      "datePublished": "2016"
-    }
-  ],
+  "citation": [],
   "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098543",
+      "name": "Children's Oncology Group Chair's Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098543"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R37CA036401",
+      "name": "PHARMACOGENOMICS OF CHILDHOOD LEUKEMIA (ALL)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA036401"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA036401",
+      "name": "Pharmacogenomics of Childhood Leukemia ALL",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA036401"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196172",
+      "name": "ECOG-ACRIN Biospecimen Bank to Support NCTN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196172"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA196171",
+      "name": "The Alliance NCTN Biorepository and Biospecimen Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196171"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA114766",
+      "name": "Support for Human Specimen Banking in NCI-Sponsored Clinical Trials-(CGB)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA114766"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA114737",
+      "name": "ECOG Specimen Banking",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA114737"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180899",
+      "name": "Children's Oncology Group Statistics and Data Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180899"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180861",
+      "name": "ITSC for Leukemia: Novel Molecular Strategies for NCTN: \"Individualized\" Therapie",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180861"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180850",
+      "name": "OSU as Network Lead Academic Participating Site for the NCI NCTN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180850"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180827",
+      "name": "ECOG-ACRIN INTEGRATED LEUKEMIA TRANSLATIONAL RESEARCH CENTER",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180827"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180820",
+      "name": "ECOG-ACRIN Network Group Operations Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180820"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098413",
+      "name": "Children's Oncology Group Statistics and Data Center Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098413"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA157937",
+      "name": "MOLECULAR SIGNATURES FOR OUTCOME PREDICTION AND THERAPEUTIC TARGETING IN ALL",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157937"
+    },
     {
       "@type": "Grant",
       "identifier": "U24CA258406",
@@ -114,56 +257,6 @@
     },
     {
       "@type": "Grant",
-      "identifier": "T32CA009056",
-      "name": "Tumor Cell Biology Training Program",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009056"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA243072",
-      "name": "Towards rational design of combination therapeutic targets",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA243072"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA232563",
-      "name": "Cassette exons in neoplastic pro-B-cells: implications for immunotherapy",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA232563"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA232486",
-      "name": "Multispecific targeting incorporating cytokine receptor pathways in high risk pediatric acute leukemias to improve durability of adoptive cell therapy-induced remissions",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA232486"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "T32CA285274",
-      "name": "Multidisciplinary Training in Gastrointestinal Cancers",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA285274"
-    },
-    {
-      "@type": "Grant",
       "identifier": "R35CA210065",
       "name": "Molecular pathways and targeted therapies in human leukemia",
       "funder": {
@@ -171,106 +264,6 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA210065"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA216981",
-      "name": "Molecular characterization and targeting of NT5C2 mutations in acute lymphoblastic leukemia",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA216981"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA013696",
-      "name": "Clinical Protocol and Data Management",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA013696"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA233619",
-      "name": "Dissection of EWS-FLI1 oncogenic mechanisms and small molecule targeting",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA233619"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA138212",
-      "name": "Isolation and small molecule targeting of Ewing's Sarcoma stem cells",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA138212"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA133662",
-      "name": "Novel Compounds to Inactivate Oncogenic Fusion Proteins",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA133662"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA051008",
-      "name": "Cancer Research Training and Education Coordination",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA051008"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA239701",
-      "name": "Admixture analysis of acute lymphoblastic leukemia in African American children: the ADMIRAL Study",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA239701"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U10CA098543",
-      "name": "Children's Oncology Group Chair's Grant",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098543"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA021765",
-      "name": "Cancer Biology (CBP)",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R37CA036401",
-      "name": "PHARMACOGENOMICS OF CHILDHOOD LEUKEMIA (ALL)",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA036401"
     }
   ],
   "dateModified": "2026-09-18T02:37:31.373108+00:00",

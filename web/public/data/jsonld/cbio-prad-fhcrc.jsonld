@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-fhcrc",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-fhcrc",
   "name": "Prostate Adenocarcinoma (Fred Hutchinson CRC, Nat Med 2016)",
   "alternateName": [
     "prad_fhcrc"
   ],
   "description": "Whole-exome sequencing, array comparative genomic hybridization (CGH) and RNA transcript profiling of 176 tumors from 63 patients with disseminated prostate cancer with matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-fhcrc",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-fhcrc",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_fhcrc"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-fhcrc.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-fhcrc.json",
       "encodingFormat": "application/json"
     }
   ],

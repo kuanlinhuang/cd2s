@@ -69,16 +69,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 25
+- Of those, 51 were retrieved and graded individually; 2 had no author in common with the generating team and 10 were themselves NCI funded.
 - Citations to the dataset's publication: 688 (attention, not reuse)
-- Reuse gap index: -1.45 (negative means less reused than comparable datasets)
-  - Tumor microbiome links cellular programs and immunity in pancreatic cancer. (2022) PMID 36220074
-  - Open-source curation of a pancreatic ductal adenocarcinoma gene expression analysis platform (pdacR) supports a two-subtype model. (2023) PMID 36765128
-  - Inflammatory reprogramming of the solid tumor microenvironment by infiltrating clonal hematopoiesis is associated with adverse outcomes. (2025) PMID 40037357
-  - Copy number losses of oncogenes and gains of tumor suppressor genes generate common driver mutations. (2024) PMID 39033140
-  - Learning the cellular origins across cancers using single-cell chromatin landscapes. (2025) PMID 40962882
+- Reuse gap index: -1.42 (negative means less reused than comparable datasets)
+  - Proteogenomic Characterization Reveals Therapeutic Vulnerabilities in Lung Adenocarcinoma. (2020) PMID 32649874
+  - Proteogenomic Characterization of Endometrial Carcinoma. (2020) PMID 32059776
+  - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
+  - Proteogenomic characterization of 2002 human cancers reveals pan-cancer molecular subtypes and associated pathways. (2022) PMID 35562349
+  - Pan-cancer analysis of post-translational modifications reveals shared patterns of protein regulation. (2023) PMID 37582358
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cptac-3.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-cptac-3.json

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-all-stjude-2013",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2013",
   "name": "Hypodiploid Acute Lymphoid Leukemia (St Jude, Nat Genet 2013)",
   "alternateName": [
     "all_stjude_2013"
   ],
   "description": "Whole genome or exome sequencing of 44 (20 whole genome, 20 exome) ALL tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-all-stjude-2013",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-all-stjude-2013",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=all_stjude_2013"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-all-stjude-2013.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-all-stjude-2013.json",
       "encodingFormat": "application/json"
     }
   ],

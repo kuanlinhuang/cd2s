@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-mskcc-2019",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-brca-mskcc-2019",
   "name": "Breast Cancer (MSK, NPJ Breast Cancer 2019)",
   "alternateName": [
     "brca_mskcc_2019"
   ],
   "description": "Targeted Sequencing of buparlisib + letrozole and alpelisib + letrozole-treated metastatic ER+ unmatched breast tumors.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-mskcc-2019",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-brca-mskcc-2019",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=brca_mskcc_2019"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-brca-mskcc-2019.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-brca-mskcc-2019.json",
       "encodingFormat": "application/json"
     }
   ],

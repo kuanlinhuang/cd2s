@@ -9,7 +9,7 @@
   "name": "cbio-crc-orion-2024",
   "alternateName": "Colorectal Adenocarcinoma (DFCI/Orion, BioRxiv 2024)",
   "description": "Combined spatial and targeted genomic analysis of 74 colon and rectal cancers.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-orion-2024",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-crc-orion-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

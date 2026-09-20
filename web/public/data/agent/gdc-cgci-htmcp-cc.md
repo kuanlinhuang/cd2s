@@ -94,16 +94,17 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 21
+- Of those, 28 were retrieved and graded individually; 9 had no author in common with the generating team and 2 were themselves NCI funded.
 - Citations to the dataset's publication: 70 (attention, not reuse)
-- Reuse gap index: -0.89 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.72 (negative means less reused than comparable datasets)
+  - Analysis of Ugandan cervical carcinomas identifies human papillomavirus clade-specific epigenome and transcriptome landscapes. (2020) PMID 32747824
   - Integrated analysis of cervical squamous cell carcinoma cohorts from three continents reveals conserved subtypes of prognostic significance. (2022) PMID 36207323
+  - Rearrangements of viral and human genomes at human papillomavirus integration events and their allele-specific impacts on cancer genome regulation. (2025) PMID 39638560
   - Insight into the Regulation of NDRG1 Expression. (2025) PMID 40332138
   - Identification and validation of a prognostic signature related to hypoxic tumor microenvironment in cervical cancer. (2022) PMID 35657977
-  - Big Data to Knowledge: Application of Machine Learning to Predictive Modeling of Therapeutic Response in Cancer. (2021) PMID 35273457
-  - Deep learning for predicting prognostic consensus molecular subtypes in cervical cancer from histology images. (2025) PMID 39799271
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-cc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-cgci-htmcp-cc.json

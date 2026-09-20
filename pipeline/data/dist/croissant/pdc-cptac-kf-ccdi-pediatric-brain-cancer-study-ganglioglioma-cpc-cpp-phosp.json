@@ -9,7 +9,7 @@
   "name": "pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp",
   "alternateName": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Ganglioglioma-CPC-CPP Phosphoproteome",
   "description": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Ganglioglioma-CPC-CPP Phosphoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-brain-cancer-study-ganglioglioma-cpc-cpp-phosp",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-KF-CCDI-Pediatric Brain Cancer Study - Ganglioglioma-CPC-CPP Phosphoproteome",
   "version": "as-retrieved",

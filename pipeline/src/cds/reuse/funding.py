@@ -37,28 +37,13 @@ from typing import Any
 
 from cds.http import Client
 from cds.model import Confidence, DatasetRecord, Evidence, FundingRole, Grant, Method
+from cds.reuse import markers
 from cds.sources import reporter as rp
 
-#: How `enrich` labels a marker paper it nominated itself. Anything carrying it is a
-#: low-confidence guess and is not used to attribute funding.
-INFERRED_LABEL = "Candidate primary publication (machine-inferred)"
-
-
-def _is_inferred(pub: Any) -> bool:
-    return any((e.source_label or "") == INFERRED_LABEL for e in pub.evidence)
-
-
-def authoritative_marker_pmids(rec: DatasetRecord) -> list[str]:
-    """PMIDs of marker papers strong enough to attribute generation funding from.
-
-    A repository's own marker-paper link or a reviewer's overlay qualifies; this
-    pipeline's own nomination does not.
-    """
-    out: list[str] = []
-    for pub in rec.primary_publications:
-        if pub.pmid and not _is_inferred(pub) and pub.pmid not in out:
-            out.append(pub.pmid)
-    return out
+#: What counts as a marker paper strong enough to attribute generation funding from is
+#: the same question the citation count asks, so it is answered in one place.
+INFERRED_LABEL = markers.INFERRED_LABEL
+authoritative_marker_pmids = markers.authoritative_marker_pmids
 
 
 def _generation_grant(

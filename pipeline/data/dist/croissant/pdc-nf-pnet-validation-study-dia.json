@@ -9,7 +9,7 @@
   "name": "pdc-nf-pnet-validation-study-dia",
   "alternateName": "NF-PNET Validation Study - DIA",
   "description": "NF-PNET Validation Study - DIA",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-nf-pnet-validation-study-dia",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-nf-pnet-validation-study-dia",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NF-PNET Validation Study - DIA",
   "version": "as-retrieved",

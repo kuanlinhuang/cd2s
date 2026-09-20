@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
   "name": "HBV-Related Hepatocellular Carcinoma",
   "alternateName": [
     "HBV-Related Hepatocellular Carcinoma - Phosphoproteome",
     "HBV-Related Hepatocellular Carcinoma - Proteome"
   ],
   "description": "HBV-Related Hepatocellular Carcinoma",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-hbv-related-hepatocellular-carcinoma",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-hbv-related-hepatocellular-carcinoma",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000199",
     "https://pdc.cancer.gov/pdc/study/PDC000198"
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-hbv-related-hepatocellular-carcinoma.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-hbv-related-hepatocellular-carcinoma.json",
       "encodingFormat": "application/json"
     }
   ],
@@ -94,22 +94,12 @@
     {
       "@type": "Grant",
       "identifier": "P30CA125123",
-      "name": "Patient-Derived Xenograft Shared Resource",
+      "name": "Baylor College of Medicine Cancer Center - Cancer Center Support Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA125123"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA188305",
-      "name": "Role of NCOA5 in hepatic steatosis and hepatocarcinogenesis",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA188305"
     }
   ],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",

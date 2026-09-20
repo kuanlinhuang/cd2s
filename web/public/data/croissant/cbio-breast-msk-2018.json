@@ -9,7 +9,7 @@
   "name": "cbio-breast-msk-2018",
   "alternateName": "Breast Cancer (MSK, Cancer Cell 2018)",
   "description": "Targeted Sequencing of tumor/normal sample pairs from 1918 Breast cancers.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-msk-2018",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-breast-msk-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

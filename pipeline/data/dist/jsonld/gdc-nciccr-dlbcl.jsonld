@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-nciccr-dlbcl",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-nciccr-dlbcl",
   "name": "Genomic Variation in Diffuse Large B Cell Lymphomas",
   "alternateName": [
     "NCICCR-DLBCL"
   ],
   "description": "Genomic Variation in Diffuse Large B Cell Lymphomas",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-nciccr-dlbcl",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-nciccr-dlbcl",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/NCICCR-DLBCL",
     "gdc_program:NCICCR",
@@ -46,7 +46,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -58,16 +58,83 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-nciccr-dlbcl.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-nciccr-dlbcl.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Genetics and Pathogenesis of Diffuse Large B-Cell Lymphoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/29641966/",
+      "datePublished": "2018"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
+      "identifier": "U01CA157581",
+      "name": "Molecular Diagnosis and Prognosis in Aggressive Lymphoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157581"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA184185",
+      "name": "Stress Pathways in Tumors Drive Global MDSC Activity and Survival through Chop",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA184185"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA076292",
+      "name": "Immuno-Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA076292"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K23CA201594",
+      "name": "Breaking immune tolerance to Survivin in Multiple Myeloma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K23CA201594"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA210105",
+      "name": "From pathogenesis to new therapeutic targets in diffuse large B cell lymphoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA210105"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA013696",
+      "name": "Developmental Funds",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA013696"
+    },
+    {
+      "@type": "Grant",
       "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "name": "Cancer Center Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -86,118 +153,88 @@
     },
     {
       "@type": "Grant",
-      "identifier": "T32CA078207",
-      "name": "Training Program in Cancer Biology",
+      "identifier": "U01CA305196",
+      "name": "Mechanism and therapeutic implication of RNA-modification-mediated codon-biased translation in acute myeloid leukemia",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA078207"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA305196"
     },
     {
       "@type": "Grant",
-      "identifier": "R35CA210105",
-      "name": "From pathogenesis to new therapeutic targets in diffuse large B cell lymphoma",
+      "identifier": "R50CA211404",
+      "name": "Therapeutic insights through patient derived leukemia xenografts",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA210105"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R50CA211404"
     },
     {
       "@type": "Grant",
-      "identifier": "R01CA207963",
-      "name": "Role of FOXO1 mutations in the pathogenesis of B cell non-Hodgkin lymphomas",
+      "identifier": "R01CA280389",
+      "name": "TET2-mediated epitranscriptomic regulation in leukemia microenvironment",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA207963"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA280389"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA196521",
-      "name": "Bioinformatics for Next Generation Sequencing",
+      "identifier": "R01CA271497",
+      "name": "The role and therapeutic potential of IGF2BP2 in MLL-rearranged leukemia",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA196521"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA271497"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA013696",
-      "name": "Clinical Protocol and Data Management",
+      "identifier": "R01CA243386",
+      "name": "Targeting FTO to treat acute myeloid leukemia",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA013696"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA243386"
     },
     {
       "@type": "Grant",
-      "identifier": "U54CA137788",
-      "name": "Outreach Core (PCORE)",
+      "identifier": "R01CA236399",
+      "name": "The role and mechanism of METTL3/METTL14-mediated RNA modification in the pathogenesis and drug-resistance of AML",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA137788"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA236399"
     },
     {
       "@type": "Grant",
-      "identifier": "U54CA132378",
-      "name": "Planning and Evaluation Core (PEC)",
+      "identifier": "R01CA214965",
+      "name": "The role and mechanism of FTO in leukemogenesis and drug response",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA132378"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA214965"
     },
     {
       "@type": "Grant",
-      "identifier": "T32CA009149",
-      "name": "Immunology Research Training",
+      "identifier": "R01CA211614",
+      "name": "Targeting TET1 signaling to treat acute myeloid leukemia",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009149"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA264248",
-      "name": "Addressing biological and therapeutic gaps in rare neuroendocrine cancer with a novel organoid-based model",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA264248"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA054174",
-      "name": "Mays Cancer Center at UT San Antonio Health Science Center",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA054174"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA194742",
-      "name": "Reolysin-based combination therapy in relapsed multiple myeloma",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA194742"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA211614"
     },
     {
       "@type": "Grant",
       "identifier": "P30CA033572",
-      "name": "Clinical Protocol and Data Management",
+      "name": "Leadership, Planning and Evaluation",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -206,13 +243,33 @@
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA016058",
-      "name": "Shared Resource 10: Pharmacoanalytical Shared Resource (PhASR)",
+      "identifier": "P50CA171963",
+      "name": "Core A: Biospecimen Processing",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA016058"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA171963"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA272295",
+      "name": "Epigenetic basis and therapeutic targeting of the unique lymphoma immunological niche",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA272295"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA229100",
+      "name": "Preclinical Models and Therapeutics Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA229100"
     }
   ],
   "dateModified": "2026-09-18T02:36:20.172441+00:00",

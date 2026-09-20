@@ -41,8 +41,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Citations to the dataset's publication: 15 (attention, not reuse)
-- Reuse gap index: -0.33 (negative means less reused than comparable datasets)
+- Of those, 4 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -0.18 (negative means less reused than comparable datasets)
   - MetaProD: A Highly-Configurable Mass Spectrometry Analyzer for Multiplexed Proteomic and Metaproteomic Data. (2023) PMID 36688801
   - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
   - TP53 Loss Fuels mTORC1 Activation and Autophagy Suppression to Drive Immune-Cold Colorectal Cancer. (2026) PMID 41822325
@@ -52,4 +52,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-colon-pnnl-phosphoproteome-lumos.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-prospective-colon-pnnl-phosphoproteome-lumos.json

@@ -9,7 +9,7 @@
   "name": "htan-pre-cancer-atlases-of-cutaneous-and-hematologic-origin",
   "alternateName": "Pre-Cancer Atlases of Cutaneous and Hematologic Origin",
   "description": "Pre-Cancer Atlases of Cutaneous and Hematologic Origin",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-pre-cancer-atlases-of-cutaneous-and-hematologic-origin",
+  "url": "https://cancer-data-showcase.example.org/datasets/htan-pre-cancer-atlases-of-cutaneous-and-hematologic-origin",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Multiplexed 3D atlas of state transitions and immune interaction in colorectal cancer",
   "version": "as-retrieved",

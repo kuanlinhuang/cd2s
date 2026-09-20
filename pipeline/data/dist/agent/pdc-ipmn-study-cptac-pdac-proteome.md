@@ -42,6 +42,7 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
+- Of those, 1 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
   - Multi-omic profiling of intraductal papillary neoplasms of the pancreas reveals distinct patterns and potential markers of progression. (2025) PMID 40882635
 
 ## Provenance
@@ -49,4 +50,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-ipmn-study-cptac-pdac-proteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-ipmn-study-cptac-pdac-proteome.json

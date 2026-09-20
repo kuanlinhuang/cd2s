@@ -9,7 +9,7 @@
   "name": "pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
   "alternateName": "CGU OSCC APOBEC3A - Multiple Phosphoproteome",
   "description": "CGU OSCC APOBEC3A - Multiple Phosphoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cgu-oscc-apobec3a-multiple-phosphoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CGU OSCC APOBEC3A - Multiple Phosphoproteome",
   "version": "as-retrieved",

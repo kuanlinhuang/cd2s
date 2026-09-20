@@ -5,7 +5,7 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-confirmatory-study",
+  "@id": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ucec-confirmatory-study",
   "name": "CPTAC UCEC Confirmatory Study",
   "alternateName": [
     "CPTAC UCEC Confirmatory Study - Acetylome",
@@ -14,7 +14,7 @@
     "CPTAC UCEC Confirmatory Study - Proteome"
   ],
   "description": "CPTAC UCEC Confirmatory Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-confirmatory-study",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-ucec-confirmatory-study",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000443",
     "https://pdc.cancer.gov/pdc/study/PDC000445",
@@ -51,7 +51,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -63,18 +63,11 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-ucec-confirmatory-study.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/pdc-cptac-ucec-confirmatory-study.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "KinPred-RNA-kinase activity inference and cancer type classification using machine learning on RNA-seq data.",
-      "identifier": "https://doi.org/10.1016/j.isci.2024.109333",
-      "datePublished": "2024"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2024-01-01",

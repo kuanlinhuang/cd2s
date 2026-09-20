@@ -9,7 +9,7 @@
   "name": "idc-cptac-ucec",
   "alternateName": "CPTAC-UCEC",
   "description": "This collection contains subjects from the National Cancer Institute''s Clinical Proteomic Tumor Analysis Consortium Uterine Corpus Endometrial Carcinoma (CPTAC-UCEC) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Radiology and pathology images from CPTAC Phase 3 patients are being collected and made publicly available by The Cancer Imaging Archive to enable researchers to investigate cancer phenotypes which may correlate to corresponding proteomic, genomic and clinical data. Please see the CPTAC-UCEC wiki page to learn more about the radiologyimages and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the CPTAC-UCEC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-ucec",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-cptac-ucec",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-UCEC",
   "version": "as-retrieved",

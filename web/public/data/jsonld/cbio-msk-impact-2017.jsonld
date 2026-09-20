@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-impact-2017",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-msk-impact-2017",
   "name": "MSK-IMPACT Clinical Sequencing Cohort (MSK, Nat Med 2017)",
   "alternateName": [
     "msk_impact_2017"
   ],
   "description": "Targeted sequencing of 10,000 clinical cases using the MSK-IMPACT assay",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-msk-impact-2017",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-msk-impact-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=msk_impact_2017"
   ],
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-msk-impact-2017.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-msk-impact-2017.json",
       "encodingFormat": "application/json"
     }
   ],

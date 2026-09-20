@@ -24,6 +24,9 @@ describe("which datasets are rows", () => {
     indexRow({ id: "reused-uncited", n_citations_to_primary_publication: null, has_citable_accession: true, n_verified_reuse: 3000 }),
     indexRow({ id: "reused-zero", n_citations_to_primary_publication: 12, has_citable_accession: true, n_verified_reuse: 0 }),
     indexRow({ id: "reuse-unmeasured", n_citations_to_primary_publication: 80, has_citable_accession: true, n_verified_reuse: null }),
+    // The marker paper was only ever this pipeline's guess, so the pipeline withholds
+    // the citation count. The chart must treat that like any other missing measurement.
+    indexRow({ id: "citations-withheld", n_citations_to_primary_publication: null, has_citable_accession: true, n_verified_reuse: 652 }),
   ];
   const rows = reuseChartRows(index, () => record({ grants: [] }));
 
@@ -35,6 +38,7 @@ describe("which datasets are rows", () => {
     expect(rows.find((r) => r.id === "cited-untraceable")).toBeUndefined();
     expect(rows.find((r) => r.id === "reused-uncited")).toBeUndefined();
     expect(rows.find((r) => r.id === "reuse-unmeasured")).toBeUndefined();
+    expect(rows.find((r) => r.id === "citations-withheld")).toBeUndefined();
   });
 
   it("shows a dataset cited but never reused as a measured zero", () => {

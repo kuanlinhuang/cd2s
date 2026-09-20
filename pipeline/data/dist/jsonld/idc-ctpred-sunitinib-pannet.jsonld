@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-ctpred-sunitinib-pannet",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-ctpred-sunitinib-pannet",
   "name": "CTpred-Sunitinib-panNET",
   "alternateName": [
     "ctpred_sunitinib_pannet"
   ],
   "description": "The Prediction of Sunitinib Efficacy using Computed Tomography in Patients with Pancreatic Neuroendocrine Tumors study aimed to develop and validate a computed tomography (CT)-based method to predict the efficacy of sunitinib in Pretreatment CT images of 171 lesions from 38 patients with metastatic or locally advanced pancreatic neuroendocrine tumors (panNET). The dataset can be used to validate the findings of the study. More importantly, researchers can use this dataset to study the imaging characteristics of panNET. Please see the CTpred-Sunitinib-panNET wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-ctpred-sunitinib-pannet",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-ctpred-sunitinib-pannet",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=ctpred_sunitinib_pannet",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,7 +43,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -55,7 +55,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-ctpred-sunitinib-pannet.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-ctpred-sunitinib-pannet.json",
       "encodingFormat": "application/json"
     }
   ],

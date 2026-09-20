@@ -9,7 +9,7 @@
   "name": "gdc-cmi-asc",
   "alternateName": "Count Me In (CMI): The Angiosarcoma (ASC) Project",
   "description": "Count Me In (CMI): The Angiosarcoma (ASC) Project",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-asc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-cmi-asc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Count Me In (CMI): The Angiosarcoma (ASC) Project",
   "version": "as-retrieved",

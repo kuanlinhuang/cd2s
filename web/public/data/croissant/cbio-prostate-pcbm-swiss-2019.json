@@ -9,7 +9,7 @@
   "name": "cbio-prostate-pcbm-swiss-2019",
   "alternateName": "Prostate Cancer Brain Metastases (Bern, Nat Commun. 2022)",
   "description": "Prostate Cancer Brain Metastases, Switzerland. Dataset was generated in 2019 by Antonio Rodriguez, John Gallon, Salvatore Piscuoglio and Mark Rubin.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prostate-pcbm-swiss-2019",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prostate-pcbm-swiss-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

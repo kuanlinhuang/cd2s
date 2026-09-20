@@ -9,9 +9,9 @@
   "name": "gdc-beataml1.0-cohort",
   "alternateName": "Functional Genomic Landscape of Acute Myeloid Leukemia",
   "description": "Functional Genomic Landscape of Acute Myeloid Leukemia",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-beataml1.0-cohort",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-beataml1.0-cohort",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Functional genomic landscape of acute myeloid leukaemia.",
+  "citeAs": "Functional genomic landscape of acute myeloid leukaemia",
   "version": "as-retrieved",
   "datePublished": "2018-01-01",
   "recordSet": [

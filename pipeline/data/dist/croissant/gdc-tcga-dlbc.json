@@ -9,11 +9,11 @@
   "name": "gdc-tcga-dlbc",
   "alternateName": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma",
   "description": "Please see the DICOM converted Slide Microscopy images for the TCGA-DLBC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-dlbc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-tcga-dlbc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2018-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

@@ -41,12 +41,12 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Citations to the dataset's publication: 132 (attention, not reuse)
-- Reuse gap index: -3.06 (negative means less reused than comparable datasets)
+- Of those, 2 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: -2.30 (negative means less reused than comparable datasets)
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-beataml1.0-crenolanib.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-beataml1.0-crenolanib.json

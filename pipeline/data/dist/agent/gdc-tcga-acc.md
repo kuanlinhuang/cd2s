@@ -41,8 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.59 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 113
+- Of those, 71 were retrieved and graded individually; 10 had no author in common with the generating team and 1 were themselves NCI funded.
+- Citations to the dataset's publication: 478 (attention, not reuse)
+- Reuse gap index: +0.30 (negative means less reused than comparable datasets)
   - CENPF/CDK1 signaling pathway enhances the progression of adrenocortical carcinoma by regulating the G2/M-phase cell cycle. (2022) PMID 35123514
   - Senescence-induced immune remodeling facilitates metastatic adrenal cancer in a sex-dimorphic manner. (2023) PMID 37231196
   - Sexually dimorphic activation of innate antitumor immunity prevents adrenocortical carcinoma development. (2022) PMID 36240276
@@ -54,4 +56,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-acc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-acc.json

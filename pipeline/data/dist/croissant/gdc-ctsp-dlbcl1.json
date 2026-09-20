@@ -9,7 +9,7 @@
   "name": "gdc-ctsp-dlbcl1",
   "alternateName": "CTSP Diffuse Large B-Cell Lymphoma (DLBCL) CALGB 50303",
   "description": "What makes this cohort worth knowing about is not its size but its provenance. The samples come from CALGB 50303, a randomized phase III trial comparing dose-adjusted EPOCH-R against R-CHOP as frontline therapy for diffuse large B-cell lymphoma. Molecular data collected inside a randomized trial are scarce: treatment assignment is not confounded with patient characteristics, which is the assumption that almost every observational treatment-response analysis has to make and cannot verify.\nVital status is informative for 100% of the 45 cases and median follow-up is 60.4 months. RNA sequencing covers 44 cases, exome 44 and a targeted panel all 45.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ctsp-dlbcl1",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-ctsp-dlbcl1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Dose-Adjusted EPOCH-R Compared With R-CHOP as Frontline Therapy for Diffuse Large B-Cell Lymphoma - Clinical Outcomes of the Phase III Intergroup Trial Alliance/CALGB 50303",
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "cbio-hgsoc-msk-2021",
   "alternateName": "High-Grade Serous Ovarian Cancer (MSK, NPJ Genome Med 2021)",
   "description": "Targeted Sequencing of 45 Serous Ovarian Cancer tumor/normal pairs from 45 patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-hgsoc-msk-2021",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-hgsoc-msk-2021",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-nsclc-fdg-pet",
+  "@id": "https://cancer-data-showcase.example.org/datasets/idc-acrin-nsclc-fdg-pet",
   "name": "ACRIN-NSCLC-FDG-PET",
   "alternateName": [
     "acrin_nsclc_fdg_pet"
   ],
   "description": "Thirty-seven institutions accrued 250 patients to the study ACRIN 6668. Eligible patients were >18 years with AJCC-criteria clinical stage IIB/III non-small cell lung carcinoma who were being planned for definitive concurrent chemoradiotherapy (inoperable disease). 173 had evaluable post-treatment PET, representing the analysis cohort for the primary end point. Please see the ACRIN-NSCLC-FDG-PET wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-nsclc-fdg-pet",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-acrin-nsclc-fdg-pet",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=acrin_nsclc_fdg_pet",
     "https://www.cancerimagingarchive.net/collections/",
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-acrin-nsclc-fdg-pet.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/idc-acrin-nsclc-fdg-pet.json",
       "encodingFormat": "application/json"
     }
   ],

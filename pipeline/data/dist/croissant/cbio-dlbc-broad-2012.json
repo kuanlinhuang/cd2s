@@ -9,7 +9,7 @@
   "name": "cbio-dlbc-broad-2012",
   "alternateName": "Diffuse Large B-Cell Lymphoma (Broad, PNAS 2012)",
   "description": "Whole exome sequencing of 58 primary DLBCL samples and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbc-broad-2012",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-dlbc-broad-2012",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

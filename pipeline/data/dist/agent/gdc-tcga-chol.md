@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.87 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 195
+- Of those, 72 were retrieved and graded individually; 10 had no author in common with the generating team.
+- Citations to the dataset's publication: 409 (attention, not reuse)
+- Reuse gap index: +1.70 (negative means less reused than comparable datasets)
   - Integrative analyses of bulk and single-cell transcriptomics reveals the infiltration and crosstalk of cancer-associated fibroblasts as a novel predictor for prognosis and microenvironment remodeling in intrahepatic cholangiocarcinoma. (2024) PMID 38702814
   - Extrachromosomal circular DNA (eccDNA) characteristics in the bile and plasma of advanced perihilar cholangiocarcinoma patients and the construction of an eccDNA-related gene prognosis model. (2024) PMID 38903532
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - The correlation between LAG-3 expression and the efficacy of chemoimmunotherapy in advanced biliary tract cancer. (2025) PMID 39751894
   - New platinum derivatives selectively cause double-strand DNA breaks and death in naïve and cisplatin-resistant cholangiocarcinomas. (2025) PMID 40324694
+  - Comparative impact of tertiary lymphoid structures and tumor-infiltrating lymphocytes in cholangiocarcinoma. (2025) PMID 39870490
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-chol.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-chol.json

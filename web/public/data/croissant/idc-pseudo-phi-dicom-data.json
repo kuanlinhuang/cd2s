@@ -9,7 +9,7 @@
   "name": "idc-pseudo-phi-dicom-data",
   "alternateName": "Pseudo-PHI-DICOM-Data",
   "description": "The process of image de-identification is time consuming, requires significant human resources, and is prone to human error. Automated image de-identification algorithms have been developed but the research community requires some method of evaluation before such tools can be widely accepted. This evaluation requires a robust dataset that can be used as part of an evaluation process for de-identification algorithms. We developed a DICOM dataset that can be used to evaluate the performance of de-identification algorithms. Please see the Medical Imaging De-Identification Initiative (MIDI) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pseudo-phi-dicom-data",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-pseudo-phi-dicom-data",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pseudo-PHI-DICOM-Data",
   "version": "as-retrieved",

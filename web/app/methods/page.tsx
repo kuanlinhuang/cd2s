@@ -111,7 +111,7 @@ const SOURCES = [
 const TIERS = [
   {
     tier: "Data analyzed",
-    fields: "METHODS, RESULTS, TABLE, FIG, SUPPL",
+    fields: "METHODS",
     meaning:
       "The accession appears where the analysis is described, so the reported findings plausibly depend on these data. This is the only tier we report as reuse.",
   },
@@ -171,6 +171,7 @@ export default function MethodsPage() {
               <a href="#fit" className="underline">six verdicts</a> &middot;{" "}
               <a href="#reuse" className="underline">grading reuse</a> &middot;{" "}
               <a href="#dating" className="underline">dating</a> &middot;{" "}
+              <a href="#accession-precision" className="underline">what a count counts</a> &middot;{" "}
               <a href="#reuse-gap" className="underline">reuse gap</a> &middot;{" "}
               <a href="#merging" className="underline">merging</a> &middot;{" "}
               <a href="#limitations" className="underline">where this is weak</a> &middot;{" "}
@@ -432,6 +433,13 @@ export default function MethodsPage() {
             possible. Where an accession appears is strong evidence of what the authors
             did with it.
           </p>
+          <p>
+            Each tier asks exactly one section field, the same one for every dataset.
+            Asking several and taking the largest answer, which is what this used to do,
+            hands the count to whichever field has the most false positives - and
+            &nbsp;<code>RESULTS</code>, the field that usually returns the most, is the
+            field we already knew to be least reliable.
+          </p>
         </div>
 
         <div className="mt-4 overflow-x-auto">
@@ -553,6 +561,63 @@ export default function MethodsPage() {
             because it matches the words of a hyphenated accession independently. That
             field is excluded from dating, and every candidate year is confirmed by
             retrieving an actual article.
+          </p>
+        </div>
+      </section>
+
+      {/* -------------------------------------------------- accession precision */}
+      <section id="accession-precision" className="py-8 border-t">
+        <h2 className="text-lg font-semibold tracking-tight">
+          What a hit count is really counting
+        </h2>
+        <div className="prose-cds mt-3 text-lede">
+          <p>
+            Europe PMC does not index a hyphenated accession as one term. It splits on the
+            hyphen, so a quoted search is a two-word phrase query and not an exact match.
+            You can see it directly: <code>METHODS:&quot;TARGET-OS&quot;</code> and{" "}
+            <code>METHODS:&quot;target os&quot;</code> return the identical hit count.
+            There is no escape character, no proximity operator and no regular expression
+            that restores the hyphen.
+          </p>
+          <p>
+            So for any accession whose hyphen-stripped form is also ordinary English, the
+            raw count is inflated by prose that has nothing to do with the dataset - and
+            by how much depends entirely on the words. We measured it against open-access
+            full text:
+          </p>
+          <ul>
+            <li>
+              <span className="t-mono">TCGA-BRCA</span>: every sampled article really
+              contained the accession.
+            </li>
+            <li>
+              <span className="t-mono">TARGET-WT</span>: about seven in ten.{" "}
+              <em>WT</em> is also wild type.
+            </li>
+            <li>
+              <span className="t-mono">TARGET-RT</span>: about one in seven.{" "}
+              <em>RT</em> is also radiotherapy, retention time, reverse transcription and
+              room temperature. The uncorrected count was 270; the corrected one is
+              nearer 38.
+            </li>
+          </ul>
+          <p>
+            Because the inflation is specific to the accession, it cannot be disclosed
+            once and applied everywhere. Every count on this site is therefore corrected
+            individually: we sample the articles a query returns, fetch the open-access
+            full text, test for the literal accession, and scale the count by the fraction
+            that pass. The sample size and the interval are shown on the dataset page next
+            to the number they produced.
+          </p>
+          <p>
+            Two limits. Only open-access articles can be checked, so the correction assumes
+            the closed-access ones are contaminated at the same rate - an assumption, not a
+            measurement. And the literal test accepts a hyphen, a dash or an underscore but
+            never a space, because a space is the contamination pattern itself; an article
+            that only ever writes &ldquo;TCGA BRCA&rdquo; is scored as a miss. Both push
+            the published figure down, so it is a conservative estimate rather than a best
+            guess. Where too few articles are open access to estimate the correction at
+            all, the dataset shows no count instead of an inflated one.
           </p>
         </div>
       </section>
@@ -789,8 +854,16 @@ RGI    = y - fitted`}</code>
               `${num(stats.n_without_citable_accession)} records have no accession specific enough to search for. PDC study identifiers, for instance, are almost never quoted, so proteomic reuse is close to invisible to any citation-based method including this one.`,
             ],
             [
+              "Some counts cannot be corrected",
+              `${num(stats.n_reuse_unmeasurable ?? 0)} further records have a citable accession, but too few of the articles matching it are open access to estimate how much of the count is Europe PMC matching the accession's words separately. Those datasets show no reuse count at all. That is a gap in the measurement and it is not the same as a zero, so it is never drawn as one.`,
+            ],
+            [
               "Inferred primary publications",
-              "Where a repository publishes no marker-paper link we nominate the earliest heavily cited article that analyzed the data. That is a guess, it is labeled as one at low confidence, and it is queued for review rather than presented as fact. One failure mode is now caught automatically: an inference claimed by more than one dataset is wrong for all but one of them, so it is withdrawn from all of them and the record says so. It had nominated a pan-tissue methylation clock as the marker paper for eleven TCGA projects.",
+              "Where a repository publishes no marker-paper link we nominate the earliest heavily cited article that analyzed the data. That nomination is structurally unreliable, not merely uncertain: it can only choose among articles that quote the accession, and a marker paper published in 2011 does not quote a project identifier introduced years later. So the true marker paper is never a candidate and the heuristic can only ever pick a reuse paper. It is shown as a reading suggestion at low confidence and nothing is counted from it - no citation count, no funding attribution. Where a reviewer has named the real marker paper, the site counts from that instead; where nobody has, the citation count is left blank rather than filled from a guess.",
+            ],
+            [
+              "Reuse examples are a sample",
+              "The count of articles that analyzed a dataset comes from a hit count, but the articles listed individually - and the independence and funded-reuse figures derived from them - come from a bounded retrieval of a few dozen. Those numbers are always shown with the number examined beside them, because a sample count read as a population count is how this site once implied that ten of the six hundred and fifty-two articles using TCGA-OV were independent. Ten of twelve examined were.",
             ],
             [
               "Author-overlap independence is a proxy",

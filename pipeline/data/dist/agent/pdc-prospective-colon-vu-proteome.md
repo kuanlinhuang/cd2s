@@ -41,8 +41,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
-- Citations to the dataset's publication: 25 (attention, not reuse)
-- Reuse gap index: +2.01 (negative means less reused than comparable datasets)
+- Of those, 6 were retrieved and graded individually; 0 had no author in common with the generating team and 1 were themselves NCI funded.
+- Reuse gap index: +2.00 (negative means less reused than comparable datasets)
   - Federated Deep Learning Enables Cancer Subtyping by Proteomics. (2025) PMID 40488620
   - Multi-Omics Characterization of E3 Regulatory Patterns in Different Cancer Types. (2024) PMID 39062881
   - Sex differences in the cancer proteome. (2026) PMID 42466117
@@ -54,4 +54,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-colon-vu-proteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-prospective-colon-vu-proteome.json

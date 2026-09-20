@@ -9,7 +9,7 @@
   "name": "cbio-prad-cdk12-mskcc-2020",
   "alternateName": "Prostate Adenocarcinoma (MSK, Eur Urol 2020)",
   "description": "Targeted sequencing of 1465 prostate adenocarcinoma tumor/normal pairs via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-cdk12-mskcc-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-cdk12-mskcc-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

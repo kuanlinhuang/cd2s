@@ -9,7 +9,7 @@
   "name": "cbio-nbl-msk-2023",
   "alternateName": "Pediatric Neuroblastoma (MSK, Nat Genet 2023)",
   "description": "Targeted sequencing of 223 pediatric neuroblastoma tumor/normal pairs via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-nbl-msk-2023",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-nbl-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

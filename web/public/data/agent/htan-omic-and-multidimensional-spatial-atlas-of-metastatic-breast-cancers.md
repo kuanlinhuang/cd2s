@@ -56,10 +56,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 40 (attention, not reuse)
-- Reuse gap index: -2.87 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.64 (negative means less reused than comparable datasets)
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers.json

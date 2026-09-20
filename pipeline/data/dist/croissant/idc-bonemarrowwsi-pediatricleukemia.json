@@ -9,7 +9,7 @@
   "name": "idc-bonemarrowwsi-pediatricleukemia",
   "alternateName": "BoneMarrowWSI-PediatricLeukemia",
   "description": "The dataset comprises bone marrow aspirate smear WSI for 245 pediatric cases (< 18 years) of leukemia, including acute lymphoid leukemia (ALL), acute myeloid leukemia (AML), and chronic myeloid leukemia (CML). The smears were prepared for the initial diagnosis (i.e., without prior treatment), stained in accordance with the Pappenheim method, and scanned at 40x magnification (without immersion), resulting in a resolution of 0.11x0.11 \u00b5m/pixel. Additionally, clinical information (age group, sex, diagnosis) and laboratory data (blasts, white blood cell count, thrombocytes, LDH, uric acid, hemoglobin) are available for each case. Please see the BoneMarrowWSI-PediatricLeukemia: A Comprehensive Dataset of Bone Marrow Aspirate Smear Whole Slide Images with Expert Annotations and Clinical Data in Pediatric Leukemia information page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-bonemarrowwsi-pediatricleukemia",
+  "url": "https://cancer-data-showcase.example.org/datasets/idc-bonemarrowwsi-pediatricleukemia",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "BoneMarrowWSI-PediatricLeukemia",
   "version": "as-retrieved",

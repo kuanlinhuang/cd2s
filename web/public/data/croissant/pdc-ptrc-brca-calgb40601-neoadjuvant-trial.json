@@ -9,7 +9,7 @@
   "name": "pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
   "alternateName": "PTRC BRCA CALGB40601 Neoadjuvant Trial",
   "description": "PTRC BRCA CALGB40601 Neoadjuvant Trial",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-ptrc-brca-calgb40601-neoadjuvant-trial",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteogenomic analysis of the CALGB 40601 (Alliance) HER2+ breast cancer neoadjuvant trial reveals resistance biomarkers.",
   "version": "as-retrieved",

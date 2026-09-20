@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-yale",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-yale",
   "name": "Skin Cutaneous Melanoma (Yale, Nat Genet 2012)",
   "alternateName": [
     "skcm_yale"
   ],
   "description": "Exome sequencing of 147 melanoma samples with 99 matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-skcm-yale",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-skcm-yale",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=skcm_yale"
   ],
@@ -42,7 +42,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -54,7 +54,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-skcm-yale.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-skcm-yale.json",
       "encodingFormat": "application/json"
     }
   ],

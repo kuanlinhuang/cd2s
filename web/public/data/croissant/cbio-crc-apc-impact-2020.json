@@ -9,7 +9,7 @@
   "name": "cbio-crc-apc-impact-2020",
   "alternateName": "Colorectal Cancer (MSK, Gastroenterology 2020)",
   "description": "Targeted sequencing of 471 unresectable colorectal tumor/normal pairs via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-apc-impact-2020",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-crc-apc-impact-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

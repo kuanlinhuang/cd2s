@@ -42,7 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 18
-- Reuse gap index: +1.65 (negative means less reused than comparable datasets)
+- Of those, 25 were retrieved and graded individually; 0 had no author in common with the generating team and 3 were themselves NCI funded.
+- Reuse gap index: +1.83 (negative means less reused than comparable datasets)
   - Carbonic anhydrases reduce the acidity of the tumor microenvironment, promote immune infiltration, decelerate tumor growth, and improve survival in ErbB2/HER2-enriched breast cancer. (2023) PMID 37098526
   - Pharmacological suppression of the OTUD4/CD73 proteolytic axis revives antitumor immunity against immune-suppressive breast cancers. (2024) PMID 38530357
   - Identifying tumour microenvironment-related signature that correlates with prognosis and immunotherapy response in breast cancer. (2023) PMID 36869083
@@ -54,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-breast-cancer-proteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-breast-cancer-proteome.json

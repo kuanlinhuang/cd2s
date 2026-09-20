@@ -42,7 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 5
-- Reuse gap index: +0.08 (negative means less reused than comparable datasets)
+- Of those, 8 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: +0.27 (negative means less reused than comparable datasets)
   - Integrated meta-analysis of colorectal cancer public proteomic datasets for biomarker discovery and validation. (2024) PMID 38252632
   - Mutation impact on mRNA versus protein expression across human cancers. (2025) PMID 39775839
   - A multidimensional recommendation framework for identifying biological targets to aid the diagnosis and treatment of liver metastasis in patients with colorectal cancer. (2024) PMID 39449040
@@ -54,4 +55,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-colon-cancer-proteome.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/pdc-tcga-colon-cancer-proteome.json

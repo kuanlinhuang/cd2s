@@ -9,7 +9,7 @@
   "name": "pdc-cptac-kf-ccdi-pediatric-t-all-study",
   "alternateName": "CPTAC-KF-CCDI-Pediatric T-ALL Study",
   "description": "CPTAC-KF-CCDI-Pediatric T-ALL Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-kf-ccdi-pediatric-t-all-study",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-cptac-kf-ccdi-pediatric-t-all-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-KF-CCDI-Pediatric T-ALL Study",
   "version": "as-retrieved",

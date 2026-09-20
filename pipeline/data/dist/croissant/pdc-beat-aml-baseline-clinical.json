@@ -9,7 +9,7 @@
   "name": "pdc-beat-aml-baseline-clinical",
   "alternateName": "Beat AML Baseline Clinical",
   "description": "Beat AML Baseline Clinical",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-beat-aml-baseline-clinical",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-beat-aml-baseline-clinical",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Mapping the proteogenomic landscape enables prediction of drug response in acute myeloid leukemia.",
   "version": "as-retrieved",

@@ -41,17 +41,19 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.26 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Articles that analyzed these data: 308
+- Of those, 93 were retrieved and graded individually; 10 had no author in common with the generating team.
+- Citations to the dataset's publication: 1428 (attention, not reuse)
+- Reuse gap index: +1.64 (negative means less reused than comparable datasets)
   - Single-cell RNA sequencing reveals adrb1 as a sympathetic nerve-regulated immune checkpoint driving T cell exhaustion and impacting immunotherapy in esophageal squamous cell carcinoma. (2025) PMID 40406147
   - Extracellular vesicle-LncRNA HOTAIR modulates esophageal cancer chemoresistance and immune microenvironment via miR-375/CDH2 pathway. (2025) PMID 40235720
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
+  - The potential of MCM8 as a biomarker in esophageal carcinoma: a comprehensive analysis integrating m6a methylation and angiogenesis. (2025) PMID 40346692
+  - Identification and Characterization of Oxidative Stress and Endoplasmic Reticulum Stress-Related Genes in Esophageal Cancer. (2025) PMID 40302812
+  - Identification of esophageal cancer tumor antigens and immune subtypes for guiding vaccine development. (2025) PMID 40529738
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-esca.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-tcga-esca.json

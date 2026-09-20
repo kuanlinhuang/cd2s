@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-p1000",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-prad-p1000",
   "name": "Prostate Adenocarcinoma (MSK/DFCI, Nature Genetics 2018)",
   "alternateName": [
     "prad_p1000"
   ],
   "description": "Whole exome Sequencing of 1013 prostate cancer samples and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-p1000",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-prad-p1000",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_p1000"
   ],
@@ -44,7 +44,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -56,7 +56,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-p1000.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-prad-p1000.json",
       "encodingFormat": "application/json"
     }
   ],

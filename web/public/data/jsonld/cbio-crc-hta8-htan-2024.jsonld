@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-hta8-htan-2024",
+  "@id": "https://cancer-data-showcase.example.org/datasets/cbio-crc-hta8-htan-2024",
   "name": "Colorectal Cancer (HTAN MSK, Nature 2025)",
   "alternateName": [
     "crc_hta8_htan_2024"
   ],
   "description": "Targeted genomic and single-cell RNA sequencing of normal colon, primary colorectal cancer, and matched metastatic samples from 29 patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-hta8-htan-2024",
+  "url": "https://cancer-data-showcase.example.org/datasets/cbio-crc-hta8-htan-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=crc_hta8_htan_2024"
   ],
@@ -45,7 +45,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -57,7 +57,7 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-crc-hta8-htan-2024.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/cbio-crc-hta8-htan-2024.json",
       "encodingFormat": "application/json"
     }
   ],

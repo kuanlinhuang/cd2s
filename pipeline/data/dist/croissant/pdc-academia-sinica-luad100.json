@@ -9,9 +9,9 @@
   "name": "pdc-academia-sinica-luad100",
   "alternateName": "Academia Sinica LUAD100",
   "description": "Academia Sinica LUAD100",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-academia-sinica-luad100",
+  "url": "https://cancer-data-showcase.example.org/datasets/pdc-academia-sinica-luad100",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Identification of HMGB2 associated with proliferation, invasion and prognosis in lung adenocarcinoma via weighted gene co-expression network analysis.",
+  "citeAs": "Academia Sinica LUAD100",
   "version": "as-retrieved",
   "datePublished": "2021-01-01",
   "recordSet": [

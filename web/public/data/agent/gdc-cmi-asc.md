@@ -40,8 +40,9 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1
-- Reuse gap index: -1.00 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 0
+- Of those, 5 were retrieved and graded individually; 0 had no author in common with the generating team.
+- Reuse gap index: -1.54 (negative means less reused than comparable datasets)
   - Tracking of stem cells in vivo for cardiovascular applications. (2014) PMID 24406054
   - The Key Gene Expression Patterns and Prognostic Factors in Malignant Transformation from Enchondroma to Chondrosarcoma. (2021) PMID 34568022
   - [Current management of acute pediatric rhinosinusitis in France]. (2007) PMID 17317063
@@ -51,4 +52,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cmi-asc.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-cmi-asc.json

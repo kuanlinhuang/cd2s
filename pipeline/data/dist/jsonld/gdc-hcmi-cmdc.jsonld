@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-hcmi-cmdc",
+  "@id": "https://cancer-data-showcase.example.org/datasets/gdc-hcmi-cmdc",
   "name": "NCI Cancer Model Development for the Human Cancer Model Initiative",
   "alternateName": [
     "hcmi_cmdc"
   ],
   "description": "The Human Cancer Models Initiative exists to replace ageing immortalised cell lines with models that retain patient genomics and come with their source tumor characterized. Coverage is exceptionally uniform: whole genome on 804 of 805, RNA sequencing on 781, exome on 721, methylation on 703, and both histopathology and radiology on 382.\nIts distinctive value is breadth across tumor types, including rare cancers that have no established model system at all. Prior treatment is recorded for 92% of donors, which matters because it determines what the derived model actually represents.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-hcmi-cmdc",
+  "url": "https://cancer-data-showcase.example.org/datasets/gdc-hcmi-cmdc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/HCMI-CMDC",
     "gdc_program:HCMI",
@@ -126,7 +126,7 @@
   "includedInDataCatalog": {
     "@type": "DataCatalog",
     "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "url": "https://cancer-data-showcase.example.org"
   },
   "distribution": [
     {
@@ -138,19 +138,52 @@
     {
       "@type": "DataDownload",
       "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-hcmi-cmdc.json",
+      "contentUrl": "https://cancer-data-showcase.example.org/data/datasets/gdc-hcmi-cmdc.json",
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Patient-Derived Triple-Negative Breast Cancer Organoids Provide Robust Model Systems That Recapitulate Tumor Intrinsic Characteristics.",
-      "identifier": "https://doi.org/10.1158/0008-5472.can-21-2807",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA238475",
+      "name": "Predictive Modeling of the EGFR-MAPK pathway for Triple Negative Breast Cancer Patients",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA238475"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA058223",
+      "name": "SPORE in Breast Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA058223"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA045508",
+      "name": "Cancer Research Training and Education Coordination Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA045508"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA013106",
+      "name": "Project 2: Splicing Dysregulation in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA013106"
+    },
     {
       "@type": "Grant",
       "identifier": "R01CA292376",
@@ -164,7 +197,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA196521",
-      "name": "Bioinformatics for Next Generation Sequencing",
+      "name": "The Tisch Cancer Institute - Cancer Center Support Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -184,7 +217,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA124435",
-      "name": "Biostatistics",
+      "name": "Leadership, Planning and Evaluation",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

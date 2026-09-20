@@ -41,18 +41,18 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 233
-- Citations to the dataset's publication: 103 (attention, not reuse)
-- Reuse gap index: +1.90 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 125
+- Of those, 164 were retrieved and graded individually; 0 had no author in common with the generating team and 9 were themselves NCI funded.
+- Reuse gap index: +1.31 (negative means less reused than comparable datasets)
+  - Identification of novel mutational drivers reveals oncogene dependencies in multiple myeloma. (2018) PMID 29884741
   - Gain of Chromosome 1q is associated with early progression in multiple myeloma patients treated with lenalidomide, bortezomib, and dexamethasone. (2019) PMID 31767829
   - Timing the initiation of multiple myeloma. (2020) PMID 32317634
   - Multiple myeloma immunoglobulin lambda translocations portend poor prognosis. (2019) PMID 31015454
   - Whole-genome sequencing reveals progressive versus stable myeloma precursor conditions as two distinct entities. (2021) PMID 33767199
-  - Cell of Origin and Genetic Alterations in the Pathogenesis of Multiple Myeloma. (2019) PMID 31231360
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-mmrf-commpass.json
+- Full structured record: https://cancer-data-showcase.example.org/data/datasets/gdc-mmrf-commpass.json
