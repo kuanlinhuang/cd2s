@@ -63,7 +63,7 @@ export default function AgentsPage() {
     <>
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">For agents</h1>
-        <p className="mt-3 max-w-3xl text-[14px] t-muted">
+        <p className="mt-3 max-w-3xl text-lede t-muted">
           Half of this resource exists for software. An agent choosing a dataset needs
           the same three things a researcher does: what the data can support, what they
           cannot, and how to start. It needs them as structured files, not a page to
@@ -100,7 +100,7 @@ export default function AgentsPage() {
             )}
           </Callout>
         </div>
-        <div className="prose-cds mt-4 text-[14px]">
+        <div className="prose-cds mt-4 text-lede">
           <p>
             Every agent brief puts constraints first for that reason, and every record
             carries <code>limitations</code> graded by severity. A <code>blocking</code>{" "}
@@ -124,13 +124,13 @@ export default function AgentsPage() {
       {/* ----------------------------------------------------------- endpoints */}
       <section className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">Files and endpoints</h2>
-        <p className="mt-1 mb-4 max-w-3xl text-[13px] t-muted">
+        <p className="mt-1 mb-4 max-w-3xl text-body t-muted">
           Everything is a static JSON or Markdown file with permissive CORS. No key, no
           rate limit, no account. A resource meant to resolve in five years should not
           depend on a running service.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[560px] text-[13px]">
+          <table className="w-full min-w-[560px] text-body">
             <thead>
               <tr className="border-b text-left t-faint">
                 <th className="py-1.5 pr-4 font-medium">Path</th>
@@ -141,7 +141,7 @@ export default function AgentsPage() {
               {FILES.map((f) => (
                 <tr key={f.path} className="border-b last:border-b-0 align-top">
                   <td className="py-2 pr-4">
-                    <code className="font-mono text-[12px]" style={{ color: "var(--accent)" }}>
+                    <code className="font-mono text-meta" style={{ color: "var(--accent)" }}>
                       {f.path}
                     </code>
                   </td>
@@ -152,14 +152,14 @@ export default function AgentsPage() {
           </table>
         </div>
 
-        <h3 className="mt-6 mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mt-6 mb-2 text-body font-medium uppercase tracking-wide t-faint">
           Dataset agent
         </h3>
         <Card>
-          <code className="font-mono text-[12px]" style={{ color: "var(--accent)" }}>
+          <code className="font-mono text-meta" style={{ color: "var(--accent)" }}>
             GET /api/v1/agent?q=... &middot; POST /api/v1/agent {"{"}&quot;q&quot;: &quot;...&quot;{"}"}
           </code>
-          <p className="mt-2 text-[13px] t-muted">
+          <p className="mt-2 text-body t-muted">
             Describe an analysis in plain language. The response is a ranked shortlist with
             the reasons each dataset fits and the blockers to check first. Retrieval and the
             capability checks are deterministic; when the server has an{" "}
@@ -169,14 +169,14 @@ export default function AgentsPage() {
           </p>
         </Card>
 
-        <h3 className="mt-6 mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mt-6 mb-2 text-body font-medium uppercase tracking-wide t-faint">
           Query endpoint
         </h3>
         <Card>
-          <code className="font-mono text-[12px]" style={{ color: "var(--accent)" }}>
+          <code className="font-mono text-meta" style={{ color: "var(--accent)" }}>
             GET /api/v1/search
           </code>
-          <p className="mt-2 text-[13px] t-muted">
+          <p className="mt-2 text-body t-muted">
             Capability-first filtering. Parameters: <code>q</code>, <code>modality</code>,{" "}
             <code>site</code>, <code>access</code>, <code>repository</code>,{" "}
             <code>survival</code>, <code>treatment_response</code>,{" "}
@@ -184,7 +184,7 @@ export default function AgentsPage() {
             <code>min_modalities</code>, <code>limit</code>.
           </p>
           <pre
-            className="mt-3 overflow-x-auto rounded border p-3 font-mono text-[12px]"
+            className="mt-3 overflow-x-auto rounded border p-3 font-mono text-meta"
             style={{ background: "var(--bg-sunken)" }}
           >
             <code>{`# Cohorts where treatment-response analysis is actually possible
@@ -202,7 +202,7 @@ curl "/data/agent/gdc-fm-ad.md"`}</code>
       {/* ---------------------------------------------------------- workbooks */}
       <section className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">Runnable workbooks</h2>
-        <p className="mt-1 mb-4 max-w-3xl text-[13px] t-muted">
+        <p className="mt-1 mb-4 max-w-3xl text-body t-muted">
           {num(stats.n_datasets_with_workbook ?? 0)} dataset pages carry a workbook executed end to end
           against the live public APIs. Each ships a receipt recording when it ran, with
           which package versions, how long it took and a hash of its outputs. So
@@ -218,14 +218,14 @@ curl "/data/agent/gdc-fm-ad.md"`}</code>
             ["Select a dataset the way an agent should", "Contrasts size-ranked with capability-ranked selection, then emits a task brief."],
           ].map(([title, body]) => (
             <Card key={title}>
-              <h3 className="font-medium text-[14px]">{title}</h3>
-              <p className="mt-1 text-[13px] t-muted">
+              <h3 className="font-medium text-lede">{title}</h3>
+              <p className="mt-1 text-body t-muted">
                 {body}
               </p>
             </Card>
           ))}
         </div>
-        <p className="mt-4 text-[13px] t-muted">
+        <p className="mt-4 text-body t-muted">
           Source lives in <code>workbooks/python/</code> as plain scripts in the{" "}
           <code># %%</code> cell format; executed notebooks and receipts are in{" "}
           <code>workbooks/executed/</code>. Notebooks are build artifacts, not source,
@@ -238,7 +238,7 @@ curl "/data/agent/gdc-fm-ad.md"`}</code>
         <h2 className="text-lg font-semibold tracking-tight">
           What an agent should not conclude from this data
         </h2>
-        <ul className="mt-3 space-y-2 text-[14px]">
+        <ul className="mt-3 space-y-2 text-lede">
           {[
             [
               "A missing reuse count is not an absent reuse",
@@ -259,15 +259,15 @@ curl "/data/agent/gdc-fm-ad.md"`}</code>
           ].map(([title, body]) => (
             <li key={title}>
               <Card>
-                <h3 className="font-medium text-[14px]">{title}</h3>
-                <p className="mt-1 text-[13px] t-muted">
+                <h3 className="font-medium text-lede">{title}</h3>
+                <p className="mt-1 text-body t-muted">
                   {body}
                 </p>
               </Card>
             </li>
           ))}
         </ul>
-        <p className="mt-5 text-[13px] t-muted">
+        <p className="mt-5 text-body t-muted">
           Full methodology, including where the whole approach is weak, is on{" "}
           <Link href="/methods" className="underline">
             the Methods page

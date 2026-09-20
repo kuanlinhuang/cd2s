@@ -58,7 +58,7 @@ export function SegmentBar({
         {segments.map((s) => (
           <li key={s.key} className="flex items-start gap-2">
             <span className="viz-swatch mt-[3px]" style={{ background: s.color }} />
-            <span className="min-w-0 text-[12px] leading-snug">
+            <span className="min-w-0 text-meta leading-snug">
               <span className="viz-value font-semibold">{s.value.toLocaleString("en-US")}</span>
               <span className="t-faint"> {pctOf(s.value, whole)}</span>
               <span className="block" style={{ color: "var(--text)" }}>

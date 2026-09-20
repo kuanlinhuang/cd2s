@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------
    Design tokens.
 
-   This is a reference work for researchers, so it is built for density and scanning
+   This is a reference work for researchers, so it is built for reading and checking
    rather than persuasion: a quiet neutral ground, one accent, and semantic color
    reserved for things that carry meaning - access tier, evidence strength, and whether
    an analysis is possible at all. Color is never the only signal; every colored state
@@ -19,6 +19,48 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ----------------------------------------------------------------------------------
+     The type scale, by the job each step does rather than by a t-shirt size.
+
+     The site is a reference work, and its first version optimised for density: body
+     copy at 13px, metadata at 12px, chips and axis labels at 10-11px. That fits more
+     rows on a screen and asks a reader to lean in to read any of it, which is the wrong
+     trade for pages whose whole point is that a researcher can check a claim.
+
+     Five steps, each named for what it carries, so a size is chosen by intent and the
+     whole scale can be retuned here instead of in 300 class attributes:
+
+       micro  chips, axis ticks, legends, units
+       meta   captions, provenance, secondary detail
+       body   the workhorse - paragraphs, table cells, list rows
+       lede   section intros and anything that leads a reader in
+       title  card and panel titles
+
+     Headings continue the same scale through Tailwind's own steps, redefined here for
+     the same reason: one place to tune.
+     ---------------------------------------------------------------------------------- */
+  --text-micro: 12px;
+  --text-micro--line-height: 1.4;
+  --text-meta: 14px;
+  --text-meta--line-height: 1.5;
+  --text-body: 16px;
+  --text-body--line-height: 1.6;
+  --text-lede: 17px;
+  --text-lede--line-height: 1.6;
+  --text-title: 19px;
+  --text-title--line-height: 1.4;
+
+  --text-lg: 21px;
+  --text-lg--line-height: 1.3;
+  --text-xl: 23px;
+  --text-xl--line-height: 1.25;
+  --text-2xl: 28px;
+  --text-2xl--line-height: 1.2;
+  --text-3xl: 34px;
+  --text-3xl--line-height: 1.15;
+  --text-4xl: 41px;
+  --text-4xl--line-height: 1.1;
 }
 
 /* Semantic surfaces, redefined for dark mode below. Every color is defined here on
@@ -64,6 +106,7 @@
   --viz-3: #c0891a;
   --viz-mute: #b7bec9;
   --viz-track: #eceef2;
+  --viz-track-line: #d8dce4;
   --viz-grid: #e6e8ec;
   --viz-axis: #c9cfd8;
   --viz-1-wash: rgb(26 154 158 / 0.14);
@@ -106,6 +149,7 @@
     --viz-3: #a88a2a;
     --viz-mute: #4a5262;
     --viz-track: #1f252d;
+    --viz-track-line: #333c4a;
     --viz-grid: #222831;
     --viz-axis: #3d4450;
     --viz-1-wash: rgb(38 160 164 / 0.18);
@@ -148,6 +192,7 @@
   --viz-3: #a88a2a;
   --viz-mute: #4a5262;
   --viz-track: #1f252d;
+  --viz-track-line: #333c4a;
   --viz-grid: #222831;
   --viz-axis: #3d4450;
   --viz-1-wash: rgb(38 160 164 / 0.18);
@@ -167,7 +212,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: var(--text-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -185,6 +230,23 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Form controls, sized to the type they sit beside. A native checkbox is about 13px
+   whatever the surrounding font size, which reads as broken next to 17px body copy. */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.05em;
+  height: 1.05em;
+  accent-color: var(--accent);
+}
+select,
+input[type="text"],
+input[type="search"],
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--text);
 }
 
 /* Visible, consistent focus for keyboard users. */
@@ -211,7 +273,7 @@ body {
 
 /* Prose defaults for curated narrative blocks. */
 .prose-cds {
-  max-width: 70ch;
+  max-width: 68ch;
 }
 .prose-cds p {
   margin-bottom: 0.85em;
@@ -226,10 +288,10 @@ body {
 .evidence-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  font-size: 11px;
+  gap: 0.3rem;
+  font-size: var(--text-micro);
   line-height: 1;
-  padding: 2px 6px;
+  padding: 3px 7px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--bg-sunken);
@@ -245,7 +307,7 @@ body {
 /* Coverage meter: shows how complete a clinical field actually is. */
 .meter {
   position: relative;
-  height: 6px;
+  height: 9px;
   border-radius: 3px;
   background: var(--bg-sunken);
   overflow: hidden;
@@ -262,27 +324,27 @@ body {
    the surface does the separating: a 2px gap between touching fills, a 2px ring on dots.
    ------------------------------------------------------------------------------------ */
 .viz-label {
-  font-size: 12px;
-  line-height: 1.3;
+  font-size: var(--text-meta);
+  line-height: 1.35;
   color: var(--text);
 }
 .viz-value {
-  font-size: 12px;
+  font-size: var(--text-meta);
   font-variant-numeric: tabular-nums;
   color: var(--text);
   white-space: nowrap;
 }
 .viz-axis-text {
-  font-size: 11px;
+  font-size: var(--text-micro);
   fill: var(--text-faint);
   font-variant-numeric: tabular-nums;
 }
 .viz-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1rem;
-  font-size: 11px;
-  line-height: 1.3;
+  gap: 0.4rem 1.25rem;
+  font-size: var(--text-micro);
+  line-height: 1.4;
   color: var(--text-muted);
 }
 .viz-legend > span {
@@ -292,8 +354,8 @@ body {
 }
 .viz-swatch {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 2px;
   flex: none;
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08);
@@ -302,7 +364,7 @@ body {
   border-radius: 999px;
 }
 .viz-swatch.line {
-  width: 16px;
+  width: 18px;
   height: 0;
   border-top: 2px solid currentColor;
   border-radius: 0;
@@ -315,7 +377,7 @@ body {
 .bar-track {
   position: relative;
   display: block;
-  height: 8px;
+  height: 12px;
   border-radius: 2px 4px 4px 2px;
   background: var(--viz-track);
   overflow: hidden;
@@ -327,11 +389,96 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+/* Gridlines inside the track, at the same positions as the tick labels beneath the
+   chart, with the tick interval passed in as `--bar-tick`. A bar without them shows that
+   one row is longer than another; with them it also shows roughly by how much, which is
+   the difference between a picture of the data and a reading of it. The fill covers them
+   as it grows - the convention, and the reason the empty part of a track is where a
+   scale is read. */
+.bar-track.scaled,
+.seg-bar.scaled {
+  background-color: var(--viz-track);
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--viz-track-line) 0 1px,
+    transparent 1px var(--bar-tick, 25%)
+  );
+}
+
+/* A paired-dot row: a decade-gridded rule, the gap drawn as a connector, and one dot
+   per measure. The grid comes from the same `--bar-tick` the bar tracks use, so the
+   gridlines under a dot row and a bar row line up with the same tick labels. */
+.dot-track {
+  position: relative;
+  display: block;
+  height: 16px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+.dot-track.scaled {
+  background-image: linear-gradient(
+      to right,
+      var(--viz-track-line) 0,
+      var(--viz-track-line) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, transparent 7px, var(--viz-track) 7px 9px, transparent 9px);
+  background-size:
+    var(--bar-tick, 25%) 100%,
+    100% 100%;
+}
+.dot-link {
+  position: absolute;
+  top: 7px;
+  height: 2px;
+  min-width: 1px;
+  border-radius: 1px;
+  background: var(--viz-axis);
+}
+.dot-mark {
+  position: absolute;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px var(--bg-raised);
+}
+
+/* Tick labels, positioned along the bar column beneath a chart. */
+.bar-axis {
+  position: relative;
+  display: block;
+  height: 1.1rem;
+}
+.bar-axis > span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: var(--text-micro);
+  line-height: 1.1rem;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.bar-axis > span:first-child {
+  transform: none;
+}
+.bar-axis > span:last-child {
+  transform: translateX(-100%);
+}
+@media (max-width: 640px) {
+  .bar-axis > span:nth-child(even),
+  .bar-axis .axis-unit {
+    display: none;
+  }
+}
+
 /* Segmented (part-to-whole) bar: 2px surface gaps, no strokes. */
 .seg-bar {
   display: flex;
   gap: 2px;
-  height: 12px;
+  height: 16px;
   width: 100%;
 }
 .seg-bar > span {
@@ -356,14 +503,14 @@ body {
   z-index: 20;
   pointer-events: none;
   width: max-content;
-  max-width: 260px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
+  max-width: 320px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
   background: var(--bg-raised);
-  box-shadow: 0 4px 14px rgb(0 0 0 / 0.14);
-  font-size: 12px;
-  line-height: 1.4;
+  box-shadow: 0 6px 22px rgb(0 0 0 / 0.18);
+  font-size: var(--text-meta);
+  line-height: 1.45;
   color: var(--text-muted);
 }
 .viz-tip .tip-title {
@@ -393,7 +540,7 @@ body {
 /* Compare table: a thin bar beneath a number so magnitudes read at a glance. */
 .cmp-bar {
   display: block;
-  height: 4px;
+  height: 6px;
   width: 100%;
   max-width: 110px;
   margin-top: 5px;
@@ -412,7 +559,7 @@ body {
   body {
     background: #fff;
     color: #000;
-    font-size: 11pt;
+    font-size: 11.5pt;
   }
   .no-print {
     display: none !important;

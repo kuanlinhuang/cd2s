@@ -28,7 +28,7 @@ export default function QuestionsPage() {
         <h1 className="text-2xl font-semibold tracking-tight">
           Browse by research question
         </h1>
-        <p className="mt-3 max-w-3xl text-[14px] t-muted">
+        <p className="mt-3 max-w-3xl text-lede t-muted">
           Start from what you want to find out, not from an accession. Each question here
           has been checked against the data that would answer it, with the usable sample
           size and any statistical caveat attached.
@@ -50,7 +50,7 @@ export default function QuestionsPage() {
             <section key={topic}>
               <h2 className="mb-3 text-lg font-semibold tracking-tight capitalize">
                 {topic.replace(/-/g, " ")}{" "}
-                <span className="tnum text-[13px] font-normal t-faint">
+                <span className="tnum text-body font-normal t-faint">
                   {qs.length}
                 </span>
               </h2>
@@ -67,10 +67,10 @@ export default function QuestionsPage() {
                           {q.approx_n ? <Chip>n ≈ {num(q.approx_n)}</Chip> : null}
                         </div>
                       </div>
-                      <p className="mt-2 text-[13px] t-muted">
+                      <p className="mt-2 text-body t-muted">
                         {q.rationale}
                       </p>
-                      <div className="mt-2.5 flex flex-wrap items-center gap-2 text-[13px]">
+                      <div className="mt-2.5 flex flex-wrap items-center gap-2 text-body">
                         <span className="t-faint">Using</span>
                         <DatasetLink id={q.dataset_id}>{q.dataset_title}</DatasetLink>
                         {q.modalities.map((m) => (

@@ -43,7 +43,7 @@ export default async function ComparePage({
     <>
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Compare datasets</h1>
-        <p className="mt-3 max-w-3xl text-[14px] t-muted">
+        <p className="mt-3 max-w-3xl text-lede t-muted">
           Choosing between cohorts usually comes down to two or three differences. This
           view hides what they share and stars the measurements unique to each. Pick up
           to four datasets on the{" "}
@@ -61,7 +61,7 @@ export default async function ComparePage({
             browse page
           </Link>{" "}
           and choose &ldquo;Compare side by side&rdquo;, or pass ids directly as{" "}
-          <code className="font-mono text-[12px]">?ids=a,b,c</code>.
+          <code className="font-mono text-meta">?ids=a,b,c</code>.
         </EmptyState>
       ) : rows.length === 1 ? (
         <EmptyState>

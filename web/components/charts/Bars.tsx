@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { BarAxis, barScale, exactScale } from "@/components/charts/BarAxis";
 import { pctOf } from "@/lib/chart";
 
 /**
@@ -8,6 +9,10 @@ import { pctOf } from "@/lib/chart";
  * One colour per job, never per row: nominal categories all take the primary hue, and
  * bar length alone carries the value. `emphasis` and `warn` exist for the two meanings
  * the site reserves colour for - "underexplored" and "recorded but uninformative".
+ *
+ * Every chart carries a scale: gridlines inside each track and tick labels beneath the
+ * bar column, both from the same rounded ceiling. Without one a reader can rank the
+ * rows and nothing more, which wastes the only thing a bar is better at than a number.
  */
 
 export type BarTone = "primary" | "emphasis" | "muted" | "warn";
@@ -38,6 +43,8 @@ export function Bars({
   valueWidth = 72,
   height = 8,
   format,
+  unit,
+  scale,
 }: {
   rows: BarRow[];
   /** Scale ceiling. Defaults to the largest value present. */
@@ -48,38 +55,58 @@ export function Bars({
   valueWidth?: number;
   height?: number;
   format?: (v: number) => string;
+  /** Unit named once, at the end of the axis. */
+  unit?: string;
+  /** Drop the scale for a chart of one or two rows, where it says nothing. */
+  scale?: boolean;
 }) {
-  const ceiling = max ?? (Math.max(0, ...rows.map((r) => r.value)) || 1);
+  // An explicit `max` is a caller saying what the full width of the track means - a
+  // ceiling shared with another chart, or a known total - so it is used as given. With
+  // no ceiling to honour, the largest value is rounded up to one that ticks cleanly.
+  const s =
+    max === undefined ? barScale(Math.max(0, ...rows.map((r) => r.value))) : exactScale(max);
+  const showScale = scale ?? rows.length >= 3;
+  const columns = `minmax(72px, ${labelWidth}px) minmax(0, 1fr) ${valueWidth}px`;
   return (
-    <ul className="space-y-1.5">
-      {rows.map((r) => {
-        const w = Math.max(0, Math.min(100, (100 * r.value) / ceiling));
-        return (
-          <li
-            key={r.key}
-            className="grid items-center gap-3"
-            style={{
-              gridTemplateColumns: `minmax(72px, ${labelWidth}px) minmax(0, 1fr) ${valueWidth}px`,
-            }}
-            title={r.title}
-          >
-            <span className="viz-label truncate">{r.label}</span>
-            <span className="bar-track" style={{ height }}>
-              <i
-                style={{
-                  width: `${w}%`,
-                  minWidth: r.value > 0 ? 2 : 0,
-                  background: TONE_COLOR[r.tone ?? "primary"],
-                }}
-              />
-            </span>
-            <span className="viz-value text-right">
-              {r.display ?? (format ? format(r.value) : r.value.toLocaleString("en-US"))}
-              {total ? <span className="t-faint"> {pctOf(r.value, total)}</span> : null}
-            </span>
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <ul className="space-y-1.5">
+        {rows.map((r) => {
+          const w = Math.max(0, Math.min(100, s.pct(r.value)));
+          return (
+            <li
+              key={r.key}
+              className="grid items-center gap-3"
+              style={{ gridTemplateColumns: columns }}
+              title={r.title}
+            >
+              <span className="viz-label truncate">{r.label}</span>
+              <span
+                className={`bar-track${showScale ? " scaled" : ""}`}
+                style={{ height, ["--bar-tick" as string]: s.interval }}
+              >
+                <i
+                  style={{
+                    width: `${w}%`,
+                    minWidth: r.value > 0 ? 2 : 0,
+                    background: TONE_COLOR[r.tone ?? "primary"],
+                  }}
+                />
+              </span>
+              <span className="viz-value text-right">
+                {r.display ?? (format ? format(r.value) : r.value.toLocaleString("en-US"))}
+                {total ? <span className="t-faint"> {pctOf(r.value, total)}</span> : null}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      {showScale && (
+        <div className="mt-1.5 grid gap-3" style={{ gridTemplateColumns: columns }}>
+          <span />
+          <BarAxis scale={s} unit={unit} />
+          <span />
+        </div>
+      )}
+    </div>
   );
 }

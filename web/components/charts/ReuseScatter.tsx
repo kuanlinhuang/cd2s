@@ -18,8 +18,16 @@ import type { ScatterPoint } from "@/lib/types";
  * beneath the full-size chart so no value depends on a pointer.
  */
 
-const LABEL_CHAR_W = 6.1;
-const LABEL_H = 14;
+/**
+ * Label geometry, used to reserve space before drawing so two labels never land on each
+ * other. The width is per character and has to over- rather than under-estimate: these
+ * are accessions like BEATAML1.0-CRENOLANIB, nearly all capitals and digits, which run
+ * a good deal wider per character than the lowercase text an average would suggest. At
+ * 6.1 the reserved boxes were narrower than the drawn text and labels touched.
+ */
+const LABEL_FONT = 12;
+const LABEL_CHAR_W = 7.4;
+const LABEL_H = 16;
 
 type Box = { x: number; y: number; w: number; h: number };
 
@@ -244,7 +252,7 @@ export default function ReuseScatter({
             y={by}
             textAnchor={anchor}
             style={{
-              fontSize: 11,
+              fontSize: LABEL_FONT,
               fill: "var(--text-muted)",
               paintOrder: "stroke",
               stroke: "var(--bg-raised)",
@@ -312,11 +320,11 @@ export default function ReuseScatter({
 
       {!compact && (
         <details className="mt-4">
-          <summary className="cursor-pointer text-[13px] font-medium">
+          <summary className="cursor-pointer text-body font-medium">
             Show all {points.length} datasets as a table
           </summary>
           <div className="mt-2 max-h-[420px] overflow-auto rounded border">
-            <table className="w-full text-[12px]">
+            <table className="w-full text-meta">
               <thead className="sticky top-0" style={{ background: "var(--bg-raised)" }}>
                 <tr className="border-b text-left t-faint">
                   <th className="py-1.5 pl-3 pr-3 font-medium">Dataset</th>
@@ -335,7 +343,7 @@ export default function ReuseScatter({
                           {p.title}
                         </a>
                         {p.underexplored && (
-                          <span className="ml-1.5 text-[11px]" style={{ color: "var(--viz-2)" }}>
+                          <span className="ml-1.5 text-micro" style={{ color: "var(--viz-2)" }}>
                             underexplored
                           </span>
                         )}
