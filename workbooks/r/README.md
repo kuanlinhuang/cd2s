@@ -1,7 +1,26 @@
 # R workbooks
 
-These mirror the Python workbooks for researchers who work in R and Bioconductor. They query
-the same public APIs and need no credentials.
+These mirror the six Python workbooks for researchers who work in R and Bioconductor.
+They query the same public APIs and need no credentials.
+The Python versions are the independently executed reference examples because the build machine
+does not have R installed.
+
+The shared notebook contract is documented in [`../manifest.yaml`](../manifest.yaml).
+Each entry states the research question, inputs, outputs, steps, runtime, and datasets so an R
+implementation can be compared with the Python implementation without guessing what the example
+is meant to prove.
+
+The six examples cover:
+
+- capability screening before access;
+- survival derivation and modelling;
+- treatment-response validation;
+- scarce-modality discovery;
+- cross-repository patient linkage; and
+- agent-style dataset selection.
+
+The site shows the executed Python notebooks and their figure previews at `/notebooks`.
+R workbooks become part of that gallery only after they have an execution receipt and output hash.
 
 ## Execution status: NOT independently executed
 

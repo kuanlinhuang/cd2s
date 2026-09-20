@@ -1,108 +1,150 @@
-# Supporting Evidence - Cancer Data Showcase
+# Supporting evidence for Track 1
 
-**Track 1, NCI ODS Impact Prize.** All figures below were produced by the working prototype
-and are reproducible from the public repository. Corpus built 2026-09-20, pipeline v0.1.0.
+**Project:** Cancer Data Showcase
 
-## Prototype and code
+**Prize:** NCI Office of Data Sharing Impact Prize, Track 1: Research Output Sharing and Reuse Ideas.
 
-| Artifact | Location | License |
+**Corpus build:** 2026-09-20.
+
+**Pipeline version:** 0.1.0.
+
+All figures below are generated from the current committed export or from the executed workbooks.
+They are not estimates from a slide deck.
+
+## Prototype at a glance
+
+| Measure | Current result | Evidence |
+| --- | ---: | --- |
+| Dataset records | 602 | `pipeline/data/dist/stats.json` |
+| Source repositories or resource channels | 5 | `pipeline/data/dist/stats.json` |
+| Distinct measurement types | 29 | `pipeline/data/dist/stats.json` |
+| Records with measured clinical completeness | 385 | `pipeline/data/dist/stats.json` |
+| Records with a derivable survival endpoint | 206 | `pipeline/data/dist/stats.json` |
+| Records with recorded treatment response | 62 | `pipeline/data/dist/stats.json` |
+| Project-curated showcase pages | 20 | `pipeline/data/dist/stats.json` |
+| Model-identified underexplored records | 24 | `pipeline/data/dist/stats.json` |
+| Curated research questions | 69 | `pipeline/data/dist/questions.json` |
+| Executed workbooks | 6 | `workbooks/executed/` and `stats.json` |
+| Dataset pages with workbook attachments | 15 | `pipeline/data/dist/stats.json` |
+| Verified reuse studies | 796 | `pipeline/data/dist/stats.json` |
+| Distinct NCI awards linked through NIH RePORTER | 865 | `pipeline/data/dist/stats.json` |
+| Patients or subjects represented | 349,817 across 601 records | `pipeline/data/dist/stats.json` |
+| Records without a citable accession specific enough for reuse tracing | 364 | `pipeline/data/dist/stats.json` |
+
+The current generated statistics report zero records labeled `expert_reviewed`.
+The 20 showcase pages are `project_curated` records, and machine-only records explicitly state that their interpretations have not been human-reviewed.
+
+## Demonstrated user-facing capabilities
+
+| Capability | What the prototype does | Evidence |
 | --- | --- | --- |
-| Pipeline, site, workbooks, curated overlays | `github.com/<org>/cancer-data-showcase` *(to be published)* | MIT (code) |
-| Curated dataset guides and structured exports | `/data/` in the repository and on the site | CC BY 4.0 |
-| Executed notebooks with receipts | `workbooks/executed/*.ipynb` + `*.receipt.json` | MIT |
-| Reuse model coefficients and diagnostics | `pipeline/data/dist/reuse_gap_model.json` | CC BY 4.0 |
-| Link verification report | `pipeline/data/dist/verification_report.json` | CC BY 4.0 |
+| Question-first discovery | Accepts plain-language analysis needs and returns a ranked shortlist using measured capability fields. | `web/app/api/v1/agent/route.ts`, `web/lib/agent.ts` |
+| Constraints-first interpretation | Emits blocking limitations before capabilities in agent briefs and dataset pages. | `pipeline/src/cds/export/agent.py`, `web/app/agents/page.tsx` |
+| Clinical fit measurement | Separates absent, populated-but-uninformative, and informative values in a shared vocabulary. | `pipeline/src/cds/clinical.py`, `pipeline/src/cds/sources/` |
+| Analysis verdicts | Derives six common analysis verdicts and preserves `unknown` when a field has not been measured. | `pipeline/src/cds/clinical.py`, `web/lib/fit.ts` |
+| Graded reuse evidence | Distinguishes analyzed data from declared availability, accession mentions, and general citations. | `pipeline/src/cds/reuse/` and `web/app/methods/page.tsx` |
+| Funding linkage | Separates awards that generated a dataset from awards attached to downstream reuse. | `pipeline/src/cds/reuse/funding.py` |
+| Agent interoperability | Publishes JSON, JSON-LD, Croissant, Markdown briefs, OpenAPI, and capability-filterable endpoints. | `pipeline/src/cds/export/`, `web/app/agents/page.tsx` |
+| Reproducible starting points | Ships plain Python workbook sources, executed notebooks, execution receipts, and output hashes. | `workbooks/python/`, `workbooks/executed/` |
 
-Reproduce end to end: `cds ingest all && cds merge && cds trace-index && cds enrich && cds gap
-&& cds curate && cds verify && cds export`. No credentials required at any step.
+The six executed workbooks are deliberately split between human and agent use.
+They give a human researcher runnable examples for dataset audit, survival analysis, treatment-response analysis, scarce-modality discovery, and cross-repository linkage.
+They give an AI agent a reproducible selection pattern that filters on measured capability, reads constraints first, and emits a task brief.
 
-## What the prototype contains
+Six is the count of user-facing analysis workbooks with executed notebooks and receipts.
+It is not the count of all executable code in the project.
+The pipeline also includes source adapters for GDC, PDC, IDC, HTAN, cBioPortal, and NIH RePORTER, cached raw records, and commands for rebuilding and exporting the corpus.
 
-602 dataset records across 5 repositories and 29 distinct measurement types · clinical field
-completeness measured for 385 of them in one shared vocabulary · 206 with a survival endpoint
-that can actually be derived · 20 deeply curated showcase pages, 14 of them less-known
-resources · 69 reviewed research questions · 796 verified reuse studies (accession located in
-a methods section, corrected for Europe PMC indexing a hyphenated accession as separate
-words) · 865 NCI awards resolved through NIH RePORTER ·
-6 workbooks executed end to end against live public APIs · 124 of 124 links on curated pages
-resolving.
+## Headline findings
 
-## Headline findings (all measured, all reproducible)
+### A large cohort can support no outcome analysis
 
-- **18,004-case cohort, zero usable outcomes.** Foundation Medicine Adult Cancer Dataset
-  (`FM-AD`): vital status populated 100%, informative 0%; race "not reported" for all patients;
-  all treatment fields empty. Thirty-two records share the exact pattern, twenty of them GDC
-  projects and seventeen of those NCI-MATCH arms.
-- **364 of 602 datasets have no citable accession**, so their reuse cannot be traced at all.
-  One MSK cohort publication has 646 citations and no data identifier.
-- **Ubiquitylome data exist in 5 studies across the entire Proteomic Data Commons**; lipidomics
-  in 3; metabolomics in 7. CPTAC STAD (`PDC000622`) measures 193 tumors seven ways, openly.
-- **39 cohorts exist in both the Genomic and Imaging Data Commons.** For TCGA-BRCA the
-  patient-level join is 1,098 of 1,098 - complete multimodal coverage, openly available.
-- **Chernobyl thyroid cohort** (`REBC-THYR`, 449 cases): reported median follow-up 115 months,
-  derivable for 12 cases; vital status informative for none.
-- **24 datasets fall materially below modeled expected reuse** (Huber robust regression of
-  log2 analyzing articles over 142 datasets; years available the strongest predictor,
-  p = 3.0 × 10⁻²⁶; residual SD 1.61 log2 units; program membership deliberately excluded as a
-  covariate. A robust fit yields no R²; the 0.77 published alongside is an OLS reference. The
-  model ships its own worst case: `TARGET-AML` is predicted 552 analyzing articles against 137
-  observed, which is why the label also requires a small absolute count.)
+FM-AD contains 18,004 cases.
+Vital status is populated for 100% of cases and informative for 0%.
+Race is recorded as "not reported" for all cases.
+Treatment fields are empty.
+The full record is `pipeline/data/dist/datasets/gdc-fm-ad.json`.
+
+### Reuse is often unmeasurable, not absent
+
+364 of 602 records have no accession specific enough to search the literature.
+The prototype therefore reports no reuse count for those records and explains that absence of a count is not evidence of absence of reuse.
+
+### Scarce modalities can be hidden in plain sight
+
+The current corpus contains ubiquitylome measurements in five PDC studies and lipidomics in three.
+CPTAC STAD, record `pdc-cptac-stad-study`, measures seven analytical fractions on 193 tumors and is openly downloadable.
+
+### Cross-repository joins are not visible in individual catalogs
+
+The executed cross-repository workbook identifies 39 cohorts present in both GDC and IDC.
+For TCGA-BRCA, the patient-level join is 1,098 of 1,098 cases.
+The source is `workbooks/python/05_cross_repository_linkage.py`, with the executed notebook and receipt in `workbooks/executed/`.
+
+### The reuse-gap label is recomputable
+
+The current model fits a Huber robust regression over 142 records with measurable reuse.
+It uses cohort size, years available, modality breadth, and access tier.
+The underexplored threshold is a reuse-gap index of -1.5 on the log2 scale plus an absolute reuse ceiling of 25.
+The model labels 24 records in the current export.
+Coefficients, diagnostics, the rejected specification, and the model's worst case are in `pipeline/data/dist/reuse_gap_model.json`.
 
 ## Method validation
 
-- Europe PMC field calibration, re-run on every build and published as
-  `/data/field_calibration.json`: in the current build the broad `AVAILABILITY` field matched
-  3,953 of the 5,146 articles mentioning TCGA-LUAD anywhere and cannot discriminate; narrow
-  `DATA_AVAILABILITY` matched 311 and can. A deliberately invalid field name returns 0,
-  confirming the fields are truly indexed rather than falling back to free text; a build where
-  that check fails does not publish.
-- Self-audit caught two errors that produced plausible but wrong numbers: a follow-up median
-  computed from 1 of 1,098 cases (GDC stores follow-up in three different fields), and an
-  availability date of 2005 for a program founded in 2009 (one Europe PMC field matches
-  hyphenated accessions word-wise). Both are documented in the public methods.
+Europe PMC field calibration is rerun and published with each build.
+For the current calibration token, the broad `AVAILABILITY` field matched 3,953 of 5,146 articles that mentioned the token anywhere.
+The narrower `DATA_AVAILABILITY` field matched 311.
+A deliberately invalid indexed field returned zero hits, providing a sentinel against silent free-text fallback.
 
-## Primary sources used
+The reuse pipeline also samples full text for hyphenated accessions because Europe PMC can index the components as separate words.
+This correction is applied before a reuse count is published.
 
-NCI Genomic Data Commons (`api.gdc.cancer.gov`) · NCI Proteomic Data Commons
-(`proteomic.datacommons.cancer.gov/graphql`) · NCI Imaging Data Commons
-(`api.imaging.datacommons.cancer.gov/v3`) · Human Tumor Atlas Network
-(`github.com/ncihtan/htan-portal`) · cBioPortal (`cbioportal.org/api`) · Europe PMC
-(`ebi.ac.uk/europepmc/webservices/rest`) · NIH RePORTER (`api.reporter.nih.gov/v2`).
+The self-audit caught two plausible but wrong calculations.
+One follow-up median used a single non-null field instead of all relevant GDC fields.
+One availability date was pulled four years before a program existed because a hyphenated accession matched word-wise.
+Both errors are documented in the methods and validation artifacts.
 
-## Verified marker publications cited in curated guides
+## Primary sources
 
-Cancer Genome Atlas Network, *Nature* 2012, PMID 23000897 (TCGA-BRCA) · Gagliardi A et al.,
-*Nat Genet* 2020, PMID 32747824 (Ugandan cervical) · Morton LM et al., *Science* 2021,
-PMID 33888599 (Chernobyl thyroid) · Abida W et al., *PNAS* 2019, PMID 31061129 (mCRPC) ·
-Tiriac H et al., *Cancer Discov* 2018, PMID 29853643 (pancreatic organoids) · Bakr S et al.,
-*Sci Data* 2018, PMID 30325352 (NSCLC radiogenomics) · Bolouri H et al., *Nat Med* 2018,
-PMID 29227476 (pediatric AML) · Bartlett NL et al., *JCO* 2019, PMID 30939090 (CALGB 50303).
-Author strings verified against Europe PMC on 2026-09-18.
+- NCI Genomic Data Commons: <https://api.gdc.cancer.gov>
+- NCI Proteomic Data Commons: <https://proteomic.datacommons.cancer.gov/graphql>
+- NCI Imaging Data Commons: <https://api.imaging.datacommons.cancer.gov/v3>
+- Human Tumor Atlas Network: <https://github.com/ncihtan/htan-portal>
+- cBioPortal: <https://www.cbioportal.org/api>
+- Europe PMC: <https://www.ebi.ac.uk/europepmc/webservices/rest>
+- NIH RePORTER: <https://api.reporter.nih.gov/v2>
 
-## Machine-readable outputs for agents
+## Reproduction
 
-`/data/index.json` (capability-filterable index) · `/data/datasets/{id}.json` (full record with
-evidence on every claim) · `/data/agent/{id}.md` (plain-language brief, constraints first) ·
-`/data/croissant/{id}.json` (MLCommons Croissant with per-field completeness and blocking
-limitations) · `/data/jsonld/{id}.jsonld` (schema.org/Dataset + DCAT) · `/llms.txt` ·
-`/openapi.json` · `/data/field_calibration.json` (the reuse-method calibration) ·
-`/data/reuse_gap_model.json` (the fitted model, its diagnostics and its worst case) ·
-`GET /api/v1/search` with capability filters.
+The full pipeline can be rebuilt without credentials.
 
-## Status and limitations
+```text
+cd pipeline
+.venv/bin/python -m cds.cli ingest all
+.venv/bin/python -m cds.cli merge
+.venv/bin/python -m cds.cli trace-index
+.venv/bin/python -m cds.cli enrich
+.venv/bin/python -m cds.cli gap
+.venv/bin/python -m cds.cli curate
+.venv/bin/python -m cds.cli verify
+.venv/bin/python -m cds.cli export
+.venv/bin/python -m cds.cli workbooks
+```
 
-This is a working prototype, not a production service. It is publicly deployed at
-<https://cancer-data-showcase.vercel.app>; the source repository is not yet public, which is
-why dataset pages name their executed workbook and its receipt rather than linking to it.
+The repository's normal validation gate is:
 
-Clinical field completeness, and so the six analysis verdicts, is measured for 385 of 602
-records. The Human Tumor Atlas Network publishes one clinical table per topic rather than
-harmonized fields, so its verdicts reach *limited* at most; the Imaging Data Commons serves
-per-collection tables whose columns are named by the submitting trial, with no shared
-vocabulary to grade against, so its records state whether such a table exists at all and
-otherwise read *not measured*. *Not measured* is never folded into *not supported*.
+```text
+cd pipeline && .venv/bin/ruff check src tests scripts && .venv/bin/python -m pytest -q
+cd ../web && npm run typecheck && npm run lint && npm test && npm run build
+```
 
-Reuse counts are biased downward for datasets whose users publish in closed-access journals;
-investigator-cohort discovery skews toward institutions that deposit in cBioPortal; curated
-interpretation covers 20 of 602 records and every other page states that its interpretation is
-unreviewed. These constraints are published on the site's Methods page rather than omitted.
+## Licenses and status
+
+Pipeline code is MIT licensed.
+
+Curated text, metadata, and structured exports are CC BY 4.0.
+
+Upstream dataset metadata retains its original terms.
+
+The prototype is not presented as a production NCI service.
+Its purpose is to demonstrate a measurable gap, a feasible data model, a working interface, and a reproducible path to adoption.

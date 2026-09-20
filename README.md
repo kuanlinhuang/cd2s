@@ -7,6 +7,55 @@ human researchers and for their agents.
 Built for the **NCI Office of Data Sharing Impact Prize, Track 1** (Research Output Sharing and
 Reuse Ideas). Submission materials are in [`submission/`](submission/).
 
+## Why this layer exists
+
+NIH and NCI already make valuable cancer data available through the GDC, PDC, IDC, HTAN,
+cBioPortal, dbGaP, and other resources.
+Those repositories answer an important first question: *what data are available?*
+CDS adds the missing research question: *which resource, or combination of resources, can answer
+my question, and how do I get from the catalog to a defensible analysis?*
+
+The hard part is rarely finding one more download link.
+It is knowing which cohort, modality, endpoint, and repository identifiers belong together, then
+learning which files to request, how to clean their fields, and how to join records without
+quietly changing the population being studied.
+That interpretation work is scattered across papers, portal conventions, and expert memory.
+CDS makes it explicit, measurable, and runnable so the existing NIH investment can produce more
+research.
+
+| Researcher need | What CDS adds on top of existing resources |
+| --- | --- |
+| Choose a dataset before requesting access | Measures field completeness and returns six analysis-fit verdicts, with `not measured` kept distinct from `not supported`. |
+| Combine datasets responsibly | Maps shared identifiers, modality coverage, and patient-level overlap across repositories. |
+| Know whether a resource has worked in practice | Separates verified accession reuse from citations to a marker paper and shows the evidence articles. |
+| Find value that attention has missed | Compares observed and expected reuse and surfaces underexplored datasets with clear limitations. |
+| Get from discovery to analysis | Provides executed notebooks that retrieve, clean, join, visualize, and analyze public records. |
+| Let software make the same decision | Publishes constraints-first Markdown briefs, JSON, JSON-LD, Croissant, OpenAPI, and capability filters. |
+
+The product is therefore a research layer, not a replacement catalog.
+It preserves links back to the authoritative NIH and NCI sources while making their practical
+scope legible to a researcher who does not already know the local conventions.
+
+## The path from a question to a result
+
+CDS is organized around a short, inspectable workflow:
+
+1. **Ask.** Describe the analysis in ordinary language, such as survival with treatment response
+   or matched imaging and molecular data.
+2. **Screen.** Compare measured capability, access constraints, and limitations before downloading
+   a large cohort or requesting controlled files.
+3. **Combine.** Follow the repository identifiers and patient-level intersection evidence when a
+   question needs more than one data source.
+4. **Run.** Start from an executed notebook that shows retrieval, cleaning, joins, plots, and
+   analysis decisions against the same public APIs.
+5. **Learn.** Compare successful reuse with underexplored opportunities, then follow the evidence
+   and provenance back to the source records.
+
+The live interface exposes this path through the question box on the home page, the dataset
+browser, the `/notebooks` library, and the `/underexplored` opportunity view.
+The implementation lives in [`web/app/`](web/app/) and the generated records live in
+[`pipeline/data/dist/`](pipeline/data/dist/).
+
 ## The problem, in one example
 
 The Foundation Medicine Adult Cancer Dataset holds 18,004 patients, the largest cohort in the
@@ -44,6 +93,19 @@ For every dataset it ingests:
   the marker-paper inferences it withdraws are all re-measured and published on every build
 
 Every substantive claim carries provenance: source, retrieval date, method, and confidence.
+
+## What success and opportunity look like
+
+The homepage intentionally shows both ends of the reuse distribution.
+The most reused records demonstrate where a stable accession and a usable data path have already
+enabled downstream studies.
+The underexplored view shows records whose measured reuse falls below modelled expectations, but
+only when reuse is measurable and the absolute evidence is large enough to interpret.
+
+That distinction prevents a quiet dataset from being labelled a failure simply because it has no
+citable accession or because Europe PMC could not estimate an accession correction.
+It also gives program teams a practical way to ask which valuable resources need better identifiers,
+documentation, cross-repository links, or worked examples.
 
 ## Current corpus
 
@@ -89,7 +151,32 @@ Measurement coverage by repository, because how far it reaches is part of the re
 | `web/` | Next.js site: dataset agent, dataset pages, charts, funding flow, comparison view, agent API |
 | `workbooks/python/` | Workbook source as plain `# %%` scripts |
 | `workbooks/executed/` | Executed notebooks plus execution receipts |
+| `workbooks/manifest.yaml` | Human-readable questions, inputs, outputs, steps, and featured notebook flags |
 | `submission/` | Track 1 narrative and supporting evidence |
+
+## Notebook library
+
+The six executed Python notebooks are the most concrete bridge from a catalog record to research
+work.
+Each notebook has source code, a committed executed `.ipynb`, an execution receipt, and a figure
+preview used by the site.
+
+- [`01_can_i_answer_this`](workbooks/python/01_can_i_answer_this.py) audits clinical completeness
+  and returns six analysis-fit verdicts before access is requested.
+- [`02_survival_tcga_brca`](workbooks/python/02_survival_tcga_brca.py) derives an overall-survival
+  endpoint correctly and compares Kaplan-Meier and Cox results.
+- [`03_treatment_response_cervical`](workbooks/python/03_treatment_response_cervical.py) checks
+  that response fields are real before comparing ECOG and agents.
+- [`04_scarce_modality_cptac`](workbooks/python/04_scarce_modality_cptac.py) finds rare analytical
+  layers and bounds the complete-case population.
+- [`05_cross_repository_linkage`](workbooks/python/05_cross_repository_linkage.py) joins patient
+  identifiers across GDC and IDC and reports the overlap rather than assuming it.
+- [`06_agent_dataset_selection`](workbooks/python/06_agent_dataset_selection.py) contrasts a naive
+  size-ranked choice with a capability-ranked, constraints-first choice.
+
+Browse the visual previews and download the executed notebooks at [`/notebooks`](web/app/notebooks/).
+The manifest is the source of truth for each notebook's research question, inputs, outputs, and
+demonstrated datasets.
 
 ## Running it
 
