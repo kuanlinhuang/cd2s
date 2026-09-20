@@ -61,7 +61,7 @@ export default function AskBox({
         }}
         rows={2}
         placeholder="For example: survival by subtype in breast cancer with treatment records"
-        className="w-full resize-none rounded-md border px-3 py-2 text-[15px]"
+        className="w-full resize-none rounded-md border px-3.5 py-2.5 text-lede"
         style={{ background: "var(--bg)", borderColor: "var(--border)" }}
       />
       <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -72,7 +72,7 @@ export default function AskBox({
                 key={ex}
                 type="button"
                 onClick={() => go(ex)}
-                className="rounded-full border px-2.5 py-0.5 text-[12px] hover:border-[var(--accent)] t-muted"
+                className="rounded-full border px-2.5 py-0.5 text-meta hover:border-[var(--accent)] t-muted"
                 style={{ borderColor: "var(--border)" }}
               >
                 {ex}
@@ -83,7 +83,7 @@ export default function AskBox({
         <button
           type="submit"
           disabled={q.trim().length < 3}
-          className="ml-auto rounded-md px-4 py-1.5 text-[13px] font-medium disabled:opacity-50"
+          className="ml-auto rounded-md px-4 py-1.5 text-body font-medium disabled:opacity-50"
           style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
         >
           Ask

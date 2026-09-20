@@ -99,12 +99,82 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233280",
-      "name": null,
+      "name": "Omic and Multidimensional Spatial Atlas of Metastatic Breast Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233280"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U54CA209988",
+      "name": "Administrative Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA209988"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA224012",
+      "name": "Comparative analysis between patient-derived models of pancreatic ductal adenocarcinomas and matched tumor specimens",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA224012"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA217842",
+      "name": "Integrative bioinformatics and functional characterization of oncogenic driver aberrations in cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA217842"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R44CA224994",
+      "name": "Ultra-High Content Analysis (UHCA) of Single Cells in Tissue: 60+ channel immunofluorescence labeling kits and companion imaging software for everyone",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R44CA224994"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA069533",
+      "name": "Translational Oncology Research Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA069533"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA284167",
+      "name": "Developing a Cancer Galaxy Computational Workbench to Meet Emerging Cancer Data Analysis Needs",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA284167"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA231877",
+      "name": "A Federated Galaxy for user-friendly large-scale cancer genomics research",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA231877"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

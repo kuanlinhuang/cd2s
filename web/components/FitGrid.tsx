@@ -20,11 +20,11 @@ export function FitBadge({ status, compact = false }: { status: FitStatus; compa
   const s = STATUS_STYLE[status];
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded font-medium whitespace-nowrap ${compact ? "px-1.5 py-0.5 text-[11px]" : "px-2 py-0.5 text-[12px]"}`}
+      className={`inline-flex items-center gap-1 rounded font-medium whitespace-nowrap ${compact ? "px-1.5 py-0.5 text-micro" : "px-2 py-0.5 text-meta"}`}
       style={{ color: s.fg, background: s.bg }}
       title={FIT_STATUS_MEANING[status]}
     >
-      <span aria-hidden className="font-mono text-[10px]">
+      <span aria-hidden className="font-mono text-micro">
         {s.glyph}
       </span>
       {FIT_STATUS_LABELS[status]}
@@ -43,7 +43,7 @@ export function Reason({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         /^[a-z]+(?:_[a-z]+)+$/.test(part) ? (
-          <code key={i} className="font-mono text-[12px]" style={{ color: "var(--text)" }}>
+          <code key={i} className="font-mono text-meta" style={{ color: "var(--text)" }}>
             {part}
           </code>
         ) : (
@@ -58,7 +58,7 @@ export function FitGrid({ verdicts }: { verdicts: FitVerdict[] }) {
   const summary = fitSummary(verdicts);
   return (
     <div>
-      <p className="mb-4 max-w-3xl text-[14px] leading-relaxed">{summary.sentence}</p>
+      <p className="mb-4 max-w-3xl text-lede leading-relaxed">{summary.sentence}</p>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {verdicts.map((v) => {
           const s = STATUS_STYLE[v.status];
@@ -69,10 +69,10 @@ export function FitGrid({ verdicts }: { verdicts: FitVerdict[] }) {
               style={{ background: "var(--bg-raised)", borderLeft: `3px solid ${s.fg}` }}
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h3 className="text-[14px] font-medium">{v.label}</h3>
+                <h3 className="text-lede font-medium">{v.label}</h3>
                 <FitBadge status={v.status} compact />
               </div>
-              <p className="mt-1.5 text-[13px] leading-snug t-muted">
+              <p className="mt-1.5 text-body leading-snug t-muted">
                 <Reason text={v.reason} />.
                 {v.evidence.length > 0 && (
                   <span className="ml-1.5 inline-block align-middle">
@@ -84,7 +84,7 @@ export function FitGrid({ verdicts }: { verdicts: FitVerdict[] }) {
           );
         })}
       </ul>
-      <p className="mt-3 text-[12px] t-faint">
+      <p className="mt-3 text-meta t-faint">
         Judged from the repository&rsquo;s own field completeness (
         <Link href="/methods#fit" className="underline">
           thresholds

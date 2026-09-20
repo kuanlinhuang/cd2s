@@ -173,7 +173,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA217685",
-      "name": null,
+      "name": "Core 1: Pathology Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -183,7 +183,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA098258",
-      "name": null,
+      "name": "MD Anderson Gynecologic SPORE for Uterine Cancers",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

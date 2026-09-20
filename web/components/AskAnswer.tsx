@@ -102,7 +102,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
     if (routed) return null;
     return (
       <div aria-live="polite" aria-busy="true">
-        <p className="text-[13px] t-muted">Checking each candidate&rsquo;s measured fields.</p>
+        <p className="text-body t-muted">Checking each candidate&rsquo;s measured fields.</p>
         <div className="mt-3 space-y-3">
           {[0, 1, 2].map((i) => (
             <div key={i} className="h-24 animate-pulse rounded-lg border" style={{ background: "var(--bg-raised)" }} />
@@ -114,7 +114,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
 
   if (error) {
     return (
-      <p className="rounded-md border px-3 py-2 text-[13px]" style={{ borderColor: "var(--weak)", color: "var(--weak)" }}>
+      <p className="rounded-md border px-3 py-2 text-body" style={{ borderColor: "var(--weak)", color: "var(--weak)" }}>
         {error}
       </p>
     );
@@ -124,9 +124,9 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
 
   return (
     <div aria-live="polite">
-      <p className="text-[15px] leading-relaxed">{result.summary}</p>
+      <p className="text-lede leading-relaxed">{result.summary}</p>
       {result.needs.length > 0 && (
-        <p className="mt-1 text-[12px] t-muted">Read from your request: {result.needs.join(", ")}.</p>
+        <p className="mt-1 text-meta t-muted">Read from your request: {result.needs.join(", ")}.</p>
       )}
 
       <ol className="mt-4 space-y-3">
@@ -139,8 +139,8 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
                   <Link href={`/datasets/${p.id}`} className="font-medium hover:underline" style={{ color: "var(--accent)" }}>
                     {p.title}
                   </Link>
-                  <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] t-muted">
-                    {p.short_title && <span className="font-mono text-[11px]">{p.short_title}</span>}
+                  <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-meta t-muted">
+                    {p.short_title && <span className="font-mono text-micro">{p.short_title}</span>}
                     {p.n_cases !== null && <span className="tnum">{num(p.n_cases)} cases</span>}
                     <AccessBadge tier={p.access_tier as AccessTier} />
                     {p.is_underexplored && (
@@ -150,12 +150,12 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
                     )}
                   </div>
                 </div>
-                <span className="shrink-0 rounded px-2 py-0.5 text-[11px] font-medium" style={{ color: v.fg, background: v.bg }}>
+                <span className="shrink-0 rounded px-2 py-0.5 text-micro font-medium" style={{ color: v.fg, background: v.bg }}>
                   {v.label}
                 </span>
               </div>
 
-              <div className="mt-2 grid gap-3 text-[13px] sm:grid-cols-2">
+              <div className="mt-2 grid gap-3 text-body sm:grid-cols-2">
                 <Bullets id={p.id} heading="Why it fits" items={p.why} empty={null} />
                 <Bullets
                   id={p.id}
@@ -173,7 +173,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
                     </Chip>
                   ))}
                 </div>
-                <Link href={`/datasets/${p.id}#fit`} className="text-[12px] underline" style={{ color: "var(--accent)" }}>
+                <Link href={`/datasets/${p.id}#fit`} className="text-meta underline" style={{ color: "var(--accent)" }}>
                   Measured fit
                 </Link>
               </div>
@@ -183,7 +183,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
       </ol>
 
       {result.pan_cancer_count > 0 && (
-        <p className="mt-3 text-[12px] t-muted">
+        <p className="mt-3 text-meta t-muted">
           <Link href="/datasets?subject=pan_cancer" className="underline">
             {result.pan_cancer_count} pan-cancer datasets
           </Link>{" "}
@@ -191,7 +191,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
         </p>
       )}
 
-      <div className="mt-4 flex flex-wrap items-center gap-2 text-[13px]">
+      <div className="mt-4 flex flex-wrap items-center gap-2 text-body">
         {result.picks.length > 1 && (
           <Link
             href={`/compare?ids=${result.picks.map((p) => p.id).join(",")}`}
@@ -211,7 +211,7 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
             {l.label}
           </Link>
         ))}
-        <span className="ml-auto text-[12px] t-faint">
+        <span className="ml-auto text-meta t-faint">
           {result.mode === "llm"
             ? "Shortlist from measured fields; wording by a language model. "
             : "Shortlist from measured fields; ranked by rules. "}
@@ -237,7 +237,7 @@ function Bullets({
 }) {
   return (
     <div>
-      <div className="text-[11px] uppercase tracking-wide t-faint">{heading}</div>
+      <div className="text-micro uppercase tracking-wide t-faint">{heading}</div>
       {items.length === 0 ? (
         empty && <p className="mt-0.5 t-muted">{empty}</p>
       ) : (
@@ -252,7 +252,7 @@ function Bullets({
                     {" "}
                     <Link
                       href={`/datasets/${id}${anchor}`}
-                      className="whitespace-nowrap text-[11px] underline"
+                      className="whitespace-nowrap text-micro underline"
                       style={{ color: "var(--accent)" }}
                       aria-label={`Where this came from: ${w}`}
                     >

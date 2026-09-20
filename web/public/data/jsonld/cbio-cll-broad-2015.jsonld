@@ -100,7 +100,7 @@
     {
       "@type": "Grant",
       "identifier": "P20CA081534",
-      "name": null,
+      "name": "Molecular genetics of CLL",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -110,7 +110,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA081534",
-      "name": null,
+      "name": "Chronic Lymphocytic Leukemia Research Consortium",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

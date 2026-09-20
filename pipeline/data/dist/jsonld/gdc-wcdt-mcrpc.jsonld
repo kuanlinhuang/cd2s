@@ -148,7 +148,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA090381",
-      "name": null,
+      "name": "Tissue and Pathology Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -178,7 +178,7 @@
     {
       "@type": "Grant",
       "identifier": "R35CA197292",
-      "name": null,
+      "name": "Viral priming and targeting NK cells against solid tumor malignancies",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -238,7 +238,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA058236",
-      "name": null,
+      "name": "Administrative Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -254,6 +254,26 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA006973"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA155169",
+      "name": "Understanding Resistance to Next Generation Antiandrogens",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA155169"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA125612",
+      "name": "Towards Understanding Prostate Cancer Heterogeneity",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA125612"
     }
   ],
   "dateModified": "2026-09-18T02:36:57.247285+00:00",

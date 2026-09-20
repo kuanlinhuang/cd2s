@@ -148,12 +148,12 @@ export default function MethodsPage() {
     <>
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">How this was built</h1>
-        <p className="mt-3 max-w-3xl text-[14px] t-muted">
+        <p className="mt-3 max-w-3xl text-lede t-muted">
           Every number on this site is measured from a repository&rsquo;s own records and
           linked to its source. This page records how, and where the method is weak. Built
           for the NCI Office of Data Sharing Impact Prize, Track 1.
         </p>
-        <p className="mt-2 text-[12px] t-faint">
+        <p className="mt-2 text-meta t-faint">
           Corpus built {shortDate(stats.generated_at)} with pipeline v
           {stats.pipeline_version}: {num(stats.n_datasets)} records,{" "}
           {num(stats.n_grants_linked)} awards linked.
@@ -162,7 +162,7 @@ export default function MethodsPage() {
 
       {/* ----------------------------------------------------------------- index */}
       <section id="index" className="py-6 border-t">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-[13px]">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-body">
           <Card>
             <h2 className="font-medium">Methods</h2>
             <p className="mt-1 t-muted">
@@ -205,7 +205,7 @@ export default function MethodsPage() {
             </p>
           </Card>
         </div>
-        <p className="mt-3 text-[12px] t-faint">
+        <p className="mt-3 text-meta t-faint">
           Curated text and structured metadata are CC BY 4.0; pipeline code is MIT. Upstream
           dataset metadata keeps its original terms.
         </p>
@@ -216,7 +216,7 @@ export default function MethodsPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           One rule: no claim without provenance
         </h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             Every substantive statement on a dataset page carries an evidence record: how
             it was obtained (a structured API, a published file, document text, a
@@ -236,13 +236,13 @@ export default function MethodsPage() {
       {/* --------------------------------------------------------------- sources */}
       <section id="sources" className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">Sources and record units</h2>
-        <p className="mt-1 mb-4 max-w-3xl text-[13px] t-muted">
+        <p className="mt-1 mb-4 max-w-3xl text-body t-muted">
           The unit is the individual study or project. A researcher downloads TCGA-BRCA,
           not TCGA.
         </p>
         <Card className="mb-4">
-          <h3 className="text-[14px] font-medium">Records by repository</h3>
-          <p className="mb-4 text-[12px] t-muted">
+          <h3 className="text-lede font-medium">Records by repository</h3>
+          <p className="mb-4 text-meta t-muted">
             Two repositories hold most of the corpus and almost none of the records whose
             reuse can be traced.
           </p>
@@ -253,14 +253,14 @@ export default function MethodsPage() {
             <Card key={s.name}>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="font-medium">{s.name}</h3>
-                <code className="font-mono text-[11px] t-faint">
+                <code className="font-mono text-micro t-faint">
                   {s.endpoint}
                 </code>
               </div>
-              <p className="mt-0.5 text-[12px] t-faint">
+              <p className="mt-0.5 text-meta t-faint">
                 Record unit: {s.unit}
               </p>
-              <p className="mt-2 text-[13px]">{s.what}</p>
+              <p className="mt-2 text-body">{s.what}</p>
             </Card>
           ))}
         </div>
@@ -271,7 +271,7 @@ export default function MethodsPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           Measuring clinical completeness
         </h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             &ldquo;Clinical data available&rdquo; says nothing about whether you can run a
             survival model. So for every dataset we compute, field by field, how many
@@ -303,8 +303,8 @@ export default function MethodsPage() {
 
         {coverage.length > 0 && (
           <Card className="mt-4">
-            <h3 className="text-[14px] font-medium">How far the measurement reaches</h3>
-            <p className="mt-1 mb-3 max-w-3xl text-[12px] t-muted">
+            <h3 className="text-lede font-medium">How far the measurement reaches</h3>
+            <p className="mt-1 mb-3 max-w-3xl text-meta t-muted">
               The six verdicts can only be graded where a repository serves clinical
               fields that map onto the shared vocabulary.{" "}
               {num(stats.n_clinically_measured ?? 0)} of {num(stats.n_datasets)} records
@@ -333,7 +333,7 @@ export default function MethodsPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           The six analysis verdicts
         </h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             Every dataset page opens with the same six questions, answered from the field
             completeness above rather than from the catalog description. The thresholds
@@ -351,7 +351,7 @@ export default function MethodsPage() {
           </p>
         </div>
         <div className="mt-4 overflow-x-auto">
-          <table className="w-full min-w-[640px] text-[13px]">
+          <table className="w-full min-w-[640px] text-body">
             <thead>
               <tr className="border-b text-left t-faint">
                 <th className="py-1.5 pr-4 font-medium">Analysis</th>
@@ -364,7 +364,7 @@ export default function MethodsPage() {
               {FIT_RULES.map((r) => (
                 <tr key={r.key} className="border-b last:border-b-0 align-top">
                   <td className="py-2 pr-4 font-medium">{r.label}</td>
-                  <td className="py-2 pr-4 font-mono text-[12px] t-muted">{r.fields}</td>
+                  <td className="py-2 pr-4 font-mono text-meta t-muted">{r.fields}</td>
                   <td className="py-2 pr-4">{r.supported}</td>
                   <td className="py-2 t-muted">{r.limited}</td>
                 </tr>
@@ -372,7 +372,7 @@ export default function MethodsPage() {
             </tbody>
           </table>
         </div>
-        <p className="mt-3 text-[13px] t-muted">
+        <p className="mt-3 text-body t-muted">
           Repositories that ship one clinical table per topic rather than harmonized
           fields, as HTAN does, can at best tell us that a table exists for some share
           of cases. Those verdicts stay &ldquo;not measured&rdquo; until the table&rsquo;s
@@ -383,7 +383,7 @@ export default function MethodsPage() {
       {/* ------------------------------------------------------------------ agent */}
       <section id="agent" className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">How the ask box works</h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             A question goes through two stages, and only the second involves a language
             model. First, the wording is read for what the analysis needs: a survival
@@ -420,7 +420,7 @@ export default function MethodsPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           Grading reuse: citation is not use
         </h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             A review that cites the TCGA marker paper in its introduction has not reused
             TCGA. A paper that downloads TCGA-BRCA expression matrices and fits a model
@@ -435,7 +435,7 @@ export default function MethodsPage() {
         </div>
 
         <div className="mt-4 overflow-x-auto">
-          <table className="w-full min-w-[560px] text-[13px]">
+          <table className="w-full min-w-[560px] text-body">
             <thead>
               <tr className="border-b text-left t-faint">
                 <th className="py-1.5 pr-4 font-medium">Tier</th>
@@ -448,7 +448,7 @@ export default function MethodsPage() {
                 <tr key={t.tier} className="border-b last:border-b-0 align-top">
                   <td className="py-2 pr-4 font-medium whitespace-nowrap">{t.tier}</td>
                   <td className="py-2 pr-4">
-                    <code className="font-mono text-[11px]">{t.fields}</code>
+                    <code className="font-mono text-micro">{t.fields}</code>
                   </td>
                   <td className="py-2">{t.meaning}</td>
                 </tr>
@@ -459,10 +459,10 @@ export default function MethodsPage() {
 
         <div className="mt-4 space-y-3">
           <Card>
-            <h3 className="text-[14px] font-medium">Which fields we use, and one we rejected</h3>
+            <h3 className="text-lede font-medium">Which fields we use, and one we rejected</h3>
             {calibration ? (
               <>
-                <p className="mt-1 mb-3 text-[13px] t-muted">
+                <p className="mt-1 mb-3 text-body t-muted">
                   Field choice is re-measured against the live index on every build, on the
                   corpus&rsquo;s most reused accession. Of the{" "}
                   {num(calibration.n_mentioning_anywhere)} articles that mention{" "}
@@ -498,7 +498,7 @@ export default function MethodsPage() {
                     })),
                   ]}
                 />
-                <p className="mt-3 text-[12px] t-faint">
+                <p className="mt-3 text-meta t-faint">
                   The unindexed field name <code>{calibration.sentinel_field}</code> returned{" "}
                   {num(calibration.sentinel_hits)} hits, which is what shows these fields are
                   genuinely indexed rather than falling back to free text. A build where that
@@ -506,7 +506,7 @@ export default function MethodsPage() {
                 </p>
               </>
             ) : (
-              <p className="mt-1 text-[13px] t-muted">
+              <p className="mt-1 text-body t-muted">
                 The field comparison has not been measured for this build, so no numbers are
                 quoted here. Run <code>cds calibrate</code> to produce them.
               </p>
@@ -533,7 +533,7 @@ export default function MethodsPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           Dating when data became available
         </h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             Any exposure-adjusted reuse measure needs to know how long the community has
             had the data. Repository file timestamps do not work: GDC&rsquo;s earliest
@@ -560,7 +560,7 @@ export default function MethodsPage() {
       {/* ------------------------------------------------------------- reuse gap */}
       <section id="reuse-gap" className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">The reuse gap index</h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             Raw reuse counts cannot support an &ldquo;underexplored&rdquo; label, because
             they are not comparable. A 10,000-case open pan-cancer cohort available since
@@ -574,7 +574,7 @@ export default function MethodsPage() {
             measurement types, and access tier. The index is the residual:
           </p>
           <pre
-            className="overflow-x-auto rounded border p-3 font-mono text-[12px]"
+            className="overflow-x-auto rounded border p-3 font-mono text-meta"
             style={{ background: "var(--bg-sunken)" }}
           >
             <code>{`y      = log2( analyzing articles + 1 )
@@ -590,8 +590,8 @@ RGI    = y - fitted`}</code>
         {points.length > 0 && (
           <div className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1fr)_280px]">
             <Card>
-              <h3 className="text-[14px] font-medium">Observed against fitted</h3>
-              <p className="mb-3 text-[12px] t-muted">
+              <h3 className="text-lede font-medium">Observed against fitted</h3>
+              <p className="mb-3 text-meta t-muted">
                 {num(points.length)} datasets with a citable accession and a dated first
                 use. The diagonal is the model&rsquo;s prediction; the dashed line is the
                 label threshold.
@@ -600,10 +600,10 @@ RGI    = y - fitted`}</code>
             </Card>
             {model && (
               <Card>
-                <h3 className="text-[14px] font-medium">Model fit</h3>
-                <dl className="mt-2 grid grid-cols-[1fr_auto] gap-x-4 gap-y-1.5 text-[12px]">
+                <h3 className="text-lede font-medium">Model fit</h3>
+                <dl className="mt-2 grid grid-cols-[1fr_auto] gap-x-4 gap-y-1.5 text-meta">
                   <dt className="t-muted">Model</dt>
-                  <dd className="font-mono text-[11px]">{model.model_id}</dd>
+                  <dd className="font-mono text-micro">{model.model_id}</dd>
                   <dt className="t-muted">Eligible datasets</dt>
                   <dd className="tnum text-right">{num(model.n_eligible)}</dd>
                   <dt className="t-muted">Excluded, no citable accession</dt>
@@ -631,8 +631,8 @@ RGI    = y - fitted`}</code>
                     index &lt; {model.rgi_threshold_log2} and fewer than {model.absolute_reuse_ceiling} articles
                   </dd>
                 </dl>
-                <h4 className="mt-4 text-[12px] font-medium">Coefficients</h4>
-                <table className="mt-1 w-full text-[12px]">
+                <h4 className="mt-4 text-meta font-medium">Coefficients</h4>
+                <table className="mt-1 w-full text-meta">
                   <thead>
                     <tr className="border-b text-left t-faint">
                       <th className="py-1 font-medium">Term</th>
@@ -661,7 +661,7 @@ RGI    = y - fitted`}</code>
           </div>
         )}
 
-        <div className="prose-cds mt-5 text-[14px]">
+        <div className="prose-cds mt-5 text-lede">
           <p>
             <strong>This is the second specification.</strong> The first was a negative
             binomial on raw counts, the textbook choice for overdispersed count data, and
@@ -721,7 +721,7 @@ RGI    = y - fitted`}</code>
       {/* --------------------------------------------------------------- funding */}
       <section id="funding" className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">Funding to data to findings</h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             <strong>Where the links come from.</strong> Awards are resolved through NIH
             RePORTER from each dataset&rsquo;s publications. Articles are the record&rsquo;s
@@ -751,7 +751,7 @@ RGI    = y - fitted`}</code>
         <h2 className="text-lg font-semibold tracking-tight">
           Merging the same cohort across repositories
         </h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             TCGA-BRCA is one cohort of patients. It appears as a GDC project for genomics,
             an IDC collection for radiology and pathology slides, and a cBioPortal study
@@ -774,7 +774,7 @@ RGI    = y - fitted`}</code>
         <h2 className="text-lg font-semibold tracking-tight">
           Where this is weak
         </h2>
-        <p className="mt-1 mb-4 max-w-3xl text-[13px] t-muted">
+        <p className="mt-1 mb-4 max-w-3xl text-body t-muted">
           A resource that grades other people&rsquo;s evidence has to be honest about
           its own.
         </p>
@@ -812,7 +812,7 @@ RGI    = y - fitted`}</code>
             <li key={title}>
               <Card>
                 <h3 className="font-medium">{title}</h3>
-                <p className="mt-1.5 text-[13px] t-muted">
+                <p className="mt-1.5 text-body t-muted">
                   {body}
                 </p>
               </Card>
@@ -824,14 +824,14 @@ RGI    = y - fitted`}</code>
       {/* ---------------------------------------------------------- reproducing */}
       <section id="reproduce" className="py-8 border-t">
         <h2 className="text-lg font-semibold tracking-tight">Reproducing this</h2>
-        <div className="prose-cds mt-3 text-[14px]">
+        <div className="prose-cds mt-3 text-lede">
           <p>
             The pipeline is a Python package with a command line interface. Every HTTP
             response is cached on disk by request, so a full rebuild is deterministic and
             can run offline. No source needs credentials.
           </p>
           <pre
-            className="overflow-x-auto rounded border p-3 font-mono text-[12px]"
+            className="overflow-x-auto rounded border p-3 font-mono text-meta"
             style={{ background: "var(--bg-sunken)" }}
           >
             <code>{`cds ingest all        # fetch every source

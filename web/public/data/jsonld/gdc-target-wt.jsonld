@@ -78,7 +78,7 @@
     {
       "@type": "Grant",
       "identifier": "U10CA098543",
-      "name": null,
+      "name": "Children's Oncology Group Chair's Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -98,7 +98,7 @@
     {
       "@type": "Grant",
       "identifier": "U24CA114766",
-      "name": null,
+      "name": "Support for Human Specimen Banking in NCI-Sponsored Clinical Trials-(CGB)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -128,7 +128,7 @@
     {
       "@type": "Grant",
       "identifier": "U10CA098413",
-      "name": null,
+      "name": "Children's Oncology Group Statistics and Data Center Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -138,7 +138,7 @@
     {
       "@type": "Grant",
       "identifier": "U01CA088131",
-      "name": null,
+      "name": "CATEGORIZATION OF WILMS TUMOR BY GENETIC EXPRESSION",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -148,7 +148,7 @@
     {
       "@type": "Grant",
       "identifier": "T32CA079447",
-      "name": null,
+      "name": "Clinical Oncology Research Training Program",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -178,7 +178,7 @@
     {
       "@type": "Grant",
       "identifier": "U10CA042326",
-      "name": null,
+      "name": "NATIONAL WILMS TUMOR STUDY -5",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -218,7 +218,7 @@
     {
       "@type": "Grant",
       "identifier": "R50CA211461",
-      "name": null,
+      "name": "Open Software and Resource Development Leveraging Next-gen Sequencing Data to Facilitate Computational Analysis of Cancer Biology",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

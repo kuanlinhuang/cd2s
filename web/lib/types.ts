@@ -640,12 +640,18 @@ export type NetworkNodeKind = "award" | "dataset" | "paper";
 export interface NetworkNode {
   id: string;
   kind: NetworkNodeKind;
+  /** Which column the node sits in. Indexes into `NetworkData.lanes`. */
+  lane: number;
   label: string;
   sub?: string | null;
   href?: string | null;
   /** Datasets only. */
   underexplored?: boolean;
   repository?: string | null;
+  /** One extra line for the detail panel: a PI, a fiscal-year span, a journal. */
+  meta?: string | null;
+  /** Drawn larger and labelled at every zoom: the node the view is about. */
+  focus?: boolean;
 }
 
 export type NetworkEdgeKind =
@@ -662,9 +668,21 @@ export interface NetworkEdge {
   kind: NetworkEdgeKind;
 }
 
+/** A column of the layered graph: what it holds, and why a reader should care. */
+export interface NetworkLane {
+  label: string;
+  hint: string;
+  /** Shown under the hint when the lane is empty, instead of a blank column. */
+  empty?: string;
+  /** How many nodes this lane holds beyond the ones drawn. Never silently dropped. */
+  more?: number;
+}
+
 export interface NetworkData {
   nodes: NetworkNode[];
   edges: NetworkEdge[];
+  /** The columns, left to right, with what each holds and why it matters. */
+  lanes: NetworkLane[];
   /**
    * What a large slice left out, so the page can say so. Null when the whole slice is
    * drawn, which is every award page and every small scope.

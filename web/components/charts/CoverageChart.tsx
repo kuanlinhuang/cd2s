@@ -1,4 +1,5 @@
 import { Chip, EvidenceChip } from "@/components/ui";
+import { BarAxis, exactScale } from "@/components/charts/BarAxis";
 import { CLINICAL_CATEGORY_LABELS } from "@/lib/format";
 import type { ClinicalVariable } from "@/lib/types";
 
@@ -9,7 +10,23 @@ import type { ClinicalVariable } from "@/lib/types";
  * hold only "not reported" or "unknown", and cases with nothing at all. The distinction
  * is the site's central measurement, so it is drawn rather than described. One-to-many
  * fields can only report the share of cases with any record, so they show one segment.
+ *
+ * Each group carries a 0-100% scale under its bars, with gridlines at the same quarters
+ * inside the tracks. Every bar here is a share of the same whole, so one scale per group
+ * is enough, and reading "about two thirds" off a bar is the point of drawing it.
  */
+
+/**
+ * Every bar is a percentage of cases, so the scale is the same for all of them.
+ *
+ * Two intervals, not four: these bars share a column with the field names and sit around
+ * 160px wide, where four tick labels overlap into nonsense. Halves are enough to read a
+ * share off a bar, and the exact figure is printed at the end of every row anyway.
+ */
+const PCT_SCALE = exactScale(100, 2);
+
+/** Field name, bar, percentage - shared by the rows and by the axis beneath them. */
+const COVERAGE_COLUMNS = "minmax(0, 1fr) minmax(90px, 160px) 44px";
 
 const CATEGORY_ORDER = [
   "outcome",
@@ -109,7 +126,7 @@ export function CoverageChart({ variables }: { variables: ClinicalVariable[] }) 
       <div className="mt-4 grid gap-x-10 gap-y-6 lg:grid-cols-2">
         {groups.map(([cat, vars]) => (
           <div key={cat}>
-            <h4 className="mb-2 text-[12px] font-medium uppercase tracking-wide t-faint">
+            <h4 className="mb-2 text-meta font-medium uppercase tracking-wide t-faint">
               {CLINICAL_CATEGORY_LABELS[cat] ?? cat}
             </h4>
             <ul className="space-y-2">
@@ -119,9 +136,9 @@ export function CoverageChart({ variables }: { variables: ClinicalVariable[] }) 
                   <li
                     key={v.name}
                     className="grid items-center gap-3"
-                    style={{ gridTemplateColumns: "minmax(0, 1fr) minmax(80px, 150px) 40px" }}
+                    style={{ gridTemplateColumns: COVERAGE_COLUMNS }}
                   >
-                    <span className="flex min-w-0 items-center gap-1.5 text-[13px]">
+                    <span className="flex min-w-0 items-center gap-1.5 text-body">
                       <span className="truncate">{v.label ?? v.name}</span>
                       {v.is_repeated && (
                         <Chip title="A case can have several records of this field, so the bar shows the share of cases with at least one record.">
@@ -130,15 +147,23 @@ export function CoverageChart({ variables }: { variables: ClinicalVariable[] }) 
                       )}
                       <EvidenceChip evidence={v.evidence} />
                     </span>
-                    <span className="seg-bar" style={{ height: 8 }} title={p.tip} role="img" aria-label={p.tip}>
+                    <span
+                      className="seg-bar scaled"
+                      style={{ height: 12, ["--bar-tick" as string]: PCT_SCALE.interval }}
+                      title={p.tip}
+                      role="img"
+                      aria-label={p.tip}
+                    >
                       {p.informative > 0 && (
                         <span style={{ flex: `${p.informative} 0 0`, background: "var(--viz-1)" }} />
                       )}
                       {p.uninformative > 0 && (
                         <span style={{ flex: `${p.uninformative} 0 0`, background: "var(--viz-3)" }} />
                       )}
+                      {/* Transparent, not track-coloured: the gridded bar shows through,
+                          so a reader can see where the missing share ends on the scale. */}
                       {p.missing > 0 && (
-                        <span style={{ flex: `${p.missing} 0 0`, background: "var(--viz-track)" }} />
+                        <span style={{ flex: `${p.missing} 0 0`, background: "transparent" }} />
                       )}
                     </span>
                     <span className="viz-value text-right">{Math.round(p.pct)}%</span>
@@ -146,6 +171,11 @@ export function CoverageChart({ variables }: { variables: ClinicalVariable[] }) 
                 );
               })}
             </ul>
+            <div className="mt-1 grid gap-3" style={{ gridTemplateColumns: COVERAGE_COLUMNS }}>
+              <span />
+              <BarAxis scale={PCT_SCALE} unit="%" />
+              <span />
+            </div>
           </div>
         ))}
       </div>

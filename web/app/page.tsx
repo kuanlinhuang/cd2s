@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 import AskBox from "@/components/AskBox";
-import { ReuseVsCitations } from "@/components/charts/ReuseVsCitations";
+import { PairedDots } from "@/components/charts/PairedDots";
+import { Card } from "@/components/ui";
 import { getIndex, getQuestions, getRecord, getStats } from "@/lib/data";
 import { SCARCE_MODALITIES, num } from "@/lib/format";
 import { reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
@@ -26,27 +27,48 @@ export default function Home() {
     { href: "/datasets?capability=scarce", label: "A scarce measurement", n: nScarce },
   ];
 
-  const reuseRows = reuseChartRows(index, getRecord);
+  // Rows come from `reuseChartRows`, which decides what counts as a comparison: both
+  // numbers measured, a citable accession, and a measured zero kept rather than dropped -
+  // a dataset cited and never reused is the sharpest form of the point, and excluding it
+  // would quietly remove the rows that make it. Ordered here by use rather than by
+  // citations, so the chart answers "most used" and the citation dot shows what that
+  // attention was worth.
+  const citedAndUsed = reuseChartRows(index, getRecord)
+    .sort((a, b) => b.reuse - a.reuse || b.cites - a.cites)
+    .slice(0, 28)
+    .map((r) => ({
+      id: r.id,
+      label: r.short ?? r.title,
+      sub: [r.short ? r.title : null, r.awards.length > 0 ? `funded by ${r.awards.map((a) => a.num).join(", ")}` : null]
+        .filter(Boolean)
+        .join(" \u00b7 "),
+      href: `/datasets/${r.id}`,
+      values: { cited: r.cites, used: r.reuse },
+    }));
   const untraceable = untraceableTopCited(index, 5);
 
   return (
     <>
       {/* ---------------------------------------------------------------- ask */}
-      <section className="pt-14 pb-10">
-        <h1 className="max-w-3xl text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl">
+      {/* Centred, because the question box is the one thing to do here and a centre line
+          is the only place a single control does not read as the left-hand edge of a form
+          with more fields further right. Everything below the fold goes back to the left
+          margin, where prose belongs. */}
+      <section className="pt-14 pb-12 text-center">
+        <h1 className="mx-auto max-w-[26ch] text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
           Which NCI dataset can answer your question?
         </h1>
-        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed t-muted">
+        <p className="mx-auto mt-5 max-w-[62ch] text-title leading-relaxed t-muted">
           {num(stats.n_datasets)} datasets from {stats.n_repositories} repositories. Every
           answer says what a dataset can support, what it cannot, and where that claim comes
           from.
         </p>
 
-        <div className="mt-6 max-w-3xl">
+        <div className="mx-auto mt-8 max-w-[760px] text-left">
           <AskBox examples />
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-2 text-[13px]">
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-2.5 text-body">
           <span className="t-faint">Or start from</span>
           {capabilities.map((c) => (
             <Link
@@ -74,21 +96,53 @@ export default function Home() {
       <section className="border-t py-8">
         <div className="flex flex-wrap items-baseline justify-between gap-3">
           <h2 className="text-xl font-semibold tracking-tight">Data reuse</h2>
-          <Link href="/methods#reuse" className="text-[13px] underline">
+          <Link href="/methods#reuse" className="text-body underline">
             How reuse is measured
           </Link>
         </div>
-        <p className="mt-1 mb-5 max-w-3xl text-[13px] t-muted">
-          Citing a dataset&rsquo;s paper is not the same as using its data. Each row compares
-          the two for one dataset: articles citing the original paper, and articles whose
-          methods, results, tables or figures name the accession.
-        </p>
-        <ReuseVsCitations
-          rows={reuseRows}
-          untraceable={untraceable}
-          nDatasets={stats.n_datasets}
-          nNoAccession={stats.n_without_citable_accession}
-        />
+        <Card className="mt-4">
+          <PairedDots
+            rows={citedAndUsed}
+            series={[
+              {
+                key: "cited",
+                label: "Citations to its paper",
+                shortLabel: "Cited",
+                color: "var(--viz-mute)",
+                note: "attention to the finding",
+              },
+              {
+                key: "used",
+                label: "Articles that used the data",
+                shortLabel: "Used",
+                color: "var(--viz-1)",
+                note: "the accession appears in their methods, results, a table or a figure",
+              },
+            ]}
+            unit="articles"
+          />
+          <p className="mt-4 border-t pt-3 text-meta t-muted">
+            The {num(citedAndUsed.length)} most used datasets whose reuse can be counted at
+            all. The axis steps by decade, because these counts run from thousands to single
+            figures; the line between the dots is the gap between a paper being cited and its
+            data being used.
+          </p>
+          <p className="mt-2 text-meta t-muted">
+            {num(stats.n_without_citable_accession)} of {num(stats.n_datasets)} datasets
+            quote no accession an article could cite, so their reuse cannot be measured and
+            they are absent here rather than at zero - the most cited of them being{" "}
+            {untraceable.map((u, i) => (
+              <span key={u.id}>
+                {i > 0 ? ", " : ""}
+                <Link href={`/datasets/${u.id}`} className="underline">
+                  {u.short ?? u.title}
+                </Link>{" "}
+                <span className="tnum t-faint">{num(u.cites)}</span>
+              </span>
+            ))}
+            .
+          </p>
+        </Card>
       </section>
     </>
   );

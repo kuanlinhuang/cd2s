@@ -1,3 +1,5 @@
+import { BarAxis, barScale } from "@/components/charts/BarAxis";
+
 /**
  * Records per repository, split by whether their reuse can be traced at all.
  *
@@ -8,11 +10,15 @@
 
 export type RepoRow = { repository: string; traceable: number; untraceable: number };
 
+/** Repository, bar, total - shared by the rows and the axis beneath them. */
+const COLUMNS = "minmax(64px, 110px) minmax(0, 1fr) auto";
+
 export function RepositoryBars({ rows }: { rows: RepoRow[] }) {
   const sorted = [...rows].sort(
     (a, b) => b.traceable + b.untraceable - (a.traceable + a.untraceable),
   );
-  const max = Math.max(1, ...sorted.map((r) => r.traceable + r.untraceable));
+  const scale = barScale(Math.max(1, ...sorted.map((r) => r.traceable + r.untraceable)));
+
   return (
     <div>
       <ul className="space-y-2">
@@ -22,13 +28,17 @@ export function RepositoryBars({ rows }: { rows: RepoRow[] }) {
             <li
               key={r.repository}
               className="grid items-center gap-3"
-              style={{ gridTemplateColumns: "minmax(64px, 110px) minmax(0, 1fr) auto" }}
+              style={{ gridTemplateColumns: COLUMNS }}
             >
               <span className="viz-label truncate">{r.repository}</span>
-              <span className="block" style={{ width: `${(100 * total) / max}%` }}>
+              <span
+                className="bar-track scaled"
+                style={{ height: 14, ["--bar-tick" as string]: scale.interval }}
+              >
+                <span className="block h-full" style={{ width: `${scale.pct(total)}%` }}>
                 <span
                   className="seg-bar"
-                  style={{ height: 10 }}
+                  style={{ height: 14 }}
                   role="img"
                   aria-label={`${r.repository}: ${r.traceable} traceable, ${r.untraceable} not traceable`}
                 >
@@ -45,6 +55,7 @@ export function RepositoryBars({ rows }: { rows: RepoRow[] }) {
                     />
                   )}
                 </span>
+                </span>
               </span>
               <span className="viz-value text-right">
                 {total.toLocaleString("en-US")}
@@ -57,6 +68,11 @@ export function RepositoryBars({ rows }: { rows: RepoRow[] }) {
           );
         })}
       </ul>
+      <div className="mt-1.5 grid gap-3" style={{ gridTemplateColumns: COLUMNS }}>
+        <span />
+        <BarAxis scale={scale} unit="records" />
+        <span />
+      </div>
       <div className="viz-legend mt-3">
         <span>
           <span className="viz-swatch" style={{ background: "var(--viz-1)" }} />

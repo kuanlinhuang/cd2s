@@ -43,7 +43,7 @@ export default async function ComparePage({
     <>
       <div className="pt-10 pb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Compare datasets</h1>
-        <p className="mt-3 max-w-3xl text-[14px] t-muted">
+        <p className="mt-3 max-w-3xl text-lede t-muted">
           Rows where the datasets agree are hidden; a measurement only one of them has is
           starred. Up to four.
         </p>

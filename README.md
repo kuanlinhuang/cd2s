@@ -39,7 +39,9 @@ For every dataset it ingests:
   identifiers, including the calls that answer with an empty result rather than an error
 - **Traces** reuse with graded evidence, distinguishing articles that analyzed the data from
   articles that cited the paper
-- **Links** funding through NIH RePORTER, separating NCI-funded generation from NCI-funded reuse
+- **Links** funding through NIH RePORTER in both directions: the award that paid to create a
+  dataset, resolved from its marker paper, and the awards that got a published finding out of
+  it afterwards, resolved from the articles that used it
 - **Ships** an executable starting point and a machine-readable package for agents
 - **Checks itself**: the reuse method's field calibration, the model's own worst case and
   the marker-paper inferences it withdraws are all re-measured and published on every build
@@ -58,7 +60,9 @@ a snapshot of the build described there.
 | Survival endpoint derivable | 206 records, measured rather than asserted |
 | Deeply curated pages | 20 (14 of them less-known resources) |
 | Verified reuse studies | 778 (accession in methods, results, a table or a figure) |
-| NCI awards linked | 736, resolved through NIH RePORTER |
+| NCI awards linked | 796, resolved through NIH RePORTER |
+| Datasets with an award credited with creating them | 247, from a repository-supplied or reviewer-supplied marker paper only |
+| Datasets with awards credited with using them | 76; 7 have awards on both sides |
 | Access routes | 602 datasets: 20 routes written by a reviewer, 582 generated from repository policy, every one of them with a machine route |
 | Executed workbooks | 6, attached to 15 dataset pages, each with an execution receipt |
 | Datasets with no citable accession | 364 - their reuse cannot be traced at all |
@@ -86,7 +90,8 @@ Measurement coverage by repository, because how far it reaches is part of the re
 | `pipeline/src/cds/metrics/` | The reuse gap model |
 | `pipeline/data/curated/` | Human-reviewed overlays - the expert-judgment source of truth |
 | `pipeline/data/dist/` | Generated artifacts consumed by the site and the agent API |
-| `web/` | Next.js site: dataset agent, dataset pages, charts, award network, comparison view, agent API |
+| `pipeline/src/cds/reuse/funding.py` | Which award paid to create a dataset, and award detail backfill |
+| `web/` | Next.js site: dataset agent, dataset pages, charts, funding flow, comparison view, agent API |
 | `workbooks/python/` | Workbook source as plain `# %%` scripts |
 | `workbooks/executed/` | Executed notebooks plus execution receipts |
 | `submission/` | Track 1 narrative and supporting evidence |

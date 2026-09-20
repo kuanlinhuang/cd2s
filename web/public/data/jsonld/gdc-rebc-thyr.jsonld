@@ -106,6 +106,26 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA247773"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA082102",
+      "name": "The Chernobyl Tissue Bank - Coordinating Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA082102"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA222092",
+      "name": "Polymerase Theta Mediated End Joining: Mechanism and Essential Functions in Repair of Chromosome Breaks",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA222092"
     }
   ],
   "dateModified": "2026-09-18T02:36:25.802055+00:00",

@@ -2,7 +2,7 @@
   "site": "CD2S",
   "license_content": "https://creativecommons.org/licenses/by/4.0/",
   "license_code": "https://opensource.org/licenses/MIT",
-  "generated_at": "2026-09-20T15:31:53.216118+00:00",
+  "generated_at": "2026-09-20T15:35:47.052311+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -44,14 +44,14 @@
   "n_workbook_attachments": 20,
   "n_datasets_with_workbook": 15,
   "n_distinct_workbooks": 6,
-  "n_grants_linked": 736,
+  "n_grants_linked": 796,
   "n_reuse_studies_verified": 778,
   "stage": "enriched",
   "agent_packages": {
     "jsonld": 602,
     "croissant": 602,
     "agent": 602,
-    "generated_at": "2026-09-20T15:31:54.094640+00:00"
+    "generated_at": "2026-09-20T15:35:48.005487+00:00"
   },
   "bytes_written": {
     "dist/index.json": 1317417,
@@ -66,7 +66,7 @@
     "data/questions.json": 47127,
     "dist/subjects.json": 10489,
     "data/subjects.json": 10489,
-    "dist/datasets/*.json": 19309603,
-    "data/datasets/*.json": 19309603
+    "dist/datasets/*.json": 19462483,
+    "data/datasets/*.json": 19462483
   }
 }

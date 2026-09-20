@@ -98,16 +98,19 @@ def test_subject_not_stated_does_not_silently_grow(rows):
     assert len(missing) <= 30, missing
 
 
-# Cancers of Unknown Primary states twelve ICD-O morphology categories and a primary site
-# of "Unknown". There is no tissue to assign and the title claims none either, so "not
-# stated" is the right answer rather than a gap to close. Filing it under soft tissue -
-# the one histology category among the twelve - is exactly what the morphology rule in
-# cds.subjects exists to stop.
-UNSTATED_BY_NATURE = {"gdc-ccg-cupp"}
+#: The one cohort whose subject is genuinely unstated, rather than unclassified.
+#:
+#: GDC's Cancers of Unknown Primary Project reports `primary_sites: ["Unknown"]` - not
+#: knowing the primary site is the thing the cohort is for. Its twelve cancer_types are
+#: morphology groups carrying no tissue, and picking one of them would assert a site
+#: nobody observed. This record was classified `single / SOFT_TISSUE` until the ICD-O
+#: label fix stopped a lone incidental label standing in for a cohort's tissue; the
+#: committed corpus predates that fix, so this only surfaces on a re-export.
+UNKNOWN_PRIMARY_IDS = {"gdc-ccg-cupp"}
 
 
 def test_all_previously_unstated_records_are_labelled_as_title_derived(rows):
     derived = [row for row in rows if row["subject_scope"] == "title_derived"]
     assert len(derived) == 30
     unstated = {row["id"] for row in rows if row["subject_scope"] == "not_stated"}
-    assert unstated <= UNSTATED_BY_NATURE, sorted(unstated - UNSTATED_BY_NATURE)
+    assert unstated <= UNKNOWN_PRIMARY_IDS, sorted(unstated - UNKNOWN_PRIMARY_IDS)

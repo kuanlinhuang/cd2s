@@ -101,7 +101,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA097274",
-      "name": null,
+      "name": "Lymphoma Specialized Program of Research Excellence (SPORE) in Human Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

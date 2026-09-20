@@ -213,7 +213,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA090381",
-      "name": null,
+      "name": "Tissue and Pathology Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -223,7 +223,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA069568",
-      "name": null,
+      "name": "SPORE in Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

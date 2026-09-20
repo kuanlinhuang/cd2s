@@ -89,7 +89,48 @@
       "datePublished": "2020"
     }
   ],
-  "funding": [],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA217842",
+      "name": "Integrative bioinformatics and functional characterization of oncogenic driver aberrations in cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA217842"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA096230",
+      "name": "AIDS and Cancer Specimen Resource Central Office and Data Coordinating Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA096230"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA066535",
+      "name": "The East Coast AIDS and Cancer Specimen Resource",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA066535"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA098258",
+      "name": "MD Anderson Gynecologic SPORE for Uterine Cancers",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA098258"
+    }
+  ],
   "dateModified": "2026-09-18T02:36:44.884482+00:00",
   "datePublished": "2020-01-01",
   "variableMeasured": [

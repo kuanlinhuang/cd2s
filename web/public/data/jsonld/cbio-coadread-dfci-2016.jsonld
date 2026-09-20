@@ -150,7 +150,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA087969",
-      "name": null,
+      "name": "Core A: Biospecimen and High-Dimensional Data Management Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -160,7 +160,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA055075",
-      "name": null,
+      "name": "Prospective Studies of Diet and Cancer in Men and Women",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

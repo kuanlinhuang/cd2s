@@ -100,12 +100,72 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233285",
-      "name": null,
+      "name": "Center for Pediatric Tumor Cell Atlas - Admin Supplement",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=CA233285"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA243072",
+      "name": "Towards rational design of combination therapeutic targets",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA243072"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R35CA220500",
+      "name": "Discovering mechanisms of neuroblastoma tumorigenesis to improve patient outcomes",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA220500"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA217959",
+      "name": "Tumor microenvironment-dependent therapy resistance",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA217959"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K08CA266914",
+      "name": "cGAS-STING and therapeutic immune responses in neuroblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K08CA266914"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K12CA076931",
+      "name": "Physician Scientist Training in Clinical Oncology",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K12CA076931"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA009140",
+      "name": "Immunobiology of Normal and Neoplastic Lymphocytes",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009140"
     }
   ],
   "dateModified": "2026-09-18T02:46:11.906526+00:00",

@@ -111,7 +111,7 @@
     {
       "@type": "Grant",
       "identifier": "R01CA080195",
-      "name": null,
+      "name": "Erbb2 targeted antitumor strategies in breast cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -121,7 +121,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA098131",
-      "name": null,
+      "name": "SPORE in Breast Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

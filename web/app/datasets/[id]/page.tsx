@@ -137,7 +137,7 @@ export default async function DatasetPage({
                   <DatasetLink id={x.id}>{x.title}</DatasetLink>
                   {x.is_underexplored && <UnderexploredBadge />}
                 </div>
-                <div className="mt-1 text-[12px] t-muted">
+                <div className="mt-1 text-meta t-muted">
                   {num(x.n_cases ?? x.n_samples)} {x.n_cases ? "cases" : "samples"} -{" "}
                   {x.repositories.join(" + ")}
                 </div>
@@ -177,7 +177,7 @@ export default async function DatasetPage({
         </Section>
       )}
 
-      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 pt-6 text-[12px] t-faint">
+      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 pt-6 text-meta t-faint">
         <Link href="/agents" className="underline">
           For software
         </Link>
@@ -202,7 +202,7 @@ function Header({ record: r }: { record: DatasetRecord }) {
 
   return (
     <header className="pt-10 pb-6">
-      <div className="flex flex-wrap items-center gap-2 text-[12px]">
+      <div className="flex flex-wrap items-center gap-2 text-meta">
         <Link href="/datasets" className="underline t-muted">
           Datasets
         </Link>
@@ -223,7 +223,7 @@ function Header({ record: r }: { record: DatasetRecord }) {
         </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] t-muted">
+      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-body t-muted">
         {r.program_name && <span>{r.program_name}</span>}
         {repos.length > 0 && <span>Available from {repos.join(" and ")}</span>}
         {r.generating_institutions.length > 0 && (
@@ -232,7 +232,7 @@ function Header({ record: r }: { record: DatasetRecord }) {
       </div>
 
       {(r.one_liner || r.summary) && (
-        <p className="prose-cds mt-4 text-[15px] leading-relaxed">
+        <p className="prose-cds mt-4 text-lede leading-relaxed">
           {r.one_liner ?? r.summary}
         </p>
       )}
@@ -241,21 +241,21 @@ function Header({ record: r }: { record: DatasetRecord }) {
       <div className="mt-6 flex flex-wrap gap-2 no-print">
         <a
           href="#fit"
-          className="rounded-md px-3.5 py-2 text-[13px] font-medium"
+          className="rounded-md px-3.5 py-2 text-body font-medium"
           style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
         >
           Can it answer my question?
         </a>
         <a
           href="#reuse"
-          className="rounded-md border px-3.5 py-2 text-[13px] font-medium"
+          className="rounded-md border px-3.5 py-2 text-body font-medium"
           style={{ borderColor: "var(--border-strong)" }}
         >
           Who has used it
         </a>
         <a
           href="#start"
-          className="rounded-md border px-3.5 py-2 text-[13px] font-medium"
+          className="rounded-md border px-3.5 py-2 text-body font-medium"
           style={{ borderColor: "var(--border-strong)" }}
         >
           Get the data
@@ -407,7 +407,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
 
       {/* controlled subject */}
       <div className="mt-6">
-        <h3 className="mb-2 flex items-center gap-1.5 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mb-2 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
           Subject
           {r.subject.evidence.length > 0 && <EvidenceChip evidence={r.subject.evidence} />}
         </h3>
@@ -424,7 +424,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
           )}
         </div>
         {r.subject.scope === "title_derived" && (
-          <p className="mt-2 text-[12px] t-muted">
+          <p className="mt-2 text-meta t-muted">
             This subject was derived from the dataset title and was not stated by the
             repository. It is available for browsing but is never used to place this
             dataset in an answer shortlist.
@@ -434,7 +434,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
 
       {/* cancer types and sites as filed */}
       <div className="mt-6">
-        <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
           As filed by the repository
         </h3>
         {r.cancer_types.length === 0 && r.primary_sites.length === 0 ? (
@@ -457,7 +457,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
 
       {/* who is in the cohort */}
       <div className="mt-6">
-        <h3 className="mb-2 flex items-center gap-1.5 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mb-2 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
           Who is in the cohort
           {d.evidence.length > 0 && <EvidenceChip evidence={d.evidence} />}
         </h3>
@@ -467,22 +467,22 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {hasSex && (
               <Card>
-                <h4 className="mb-2 text-[12px] font-medium">Sex</h4>
+                <h4 className="mb-2 text-meta font-medium">Sex</h4>
                 <Bars rows={demographicRows(d.sex)} labelWidth={70} valueWidth={80} />
               </Card>
             )}
             {hasAge && (
               <Card>
-                <h4 className="mb-2 text-[12px] font-medium">Age at diagnosis</h4>
+                <h4 className="mb-2 text-meta font-medium">Age at diagnosis</h4>
                 <AgeBox stats={age} />
               </Card>
             )}
             {hasRace && (
               <Card>
-                <h4 className="mb-2 text-[12px] font-medium">Race</h4>
+                <h4 className="mb-2 text-meta font-medium">Race</h4>
                 <Bars rows={demographicRows(d.race)} labelWidth={110} valueWidth={80} />
                 {raceInformative === 0 && (
-                  <p className="mt-2 text-[12px]" style={{ color: "var(--weak)" }}>
+                  <p className="mt-2 text-meta" style={{ color: "var(--weak)" }}>
                     Every value is &ldquo;not reported&rdquo;, so no analysis by race is
                     possible with these data.
                   </p>
@@ -491,10 +491,10 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
             )}
             {hasVital && (
               <Card>
-                <h4 className="mb-2 text-[12px] font-medium">Vital status</h4>
+                <h4 className="mb-2 text-meta font-medium">Vital status</h4>
                 <Bars rows={demographicRows(d.vital_status)} labelWidth={90} valueWidth={80} />
                 {vitalInformative === 0 && (
-                  <p className="mt-2 text-[12px]" style={{ color: "var(--weak)" }}>
+                  <p className="mt-2 text-meta" style={{ color: "var(--weak)" }}>
                     Recorded for every case and informative for none. Survival analysis
                     is impossible at any sample size.
                   </p>
@@ -507,14 +507,14 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
 
       {/* assays */}
       <div className="mt-6">
-        <h3 className="mb-1 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
           Measurements
         </h3>
-        <p className="mb-2 text-[12px] t-muted">
+        <p className="mb-2 text-meta t-muted">
           The bar shows how much of the cohort each measurement covers.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[560px] text-[13px]">
+          <table className="w-full min-w-[560px] text-body">
             <thead>
               <tr className="border-b text-left t-faint">
                 <th className="py-1.5 pr-3 font-medium">Assay</th>
@@ -571,10 +571,10 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
       {/* clinical completeness */}
       {r.clinical_variables.length > 0 && (
         <div className="mt-6">
-          <h3 className="mb-1 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
             How complete the clinical fields are
           </h3>
-          <p className="mb-3 max-w-2xl text-[12px] t-muted">
+          <p className="mb-3 max-w-2xl text-meta t-muted">
             A field counts as informative only when it holds a real value. &ldquo;Not
             reported&rdquo; blocks an analysis just as a missing field does. Fields marked
             1:n can hold several records per case, so they show the share of cases with any
@@ -586,17 +586,17 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
 
       {/* access summary */}
       <div className="mt-6">
-        <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
           Access
         </h3>
         <Card>
           <div className="flex flex-wrap items-center gap-2">
             <AccessBadge tier={r.access.tier} size="md" />
-            <span className="text-[13px] t-muted">{ACCESS_DESCRIPTIONS[r.access.tier]}</span>
+            <span className="text-body t-muted">{ACCESS_DESCRIPTIONS[r.access.tier]}</span>
             <EvidenceChip evidence={r.access.evidence} />
           </div>
-          {r.access.mechanism && <p className="mt-2 text-[13px]">{r.access.mechanism}</p>}
-          <dl className="mt-3 grid gap-x-6 gap-y-2 text-[13px] sm:grid-cols-2">
+          {r.access.mechanism && <p className="mt-2 text-body">{r.access.mechanism}</p>}
+          <dl className="mt-3 grid gap-x-6 gap-y-2 text-body sm:grid-cols-2">
             {r.access.open_components.length > 0 && (
               <Field label="Open components">{r.access.open_components.join("; ")}</Field>
             )}
@@ -625,7 +625,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <dt className="text-[11px] uppercase tracking-wide t-faint">{label}</dt>
+      <dt className="text-micro uppercase tracking-wide t-faint">{label}</dt>
       <dd>{children}</dd>
     </div>
   );
@@ -679,15 +679,15 @@ function UsefulFor({ record: r }: { record: DatasetRecord }) {
                     <EvidenceChip evidence={q.evidence} />
                   </div>
                 </div>
-                <p className="prose-cds mt-2 text-[13px]">{q.rationale}</p>
+                <p className="prose-cds mt-2 text-body">{q.rationale}</p>
                 {q.statistical_note && (
-                  <p className="mt-2 text-[13px]" style={{ color: "var(--moderate)" }}>
+                  <p className="mt-2 text-body" style={{ color: "var(--moderate)" }}>
                     Statistical note: {q.statistical_note}
                   </p>
                 )}
                 {(q.required_fields.length > 0 || q.required_modalities.length > 0) && (
                   <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                    <span className="text-[11px] uppercase tracking-wide t-faint">
+                    <span className="text-micro uppercase tracking-wide t-faint">
                       Needs
                     </span>
                     {q.required_modalities.map((m) => (
@@ -697,13 +697,13 @@ function UsefulFor({ record: r }: { record: DatasetRecord }) {
                     ))}
                     {q.required_fields.map((f) => (
                       <Chip key={f}>
-                        <span className="font-mono text-[10px]">{f}</span>
+                        <span className="font-mono text-micro">{f}</span>
                       </Chip>
                     ))}
                   </div>
                 )}
                 {q.exemplar_pmid && (
-                  <p className="mt-2 text-[12px] t-muted">
+                  <p className="mt-2 text-meta t-muted">
                     A published example:{" "}
                     <a
                       href={`https://pubmed.ncbi.nlm.nih.gov/${q.exemplar_pmid}/`}
@@ -739,7 +739,7 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
       lede="What these data cannot answer, as written by a reviewer against the source."
       aside={
         blocking.length > 0 ? (
-          <span className="text-[12px] font-medium" style={{ color: "var(--weak)" }}>
+          <span className="text-meta font-medium" style={{ color: "var(--weak)" }}>
             {blocking.length} blocking
           </span>
         ) : undefined
@@ -757,20 +757,20 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
             <Card key={i}>
               <div className="flex flex-wrap items-center gap-2">
                 <SeverityBadge severity={l.severity} />
-                <span className="text-[12px] uppercase tracking-wide t-faint">
+                <span className="text-meta uppercase tracking-wide t-faint">
                   {LIMITATION_KIND_LABELS[l.kind] ?? l.kind}
                 </span>
                 <EvidenceChip evidence={l.evidence} />
               </div>
-              <p className="prose-cds mt-2 text-[13px]">{l.statement}</p>
+              <p className="prose-cds mt-2 text-body">{l.statement}</p>
               {l.affected_analyses.length > 0 && (
-                <p className="mt-2 text-[13px]">
+                <p className="mt-2 text-body">
                   <span className="t-faint">Affects: </span>
                   {l.affected_analyses.join("; ")}
                 </p>
               )}
               {l.mitigation && (
-                <p className="mt-2 text-[13px]" style={{ color: "var(--open)" }}>
+                <p className="mt-2 text-body" style={{ color: "var(--open)" }}>
                   Mitigation: {l.mitigation}
                 </p>
               )}
@@ -779,7 +779,7 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
 
           {r.inappropriate_uses.length > 0 && (
             <div className="mt-5">
-              <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+              <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
                 Not appropriate for
               </h3>
               <ul className="space-y-2">
@@ -923,8 +923,8 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         <div className="mt-5 grid gap-5 lg:grid-cols-2">
           {showLadder && (
             <Card>
-              <h3 className="text-[14px] font-medium">What articles did with it</h3>
-              <p className="mb-3 text-[12px] t-muted">
+              <h3 className="text-lede font-medium">What articles did with it</h3>
+              <p className="mb-3 text-meta t-muted">
                 Only the last row counts as reuse. Where the accession appears in an
                 article tells us what the authors did with the data.
               </p>
@@ -933,8 +933,8 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
           )}
           {hasExpected && (
             <Card>
-              <h3 className="text-[14px] font-medium">Against comparable datasets</h3>
-              <p className="mb-3 text-[12px] t-muted">
+              <h3 className="text-lede font-medium">Against comparable datasets</h3>
+              <p className="mb-3 text-meta t-muted">
                 {reuseSentence(nAnalyzed, m.expected_reuse)}{" "}
                 The expectation comes from a model of size, age, breadth and access tier.
               </p>
@@ -981,7 +981,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
               ))}
             </ul>
             {r.underexplored.comparator_set && (
-              <p className="mt-1.5 text-[12px] t-muted">
+              <p className="mt-1.5 text-meta t-muted">
                 Compared against {r.underexplored.comparator_set}. See{" "}
                 <Link href="/methods#reuse-gap" className="underline">
                   Methods
@@ -996,7 +996,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
       {/* primary publications */}
       {r.primary_publications.length > 0 && (
         <div className="mt-6">
-          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
             Original publication{r.primary_publications.length > 1 ? "s" : ""}
           </h3>
           <ul className="space-y-2">
@@ -1013,7 +1013,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
 
       {/* verified reuse */}
       <div className="mt-6">
-        <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+        <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
           Articles that analyzed the data
         </h3>
         {analyzed.length === 0 ? (
@@ -1043,19 +1043,19 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
                     </div>
                   </div>
                   {x.what_they_analyzed && (
-                    <p className="mt-2 text-[13px]">
+                    <p className="mt-2 text-body">
                       <span className="t-faint">Analyzed: </span>
                       {x.what_they_analyzed}
                     </p>
                   )}
                   {x.what_they_found && (
-                    <p className="mt-1 text-[13px]">
+                    <p className="mt-1 text-body">
                       <span className="t-faint">Found: </span>
                       {x.what_they_found}
                     </p>
                   )}
                   {x.accession_locator && (
-                    <p className="mt-1.5 text-[12px] t-faint">
+                    <p className="mt-1.5 text-meta t-faint">
                       Accession located in: {x.accession_locator}. {REUSE_TIER_MEANING[x.tier]}
                     </p>
                   )}
@@ -1068,16 +1068,16 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
 
       {weaker.length > 0 && (
         <details className="mt-4">
-          <summary className="cursor-pointer text-[13px] font-medium">
+          <summary className="cursor-pointer text-body font-medium">
             {weaker.length} article{weaker.length === 1 ? "" : "s"} with weaker evidence
           </summary>
-          <p className="mt-2 max-w-2xl text-[12px] t-muted">
+          <p className="mt-2 max-w-2xl text-meta t-muted">
             These name the dataset, but we could not confirm the data were analyzed. Shown
             for completeness and not counted as reuse.
           </p>
           <ul className="mt-2 space-y-2">
             {weaker.map((x, i) => (
-              <li key={i} className="flex flex-wrap items-start justify-between gap-2 text-[13px]">
+              <li key={i} className="flex flex-wrap items-start justify-between gap-2 text-body">
                 <PubLine pub={x.publication} compact />
                 <ReuseTierBadge tier={x.tier} />
               </li>
@@ -1104,22 +1104,22 @@ function PubLine({
           href={pub.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`hover:underline ${compact ? "text-[13px]" : "font-medium"}`}
+          className={`hover:underline ${compact ? "text-body" : "font-medium"}`}
           style={{ color: "var(--accent)" }}
         >
           {label}
         </a>
       ) : (
-        <span className={compact ? "text-[13px]" : "font-medium"}>{label}</span>
+        <span className={compact ? "text-body" : "font-medium"}>{label}</span>
       )}
-      <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[12px] t-muted">
+      <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-meta t-muted">
         {pub.authors_short && <span>{pub.authors_short}</span>}
         {pub.journal && <span className="italic">{pub.journal}</span>}
         {pub.year && <span className="tnum">{pub.year}</span>}
         {pub.citation_count !== null && pub.citation_count !== undefined && (
           <span className="tnum">{num(pub.citation_count)} citations</span>
         )}
-        {pub.pmid && <span className="font-mono text-[11px]">PMID {pub.pmid}</span>}
+        {pub.pmid && <span className="font-mono text-micro">PMID {pub.pmid}</span>}
         {pub.evidence.length > 0 && <EvidenceChip evidence={pub.evidence} />}
       </div>
     </div>
@@ -1163,7 +1163,7 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
                     </Chip>
                     <h3 className="font-medium">{ex.title}</h3>
                   </div>
-                  <p className="mt-1 text-[13px] t-muted">
+                  <p className="mt-1 text-body t-muted">
                     {ex.question}
                   </p>
                 </div>
@@ -1194,10 +1194,10 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
                 </div>
               </div>
 
-              <div className="mt-3 grid gap-4 text-[13px] sm:grid-cols-2">
+              <div className="mt-3 grid gap-4 text-body sm:grid-cols-2">
                 {ex.inputs.length > 0 && (
                   <div>
-                    <div className="text-[11px] uppercase tracking-wide t-faint">
+                    <div className="text-micro uppercase tracking-wide t-faint">
                       Required inputs
                     </div>
                     <ul className="mt-0.5 list-disc pl-4">
@@ -1209,7 +1209,7 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
                 )}
                 {ex.outputs.length > 0 && (
                   <div>
-                    <div className="text-[11px] uppercase tracking-wide t-faint">
+                    <div className="text-micro uppercase tracking-wide t-faint">
                       Expected outputs
                     </div>
                     <ul className="mt-0.5 list-disc pl-4">
@@ -1223,10 +1223,10 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
 
               {ex.steps.length > 0 && (
                 <details className="mt-3">
-                  <summary className="cursor-pointer text-[13px] font-medium">
+                  <summary className="cursor-pointer text-body font-medium">
                     Steps
                   </summary>
-                  <ol className="mt-1.5 list-decimal space-y-0.5 pl-5 text-[13px]">
+                  <ol className="mt-1.5 list-decimal space-y-0.5 pl-5 text-body">
                     {ex.steps.map((s, j) => (
                       <li key={j}>{s}</li>
                     ))}
@@ -1238,7 +1238,7 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
                 {ex.workbook_url && (
                   <a
                     href={ex.workbook_url}
-                    className="rounded border px-2.5 py-1 text-[12px] font-medium"
+                    className="rounded border px-2.5 py-1 text-meta font-medium"
                     style={{ borderColor: "var(--border-strong)" }}
                   >
                     View notebook
@@ -1247,7 +1247,7 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
                 {ex.colab_url && (
                   <a
                     href={ex.colab_url}
-                    className="rounded border px-2.5 py-1 text-[12px] font-medium"
+                    className="rounded border px-2.5 py-1 text-meta font-medium"
                     style={{ borderColor: "var(--border-strong)" }}
                   >
                     Open in Colab
@@ -1271,7 +1271,7 @@ function AccessStepCard({ step, n }: { step: AccessStep; n: number }) {
     <Card>
       <div className="flex items-start gap-3">
         <span
-          className="tnum grid h-6 w-6 shrink-0 place-items-center rounded-full text-[12px] font-semibold"
+          className="tnum grid h-6 w-6 shrink-0 place-items-center rounded-full text-meta font-semibold"
           style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
         >
           {n}
@@ -1280,17 +1280,17 @@ function AccessStepCard({ step, n }: { step: AccessStep; n: number }) {
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <span className="font-medium">{step.action}</span>
             <span className="flex items-baseline gap-2">
-              {step.est_time && <span className="text-[12px] t-faint">{step.est_time}</span>}
+              {step.est_time && <span className="text-meta t-faint">{step.est_time}</span>}
               <EvidenceChip evidence={step.evidence ?? []} />
             </span>
           </div>
-          {step.detail && <p className="mt-1 text-[13px] t-muted">{step.detail}</p>}
+          {step.detail && <p className="mt-1 text-body t-muted">{step.detail}</p>}
           {step.requires.length > 0 && (
-            <p className="mt-1 text-[12px] t-faint">Requires: {step.requires.join(", ")}</p>
+            <p className="mt-1 text-meta t-faint">Requires: {step.requires.join(", ")}</p>
           )}
           {step.cli_snippet && (
             <pre
-              className="mt-2 overflow-x-auto rounded border p-2 font-mono text-[12px]"
+              className="mt-2 overflow-x-auto rounded border p-2 font-mono text-meta"
               style={{ background: "var(--bg-sunken)" }}
             >
               <code>{step.cli_snippet}</code>
@@ -1301,7 +1301,7 @@ function AccessStepCard({ step, n }: { step: AccessStep; n: number }) {
               href={step.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-block max-w-full break-all text-[13px] underline"
+              className="mt-2 inline-block max-w-full break-all text-body underline"
               style={{ color: "var(--accent)" }}
             >
               {step.url}
@@ -1342,12 +1342,12 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
     >
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
-          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
             As a person
           </h3>
           {human.length === 0 ? (
             <Card>
-              <p className="text-[13px]">
+              <p className="text-body">
                 {r.access.mechanism ?? "Access route not yet documented for this dataset."}
               </p>
               {r.landing_page_url && (
@@ -1355,7 +1355,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                   href={r.landing_page_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-block rounded-md px-3 py-1.5 text-[13px] font-medium"
+                  className="mt-3 inline-block rounded-md px-3 py-1.5 text-body font-medium"
                   style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
                 >
                   Open in {r.repository?.short_name ?? "repository"}
@@ -1374,7 +1374,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
         </div>
 
         <div>
-          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
             From code
           </h3>
           {machine.length > 0 && (
@@ -1387,7 +1387,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
             </ol>
           )}
 
-          <h3 className="mt-5 mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mt-5 mb-2 text-body font-medium uppercase tracking-wide t-faint">
             Starter code
           </h3>
           <div className="space-y-2">
@@ -1398,14 +1398,14 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                 className="rounded-lg border"
                 style={{ background: "var(--bg-raised)" }}
               >
-                <summary className="flex cursor-pointer flex-wrap items-center gap-2 px-4 py-2.5 text-[13px] font-medium">
+                <summary className="flex cursor-pointer flex-wrap items-center gap-2 px-4 py-2.5 text-body font-medium">
                   {sn.label}
                   <Chip>{sn.language}</Chip>
                 </summary>
                 <div className="border-t px-4 py-3">
-                  {sn.note && <p className="mb-2 text-[12px] t-muted">{sn.note}</p>}
+                  {sn.note && <p className="mb-2 text-meta t-muted">{sn.note}</p>}
                   <pre
-                    className="overflow-x-auto rounded border p-3 font-mono text-[12px] leading-relaxed"
+                    className="overflow-x-auto rounded border p-3 font-mono text-meta leading-relaxed"
                     style={{ background: "var(--bg-sunken)" }}
                   >
                     <code>{sn.code}</code>
@@ -1415,7 +1415,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
             ))}
           </div>
 
-          <h3 className="mt-5 mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mt-5 mb-2 text-body font-medium uppercase tracking-wide t-faint">
             Machine-readable record
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -1423,14 +1423,14 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
               <a
                 key={a.href}
                 href={a.href}
-                className="rounded border px-2.5 py-1 text-[12px]"
+                className="rounded border px-2.5 py-1 text-meta"
                 style={{ borderColor: "var(--border-strong)" }}
               >
                 {a.label}
               </a>
             ))}
           </div>
-          <p className="mt-2 text-[12px] t-faint">
+          <p className="mt-2 text-meta t-faint">
             The brief states the limitations before the measurements, because an agent that
             reads only the top of a record will otherwise plan an analysis these data cannot
             support.
@@ -1458,14 +1458,14 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
-          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
             Identifiers
           </h3>
-          <ul className="space-y-1 text-[13px]">
+          <ul className="space-y-1 text-body">
             {r.identifiers.slice(0, 14).map((idn, i) => (
               <li key={`${idn.scheme}-${idn.value}-${i}`} className="flex items-baseline gap-2">
                 <span
-                  className="shrink-0 text-[11px] uppercase tracking-wide"
+                  className="shrink-0 text-micro uppercase tracking-wide"
                   style={{ color: "var(--text-faint)", minWidth: "8.5rem" }}
                 >
                   {idSchemeLabel(idn.scheme)}
@@ -1475,30 +1475,30 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
                     href={idn.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-[12px] underline"
+                    className="font-mono text-meta underline"
                     style={{ color: "var(--accent)" }}
                   >
                     {idn.value}
                   </a>
                 ) : (
-                  <span className="font-mono text-[12px]">{idn.value}</span>
+                  <span className="font-mono text-meta">{idn.value}</span>
                 )}
                 <EvidenceChip evidence={idn.evidence} />
               </li>
             ))}
           </ul>
           {r.identifiers.length > 14 && (
-            <p className="mt-1.5 text-[12px] t-faint">
+            <p className="mt-1.5 text-meta t-faint">
               and {r.identifiers.length - 14} more in the JSON record
             </p>
           )}
         </div>
 
         <div>
-          <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
             Versions and verification
           </h3>
-          <dl className="grid gap-y-2 text-[13px]">
+          <dl className="grid gap-y-2 text-body">
             {r.version && <Field label="Version">{r.version}</Field>}
             {r.release_date && <Field label="Released">{shortDate(r.release_date)}</Field>}
             {r.last_upstream_update && (
@@ -1548,10 +1548,10 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
 
       {r.grants.length > 0 && (
         <div className="mt-6">
-          <h3 className="mb-1 text-[13px] font-medium uppercase tracking-wide t-faint">
+          <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
             Funding
           </h3>
-          <p className="mb-3 max-w-2xl text-[12px] t-muted">
+          <p className="mb-3 max-w-2xl text-meta t-muted">
             Awards resolved through NIH RePORTER. Awards that paid to generate these
             data are listed apart from awards that paid to reuse them. Both are returns on
             NCI investment, but different ones.
@@ -1564,8 +1564,8 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
             ].map(([label, list]) =>
               (list as typeof generation).length > 0 ? (
                 <div key={label as string}>
-                  <h4 className="mb-1.5 text-[12px] font-medium">{label as string}</h4>
-                  <ul className="space-y-1 text-[13px]">
+                  <h4 className="mb-1.5 text-meta font-medium">{label as string}</h4>
+                  <ul className="space-y-1 text-body">
                     {(list as typeof generation).slice(0, 10).map((g, i) => (
                       <li key={`${g.core_project_num}-${i}`} className="flex flex-wrap items-baseline gap-2">
                         {g.reporter_url ? (
@@ -1573,13 +1573,13 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
                             href={g.reporter_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-mono text-[12px] underline"
+                            className="font-mono text-meta underline"
                             style={{ color: "var(--accent)" }}
                           >
                             {g.core_project_num}
                           </a>
                         ) : (
-                          <span className="font-mono text-[12px]">{g.core_project_num}</span>
+                          <span className="font-mono text-meta">{g.core_project_num}</span>
                         )}
                         {g.title && <span className="truncate">{g.title}</span>}
                         {g.pi_names.length > 0 && (
@@ -1588,7 +1588,7 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
                           </span>
                         )}
                         {g.fiscal_years.length > 0 && (
-                          <span className="tnum text-[12px] t-faint">
+                          <span className="tnum text-meta t-faint">
                             FY{Math.min(...g.fiscal_years)}
                             {g.fiscal_years.length > 1
                               ? `-${Math.max(...g.fiscal_years)}`
@@ -1600,7 +1600,7 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
                     ))}
                   </ul>
                   {(list as typeof generation).length > 10 && (
-                    <p className="mt-1 text-[12px] t-faint">
+                    <p className="mt-1 text-meta t-faint">
                       and {(list as typeof generation).length - 10} more
                     </p>
                   )}

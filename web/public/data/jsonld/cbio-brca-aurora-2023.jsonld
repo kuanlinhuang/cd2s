@@ -73,7 +73,7 @@
     {
       "@type": "Grant",
       "identifier": "P50CA098131",
-      "name": null,
+      "name": "SPORE in Breast Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
