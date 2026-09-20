@@ -151,6 +151,15 @@ export default function AskAnswer({ q, needLinks, routed }: { q: string; needLin
         })}
       </ol>
 
+      {result.pan_cancer_count > 0 && (
+        <p className="mt-3 text-[12px] t-muted">
+          <Link href="/datasets?subject=pan_cancer" className="underline">
+            {result.pan_cancer_count} pan-cancer datasets
+          </Link>{" "}
+          are not filed under one cancer type.
+        </p>
+      )}
+
       <div className="mt-4 flex flex-wrap items-center gap-2 text-[13px]">
         {result.picks.length > 1 && (
           <Link

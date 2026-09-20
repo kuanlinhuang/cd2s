@@ -4,6 +4,7 @@ import { getIndex, getRecord } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { modalityLabel, num } from "@/lib/format";
 import { type Need, readNeeds } from "@/lib/needs";
+import { subjectsNamedIn } from "@/lib/subjects";
 import type { IndexRow } from "@/lib/types";
 
 // The need definitions live in lib/needs.ts so the browser can share them; the agent's
@@ -38,8 +39,8 @@ export type { Need } from "@/lib/needs";
  * position makes the first row a recommendation however bad it is; scoring against the
  * best hit of the moment makes every query produce a perfect match; both are ways of
  * claiming something the data does not say. Here the bar is membership: the request
- * must name a subject the corpus files records under, and a record must be filed under
- * it. The verdicts below, the router's name matching in lib/intent.ts and the
+ * must name a subject in the exported vocabulary, and a record's repository-stated
+ * controlled subject must contain it. The verdicts below, the router's name matching in lib/intent.ts and the
  * provenance anchors in lib/anchors.ts conform to this rather than restating it.
  */
 
@@ -68,83 +69,12 @@ export interface AgentAnswer {
   needs: string[];
   summary: string;
   picks: AgentPick[];
+  pan_cancer_count: number;
 }
 
 // ------------------------------------------------------------------------------------
 // retrieval
 // ------------------------------------------------------------------------------------
-
-/**
- * One spelling of a subject, reduced to the form both sides are compared in: lower
- * case, punctuation as spaces, the ICD-O qualifier "NOS" dropped, and plurals folded
- * into the singular, so "Nevi and Melanomas" and "melanoma" meet and "Diffuse Large
- * B-Cell Lymphoma, NOS" is the subject a researcher types as "diffuse large B-cell
- * lymphoma".
- */
-function normalizeSubject(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .split(" ")
-    .filter((w) => w && w !== "nos")
-    .map((w) => (w.length > 4 && w.endsWith("s") && !/(?:ss|us|is)$/.test(w) ? w.slice(0, -1) : w))
-    .join(" ");
-}
-
-let _subjects: Map<string, string[]> | null = null;
-
-/** Every cancer type and primary site the corpus files a record under, whole. */
-function subjectIndex(): Map<string, string[]> {
-  if (_subjects) return _subjects;
-  const filed = new Map<string, string[]>();
-  for (const row of getIndex()) {
-    for (const value of [...row.cancer_types, ...row.primary_sites]) {
-      const subject = normalizeSubject(value);
-      if (!subject) continue;
-      const ids = filed.get(subject) ?? [];
-      ids.push(row.id);
-      filed.set(subject, ids);
-    }
-  }
-  _subjects = filed;
-  return filed;
-}
-
-/** Whether `phrase` occurs in `text` as a run of whole words. */
-function containsPhrase(text: string, phrase: string): boolean {
-  return ` ${text} `.includes(` ${phrase} `);
-}
-
-/**
- * The subjects the request names: complete cancer types or primary sites, as the corpus
- * spells them, found whole in the wording.
- *
- * A subject is never taken apart. "Diffuse Large B-Cell Lymphoma" is a subject; "large"
- * is a word inside one, and a request for "a large open cohort" names no subject at all.
- * Splitting these values into words is what let a plain modifier stand for a disease and
- * put a myeloma cohort under "show me multiple datasets like this one". When one named
- * subject sits inside another - "lung" and "adenocarcinoma" inside "lung adenocarcinoma"
- * - only the most specific is kept, because that is what the researcher asked for.
- */
-function subjectsNamedIn(query: string): string[] {
-  const text = normalizeSubject(query);
-  const named = [...subjectIndex().keys()].filter((subject) => containsPhrase(text, subject));
-  return named.filter((s) => !named.some((other) => other !== s && containsPhrase(other, s)));
-}
-
-/**
- * The records filed under a subject the request named, or under a more specific form of
- * it: "glioblastoma" reaches the cohorts filed as "Glioblastoma Multiforme", because
- * that is the same subject spelled more exactly, while nothing reaches a record on the
- * strength of a word that is not itself a subject.
- */
-function recordsFiledUnder(subjects: string[]): Set<string> {
-  const ids = new Set<string>();
-  for (const [subject, filed] of subjectIndex()) {
-    if (subjects.some((named) => containsPhrase(subject, named))) for (const id of filed) ids.add(id);
-  }
-  return ids;
-}
 
 type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unknown: Need[] };
 
@@ -167,12 +97,14 @@ type Scored = { row: IndexRow; score: number; met: Need[]; failed: Need[]; unkno
  */
 function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] } {
   const needs = readNeeds(query);
-  const subjects = subjectsNamedIn(query);
-  if (subjects.length === 0) return { needs, scored: [] };
-  const filed = recordsFiledUnder(subjects);
-  if (filed.size === 0) return { needs, scored: [] };
+  const named = subjectsNamedIn(query);
+  if (named.size === 0) return { needs, scored: [] };
   const scored: Scored[] = getIndex()
-    .filter((row) => filed.has(row.id))
+    .filter(
+      (row) =>
+        (row.subject_scope === "single" || row.subject_scope === "several") &&
+        row.subjects.some((subject) => named.has(subject)),
+    )
     .map((row) => {
       const met: Need[] = [];
       const failed: Need[] = [];
@@ -406,6 +338,7 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
   const { needs, scored } = shortlist(query, 6);
   const needLabels = needs.map((n) => n.label);
   const byId = new Map(scored.map((s) => [s.row.id, s]));
+  const panCancerCount = getIndex().filter((row) => row.subject_scope === "pan_cancer").length;
 
   if (process.env.OPENROUTER_API_KEY && scored.length > 0) {
     try {
@@ -421,7 +354,16 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
           picks.push({ ...rulesPick(s, 1), verdict: claimed, why: p.why, watch_out: p.watch_out });
         }
         if (picks.length > 0) {
-          return { query, mode: "llm", model: agentModel(), note: null, needs: needLabels, summary: ranked.summary, picks };
+          return {
+            query,
+            mode: "llm",
+            model: agentModel(),
+            note: null,
+            needs: needLabels,
+            summary: ranked.summary,
+            picks,
+            pan_cancer_count: panCancerCount,
+          };
         }
       }
     } catch (err) {
@@ -450,5 +392,6 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
     needs: needLabels,
     summary,
     picks,
+    pan_cancer_count: panCancerCount,
   };
 }

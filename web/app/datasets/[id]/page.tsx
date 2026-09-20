@@ -24,7 +24,7 @@ import {
   Stat,
   UnderexploredBadge,
 } from "@/components/ui";
-import { getAllRecordIds, getRecord, getRelated } from "@/lib/data";
+import { getAllRecordIds, getRecord, getRelated, getSubjects } from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
 import { starterSnippets } from "@/lib/starter";
 import {
@@ -389,10 +389,37 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
         </Card>
       </div>
 
-      {/* cancer types and sites */}
+      {/* controlled subject */}
+      <div className="mt-6">
+        <h3 className="mb-2 flex items-center gap-1.5 text-[13px] font-medium uppercase tracking-wide t-faint">
+          Subject
+          {r.subject.evidence.length > 0 && <EvidenceChip evidence={r.subject.evidence} />}
+        </h3>
+        <div className="flex flex-wrap items-center gap-2">
+          {r.subject.tissues.map((code) => {
+            const item = getSubjects().subjects.find((subject) => subject.code === code);
+            return <Chip key={code}>{item?.label ?? code}</Chip>;
+          })}
+          {r.subject.scope === "pan_cancer" && <Chip>Pan-cancer</Chip>}
+          {r.subject.scope === "non_cancer" && <Chip>Non-cancer</Chip>}
+          {r.subject.scope === "not_stated" && <Chip>Subject not stated</Chip>}
+          {r.subject.scope === "title_derived" && r.subject.tissues.length === 0 && (
+            <Chip>Subject derived from title</Chip>
+          )}
+        </div>
+        {r.subject.scope === "title_derived" && (
+          <p className="mt-2 text-[12px] t-muted">
+            This subject was derived from the dataset title and was not stated by the
+            repository. It is available for browsing but is never used to place this
+            dataset in an answer shortlist.
+          </p>
+        )}
+      </div>
+
+      {/* cancer types and sites as filed */}
       <div className="mt-6">
         <h3 className="mb-2 text-[13px] font-medium uppercase tracking-wide t-faint">
-          Cancer types and sites
+          As filed by the repository
         </h3>
         {r.cancer_types.length === 0 && r.primary_sites.length === 0 ? (
           <EmptyState>The repository publishes no disease classification for this dataset.</EmptyState>

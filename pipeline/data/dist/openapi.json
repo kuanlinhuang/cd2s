@@ -200,6 +200,15 @@
             "description": "Primary anatomic site"
           },
           {
+            "name": "subject",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Controlled tissue code or subject state, as in /data/subjects.json"
+          },
+          {
             "name": "access",
             "in": "query",
             "required": false,

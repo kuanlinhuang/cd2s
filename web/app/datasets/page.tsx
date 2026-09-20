@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import DatasetBrowser from "@/components/DatasetBrowser";
-import { getBrowseRows, getFacets, getStats } from "@/lib/data";
+import { getBrowseRows, getFacets, getStats, getSubjects } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Datasets",
@@ -35,11 +35,13 @@ export default async function DatasetsPage({
       <DatasetBrowser
         rows={getBrowseRows()}
         facets={getFacets()}
+        subjects={getSubjects()}
         initial={{
           q: one("q"),
           modality: one("modality"),
           cancer: one("cancer"),
           site: one("site"),
+          subject: one("subject"),
           capability: one("capability"),
           repository: one("repository"),
           access: one("access"),

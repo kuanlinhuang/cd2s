@@ -438,6 +438,7 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         "",
         f"- [Search index]({SITE_URL}/data/index.json): one slim row per dataset",
         f"- [Facets]({SITE_URL}/data/facets.json): browse dimensions with counts",
+        f"- [Subject vocabulary]({SITE_URL}/data/subjects.json): controlled tissues and query synonyms",
         f"- [Corpus statistics]({SITE_URL}/data/stats.json)",
         f"- [Research questions]({SITE_URL}/data/questions.json): curated questions, flattened",
         f"- [Full record]({SITE_URL}/data/datasets/{{id}}.json): everything, with evidence",
@@ -451,7 +452,7 @@ def build_llms_txt(records: list[DatasetRecord], stats: dict[str, Any]) -> str:
         "## Live endpoints",
         "",
         f"- `GET {SITE_URL}/api/v1/search` - filter on measured capability: `survival`, "
-        "`treatment_response`, `modality`, `access`, `repository`, `min_cases`, "
+        "`treatment_response`, `subject`, `site`, `modality`, `access`, `repository`, `min_cases`, "
         "`min_modalities`, `underexplored`, `showcase`, `q`, `limit`",
         f"- `GET {SITE_URL}/api/v1/datasets/{{id}}` - the full record plus `analysis_fit`, "
         "the six verdicts",
@@ -633,6 +634,11 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
                                 "Measurement type, as in /data/facets.json",
                             ),
                             ("site", {"type": "string"}, "Primary anatomic site"),
+                            (
+                                "subject",
+                                {"type": "string"},
+                                "Controlled tissue code or subject state, as in /data/subjects.json",
+                            ),
                             (
                                 "access",
                                 {

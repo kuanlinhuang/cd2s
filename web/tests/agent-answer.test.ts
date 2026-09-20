@@ -3,6 +3,7 @@ import { afterAll, describe, expect, it, vi } from "vitest";
 import { answer } from "@/lib/agent";
 import { getIndex } from "@/lib/data";
 import { routeIntent, showsShortlist } from "@/lib/intent";
+import { subjectsNamedIn } from "@/lib/subjects";
 
 /**
  * What the agent answers, against the shipped corpus in public/data.
@@ -76,15 +77,33 @@ describe("a question the corpus can answer", () => {
   });
 
   it.each([
-    ["Survival analysis in a cervical cancer cohort from sub-Saharan Africa", /cervi/i],
-    ["melanoma checkpoint blockade trial cohorts", /melanom/i],
-  ])("ranks only records the corpus files under the subject named in %j", async (q, subject) => {
+    "Survival analysis in a cervical cancer cohort from sub-Saharan Africa",
+    "melanoma checkpoint blockade trial cohorts",
+  ])("ranks only records with a stated controlled subject named in %j", async (q) => {
     const a = await answer(q);
+    const named = subjectsNamedIn(q);
     expect(a.picks.length).toBeGreaterThan(0);
     for (const p of a.picks) {
       const row = getIndex().find((r) => r.id === p.id)!;
-      expect([...row.cancer_types, ...row.primary_sites].some((v) => subject.test(v))).toBe(true);
+      expect(["single", "several"]).toContain(row.subject_scope);
+      expect(row.subjects.some((subject) => named.has(subject))).toBe(true);
     }
+  });
+
+  it("finds gastric cancer through the controlled vocabulary", async () => {
+    const a = await answer("Phosphoproteomics and outcomes in gastric cancer, open access only");
+    expect(a.picks.map((pick) => pick.id)).toContain("pdc-cptac-stad-study");
+  });
+
+  it("never admits pan-cancer or title-derived records to a topic shortlist", async () => {
+    const a = await answer("any other lung datasets");
+    expect(a.picks.length).toBeGreaterThan(0);
+    for (const pick of a.picks) {
+      const row = getIndex().find((candidate) => candidate.id === pick.id)!;
+      expect(row.subject_scope).toBe("single");
+      expect(row.subjects).toContain("LUNG");
+    }
+    expect(a.picks.map((pick) => pick.id)).not.toContain("gdc-alchemist-alch");
   });
 
   it("leads with the subject, not with a record carrying one generic word of the request", async () => {

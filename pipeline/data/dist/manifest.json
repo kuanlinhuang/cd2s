@@ -2,7 +2,7 @@
   "site": "Cancer Data Showcase",
   "license_content": "https://creativecommons.org/licenses/by/4.0/",
   "license_code": "https://opensource.org/licenses/MIT",
-  "generated_at": "2026-09-20T00:58:51.880474+00:00",
+  "generated_at": "2026-09-20T01:05:29.512387+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -51,7 +51,7 @@
     "jsonld": 602,
     "croissant": 602,
     "agent": 602,
-    "generated_at": "2026-09-20T00:58:52.587594+00:00"
+    "generated_at": "2026-09-20T01:05:30.130462+00:00"
   },
   "bytes_written": {
     "dist/index.json": 1317442,
