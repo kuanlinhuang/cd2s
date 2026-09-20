@@ -25,11 +25,14 @@ export default async function DatasetsPage({
   return (
     <>
       <div className="pt-10 pb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Datasets</h1>
+        <p className="text-micro font-semibold uppercase tracking-wider" style={{ color: "var(--accent)" }}>
+          Search across repositories
+        </p>
+        <h1 className="mt-2 text-2xl font-semibold tracking-tight">Find data for your analysis</h1>
         <p className="mt-2 max-w-2xl text-lede t-muted">
           {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
-          repositories. Filters describe what you can do with a dataset, measured from its
-          own fields.
+          repositories. Filter by the analysis you need to run, not only by what a repository
+          says a dataset contains. Capability filters are measured from the data fields themselves.
         </p>
       </div>
       <DatasetBrowser

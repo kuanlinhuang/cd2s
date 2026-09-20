@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.30 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 192
+- 83 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 2 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 891 (attention, not reuse)
+- Reuse gap index: +1.00 (negative means less reused than comparable datasets)
   - Oncogene-induced matrix reorganization controls CD8+ T cell function in the soft-tissue sarcoma microenvironment. (2024) PMID 38652549
   - Identifying specific TLS-associated genes as potential biomarkers for predicting prognosis and evaluating the efficacy of immunotherapy in soft tissue sarcoma. (2024) PMID 38720884
   - Integration of ubiquitination-related genes in predictive signatures for prognosis and immunotherapy response in sarcoma. (2024) PMID 39469643
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - MO-GCAN: multi-omics integration based on graph convolutional and attention networks. (2025) PMID 40692180
+  - A web-based calculator for predicting the prognosis of patients with sarcoma on the basis of antioxidant gene signatures. (2022) PMID 35143416
 
 ## Provenance
 

@@ -13,6 +13,8 @@ DATA_DIR = Path(os.environ.get("CDS_DATA_DIR", PIPELINE_DIR / "data"))
 CACHE_DIR = Path(os.environ.get("CDS_CACHE_DIR", DATA_DIR / "cache"))
 RAW_DIR = DATA_DIR / "raw"
 CURATED_DIR = DATA_DIR / "curated"
+# Reviewer-named marker papers, one file for the whole corpus. See cds.reuse.markers.
+MARKER_PAPERS_FILE = DATA_DIR / "marker_papers.yaml"
 DIST_DIR = DATA_DIR / "dist"
 SCHEMA_DIR = PIPELINE_DIR / "schemas"
 

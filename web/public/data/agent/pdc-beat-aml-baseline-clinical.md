@@ -42,8 +42,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Citations to the dataset's publication: 19 (attention, not reuse)
-- Reuse gap index: -0.90 (negative means less reused than comparable datasets)
+- 2 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
+- Reuse gap index: -0.96 (negative means less reused than comparable datasets)
   - High <i>SEC61A1</i> expression predicts poor outcome of acute myeloid leukemia. (2024) PMID 38584833
 
 ## Provenance

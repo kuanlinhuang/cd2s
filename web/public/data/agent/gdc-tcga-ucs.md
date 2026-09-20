@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +1.02 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 33
+- 67 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 2 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 337 (attention, not reuse)
+- Reuse gap index: -0.67 (negative means less reused than comparable datasets)
   - Clinically relevant molecular subtypes and genomic alteration-independent differentiation in gynecologic carcinosarcoma. (2019) PMID 31672974
   - IL-33-activated ILC2s induce tertiary lymphoid structures in pancreatic cancer. (2025) PMID 39814891
   - A cfDNA methylation-based tissue-of-origin classifier for cancers of unknown primary. (2024) PMID 38632274
   - Patient-derived xenograft models capture genomic heterogeneity in endometrial cancer. (2022) PMID 35012638
-  - Whole-exome sequencing capture kit biases yield false negative mutation calls in TCGA cohorts. (2018) PMID 30281678
+  - Pan-cancer analysis reveals IL32 is a potential prognostic and immunotherapeutic biomarker in cancer. (2024) PMID 38584169
 
 ## Provenance
 

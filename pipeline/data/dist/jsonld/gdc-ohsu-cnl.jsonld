@@ -61,15 +61,109 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
+  "citation": [],
+  "funding": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "Genomic landscape of neutrophilic leukemias of ambiguous diagnosis.",
-      "identifier": "https://doi.org/10.1182/blood.2019000611",
-      "datePublished": "2019"
+      "@type": "Grant",
+      "identifier": "U54CA224019",
+      "name": "Architecture and Trajectory of Acquired Resistance to Therapy in AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA224019"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA217862",
+      "name": "Functional Genomic Discovery of Pathway Targeted and Immune Modulatory Therapeutic Combinations in Hematologic Malignancies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA217862"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA183974",
+      "name": "Pathogenetic Mechanism and Clinical Targeting of CSF3R-Driven Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA183974"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA237630",
+      "name": "Characterizing the pathogenesis and targeted therapeutics of Wilms' Tumor 1 (WT1) mutations in AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA237630"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA190605",
+      "name": "Pathogenic Mechanisms of CSF3R Mutations in Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA190605"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R00CA151457",
+      "name": "ROR1 as a Therapeutic Target in Acute Lymphoblastic Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R00CA151457"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA069533",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA069533"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA066996",
+      "name": "Development of Novel Therapeutic Strategies in Human Leukemias",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA066996"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA237630",
+      "name": "Characterizing the pathogenesis and targeted therapeutics of Wilms' Tumor 1 (WT1) mutations in AML",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA237630"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "K99CA190605",
+      "name": "Pathogenic Mechanisms of CSF3R Mutations in Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=K99CA190605"
     }
   ],
-  "funding": [],
   "dateModified": "2026-09-18T02:36:53.124012+00:00",
   "datePublished": "2019-01-01",
   "variableMeasured": [

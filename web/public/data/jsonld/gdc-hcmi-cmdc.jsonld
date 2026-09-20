@@ -142,15 +142,48 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Patient-Derived Triple-Negative Breast Cancer Organoids Provide Robust Model Systems That Recapitulate Tumor Intrinsic Characteristics.",
-      "identifier": "https://doi.org/10.1158/0008-5472.can-21-2807",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA238475",
+      "name": "Predictive Modeling of the EGFR-MAPK pathway for Triple Negative Breast Cancer Patients",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA238475"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P50CA058223",
+      "name": "SPORE in Breast Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA058223"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA045508",
+      "name": "Cancer Research Training and Education Coordination Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA045508"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA013106",
+      "name": "Project 2: Splicing Dysregulation in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA013106"
+    },
     {
       "@type": "Grant",
       "identifier": "R01CA292376",
@@ -164,7 +197,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA196521",
-      "name": "Bioinformatics for Next Generation Sequencing",
+      "name": "The Tisch Cancer Institute - Cancer Center Support Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -184,7 +217,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA124435",
-      "name": "Biostatistics",
+      "name": "Leadership, Planning and Evaluation",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

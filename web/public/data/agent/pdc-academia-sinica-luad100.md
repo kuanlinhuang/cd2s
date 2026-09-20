@@ -41,13 +41,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 10
-- Citations to the dataset's publication: 11 (attention, not reuse)
-- Reuse gap index: -0.74 (negative means less reused than comparable datasets)
-  - Comprehensive analysis of chemokines family and related regulatory ceRNA network in lung adenocarcinoma. (2022) PMID 36387469
-  - Alternative splicing regulates &lt;i&gt;FGGY-&lt;/i&gt;derived neoantigen presentation and promotes immune evasion in metabolic-associated hepatocellular carcinoma. (2026) PMID 42291265
-  - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
-  - Cancer-wide in silico analyses using differentially expressed genes demonstrate the functions and clinical relevance of JAG, DLL, and NOTCH. (2024) PMID 39074091
-  - Mass Spectrometric Detected Cancer Proteins as Resources for Cancer Research. (2026) PMID 42065709
+- 16 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 10 that could be checked were themselves NCI funded.
+- Reuse gap index: -0.62 (negative means less reused than comparable datasets)
+  - Integrative analysis of lung adenocarcinoma across diverse ethnicities and exposures. (2025) PMID 40749670
+  - Identification of HMGB2 associated with proliferation, invasion and prognosis in lung adenocarcinoma via weighted gene co-expression network analysis. (2022) PMID 35962344
+  - A multiomic investigation of lung adenocarcinoma molecular subtypes. (2024) PMID 37991388
+  - Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets. (2025) PMID 40250426
+  - Deciphering key roles of B cells in prognostication and tailored therapeutic strategies for lung adenocarcinoma: a multi-omics and machine learning approach towards predictive, preventive, and personalized treatment strategies. (2025) PMID 39991096
 
 ## Provenance
 

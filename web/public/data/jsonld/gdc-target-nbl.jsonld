@@ -88,9 +88,9 @@
   "citation": [
     {
       "@type": "ScholarlyArticle",
-      "name": "Micrometastases in neuroblastoma: are they clinically important?",
-      "identifier": "https://doi.org/10.1136/jcp.57.1.14",
-      "datePublished": "2004"
+      "name": "The genetic landscape of high-risk neuroblastoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/23334666/",
+      "datePublished": "2013"
     }
   ],
   "funding": [
@@ -243,6 +243,26 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA236890"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA098413",
+      "name": "Children's Oncology Group Statistics and Data Center Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA098413"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA060104",
+      "name": "Clinical Correlative Studies of Neuroblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA060104"
     }
   ],
   "dateModified": "2026-09-18T02:35:46.756009+00:00",

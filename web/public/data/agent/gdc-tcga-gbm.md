@@ -75,14 +75,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1753
-- Citations to the dataset's publication: 1839 (attention, not reuse)
-- Reuse gap index: +1.44 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Articles that analyzed these data: 1399
+- 112 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 2 of the 9 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 6091 (attention, not reuse)
+- Reuse gap index: +1.37 (negative means less reused than comparable datasets)
   - Updating TCGA glioma classification through integration of molecular data following the latest WHO guidelines. (2025) PMID 40467633
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
+  - Integrated pathway analysis identifies prognostically relevant subtypes of glioblastoma characterized by abnormalities in multi-omics. (2025) PMID 41292185
+  - Tumor Electric Field Therapy Inhibits TGF-β/C1R Signaling Axis-Driven Epithelial-Mesenchymal Transition in Glioblastoma. (2026) PMID 41489302
+  - Robust machine-learning based prognostic index using fatty acid metabolism genes predicts prognosis and therapy responses in glioblastoma. (2025) PMID 41049001
+  - Robust Cluster Prediction Across Data Types Validates Association of Sex and Therapy Response in GBM. (2025) PMID 39941811
 
 ## Provenance
 

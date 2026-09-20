@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.87 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 195
+- 72 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 409 (attention, not reuse)
+- Reuse gap index: +1.70 (negative means less reused than comparable datasets)
   - Integrative analyses of bulk and single-cell transcriptomics reveals the infiltration and crosstalk of cancer-associated fibroblasts as a novel predictor for prognosis and microenvironment remodeling in intrahepatic cholangiocarcinoma. (2024) PMID 38702814
   - Extrachromosomal circular DNA (eccDNA) characteristics in the bile and plasma of advanced perihilar cholangiocarcinoma patients and the construction of an eccDNA-related gene prognosis model. (2024) PMID 38903532
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - The correlation between LAG-3 expression and the efficacy of chemoimmunotherapy in advanced biliary tract cancer. (2025) PMID 39751894
   - New platinum derivatives selectively cause double-strand DNA breaks and death in naïve and cisplatin-resistant cholangiocarcinomas. (2025) PMID 40324694
+  - Comparative impact of tertiary lymphoid structures and tumor-infiltrating lymphocytes in cholangiocarcinoma. (2025) PMID 39870490
 
 ## Provenance
 

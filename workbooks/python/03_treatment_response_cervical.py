@@ -23,6 +23,8 @@ from collections import Counter
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy import stats
@@ -185,6 +187,82 @@ if len(sub) >= 20:
         print("\ntoo few in one group for a comparison")
 else:
     print("too few cases with both fields")
+
+# %%
+# One house style for every figure below: a single accent, one contrast colour for the
+# thing the reader must not miss, and nothing else. Defined here rather than imported so
+# the downloaded notebook runs on its own.
+INK, ACCENT, WARN, MUTED = "#1f2430", "#2f6f6b", "#b4762a", "#9aa3b2"
+mpl.rcParams.update(
+    {
+        "figure.dpi": 120,
+        "savefig.dpi": 120,
+        "font.size": 9.5,
+        "axes.titlesize": 11,
+        "axes.titleweight": "semibold",
+        "axes.labelcolor": INK,
+        "axes.titlecolor": INK,
+        "text.color": INK,
+        "axes.edgecolor": MUTED,
+        "xtick.color": MUTED,
+        "ytick.color": MUTED,
+        "axes.grid": True,
+        "grid.color": "#e6e9ef",
+        "grid.linewidth": 0.8,
+        "axes.axisbelow": True,
+    }
+)
+
+
+def finish(ax, title):
+    ax.set_title(title, loc="left")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.figure.tight_layout()
+    return ax
+
+
+# %% [markdown]
+# ### What the outcome field actually contains
+#
+# The left panel is the reason this workbook exists: most cases carry no usable response
+# label at all, and a bar chart makes that impossible to overlook in a way a printed
+# count is not.
+
+# %%
+fig, axes = plt.subplots(1, 2, figsize=(9.8, 4.2))
+
+vc = df["response"].value_counts(dropna=False)
+labels = ["no usable label" if pd.isna(k) else str(k) for k in vc.index]
+colors = [ACCENT if lab == "responder" else WARN if lab == "progressor" else MUTED
+          for lab in labels]
+axes[0].bar(labels, vc.values, color=colors, width=0.62)
+for x, v in enumerate(vc.values):
+    axes[0].text(x, v, f" {v}", ha="center", va="bottom", fontsize=8.5, color=INK)
+axes[0].set_ylabel("cases")
+axes[0].grid(axis="x", visible=False)
+finish(axes[0], "Response label, after validation")
+
+if len(sub) >= 20:
+    order = [g for g in ("responder", "progressor") if (sub["response"] == g).any()]
+    axes[1].boxplot(
+        [sub.loc[sub["response"] == g, "ecog"].values for g in order],
+        tick_labels=[f"{g}\n(n={(sub['response'] == g).sum()})" for g in order],
+        widths=0.45,
+        medianprops={"color": ACCENT, "linewidth": 2},
+        boxprops={"color": MUTED},
+        whiskerprops={"color": MUTED},
+        capprops={"color": MUTED},
+        flierprops={"markeredgecolor": MUTED, "markersize": 4},
+    )
+    axes[1].set_ylabel("ECOG performance status")
+    axes[1].grid(axis="x", visible=False)
+    finish(axes[1], "Performance status by response group")
+else:
+    axes[1].axis("off")
+    axes[1].text(0.5, 0.5, "too few cases carry both response and ECOG",
+                 ha="center", va="center", color=MUTED)
+plt.show()
 
 # %% [markdown]
 # ## 4. Which agents were actually given?

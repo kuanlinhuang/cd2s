@@ -1,0 +1,235 @@
+# Marker papers: which publication is each dataset's own.
+#
+# A marker paper describes the cohort and reports its data generation. It is not a paper
+# that reused the data, and the difference decides three numbers on every dataset page:
+# how often the dataset has been cited, which award paid to create it, and which later
+# articles count as independent reuse.
+#
+# This file exists because the pipeline cannot infer it. `enrich._pick_primary` nominates
+# the earliest heavily cited article that quotes the accession - but a marker paper
+# published in 2011 does not quote a GDC project identifier introduced years later, so
+# the true marker paper is never in the candidate pool and the heuristic can only ever
+# pick a reuse paper. TCGA-OV was published as "cited 44 times" on the strength of a 2012
+# reuse paper, while its actual marker paper has over six thousand citations.
+#
+# Every entry below was verified against Europe PMC by PMID, and the title, journal and
+# year read back from the API rather than recalled. The disease in the title was checked
+# against the project. Where no marker paper could be verified, the dataset is absent
+# from this file rather than given a plausible one - `cds.reuse.markers` then withholds
+# the citation count entirely, which is the honest rendering.
+#
+# Known absences, all confirmed rather than assumed:
+#   gdc-tcga-dlbc      TCGA published no Network marker paper for DLBC.
+#   gdc-target-rt      No TARGET rhabdoid cohort paper; only reanalyses.
+#   gdc-target-all-p1/p2/p3  No phase-specific cohort paper.
+#   gdc-mmrf-commpass  CoMMpass has no single cohort-descriptor publication.
+#
+# See cds/reuse/markers.py for how this is applied and what it licenses.
+
+reviewer: Cancer Data Showcase project curation
+reviewed_at: 2026-09-20
+source: Europe PMC REST API (title, journal and year verified per PMID)
+
+papers:
+  # --- TARGET and other programmes ---------------------------------------------------
+  gdc-target-nbl:
+    pmid: "23334666"
+    title: The genetic landscape of high-risk neuroblastoma
+    journal: Nature Genetics
+    year: 2013
+  gdc-target-wt:
+    pmid: "28825729"
+    title: >-
+      A Children's Oncology Group and TARGET initiative exploring the genetic landscape
+      of Wilms tumor
+    journal: Nature Genetics
+    year: 2017
+  gdc-target-os:
+    pmid: "24703847"
+    title: >-
+      Recurrent somatic structural variations contribute to tumorigenesis in pediatric
+      osteosarcoma
+    journal: Cell Reports
+    year: 2014
+  gdc-beataml1.0-cohort:
+    pmid: "30333627"
+    title: Functional genomic landscape of acute myeloid leukaemia
+    journal: Nature
+    year: 2018
+  gdc-nciccr-dlbcl:
+    pmid: "29641966"
+    title: Genetics and Pathogenesis of Diffuse Large B-Cell Lymphoma
+    journal: New England Journal of Medicine
+    year: 2018
+
+  # --- TCGA --------------------------------------------------------------------------
+  gdc-tcga-thca:
+    pmid: "25417114"
+    title: Integrated genomic characterization of papillary thyroid carcinoma
+    journal: Cell
+    year: 2014
+  gdc-tcga-uvm:
+    pmid: "28810145"
+    title: >-
+      Integrative Analysis Identifies Four Molecular and Clinical Subsets in Uveal
+      Melanoma
+    journal: Cancer Cell
+    year: 2017
+  gdc-tcga-acc:
+    pmid: "27165744"
+    title: Comprehensive Pan-Genomic Characterization of Adrenocortical Carcinoma
+    journal: Cancer Cell
+    year: 2016
+  gdc-tcga-meso:
+    pmid: "30322867"
+    title: Integrative Molecular Characterization of Malignant Pleural Mesothelioma
+    journal: Cancer Discovery
+    year: 2018
+  gdc-tcga-thym:
+    pmid: "29438696"
+    title: The Integrated Genomic Landscape of Thymic Epithelial Tumors
+    journal: Cancer Cell
+    year: 2018
+  gdc-tcga-sarc:
+    pmid: "29100075"
+    title: >-
+      Comprehensive and Integrated Genomic Characterization of Adult Soft Tissue Sarcomas
+    journal: Cell
+    year: 2017
+  gdc-tcga-esca:
+    pmid: "28052061"
+    title: Integrated genomic characterization of oesophageal carcinoma
+    journal: Nature
+    year: 2017
+  gdc-tcga-tgct:
+    pmid: "29898407"
+    title: Integrated Molecular Characterization of Testicular Germ Cell Tumors
+    journal: Cell Reports
+    year: 2018
+  gdc-tcga-kich:
+    pmid: "25155756"
+    title: The somatic genomic landscape of chromophobe renal cell carcinoma
+    journal: Cancer Cell
+    year: 2014
+  gdc-tcga-skcm:
+    pmid: "26091043"
+    title: Genomic Classification of Cutaneous Melanoma
+    journal: Cell
+    year: 2015
+  gdc-tcga-hnsc:
+    pmid: "25631445"
+    title: >-
+      Comprehensive genomic characterization of head and neck squamous cell carcinomas
+    journal: Nature
+    year: 2015
+  gdc-tcga-lusc:
+    pmid: "22960745"
+    title: Comprehensive genomic characterization of squamous cell lung cancers
+    journal: Nature
+    year: 2012
+  gdc-tcga-lgg:
+    pmid: "26061751"
+    title: >-
+      Comprehensive, Integrative Genomic Analysis of Diffuse Lower-Grade Gliomas
+    journal: New England Journal of Medicine
+    year: 2015
+  gdc-tcga-cesc:
+    pmid: "28112728"
+    title: Integrated genomic and molecular characterization of cervical cancer
+    journal: Nature
+    year: 2017
+  gdc-tcga-laml:
+    pmid: "23634996"
+    title: >-
+      Genomic and epigenomic landscapes of adult de novo acute myeloid leukemia
+    journal: New England Journal of Medicine
+    year: 2013
+  gdc-tcga-ucec:
+    pmid: "23636398"
+    title: Integrated genomic characterization of endometrial carcinoma
+    journal: Nature
+    year: 2013
+  gdc-tcga-pcpg:
+    pmid: "28162975"
+    title: >-
+      Comprehensive Molecular Characterization of Pheochromocytoma and Paraganglioma
+    journal: Cancer Cell
+    year: 2017
+  gdc-tcga-ucs:
+    pmid: "28292439"
+    title: Integrated Molecular Characterization of Uterine Carcinosarcoma
+    journal: Cancer Cell
+    year: 2017
+  gdc-tcga-chol:
+    pmid: "28297679"
+    title: >-
+      Integrative Genomic Analysis of Cholangiocarcinoma Identifies Distinct IDH-Mutant
+      Molecular Profiles
+    journal: Cell Reports
+    year: 2017
+  gdc-tcga-kirp:
+    pmid: "26536169"
+    title: Comprehensive Molecular Characterization of Papillary Renal-Cell Carcinoma
+    journal: New England Journal of Medicine
+    year: 2016
+  gdc-tcga-luad:
+    pmid: "25079552"
+    title: Comprehensive molecular profiling of lung adenocarcinoma
+    journal: Nature
+    year: 2014
+  gdc-tcga-lihc:
+    pmid: "28622513"
+    title: >-
+      Comprehensive and Integrative Genomic Characterization of Hepatocellular Carcinoma
+    journal: Cell
+    year: 2017
+  # COAD and READ share one marker paper. TCGA characterised colon and rectal cancer in
+  # a single study and reported them together, so this is the correct attribution for
+  # both, not a duplication to be cleaned up.
+  gdc-tcga-coad:
+    pmid: "22810696"
+    title: Comprehensive molecular characterization of human colon and rectal cancer
+    journal: Nature
+    year: 2012
+  gdc-tcga-read:
+    pmid: "22810696"
+    title: Comprehensive molecular characterization of human colon and rectal cancer
+    journal: Nature
+    year: 2012
+  gdc-tcga-gbm:
+    pmid: "18772890"
+    title: >-
+      Comprehensive genomic characterization defines human glioblastoma genes and core
+      pathways
+    journal: Nature
+    year: 2008
+  gdc-tcga-ov:
+    pmid: "21720365"
+    title: Integrated genomic analyses of ovarian carcinoma
+    journal: Nature
+    year: 2011
+  gdc-tcga-stad:
+    pmid: "25079317"
+    title: Comprehensive molecular characterization of gastric adenocarcinoma
+    journal: Nature
+    year: 2014
+  gdc-tcga-kirc:
+    pmid: "23792563"
+    title: Comprehensive molecular characterization of clear cell renal cell carcinoma
+    journal: Nature
+    year: 2013
+  gdc-tcga-prad:
+    pmid: "26544944"
+    title: The Molecular Taxonomy of Primary Prostate Cancer
+    journal: Cell
+    year: 2015
+  gdc-tcga-blca:
+    pmid: "24476821"
+    title: Comprehensive molecular characterization of urothelial bladder carcinoma
+    journal: Nature
+    year: 2014
+  gdc-tcga-paad:
+    pmid: "28810144"
+    title: Integrated Genomic Characterization of Pancreatic Ductal Adenocarcinoma
+    journal: Cancer Cell
+    year: 2017

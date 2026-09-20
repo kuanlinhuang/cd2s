@@ -18,10 +18,13 @@ export default function QuestionsPage() {
   return (
     <>
       <div className="pt-10 pb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Research questions</h1>
+        <p className="text-micro font-semibold uppercase tracking-wider" style={{ color: "var(--accent)" }}>
+          Question-first discovery
+        </p>
+        <h1 className="mt-2 text-2xl font-semibold tracking-tight">Start from a research question</h1>
         <p className="mt-3 max-w-3xl text-lede t-muted">
-          {questions.length} research questions, each checked against the dataset that can
-          answer it, with the usable sample size and any caveat.
+          {questions.length} reviewed questions, each matched to data that can answer it.
+          See why the match works, the usable sample size, and the caveat to carry into analysis.
         </p>
       </div>
 

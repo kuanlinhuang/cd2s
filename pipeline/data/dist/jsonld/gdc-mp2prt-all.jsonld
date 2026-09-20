@@ -70,15 +70,38 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Molecular and pharmacological heterogeneity of ETV6::RUNX1 acute lymphoblastic leukemia.",
-      "identifier": "https://doi.org/10.1038/s41467-025-56229-7",
-      "datePublished": "2025"
-    }
-  ],
+  "citation": [],
   "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U01CA264610",
+      "name": "Clonal Therapy for Pediatric T-cell Acute Lymphoblastic Leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA264610"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA264837",
+      "name": "Biomarkers of dasatinib response and resistance in T-cell acute lymphoblastic leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA264837"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA021765",
+      "name": "Cancer Biology (CBP)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA021765"
+    },
     {
       "@type": "Grant",
       "identifier": "U10CA180899",

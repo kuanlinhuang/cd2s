@@ -154,6 +154,16 @@
     },
     {
       "@type": "Grant",
+      "identifier": "T32CA009351",
+      "name": "Pediatric Oncology Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA009351"
+    },
+    {
+      "@type": "Grant",
       "identifier": "R01CA204396",
       "name": "ABERRANT SIGNALING IN ACUTE MYELOID LEUKEMIA",
       "funder": {
@@ -165,7 +175,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "name": "Cancer Center Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -235,7 +245,7 @@
     {
       "@type": "Grant",
       "identifier": "P01CA096832",
-      "name": "NORMAL & NEOPLASTIC GROWTH IN THE BRAIN",
+      "name": "CORE A - Administration",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -245,42 +255,12 @@
     {
       "@type": "Grant",
       "identifier": "P30CA015704",
-      "name": "Hematologic Malignancies",
+      "name": "Prostate Cancer",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA015704"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U24CA196172",
-      "name": "ECOG-ACRIN Biospecimen Bank to Support NCTN",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA196172"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U10CA180888",
-      "name": "SWOG Network Group Operations Center of the NCTN",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180888"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U10CA180820",
-      "name": "Member Site Core",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180820"
     }
   ],
   "dateModified": "2026-09-18T02:35:31.572614+00:00",

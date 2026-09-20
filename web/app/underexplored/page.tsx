@@ -9,7 +9,7 @@ import { getCorpusBreakdown, getModel, getScatterPoints, getStats, getUnderexplo
 import { SCARCE_MODALITIES, modalityLabel, months, num } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Underexplored datasets",
+  title: "Underused research opportunities",
   description:
     "NCI-supported datasets reused far less than comparable resources, with the " +
     "evidence behind each label.",
@@ -25,18 +25,24 @@ export default function UnderexploredPage() {
   return (
     <>
       <div className="pt-10 pb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Underexplored datasets</h1>
+        <p className="text-micro font-semibold uppercase tracking-wider" style={{ color: "var(--mixed)" }}>
+          Look beyond the familiar cohorts
+        </p>
+        <h1 className="mt-2 text-2xl font-semibold tracking-tight">Underused research opportunities</h1>
         <p className="mt-3 max-w-3xl text-lede t-muted">
-          Datasets reused far less than datasets of similar size, age, measurement breadth
-          and access tier.{" "}
+          These datasets have been used far less than resources with similar size, age,
+          measurement breadth and access tier. That gap can point to overlooked data with
+          room for new questions.{" "}
           <Link href="/methods#reuse-gap" className="underline">
             Full method
           </Link>
           .
         </p>
         <div className="mt-4 max-w-3xl">
-          <Callout tone="info" title="What the label does not mean">
-            Underexplored does not mean poor. Most gaps are discoverability. The{" "}
+          <Callout tone="info" title="An opportunity signal, not a quality score">
+            Underused does not mean poor quality, and it does not guarantee a useful finding.
+            The label measures a reuse gap and helps you decide where to look more closely.
+            The{" "}
             {num(stats.n_without_citable_accession)} datasets with no citable accession are
             never labelled either way: their reuse cannot be measured.
           </Callout>
@@ -74,7 +80,7 @@ export default function UnderexploredPage() {
             },
             {
               key: "under",
-              label: "Underexplored",
+              label: "Underused opportunity",
               value: breakdown.under,
               color: "var(--viz-2)",
               note: "Well below prediction, and few articles in absolute terms.",
@@ -150,11 +156,18 @@ export default function UnderexploredPage() {
                   </div>
 
                   <div className="lg:pt-1">
-                    <ObservedExpected
-                      observed={r.n_verified_reuse ?? 0}
-                      expected={r.expected_reuse ?? 0}
-                      underexplored
+                    {r.n_verified_reuse === null || r.n_verified_reuse === undefined ||
+                    r.expected_reuse === null || r.expected_reuse === undefined ? (
+                      <p className="text-meta t-muted">
+                        Reuse could not be measured for this accession.
+                      </p>
+                    ) : (
+                      <ObservedExpected
+                        observed={r.n_verified_reuse}
+                        expected={r.expected_reuse}
+                        underexplored
                       />
+                    )}
                     <p className="mt-2 text-right text-micro t-faint">
                       Reuse gap index{" "}
                       <span className="tnum" style={{ color: "var(--text-muted)" }}>

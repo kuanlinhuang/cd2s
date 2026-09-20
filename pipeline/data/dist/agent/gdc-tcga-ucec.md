@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 438
-- Reuse gap index: -0.12 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Articles that analyzed these data: 387
+- 104 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 4497 (attention, not reuse)
+- Reuse gap index: +0.34 (negative means less reused than comparable datasets)
   - Mutational scanning reveals oncogenic CTNNB1 mutations have diverse effects on signaling. (2026) PMID 41629672
   - Significance of Gelsolin Superfamily Genes in Diagnosis, Prognosis and Immune Microenvironment Regulation for Endometrial Cancer. (2025) PMID 39964147
   - MMRNet: Ensemble deep learning models for predicting mismatch repair deficiency in endometrial cancer from histopathological images. (2025) PMID 40306276
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+  - Tumor mutational burden predicts neoantigen profiles and immunotherapy response in microsatellite stable tumors across different cancer types. (2025) PMID 41583482
+  - Integrative analysis of DNA methylation, RNA sequencing, and genomic variants in the cancer genome atlas (TCGA) to predict endometrial cancer recurrence. (2025) PMID 40357366
 
 ## Provenance
 

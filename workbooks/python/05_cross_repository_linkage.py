@@ -18,6 +18,8 @@ import json
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import pandas as pd
 
 GDC = "https://api.gdc.cancer.gov"
@@ -153,6 +155,62 @@ link_map = pd.DataFrame(matches).sort_values("gdc_cases", ascending=False)
 print(f"{len(link_map)} cohorts exist in BOTH the GDC and the IDC\n")
 print(link_map.head(20).to_string(index=False))
 print(f"\ntotal patients in linkable cohorts: {link_map['gdc_cases'].sum():,}")
+# %%
+# One house style for every figure below: a single accent, one contrast colour for the
+# thing the reader must not miss, and nothing else. Defined here rather than imported so
+# the downloaded notebook runs on its own.
+INK, ACCENT, WARN, MUTED = "#1f2430", "#2f6f6b", "#b4762a", "#9aa3b2"
+mpl.rcParams.update(
+    {
+        "figure.dpi": 120,
+        "savefig.dpi": 120,
+        "font.size": 9.5,
+        "axes.titlesize": 11,
+        "axes.titleweight": "semibold",
+        "axes.labelcolor": INK,
+        "axes.titlecolor": INK,
+        "text.color": INK,
+        "axes.edgecolor": MUTED,
+        "xtick.color": MUTED,
+        "ytick.color": MUTED,
+        "axes.grid": True,
+        "grid.color": "#e6e9ef",
+        "grid.linewidth": 0.8,
+        "axes.axisbelow": True,
+    }
+)
+
+
+def finish(ax, title):
+    ax.set_title(title, loc="left")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.figure.tight_layout()
+    return ax
+
+
+# %% [markdown]
+# ### The map, drawn
+#
+# Every pair of bars is a cohort whose molecular and imaging data are already public and
+# already joinable. Where the two bars differ, the shorter one is the real ceiling on a
+# multimodal study of that cohort.
+
+# %%
+top = link_map.head(14).iloc[::-1]
+pos = range(len(top))
+fig, ax = plt.subplots(figsize=(8.8, 0.5 * len(top) + 1.8))
+ax.barh([i + 0.19 for i in pos], top["gdc_cases"], height=0.36, color=ACCENT,
+        label="GDC cases (molecular)")
+ax.barh([i - 0.19 for i in pos], top["idc_patients"], height=0.36, color=MUTED,
+        label="IDC patients (imaging)")
+ax.set_yticks(list(pos))
+ax.set_yticklabels(top["project"])
+ax.set_xlabel("patients")
+ax.legend(frameon=False, loc="lower right", fontsize=8.5)
+ax.grid(axis="y", visible=False)
+finish(ax, "Cohorts carrying both molecular and imaging data today")
+plt.show()
 
 # %% [markdown]
 # ## 4. Why this matters

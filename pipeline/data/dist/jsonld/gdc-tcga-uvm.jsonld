@@ -77,7 +77,14 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Integrative Analysis Identifies Four Molecular and Clinical Subsets in Uveal Melanoma",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/28810145/",
+      "datePublished": "2017"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
@@ -88,10 +95,180 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210999",
+      "name": "Global Infrastructure for Collaborative High-throughput  Cancer Genomics Analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210999"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210990",
+      "name": "UCSC-Buck Specialized Genomic Data Analysis Center for the Genomic Data Analysis Network",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210990"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210974",
+      "name": "Visualization hub for genomics data exploration and translational discovery",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210974"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210969",
+      "name": "Integrative Cancer Epigenomic Data Analysis Center (ICE-DAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210969"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210949",
+      "name": "Batch effects in molecular profiling data on cancers: detection, quantitation, interpretation, and correction",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210949"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143883",
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143883"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143882",
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143882"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143867",
+      "name": "Genome Characterization Center (GCC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143867"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143866",
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143866"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143858",
+      "name": "UCSC-Buck Inst. Genome Data Analysis Center for TCGA Research Network (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143858"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143848",
+      "name": "Gene Expression Patterns in Human Tumors Identified Using Transcript Sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143848"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143845",
+      "name": "The Cancer Genome Atlas Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143845"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143843",
+      "name": "The BCM Tumor Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143843"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143840",
+      "name": "MSKCC Center for Translational Cancer Genomic Analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143840"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143835",
+      "name": "Center for Systems Analysis of the Cancer Regulome",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143835"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143799",
+      "name": "TCGA Data Analysis Center at Berkeley",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143799"
     }
   ],
   "dateModified": "2026-09-18T02:37:02.185928+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2017-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

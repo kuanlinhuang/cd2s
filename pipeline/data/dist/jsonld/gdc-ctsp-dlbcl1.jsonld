@@ -80,6 +80,36 @@
   "funding": [
     {
       "@type": "Grant",
+      "identifier": "U01CA157581",
+      "name": "Molecular Diagnosis and Prognosis in Aggressive Lymphoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157581"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P01CA229100",
+      "name": "Preclinical Models and Therapeutics Core",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA229100"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA023108",
+      "name": "Signaling, Genomes, and Networks",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA023108"
+    },
+    {
+      "@type": "Grant",
       "identifier": "U54CA137788",
       "name": "Outreach Core (PCORE)",
       "funder": {
@@ -180,36 +210,6 @@
     },
     {
       "@type": "Grant",
-      "identifier": "P01CA229100",
-      "name": "Preclinical Models and Therapeutics Core",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P01CA229100"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA157581",
-      "name": "Molecular Diagnosis and Prognosis in Aggressive Lymphoma",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA157581"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "P30CA023108",
-      "name": "Signaling, Genomes, and Networks",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA023108"
-    },
-    {
-      "@type": "Grant",
       "identifier": "U10CA180888",
       "name": "SWOG Network Group Operations Center of the NCTN",
       "funder": {
@@ -261,7 +261,7 @@
     {
       "@type": "Grant",
       "identifier": "U10CA180820",
-      "name": "Member Site Core",
+      "name": "ECOG-ACRIN Network Group Operations Center",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

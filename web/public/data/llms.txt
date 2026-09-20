@@ -60,26 +60,29 @@ Every claim carries provenance. Structured records expose measured clinical fiel
 - [Pancreas Cancer Organoid Profiling](https://cancer-data-showcase.vercel.app/datasets/gdc-organoid-pancreatic): 70 patient-derived pancreatic cancer organoids with exome and RNA sequencing, linked to drug-response profiling in the source publication - a living model resource rather than a tissue archive.
 - [The Cellular Geography of Therapeutic Resistance in Cancer](https://cancer-data-showcase.vercel.app/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer): An HTAN atlas built explicitly around therapeutic resistance, with multiplexed imaging, single-cell RNA sequencing and the richest clinical annotation of any atlas here - and no publications recorded in the network's own manifest.
 
-## Underexplored datasets (21)
+## Underexplored datasets (24)
 
-- [NSCLC Radiogenomics](https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiogenomics): reuse gap index -6.17
-- [Human Tumor Atlas Pilot Project (HTAPP)](https://cancer-data-showcase.vercel.app/datasets/htan-human-tumor-atlas-pilot-project-htapp): reuse gap index -3.43
-- [Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms](https://cancer-data-showcase.vercel.app/datasets/gdc-beataml1.0-crenolanib): reuse gap index -3.06
-- [Washington University Human Tumor Atlas Research Center](https://cancer-data-showcase.vercel.app/datasets/htan-washington-university-human-tumor-atlas-research-center): reuse gap index -3.00
-- [Omic and Multidimensional Spatial Atlas of Metastatic Breast Cancers](https://cancer-data-showcase.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers): reuse gap index -2.87
-- [CPTAC UCEC Confirmatory Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-confirmatory-study): reuse gap index -2.65
-- [Burkitt Lymphoma Genome Sequencing Project](https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-blgsp): reuse gap index -2.65
-- [Breast Pre-Cancer Atlas](https://cancer-data-showcase.vercel.app/datasets/htan-breast-pre-cancer-atlas): reuse gap index -2.63
-- [Colon Molecular Atlas Project](https://cancer-data-showcase.vercel.app/datasets/htan-colon-molecular-atlas-project): reuse gap index -2.55
-- [Broad Institute - Medulloblastoma](https://cancer-data-showcase.vercel.app/datasets/pdc-broad-institute-medulloblastoma): reuse gap index -2.49
-- [Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)](https://cancer-data-showcase.vercel.app/datasets/gdc-fm-ad): reuse gap index -2.46
-- [Multi-omic Characterization of Transformation of Familial Adenomatous Polyposis](https://cancer-data-showcase.vercel.app/datasets/htan-multi-omic-characterization-of-transformation-of-familial-adenomatous-): reuse gap index -2.39
-- [Clear Cell Sarcoma of the Kidney](https://cancer-data-showcase.vercel.app/datasets/gdc-target-ccsk): reuse gap index -2.25
+- [NSCLC Radiogenomics](https://cancer-data-showcase.vercel.app/datasets/idc-nsclc-radiogenomics): reuse gap index -5.97
+- [Human Tumor Atlas Pilot Project (HTAPP)](https://cancer-data-showcase.vercel.app/datasets/htan-human-tumor-atlas-pilot-project-htapp): reuse gap index -3.20
+- [Burkitt Lymphoma Genome Sequencing Project](https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-blgsp): reuse gap index -3.06
+- [Washington University Human Tumor Atlas Research Center](https://cancer-data-showcase.vercel.app/datasets/htan-washington-university-human-tumor-atlas-research-center): reuse gap index -2.85
+- [CPTAC UCEC Confirmatory Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ucec-confirmatory-study): reuse gap index -2.83
+- [Omic and Multidimensional Spatial Atlas of Metastatic Breast Cancers](https://cancer-data-showcase.vercel.app/datasets/htan-omic-and-multidimensional-spatial-atlas-of-metastatic-breast-cancers): reuse gap index -2.64
+- [VA Research Precision Oncology Program](https://cancer-data-showcase.vercel.app/datasets/gdc-varepop-apollo): reuse gap index -2.53
+- [Broad Institute - Medulloblastoma](https://cancer-data-showcase.vercel.app/datasets/pdc-broad-institute-medulloblastoma): reuse gap index -2.52
+- [Breast Pre-Cancer Atlas](https://cancer-data-showcase.vercel.app/datasets/htan-breast-pre-cancer-atlas): reuse gap index -2.47
+- [Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms](https://cancer-data-showcase.vercel.app/datasets/gdc-beataml1.0-crenolanib): reuse gap index -2.30
+- [Colon Molecular Atlas Project](https://cancer-data-showcase.vercel.app/datasets/htan-colon-molecular-atlas-project): reuse gap index -2.23
+- [Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)](https://cancer-data-showcase.vercel.app/datasets/gdc-fm-ad): reuse gap index -2.23
 - [NCI Cancer Model Development for the Human Cancer Model Initiative](https://cancer-data-showcase.vercel.app/datasets/gdc-hcmi-cmdc): reuse gap index -2.15
-- [CPTAC non-ccRCC Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-non-ccrcc-study): reuse gap index -2.04
-- [Therapeutic Targets in Breast Cancer Xenografts](https://cancer-data-showcase.vercel.app/datasets/pdc-therapeutic-targets-in-breast-cancer-xenografts): reuse gap index -1.97
-- [Proteogenomics of Gastric Cancer](https://cancer-data-showcase.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer): reuse gap index -1.91
-- [CPTAC GBM Discovery Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-gbm-discovery-study): reuse gap index -1.86
-- [Exceptional Responders](https://cancer-data-showcase.vercel.app/datasets/gdc-exceptional_responders-er): reuse gap index -1.77
-- [The Lung Pre-Cancer Atlas](https://cancer-data-showcase.vercel.app/datasets/htan-the-lung-pre-cancer-atlas): reuse gap index -1.65
-- [VA Research Precision Oncology Program](https://cancer-data-showcase.vercel.app/datasets/gdc-varepop-apollo): reuse gap index -1.58
+- [CPTAC GBM Discovery Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-gbm-discovery-study): reuse gap index -2.14
+- [CPTAC non-ccRCC Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-non-ccrcc-study): reuse gap index -2.12
+- [Multi-omic Characterization of Transformation of Familial Adenomatous Polyposis](https://cancer-data-showcase.vercel.app/datasets/htan-multi-omic-characterization-of-transformation-of-familial-adenomatous-): reuse gap index -2.12
+- [Proteogenomics of Gastric Cancer](https://cancer-data-showcase.vercel.app/datasets/pdc-proteogenomics-of-gastric-cancer): reuse gap index -1.88
+- [CPTAC STAD Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-stad-study): reuse gap index -1.79
+- [Therapeutic Targets in Breast Cancer Xenografts](https://cancer-data-showcase.vercel.app/datasets/pdc-therapeutic-targets-in-breast-cancer-xenografts): reuse gap index -1.79
+- [Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia](https://cancer-data-showcase.vercel.app/datasets/gdc-mp2prt-all): reuse gap index -1.66
+- [Clear Cell Sarcoma of the Kidney](https://cancer-data-showcase.vercel.app/datasets/gdc-target-ccsk): reuse gap index -1.65
+- [Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)](https://cancer-data-showcase.vercel.app/datasets/gdc-ohsu-cnl): reuse gap index -1.63
+- [Count Me In (CMI): The Angiosarcoma (ASC) Project](https://cancer-data-showcase.vercel.app/datasets/gdc-cmi-asc): reuse gap index -1.54
+- [CPTAC CCRCC Discovery Study](https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-ccrcc-discovery-study): reuse gap index -1.50

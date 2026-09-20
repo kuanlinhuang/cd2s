@@ -60,14 +60,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Proteogenomic characterization of invasive breast tumors in young women.",
-      "identifier": "https://doi.org/10.1038/s41523-025-00793-0",
-      "datePublished": "2025"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:37:06.904400+00:00",
   "datePublished": "2025-01-01",

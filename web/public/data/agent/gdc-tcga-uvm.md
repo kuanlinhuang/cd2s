@@ -41,8 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.86 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 113
+- 74 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 716 (attention, not reuse)
+- Reuse gap index: +0.89 (negative means less reused than comparable datasets)
   - Machine learning to construct sphingolipid metabolism genes signature to characterize the immune landscape and prognosis of patients with uveal melanoma. (2022) PMID 36568076
   - Prognostic Implications of Novel Ten-Gene Signature in Uveal Melanoma. (2020) PMID 33194647
   - Analysis of Ferroptosis-Mediated Modification Patterns and Tumor Immune Microenvironment Characterization in Uveal Melanoma. (2021) PMID 34386492

@@ -83,7 +83,7 @@ def years_available(rec: DatasetRecord, today: date | None = None) -> float | No
 
 
 def observed_reuse(rec: DatasetRecord) -> int | None:
-    """Articles whose methods or results reference this dataset's accession."""
+    """Articles whose methods reference this dataset's accession."""
     if rec.reuse_metrics.has_citable_accession is False:
         return None
     v = rec.reuse_metrics.n_by_tier.get("t3_analyzed")
@@ -357,7 +357,7 @@ def apply_to_records(
             n_flagged += 1
             basis.append(
                 f"{observed} article(s) reference this dataset's accession in a methods "
-                f"or results section, against {m.expected_reuse:.1f} predicted for "
+                f"section, against {m.expected_reuse:.1f} predicted for "
                 f"datasets of comparable size, age, modality breadth and access tier "
                 f"(reuse gap index {m.reuse_gap_index:+.2f} on a log2 scale, "
                 f"{_ordinal(m.reuse_gap_percentile)} percentile of the assessed corpus)."
@@ -365,6 +365,19 @@ def apply_to_records(
             line = citation_basis_line(m)
             if line:
                 basis.append(line)
+        elif m.reuse_gap_index <= RGI_THRESHOLD:
+            # Below the model, but already reused enough that calling it underexplored
+            # would be a stretch. Saying "within the expected range" here, which is what
+            # this used to do, contradicted the same page's own "well below" verdict and
+            # the index printed beside it.
+            basis.append(
+                f"{observed} article(s) reference this dataset's accession in a methods "
+                f"section, fewer than the {m.expected_reuse:.1f} predicted for comparable "
+                f"datasets (index {m.reuse_gap_index:+.2f}). It is not flagged as "
+                f"underexplored because more than {ABSOLUTE_REUSE_CEILING} articles have "
+                f"already analysed it, which is not the position a researcher looking for "
+                f"neglected data is looking for."
+            )
         else:
             basis.append(
                 f"Reuse is within the expected range for comparable datasets "

@@ -24,8 +24,16 @@ import {
   Stat,
   UnderexploredBadge,
 } from "@/components/ui";
-import { getAllRecordIds, getJsonLd, getRecord, getRelated, getSubjects } from "@/lib/data";
+import {
+  getAllRecordIds,
+  getJsonLd,
+  getRecord,
+  getRelated,
+  getSubjects,
+  isInferredMarker,
+} from "@/lib/data";
 import { fitVerdicts } from "@/lib/fit";
+import { analyzedArticles, analyzedReuse } from "@/lib/reuse";
 import { starterSnippets } from "@/lib/starter";
 import {
   ACCESS_DESCRIPTIONS,
@@ -75,7 +83,7 @@ const SECTIONS = [
   { id: "useful-for", label: "Good for" },
   { id: "limitations", label: "Cannot tell you" },
   { id: "reuse", label: "Who has used it" },
-  { id: "ways", label: "Ways to use it" },
+  { id: "ways", label: "Analysis notebooks" },
   { id: "start", label: "Start here" },
   { id: "provenance", label: "Provenance" },
 ];
@@ -807,12 +815,46 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
 // 4. who has used it
 // ====================================================================================
 
+/**
+ * Ladder row labels. Deliberately not `REUSE_TIER_LABELS`: those are badges that sit
+ * beside a single article ("Data analyzed"), while these are rows counting articles and
+ * read as what the articles did ("Analyzed the data").
+ */
+const TIER_LABEL = {
+  t0_mention: "Mentioned the dataset",
+  t1_accession: "Accession found in text",
+  t2_declared: "Declared using it",
+  t3_analyzed: "Analyzed the data",
+} as const;
+
 function Reuse({ record: r }: { record: DatasetRecord }) {
   const m = r.reuse_metrics;
-  const analyzed = r.reuse.filter((x) => x.tier === "t3_analyzed" || x.tier === "t4_confirmed");
+  const analyzed = analyzedArticles(r.reuse);
   const weaker = r.reuse.filter((x) => x.tier !== "t3_analyzed" && x.tier !== "t4_confirmed");
+  // Both properties are resolved per article and are frequently unresolvable: a null flag
+  // means nobody checked, which is not the same as a negative answer and must never be
+  // published as one.
+  const counts = analyzedReuse(r);
+  const listIsPartial = counts.listIsPartial;
+  const overlapChecked = analyzed.filter((x) => x.independent_of_generators != null);
+  const fundingChecked = analyzed.filter((x) => x.nci_funded_reuse != null);
+  const overlapClause =
+    overlapChecked.length === 0
+      ? "author overlap with the generating team could not be checked for any of them"
+      : `${num(overlapChecked.filter((x) => x.independent_of_generators).length)} of the ${num(
+          overlapChecked.length,
+        )} we could check had no author in common with the generating team`;
+  const fundingClause =
+    fundingChecked.length === 0
+      ? "none could be checked for NCI funding of their own"
+      : `${num(fundingChecked.filter((x) => x.nci_funded_reuse).length)} of the ${num(
+          fundingChecked.length,
+        )} we could check were themselves NCI-funded`;
   const tiers = m.n_by_tier ?? {};
-  const nAnalyzed = tiers.t3_analyzed ?? m.n_verified_reuse ?? 0;
+  const nAnalyzed = counts.counted;
+  const prec = m.accession_precision ?? null;
+  const wasCorrected = prec?.needs_correction === true && prec.precision != null;
+  const rawAnalyzed = m.n_by_tier_raw?.t3_analyzed ?? null;
   const hasExpected = m.expected_reuse !== null && m.expected_reuse !== undefined;
   const ladder: BarRow[] = [
     ...(m.n_citations_to_primary_publication !== null && m.n_citations_to_primary_publication !== undefined
@@ -826,36 +868,18 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
           },
         ]
       : []),
-    {
-      key: "t0",
-      label: "Mentioned the dataset",
-      value: tiers.t0_mention ?? 0,
-      tone: "muted",
-      title: REUSE_TIER_MEANING.t0_mention,
-    },
-    {
-      key: "t1",
-      label: "Accession found in text",
-      value: tiers.t1_accession ?? 0,
-      tone: "muted",
-      title: REUSE_TIER_MEANING.t1_accession,
-    },
-    {
-      key: "t2",
-      label: "Declared using it",
-      value: tiers.t2_declared ?? 0,
-      tone: "muted",
-      title: REUSE_TIER_MEANING.t2_declared,
-    },
-    {
-      key: "t3",
-      label: "Analyzed the data",
-      value: nAnalyzed,
-      tone: "primary",
-      title: REUSE_TIER_MEANING.t3_analyzed,
-    },
+    ...(["t0_mention", "t1_accession", "t2_declared", "t3_analyzed"] as const)
+      .filter((tier) => tiers[tier] !== undefined)
+      .map((tier) => ({
+        key: tier,
+        label: TIER_LABEL[tier],
+        value: tiers[tier],
+        tone: (tier === "t3_analyzed" ? "primary" : "muted") as "primary" | "muted",
+        title: REUSE_TIER_MEANING[tier],
+      })),
   ];
   const showLadder = m.has_citable_accession !== false && ladder.some((x) => x.value > 0);
+  const showGap = hasExpected && nAnalyzed !== null;
 
   return (
     <Section
@@ -868,8 +892,14 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         <Card>
           <Stat
             label="Analyzed the data"
-            value={num(nAnalyzed)}
-            sub="accession in the methods, results, a table or a figure"
+            value={nAnalyzed === null ? "-" : num(nAnalyzed)}
+            sub={
+              nAnalyzed === null
+                ? "could not be measured for this dataset"
+                : wasCorrected
+                  ? `accession in the methods; ${Math.round((prec!.precision ?? 0) * 100)}% of a ${prec!.n_checked}-article sample really cited it`
+                  : "accession in the methods section"
+            }
             evidence={m.evidence}
             emphasis
           />
@@ -877,7 +907,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         <Card>
           <Stat
             label="Declared using it"
-            value={num(tiers.t2_declared)}
+            value={tiers.t2_declared === undefined ? "-" : num(tiers.t2_declared)}
             sub="named in a data availability statement"
             emphasis
           />
@@ -899,7 +929,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
           <Stat
             label="Against expectation"
             value={
-              !hasExpected
+              !showGap
                 ? "Not assessed"
                 : m.reuse_gap_index !== null && m.reuse_gap_index !== undefined
                   ? m.reuse_gap_index >= 0
@@ -910,7 +940,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
                   : "-"
             }
             sub={
-              hasExpected
+              showGap
                 ? `about ${m.expected_reuse! < 1 ? m.expected_reuse!.toFixed(1) : num(Math.round(m.expected_reuse!))} articles expected; index ${m.reuse_gap_index?.toFixed(2) ?? "-"}`
                 : undefined
             }
@@ -919,7 +949,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         </Card>
       </div>
 
-      {(showLadder || hasExpected) && (
+      {(showLadder || showGap) && (
         <div className="mt-5 grid gap-5 lg:grid-cols-2">
           {showLadder && (
             <Card>
@@ -931,16 +961,16 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
               <Bars rows={ladder} labelWidth={160} valueWidth={64} />
             </Card>
           )}
-          {hasExpected && (
+          {showGap && (
             <Card>
               <h3 className="text-lede font-medium">Against comparable datasets</h3>
               <p className="mb-3 text-meta t-muted">
-                {reuseSentence(nAnalyzed, m.expected_reuse)}{" "}
+                {reuseSentence(nAnalyzed!, m.expected_reuse)}{" "}
                 The expectation comes from a model of size, age, breadth and access tier.
               </p>
               <ObservedExpected
-                observed={nAnalyzed}
-                expected={m.expected_reuse ?? 0}
+                observed={nAnalyzed!}
+                expected={m.expected_reuse!}
                 underexplored={r.underexplored.is_underexplored}
               />
             </Card>
@@ -954,6 +984,57 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
             The publication has {num(m.n_citations_to_primary_publication)} citations,
             about {m.citation_to_reuse_ratio.toFixed(0)} for every article that analyzed
             the data. The finding travelled further than the resource did.
+          </Callout>
+        </div>
+      )}
+
+      {nAnalyzed === null && m.has_citable_accession !== false && (
+        <div className="mt-4">
+          <Callout tone="warn" title="This count could not be measured">
+            Europe PMC indexes this dataset&rsquo;s accession as separate words, so a
+            search for it also returns articles that merely use those words in sequence.
+            Correcting for that needs a sample of open-access full text, and too few of
+            the matching articles are open access
+            {prec ? ` (${prec.n_checked} of ${prec.n_sampled} sampled)` : ""} to estimate
+            it. We publish no number rather than one we know to be inflated.
+          </Callout>
+        </div>
+      )}
+
+      {wasCorrected && rawAnalyzed !== null && rawAnalyzed !== nAnalyzed && (
+        <div className="mt-4">
+          <Callout tone="neutral" title="How this count was corrected">
+            Europe PMC returned {num(rawAnalyzed)} articles for{" "}
+            <code className="t-mono">{prec!.query}</code>, but it indexes the hyphen in{" "}
+            <span className="t-mono">{prec!.token}</span> as a word break, so that query
+            also matches the two words in ordinary prose. Of {prec!.n_checked} sampled
+            articles whose full text we could read, {prec!.n_literal} contained the
+            literal accession
+            {prec!.precision_low != null && prec!.precision_high != null
+              ? ` (${Math.round(prec!.precision_low * 100)}-${Math.round(prec!.precision_high * 100)}%, 95% interval)`
+              : ""}
+            . The published figure is the raw count scaled by that fraction.
+          </Callout>
+        </div>
+      )}
+
+      {counts.listExceedsCount && (
+        <div className="mt-4">
+          <Callout tone="neutral" title="More articles are listed below than the count">
+            The headline count is deliberately narrow: one section of one accession
+            {prec?.query ? (
+              <>
+                {" "}
+                (<code className="t-mono">{prec.query}</code>)
+              </>
+            ) : null}
+            , so every dataset in the corpus is counted the same way and the numbers can
+            be compared. The {num(counts.listed)} articles listed below were retrieved
+            and graded one at a time, and an article counts as having analyzed the data
+            wherever the accession sits in the analysis - methods, results, tables,
+            figures or supplement - under any of this dataset&rsquo;s accessions. Read
+            the list as the evidence about these articles, and the count as the number
+            that is comparable across datasets.
           </Callout>
         </div>
       )}
@@ -973,7 +1054,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         <div className="mt-4">
           <Callout
             tone={r.underexplored.is_underexplored ? "info" : "neutral"}
-            title={r.underexplored.is_underexplored ? "Why it is labeled underexplored" : "Reuse assessment"}
+            title={r.underexplored.is_underexplored ? "Why this is an underused opportunity" : "Reuse assessment"}
           >
             <ul className="space-y-1">
               {r.underexplored.basis.map((b, i) => (
@@ -993,29 +1074,79 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
         </div>
       )}
 
-      {/* primary publications */}
-      {r.primary_publications.length > 0 && (
-        <div className="mt-6">
-          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
-            Original publication{r.primary_publications.length > 1 ? "s" : ""}
-          </h3>
-          <ul className="space-y-2">
-            {r.primary_publications.map((p, i) => (
-              <li key={i}>
-                <Card>
-                  <PubLine pub={p} />
-                </Card>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {/* primary publications
+       *
+       * Split by provenance, because the heading is itself a claim. A paper this
+       * pipeline nominated is a suggestion, and printing one under "Original
+       * publication" asserts whose work the dataset is on the strength of a guess. */}
+      {(() => {
+        const sourced = r.primary_publications.filter((p) => !isInferredMarker(p));
+        const suggested = r.primary_publications.filter(isInferredMarker);
+        return (
+          <>
+            {sourced.length > 0 && (
+              <div className="mt-6">
+                <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
+                  Original publication{sourced.length > 1 ? "s" : ""}
+                </h3>
+                <ul className="space-y-2">
+                  {sourced.map((p, i) => (
+                    <li key={i}>
+                      <Card>
+                        <PubLine pub={p} />
+                      </Card>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {suggested.length > 0 && (
+              <div className="mt-6">
+                <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
+                  Possible original publication, unverified
+                </h3>
+                <p className="mb-2 max-w-2xl text-meta t-muted">
+                  No repository or reviewer names this dataset&rsquo;s marker paper, so
+                  this is the pipeline&rsquo;s own guess: the earliest heavily cited
+                  article that analysed the accession and names it in full text. Nothing
+                  is counted from it - not the citation figure above, not the funding
+                  attribution - and it is queued for review rather than presented as fact.
+                </p>
+                <ul className="space-y-2">
+                  {suggested.map((p, i) => (
+                    <li key={i}>
+                      <Card>
+                        <PubLine pub={p} />
+                      </Card>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
+        );
+      })()}
 
       {/* verified reuse */}
       <div className="mt-6">
         <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
           Articles that analyzed the data
         </h3>
+        {analyzed.length > 0 && (
+          <p className="mb-2 max-w-2xl text-meta t-muted">
+            {listIsPartial
+              ? `Examples, not the full list. ${num(m.n_reuse_examined)} articles matching this dataset's accession search were retrieved and graded individually; these are the strongest of those.`
+              : "Each was retrieved and graded individually."}
+          </p>
+        )}
+        {analyzed.length > 0 && (
+          <p className="mb-2 max-w-2xl text-meta t-muted">
+            Deep-review sample: author overlap and funding were checked only for the{" "}
+            {num(r.reuse.length)} articles listed here, not for every article examined. Of
+            the {num(analyzed.length)} that analyzed the data, {overlapClause}, and{" "}
+            {fundingClause}. These are sample counts, not population estimates.
+          </p>
+        )}
         {analyzed.length === 0 ? (
           <EmptyState>
             {m.has_citable_accession === false
@@ -1139,8 +1270,8 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
   return (
     <Section
       id="ways"
-      title="Ways to use it"
-      lede="Worked analyses at three levels. An executed workbook ran end to end against live data, and its receipt records when, with which packages, and how long it took."
+      title="Analysis notebooks and worked examples"
+      lede="Go beyond the download. Each executed workbook retrieves, cleans and analyzes real data end to end, with a receipt recording when it ran, which packages it used and how long it took."
     >
       {examples.length === 0 ? (
         <EmptyState>
@@ -1235,6 +1366,16 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
               )}
 
               <div className="mt-3 flex flex-wrap gap-2">
+                {ex.notebook_download_url && (
+                  <a
+                    href={ex.notebook_download_url}
+                    download
+                    className="rounded border px-2.5 py-1 text-meta font-medium"
+                    style={{ borderColor: "var(--border-strong)" }}
+                  >
+                    Download executed notebook
+                  </a>
+                )}
                 {ex.workbook_url && (
                   <a
                     href={ex.workbook_url}

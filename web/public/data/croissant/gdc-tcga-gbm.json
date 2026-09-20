@@ -11,7 +11,7 @@
   "description": "TCGA glioblastoma is the cohort on which most glioma computational biology was built, and 1,753 articles reference it in methods or results. Its imaging is its least-used asset: radiology exists for 607 of 617 cases and histopathology for 389, held in the Imaging Data Commons rather than the GDC, which is why most analyses treat it as a molecular-only cohort.\nIts follow-up is the fact most likely to trip up a new user. Median recorded follow-up is 12.0 months across 596 of 617 cases, reaching 127 months at the maximum - shorter than many users expect, because it reflects last recorded contact rather than total observation.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-gbm",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Identification of a CpG island methylator phenotype that defines a distinct subgroup of glioma.",
+  "citeAs": "Comprehensive genomic characterization defines human glioblastoma genes and core pathways",
   "version": "as-retrieved",
   "datePublished": "2009-01-01",
   "recordSet": [

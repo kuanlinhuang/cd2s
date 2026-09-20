@@ -41,8 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.70 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 95
+- 72 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 2 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 667 (attention, not reuse)
+- Reuse gap index: +0.45 (negative means less reused than comparable datasets)
   - Alternative splicing of &lt;i&gt;GSDMB&lt;/i&gt; modulates killer lymphocyte-triggered pyroptosis. (2023) PMID 37115914
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
   - Loss of CDKN1A mRNA and Protein Expression Are Independent Predictors of Poor Outcome in Chromophobe Renal Cell Carcinoma Patients. (2020) PMID 32079343

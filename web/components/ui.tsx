@@ -252,7 +252,7 @@ export function UnderexploredBadge() {
       style={{ color: "var(--mixed)", background: "var(--mixed-bg)" }}
       title="Reused far less than datasets of comparable size, age, measurement breadth and access tier. The reuse section shows the numbers behind the label."
     >
-      Underexplored
+      Underused opportunity
     </span>
   );
 }

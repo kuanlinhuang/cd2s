@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.26 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Articles that analyzed these data: 308
+- 93 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 1428 (attention, not reuse)
+- Reuse gap index: +1.64 (negative means less reused than comparable datasets)
   - Single-cell RNA sequencing reveals adrb1 as a sympathetic nerve-regulated immune checkpoint driving T cell exhaustion and impacting immunotherapy in esophageal squamous cell carcinoma. (2025) PMID 40406147
   - Extracellular vesicle-LncRNA HOTAIR modulates esophageal cancer chemoresistance and immune microenvironment via miR-375/CDH2 pathway. (2025) PMID 40235720
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
+  - The potential of MCM8 as a biomarker in esophageal carcinoma: a comprehensive analysis integrating m6a methylation and angiogenesis. (2025) PMID 40346692
+  - Identification and Characterization of Oxidative Stress and Endoplasmic Reticulum Stress-Related Genes in Esophageal Cancer. (2025) PMID 40302812
+  - Identification of esophageal cancer tumor antigens and immune subtypes for guiding vaccine development. (2025) PMID 40529738
 
 ## Provenance
 

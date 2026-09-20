@@ -485,6 +485,13 @@ class ReuseRecord(CDSModel):
     modalities_used: list[Modality] = Field(default_factory=list)
     accession_snippet: str | None = None  # verbatim text where the accession appears
     accession_locator: str | None = None  # "Data Availability Statement"
+    author_keys: list[str] = Field(
+        default_factory=list,
+        description="This article's authors as 'surname initial', kept so independence "
+        "can be decided once the dataset's generating team is known. The team is only "
+        "complete after generation funding has been attributed, which happens after "
+        "these articles are fetched.",
+    )
     nci_funded_reuse: bool | None = None
     linked_grants: list[str] = Field(default_factory=list)
     adjudicated_by: str | None = None
@@ -492,12 +499,57 @@ class ReuseRecord(CDSModel):
     evidence: list[Evidence] = Field(default_factory=list)
 
 
+class AccessionPrecision(CDSModel):
+    """How much of a section hit count is really about this dataset.
+
+    Europe PMC splits a hyphenated accession into separate indexed words, so a quoted
+    search for `TARGET-RT` also returns every article whose methods say "target RT".
+    `cds.reuse.precision` measures the inflation against open-access full text; this is
+    the receipt for that measurement, stored beside every count it corrected.
+    """
+
+    token: str
+    query: str
+    strategy_id: str
+    needs_correction: bool = Field(
+        description="False for an accession with no separator, which Europe PMC matches "
+        "exactly and which therefore needs no correction."
+    )
+    precision: float | None = Field(
+        default=None,
+        description="Fraction of sampled articles containing the literal accession. "
+        "None when too few open-access articles were available to estimate it, in which "
+        "case no corrected count is published.",
+    )
+    precision_low: float | None = None
+    precision_high: float | None = Field(
+        default=None, description="95% Wilson score interval on the precision estimate."
+    )
+    n_sampled: int = 0
+    n_checked: int = Field(
+        default=0, description="Sampled articles whose open-access full text was retrieved."
+    )
+    n_literal: int = 0
+    note: str | None = None
+
+
 class ReuseMetrics(CDSModel):
     """Counts plus the Reuse Gap Index. Everything here is recomputable from the record
     store, so the 'underexplored' label is a measurement, not an opinion."""
 
     n_candidates_screened: int = 0
-    n_by_tier: dict[str, int] = Field(default_factory=dict)
+    n_by_tier: dict[str, int] = Field(
+        default_factory=dict,
+        description="Articles per evidence tier, corrected for Europe PMC's hyphen "
+        "tokenization. A tier is absent rather than zero when the correction could not "
+        "be estimated. Raw, uncorrected counts are kept in n_by_tier_raw.",
+    )
+    n_by_tier_raw: dict[str, int] = Field(
+        default_factory=dict,
+        description="Hit counts exactly as Europe PMC returned them, before the "
+        "accession-precision correction. Published so the correction is auditable.",
+    )
+    accession_precision: AccessionPrecision | None = None
     # Citations to the dataset's own publication. This measures attention to the paper,
     # not reuse of the data, and the two diverge sharply. Kept as a separate number so
     # the page can show the gap rather than let a citation count stand in for reuse.
@@ -513,9 +565,39 @@ class ReuseMetrics(CDSModel):
         description="False when the dataset has no accession specific enough to search "
         "for, which makes citation-based reuse tracing impossible rather than negative.",
     )
-    n_verified_reuse: int = 0  # T3 + T4
-    n_independent_reuse: int = 0  # T3+ with no author overlap
-    first_reuse_year: int | None = None
+    n_verified_reuse: int | None = Field(
+        default=None,
+        description="Articles that analysed the data (T3+), corrected for accession "
+        "precision. None when reuse could not be measured for this dataset - which is "
+        "not the same as zero and must never be rendered as zero.",
+    )
+    # The three fields below describe the deep pass, which reads a bounded sample of
+    # articles rather than all of them. They are counts *of that sample*, so publishing
+    # one without `n_reuse_examined` beside it invites the reader to divide it by
+    # `n_verified_reuse` and get a fraction that means nothing: TCGA-OV would have read
+    # as "10 of 652 reuses were independent" when the 10 came from 12 articles examined.
+    n_reuse_examined: int = Field(
+        default=0,
+        description="Articles actually retrieved and graded individually by the deep "
+        "pass. Larger than the exemplar list, which keeps only the strongest of them.",
+    )
+    n_independent_reuse: int = Field(
+        default=0,
+        description="Of the T3+ exemplars retained in `reuse`, those with no author "
+        "overlap with the generating team. Author overlap and funding are resolved only "
+        "for the retained exemplars, so `reuse` - not n_reuse_examined - is the "
+        "denominator this count may be published against.",
+    )
+    n_nci_funded_reuse: int = Field(
+        default=0,
+        description="Of the exemplars retained in `reuse`, those reported under an NCI "
+        "award in RePORTER. Same denominator caveat as n_independent_reuse.",
+    )
+    first_reuse_year: int | None = Field(
+        default=None,
+        description="Earliest publication year among the examined sample, so it is an "
+        "upper bound on the true first year of reuse rather than the year itself.",
+    )
     latest_reuse_year: int | None = None
     years_since_release: float | None = None
     # Reuse Gap Index
@@ -584,6 +666,22 @@ class AnalysisExample(CDSModel):
     level: WorkbookLevel
     title: str
     question: str
+    problem: str | None = Field(
+        default=None,
+        description="The mistake this example stops a reader making, in one sentence.",
+    )
+    lesson: str | None = Field(
+        default=None,
+        description="What the reader is left holding once it has run, in one sentence.",
+    )
+    figure: str | None = Field(
+        default=None,
+        description="What the workbook's figure shows, for readers who cannot see it.",
+    )
+    featured: bool = Field(
+        default=False,
+        description="Lead with this example where only a few are shown, e.g. the homepage.",
+    )
     inputs: list[str] = Field(default_factory=list)
     outputs: list[str] = Field(default_factory=list)
     steps: list[str] = Field(default_factory=list)
@@ -592,6 +690,10 @@ class AnalysisExample(CDSModel):
     est_compute: str | None = None
     workbook_path: str | None = None
     workbook_url: str | None = None
+    notebook_download_url: str | None = None
+    notebook_preview_url: str | None = None
+    notebook_preview_width: int | None = None
+    notebook_preview_height: int | None = None
     colab_url: str | None = None
     binder_url: str | None = None
     receipt: ExecutionReceipt | None = None

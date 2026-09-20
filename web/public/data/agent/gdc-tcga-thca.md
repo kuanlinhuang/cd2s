@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: -0.23 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 363
+- 99 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 2365 (attention, not reuse)
+- Reuse gap index: +0.31 (negative means less reused than comparable datasets)
   - Developing a named entity framework for thyroid cancer staging and risk level classification using large language models. (2025) PMID 40025285
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Annexin A1-FPR1 Interaction in dendritic cells promotes immune microenvironment modulation in Thyroid Cancer. (2025) PMID 40483281
   - Impact of age on genomic alterations and the tumor immune microenvironment in papillary thyroid cancer. (2024) PMID 39315956
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+  - A comprehensive analysis to reveal the underlying molecular mechanisms of natural killer cell in thyroid carcinoma based on single-cell RNA sequencing data. (2025) PMID 39808350
+  - Investigation of risk signatures associated with anoikis in thyroid cancer through integrated transcriptome and Mendelian randomization analysis. (2024) PMID 39568815
 
 ## Provenance
 

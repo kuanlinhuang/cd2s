@@ -59,15 +59,29 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
+  "citation": [],
+  "funding": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "Integrated proteogenomic characterization of glioblastoma evolution.",
-      "identifier": "https://doi.org/10.1016/j.ccell.2023.12.015",
-      "datePublished": "2024"
+      "@type": "Grant",
+      "identifier": "R35CA253183",
+      "name": "Oncogenic mechanisms, molecular stratification and therapeutic targets of brain tumors",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R35CA253183"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA268592",
+      "name": "Evolution and targeting of the functional states of glioblastoma",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA268592"
     }
   ],
-  "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2024-01-01",
   "variableMeasured": [

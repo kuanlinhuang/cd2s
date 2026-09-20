@@ -61,7 +61,168 @@
     }
   ],
   "citation": [],
-  "funding": [],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271114",
+      "name": "Proteogenomic translator for cancer biomarker discovery towards precision medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271079",
+      "name": "Proteogenomic Characterization of Tumor Tissues and Preclinical Models with High Precision",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271079"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271076",
+      "name": "iPGDAC, An Integrative Proteogenomic Data Analysis Center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271076"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271075",
+      "name": "Center for comprehensive proteogenomic data analysis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271075"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271037",
+      "name": "Michigan Center for Translational Cancer Proteogenomics",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271037"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271012",
+      "name": "Center for Advanced Multi-Omic Characterization of Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271012"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA270823",
+      "name": "Center of Excellence for High Throughput Proteogenomic Characterization",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA270823"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210986",
+      "name": "Center of Excellence for High Throughput Proteogenomic Characterization",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210986"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210979",
+      "name": "Integrated high throughput proteogenomic data analysis center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210979"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210972",
+      "name": "Proteogenomic Data Analysis for Cancer Systems Biology and Clinical Translation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210972"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA271412",
+      "name": "Proteogenomic characterization of early and late resistance mechanisms in acute myeloid leukemia",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA271412"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA271410",
+      "name": "Mayo Clinic Center for Clinical Proteomics",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA271410"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA271407",
+      "name": "Proteogenomic studies to understand mechanisms and drivers of resistance to immunotherapies",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA271407"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA271402",
+      "name": "Proteogenomic Predictors of Recurrence in Non-small Cell Lung Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA271402"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA196521",
+      "name": "The Tisch Cancer Institute - Cancer Center Support Grant",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA196521"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    }
+  ],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2025-01-01",
   "variableMeasured": [

@@ -60,7 +60,158 @@
     }
   ],
   "citation": [],
-  "funding": [],
+  "funding": [
+    {
+      "@type": "Grant",
+      "identifier": "U24CA271037",
+      "name": "Michigan Center for Translational Cancer Proteogenomics",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271037"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210993",
+      "name": "Systems Biology based Proteogenomic Translator for Cancer Marker Discovery towards Precision Medicine",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210993"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210986",
+      "name": "Center of Excellence for High Throughput Proteogenomic Characterization",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210986"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210985",
+      "name": "The Comprehensive Proteome Characterization Center at Johns Hopkins: High Precision Discovery and Confirmation of Genoproteomic Targets",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210985"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210979",
+      "name": "Integrated high throughput proteogenomic data analysis center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210979"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210972",
+      "name": "Proteogenomic Data Analysis for Cancer Systems Biology and Clinical Translation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210972"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210967",
+      "name": "University of Michigan Proteogenomics Data Analysis Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210967"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210955",
+      "name": "PNNL Proteome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210955"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210954",
+      "name": "iPGDAC, An Integrative Proteogenomic Data Analysis Center for CPTAC",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210954"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214125",
+      "name": "MICROSCALED PROTEOGENOMICS FOR CANCER CLINICAL TRIALS",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214125"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214116",
+      "name": "Proteogenomic Translational Research Center for Clinical Proteomic",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214116"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA214114",
+      "name": "Proteogenomic studies aimed at understanding ovarian tumor responses to agents targeting the DNA damage response and translating this knowledge into clinical benefit",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA214114"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "T32CA203690",
+      "name": "Translational Breast Cancer Research Training Program",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=T32CA203690"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA240139",
+      "name": "Cancer Research Training and Education Coordination",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA240139"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA008748",
+      "name": "Cancer Center Administration",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+    }
+  ],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2021-01-01",
   "variableMeasured": [

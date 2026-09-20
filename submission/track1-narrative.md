@@ -1,250 +1,284 @@
-# Cancer Data Showcase: answering "what research can I do with this dataset?"
+# Make the Question the Interface
+
+## A capability and reuse layer for NCI-funded cancer research outputs
 
 **NCI Office of Data Sharing Impact Prize - Track 1: Research Output Sharing and Reuse Ideas**
 
----
+**Applicant:** [Name, affiliation, and contact information]
 
-## Prompt 1: Significance and Approach
+**Proposed idea:** NCI should publish a common, question-first layer over the research outputs it already shares.
 
-NCI's data catalogs answer the question "what is in this dataset?" Researchers arrive with a
-different question: "will this dataset support the analysis I want to run?" Nothing in the
-current infrastructure answers it, and the gap is not cosmetic. It is the difference between a
-dataset being findable and a dataset being reusable.
+This layer would translate repository holdings into three things a researcher or software agent can act on:
 
-We built a working prototype to measure the gap, and the measurements are stark. Across 602
-dataset records assembled from the Genomic Data Commons, the Proteomic Data Commons, the
-Imaging Data Commons, the Human Tumor Atlas Network, and investigator cohorts curated in
-cBioPortal, we audited how complete each dataset's clinical fields actually are, rather than
-whether those fields exist.
+1. What scientific questions the output can support, based on measured completeness and modality coverage.
+2. What analyses it cannot support, including the difference between missing, uninformative, and unmeasured fields.
+3. How the output has been reused, with evidence that separates actual analysis from a citation to the originating paper.
 
-The Foundation Medicine Adult Cancer Dataset holds 18,004 patients, the largest cohort in the
-Genomic Data Commons. Its vital status field is populated for 100% of cases and informative for
-0%: every value is "not reported." Race is "not reported" for all 18,004 patients. Every
-treatment field is empty. A researcher attracted by that sample size discovers this only after
-requesting controlled access to 54,012 files. Thirty-two records in our corpus share the exact
-pattern - vital status uninformative, race uninformative, no treatment field populated -
-twenty of them GDC projects, seventeen of those NCI-MATCH arms. Beyond FM-AD the largest are
-ALCHEMIST (1,176 cases) and the West Coast Dream Team metastatic prostate cohort, where no
-treatment field is populated at all in a cohort defined by its treatment history. The
-Chernobyl-exposed thyroid cohort reports a median follow-up of 115 months; that median rests on
-12 of 449 cases, and no outcome exists to pair it with.
+We call the working prototype the **Cancer Data Showcase**.
+The prototype demonstrates the idea across 602 records from five NCI-supported repositories and investigator-cohort resources.
+It is evidence that this layer is technically feasible, useful, and directly connected to fixable sharing practices.
 
-Three distinctions do most of the work here, and no catalog currently draws any of them. A
-field that is *absent* differs from a field that is *populated but uninformative*, and both
-block an analysis for different reasons and with different remedies. A one-to-many field, such
-as treatment records, cannot be read as a per-case percentage at all. And a dataset that has
-not been reused differs fundamentally from one whose reuse cannot be measured.
+## Prompt 1: Significance and approach
 
-**Who this affects.** Researchers lose weeks and access requests to dead ends. That cost falls
-hardest on exactly the people this challenge prioritizes: trainees, investigators at
-less-resourced institutions, and anyone without a colleague who already knows the cohort.
-Knowing that ALCHEMIST will not support a survival analysis is currently tacit knowledge,
-distributed by word of mouth among people already inside the relevant networks. Making it
-explicit is a redistribution of access to people outside them.
+NCI has made substantial progress on access and discovery.
+Researchers can find data portals, download files, and read descriptions of what a dataset contains.
+The remaining barrier is more consequential than a search problem: a researcher still cannot reliably answer, before requesting access or writing analysis code, "Can this output answer my question?"
 
-It also affects which populations get studied. The HIV-positive cervical cancer cohort from
-Uganda holds 212 tumors, 207 of them from Black African women, with ECOG performance status
-informative for 98.6% of cases - coverage most GDC projects do not have at all. It is one of
-very few NCI resources describing this population, and its usability is invisible from its
-catalog entry. NCI's commitment to equitable sharing is not served by data that are technically
-open but practically undiscoverable.
+That is the gap this submission addresses.
 
-And it affects AI agents, now a significant consumer of public data. Asked to find a cancer
-dataset, an agent ranks by cohort size and selects precisely the kind of cohort that
-supports none of the analyses it will then attempt.
+A dataset can be technically available but practically unusable for the analysis a researcher has in mind.
+The problem is often invisible because catalogs describe the presence of fields, not whether those fields carry usable information.
+They also rarely connect one cohort's records across repositories, show how much of the cohort carries each modality, or distinguish a dataset that has not been reused from one whose reuse cannot be measured.
 
-The gap compounds because reuse itself is largely invisible. Of our 602 records, 364 have no
-accession specific enough to search the literature for. One MSK cohort's publication has 646
-citations and no citable data identifier. Proteomic Data Commons accessions are almost never
-quoted, so proteomic reuse cannot be traced at all. Absence of evidence is being read as
-evidence of absence, and resources are judged unused when they are merely unmeasurable.
+The prototype makes the problem concrete.
+The Foundation Medicine Adult Cancer Dataset contains 18,004 cases and is the largest cohort in the Genomic Data Commons.
+Its vital-status field is populated for 100% of cases and informative for 0% because every value is "not reported."
+Race is recorded as "not reported" for all 18,004 cases.
+Every treatment field is empty.
+No survival, treatment-response, or race-stratified analysis can be justified from the harmonized records, regardless of the cohort size.
+54,012 of the 54,096 files are controlled access, so a researcher can spend substantial effort and request access before learning that the intended analysis is blocked.
 
-**Our approach.** Build a question-first layer over data NCI already shares. For each dataset:
-measure field completeness from the repository's own records; state the research questions the
-data support and the limitations that rule analyses out; trace reuse with graded evidence; link
-funding through NIH RePORTER, separating NCI-funded data generation from NCI-funded reuse; and
-ship an executable starting point. Every claim carries machine-readable provenance - source,
-retrieval date, method, confidence - so a reader can check any line rather than trust the page.
+The same pattern is not an isolated data-quality complaint.
+Twenty records in the current corpus have vital status populated but entirely uninformative, race uninformative, and no treatment field populated.
+Twenty of those records are GDC projects, including seventeen NCI-MATCH arms.
+The Chernobyl-exposed thyroid cohort reports a median follow-up of 115 months, but that time is derivable for only 12 of 449 cases and no informative outcome exists to pair with it.
 
-This is the right response because the barrier is neither access nor findability. NCI has
-substantially solved both. The barrier is *interpretation*, and interpretation is what no
-catalog currently supplies.
+Three distinctions are therefore essential to responsible reuse:
 
----
+- A field can be absent.
+- A field can be populated but uninformative.
+- A field can be unavailable to the measurement layer even though it may exist in a paper, supplement, or controlled file.
 
-## Prompt 2: Potential Impact on the Cancer Research Community
+These states imply different scientific conclusions and different remedies.
+The prototype preserves them instead of collapsing them into a misleading yes or no.
+Its status `not measured` is never treated as `not supported`.
 
-The immediate impact is time returned. Deciding whether a cohort fits currently takes days of
-portal archaeology and often a controlled-access request that proves unnecessary. Our prototype
-answers it in about a minute: the first of six executed workbooks takes a project identifier
-and returns a verdict on six classes of analysis, computed live from the repository. Run it on
-the 212-case Ugandan cervical cohort and it reports that survival and treatment-response
-analysis are supported and stage-adjusted modeling is not, because stage is empty for every
-case. That is a week of work compressed into a minute, and it happens before any access
-request.
+The same interpretive gap affects reuse measurement.
+Of 602 records, 364 have no citable accession specific enough for literature tracing.
+For those records, a short reuse count would mean "not measurable," not "unused."
+One publication in the corpus has 646 citations but no citable data identifier.
+Citation to the originating paper is also not the same as analysis of the data.
 
-The larger impact is on which datasets get used at all. We fit a model of expected reuse from
-cohort size, years available, modality breadth, and access tier, and measured the residual.
-Eighteen datasets fall materially below expectation. They are not obscure because they are
-weak. NSCLC Radiogenomics pairs CT and PET imaging with matched expression on 211 patients and
-has three analyzing articles. The CPTAC gastric study measures 193 tumors seven ways -
-proteome, phosphoproteome, acetylome, glycoproteome, ubiquitylome, metabolome, and
-protein-protein interaction - and downloads openly with no account. Ubiquitylation data exist
-in five studies across the entire Proteomic Data Commons; lipidomics in three. An HTAN atlas
-built explicitly around therapeutic resistance, carrying the richest clinical annotation of any
-atlas in the network, has no publication recorded in HTAN's own manifest. These are not
-marginal resources. They are unfindable ones, and redirecting even a fraction of reuse toward
-them is a direct return on money already spent.
+The proposed approach is a reusable NCI layer with four parts.
 
-Cross-repository linkage compounds this. We found 39 cohorts present in both the Genomic and
-Imaging Data Commons, and for TCGA-BRCA the patient-level join is 1,098 of 1,098: every patient
-has both molecular and imaging data, openly available today. Almost nobody makes this join,
-because each portal describes only its own holdings. Making it visible costs nothing and
-unlocks multimodal research already funded.
+### 1. A capability contract for every research output
 
-Breadth follows from the design. The approach is repository-agnostic, working wherever there is
-an API and a citable identifier - genomics, proteomics, imaging, spatial biology, and
-investigator cohorts alike. It surfaces resources from every NCI Division we touched rather
-than from a single program, and because the structured export is public it serves consumers we
-will never meet: other catalogs, AI agents, institutional data librarians, and educators who
-need a cohort a student can actually finish an analysis on.
+Repositories would expose a small, common set of machine-readable fields describing what a dataset, software package, protocol, model, or clinical-trial output can support.
+For data, the contract would include cohort size, modality coverage, field-level completeness, outcome derivability, access tier, identifiers, and explicit limitations.
+For other outputs, the same pattern would carry version, dependencies, intended use, known failure modes, and a stable citation identifier.
 
-**How we would know it worked.** Four measures, all instrumentable: the proportion of dataset
-selections that survive to a completed analysis rather than being abandoned; time from
-question to first result; the share of reuse accruing to datasets outside the top decile of
-current use; and interpretation accuracy, measured by how often a curated limitation is later
-disputed by the data generators.
+The key requirement is that capability claims be measured or explicitly attributed.
+"Survival analysis possible" should be derived from informative vital status and a usable time-to-event field, not inferred from a dataset title.
 
-Finally, it gives ODS something it currently lacks: a quantitative, reproducible view of where
-NCI data investment is and is not converting into reuse, and which barriers are responsible.
-Our corpus already separates datasets that are unused from datasets whose use cannot be
-measured, and identifies two dominant and fixable causes - missing citable accessions and
-absent clinical annotation. Both are addressable at deposition, which makes this diagnostic
-directly actionable at the policy level rather than only at the user level.
+### 2. A question-first discovery interface
 
----
+Researchers and agents should be able to describe an analysis in ordinary language and receive a ranked shortlist based on measured fit.
+The interface should show blocking limitations before capabilities.
+It should support queries such as "find open cohorts with both survival and treatment-response endpoints" or "find underused datasets with matched imaging and molecular data."
 
-## Prompt 3: Innovation and Awareness of Existing Efforts
+The prototype already exposes capability filters, an analysis-fit object with six verdicts, plain-language agent briefs, an OpenAPI description, JSON-LD, and MLCommons Croissant exports.
 
-NCI has invested heavily and successfully in this space, and we built on that work rather than
-around it. The Cancer Research Data Commons and its nodes solved access and harmonization. The
-Cancer Data Aggregator federates queries across them. The CRDC data catalog, dbGaP, re3data,
-DataCite Commons, and Google Dataset Search address findability. cBioPortal and UCSC Xena make
-analysis-ready matrices available and are genuinely excellent at it. HTAN publishes a curated
-publication manifest that is better evidence than anything text mining produces, and we use it
-in preference to our own extraction wherever it exists. FAIRsharing documents standards. The
-NIH Common Fund Data Ecosystem addresses cross-program discovery. The DataWorks! Prize
-recognizes reuse practice.
+It also provides runnable examples for both human researchers and AI agents.
+Six Python workbooks are executed end to end against live public APIs, with receipts and output hashes.
+The same corpus is exported as machine-readable records, constraints-first agent briefs, JSON-LD, Croissant, and an OpenAPI surface so an agent can make the same selection without scraping a page.
+Those six are the counted user-facing analysis workbooks, not the total executable surface.
+The pipeline also contains source adapters for GDC, PDC, IDC, HTAN, cBioPortal, and NIH RePORTER, along with cached raw records and rebuild commands.
 
-Every one of these is metadata-first: they describe what a dataset contains. None tells a
-researcher whether a dataset can answer their question, and none distinguishes a field that is
-present from a field that is usable. That distinction is where our contribution sits, and it is
-a layer above the infrastructure rather than a replacement for any of it.
+### 3. A reuse ledger with graded evidence
 
-Four things are new.
+NCI should report reuse using stable identifiers and section-aware literature evidence.
+An accession in methods, results, a table, or a figure is evidence that the reported analysis depends on the output.
+A reference-list citation or a general mention is not.
+The ledger should show these categories separately and report when reuse cannot be measured.
 
-**Measured fitness rather than declared contents.** We compute per-field informativeness from
-each repository's own records, in one shared vocabulary, so that a proteomic cohort and a
-genomic one are graded by the same rule, down to when an endpoint counts as derivable. It
-covers 385 of our 602 records today - every GDC
-project, 126 of 130 Proteomic Data Commons cohorts and 166 of 228 cBioPortal studies - and it
-is what reveals that an 18,004-case cohort supports no survival analysis. It is a small
-technical step that nobody is currently taking.
+### 4. A feedback and correction loop at the point of sharing
 
-**Graded reuse evidence.** Citing a dataset's paper is not reusing its data, yet reuse
-statistics in the field routinely treat them as one. We grade by where an accession appears in
-an article: methods, results, a table or a figure means the reported findings depend on the
-data; a reference-list mention does not. Europe PMC indexes article sections separately, which
-makes the distinction tractable. Crucially, the field choice was calibrated against the live
-index rather than assumed, and it is re-measured on every build rather than quoted from a note.
-In the current build, Europe PMC's broad AVAILABILITY field matched 3,953 of the 5,146 articles
-mentioning TCGA-LUAD anywhere and therefore cannot discriminate, while the narrow
-DATA_AVAILABILITY field matched 311 and can. An unindexed field name returns zero hits, which
-is what shows the section fields are genuinely indexed; a build where that check fails does not
-publish. We also test independence by author overlap,
-because a follow-up by the team that generated the data is a continuation rather than someone
-else finding the resource useful.
+Dataset generators should be able to claim a record, correct an interpretation, add a citable identifier, and explain the intended scientific questions.
+NCI program staff, repository maintainers, librarians, and data generators should be able to review the record without changing the machine-extracted measurements.
+The system should preserve both the original evidence and the correction history.
 
-**"Underexplored" as a measurement, not a label.** Raw reuse counts are not comparable across
-datasets of different size, age, and access tier. We model expected reuse and report the
-residual, and we deliberately exclude program membership as a covariate: "it is part of TCGA"
-is the disparity being measured, not a nuisance to adjust away. Model, coefficients, and
-diagnostics are published so the label can be recomputed or contested. We also record the
-specification we rejected and why, because a count model on raw counts extrapolated absurdly
-at the tails.
+This is the right intervention because the dominant barrier is interpretation.
+NCI already supports important data repositories and access mechanisms.
+The proposed layer makes the existing investment legible to the people who have not already learned a cohort's limitations through personal networks.
 
-**Agent-readable interpretation.** Structured metadata tells an agent which fields exist. Our
-agent brief tells it, in its first section, what the data cannot support. Constraints precede
-capabilities by design. We emit MLCommons Croissant carrying per-field completeness and
-blocking limitations, which no cancer data resource currently provides and which speaks
-directly to AI-readiness assessment.
+That is also an equity intervention.
+Trainees, investigators at less-resourced institutions, patient-centered researchers, and researchers outside the original data-generating consortium are least likely to know which datasets are genuinely analysis-ready.
+The prototype shows that a smaller and less famous resource can be more useful for a specific question than a large, well-known cohort.
+The HIV-enriched cervical cancer cohort from Uganda, for example, includes 207 tumors from Black African women among 212 tumors and has highly complete ECOG information in the harmonized records.
+Its practical value is difficult to see from a generic catalog description.
 
-One further point about rigor. The method's value showed most clearly when it caught our own
-errors. Our first follow-up calculation read one GDC field and reported a median of 29.8 months
-for TCGA-BRCA computed from a single patient, because that field is null for 1,097 of 1,098
-cases and the real values live elsewhere. Our first availability-dating pass placed TARGET-AML
-in 2005, four years before the program existed, because one Europe PMC field matches the words
-of a hyphenated accession independently. Both bugs produced plausible numbers that a reviewer
-would not have questioned. A method that surfaces this class of error in its own output is the
-same method that surfaces it in the data.
+## Prompt 2: Potential impact on the cancer research community
 
----
+The immediate impact is to return time and prevent avoidable access requests.
+The first prototype workbook accepts a GDC project identifier, measures the fields that decide six common analysis classes, and returns a verdict in about a minute using the live public API.
+It can expose a blocked survival or treatment-response analysis before a researcher downloads files, requests controlled access, or commits to a grant aim.
+The other executed workbooks show how a human can derive survival correctly, test treatment-response fields, find scarce modalities, join patients across repositories, and select a dataset the way an AI agent should.
 
-## Prompt 4: Transferability, Sustainability, and Feasibility
+The prototype's current corpus shows the scale of the opportunity:
 
-**Feasibility is demonstrated rather than asserted.** The prototype exists and runs: 602
-dataset records, clinical field completeness measured for 385 of them, 20 deeply curated pages
-(14 of them less-known resources), 736 NCI awards resolved through RePORTER, 778 verified reuse
-studies, and six workbooks executed end to end against live public APIs. Each workbook ships a receipt recording when it ran, with which
-package versions, how long it took, and a hash of its outputs, so "independently executed" is a
-claim a reviewer can check. A link check across the curated pages resolves 124 of 124 URLs. All
-of it was built by a small team in a short period.
+- 602 dataset records across five repositories and 29 measurement types.
+- Clinical completeness measured for 385 records in a shared vocabulary.
+- 206 records with a derivable survival endpoint and 62 with recorded treatment response.
+- 69 curated research questions and six executed workbooks attached to 15 dataset pages.
+- 796 verified reuse studies where an accession was located in an analysis-relevant article section.
+- 865 distinct NCI awards linked through NIH RePORTER.
+- 349,817 patients or subjects represented across 601 records that report a count.
 
-**Nothing here depends on privileged conditions.** No credentials, no negotiated agreements, no
-preferential access, no institutional infrastructure. Every source is a public, unauthenticated
-API. Every HTTP response is cached on disk keyed by request, so a full rebuild is deterministic
-and can run offline from the cache. The site is static files plus one small query endpoint, and
-the entire corpus is archivable as a directory of JSON - which matters for a resource that
-should still resolve in five years. A graduate student with a laptop can reproduce it; an
-institution with no data-science group can host it. Code is MIT, curated content CC BY 4.0.
+The larger impact is on which resources get used.
+The prototype fits a transparent robust model of expected reuse using cohort size, years available, modality breadth, and access tier.
+It marks 24 records as materially underexplored after excluding records whose reuse cannot be measured.
+The model ships its coefficients, diagnostics, rejected specification, and worst-case overprediction so the label can be recomputed or challenged.
 
-**The method transfers beyond cancer.** Nothing in it is oncology-specific. It requires an API,
-a citable accession, and a literature index, conditions met across NIH. The same pipeline would
-run against NIDDK, NHLBI, or Common Fund repositories with new source adapters and no change to
-the measurement or the model.
+The underexplored set includes resources with clear scientific value.
+The NSCLC Radiogenomics collection pairs CT and PET imaging with matched expression on 211 patients and has three verified analyzing articles.
+The CPTAC gastric study measures seven analytical fractions on 193 tumors and is openly downloadable.
+Across the Proteomic Data Commons, ubiquitylome data occur in five studies and lipidomics in three.
+These are not simply small or low-quality resources.
+They are difficult to discover as answers to a question.
 
-**Sustaining it needs one thing that does not scale: judgment.** Machine extraction handles
-counts, coverage, linkage, and reuse tracing, and refreshes automatically. Deciding what a
-dataset is genuinely good for does not. We learned this concretely: automated inference
-nominated a 13-citation methods paper as TCGA-BRCA's marker paper, because the actual marker
-paper never quotes its own project identifier. So expert judgment lives in reviewed overlay
-files, one per dataset, separate from extracted values and attributed to a named reviewer, and
-every unreviewed page states plainly that its interpretation has not been checked. Scaling
-curation means recruiting the people who already hold this knowledge - program staff, data
-generators, and the trainees who have reused these cohorts. That is a community activity NCI is
-uniquely placed to convene, and a natural fit for the Data Jamboree and the ODS symposium.
+Cross-repository linkage creates another measurable opportunity.
+The prototype identifies 39 cohorts present in both the Genomic Data Commons and the Imaging Data Commons.
+For TCGA-BRCA, the executed workbook finds a patient-level join of 1,098 of 1,098 cases.
+Both molecular and imaging data are available, but neither repository's individual catalog page makes the multimodal opportunity obvious.
 
-**Honest constraints.** Section indexing requires full text, so closed-access articles are
-under-represented and reuse counts are biased downward for datasets whose users publish in
-subscription journals. Datasets without citable accessions cannot be assessed at all, which is
-364 of our 602. Field-level completeness reaches 385 of 602 records: the Human Tumor Atlas
-Network publishes one clinical table per topic rather than harmonized fields, and the Imaging
-Data Commons serves per-collection tables named by the submitting trial, so neither can be
-graded field by field. Those records read *not measured*, which we never fold into *not
-supported*. Discovery of investigator cohorts runs through cBioPortal and therefore skews
-toward institutions that deposit there, Memorial Sloan Kettering most of all. Author-overlap
-independence is a proxy that will miss consortium reuse. Our corpus is a demonstration, not a
-census, and we say so on the site.
+The proposed NCI layer would make these benefits measurable at portfolio scale.
+We would evaluate it using four indicators:
 
-**What we would do with support.** Broaden source coverage, particularly CCDI and the Cancer
-Data Service. Build the curation workflow that lets dataset generators claim and correct their
-own pages, which converts curation from a bottleneck into a contribution channel. Run a user
-study measuring whether researchers actually find suitable datasets faster, against the four
-metrics above. And work with ODS on the deposition-time changes that would prevent the problem
-rather than document it: a citable accession for every shared dataset, and a minimal
-outcome-annotation standard, which together would move a large fraction of the portfolio from
-unmeasurable to measurable.
+1. Time from a research question to a defensible dataset shortlist and first result.
+2. The proportion of selections that reach a completed analysis instead of being abandoned after data inspection or access request.
+3. The share of reuse accruing to resources outside the current most-reused group.
+4. The accuracy and correction rate of capability statements, measured by generator and reviewer feedback.
 
-The most useful thing we can offer ODS is not the prototype. It is evidence that a measurable,
-fixable barrier sits between NCI's data investment and its return, and a demonstrated method
-for measuring it.
+NCI could also track two upstream sharing indicators that the prototype shows are actionable:
+the proportion of outputs with a stable citable identifier, and the proportion with enough outcome and modality metadata to support capability measurement.
+In the current corpus, 364 of 602 records lack an accession specific enough to trace reuse.
+That is a concrete deposition-time problem, not merely a downstream analytics problem.
+
+The expected scientific return is multiplicative.
+Better capability metadata helps a researcher choose a dataset.
+Better cross-repository links help them combine outputs.
+Better reuse evidence helps NCI identify what is working and where additional documentation or community support will produce the greatest return.
+Better identifiers make the impact of public investment visible rather than inferred from paper citations.
+
+## Prompt 3: Innovation and awareness of existing efforts
+
+This proposal builds on NCI infrastructure rather than replacing it.
+The Cancer Research Data Commons and its nodes provide important access and harmonization.
+The Cancer Data Aggregator supports federated discovery.
+The Genomic Data Commons, Proteomic Data Commons, Imaging Data Commons, Human Tumor Atlas Network, cBioPortal, dbGaP, DataCite, and other resources each solve important parts of the sharing problem.
+Existing analysis environments such as cBioPortal and UCSC Xena are valuable once a researcher knows which cohort and variables to use.
+
+The proposed layer occupies a different point in the workflow.
+Existing catalogs generally answer "what is here?"
+The layer proposed here answers "what question can this support, what will it not support, and how do I start?"
+
+Four aspects of the prototype demonstrate the novelty.
+
+### Measured fitness rather than declared contents
+
+The pipeline derives clinical completeness from each repository's own records and maps fields into one controlled vocabulary.
+It separates absent values from populated non-answers and handles one-to-many treatment records without pretending they are per-case percentages.
+It then applies shared, explicit thresholds for six analysis verdicts.
+The same vocabulary currently covers every GDC project, 126 of 130 PDC cohorts, and 166 of 228 cBioPortal studies.
+
+### Reuse evidence rather than citation volume
+
+The reuse index uses section-scoped Europe PMC searches and reports analyzed data separately from declared availability, accession mentions, and general references.
+The field choice is calibrated against the live index on every build.
+For the current calibration token, a broad availability field matched 3,953 of 5,146 articles that mentioned the token anywhere and therefore could not discriminate reuse.
+The narrower data-availability field matched 311.
+A deliberately invalid indexed field returned zero hits, providing a sentinel that the method is not silently falling back to free-text search.
+
+The pipeline also checks accession precision because Europe PMC splits hyphenated accessions into separate indexed words.
+For example, the TCGA-BRCA count is corrected after sampling full text rather than treating every raw hit as literal reuse.
+
+### Underexplored as a recomputable measurement
+
+Raw reuse counts are not comparable across datasets of different size, age, modality breadth, and access tier.
+The prototype fits a Huber robust regression on the log-transformed analyzing-article count.
+It deliberately excludes program membership because the disparity between heavily used and underused programs is the subject of measurement, not a nuisance variable to remove.
+The full model and diagnostics are published with the data.
+
+### Agent-readable constraints first
+
+The prototype exports one full structured record per dataset, a constraints-first Markdown brief, JSON-LD, Croissant, an OpenAPI description, and capability-filterable endpoints.
+An agent can therefore filter on measured fields, read blocking limitations, and receive a runnable task brief without scraping a page or guessing what a title implies.
+This matters because a size-ranked agent selects the 18,004-case FM-AD cohort and then attempts an analysis the data cannot support.
+
+The system is also designed to correct itself.
+Two plausible-looking errors were caught during self-audit.
+One follow-up calculation used a single non-null field and produced an incorrect TCGA-BRCA median.
+One availability-dating pass placed a program before its founding year because a hyphenated accession matched word-wise.
+The published calibration, receipts, and verification reports make these failure modes visible instead of hiding them behind a polished interface.
+
+## Prompt 4: Transferability, sustainability, and feasibility
+
+Feasibility is demonstrated by the working prototype.
+The current build contains 602 records, 385 records with measured clinical completeness, 20 project-curated showcase pages, 24 model-identified underexplored resources, 796 verified reuse studies, 865 linked NCI awards, and six executed workbooks.
+The workbooks run end to end against public APIs and ship execution receipts containing the run time, package information, and output hash.
+A verification pass found 123 of 123 checked links resolving across the curated pages.
+
+The method has modest technical requirements.
+The source adapters use public APIs and published repository files.
+The generated site can be archived as static JSON and Markdown with a small query surface.
+The pipeline caches HTTP responses by request so the corpus can be rebuilt deterministically or inspected offline from the cache.
+Code is MIT licensed, and curated content and structured exports are CC BY 4.0.
+
+The approach transfers across NCI and NIH because it is based on stable concepts rather than one portal's interface.
+The concepts are identifiers, provenance, field completeness, explicit limitations, reusable analysis examples, and evidence of downstream use.
+Adding a repository requires a source adapter and vocabulary mapping, not a new scientific definition of reuse or a new user experience.
+The same pattern could be applied to CCDI, additional Cancer Data Service resources, other NIH data programs, software tools, protocols, models, and clinical-trial outputs.
+
+Sustainability depends on separating automation from judgment.
+Machine extraction should refresh counts, coverage, linkages, and literature evidence.
+Human review should add interpretation, resolve ambiguous marker publications, and correct records when data generators provide better information.
+The current build makes this boundary explicit.
+It has 20 project-curated showcase records, while the generated statistics report zero records currently labeled `expert_reviewed`.
+Every machine-only page says that its interpretation has not been reviewed.
+
+The next phase would create the community workflow that the prototype points toward:
+
+1. Add CCDI and Cancer Data Service adapters and expand coverage of existing NCI nodes.
+2. Publish a small capability schema and identifier guidance that repositories can adopt at deposition.
+3. Let data generators claim records, add intended-use questions, correct limitations, and supply stable identifiers.
+4. Run a user study with trainees, librarians, data generators, and investigators at less-resourced institutions.
+5. Measure the four outcome indicators against a baseline of ordinary catalog search.
+6. Convene repository maintainers and program staff to turn the most common limitations into deposition guidance.
+
+The most important policy changes are simple.
+Every shared output should have a stable, citable identifier.
+Every dataset intended for clinical or population analysis should expose a minimal machine-readable description of the outcome, treatment, demographic, and modality fields that are actually present.
+Every catalog should say when a limitation is unmeasured rather than imply that no limitation exists.
+
+There are important limitations.
+Section-scoped literature tracing undercounts reuse in closed-access articles.
+Records without specific accessions cannot be assessed through citation-based methods.
+Clinical completeness is measured for 385 of 602 records because HTAN and IDC expose tables that do not yet map cleanly to the shared vocabulary.
+Investigator-cohort discovery is biased toward institutions that deposit in cBioPortal.
+Author overlap is only a proxy for independent reuse.
+The reuse-gap model is least trustworthy at the upper tail of expected reuse.
+These limits are published with the outputs, and the system reports `not measured` rather than converting them into false negatives.
+
+Support from this prize would turn a working demonstration into a shared, testable NCI practice.
+It would not require NCI to replace repositories or to predict scientific value with a black box.
+It would add the missing interpretive layer that lets researchers and software use the outputs NCI has already funded.
+
+The central claim is straightforward:
+
+**Sharing a dataset is not the same as making its usable scientific scope visible.**
+
+NCI can measure and publish that scope.
+Doing so would make existing cancer research outputs easier to find, safer to select, faster to reuse, and more equitable for the people who do not already know where the hidden knowledge lives.
+
+## Selected evidence and links
+
+- Working demonstration: <https://cancer-data-showcase.vercel.app>
+- Prototype README: [`README.md`](../README.md)
+- Supporting evidence: [`submission/supporting-evidence.md`](supporting-evidence.md)
+- Methods implementation: [`web/app/methods/page.tsx`](../web/app/methods/page.tsx)
+- Agent interface: [`web/app/agents/page.tsx`](../web/app/agents/page.tsx)
+- Current generated statistics: [`pipeline/data/dist/stats.json`](../pipeline/data/dist/stats.json)
+- Current reuse model: [`pipeline/data/dist/reuse_gap_model.json`](../pipeline/data/dist/reuse_gap_model.json)
+- Current field calibration: [`pipeline/data/dist/field_calibration.json`](../pipeline/data/dist/field_calibration.json)
+- Executed analysis workbooks: [`workbooks/executed/`](../workbooks/executed/)
+- NCI Office of Data Sharing Impact Prize: <https://www.nih.gov/challenges/nci-office-data-sharing-impact-prize>

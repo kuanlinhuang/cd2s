@@ -57,14 +57,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Risk of clonal hematopoiesis in families exposed to radiation following the Chornobyl accident.",
-      "identifier": "https://doi.org/10.1093/carcin/bgaf056",
-      "datePublished": "2025"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:36:36.484634+00:00",
   "datePublished": "2025-01-01",

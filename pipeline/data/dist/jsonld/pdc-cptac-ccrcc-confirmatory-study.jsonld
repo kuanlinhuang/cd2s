@@ -61,14 +61,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis.",
-      "identifier": "https://doi.org/10.1038/s41392-025-02128-8",
-      "datePublished": "2025"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",

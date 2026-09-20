@@ -42,12 +42,14 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 24
-- Reuse gap index: +0.13 (negative means less reused than comparable datasets)
+- 59 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 8 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 1833 (attention, not reuse)
+- Reuse gap index: +0.48 (negative means less reused than comparable datasets)
+  - A multiprotein supercomplex controlling oncogenic signalling in lymphoma. (2018) PMID 29925955
+  - Effect of ibrutinib with R-CHOP chemotherapy in genetic subtypes of DLBCL. (2021) PMID 34739844
+  - Tumor interferon signaling and suppressive myeloid cells are associated with CAR T-cell failure in large B-cell lymphoma. (2021) PMID 33512407
+  - Single-cell analysis of germinal-center B cells informs on lymphoma cell of origin and outcome. (2020) PMID 32603407
   - Impact of <i>TP53</i> Genomic Alterations in Large B-Cell Lymphoma Treated With CD19-Chimeric Antigen Receptor T-Cell Therapy. (2022) PMID 34860572
-  - <i>PD-L1</i> gene alterations identify a subset of diffuse large B-cell lymphoma harboring a T-cell-inflamed phenotype. (2019) PMID 30910787
-  - Mutations in the transcription factor FOXO1 mimic positive selection signals to promote germinal center B cell expansion and lymphomagenesis. (2021) PMID 34380064
-  - A Hyper-IgM Syndrome Mutation in Activation-Induced Cytidine Deaminase Disrupts G-Quadruplex Binding and Genome-wide Chromatin Localization. (2020) PMID 33098766
-  - IRF8-mutant B cell lymphoma evades immunity through a CD74-dependent deregulation of antigen processing and presentation in MHCII complexes. (2024) PMID 38996030
 
 ## Provenance
 

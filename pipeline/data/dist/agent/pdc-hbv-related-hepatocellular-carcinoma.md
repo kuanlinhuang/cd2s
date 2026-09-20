@@ -41,12 +41,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 27
-- Reuse gap index: +0.95 (negative means less reused than comparable datasets)
+- 40 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 10 that could be checked were themselves NCI funded.
+- Reuse gap index: +1.00 (negative means less reused than comparable datasets)
+  - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Oxidative stress induces extracellular vesicle release by upregulation of HEXB to facilitate tumour growth in experimental hepatocellular carcinoma. (2024) PMID 38944674
   - Integrative multiomics evaluation reveals the importance of pseudouridine synthases in hepatocellular carcinoma. (2022) PMID 36437949
+  - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
-  - Bioinformatic Analysis and In Vitro and In Vivo Experiments Reveal That Fibrillarin Participates in the Promotion of Lung Metastasis in Hepatocellular Carcinoma. (2022) PMID 36004921
-  - Deep Learning Prediction Boosts Phosphoproteomics-Based Discoveries Through Improved Phosphopeptide Identification. (2024) PMID 38154692
 
 ## Provenance
 

@@ -41,7 +41,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Reuse gap index: +1.46 (negative means less reused than comparable datasets)
+- 2 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
+- Reuse gap index: +1.52 (negative means less reused than comparable datasets)
   - Alternative splicing regulates &lt;i&gt;FGGY-&lt;/i&gt;derived neoantigen presentation and promotes immune evasion in metabolic-associated hepatocellular carcinoma. (2026) PMID 42291265
 
 ## Provenance

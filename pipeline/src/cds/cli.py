@@ -109,10 +109,14 @@ def trace_index(
         or store.load_all_sources()
     )
     targets = corpus[start : start + limit] if limit else corpus[start:]
+    # Derived from the whole corpus, never from the window: an umbrella accession is
+    # only recognisable as one by the number of datasets claiming it.
+    shared = trace.shared_accessions(corpus)
+    console.print(f"  excluding {len(shared)} accessions claimed by more than one dataset")
     done = 0
     with Client("epmc", max_age_days=max_age_days) as c:
         for r in targets:
-            r.reuse_metrics = trace.index_pass(c, r)
+            r.reuse_metrics = trace.index_pass(c, r, shared=shared)
             done += 1
             if done % 25 == 0:
                 console.print(
@@ -240,7 +244,7 @@ def enrich_cmd(
 ) -> None:
     """Date availability, fetch exemplar reuse studies, and link funded reuse."""
     from cds import store
-    from cds.reuse import enrich
+    from cds.reuse import enrich, trace
 
     recs = store.load_source("traced")
     if not recs:
@@ -250,11 +254,12 @@ def enrich_cmd(
     if limit:
         targets = targets[:limit]
     console.print(f"enriching {len(targets)} of {len(recs)} records")
+    shared = trace.shared_accessions(recs)
     done = 0
     with Client("epmc", max_age_days=max_age_days) as c:
         for r in targets:
             try:
-                enrich.enrich_record(c, r)
+                enrich.enrich_record(c, r, shared=shared)
             except Exception as exc:  # noqa: BLE001 - one bad record must not stop the pass
                 console.print(f"[yellow]{r.id}: {type(exc).__name__}: {exc}[/yellow]")
             done += 1
@@ -300,7 +305,17 @@ def curate_cmd(
     # the only place it exists - their APIs return no publication. The index pass counted
     # citations before any of that was known, so the count is refreshed here against the
     # publications the record now actually has.
+    from cds.reuse import markers
     from cds.reuse import trace as trace_mod
+
+    # The registry is a reviewer naming a dataset's own paper, so it lands with the
+    # overlays and before anything counts from it.
+    registry = markers.apply_registry(recs)
+    for k, v in registry.items():
+        if k != "unmatched_ids":
+            console.print(f"  marker_registry.{k}: {v}")
+    if registry["unmatched_ids"]:
+        console.print(f"  [yellow]marker_registry unmatched: {registry['unmatched_ids']}[/yellow]")
 
     n_recounted = 0
     with Client("epmc", max_age_days=30.0) as c:
@@ -313,6 +328,14 @@ def curate_cmd(
                 console.print(f"[yellow]{r.id}: citation refresh failed: {exc}[/yellow]")
     console.print(f"  citation counts refreshed: {n_recounted}")
 
+    # A count computed against a paper this pipeline merely nominated is not the
+    # quantity its label claims, so it is withheld rather than shown.
+    withheld = markers.withhold_counts_from_guesses(recs)
+    console.print(
+        f"  citation counts withheld (no authoritative marker paper): "
+        f"{withheld['n_citation_counts_withheld']}"
+    )
+
     # Which award paid to create each dataset. This runs here, after overlays, because a
     # reviewer's overlay is one of the two places an authoritative marker paper comes
     # from, and a marker paper is the only thing that distinguishes an award that funded
@@ -324,6 +347,13 @@ def curate_cmd(
         fund_stats |= funding.backfill_award_details(c, recs)
     for k, v in fund_stats.items():
         console.print(f"  funding.{k}: {v}")
+
+    # Independence is "no author overlaps the people who made these data", so it can
+    # only be settled once the awards that made them are attributed - which is the step
+    # immediately above. Deciding it during enrichment left every article unknown.
+    indep = trace_mod.refresh_independence(recs)
+    for k, v in indep.items():
+        console.print(f"  independence.{k}: {v}")
 
     from cds.metrics import reuse_gap
 

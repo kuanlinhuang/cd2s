@@ -11,7 +11,7 @@
   "description": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ohsu-cnl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Genomic landscape of neutrophilic leukemias of ambiguous diagnosis.",
+  "citeAs": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
   "version": "as-retrieved",
   "datePublished": "2019-01-01",
   "recordSet": [

@@ -11,7 +11,7 @@
   "description": "Neuroblastoma",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-nbl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Micrometastases in neuroblastoma: are they clinically important?",
+  "citeAs": "The genetic landscape of high-risk neuroblastoma",
   "version": "as-retrieved",
   "datePublished": "2004-01-01",
   "recordSet": [

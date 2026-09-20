@@ -11,9 +11,9 @@
   "description": "Melanoma is a cancer in a type of skin cells called melanocytes. Melanocyes are the cells that produce melanin, which colors the skin. When exposed to sun, these cells make more melanin, causing the skin to darken or tan. Melanoma can occur anywhere on the body and risk factors include fair complexion, family history of melanoma, and being exposed to natural or artificial sunlight over long periods of time. Melanoma is most often discovered because it has metastasized, or spread, to another organ, such as the lymph nodes. In many cases, the primary skin melanoma site is never found. Because of this challenge, TCGA is studying primarily metastatic cases (in contrast to other cancers selected for study, where metastatic cases are excluded). For 2011, it was estimated that there were 70,230 new cases of melanoma and 8,790 deaths from the disease. Please see the DICOM converted Slide Microscopy images for the TCGA-SKCM collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-skcm",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Skin Cutaneous Melanoma",
+  "citeAs": "Genomic Classification of Cutaneous Melanoma",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2014-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

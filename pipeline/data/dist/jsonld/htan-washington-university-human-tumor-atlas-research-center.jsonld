@@ -108,7 +108,7 @@
     {
       "@type": "Grant",
       "identifier": "U2CCA233303",
-      "name": "Administrative Core",
+      "name": "Biospecimen Acquisition, Processing, and Classification Unit",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -228,7 +228,7 @@
     {
       "@type": "Grant",
       "identifier": "U54CA274318",
-      "name": "Research Project  Pancreatic Cancer",
+      "name": "METEOR-Comprehensive Radiobiology Assessment TRial (METEOR-CRATR)",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"

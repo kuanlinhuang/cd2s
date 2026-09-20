@@ -18,6 +18,8 @@
 import json
 from pathlib import Path
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import pandas as pd
 
 # The export ships with this repository. When the site is deployed it is also served at
@@ -133,6 +135,62 @@ print(
 
 choice = ranked.iloc[0]
 print(f"\nSelected: {choice['title']}")
+# %%
+# One house style for every figure below: a single accent, one contrast colour for the
+# thing the reader must not miss, and nothing else. Defined here rather than imported so
+# the downloaded notebook runs on its own.
+INK, ACCENT, WARN, MUTED = "#1f2430", "#2f6f6b", "#b4762a", "#9aa3b2"
+mpl.rcParams.update(
+    {
+        "figure.dpi": 120,
+        "savefig.dpi": 120,
+        "font.size": 9.5,
+        "axes.titlesize": 11,
+        "axes.titleweight": "semibold",
+        "axes.labelcolor": INK,
+        "axes.titlecolor": INK,
+        "text.color": INK,
+        "axes.edgecolor": MUTED,
+        "xtick.color": MUTED,
+        "ytick.color": MUTED,
+        "axes.grid": True,
+        "grid.color": "#e6e9ef",
+        "grid.linewidth": 0.8,
+        "axes.axisbelow": True,
+    }
+)
+
+
+def finish(ax, title):
+    ax.set_title(title, loc="left")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.figure.tight_layout()
+    return ax
+
+
+# %% [markdown]
+# ### Why this one, and not the biggest one
+#
+# The selected cohort is highlighted. Reading the scores as a chart makes the agent's
+# reasoning auditable: a human can see at a glance whether the ranking is decided by fit
+# or by a single dominant term.
+
+# %%
+top = ranked.head(8).iloc[::-1]
+colors = [ACCENT if t == choice["short_title"] else MUTED for t in top["short_title"]]
+pos = list(range(len(top)))
+fig, ax = plt.subplots(figsize=(8.6, 0.5 * len(top) + 1.8))
+ax.barh(pos, top["fit_score"], color=colors, height=0.62)
+ax.set_yticks(pos)
+ax.set_yticklabels(top["short_title"])
+for i, v in enumerate(top["fit_score"]):
+    ax.text(v, i, f" {v:.2f}", va="center", fontsize=8.5, color=INK)
+ax.set_xlabel("fit score for a treatment-resistance question")
+ax.set_xlim(0, float(top["fit_score"].max()) * 1.14)
+ax.grid(axis="y", visible=False)
+finish(ax, "Ranked on measured capability, not on size or fame")
+plt.show()
 
 # %% [markdown]
 # ## 4. Read the blocking limitations before committing

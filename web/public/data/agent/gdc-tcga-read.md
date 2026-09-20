@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 499
-- Reuse gap index: +0.83 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+- Articles that analyzed these data: 482
+- 113 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 6963 (attention, not reuse)
+- Reuse gap index: +2.27 (negative means less reused than comparable datasets)
   - Deep multimodal fusion of patho-radiomic and clinical data for enhanced survival prediction for colorectal cancer patients. (2025) PMID 41350716
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
   - Multidimensional analysis of the impact of Gemmatimonas, Rhodothermus, and Sutterella on drug and treatment response in colorectal cancer. (2024) PMID 39439901
+  - Tumor mutational burden predicts neoantigen profiles and immunotherapy response in microsatellite stable tumors across different cancer types. (2025) PMID 41583482
+  - Integrative Analysis of miR-21, PTEN, and Immune Signatures in Colorectal Cancer. (2025) PMID 41465544
+  - Whole slide image based prognosis prediction in rectal cancer using unsupervised artificial intelligence. (2024) PMID 39696090
 
 ## Provenance
 

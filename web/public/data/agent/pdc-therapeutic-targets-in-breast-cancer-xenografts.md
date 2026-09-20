@@ -40,7 +40,9 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Reuse gap index: -1.97 (negative means less reused than comparable datasets)
+- 1 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
+- Reuse gap index: -1.79 (negative means less reused than comparable datasets)
+  - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
 
 ## Provenance
 

@@ -77,15 +77,29 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
+  "citation": [],
+  "funding": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "Phase II Study of Adavosertib in Patients With Tumors Containing BRCA1 and BRCA2 Mutations: Results From the NCI-MATCH ECOG-ACRIN Cancer Research Group (EAY131) Subprotocol Z1I.",
-      "identifier": "https://doi.org/10.1200/po-25-00769",
-      "datePublished": "2026"
+      "@type": "Grant",
+      "identifier": "U10CA180820",
+      "name": "ECOG-ACRIN Network Group Operations Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180820"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U10CA180794",
+      "name": "ECOG-ACRIN Network Group Statistics and Data Management Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U10CA180794"
     }
   ],
-  "funding": [],
   "dateModified": "2026-09-18T02:37:30.407946+00:00",
   "datePublished": "2026-01-01",
   "variableMeasured": [

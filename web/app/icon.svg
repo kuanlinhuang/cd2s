@@ -1,5 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Cancer Data Showcase">
-  <rect width="32" height="32" rx="6" fill="#1d4f52"/>
-  <text x="16" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
-        font-size="15" font-weight="700" fill="#ffffff">CD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Cancer Data Showcase">
+  <title>Cancer Data Showcase</title>
+  <defs>
+    <linearGradient id="cds-arc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="cds-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.75" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <g filter="url(#cds-glow)">
+    <path d="M 145,55 A 62,62 0 1,0 145,145" fill="none" stroke="url(#cds-arc)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 90,65 L 112,65 C 130,65 130,95 112,95 L 90,95 Z" fill="none" stroke="#06b6d4" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M 90,105 L 112,105 C 124,105 124,122 112,125 C 100,128 100,140 116,140 L 130,140" fill="none" stroke="#6366f1" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="152" cy="42" r="9" fill="#ec4899"/>
+    <circle cx="152" cy="42" r="4" fill="#ffffff"/>
+    <circle cx="145" cy="55" r="6" fill="#06b6d4"/>
+    <circle cx="145" cy="145" r="6" fill="#ec4899"/>
+  </g>
 </svg>

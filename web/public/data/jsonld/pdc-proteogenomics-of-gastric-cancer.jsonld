@@ -63,14 +63,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Pangenomic analysis of Chinese gastric cancer.",
-      "identifier": "https://doi.org/10.1038/s41467-022-33073-7",
-      "datePublished": "2022"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2022-01-01",

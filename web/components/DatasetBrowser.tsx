@@ -49,7 +49,7 @@ const CAPABILITY_FILTERS = {
   },
   open: { label: "Open access", test: (r: BrowseRow) => r.access_tier === "open" },
   underexplored: {
-    label: "Underexplored",
+    label: "Underused opportunity",
     test: (r: BrowseRow) => r.is_underexplored,
   },
   workbook: {
@@ -571,7 +571,7 @@ export default function DatasetBrowser({ rows, facets, subjects, initial = {} }:
           <p className="rounded-md border border-dashed px-4 py-8 text-center text-body t-muted">
             Nothing matches. Remove a filter, or browse{" "}
             <Link href="/underexplored" className="underline">
-              underexplored datasets
+              underused research opportunities
             </Link>
             .
           </p>
@@ -750,17 +750,16 @@ function ResultCard({
             )}
           </div>
 
-          {(row.n_verified_reuse !== null && row.n_verified_reuse !== undefined) ||
-          row.has_citable_accession === false ? (
-            <p className="mt-2 text-meta t-faint">
-              {row.has_citable_accession === false
-                ? "No citable accession, so reuse cannot be traced"
+          <p className="mt-2 text-meta t-faint">
+            {row.has_citable_accession === false
+              ? "No citable accession, so reuse cannot be traced"
+              : row.n_verified_reuse === null || row.n_verified_reuse === undefined
+                ? "Reuse could not be measured for this accession"
                 : `${num(row.n_verified_reuse)} article${row.n_verified_reuse === 1 ? "" : "s"} analyzed these data` +
                   (row.n_citations_to_primary_publication
                     ? ` - ${num(row.n_citations_to_primary_publication)} cite the paper`
                     : "")}
-            </p>
-          ) : null}
+          </p>
         </div>
       </div>
     </li>

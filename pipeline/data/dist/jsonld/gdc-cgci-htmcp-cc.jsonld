@@ -129,6 +129,26 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P50CA098258"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R21CA241013",
+      "name": "Defining HPV integration sites of unknown significance in invasive cervical cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R21CA241013"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA262198",
+      "name": "Enlisting HPV integration events to illuminate drivers and target treatment in invasive cervical cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA262198"
     }
   ],
   "dateModified": "2026-09-18T02:36:44.884482+00:00",

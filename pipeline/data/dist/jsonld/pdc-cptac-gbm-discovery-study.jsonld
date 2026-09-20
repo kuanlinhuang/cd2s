@@ -70,14 +70,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "The Open Pediatric Cancer Project.",
-      "identifier": "https://doi.org/10.1093/gigascience/giaf093",
-      "datePublished": "2025"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",

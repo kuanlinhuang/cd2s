@@ -98,7 +98,14 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Comprehensive and Integrated Genomic Characterization of Adult Soft Tissue Sarcomas",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/29100075/",
+      "datePublished": "2017"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
@@ -113,7 +120,7 @@
     {
       "@type": "Grant",
       "identifier": "U54CA210173",
-      "name": "The effect of oxygen gradients on sarcoma invasiveness through dynamic collagen modulation",
+      "name": "Computational Core",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -143,7 +150,7 @@
     {
       "@type": "Grant",
       "identifier": "P30CA016520",
-      "name": "Clinical Protocol and Data Management",
+      "name": "Hematologic Malignancies Program",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
@@ -162,37 +169,147 @@
     },
     {
       "@type": "Grant",
-      "identifier": "U24CA264032",
-      "name": "The joint WCM-NYGC Center for Functional and Clinical Interpretation of Tumor Profiles",
+      "identifier": "U24CA210999",
+      "name": "Global Infrastructure for Collaborative High-throughput  Cancer Genomics Analysis",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA264032"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210999"
     },
     {
       "@type": "Grant",
-      "identifier": "R37CA229861",
-      "name": "Cell-of-Origin Footprints of Passenger Mutations in Human Lung Cancer",
+      "identifier": "U24CA210990",
+      "name": "UCSC-Buck Specialized Genomic Data Analysis Center for the Genomic Data Analysis Network",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R37CA229861"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210990"
     },
     {
       "@type": "Grant",
-      "identifier": "P30CA008748",
-      "name": "Antitumor Assessment",
+      "identifier": "U24CA210974",
+      "name": "Visualization hub for genomics data exploration and translational discovery",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA008748"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210974"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210969",
+      "name": "Integrative Cancer Epigenomic Data Analysis Center (ICE-DAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210969"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210957",
+      "name": "OHSU Center for Specialized Data Analysis as part of the GDAN",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210957"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210950",
+      "name": "Integrated analysis of protein expression data from the Reverse Phase Protein Array (RPPA) platform",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210950"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA210949",
+      "name": "Batch effects in molecular profiling data on cancers: detection, quantitation, interpretation, and correction",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA210949"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA199461",
+      "name": "Next-Generation Clustered Heat Maps for fluent, interactive exploration of omic data",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA199461"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA194362",
+      "name": "Advanced Development of an Open-source Platform for Web-based Integrative Digital Image Analysis in Cancer",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA194362"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA144025",
+      "name": "Harvard Genome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA144025"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143883",
+      "name": "Integrative Pipeline for Analysis & Translational Application of TCGA Data (GDAC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143883"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143882",
+      "name": "The USC-JHU Cancer Epigenome Characterization Center",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143882"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143867",
+      "name": "Genome Characterization Center (GCC)",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143867"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U24CA143866",
+      "name": "Cancer transcriptome characterization using massively parallel DNA sequencing",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA143866"
     }
   ],
   "dateModified": "2026-09-18T02:36:44.424286+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2017-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

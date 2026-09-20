@@ -27,6 +27,8 @@ import type {
   NetworkEdge,
   NetworkLane,
   NetworkNode,
+  NotebookGuide,
+  Publication,
   QuestionRow,
   FieldCalibration,
   ReuseGapModel,
@@ -175,6 +177,49 @@ export function getRecord(id: string): DatasetRecord | null {
     : null;
   _records.set(id, record);
   return record;
+}
+
+let _notebooks: NotebookGuide[] | null = null;
+
+/**
+ * The executed workbook catalog, reconstructed from the dataset attachments written by
+ * the pipeline. This keeps the human-facing gallery on the same source of truth as the
+ * badges and walkthroughs on each dataset page.
+ */
+export function getNotebookGuides(): NotebookGuide[] {
+  if (_notebooks !== null) return _notebooks;
+
+  const bySlug = new Map<string, NotebookGuide>();
+  for (const row of getIndex().filter((r) => r.n_workbooks > 0)) {
+    const record = getRecord(row.id);
+    if (!record) continue;
+    for (const example of record.analysis_examples) {
+      if (!example.workbook_path) continue;
+      const slug =
+        example.template_source ??
+        example.workbook_path.split("/").pop()?.replace(/\.(py|ipynb)$/, "") ??
+        row.id;
+      const existing = bySlug.get(slug);
+      const dataset = {
+        id: row.id,
+        title: row.title,
+        short_title: row.short_title,
+      };
+      if (existing) {
+        if (!existing.datasets.some((d) => d.id === row.id)) existing.datasets.push(dataset);
+      } else {
+        bySlug.set(slug, { ...example, slug, datasets: [dataset] });
+      }
+    }
+  }
+
+  _notebooks = [...bySlug.values()]
+    .sort((a, b) => a.slug.localeCompare(b.slug))
+    .map((guide) => ({
+      ...guide,
+      datasets: guide.datasets.sort((a, b) => a.title.localeCompare(b.title)),
+    }));
+  return _notebooks;
 }
 
 /**
@@ -556,7 +601,7 @@ const DATASET_VIEW_LANES: NetworkLane[] = [
   { label: "The dataset", hint: "" },
   {
     label: "Articles that used it",
-    hint: "The accession appears in their methods, results, a table or a figure",
+    hint: "The accession appears in their methods section",
     empty:
       "No article can be traced to this dataset, so nothing it enabled is visible here.",
   },
@@ -815,6 +860,15 @@ export interface DatasetFunding {
 
 const INFERRED_MARKER_LABEL = "Candidate primary publication (machine-inferred)";
 
+/**
+ * Whether a publication is the pipeline's own nomination rather than one a repository
+ * or a reviewer supplied. Nothing may be counted from one, and no heading may call one
+ * the dataset's original publication.
+ */
+export function isInferredMarker(pub: Publication): boolean {
+  return (pub.evidence ?? []).some((e) => (e.source_label ?? "") === INFERRED_MARKER_LABEL);
+}
+
 function awardOf(g: Grant): FundingAward {
   return {
     num: (g.core_project_num ?? g.project_num) as string,
@@ -1043,7 +1097,7 @@ export function getDatasetFunding(id: string): DatasetFunding | null {
   const markerInferred =
     rec.primary_publications.length > 0 &&
     rec.primary_publications.every((pub) =>
-      pub.evidence.some((e) => (e.source_label ?? "") === INFERRED_MARKER_LABEL),
+      isInferredMarker(pub),
     );
 
   return {

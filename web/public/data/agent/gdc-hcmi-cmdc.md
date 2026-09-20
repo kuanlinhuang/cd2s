@@ -74,13 +74,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
-- Citations to the dataset's publication: 92 (attention, not reuse)
+- 16 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 3 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: -2.15 (negative means less reused than comparable datasets)
+  - Patient-Derived Triple-Negative Breast Cancer Organoids Provide Robust Model Systems That Recapitulate Tumor Intrinsic Characteristics. (2022) PMID 35180770
   - Revolutionizing healthcare and medicine: The impact of modern technologies for a healthier future-A comprehensive review. (2024) PMID 39479277
   - Oncofetal reprogramming drives phenotypic plasticity in WNT-dependent colorectal cancer. (2025) PMID 39930084
   - Weight-bearing activity impairs nuclear membrane and genome integrity via YAP activation in plantar melanoma. (2022) PMID 35468978
   - Insight into the Regulation of NDRG1 Expression. (2025) PMID 40332138
-  - Defining the Antitumor Mechanism of Action of a Clinical-stage Compound as a Selective Degrader of the Nuclear Pore Complex. (2025) PMID 40891634
 
 ## Provenance
 

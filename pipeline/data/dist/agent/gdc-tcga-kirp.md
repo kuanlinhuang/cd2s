@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.04 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 163
+- 85 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 1012 (attention, not reuse)
+- Reuse gap index: -0.54 (negative means less reused than comparable datasets)
   - An automated surgical decision-making framework for partial or radical nephrectomy based on 3D-CT multi-level anatomical features in renal cell carcinoma. (2023) PMID 37289245
   - A Cluster of Metabolic-Related Genes Serve as Potential Prognostic Biomarkers for Renal Cell Carcinoma. (2022) PMID 35873461
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Spatially-resolved analyses of muscle invasive bladder cancer microenvironment unveil a distinct fibroblast cluster associated with prognosis. (2024) PMID 39759522
   - Construction and verification of a novel prognostic risk model for kidney renal clear cell carcinoma based on immunity-related genes. (2023) PMID 36741315
+  - GAiN: An integrative tool utilizing generative adversarial neural networks for augmented gene expression analysis. (2024) PMID 38370125
 
 ## Provenance
 

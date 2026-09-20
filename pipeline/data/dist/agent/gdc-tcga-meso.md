@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 395
-- Reuse gap index: +0.62 (negative means less reused than comparable datasets)
-  - Redefining malignant pleural mesothelioma types as a continuum uncovers immune-vascular interactions. (2019) PMID 31648983
+- Articles that analyzed these data: 67
+- 71 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 2 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 521 (attention, not reuse)
+- Reuse gap index: +0.19 (negative means less reused than comparable datasets)
   - Identification of cancer-associated fibroblasts subtypes in prostate cancer. (2023) PMID 37033924
   - Single-Cell View of Tumor Microenvironment Gradients in Pleural Mesothelioma. (2024) PMID 38959428
   - Genomic and transcriptomic analyses identify a prognostic gene signature and predict response to therapy in pleural and peritoneal mesothelioma. (2023) PMID 36773602
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
+  - Epigenetic Silencing of <i>LRP2</i> Is Associated with Dedifferentiation and Poor Survival in Multiple Solid Tumor Types. (2023) PMID 36980716
 
 ## Provenance
 

@@ -11,9 +11,9 @@
   "description": "Uterine carcinosarcoma (UCS) is a cancer that develops in the uterus. Carcinosarcoma signifies that, when looked at under a microscope, the tumor displays histological features of both endometrial carcinoma and sarcoma. Endometrial carcinoma starts in the endometrium, the inner layer of tissue lining the uterus, while sarcoma begins in the outer layer of muscle of the uterus. A rare cancer, UCS makes up less than 5% of all uterine cancers. In the U.S., about two per 100,000 women develop UCS annually. Roughly only 35% of patients survive five years after diagnosis. Please see the DICOM converted Slide Microscopy images for the TCGA-UCS collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-ucs",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Uterine Carcinosarcoma",
+  "citeAs": "Integrated Molecular Characterization of Uterine Carcinosarcoma",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2017-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

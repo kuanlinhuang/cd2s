@@ -11,9 +11,9 @@
   "description": "The Cancer Imaging Program (CIP) is working directly with primary investigators from institutes participating in TCGA to obtain and load images relating to the genomic, clinical, and pathological data being stored within the TCGA Data Portal. Currently this large PET/CT multi-sequence image collection of head and neck squamous cell carcinoma (HNSC) patients can be matched by each unique case identifier with the extensive gene and expression data of the same case from The Cancer Genome Atlas Data Portal to research the link between clinical phenome and tissue genome. Please see the TCGA-HNSC page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-HNSC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-hnsc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Head and Neck Squamous Cell Carcinoma",
+  "citeAs": "Comprehensive genomic characterization of head and neck squamous cell carcinomas",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2013-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

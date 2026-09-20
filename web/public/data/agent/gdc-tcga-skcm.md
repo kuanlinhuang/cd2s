@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 796
-- Reuse gap index: +0.82 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 724
+- 108 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 2530 (attention, not reuse)
+- Reuse gap index: +1.57 (negative means less reused than comparable datasets)
   - Identification and validation of prognostic genes and prognostic models associated with cutaneous melanoma and integrative stress response. (2025) PMID 41409301
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
   - Machine learning-based identification of an immunotherapy-related signature to enhance outcomes and immunotherapy responses in melanoma. (2024) PMID 39355255
   - Comprehensive analysis of SELPLG as a potential immunotherapy target and prognostic biomarker in oncology. (2025) PMID 40504320
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
+  - Integrating Single-Cell and Spatial Transcriptomics Reveals NK Cell Subpopulations Associated With Immunotherapy for Melanoma. (2025) PMID 41357561
+  - Circadian rhythm related genes identified through tumorigenesis and immune infiltration-guided strategies as predictors of prognosis, immunotherapy response, and candidate drugs in skin cutaneous malignant melanoma. (2025) PMID 40191195
 
 ## Provenance
 

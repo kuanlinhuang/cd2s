@@ -41,13 +41,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
-- Citations to the dataset's publication: 19 (attention, not reuse)
-- Reuse gap index: -1.91 (negative means less reused than comparable datasets)
-  - Multi-Omics Characterization of E3 Regulatory Patterns in Different Cancer Types. (2024) PMID 39062881
-  - The implication of non-AUG-initiated N-terminally extended proteoforms in cancer. (2025) PMID 40276932
+- 8 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 8 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 7 that could be checked were themselves NCI funded.
+- Reuse gap index: -1.88 (negative means less reused than comparable datasets)
   - Human gastric cancer progression and stabilization of ATG2B through RNF5 binding facilitated by autophagy-associated CircDHX8. (2024) PMID 38866787
   - Hyperactivation of mTOR/eIF4E Signaling Pathway Promotes the Production of Tryptophan-To-Phenylalanine Substitutants in EBV-Positive Gastric Cancer. (2024) PMID 38994917
   - Comprehensive landscape of m6A regulator-related gene patterns and tumor microenvironment infiltration characterization in gastric cancer. (2024) PMID 39013954
+  - A data-driven pan-cancer proteogenomic analysis reveals the characteristics of human cancer protein expression. (2026) PMID 41550727
+  - Multi-Omics Characterization of E3 Regulatory Patterns in Different Cancer Types. (2024) PMID 39062881
 
 ## Provenance
 

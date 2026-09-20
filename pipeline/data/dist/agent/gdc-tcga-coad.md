@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1943
-- Reuse gap index: +2.11 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Articles that analyzed these data: 1838
+- 112 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 6963 (attention, not reuse)
+- Reuse gap index: +2.69 (negative means less reused than comparable datasets)
   - Epigenetic fingerprints link early-onset colon and rectal cancer to pesticide exposure. (2026) PMID 42014507
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
+  - Tumor mutational burden predicts neoantigen profiles and immunotherapy response in microsatellite stable tumors across different cancer types. (2025) PMID 41583482
+  - A nine-gene nicotine-metabolism signature predicts prognosis and characterizes the immune landscape in colon adenocarcinoma. (2026) PMID 41816596
+  - Prognostic Significance and Immune Correlation of CCL3 Expression in Colon Adenocarcinoma: Insights From Multidatabase Analysis. (2026) PMID 42004887
+  - Identification and Validation of Mitophagy-Related Biomarkers in Colorectal Cancer: An Integrated Analysis of Single-Cell Transcriptome and Mendelian Randomization. (2026) PMID 42108926
 
 ## Provenance
 

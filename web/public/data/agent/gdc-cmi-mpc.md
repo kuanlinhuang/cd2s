@@ -41,7 +41,8 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 2
-- Reuse gap index: +0.45 (negative means less reused than comparable datasets)
+- 3 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 2 are kept as exemplars. Of the 2 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 2 that could be checked were themselves NCI funded.
+- Reuse gap index: +0.87 (negative means less reused than comparable datasets)
   - A patient-driven clinicogenomic partnership for metastatic prostate cancer. (2022) PMID 36177448
   - Reduced immunogenicity of MYC amplified, metastatic prostate cancer. (2026) PMID 41743583
 

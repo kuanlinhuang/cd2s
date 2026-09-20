@@ -113,7 +113,7 @@ const ROWS: Row[] = [
   {
     key: "reuse",
     label: "Articles that analyzed it",
-    hint: "The accession appears in the methods, results, a table or a figure.",
+    hint: "The accession appears in the article's methods section.",
     render: (r) =>
       r.has_citable_accession === false ? (
         <span className="text-meta t-faint">

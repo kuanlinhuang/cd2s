@@ -59,14 +59,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "METTL1-modulated LSM14A facilitates proliferation and migration in glioblastoma via the stabilization of DDX5.",
-      "identifier": "https://doi.org/10.1016/j.isci.2024.110225",
-      "datePublished": "2024"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",

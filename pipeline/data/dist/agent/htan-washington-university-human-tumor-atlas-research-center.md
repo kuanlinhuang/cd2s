@@ -28,7 +28,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - Citations to the dataset's publication: 676 (attention, not reuse)
-- Reuse gap index: -3.00 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.85 (negative means less reused than comparable datasets)
 
 ## Provenance
 

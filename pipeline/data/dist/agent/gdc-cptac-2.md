@@ -41,12 +41,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 8
-- Reuse gap index: -0.39 (negative means less reused than comparable datasets)
+- 13 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 4 of the 10 that could be checked were themselves NCI funded.
+- Reuse gap index: -0.06 (negative means less reused than comparable datasets)
+  - Proteogenomic Landscape of Breast Cancer Tumorigenesis and Targeted Therapy. (2020) PMID 33212010
   - pyComBat, a Python tool for batch effects correction in high-throughput molecular data using empirical Bayes methods. (2023) PMID 38057718
-  - Inflammatory reprogramming of the solid tumor microenvironment by infiltrating clonal hematopoiesis is associated with adverse outcomes. (2025) PMID 40037357
-  - Prognostic relevance of HRDness gene expression signature in ovarian high-grade serous carcinoma; JGOG3025-TR2 study. (2023) PMID 36593360
-  - T-Cell Infiltration and Clonality May Identify Distinct Survival Groups in Colorectal Cancer: Development and Validation of a Prognostic Model Based on The Cancer Genome Atlas (TCGA) and Clinical Proteomic Tumor Analysis Consortium (CPTAC). (2022) PMID 36497365
-  - Alternate RNA decoding results in stable and abundant proteins in mammals. (2026) PMID 42343131
+  - Proteogenomic Characterization of Ovarian HGSC Implicates Mitotic Kinases, Replication Stress in Observed Chromosomal Instability. (2020) PMID 32529193
+  - Quantification of Human Epidermal Growth Factor Receptor 2 by Immunopeptide Enrichment and Targeted Mass Spectrometry in Formalin-Fixed Paraffin-Embedded and Frozen Breast Cancer Tissues. (2021) PMID 34136904
+  - Mapping the KRAS proteoform landscape in colorectal cancer identifies truncated KRAS4B that decreases MAPK signaling. (2023) PMID 36470426
 
 ## Provenance
 

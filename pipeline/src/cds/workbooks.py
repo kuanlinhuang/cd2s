@@ -183,6 +183,31 @@ def execute(script_path: Path, *, timeout: int = 1200, out_dir: Path | None = No
     return receipt
 
 
+def first_figure(notebook_path: Path) -> bytes | None:
+    """The first rendered image in an executed notebook, as PNG bytes.
+
+    Returned rather than written so the caller decides where it belongs. `None` when the
+    notebook produced no figure, which is not an error: a workbook is allowed to be all
+    text, and the site simply shows no preview for it.
+    """
+    import base64
+
+    nb = json.loads(notebook_path.read_text())
+    for cell in nb.get("cells", []):
+        for output in cell.get("outputs", []) or []:
+            png = (output.get("data") or {}).get("image/png")
+            if png:
+                return base64.b64decode(png)
+    return None
+
+
+def png_size(data: bytes) -> tuple[int, int]:
+    """Pixel width and height from a PNG's IHDR chunk, which is always the first one."""
+    if data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
+        raise ValueError("not a PNG")
+    return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+
+
 def r_workbooks() -> list[Path]:
     """R workbooks present in the tree.
 

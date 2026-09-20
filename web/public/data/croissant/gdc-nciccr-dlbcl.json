@@ -11,7 +11,7 @@
   "description": "Genomic Variation in Diffuse Large B Cell Lymphomas",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-nciccr-dlbcl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Genomic Variation in Diffuse Large B Cell Lymphomas",
+  "citeAs": "Genetics and Pathogenesis of Diffuse Large B-Cell Lymphoma",
   "version": "as-retrieved",
   "datePublished": "2018-01-01",
   "recordSet": [

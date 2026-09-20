@@ -11,9 +11,9 @@
   "description": "This cancer develops in the outer surface of the thymus, a gland behind the breastbone that produces T-cells, a type of white blood cells. Thymoma is rare, but it is the most common tumor in adults affecting the mediastinum, which is the cavity between the lungs containing the heart, esophagus, and trachea. A tumor of the thymus tends to grow slowly and rarely spreads to other parts of the body. However, of the estimated 400 Americans who develop this cancer each year, half are diagnosed with metastatic thymoma. When the cancer metastasizes, only 45% of patients survive five years after their diagnosis. Please see the DICOM converted Slide Microscopy images for the TCGA-THYM collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-thym",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Thymoma",
+  "citeAs": "The Integrated Genomic Landscape of Thymic Epithelial Tumors",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2018-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

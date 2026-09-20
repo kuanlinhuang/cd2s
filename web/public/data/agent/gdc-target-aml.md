@@ -69,14 +69,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 280
+- Articles that analyzed these data: 137
+- 129 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 3 of the 10 that could be checked had no author in common with the generating team, and 9 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 695 (attention, not reuse)
-- Reuse gap index: -1.20 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.00 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural alterations and age-specific mutational interactions. (2018) PMID 29227476
+  - Genomic Profiling of Pediatric Acute Myeloid Leukemia Reveals a Changing Mutational Landscape from Disease Diagnosis to Relapse. (2016) PMID 26941285
   - Genetic mechanisms of primary chemotherapy resistance in pediatric acute myeloid leukemia. (2019) PMID 30760869
   - A new genomic framework to categorize pediatric acute myeloid leukemia. (2024) PMID 38212634
-  - Integrated Genomic Analysis Identifies UBTF Tandem Duplications as a Recurrent Lesion in Pediatric Acute Myeloid Leukemia. (2022) PMID 35176137
 
 ## Provenance
 

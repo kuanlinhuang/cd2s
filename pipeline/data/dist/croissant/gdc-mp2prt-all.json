@@ -11,7 +11,7 @@
   "description": "MP2PRT-ALL is the strongest treatment-response resource in this corpus, and it is not widely known. Every one of the 1,510 patients has a populated treatment outcome, a named regimen or line of therapy, and a progression status at follow-up - 100% coverage on all three, which is rarer than it sounds. Median follow-up is 100.2 months with a maximum of 180.8, the longest realised follow-up of any cohort indexed here. Whole genome sequencing covers 1,507 cases, exome 1,494 and RNA sequencing 1,479.\nBecause the cohort is drawn from cooperative-group trials, the treatment is protocolised rather than heterogeneous, which removes the confounding that usually defeats treatment-response analysis in observational cohorts. 333 of 1,510 patients are recorded as Hispanic or Latino, a group with documented excess ALL incidence and inferior outcomes and one that is under-represented in most genomic cohorts.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-mp2prt-all",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Molecular and pharmacological heterogeneity of ETV6::RUNX1 acute lymphoblastic leukemia.",
+  "citeAs": "Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia",
   "version": "as-retrieved",
   "datePublished": "2025-01-01",
   "recordSet": [

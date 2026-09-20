@@ -84,8 +84,9 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
+- 2 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, 0 of the 1 that could be checked had no author in common with the generating team, and 1 of the 1 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 138 (attention, not reuse)
-- Reuse gap index: -0.64 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.56 (negative means less reused than comparable datasets)
   - Distinctive molecular features of radiation-induced thyroid cancers. (2025) PMID 40845117
 
 ## Provenance

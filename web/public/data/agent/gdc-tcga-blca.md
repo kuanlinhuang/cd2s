@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1121
-- Reuse gap index: +1.38 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
-  - RIPK3 modulates sarcoma through immune checkpoint HAVCR2. (2022) PMID 36238358
+- Articles that analyzed these data: 894
+- 111 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 2361 (attention, not reuse)
+- Reuse gap index: +1.95 (negative means less reused than comparable datasets)
+  - Harnessing Ubiquitin-Proteasome System-Related Genes to Identify Subtypes of Bladder Cancer and Reveal Immune Landscape. (2026) PMID 41496642
+  - DARS2 serves as an independent prognostic factor and participates in multiple biological processes in bladder urothelial carcinoma. (2026) PMID 42164352
+  - The tumor-associated fibroblasts regulate urothelial carcinoma progression. (2026) PMID 40973873
+  - Identification of biomarkers associated with mitophagy in bladder cancer. (2025) PMID 41006616
+  - Bladder cancer diagnostic and prognostic models from DNA methylation by multi algorithm machine learning. (2025) PMID 41298892
 
 ## Provenance
 

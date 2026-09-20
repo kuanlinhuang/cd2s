@@ -79,23 +79,13 @@
   "funding": [
     {
       "@type": "Grant",
-      "identifier": "U01CA190214",
-      "name": "Qualification and Deployment of Imaging Biomarkers of Cancer Treatment Response",
+      "identifier": "U54CA149145",
+      "name": "MODELING THE ROLE OF DIFFERENTIATION IN AML",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA190214"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "U01CA187947",
-      "name": "Computing, Optimizing, and Evaluating Quantitative Cancer Imaging Biomarkers",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA187947"
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U54CA149145"
     },
     {
       "@type": "Grant",
@@ -116,6 +106,36 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA160251"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA124435",
+      "name": "Leadership, Planning and Evaluation",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA124435"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA190214",
+      "name": "Qualification and Deployment of Imaging Biomarkers of Cancer Treatment Response",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA190214"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "U01CA187947",
+      "name": "Computing, Optimizing, and Evaluating Quantitative Cancer Imaging Biomarkers",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U01CA187947"
     }
   ],
   "dateModified": "2026-09-18T02:44:36.389375+00:00",

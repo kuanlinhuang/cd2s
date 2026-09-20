@@ -71,14 +71,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 5
+- Articles that analyzed these data: 4
+- 13 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 6 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 333 (attention, not reuse)
-- Reuse gap index: -1.26 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.04 (negative means less reused than comparable datasets)
+  - A multiprotein supercomplex controlling oncogenic signalling in lymphoma. (2018) PMID 29925955
+  - Genome-wide Screens Identify Lineage- and Tumor-Specific Genes Modulating MHC-I- and MHC-II-Restricted Immunosurveillance of Human Lymphomas. (2021) PMID 33271120
+  - Compromised counterselection by FAS creates an aggressive subtype of germinal center lymphoma. (2021) PMID 33237303
+  - Response to Bruton's tyrosine kinase inhibitors in aggressive lymphomas linked to chronic selective autophagy. (2024) PMID 38215749
   - A Hyper-IgM Syndrome Mutation in Activation-Induced Cytidine Deaminase Disrupts G-Quadruplex Binding and Genome-wide Chromatin Localization. (2020) PMID 33098766
-  - Developmental Deconvolution for Classification of Cancer Origin. (2022) PMID 36041084
-  - International Prognostic Index-Based Immune Prognostic Model for Diffuse Large B-Cell Lymphoma. (2021) PMID 34745101
-  - Oncolytic herpes simplex virus infects myeloma cells &lt;i&gt;in vitro&lt;/i&gt; and &lt;i&gt;in vivo&lt;/i&gt;. (2021) PMID 33738338
-  - Pareto task inference analysis reveals cellular trade-offs in diffuse large B-Cell lymphoma transcriptomic data. (2024) PMID 40809150
 
 ## Provenance
 

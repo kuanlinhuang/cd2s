@@ -42,12 +42,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 18
-- Reuse gap index: -0.01 (negative means less reused than comparable datasets)
+- 24 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 10 that could be checked were themselves NCI funded.
+- Reuse gap index: +0.10 (negative means less reused than comparable datasets)
+  - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
   - Pathobiological functions and clinical implications of annexin dysregulation in human cancers. (2022) PMID 36247003
   - SMYD3 represses tumor-intrinsic interferon response in HPV-negative squamous cell carcinoma of the head and neck. (2023) PMID 37463106
-  - Metaproteomic Analysis of an Oral Squamous Cell Carcinoma Dataset Suggests Diagnostic Potential of the Mycobiome. (2023) PMID 36674563
 
 ## Provenance
 

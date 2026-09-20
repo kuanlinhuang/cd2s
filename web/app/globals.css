@@ -218,6 +218,81 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* The front door explains a connection across repositories and workflows, so its
+   background carries a quiet coordinate grid rather than a decorative illustration.
+   It reads as data infrastructure in both themes and disappears beneath the form. */
+.home-hero,
+.notebook-hero {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 0%, var(--accent-bg) 0, transparent 48%),
+    var(--bg);
+}
+.home-hero::before,
+.notebook-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.38;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+.home-hero::after,
+.notebook-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  right: -150px;
+  top: -190px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 42px color-mix(in srgb, var(--accent-bg) 55%, transparent),
+    0 0 0 84px color-mix(in srgb, var(--accent-bg) 25%, transparent);
+}
+
+.bridge-step + .bridge-step {
+  border-top: 1px solid var(--border);
+}
+
+.impact-panel {
+  border-top-width: 3px;
+}
+.impact-panel:nth-child(1) {
+  border-top-color: var(--strong);
+}
+.impact-panel:nth-child(2) {
+  border-top-color: var(--mixed);
+}
+
+.analysis-path-arrow {
+  position: absolute;
+  z-index: 2;
+  right: -16px;
+  top: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .bridge-step + .bridge-step {
+    border-top: 0;
+  }
+}
+
 /* Respect a reduced-motion preference everywhere rather than per-component. */
 @media (prefers-reduced-motion: reduce) {
   html {

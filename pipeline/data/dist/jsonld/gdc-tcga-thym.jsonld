@@ -77,7 +77,14 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The Integrated Genomic Landscape of Thymic Epithelial Tumors",
+      "identifier": "https://pubmed.ncbi.nlm.nih.gov/29438696/",
+      "datePublished": "2018"
+    }
+  ],
   "funding": [
     {
       "@type": "Grant",
@@ -281,7 +288,7 @@
     }
   ],
   "dateModified": "2026-09-18T02:36:55.296983+00:00",
-  "datePublished": "2011-01-01",
+  "datePublished": "2018-01-01",
   "variableMeasured": [
     {
       "@type": "PropertyValue",

@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 989
-- Reuse gap index: +1.78 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Comprehensive assessment of disulfidptosis-related long non-coding RNA index as biomarkers for predicting clinical outcomes and immune microenvironment in pancreatic cancer. (2025) PMID 40530161
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
+- Articles that analyzed these data: 854
+- 114 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 9 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 1705 (attention, not reuse)
+- Reuse gap index: +3.05 (negative means less reused than comparable datasets)
+  - The immune-related prognostic gene AIM2 promotes pancreatic cancer progression via inflammasome. (2025) PMID 40804050
+  - Machine learning-based construction of a programmed cell death-related model reveals prognosis and immune infiltration in pancreatic adenocarcinoma patients. (2025) PMID 40646168
+  - Identification of prognostic and therapeutic biomarkers associated with macrophage and lipid metabolism in pancreatic cancer. (2025) PMID 40281115
+  - Identification of prognostic genes and development of a risk model for pancreatic cancer based on hypoxia- and lipid metabolism-related genes. (2026) PMID 42184045
+  - Multiomics Analysis of Nucleotide Metabolism Highlights the Important Role of Adenylate Kinase 4 in Pancreatic Cancer. (2026) PMID 42087892
 
 ## Provenance
 

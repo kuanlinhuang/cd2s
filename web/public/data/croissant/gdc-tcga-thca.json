@@ -11,9 +11,9 @@
   "description": "The Cancer Genome Atlas-Thyroid Cancer (TCGA-THCA) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the genetically-analyzed THCA cases. Please see the TCGA-THCA page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-THCA collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
   "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-thca",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "citeAs": "Thyroid Carcinoma",
+  "citeAs": "Integrated genomic characterization of papillary thyroid carcinoma",
   "version": "as-retrieved",
-  "datePublished": "2011-01-01",
+  "datePublished": "2013-01-01",
   "recordSet": [
     {
       "@type": "cr:RecordSet",

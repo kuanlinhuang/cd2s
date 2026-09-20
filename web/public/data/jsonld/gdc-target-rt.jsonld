@@ -68,14 +68,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Timed picture naming in seven languages.",
-      "identifier": "https://doi.org/10.3758/bf03196494",
-      "datePublished": "2003"
-    }
-  ],
+  "citation": [],
   "funding": [
     {
       "@type": "Grant",

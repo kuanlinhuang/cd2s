@@ -56,7 +56,14 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets.",
+      "identifier": "https://doi.org/10.1016/j.xgen.2025.100851",
+      "datePublished": "2025"
+    }
+  ],
   "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2025-01-01",

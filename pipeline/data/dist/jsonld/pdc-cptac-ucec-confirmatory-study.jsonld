@@ -67,14 +67,7 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "KinPred-RNA-kinase activity inference and cancer type classification using machine learning on RNA-seq data.",
-      "identifier": "https://doi.org/10.1016/j.isci.2024.109333",
-      "datePublished": "2024"
-    }
-  ],
+  "citation": [],
   "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2024-01-01",

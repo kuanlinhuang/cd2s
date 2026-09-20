@@ -69,14 +69,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 6
+- Articles that analyzed these data: 3
+- 22 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 4 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 898 (attention, not reuse)
-- Reuse gap index: +1.05 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.60 (negative means less reused than comparable datasets)
+  - Tryptophan-derived microbial metabolites activate the aryl hydrocarbon receptor in tumor-associated macrophages to suppress anti-tumor immunity. (2022) PMID 35139353
   - Systematic determination of the mitochondrial proportion in human and mice tissues for single-cell RNA-sequencing data quality control. (2021) PMID 32840568
+  - Bioengineering Approaches for the Advanced Organoid Research. (2021) PMID 34561899
+  - Patient-derived organoids (PDOs) and PDO-derived xenografts (PDOXs): New opportunities in establishing faithful pre-clinical cancer models. (2022) PMID 39036550
   - Human Pancreatic Cancer Single-Cell Atlas Reveals Association of CXCL10+ Fibroblasts and Basal Subtype Tumor Cells. (2025) PMID 39636224
-  - The DNA methylation landscape of human cancer organoids available at the American type culture collection. (2020) PMID 32396494
-  - Targeting SMAD-Dependent Signaling: Considerations in Epithelial and Mesenchymal Solid Tumors. (2024) PMID 38543112
-  - cIAP1/2 Antagonism Induces Antigen-Specific T Cell-Dependent Immunity. (2023) PMID 36881882
 
 ## Provenance
 

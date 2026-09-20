@@ -346,8 +346,40 @@ def to_agent_brief(rec: DatasetRecord) -> str:
             "evidence of absence."
         )
     else:
-        analyzed = m.n_by_tier.get(ReuseTier.T3_ANALYZED.value, 0)
-        lines.append(f"- Articles that analyzed these data: {analyzed}")
+        analyzed = m.n_by_tier.get(ReuseTier.T3_ANALYZED.value)
+        if analyzed is None:
+            lines.append(
+                "- Reuse of these data could not be measured. Europe PMC indexes this "
+                "dataset's accession as separate words, and too few of the matching "
+                "articles are open access to estimate how many of them are really about "
+                "this dataset. No count is given rather than an inflated one."
+            )
+        else:
+            lines.append(f"- Articles that analyzed these data: {analyzed}")
+        graded = [x for x in rec.reuse if x.tier in (ReuseTier.T3_ANALYZED, ReuseTier.T4_CONFIRMED)]
+        if m.n_reuse_examined and graded:
+            # A null flag means nobody could check, which is not a negative answer.
+            overlap_checked = [x for x in graded if x.independent_of_generators is not None]
+            funding_checked = [x for x in graded if x.nci_funded_reuse is not None]
+            overlap = (
+                "author overlap with the generating team could not be checked for any of them"
+                if not overlap_checked
+                else f"{sum(1 for x in overlap_checked if x.independent_of_generators)} of "
+                f"the {len(overlap_checked)} that could be checked had no author in common "
+                f"with the generating team"
+            )
+            funding = (
+                "none could be checked for NCI funding of their own"
+                if not funding_checked
+                else f"{sum(1 for x in funding_checked if x.nci_funded_reuse)} of the "
+                f"{len(funding_checked)} that could be checked were themselves NCI funded"
+            )
+            lines.append(
+                f"- {m.n_reuse_examined} articles matching this dataset's accession "
+                f"search were retrieved and graded individually, and the strongest "
+                f"{len(rec.reuse)} are kept as exemplars. Of the "
+                f"{len(graded)} that analyzed the data, {overlap}, and {funding}."
+            )
         if m.n_citations_to_primary_publication:
             lines.append(
                 f"- Citations to the dataset's publication: "

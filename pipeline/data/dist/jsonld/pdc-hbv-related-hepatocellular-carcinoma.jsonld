@@ -94,22 +94,12 @@
     {
       "@type": "Grant",
       "identifier": "P30CA125123",
-      "name": "Patient-Derived Xenograft Shared Resource",
+      "name": "Baylor College of Medicine Cancer Center - Cancer Center Support Grant",
       "funder": {
         "@type": "Organization",
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA125123"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA188305",
-      "name": "Role of NCOA5 in hepatic steatosis and hepatocarcinogenesis",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA188305"
     }
   ],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",

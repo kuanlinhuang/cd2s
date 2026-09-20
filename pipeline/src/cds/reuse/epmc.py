@@ -261,19 +261,32 @@ def _short_authors(author_string: str | None) -> str | None:
     return f"{surname} et al." if "," in author_string else surname
 
 
-def author_surnames(author_string: str | None) -> set[str]:
-    """Surnames, lowercased, for author-overlap tests."""
+def author_keys(author_string: str | None) -> set[str]:
+    """Author identities as "surname i", for overlap tests that have to be specific.
+
+    Surname alone is far too coarse once the generating team is the real one. A TCGA
+    cohort's awards name a few hundred investigators between them, and a set that size
+    containing Chen, Wang, Li, Smith and Anderson intersects almost any author list in
+    oncology - so every downstream paper would be judged a follow-up by the same team
+    and nothing would ever be independent.
+
+    Adding the first initial is not identity resolution, and two different J. Chens
+    still collide. But it turns a test that was certain to over-match into one that is
+    merely imperfect, and it errs towards calling reuse dependent, which is the
+    conservative direction for a claim of genuine external reuse.
+    """
     if not author_string:
         return set()
     out: set[str] = set()
     for chunk in author_string.split(","):
-        chunk = chunk.strip()
-        if not chunk:
+        parts = chunk.strip().split()
+        if not parts:
             continue
-        # Europe PMC formats authors as "Surname AB".
-        surname = chunk.split()[0] if chunk.split() else chunk
-        if len(surname) > 2:
-            out.add(surname.lower())
+        surname = parts[0]
+        if len(surname) <= 2:
+            continue
+        initial = parts[1][0].lower() if len(parts) > 1 and parts[1] else ""
+        out.add(f"{surname.lower()} {initial}".strip())
     return out
 
 
@@ -286,7 +299,7 @@ def fetch_candidates(
 ) -> tuple[list[tuple[Publication, str, set[str]]], list[str], datetime | None]:
     """Fetch candidate articles for a token at one tier.
 
-    Returns (publication, matching field, author surnames) triples plus the queries run.
+    Returns (publication, matching field, author keys) plus the queries run.
     """
     seen: dict[str, tuple[Publication, str, set[str]]] = {}
     queries: list[str] = []
@@ -312,7 +325,7 @@ def fetch_candidates(
                 seen[key] = (
                     _to_publication(h),
                     field,
-                    author_surnames(h.get("authorString")),
+                    author_keys(h.get("authorString")),
                 )
             nxt = data.get("nextCursorMark")
             if not nxt or nxt == cursor:
@@ -323,7 +336,7 @@ def fetch_candidates(
 
 def most_cited_in_window(
     client: Client, token: str, lo_year: int, hi_year: int, *, field: str = "METHODS"
-) -> tuple[Publication | None, set[str], datetime | None]:
+) -> tuple[Publication | None, datetime | None]:
     """The most-cited article referencing this accession in a given year window.
 
     Needed because a dataset's marker paper will not appear in a relevance-ordered page
@@ -341,16 +354,11 @@ def most_cited_in_window(
     }
     r = client.get(f"{BASE}/search", params=params)
     if not r.ok:
-        return None, set(), r.retrieved_at
+        return None, r.retrieved_at
     hits = (r.json().get("resultList") or {}).get("result") or []
     if not hits:
-        return None, set(), r.retrieved_at
-    top = hits[0]
-    return (
-        _to_publication(top),
-        author_surnames(top.get("authorString")),
-        r.retrieved_at,
-    )
+        return None, r.retrieved_at
+    return _to_publication(hits[0]), r.retrieved_at
 
 
 def classify_tier(matched_fields: set[str]) -> ReuseTier:

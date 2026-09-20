@@ -4,7 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 import type { NavItem } from "@/components/Nav";
 import SiteHeader from "@/components/SiteHeader";
-import { getQuestions, getStats } from "@/lib/data";
+import { getNotebookGuides, getQuestions, getStats } from "@/lib/data";
 import { num, shortDate } from "@/lib/format";
 import { siteUrl } from "@/lib/site";
 
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * The seven destinations, each with the one line that says why it is worth opening and
+ * The main destinations, each with the one line that says why it is worth opening and
  * a count where there is one to give. Computed here because the counts come from the
  * corpus; rendered by components/Nav.tsx behind a single control.
  */
@@ -53,10 +53,17 @@ function navItems(): NavItem[] {
     },
     {
       href: "/underexplored",
-      label: "Underexplored",
-      hint: "Reused far less than comparable datasets, with the model behind the label",
+      label: "Research opportunities",
+      hint: "Datasets reused far less than comparable resources, with the evidence behind the label",
       count: num(stats.n_underexplored),
       group: "find",
+    },
+    {
+      href: "/notebooks",
+      label: "Analysis notebooks",
+      hint: "Executed examples that retrieve, clean, join and analyze public cancer data",
+      count: num(getNotebookGuides().length),
+      group: "use",
     },
     {
       href: "/compare",
@@ -67,14 +74,14 @@ function navItems(): NavItem[] {
     },
     {
       href: "/network",
-      label: "Network",
+      label: "Funding and reuse",
       hint: "Which award paid for a dataset, and which awards its reuse went on to fund",
       count: num(stats.n_grants_linked),
       group: "use",
     },
     {
       href: "/agents",
-      label: "For agents",
+      label: "For software and agents",
       hint: "Every page as structured data, with open search and agent endpoints",
       count: "JSON",
       group: "use",
@@ -111,15 +118,17 @@ export default function RootLayout({
 
         <footer className="border-t py-6 text-meta no-print t-muted">
           <div className="mx-auto flex max-w-[1180px] flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 sm:px-6">
-            <span className="font-medium" style={{ color: "var(--text)" }}>
-              Cancer Data Showcase
-            </span>
+            <span className="font-medium" style={{ color: "var(--text)" }}>Cancer Data Showcase</span>
+            <span>From a research question to data you can use.</span>
             <span>
               {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
               repositories, corpus built {shortDate(stats.generated_at)}
             </span>
             <Link href="/methods" className="underline">
               How this was built
+            </Link>
+            <Link href="/notebooks" className="underline">
+              Analysis notebooks
             </Link>
             <Link href="/agents" className="underline">
               For software

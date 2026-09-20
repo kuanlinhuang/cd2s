@@ -42,12 +42,13 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 19
-- Reuse gap index: -0.26 (negative means less reused than comparable datasets)
+- 25 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 10 that could be checked were themselves NCI funded.
+- Reuse gap index: -0.28 (negative means less reused than comparable datasets)
+  - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
+  - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
   - Mucin 5AC-Mediated CD44/ITGB1 Clustering Mobilizes Adipose-Derived Mesenchymal Stem Cells to Modulate Pancreatic Cancer Stromal Heterogeneity. (2022) PMID 35219699
   - Tumor Microenvironment Responsive CD8<sup>+</sup> T Cells and Myeloid-Derived Suppressor Cells to Trigger CD73 Inhibitor AB680-Based Synergistic Therapy for Pancreatic Cancer. (2023) PMID 37867243
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
-  - Federated Deep Learning Enables Cancer Subtyping by Proteomics. (2025) PMID 40488620
-  - SiRCle (Signature Regulatory Clustering) model integration reveals mechanisms of phenotype regulation in renal cancer. (2024) PMID 39633487
 
 ## Provenance
 

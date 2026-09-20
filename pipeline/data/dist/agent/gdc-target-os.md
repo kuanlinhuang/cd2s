@@ -41,9 +41,10 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 266
-- Citations to the dataset's publication: 7 (attention, not reuse)
-- Reuse gap index: -0.10 (negative means less reused than comparable datasets)
+- Articles that analyzed these data: 244
+- 116 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 8 of the 10 that could be checked had no author in common with the generating team, and 5 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 643 (attention, not reuse)
+- Reuse gap index: +0.16 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - Metabolic control of CD47 expression through LAT2-mediated amino acid uptake promotes tumor immune evasion. (2022) PMID 36274066
   - Immune determinants of CAR-T cell expansion in solid tumor patients receiving GD2 CAR-T cell therapy. (2024) PMID 38134936

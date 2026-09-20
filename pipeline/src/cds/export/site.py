@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import io
+import shutil
 from collections import Counter
 from datetime import UTC, datetime
 from typing import Any
@@ -77,6 +78,7 @@ def search_row(r: DatasetRecord) -> dict[str, Any]:
         "is_pediatric": r.is_pediatric,
         "population_flags": population_flags(r),
         "n_verified_reuse": m.n_by_tier.get(ReuseTier.T3_ANALYZED.value),
+        "n_reuse_examined": m.n_reuse_examined,
         "n_citations_to_primary_publication": m.n_citations_to_primary_publication,
         "reuse_gap_index": m.reuse_gap_index,
         "expected_reuse": m.expected_reuse,
@@ -247,6 +249,15 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
     n_cases = sum(r.cohort.n_cases or 0 for r in with_case_count)
     assessed = [r for r in records if r.reuse_metrics.reuse_gap_index is not None]
     uncitable = [r for r in records if r.reuse_metrics.has_citable_accession is False]
+    # Has an accession, but Europe PMC's tokenization could not be corrected for it, so
+    # no count is published. A different gap from "no accession", and one the site has to
+    # be able to size rather than leave as a silent blank on some pages and not others.
+    unmeasurable = [
+        r
+        for r in records
+        if r.reuse_metrics.has_citable_accession is True
+        and r.reuse_metrics.n_by_tier.get(ReuseTier.T3_ANALYZED.value) is None
+    ]
     with_cites = [
         r for r in records if (r.reuse_metrics.n_citations_to_primary_publication or 0) > 0
     ]
@@ -286,6 +297,7 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         "n_with_treatment_response": sum(1 for r in rows if r.get("has_treatment_response")),
         "n_reuse_assessed": len(assessed),
         "n_without_citable_accession": len(uncitable),
+        "n_reuse_unmeasurable": len(unmeasurable),
         "n_with_publication_citations": len(with_cites),
         "median_citation_to_reuse_ratio": (
             round(sorted(ratios)[len(ratios) // 2], 1) if ratios else None
@@ -412,6 +424,32 @@ def write_all(
     stats = corpus_stats(records, rows)
     questions = question_index(records)
 
+    # Executed notebooks are part of the public product, not only repository artifacts.
+    # Attach a stable local download before serializing records, then copy the notebooks
+    # beside the other generated data so this also works while the source repo is private.
+    from cds import workbooks as workbook_build
+
+    notebook_files = {p.stem: p for p in workbook_build.WORKBOOK_OUT.glob("*.ipynb")}
+    # The figure a workbook produced is the most legible thing it has to offer, and it is
+    # locked inside the .ipynb until it is lifted out. Extracting it here means the site
+    # can show what the analysis looks like without a reader downloading anything.
+    previews = {name: workbook_build.first_figure(p) for name, p in notebook_files.items()}
+    previews = {name: png for name, png in previews.items() if png}
+    for record in records:
+        for example in record.analysis_examples:
+            if not example.workbook_path:
+                continue
+            name = example.template_source or example.workbook_path.rsplit("/", 1)[-1].removesuffix(
+                ".py"
+            )
+            if name in notebook_files:
+                example.notebook_download_url = f"/data/notebooks/{name}.ipynb"
+            if name in previews:
+                width, height = workbook_build.png_size(previews[name])
+                example.notebook_preview_url = f"/data/notebooks/{name}.png"
+                example.notebook_preview_width = width
+                example.notebook_preview_height = height
+
     # Agent package links are a pure function of the record id, so they are set before
     # anything is serialized. They used to be filled in afterwards, which meant every
     # record had to be dumped and written a second time to both targets - four full
@@ -433,6 +471,27 @@ def write_all(
     ):
         for target in (DIST_DIR, WEB_DATA_DIR):
             written[f"{target.name}/{name}"] = _w(target / name, obj, indent=indent)
+
+    for target in (DIST_DIR, WEB_DATA_DIR):
+        notebook_dir = target / "notebooks"
+        notebook_dir.mkdir(parents=True, exist_ok=True)
+        # The directory is a pure function of the current workbook set. Without this,
+        # a renamed or retired workbook stays committed and publicly served with no
+        # record pointing at it.
+        keep = {source.name for source in notebook_files.values()} | {
+            f"{name}.png" for name in previews
+        }
+        for stale in [*notebook_dir.glob("*.ipynb"), *notebook_dir.glob("*.png")]:
+            if stale.name not in keep:
+                stale.unlink()
+        for source in notebook_files.values():
+            shutil.copyfile(source, notebook_dir / source.name)
+        for name, png in previews.items():
+            (notebook_dir / f"{name}.png").write_bytes(png)
+        written[f"{target.name}/notebooks/*.ipynb"] = sum(
+            source.stat().st_size for source in notebook_files.values()
+        )
+        written[f"{target.name}/notebooks/*.png"] = sum(len(p) for p in previews.values())
 
     # One dump per record, written to both targets. The dump dominates export time.
     n_bytes = 0

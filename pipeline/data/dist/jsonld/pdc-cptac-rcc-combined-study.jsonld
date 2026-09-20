@@ -54,15 +54,19 @@
       "encodingFormat": "application/json"
     }
   ],
-  "citation": [
+  "citation": [],
+  "funding": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "New Method Enhanced Extraction of Protein Signatures of Renal Cell Carcinoma from Proteomics Data.",
-      "identifier": "https://doi.org/10.1021/acs.jproteome.5c00414",
-      "datePublished": "2025"
+      "@type": "Grant",
+      "identifier": "U24CA271079",
+      "name": "Proteogenomic Characterization of Tumor Tissues and Preclinical Models with High Precision",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=U24CA271079"
     }
   ],
-  "funding": [],
   "dateModified": "2026-09-18T02:36:15.354973+00:00",
   "datePublished": "2025-01-01",
   "variableMeasured": [],

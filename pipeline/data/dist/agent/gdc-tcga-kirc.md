@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 1436
-- Reuse gap index: +1.61 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
-  - Exploring Aerobic Energy Metabolism in Breast Cancer: A Mutational Profile of Glycolysis and Oxidative Phosphorylation. (2024) PMID 39684297
-  - RIPK3 modulates sarcoma through immune checkpoint HAVCR2. (2022) PMID 36238358
+- Articles that analyzed these data: 1245
+- 111 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 2845 (attention, not reuse)
+- Reuse gap index: +2.05 (negative means less reused than comparable datasets)
+  - Single-cell epigenetic profiling reveals a tumor-intrinsic interferon response program in ccRCC tied to poor prognosis and &lt;i&gt;BAP1&lt;/i&gt; loss. (2026) PMID 41719400
+  - A manganese metabolism-related gene signature stratifies prognosis and immunotherapy efficacy in kidney cancer. (2025) PMID 40591061
+  - Mendelian Randomization Identified SLC2A9 as a Novel cis-eQTL-Mediated Susceptibility Gene in Suppressing Renal Cancer and Its Related Metabolic Mechanisms. (2026) PMID 41837832
+  - Nuclear receptor corepressor 1 is a potential diagnostic and prognostic biomarker in clear cell renal cell carcinoma. (2026) PMID 41593170
+  - A multi-omics prognostic model and functional validation of &lt;i&gt;HPGD&lt;/i&gt; in clear cell renal cell carcinoma. (2026) PMID 41971124
 
 ## Provenance
 

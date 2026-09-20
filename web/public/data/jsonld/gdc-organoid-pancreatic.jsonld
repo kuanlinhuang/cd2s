@@ -79,6 +79,36 @@
   "funding": [
     {
       "@type": "Grant",
+      "identifier": "R01CA255670",
+      "name": "Mechanistic investigations of microbiome-driven aryl hydrocarbon receptor activity and macrophage function in pancreatic cancer.",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA255670"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "R01CA190449",
+      "name": "The role of marginal zone macrophages and immuno-metabolism in tumor-driven MDSC development",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA190449"
+    },
+    {
+      "@type": "Grant",
+      "identifier": "P30CA010815",
+      "name": "Research Program: Molecular and Cellular Oncogenesis",
+      "funder": {
+        "@type": "Organization",
+        "name": "National Cancer Institute"
+      },
+      "url": "https://reporter.nih.gov/search/results?text_criteria=P30CA010815"
+    },
+    {
+      "@type": "Grant",
       "identifier": "U54CA209997",
       "name": "Structural and Functional Biology-based analysis of non-oncogene cancer dependencies",
       "funder": {
@@ -246,36 +276,6 @@
         "name": "National Cancer Institute"
       },
       "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA244931"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA212600",
-      "name": "Targeting HuR to improve a synthetic lethal therapy for pancreatic cancer",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA212600"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA202762",
-      "name": "Pharmacogenomic and circulating tumor cell approach to individualized treatment of pancreatic cancer",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA202762"
-    },
-    {
-      "@type": "Grant",
-      "identifier": "R01CA198074",
-      "name": "Dosage-Dependent Hedgehog Signaling in Pancreatic Cancer",
-      "funder": {
-        "@type": "Organization",
-        "name": "National Cancer Institute"
-      },
-      "url": "https://reporter.nih.gov/search/results?text_criteria=R01CA198074"
     }
   ],
   "dateModified": "2026-09-18T02:37:04.095031+00:00",

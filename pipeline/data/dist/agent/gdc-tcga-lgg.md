@@ -41,13 +41,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## Evidence of prior reuse
 
-- Articles that analyzed these data: 707
-- Reuse gap index: +0.60 (negative means less reused than comparable datasets)
-  - On-target off-tumor toxicity of claudin18.2-directed CAR-T cells in preclinical models. (2025) PMID 41176533
+- Articles that analyzed these data: 620
+- 114 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 1 of the 10 that could be checked were themselves NCI funded.
+- Citations to the dataset's publication: 2440 (attention, not reuse)
+- Reuse gap index: +1.80 (negative means less reused than comparable datasets)
   - Updating TCGA glioma classification through integration of molecular data following the latest WHO guidelines. (2025) PMID 40467633
   - Multimodal Explainable Artificial Intelligence for Prognostic Stratification of Patients With Glioblastoma. (2025) PMID 40419087
-  - Passenger mutations link cellular origin and transcriptional identity in human lung adenocarcinomas. (2025) PMID 41310231
-  - Alternative splicing generates HER2 isoform diversity underlying antibody-drug conjugate resistance in breast cancer. (2025) PMID 40664477
+  - SNP rs615552 and lncRNA CDKN2B-AS1 influence brain cancer pathogenesis through multi-omic mechanisms. (2025) PMID 40721593
+  - A spatial transcriptomics study of MES-like and mono/macro cells in gliomas. (2025) PMID 40222970
+  - TET CpG sequence-context-specific DNA demethylation shapes progression of IDH-mutant gliomas. (2026) PMID 41850239
 
 ## Provenance
 
