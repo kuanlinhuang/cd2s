@@ -184,6 +184,16 @@ function rulesPick(s: Scored, rank: number): AgentPick {
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 const DEFAULT_MODEL = "deepseek/deepseek-v4-flash";
 
+/**
+ * How long the model gets before the rules answer instead.
+ *
+ * Deliberately shorter than the route's `maxDuration`: the point of the deadline is
+ * that a slow model degrades to the deterministic shortlist, and that only happens if
+ * the function is still alive to write it. At 60s - the whole budget - the platform
+ * reached its own limit first and the visitor got a 504 rather than the fallback.
+ */
+export const AGENT_MODEL_TIMEOUT_MS = 45_000;
+
 export function agentModel(): string {
   return process.env.OPENROUTER_MODEL?.trim() || DEFAULT_MODEL;
 }
@@ -256,7 +266,7 @@ async function rankWithModel(
     };
   });
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 60_000);
+  const timer = setTimeout(() => controller.abort(), AGENT_MODEL_TIMEOUT_MS);
   try {
     const res = await fetch(OPENROUTER_URL, {
       method: "POST",

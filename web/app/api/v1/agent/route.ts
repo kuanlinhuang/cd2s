@@ -5,6 +5,17 @@ import { answer } from "@/lib/agent";
 export const dynamic = "force-dynamic";
 
 /**
+ * The function's own budget, in seconds.
+ *
+ * It has to be stated. The model call is given `AGENT_MODEL_TIMEOUT_MS` and the route
+ * then falls back to the deterministic rules, but a platform default shorter than that
+ * kills the function first: the visitor gets a 504 and the fallback that exists for
+ * exactly this case never runs. 60 is the ceiling on every Vercel plan, and the model
+ * timeout is set well inside it so the rules answer always has room to be written.
+ */
+export const maxDuration = 60;
+
+/**
  * The dataset agent as an endpoint: describe an analysis, get a ranked shortlist with
  * reasons and blockers. GET with ?q= or POST {"q": "..."}. Same response either way.
  */
