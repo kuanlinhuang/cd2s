@@ -324,9 +324,7 @@ def index_pass(
         # *estimate*: a precision of 0.0 scales hundreds of real hits to nothing, and a
         # sampled fraction is not evidence that the literature is empty. Only a search
         # that returned nothing at all supports the claim.
-        no_reuse_identified=(
-            measured and screened == 0 and not dropped_hits and not saw_any_raw
-        ),
+        no_reuse_identified=(measured and screened == 0 and not dropped_hits and not saw_any_raw),
         search_strategy_id=INDEX_STRATEGY_ID,
         searched_at=now,
         evidence=[

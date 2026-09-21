@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import Logo from "@/components/Logo";
 import { Nav, type NavItem } from "@/components/Nav";
+import ThemeToggle from "@/components/ThemeToggle";
 
 /**
  * The header: the wordmark, and one control that opens everywhere else.
@@ -43,7 +44,10 @@ export default function SiteHeader({ items }: { items: NavItem[] }) {
               </span>
             </span>
           </Link>
-          <Nav items={items} />
+          <div className="ml-auto flex min-w-0 items-center gap-2 sm:gap-3">
+            <ThemeToggle />
+            <Nav items={items} />
+          </div>
         </div>
       </div>
     </header>

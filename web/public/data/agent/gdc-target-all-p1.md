@@ -74,7 +74,7 @@ Populated means a value exists; informative excludes 'not reported'.
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - Transcriptional landscape of B cell precursor acute lymphoblastic leukemia based on an international study of 1,223 cases. (2018) PMID 30487223
   - Genomic analyses identify recurrent MEF2D fusions in acute lymphoblastic leukaemia. (2016) PMID 27824051
-  - Targeted &lt;i&gt;in silico&lt;/i&gt; characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575
+  - Targeted in silico characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575
   - EBF1 and Pax5 safeguard leukemic transformation by limiting IL-7 signaling, Myc expression, and folate metabolism. (2020) PMID 33004416
 
 ## Provenance

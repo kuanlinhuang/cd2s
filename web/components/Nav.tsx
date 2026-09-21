@@ -74,7 +74,7 @@ export function Nav({ items }: { items: NavItem[] }) {
   }, [open]);
 
   return (
-    <div ref={wrap} className="relative ml-auto">
+    <div ref={wrap} className="relative">
       <button
         type="button"
         onClick={() => setOpenAt(open ? null : pathname)}

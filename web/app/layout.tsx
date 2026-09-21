@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 import type { NavItem } from "@/components/Nav";
 import SiteHeader from "@/components/SiteHeader";
+import { THEME_BOOT_SCRIPT } from "@/components/ThemeToggle";
 import { getNotebookGuides, getQuestions, getStats } from "@/lib/data";
 import { num, shortDate } from "@/lib/format";
 import { siteUrl } from "@/lib/site";
@@ -101,7 +102,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const stats = getStats();
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Before the first paint, so a reader who chose dark never sees a white
+            flash on navigation. See components/ThemeToggle.tsx. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
+      </head>
       <body>
         <a
           href="#main"

@@ -36,7 +36,7 @@ Dataset id: pdc-cptac-ccrcc-discovery-study
   - Analysis and Visualization of Quantitative Proteomics Data Using FragPipe-Analyst. (2024) PMID 39254081
   - Telomere-related gene risk model for prognosis and drug treatment efficiency prediction in kidney cancer. (2022) PMID 36189312
   - SETD2 deficiency accelerates sphingomyelin accumulation and promotes the development of renal cancer. (2023) PMID 37989747
-  - Identification and validation of <i>SERPINE1</i> as a prognostic and immunological biomarker in pan-cancer and in ccRCC. (2023) PMID 37680718
+  - Identification and validation of SERPINE1 as a prognostic and immunological biomarker in pan-cancer and in ccRCC. (2023) PMID 37680718
   - Integrated glycoproteomic characterization of clear cell renal cell carcinoma. (2023) PMID 37074911
 
 ## Provenance

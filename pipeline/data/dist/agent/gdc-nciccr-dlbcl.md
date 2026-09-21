@@ -76,7 +76,7 @@ Populated means a value exists; informative excludes 'not reported'.
   - Effect of ibrutinib with R-CHOP chemotherapy in genetic subtypes of DLBCL. (2021) PMID 34739844
   - Tumor interferon signaling and suppressive myeloid cells are associated with CAR T-cell failure in large B-cell lymphoma. (2021) PMID 33512407
   - Single-cell analysis of germinal-center B cells informs on lymphoma cell of origin and outcome. (2020) PMID 32603407
-  - Impact of <i>TP53</i> Genomic Alterations in Large B-Cell Lymphoma Treated With CD19-Chimeric Antigen Receptor T-Cell Therapy. (2022) PMID 34860572
+  - Impact of TP53 Genomic Alterations in Large B-Cell Lymphoma Treated With CD19-Chimeric Antigen Receptor T-Cell Therapy. (2022) PMID 34860572
 
 ## Provenance
 
