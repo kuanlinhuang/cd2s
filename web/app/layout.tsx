@@ -17,13 +17,14 @@ export const metadata: Metadata = {
     template: "%s - CD2S",
   },
   description:
-    "CD2S shows which NCI-supported cancer datasets can answer your question, what " +
+    "CD2S shows which NCI-supported cancer datasets can answer your research question, what " +
     "would block the analysis, who has already reused them, and runnable code to start.",
   openGraph: {
     title: "CD2S - Cancer Data to Science",
     description:
-      "Which cancer dataset answers my question, and how do I actually use it? " +
-      "Measured answers for 602 NCI-supported datasets, for researchers and their agents.",
+      "Which cancer dataset answers my research question, and how do I actually use it? " +
+      `Measured answers for ${getStats().n_datasets.toLocaleString("en-US")} NCI-supported ` +
+      "datasets, for researchers and their agents.",
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -60,8 +61,8 @@ function navItems(): NavItem[] {
     },
     {
       href: "/notebooks",
-      label: "Analysis notebooks",
-      hint: "Executed examples that retrieve, clean, join and analyze public cancer data",
+      label: "Community examples",
+      hint: "Analyses people ran on these datasets, executed end to end, with what they found",
       count: num(getNotebookGuides().length),
       group: "use",
     },
@@ -128,7 +129,7 @@ export default function RootLayout({
               How this was built
             </Link>
             <Link href="/notebooks" className="underline">
-              Analysis notebooks
+              Community examples
             </Link>
             <Link href="/agents" className="underline">
               For software

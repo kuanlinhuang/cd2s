@@ -234,6 +234,14 @@ def _corrected_tier_counts(
     raw_counts: dict[str, int] = {}
     winning_queries: dict[str, str] = {}
     dropped = False
+    # Whether the index saw a hit for *any* token, which is not what `raw_counts`
+    # records: that holds the raw count of the token that won its tier, and a tier is
+    # won on the corrected value. Two tokens both correcting to zero - one from a raw
+    # zero, one from hundreds of hits scaled down by a measured precision of 0.0 -
+    # leave the raw zero in `raw_counts` whenever it is the one listed first. The
+    # "nobody used this" guard reads that and turns an estimate into a census, which
+    # is the claim this module exists to refuse.
+    saw_any_raw = any(raw for tiers in raw_by_token.values() for raw, _ in tiers.values())
     for tier in INDEX_FIELDS:
         best: tuple[int, int, str] | None = None  # (corrected, raw, query)
         for tok in toks:
@@ -257,7 +265,7 @@ def _corrected_tier_counts(
         (e for e in estimates.values() if e.query == t3_query),
         estimates.get(toks[0]) if toks else None,
     )
-    return corrected, raw_counts, winning_queries, t3_estimate, dropped
+    return corrected, raw_counts, winning_queries, t3_estimate, dropped, saw_any_raw
 
 
 def index_pass(
@@ -290,7 +298,9 @@ def index_pass(
             ],
         )
 
-    by_tier, raw_by_tier, winning_queries, est, dropped_hits = _corrected_tier_counts(client, toks)
+    by_tier, raw_by_tier, winning_queries, est, dropped_hits, saw_any_raw = _corrected_tier_counts(
+        client, toks
+    )
 
     n_verified = by_tier.get(ReuseTier.T3_ANALYZED.value)
     screened = max(by_tier.values(), default=0)
@@ -315,10 +325,7 @@ def index_pass(
         # sampled fraction is not evidence that the literature is empty. Only a search
         # that returned nothing at all supports the claim.
         no_reuse_identified=(
-            measured
-            and screened == 0
-            and not dropped_hits
-            and max(raw_by_tier.values(), default=0) == 0
+            measured and screened == 0 and not dropped_hits and not saw_any_raw
         ),
         search_strategy_id=INDEX_STRATEGY_ID,
         searched_at=now,

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { EvidenceChip } from "@/components/ui";
-import { FIT_STATUS_LABELS, FIT_STATUS_MEANING, type FitStatus, type FitVerdict, fitSummary } from "@/lib/fit";
+import { FIT_STATUS_LABELS, FIT_STATUS_MEANING, type FitStatus, type FitVerdict } from "@/lib/fit";
 
 /**
  * The six verdicts as a grid. Each tile is one analysis: a status, the sentence that
@@ -87,11 +87,18 @@ export function FitStrip({ verdicts }: { verdicts: FitVerdict[] }) {
   );
 }
 
+/**
+ * The six verdicts, and nothing that restates them.
+ *
+ * This used to open with a sentence summarising the tiles - "supports overall survival,
+ * treatment response; cannot support stage-adjusted modelling" - directly above six
+ * tiles that each say so with their own evidence. A reader who has the grid does not
+ * need the list, and the count that is genuinely a summary is carried beside the
+ * section heading instead.
+ */
 export function FitGrid({ verdicts }: { verdicts: FitVerdict[] }) {
-  const summary = fitSummary(verdicts);
   return (
     <div>
-      <p className="mb-4 max-w-3xl text-lede leading-relaxed">{summary.sentence}</p>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {verdicts.map((v) => {
           const s = STATUS_STYLE[v.status];

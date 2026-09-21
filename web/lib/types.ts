@@ -339,6 +339,12 @@ export interface AnalysisExample {
    * receipt dates, so it is always rendered next to that date.
    */
   findings: string[];
+  /**
+   * Who contributed this example, when it came from outside the project. Unset for
+   * the project's own workbooks, which the gallery credits to CD2S.
+   */
+  contributor?: string | null;
+  contributor_url?: string | null;
   language: "python" | "r" | "either" | "none";
   est_runtime?: string | null;
   est_compute?: string | null;

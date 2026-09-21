@@ -304,6 +304,8 @@ def attach_workbooks(records: list[DatasetRecord]) -> dict[str, Any]:
                     outputs=entry.get("outputs", []),
                     steps=entry.get("steps", []),
                     findings=entry.get("findings", []),
+                    contributor=entry.get("contributor"),
+                    contributor_url=entry.get("contributor_url"),
                     language=entry.get("language", "python"),
                     est_runtime=entry.get("est_runtime"),
                     workbook_path=f"workbooks/python/{name}.py",

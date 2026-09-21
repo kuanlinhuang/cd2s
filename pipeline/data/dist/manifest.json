@@ -2,7 +2,7 @@
   "site": "CD2S",
   "license_content": "https://creativecommons.org/licenses/by/4.0/",
   "license_code": "https://opensource.org/licenses/MIT",
-  "generated_at": "2026-09-21T02:11:34.391372+00:00",
+  "generated_at": "2026-09-21T12:31:05.396748+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -54,7 +54,7 @@
     "jsonld": 602,
     "croissant": 602,
     "agent": 602,
-    "generated_at": "2026-09-21T02:11:35.191611+00:00"
+    "generated_at": "2026-09-21T12:31:06.379041+00:00"
   },
   "bytes_written": {
     "dist/index.json": 1330283,
@@ -73,7 +73,7 @@
     "dist/notebooks/*.png": 285193,
     "data/notebooks/*.ipynb": 506588,
     "data/notebooks/*.png": 285193,
-    "dist/datasets/*.json": 20289697,
-    "data/datasets/*.json": 20289697
+    "dist/datasets/*.json": 20290537,
+    "data/datasets/*.json": 20290537
   }
 }

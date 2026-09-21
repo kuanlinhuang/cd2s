@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Credit } from "@/components/ShareExample";
 import { Chip } from "@/components/ui";
+import { HOUSE_CONTRIBUTOR } from "@/lib/community";
 import { shortDate } from "@/lib/format";
 import type { NotebookGuide } from "@/lib/types";
 
@@ -88,14 +90,24 @@ export default function NotebookSpotlight({
 
           <div className="p-5 sm:p-6">
             <div className="mb-3 flex flex-wrap items-center gap-2">
-              <Chip tone="accent">executed end to end</Chip>
+              {/* Gated, not assumed. Once outside examples can land here, the first
+                  one without a receipt would otherwise be badged as executed on the
+                  front page with nothing behind the claim. */}
+              {hero.receipt?.executed && <Chip tone="accent">executed end to end</Chip>}
               <Chip>{hero.level}</Chip>
               <Chip>{hero.language}</Chip>
               {hero.est_runtime && <Chip>{hero.est_runtime}</Chip>}
             </div>
 
-            <h3 className="text-lg font-semibold tracking-tight">{hero.title}</h3>
-            <p className="mt-1.5 text-body t-muted">{hero.question}</p>
+            <h3 className="text-lg font-semibold tracking-tight">{hero.question}</h3>
+            <p className="mt-1.5 text-body t-muted">{hero.title}</p>
+            <div className="mt-1.5">
+              <Credit
+                contributor={hero.contributor ?? HOUSE_CONTRIBUTOR}
+                contributorUrl={hero.contributor_url}
+                when={hero.receipt?.executed_at ? shortDate(hero.receipt.executed_at) : null}
+              />
+            </div>
 
             <div className="mt-4">
               <NotebookFindings guide={hero} />
@@ -134,7 +146,7 @@ export default function NotebookSpotlight({
             >
               <span className="flex items-baseline justify-between gap-3">
                 <span className="text-body font-semibold group-hover:underline">
-                  {guide.title}
+                  {guide.question}
                 </span>
                 <span className="shrink-0 text-micro t-faint">{guide.level}</span>
               </span>

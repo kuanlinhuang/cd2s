@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { NotebookFindings } from "@/components/NotebookSpotlight";
+import { Credit } from "@/components/ShareExample";
 import { Chip } from "@/components/ui";
+import { HOUSE_CONTRIBUTOR } from "@/lib/community";
 import { num, shortDate } from "@/lib/format";
 import type { NotebookGuide } from "@/lib/types";
 
@@ -54,10 +56,24 @@ export default function NotebookGallery({
                   {receipt?.executed && <Chip tone="accent">executed end to end</Chip>}
                 </div>
 
+                {/*
+                  The question leads. A researcher arrives holding one, not holding
+                  "audit whether this dataset can answer your question", and the
+                  workbook's own `question` field is already written the way they
+                  would say it. The title is what the example does about it, which is
+                  the second thing they need and never the first.
+                */}
                 <h3 className={compact ? "text-title font-semibold" : "text-lg font-semibold tracking-tight"}>
-                  {guide.title}
+                  {guide.question}
                 </h3>
-                <p className="mt-2 text-body t-muted">{guide.question}</p>
+                <p className="mt-1.5 text-body t-muted">{guide.title}</p>
+                <div className="mt-1.5">
+                  <Credit
+                    contributor={guide.contributor ?? HOUSE_CONTRIBUTOR}
+                    contributorUrl={guide.contributor_url}
+                    when={receipt?.executed_at ? shortDate(receipt.executed_at) : null}
+                  />
+                </div>
 
                 {/*
                   Full width only. A compact card is about a third of the grid, and these
@@ -208,7 +224,7 @@ export default function NotebookGallery({
                           <dd>{runtime(receipt.runtime_seconds)}</dd>
                         </div>
                       )}
-                      {receipt.n_cells_executed && (
+                      {receipt.n_cells_executed != null && (
                         <div>
                           <dt className="text-meta t-muted">Cells completed</dt>
                           <dd className="tnum">

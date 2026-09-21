@@ -63,7 +63,7 @@ CD2S is organized around a short, inspectable workflow:
    and provenance back to the source records.
 
 The live interface exposes this path through the question box on the home page, the dataset
-browser, the `/notebooks` library, and the `/underexplored` opportunity view.
+browser, the `/notebooks` community examples, and the `/underexplored` opportunity view.
 Each dataset page also carries a repository-specific route for a person and, where supported,
 an agent, so the first download step is visible rather than implied by a portal link.
 The implementation lives in [`web/app/`](web/app/) and the generated records live in
@@ -190,11 +190,18 @@ That pass found three real breakages, since fixed: the GDC agent query was short
 `filesPerStudy` was keyed on the `pdc_study_id` rather than the study UUID, which returns the
 right number of rows with every column null, and `IDCClient.get_series` does not exist.
 
-## Notebook library
+## Community examples
 
-The six executed Python notebooks go past that first download: they are the most concrete bridge
-from a catalog record to finished research work.
-Each notebook has source code, a committed executed `.ipynb`, an execution receipt, a figure
+The site shows these as community examples, at `/notebooks` and on every dataset page they
+exercise: analyses somebody ran end to end, with the numbers they got.
+The six below are the project's own, and they are the seed rather than the whole library.
+Anyone can add one through the `community-example` issue form in
+[`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/community-example.yml); an accepted example
+becomes a workbook here, with a `contributor` in `workbooks/manifest.yaml` that the site credits
+on the example and on each of its dataset pages.
+Examples with no `contributor` are credited to CD2S.
+
+Each one has source code, a committed executed `.ipynb`, an execution receipt, a figure
 preview used by the site, and the numbers it printed.
 Those numbers are the `findings` list in `workbooks/manifest.yaml`.
 They are a property of one recorded run, not a standing fact about the data, so the site always
@@ -214,8 +221,8 @@ shows them beside that run's date and they are re-checked whenever a notebook is
   size-ranked choice with a capability-ranked, constraints-first choice.
 
 Browse the visual previews and download the executed notebooks at [`/notebooks`](web/app/notebooks/).
-The manifest is the source of truth for each notebook's research question, inputs, outputs, and
-demonstrated datasets.
+The manifest is the source of truth for each example's research question, inputs, outputs,
+contributor, and demonstrated datasets.
 
 ## Running it
 

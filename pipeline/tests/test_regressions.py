@@ -949,3 +949,49 @@ def test_an_estimated_zero_does_not_claim_nobody_used_the_dataset(monkeypatch, r
     assert m.n_by_tier["t3_analyzed"] == 0
     assert m.n_by_tier_raw["t3_analyzed"] == 270
     assert m.no_reuse_identified is False
+
+
+def test_a_second_token_with_hits_blocks_the_nobody_used_this_claim(monkeypatch, record_factory):
+    """The guard has to read every token, not the one that happened to win its tier.
+
+    A PDC cohort is several study accessions, and a tier is won on the *corrected*
+    value. Give one token a raw zero and another two hundred methods hits that a
+    measured precision of 0.0 scales to zero, and both correct to zero - so the tie
+    goes to whichever token is listed first, and `n_by_tier_raw` can end up holding
+    the raw zero. Reading that as "the search returned nothing at all" republishes a
+    sampled estimate as a census, which is exactly what
+    `test_an_estimated_zero_does_not_claim_nobody_used_the_dataset` forbids for one
+    token. Twenty-six records in the corpus carry several tokens and this claim.
+    """
+    counts = {'METHODS:"PDC000606"': 200, 'INTRO:"PDC000606"': 40}
+    monkeypatch.setattr(
+        trace.epmc,
+        "_search",
+        lambda client, query, **k: ({"hitCount": counts.get(query, 0)}, None, None),
+    )
+    monkeypatch.setattr(
+        trace.precision,
+        "measure",
+        lambda client, token, query, **k: AccessionPrecision(
+            token=token,
+            query=query,
+            strategy_id="test",
+            needs_correction=True,
+            precision=0.0,
+            n_checked=8,
+            n_literal=0,
+        ),
+    )
+    # PDC000607 returns nothing and is listed first, so it wins every tie at zero.
+    rec = record_factory(
+        "x",
+        identifiers=[
+            (IdScheme.PDC_STUDY, "PDC000607"),
+            (IdScheme.PDC_STUDY, "PDC000606"),
+        ],
+    )
+
+    m = trace.index_pass(None, rec)
+
+    assert m.n_by_tier["t3_analyzed"] == 0
+    assert m.no_reuse_identified is False
