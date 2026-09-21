@@ -72,7 +72,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - 4 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 4 are kept as exemplars. Of the 4 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 4 that could be checked were themselves NCI funded.
 - Reuse gap index: -2.15 (negative means less reused than comparable datasets)
   - Genomic landscape of neutrophilic leukemias of ambiguous diagnosis. (2019) PMID 31366621
-  - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618
+  - B7H6 is the predominant activating ligand driving natural killer cell-mediated killing in patients with liquid tumours: evidence from clinical, in silico, in vitro, and in vivo studies. (2024) PMID 39579618
   - Transcriptomic signature can distinguish chronic neutrophilic leukemia from ambiguous neutrophilic leukemias. (2025) PMID 40255485
   - Identification of a Novel miR-122-5p/CDC25A Axis and Potential Therapeutic Targets for Chronic Myeloid Leukemia. (2025) PMID 41373559
 

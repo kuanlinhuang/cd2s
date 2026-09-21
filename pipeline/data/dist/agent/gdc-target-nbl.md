@@ -74,7 +74,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Reuse gap index: -3.20 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - ONECUT2 is a driver of neuroendocrine prostate cancer. (2019) PMID 30655535
-  - <i>MYC</i> Drives a Subset of High-Risk Pediatric Neuroblastomas and Is Activated through Mechanisms Including Enhancer Hijacking and Focal Enhancer Amplification. (2018) PMID 29284669
+  - MYC Drives a Subset of High-Risk Pediatric Neuroblastomas and Is Activated through Mechanisms Including Enhancer Hijacking and Focal Enhancer Amplification. (2018) PMID 29284669
   - Molecular mechanisms and therapeutic significance of Tryptophan Metabolism and signaling in cancer. (2024) PMID 39472902
   - Altered RNA editing in 3' UTR perturbs microRNA-mediated regulation of oncogenes and tumor-suppressors. (2016) PMID 26980570
 

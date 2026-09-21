@@ -60,7 +60,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - 3 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 3 are kept as exemplars. Of the 3 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 3 that could be checked were themselves NCI funded.
 - Reuse gap index: -0.59 (negative means less reused than comparable datasets)
   - Integrated proteogenomic characterization of glioblastoma evolution. (2024) PMID 38215747
-  - Inhibition of FOS-Like Antigen 1 Reduces Chemoresistance to Temozolomide Through Stemness Reprogramming via IL-6/STAT3&lt;sup&gt;Tyr705&lt;/sup&gt; Pathway. (2026) PMID 41556041
+  - Inhibition of FOS-Like Antigen 1 Reduces Chemoresistance to Temozolomide Through Stemness Reprogramming via IL-6/STAT3Tyr705 Pathway. (2026) PMID 41556041
   - T2Pdecoder enables protein-centric analyses from transcriptomic data. (2026) PMID 42277023
 
 ## Provenance

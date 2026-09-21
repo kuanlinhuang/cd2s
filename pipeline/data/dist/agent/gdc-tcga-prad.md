@@ -74,7 +74,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Reuse gap index: +1.70 (negative means less reused than comparable datasets)
   - Angiogenic Edge of ANGPT2: Genetic Variants Shape Prostate Cancer Prognosis on Androgen Deprivation Therapy. (2025) PMID 41151852
   - Developing a prognostic signature with cancer-associated fibroblasts for predicting the prognosis and immune landscape of prostate cancer. (2026) PMID 42697951
-  - Multi omics network toxicology and &lt;i&gt;in vitro&lt;/i&gt; experiments elucidate the role of benzo [a] pyrene in prostate cancer. (2026) PMID 41970950
+  - Multi omics network toxicology and in vitro experiments elucidate the role of benzo [a] pyrene in prostate cancer. (2026) PMID 41970950
   - Identification and validation of critical mitochondrial hub genes for prostate cancer. (2026) PMID 41415479
   - Age-Related Epigenetic Drift Shapes Coordinated microRNA Promoter Methylation and Expression in Prostate Cancer. (2026) PMID 42029641
 

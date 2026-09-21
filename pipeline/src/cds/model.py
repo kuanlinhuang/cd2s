@@ -9,11 +9,32 @@ provenance. This is what lets a reader verify any claim independently.
 
 from __future__ import annotations
 
+import html
+import re
 from datetime import date, datetime
 from enum import Enum
 from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
+
+# Inline typesetting a bibliographic record may carry once its entities are decoded.
+# Only these are unwrapped: anything else escaped in a title is left as literal text
+# rather than silently deleted, because it is far more likely to be the author's prose
+# than markup - a chemistry title really can contain a "<" sign.
+_INLINE_TAG = re.compile(r"</?(?:i|b|em|strong|u|sub|sup|span|it)\b[^>]*>", re.IGNORECASE)
+
+
+def clean_text(v: str | None) -> str | None:
+    """Bibliographic text as text: no entities, no tags, no exotic whitespace.
+
+    Non-breaking spaces come through Europe PMC titles too ("in\xa0vitro"), and they
+    defeat word wrapping in a narrow column, so they are folded in with the rest of the
+    whitespace here rather than left for each renderer to trip over.
+    """
+    if not v:
+        return v
+    out = _INLINE_TAG.sub("", html.unescape(v))
+    return " ".join(out.split()) or None
 
 # --------------------------------------------------------------------------------------
 # Provenance primitives
@@ -466,6 +487,23 @@ class Publication(CDSModel):
     is_open_access: bool | None = None
     citation_count: int | None = None
     evidence: list[Evidence] = Field(default_factory=list)
+
+    @field_validator("title", "journal")
+    @classmethod
+    def _plain_text(cls, v: str | None) -> str | None:
+        """A title is text, never markup.
+
+        Europe PMC returns the typesetting it holds, with the tags escaped: 26 titles in
+        this corpus carry `&lt;i&gt;in vitro&lt;/i&gt;`, and a page that renders them
+        verbatim - as every page showing a reuse study did - prints the entities on
+        screen. Unescaping alone would be worse, turning them into live markup in an
+        SEO description or a JSON-LD document, so the tags are unwrapped and dropped.
+
+        On the model rather than at the Europe PMC boundary because the enriched store
+        is already full of them, and a validator repairs what is loaded as well as what
+        is fetched. No re-fetch is needed to clear the corpus.
+        """
+        return clean_text(v)
 
 
 class ReuseRecord(CDSModel):

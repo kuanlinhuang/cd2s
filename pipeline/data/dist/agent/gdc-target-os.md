@@ -76,7 +76,7 @@ Populated means a value exists; informative excludes 'not reported'.
   - Metabolic control of CD47 expression through LAT2-mediated amino acid uptake promotes tumor immune evasion. (2022) PMID 36274066
   - Immune determinants of CAR-T cell expansion in solid tumor patients receiving GD2 CAR-T cell therapy. (2024) PMID 38134936
   - Immuno-transcriptomic profiling of extracranial pediatric solid malignancies. (2021) PMID 34818552
-  - Targeted &lt;i&gt;in silico&lt;/i&gt; characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575
+  - Targeted in silico characterization of fusion transcripts in tumor and normal tissues via FusionInspector. (2023) PMID 37323575
 
 ## Provenance
 

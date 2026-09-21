@@ -76,7 +76,7 @@ Populated means a value exists; informative excludes 'not reported'.
   - Single-Cell View of Tumor Microenvironment Gradients in Pleural Mesothelioma. (2024) PMID 38959428
   - Genomic and transcriptomic analyses identify a prognostic gene signature and predict response to therapy in pleural and peritoneal mesothelioma. (2023) PMID 36773602
   - An integrative analysis reveals cancer risk associated with artificial sweeteners. (2025) PMID 39780215
-  - Epigenetic Silencing of <i>LRP2</i> Is Associated with Dedifferentiation and Poor Survival in Multiple Solid Tumor Types. (2023) PMID 36980716
+  - Epigenetic Silencing of LRP2 Is Associated with Dedifferentiation and Poor Survival in Multiple Solid Tumor Types. (2023) PMID 36980716
 
 ## Provenance
 

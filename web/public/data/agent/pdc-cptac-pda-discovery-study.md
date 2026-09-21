@@ -62,7 +62,7 @@ Populated means a value exists; informative excludes 'not reported'.
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Arginine deprivation enriches lung cancer proteomes with cysteine by inducing arginine-to-cysteine substitutants. (2024) PMID 38759626
   - Mucin 5AC-Mediated CD44/ITGB1 Clustering Mobilizes Adipose-Derived Mesenchymal Stem Cells to Modulate Pancreatic Cancer Stromal Heterogeneity. (2022) PMID 35219699
-  - Tumor Microenvironment Responsive CD8<sup>+</sup> T Cells and Myeloid-Derived Suppressor Cells to Trigger CD73 Inhibitor AB680-Based Synergistic Therapy for Pancreatic Cancer. (2023) PMID 37867243
+  - Tumor Microenvironment Responsive CD8+ T Cells and Myeloid-Derived Suppressor Cells to Trigger CD73 Inhibitor AB680-Based Synergistic Therapy for Pancreatic Cancer. (2023) PMID 37867243
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
 
 ## Provenance

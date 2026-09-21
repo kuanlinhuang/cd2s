@@ -34,7 +34,7 @@ Dataset id: pdc-prospective-colon-pnnl-proteome-qeplus
 - 29 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 1 of the 10 that could be checked were themselves NCI funded.
 - Reuse gap index: +1.99 (negative means less reused than comparable datasets)
   - Arginase-1 inhibition reduces migration ability and metastatic colonization of colon cancer cells. (2023) PMID 36639644
-  - LINC00982-encoded protein PRDM16-DT regulates <i>CHEK2</i> splicing to suppress colorectal cancer metastasis and chemoresistance. (2024) PMID 38855188
+  - LINC00982-encoded protein PRDM16-DT regulates CHEK2 splicing to suppress colorectal cancer metastasis and chemoresistance. (2024) PMID 38855188
   - Targeting ARF1-IQGAP1 interaction to suppress colorectal cancer metastasis and vemurafenib resistance. (2023) PMID 36396045
   - The cryptic lncRNA-encoded microprotein TPM3P9 drives oncogenic RNA splicing and tumorigenesis. (2025) PMID 39865075
   - Network-based elucidation of colon cancer drug resistance mechanisms by phosphoproteomic time-series analysis. (2024) PMID 38724493
