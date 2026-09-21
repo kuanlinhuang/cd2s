@@ -56,7 +56,14 @@ interface Wall {
   question: string;
   /** Why it is slow today. */
   cost: string;
-  /** A count, what it is, and where to go and see it. */
+  /**
+   * A count, what it is, and where to go and see it.
+   *
+   * Keep a label under about fifty characters. These are read as a scannable column of
+   * six, and at the full container width anything longer wraps onto a second line,
+   * which breaks the rhythm the column is for. Narrower than `lg` they all wrap and
+   * there is nothing to be done about it; the budget is for where it can be held.
+   */
   helps: { value: string; label: string; href: string }[];
 }
 
@@ -73,12 +80,12 @@ function walls(n: ValueStackCounts): [Wall, Wall] {
       helps: [
         {
           value: count(n.measured),
-          label: "datasets we checked for the six analyses people ask for most",
+          label: "datasets checked for the six most-asked analyses",
           href: "/datasets",
         },
         {
           value: count(n.questions),
-          label: "research questions already matched to a dataset that fits",
+          label: "research questions already matched to a dataset",
           href: "/questions",
         },
         {
@@ -103,12 +110,12 @@ function walls(n: ValueStackCounts): [Wall, Wall] {
         },
         {
           value: count(n.notebooks),
-          label: "community examples that carry on from the download to a result",
+          label: "community examples that go from download to result",
           href: "/notebooks",
         },
         {
           value: "JSON",
-          label: "every dataset as data, if you are sending an AI agent",
+          label: "every dataset as data, for an AI agent to read",
           href: "/agents",
         },
       ],
