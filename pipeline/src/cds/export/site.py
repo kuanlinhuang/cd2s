@@ -485,12 +485,19 @@ def write_all(
         # The directory is a pure function of the current workbook set. Without this,
         # a renamed or retired workbook stays committed and publicly served with no
         # record pointing at it.
-        keep = {source.name for source in notebook_files.values()} | {
-            f"{name}.png" for name in previews
-        }
-        for stale in [*notebook_dir.glob("*.ipynb"), *notebook_dir.glob("*.png")]:
-            if stale.name not in keep:
-                stale.unlink()
+        #
+        # Only when there is a workbook set to be a function of, though. On a checkout
+        # that has not run `cds workbooks` - a fresh clone, a CI job, a sparse
+        # checkout - `notebook_files` is empty, and an unguarded sweep reads that as
+        # "every published notebook is stale" and deletes the whole gallery. An empty
+        # build directory is an absence of information, not evidence of retirement.
+        if notebook_files or previews:
+            keep = {source.name for source in notebook_files.values()} | {
+                f"{name}.png" for name in previews
+            }
+            for stale in [*notebook_dir.glob("*.ipynb"), *notebook_dir.glob("*.png")]:
+                if stale.name not in keep:
+                    stale.unlink()
         for source in notebook_files.values():
             shutil.copyfile(source, notebook_dir / source.name)
         for name, png in previews.items():
