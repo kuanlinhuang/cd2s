@@ -23,6 +23,12 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 # than markup - a chemistry title really can contain a "<" sign.
 _INLINE_TAG = re.compile(r"</?(?:i|b|em|strong|u|sub|sup|span|it)\b[^>]*>", re.IGNORECASE)
 
+# A complete character reference: named, decimal or hex, and terminated. Only these are
+# decoded. `html.unescape` also resolves the legacy unterminated forms, which turns an
+# author's "signalling &notable in ..." into "signalling ¬able in ..." - silently, and in
+# the one field this module exists to keep faithful.
+_ENTITY = re.compile(r"&(?:#[0-9]{1,7}|#[xX][0-9a-fA-F]{1,6}|[a-zA-Z][a-zA-Z0-9]{1,31});")
+
 
 def clean_text(v: str | None) -> str | None:
     """Bibliographic text as text: no entities, no tags, no exotic whitespace.
@@ -33,7 +39,7 @@ def clean_text(v: str | None) -> str | None:
     """
     if not v:
         return v
-    out = _INLINE_TAG.sub("", html.unescape(v))
+    out = _INLINE_TAG.sub("", _ENTITY.sub(lambda m: html.unescape(m.group(0)), v))
     return " ".join(out.split()) or None
 
 
