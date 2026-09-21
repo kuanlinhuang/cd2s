@@ -701,6 +701,18 @@ class AnalysisExample(CDSModel):
             "it is always shown next to that run's date."
         ),
     )
+    contributor: str | None = Field(
+        default=None,
+        description=(
+            "Who contributed this example, when it came from outside the project. "
+            "Left unset for the project's own workbooks, which the site attributes to "
+            "CD2S rather than to a person."
+        ),
+    )
+    contributor_url: str | None = Field(
+        default=None,
+        description="Where the contributor can be credited: a lab page, ORCID or profile.",
+    )
     language: Literal["python", "r", "either", "none"] = "python"
     est_runtime: str | None = None
     est_compute: str | None = None

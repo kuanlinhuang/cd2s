@@ -53,7 +53,7 @@ const CAPABILITY_FILTERS = {
     test: (r: BrowseRow) => r.is_underexplored,
   },
   workbook: {
-    label: "Has a runnable workbook",
+    label: "Has a community example",
     test: (r: BrowseRow) => r.n_workbooks > 0,
   },
   reviewed: {

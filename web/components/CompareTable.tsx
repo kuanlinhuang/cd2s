@@ -155,7 +155,7 @@ const ROWS: Row[] = [
   },
   {
     key: "workbooks",
-    label: "Runnable workbooks",
+    label: "Community examples",
     render: (r) => <span className="tnum">{r.n_workbooks}</span>,
     compare: (r) => String(r.n_workbooks),
     rank: (r) => r.n_workbooks,

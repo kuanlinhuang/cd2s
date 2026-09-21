@@ -1,0 +1,65 @@
+name: Community example
+description: Share an analysis you ran on one of these datasets, so it appears on the dataset's page.
+title: "Community example: "
+labels: ["community-example"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Thanks for sharing. An example is published once someone on the project has run
+        it end to end and recorded a receipt, the same bar the project's own workbooks
+        meet, so please point at code that runs rather than at a description of it.
+
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset
+      description: The dataset id or page URL this example works on.
+      placeholder: gdc-cgci-htmcp-cc
+    validations:
+      required: true
+
+  - type: input
+    id: summary
+    attributes:
+      label: What you did, in one line
+      placeholder: Overall survival by stage, with the endpoint derived from three fields
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: What you found when it ran
+      description: >-
+        The numbers it printed, not what it could print. Include the date of the run.
+      placeholder: |
+        1,076 of 1,098 cases carry a usable endpoint - 150 deaths, 926 censored,
+        median follow-up 25.6 months among the censored. Run of 12 Sept 2026.
+    validations:
+      required: true
+
+  - type: input
+    id: code
+    attributes:
+      label: Link to the code
+      description: A notebook, script, repository or gist that someone else can run.
+    validations:
+      required: true
+
+  - type: input
+    id: credit
+    attributes:
+      label: How to credit you
+      description: The name and link to show on the example. Leave blank to stay anonymous.
+      placeholder: A. Researcher, https://orcid.org/0000-0000-0000-0000
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before you submit
+      options:
+        - label: The code runs against public data, and carries no credentials or controlled-access files.
+          required: true
+        - label: I am happy for this to be published under the repository's licences (text CC BY 4.0, code MIT).
+          required: true
