@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
+import { type LaneKey, LANE_RULE } from "@/lib/lanes";
 import type { NetworkData, NetworkEdge, NetworkNode } from "@/lib/types";
 
 /**
@@ -22,8 +23,6 @@ import type { NetworkData, NetworkEdge, NetworkNode } from "@/lib/types";
  * vertically: a four-stage flow folded into one column is a list, and a list with
  * curves drawn over it is a worse list.
  */
-
-type LaneKey = "generation" | "dataset" | "article" | "enabled";
 
 /**
  * Which accent a card's left rule takes.
@@ -353,21 +352,16 @@ function NodeCard({
             </span>
           )}
           {node.meta && (
-            <span className="mt-0.5 line-clamp-1 text-micro t-faint">{node.meta}</span>
+            <span className="mt-0.5 line-clamp-1 text-micro t-faint" title={node.meta}>
+              {node.meta}
+            </span>
           )}
         </>
       )}
     </>
   );
 
-  const rule =
-    laneKey === "dataset"
-      ? "var(--accent)"
-      : laneKey === "generation"
-        ? "var(--viz-1)"
-        : laneKey === "enabled"
-          ? "var(--viz-mute)"
-          : "var(--border-strong)";
+  const rule = LANE_RULE[laneKey];
 
   const style: React.CSSProperties = {
     background: focus ? "var(--accent-bg)" : "var(--bg-raised)",
