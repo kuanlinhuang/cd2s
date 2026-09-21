@@ -65,7 +65,7 @@ function walls(n: ValueStackCounts): [Wall, Wall] {
   return [
     {
       step: "01",
-      question: "Which one can answer my question?",
+      question: "Which one can answer my research question?",
       cost:
         "A portal tells you what is in a dataset, not whether it can answer your " +
         "question. Finding that out means reading papers and data dictionaries, or " +
@@ -103,7 +103,7 @@ function walls(n: ValueStackCounts): [Wall, Wall] {
         },
         {
           value: count(n.notebooks),
-          label: "notebooks that carry on from the download to a result",
+          label: "community examples that carry on from the download to a result",
           href: "/notebooks",
         },
         {
@@ -131,7 +131,7 @@ export default function ValueStack({
       >
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-micro font-semibold uppercase tracking-wider t-faint">
-            NIH already shares
+            NIH-funded research already shares
           </span>
           <ul className="flex flex-wrap items-center gap-2">
             {repositories.map((repository) => (

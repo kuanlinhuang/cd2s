@@ -24,18 +24,21 @@ export default function SiteHeader({ items }: { items: NavItem[] }) {
       style={{ background: "color-mix(in srgb, var(--bg) 96%, transparent)" }}
     >
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
-        <div className="flex h-16 items-center gap-4 sm:gap-6">
+        {/* 72px, not more: `scroll-mt-20` is what holds an anchored section clear of
+            this bar, and at 80px a section jumped to from the in-page nav would land
+            underneath it. */}
+        <div className="flex h-[72px] items-center gap-4 sm:gap-6">
           <Link
             href="/"
             aria-label="CD2S, Cancer Data to Science"
-            className="flex min-w-0 shrink-0 items-center gap-2.5"
+            className="flex min-w-0 shrink-0 items-center gap-3"
           >
-            <Logo size={34} className="shrink-0" />
+            <Logo size={44} className="shrink-0" />
             <span className="hidden min-w-0 min-[460px]:block">
-              <span className="block truncate text-title font-semibold leading-tight tracking-tight">
+              <span className="block truncate text-2xl font-semibold leading-tight tracking-tight">
                 CD2S
               </span>
-              <span className="hidden truncate text-micro leading-tight t-muted md:block">
+              <span className="hidden truncate text-meta leading-tight t-muted md:block">
                 Cancer Data to Science
               </span>
             </span>

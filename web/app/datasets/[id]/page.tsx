@@ -6,7 +6,15 @@ import { Bars, type BarRow } from "@/components/charts/Bars";
 import { FitGrid } from "@/components/FitGrid";
 import ChipList from "@/components/ChipList";
 import SectionNav from "@/components/SectionNav";
+import ShareExample, { Credit } from "@/components/ShareExample";
 import { AgeBox } from "@/components/charts/AgeBox";
+import {
+  CompositionLegend,
+  CompositionRows,
+  compositionFromCoverage,
+  compositionFromValues,
+  type CompositionRow,
+} from "@/components/charts/Composition";
 import { CoverageChart } from "@/components/charts/CoverageChart";
 import { ObservedExpected, reuseSentence } from "@/components/charts/ObservedExpected";
 import {
@@ -32,7 +40,9 @@ import {
   getSubjects,
   isInferredMarker,
 } from "@/lib/data";
-import { fitVerdicts } from "@/lib/fit";
+import { HOUSE_CONTRIBUTOR } from "@/lib/community";
+import { assayCoverage, coveringWhole } from "@/lib/assays";
+import { fitSummary, fitVerdicts } from "@/lib/fit";
 import { analyzedArticles, analyzedReuse } from "@/lib/reuse";
 import { starterSnippets } from "@/lib/starter";
 import {
@@ -44,7 +54,6 @@ import {
   SCARCE_MODALITIES,
   bytes,
   idSchemeLabel,
-  isNonAnswer,
   modalityLabel,
   months,
   num,
@@ -78,12 +87,12 @@ export async function generateMetadata({
 }
 
 const SECTIONS = [
-  { id: "fit", label: "Can it answer your question?" },
+  { id: "fit", label: "Can it answer your research question?" },
   { id: "glance", label: "At a glance" },
   { id: "useful-for", label: "Good for" },
   { id: "limitations", label: "Cannot tell you" },
   { id: "reuse", label: "Who has used it" },
-  { id: "ways", label: "Analysis notebooks" },
+  { id: "ways", label: "Community examples" },
   { id: "start", label: "Start here" },
   { id: "provenance", label: "Provenance" },
 ];
@@ -252,7 +261,7 @@ function Header({ record: r }: { record: DatasetRecord }) {
           className="rounded-md px-3.5 py-2 text-body font-medium"
           style={{ background: "var(--accent)", color: "var(--bg-raised)" }}
         >
-          Can it answer my question?
+          Can it answer my research question?
         </a>
         <a
           href="#reuse"
@@ -278,13 +287,22 @@ function Header({ record: r }: { record: DatasetRecord }) {
 // ====================================================================================
 
 function Fit({ record: r }: { record: DatasetRecord }) {
+  const verdicts = fitVerdicts(r);
+  const summary = fitSummary(verdicts);
   return (
     <Section
       id="fit"
-      title="Can it answer your question?"
-      lede="Six common analyses, each judged from how complete the fields it depends on really are. The fastest way to rule a dataset in or out before requesting access."
+      title="Can it answer your research question?"
+      aside={
+        <span className="tnum text-body t-muted">
+          <span className="font-medium" style={{ color: "var(--strong)" }}>
+            {summary.supported} of {verdicts.length}
+          </span>{" "}
+          supported
+        </span>
+      }
     >
-      <FitGrid verdicts={fitVerdicts(r)} />
+      <FitGrid verdicts={verdicts} />
     </Section>
   );
 }
@@ -293,74 +311,61 @@ function Fit({ record: r }: { record: DatasetRecord }) {
 // 1. at a glance
 // ====================================================================================
 
-/** Bars for one demographic breakdown. Uninformative values are drawn in amber. */
 /**
- * A demographic breakdown as bars, with the whole they are parts of.
+ * The record in one screen.
  *
- * The total is returned so the caller can make it the scale ceiling. Left to round up
- * the largest value instead, a category covering 207 of 212 cases drew a bar 41% of
- * the track while the label beside it read 98% - the bar and its own number disagreeing
- * about the same fact.
+ * "At a glance" had grown to a full page of its own: four stat cards, two rows of
+ * chips, four demographic cards, a ten-row assay table and a twenty-row completeness
+ * chart, all open at once. Everything in it is worth having and almost none of it is
+ * worth having first, so the things a reader checks before anything else - how many
+ * cases, what was measured on them, who is in the cohort, and can you get it - stay
+ * open, and the two reference tables fold away behind a summary that carries the
+ * number a reader would have opened them for.
  */
-function demographicRows(
-  values: Record<string, number>,
-  limit = 6,
-): { rows: BarRow[]; total: number } {
-  const total = Object.values(values).reduce((a, b) => a + b, 0);
-  const rows = Object.entries(values)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, limit)
-    .map(([label, n]) => ({
-      key: label,
-      label,
-      value: n,
-      tone: isNonAnswer(label) ? ("warn" as const) : ("primary" as const),
-      display: (
-        <>
-          {num(n)}
-          <span className="t-faint"> {total ? Math.round((100 * n) / total) : 0}%</span>
-        </>
-      ),
-      title: `${label}: ${num(n)} of ${num(total)} cases`,
-    }));
-  return { rows, total };
-}
-
-/** `Bars` for one demographic field, scaled to the cohort rather than to its own tallest row. */
-function DemographicBars({
-  values,
-  labelWidth,
-}: {
-  values: Record<string, number>;
-  labelWidth: number;
-}) {
-  const { rows, total } = demographicRows(values);
-  return <Bars rows={rows} max={total} labelWidth={labelWidth} valueWidth={80} unit="cases" />;
-}
-
-function informativeCount(values: Record<string, number>): number {
-  return Object.entries(values)
-    .filter(([k]) => !isNonAnswer(k))
-    .reduce((a, [, n]) => a + n, 0);
-}
-
 function AtAGlance({ record: r }: { record: DatasetRecord }) {
   const d = r.cohort.demographics;
   const cohortN = r.cohort.n_cases ?? null;
-  const hasSex = Object.keys(d.sex).length > 0;
-  const hasRace = Object.keys(d.race).length > 0;
-  const hasVital = Object.keys(d.vital_status).length > 0;
   const age = d.age_at_diagnosis_years;
   const hasAge = age && age.median !== undefined && age.q1 !== undefined && age.q3 !== undefined;
-  const raceInformative = informativeCount(d.race);
-  const vitalInformative = informativeCount(d.vital_status);
-  const anyDemographics = hasSex || hasRace || hasVital || hasAge;
+  const nModalities = new Set(r.assays.map((a) => a.modality)).size;
+
+  // Three composition rows rather than three cards of bars: the same values at a third
+  // of the height, and with every field drawn against the same cohort the non-answers
+  // line up, so "recorded for everyone and informative for nobody" is one glance.
+  const who = [
+    compositionFromValues("Sex", d.sex, cohortN ?? 0, { key: "sex" }),
+    compositionFromValues("Race", d.race, cohortN ?? 0, { key: "race" }),
+    compositionFromValues("Ethnicity", d.ethnicity, cohortN ?? 0, { key: "ethnicity" }),
+    compositionFromValues("Vital status", d.vital_status, cohortN ?? 0, { key: "vital" }),
+  ].filter((row): row is CompositionRow => row !== null);
+
+  const assayRows: CompositionRow[] = r.assays.map((a, i) => {
+    const { n, of, unit } = assayCoverage(a, r.cohort);
+    return compositionFromCoverage(a.label, n, of ?? 0, {
+      key: `${a.modality}-${i}`,
+      unit: unit === "samples" ? "samples" : undefined,
+      chip: SCARCE_MODALITIES.has(a.modality) ? (
+        <Chip tone="scarce" title="Scarce across the NCI portfolio">
+          scarce
+        </Chip>
+      ) : undefined,
+    });
+  });
+  const onWholeCohort = coveringWhole(r.assays, r.cohort);
+
+  const informativeFields = r.clinical_variables.filter(
+    (v) => (v.coverage_pct ?? v.populated_pct ?? 0) >= 80,
+  ).length;
 
   return (
     <Section
       id="glance"
       title="At a glance"
-      lede="Cohort, measurements, clinical completeness and access. Percentages come from the repository's own records, so they show what is actually filled in."
+      aside={
+        <span className="text-body t-muted">
+          Every percentage is the repository&rsquo;s own record of what is filled in
+        </span>
+      }
     >
       <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         <Card>
@@ -381,7 +386,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
         <Card>
           <Stat
             label="Measurement types"
-            value={num(new Set(r.assays.map((a) => a.modality)).size)}
+            value={num(nModalities)}
             sub={
               r.cohort.n_files
                 ? `${num(r.cohort.n_files)} files${r.cohort.total_bytes ? `, ${bytes(r.cohort.total_bytes)}` : ""}`
@@ -437,187 +442,168 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
         </Card>
       </div>
 
-      {/* controlled subject */}
-      <div className="mt-6">
-        <h3 className="mb-2 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
-          Subject
-          {r.subject.evidence.length > 0 && <EvidenceChip evidence={r.subject.evidence} />}
-        </h3>
-        <div className="flex flex-wrap items-center gap-2">
-          {r.subject.tissues.map((code) => {
-            const item = getSubjects().subjects.find((subject) => subject.code === code);
-            return <Chip key={code}>{item?.label ?? code}</Chip>;
-          })}
-          {r.subject.scope === "pan_cancer" && <Chip>Pan-cancer</Chip>}
-          {r.subject.scope === "non_cancer" && <Chip>Non-cancer</Chip>}
-          {r.subject.scope === "not_stated" && <Chip>Subject not stated</Chip>}
-          {r.subject.scope === "title_derived" && r.subject.tissues.length === 0 && (
-            <Chip>Subject derived from title</Chip>
-          )}
-        </div>
-        {r.subject.scope === "title_derived" && (
-          <p className="mt-2 text-meta t-muted">
-            This subject was derived from the dataset title and was not stated by the
-            repository. It is available for browsing but is never used to place this
-            dataset in an answer shortlist.
-          </p>
-        )}
-      </div>
-
-      {/* cancer types and sites as filed */}
-      <div className="mt-6">
-        <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
-          As filed by the repository
-        </h3>
-        {r.cancer_types.length === 0 && r.primary_sites.length === 0 ? (
-          <EmptyState>The repository publishes no disease classification for this dataset.</EmptyState>
-        ) : (
-          <ChipList
-            items={[
-              ...r.cancer_types.map((t) => ({
-                key: `type:${t.label}`,
-                label: t.label,
-                tone: "accent" as const,
-                title: t.ontology ? `${t.ontology} ${t.code ?? ""}` : undefined,
-              })),
-              ...r.primary_sites.map((s) => ({ key: `site:${s}`, label: s, tone: "neutral" as const })),
-            ]}
-            what="cancer types and sites"
-          />
-        )}
-      </div>
-
-      {/* who is in the cohort */}
-      <div className="mt-6">
-        <h3 className="mb-2 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
-          Who is in the cohort
-          {d.evidence.length > 0 && <EvidenceChip evidence={d.evidence} />}
-        </h3>
-        {!anyDemographics ? (
-          <EmptyState>The repository&rsquo;s harmonized records carry no demographics for this dataset.</EmptyState>
-        ) : (
-          // Two columns, not four. At four the bar column in each card collapsed to
-          // about 35px: the bars carried no readable length and the 0/50/100 ticks
-          // printed on top of each other. Half as many cards per row is what makes
-          // the chart a reading rather than a ranking.
-          <div className="grid gap-4 sm:grid-cols-2">
-            {hasSex && (
-              <Card>
-                <h4 className="mb-2 text-meta font-medium">Sex</h4>
-                <DemographicBars values={d.sex} labelWidth={70} />
-              </Card>
-            )}
-            {hasAge && (
-              <Card>
-                <h4 className="mb-2 text-meta font-medium">Age at diagnosis</h4>
-                <AgeBox stats={age} />
-              </Card>
-            )}
-            {hasRace && (
-              <Card>
-                <h4 className="mb-2 text-meta font-medium">Race</h4>
-                <DemographicBars values={d.race} labelWidth={110} />
-                {raceInformative === 0 && (
-                  <p className="mt-2 text-meta" style={{ color: "var(--weak)" }}>
-                    Every value is &ldquo;not reported&rdquo;, so no analysis by race is
-                    possible with these data.
-                  </p>
-                )}
-              </Card>
-            )}
-            {hasVital && (
-              <Card>
-                <h4 className="mb-2 text-meta font-medium">Vital status</h4>
-                <DemographicBars values={d.vital_status} labelWidth={90} />
-                {vitalInformative === 0 && (
-                  <p className="mt-2 text-meta" style={{ color: "var(--weak)" }}>
-                    Recorded for every case and informative for none. Survival analysis
-                    is impossible at any sample size.
-                  </p>
-                )}
-              </Card>
+      {/* what it is about: the controlled subject, and the repository's own wording */}
+      <div className="mt-6 grid gap-5 sm:grid-cols-2">
+        <div>
+          <h3 className="mb-2 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
+            Subject
+            {r.subject.evidence.length > 0 && <EvidenceChip evidence={r.subject.evidence} />}
+          </h3>
+          <div className="flex flex-wrap items-center gap-2">
+            {r.subject.tissues.map((code) => {
+              const item = getSubjects().subjects.find((subject) => subject.code === code);
+              return <Chip key={code}>{item?.label ?? code}</Chip>;
+            })}
+            {r.subject.scope === "pan_cancer" && <Chip>Pan-cancer</Chip>}
+            {r.subject.scope === "non_cancer" && <Chip>Non-cancer</Chip>}
+            {r.subject.scope === "not_stated" && <Chip>Subject not stated</Chip>}
+            {r.subject.scope === "title_derived" && r.subject.tissues.length === 0 && (
+              <Chip>Subject derived from title</Chip>
             )}
           </div>
-        )}
-      </div>
-
-      {/* assays */}
-      <div className="mt-6">
-        <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
-          Measurements
-        </h3>
-        <p className="mb-2 text-meta t-muted">
-          The bar shows how much of the cohort each measurement covers.
-        </p>
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[560px] text-body">
-            <thead>
-              <tr className="border-b text-left t-faint">
-                <th className="py-1.5 pr-3 font-medium">Assay</th>
-                <th className="py-1.5 pr-3 font-medium">Platform</th>
-                <th className="py-1.5 pr-3 text-right font-medium">Cases</th>
-                <th className="py-1.5 pr-3 font-medium" style={{ width: 130 }}>
-                  Share of cohort
-                </th>
-                <th className="py-1.5 pr-3 text-right font-medium">Files</th>
-                <th className="py-1.5 font-medium">Levels</th>
-              </tr>
-            </thead>
-            <tbody>
-              {r.assays.map((a, i) => {
-                const n = a.n_cases ?? a.n_samples ?? null;
-                const share = cohortN && n ? Math.min(100, (100 * n) / cohortN) : null;
-                return (
-                  <tr key={`${a.modality}-${i}`} className="border-b last:border-b-0">
-                    <td className="py-1.5 pr-3">
-                      <span className="flex items-center gap-1.5">
-                        {a.label}
-                        {SCARCE_MODALITIES.has(a.modality) && (
-                          <Chip tone="scarce" title="Scarce across the NCI portfolio">
-                            scarce
-                          </Chip>
-                        )}
-                        <EvidenceChip evidence={a.evidence} />
-                      </span>
-                    </td>
-                    <td className="py-1.5 pr-3 t-muted">{a.platform ?? "-"}</td>
-                    <td className="tnum py-1.5 pr-3 text-right">{num(n)}</td>
-                    <td className="py-1.5 pr-3">
-                      {share !== null ? (
-                        <span className="flex items-center gap-2" title={`${Math.round(share)}% of ${num(cohortN)} cases`}>
-                          <span className="bar-track" style={{ width: 80, height: 6 }}>
-                            <i style={{ width: `${share}%`, background: "var(--viz-1)" }} />
-                          </span>
-                          <span className="viz-value t-muted">{Math.round(share)}%</span>
-                        </span>
-                      ) : (
-                        <span className="t-faint">-</span>
-                      )}
-                    </td>
-                    <td className="tnum py-1.5 pr-3 text-right">{num(a.n_files)}</td>
-                    <td className="py-1.5 t-muted">{a.data_levels.join(", ") || "-"}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          {r.subject.scope === "title_derived" && (
+            <p className="mt-2 text-meta t-muted">
+              Derived from the title, not stated by the repository, and never used to place
+              this dataset in an answer shortlist.
+            </p>
+          )}
+        </div>
+        <div>
+          <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
+            As filed by the repository
+          </h3>
+          {r.cancer_types.length === 0 && r.primary_sites.length === 0 ? (
+            <EmptyState>The repository publishes no disease classification.</EmptyState>
+          ) : (
+            <ChipList
+              items={[
+                ...r.cancer_types.map((t) => ({
+                  key: `type:${t.label}`,
+                  label: t.label,
+                  tone: "accent" as const,
+                  title: t.ontology ? `${t.ontology} ${t.code ?? ""}` : undefined,
+                })),
+                ...r.primary_sites.map((s) => ({
+                  key: `site:${s}`,
+                  label: s,
+                  tone: "neutral" as const,
+                })),
+              ]}
+              what="cancer types and sites"
+            />
+          )}
         </div>
       </div>
 
-      {/* clinical completeness */}
-      {r.clinical_variables.length > 0 && (
-        <div className="mt-6">
-          <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
-            How complete the clinical fields are
+      {/* who is in the cohort, and what was measured on them */}
+      <div className="mt-6 grid gap-x-8 gap-y-6 lg:grid-cols-2">
+        <div>
+          <h3 className="mb-1 flex items-center gap-1.5 text-body font-medium uppercase tracking-wide t-faint">
+            Who is in the cohort
+            {d.evidence.length > 0 && <EvidenceChip evidence={d.evidence} />}
           </h3>
-          <p className="mb-3 max-w-2xl text-meta t-muted">
+          {who.length === 0 && !hasAge ? (
+            <EmptyState>
+              The repository&rsquo;s harmonized records carry no demographics for this
+              dataset.
+            </EmptyState>
+          ) : (
+            <>
+              <CompositionLegend />
+              {who.length > 0 && (
+                <div className="mt-3">
+                  <CompositionRows rows={who} />
+                </div>
+              )}
+              {hasAge && (
+                <div className="mt-4">
+                  <h4 className="mb-1 text-meta font-medium">Age at diagnosis</h4>
+                  <AgeBox stats={age} />
+                </div>
+              )}
+            </>
+          )}
+        </div>
+
+        <div>
+          <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
+            What was measured, and on how many
+          </h3>
+          {r.assays.length === 0 ? (
+            <EmptyState>The repository lists no measurements for this dataset.</EmptyState>
+          ) : (
+            <>
+              <p className="mb-3 text-meta t-muted">
+                {num(nModalities)} measurement {nModalities === 1 ? "type" : "types"}
+                {cohortN ? (
+                  <>
+                    , {onWholeCohort === 0 ? "none" : num(onWholeCohort)} covering the whole
+                    cohort
+                  </>
+                ) : ", and no case count to measure their coverage against"}
+                .
+              </p>
+              <CompositionRows rows={assayRows} />
+              <details className="mt-4">
+                <summary className="cursor-pointer text-body font-medium t-muted">
+                  Platform, files and data levels
+                </summary>
+                <div className="mt-2 overflow-x-auto">
+                  <table className="w-full min-w-[460px] text-body">
+                    <thead>
+                      <tr className="border-b text-left t-faint">
+                        <th className="py-1.5 pr-3 font-medium">Assay</th>
+                        <th className="py-1.5 pr-3 font-medium">Platform</th>
+                        <th className="py-1.5 pr-3 text-right font-medium">Files</th>
+                        <th className="py-1.5 font-medium">Levels</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {r.assays.map((a, i) => (
+                        <tr key={`${a.modality}-${i}`} className="border-b last:border-b-0">
+                          <td className="py-1.5 pr-3">
+                            <span className="flex items-center gap-1.5">
+                              {a.label}
+                              <EvidenceChip evidence={a.evidence} />
+                            </span>
+                          </td>
+                          <td className="py-1.5 pr-3 t-muted">{a.platform ?? "-"}</td>
+                          <td className="tnum py-1.5 pr-3 text-right">{num(a.n_files)}</td>
+                          <td className="py-1.5 t-muted">{a.data_levels.join(", ") || "-"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* clinical completeness, folded: the verdicts above are what most readers came
+          for, and this is the field-by-field working behind them */}
+      {r.clinical_variables.length > 0 && (
+        <details className="mt-6 rounded-lg border p-4" style={{ background: "var(--bg-raised)" }}>
+          <summary className="cursor-pointer text-body font-medium">
+            {r.clinical_variables.length === 1
+              ? "How complete the one clinical field is"
+              : `How complete all ${num(r.clinical_variables.length)} clinical fields are`}
+            <span className="t-muted">
+              {" "}
+              - {num(informativeFields)} informative for at least 80% of cases
+            </span>
+          </summary>
+          <p className="mt-3 text-meta t-muted">
             A field counts as informative only when it holds a real value. &ldquo;Not
             reported&rdquo; blocks an analysis just as a missing field does. Fields marked
             1:n can hold several records per case, so they show the share of cases with any
             record.
           </p>
-          <CoverageChart variables={r.clinical_variables} />
-        </div>
+          <div className="mt-3">
+            <CoverageChart variables={r.clinical_variables} />
+          </div>
+        </details>
       )}
 
       {/* access summary */}
@@ -632,7 +618,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
             <EvidenceChip evidence={r.access.evidence} />
           </div>
           {r.access.mechanism && <p className="mt-2 text-body">{r.access.mechanism}</p>}
-          <dl className="mt-3 grid gap-x-6 gap-y-2 text-body sm:grid-cols-2">
+          <dl className="mt-3 grid gap-x-6 gap-y-2 text-body sm:grid-cols-2 lg:grid-cols-3">
             {r.access.open_components.length > 0 && (
               <Field label="Open components">{r.access.open_components.join("; ")}</Field>
             )}
@@ -676,7 +662,7 @@ function UsefulFor({ record: r }: { record: DatasetRecord }) {
     <Section
       id="useful-for"
       title="What it is good for"
-      lede="Questions these data can support, with the fields each one depends on. Written and checked by a reviewer, not generated from metadata."
+      lede="Written and checked by a reviewer, not generated from metadata."
     >
       {r.useful_for.length === 0 ? (
         <EmptyState>
@@ -689,7 +675,7 @@ function UsefulFor({ record: r }: { record: DatasetRecord }) {
             <li key={i}>
               <Card>
                 <div className="flex flex-wrap items-start justify-between gap-2">
-                  <h3 className="max-w-2xl font-medium leading-snug">
+                  <h3 className="font-medium leading-snug">
                     {i + 1}. {q.question}
                   </h3>
                   <div className="flex shrink-0 items-center gap-1.5">
@@ -772,7 +758,7 @@ function Limitations({ record: r }: { record: DatasetRecord }) {
     <Section
       id="limitations"
       title="What it cannot tell you"
-      lede="What these data cannot answer, as written by a reviewer against the source."
+      lede="Written by a reviewer against the source, not inferred from what is missing."
       aside={
         blocking.length > 0 ? (
           <span className="text-meta font-medium" style={{ color: "var(--weak)" }}>
@@ -1133,7 +1119,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
                 <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
                   Possible original publication, unverified
                 </h3>
-                <p className="mb-2 max-w-2xl text-meta t-muted">
+                <p className="mb-2 text-meta t-muted">
                   No repository or reviewer names this dataset&rsquo;s marker paper, so
                   this is the pipeline&rsquo;s own guess: the earliest heavily cited
                   article that analysed the accession and names it in full text. Nothing
@@ -1161,14 +1147,14 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
           Articles that analyzed the data
         </h3>
         {analyzed.length > 0 && (
-          <p className="mb-2 max-w-2xl text-meta t-muted">
+          <p className="mb-2 text-meta t-muted">
             {listIsPartial
               ? `Examples, not the full list. ${num(m.n_reuse_examined)} articles matching this dataset's accession search were retrieved and graded individually; these are the strongest of those.`
               : "Each was retrieved and graded individually."}
           </p>
         )}
         {analyzed.length > 0 && (
-          <p className="mb-2 max-w-2xl text-meta t-muted">
+          <p className="mb-2 text-meta t-muted">
             Deep-review sample: author overlap and funding were checked only for the{" "}
             {num(r.reuse.length)} articles listed here, not for every article examined. Of
             the {num(analyzed.length)} that analyzed the data, {overlapClause}, and{" "}
@@ -1230,7 +1216,7 @@ function Reuse({ record: r }: { record: DatasetRecord }) {
           <summary className="cursor-pointer text-body font-medium">
             {weaker.length} article{weaker.length === 1 ? "" : "s"} with weaker evidence
           </summary>
-          <p className="mt-2 max-w-2xl text-meta t-muted">
+          <p className="mt-2 text-meta t-muted">
             These name the dataset, but we could not confirm the data were analyzed. Shown
             for completeness and not counted as reuse.
           </p>
@@ -1298,17 +1284,18 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
   return (
     <Section
       id="ways"
-      title="Analysis notebooks and worked examples"
-      lede="Go beyond the download. Each executed workbook retrieves, cleans and analyzes real data end to end, with a receipt recording when it ran, which packages it used and how long it took."
+      title="Community examples"
+      lede="Analyses someone ran on these data end to end, each with a receipt recording when it ran, against which packages and for how long."
+      aside={<ShareExample dataset={{ id: r.id, title: r.short_title ?? r.title }} />}
     >
       {examples.length === 0 ? (
         <EmptyState>
-          No analysis examples for this dataset yet. The executed workbooks cover the
-          common patterns and can be adapted. See{" "}
-          <Link href="/agents" className="underline">
-            workbooks
-          </Link>
-          .
+          Nobody has shared an analysis of this dataset yet. The{" "}
+          <Link href="/notebooks" className="underline">
+            examples on other datasets
+          </Link>{" "}
+          cover the common patterns and can be adapted - and if you adapt one, it belongs
+          here.
         </EmptyState>
       ) : (
         <div className="space-y-4">
@@ -1316,15 +1303,20 @@ function WaysToUse({ record: r }: { record: DatasetRecord }) {
             <Card key={i}>
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <div className="min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
+                  <div className="flex flex-wrap items-baseline gap-2">
                     <Chip tone={ex.level === "beginner" ? "accent" : "neutral"}>
                       {ex.level}
                     </Chip>
-                    <h3 className="font-medium">{ex.title}</h3>
+                    <h3 className="text-lede font-medium">{ex.question}</h3>
                   </div>
-                  <p className="mt-1 text-body t-muted">
-                    {ex.question}
-                  </p>
+                  <p className="mt-1 text-body t-muted">{ex.title}</p>
+                  <div className="mt-1">
+                    <Credit
+                      contributor={ex.contributor ?? HOUSE_CONTRIBUTOR}
+                      contributorUrl={ex.contributor_url}
+                      when={ex.receipt?.executed_at ? shortDate(ex.receipt.executed_at) : null}
+                    />
+                  </div>
                 </div>
                 <div className="flex shrink-0 flex-wrap items-center gap-1.5">
                   <Chip>{ex.language}</Chip>
@@ -1441,7 +1433,7 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
     <Section
       id="start"
       title="Start here"
-      lede="The shortest path from this page to data on your disk: starter code generated from this record's identifiers, then the access steps."
+      lede="Starter code generated from this record’s own identifiers, then the access steps."
     >
       <div className="mb-6">
         <h3 className="mb-2 text-body font-medium uppercase tracking-wide t-faint">
@@ -1506,8 +1498,11 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-baseline justify-between gap-2">
-                        <span className="font-medium">
-                          {s.action}
+                        {/* A flex row, not two inline spans: `Chip` carries no margin
+                            of its own, so the pill printed flush against the last word
+                            of the step - "…with no credentialsFor agents". */}
+                        <span className="flex flex-wrap items-baseline gap-2 font-medium">
+                          <span>{s.action}</span>
                           {s.audience && (
                             <Chip>{s.audience === "agent" ? "For agents" : "For people"}</Chip>
                           )}
@@ -1573,7 +1568,7 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
     <Section
       id="provenance"
       title="Provenance"
-      lede="Identifiers, versions, funding and verification. All of it is in this record's JSON."
+      lede="All of it, and more, is in this record’s JSON."
     >
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
@@ -1673,7 +1668,7 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
           <h3 className="mb-1 text-body font-medium uppercase tracking-wide t-faint">
             Funding
           </h3>
-          <p className="mb-3 max-w-2xl text-meta t-muted">
+          <p className="mb-3 text-meta t-muted">
             Awards resolved through NIH RePORTER. Awards that paid to generate these
             data are listed apart from awards that paid to reuse them. Both are returns on
             NCI investment, but different ones.

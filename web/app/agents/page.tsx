@@ -212,7 +212,7 @@ curl "/data/agent/gdc-fm-ad.md"`}</code>
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           {[
-            ["Audit whether a dataset can answer your question", "Measures clinical completeness and returns a verdict for six analysis classes."],
+            ["Audit whether a dataset can answer your research question", "Measures clinical completeness and returns a verdict for six analysis classes."],
             ["Survival from open data, endpoint derived correctly", "Includes the three-field follow-up derivation that a naive version gets wrong."],
             ["Treatment response, after checking the field is real", "Separates genuine response categories from disease-status codes."],
             ["Find and use the scarcest measurements", "Ranks analytical fractions by scarcity across the Proteomic Data Commons."],

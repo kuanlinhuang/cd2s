@@ -52,12 +52,25 @@ export function compact(n: number): string {
   return n.toLocaleString("en-US");
 }
 
+/**
+ * A percentage as a whole number, with a floor and a ceiling so rounding never asserts
+ * completeness the data do not have.
+ *
+ * `Math.round` alone printed "100%" for the 211 of 212 cases with a whole-slide image,
+ * which is the one claim the reader of a coverage chart must be able to trust: a
+ * cohort that is 100% covered can be analyzed whole, and this one cannot. The same
+ * applies at the bottom, where a single case out of thousands is not "0%".
+ */
+export function pctLabel(p: number): string {
+  if (p > 0 && p < 1) return "<1%";
+  if (p > 99 && p < 100) return ">99%";
+  return `${Math.round(p)}%`;
+}
+
 /** Share as a whole-number percentage string, with a floor so small shares still read. */
 export function pctOf(part: number, total: number): string {
   if (!total) return "0%";
-  const p = (100 * part) / total;
-  if (p > 0 && p < 1) return "<1%";
-  return `${Math.round(p)}%`;
+  return pctLabel((100 * part) / total);
 }
 
 export function clamp(v: number, lo: number, hi: number): number {

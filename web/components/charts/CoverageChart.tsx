@@ -1,5 +1,6 @@
 import { Chip, EvidenceChip } from "@/components/ui";
 import { BarAxis, exactScale } from "@/components/charts/BarAxis";
+import { pctLabel } from "@/lib/chart";
 import { CLINICAL_CATEGORY_LABELS } from "@/lib/format";
 import type { ClinicalVariable } from "@/lib/types";
 
@@ -161,7 +162,7 @@ export function CoverageRows({ variables }: { variables: ClinicalVariable[] }) {
                   <span style={{ flex: `${p.missing} 0 0`, background: "transparent" }} />
                 )}
               </span>
-              <span className="viz-value text-right">{Math.round(p.pct)}%</span>
+              <span className="viz-value text-right">{pctLabel(p.pct)}</span>
             </li>
           );
         })}

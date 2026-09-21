@@ -3,11 +3,19 @@ import Link from "next/link";
 import AskBox from "@/components/AskBox";
 import { FitStrip } from "@/components/FitGrid";
 import NotebookSpotlight from "@/components/NotebookSpotlight";
+import ShareExample from "@/components/ShareExample";
 import ValueStack from "@/components/ValueStack";
 import { Bars } from "@/components/charts/Bars";
-import { CoverageLegend, CoverageRows } from "@/components/charts/CoverageChart";
+import {
+  CompositionLegend,
+  CompositionRows,
+  compositionFromCoverage,
+  compositionFromValues,
+  compositionFromVariable,
+  type CompositionRow,
+} from "@/components/charts/Composition";
 import { PairedDots } from "@/components/charts/PairedDots";
-import { Card } from "@/components/ui";
+import { Card, Chip } from "@/components/ui";
 import {
   getFacets,
   getIndex,
@@ -18,10 +26,12 @@ import {
   getStats,
   getUnderexplored,
 } from "@/lib/data";
-import { fitSummary, fitVerdicts } from "@/lib/fit";
+import { assayCoverage, byCoverage } from "@/lib/assays";
+import { fitSummary, fitVerdicts, type FitVerdict } from "@/lib/fit";
 import { SCARCE_MODALITIES, num } from "@/lib/format";
 import { mostReused, reuseChartRows, untraceableTopCited } from "@/lib/reuse-chart";
 import { starterSnippets } from "@/lib/starter";
+import type { DatasetRecord, Demographics } from "@/lib/types";
 
 /**
  * The home page makes one argument: the data are already public, two things still cost
@@ -80,10 +90,141 @@ const STARTER_EXAMPLE_ID = "gdc-tcga-brca";
 /** The four clinical fields that decide whether any outcome analysis is possible. */
 const DECIDING_FIELDS = [
   "demographic.vital_status",
+  "demographic.race",
   "diagnoses.progression_or_recurrence",
   "diagnoses.treatments.treatment_type",
-  "demographic.race",
 ];
+
+/**
+ * Where a deciding field's real values can be read off the harmonized demographics
+ * rather than only counted.
+ *
+ * A coverage number says vital status is filled in for every case; the values say 116
+ * of those cases died. The second is the one an outcome analysis needs, so it is used
+ * wherever the repository publishes it and the coverage split is the fallback.
+ */
+const DECIDING_VALUES: Record<string, (d: Demographics) => Record<string, number>> = {
+  "demographic.vital_status": (d) => d.vital_status,
+  "demographic.race": (d) => d.race,
+};
+
+function decidingRows(r: DatasetRecord): CompositionRow[] {
+  const cohortN = r.cohort.n_cases ?? 0;
+  const rows: CompositionRow[] = [];
+  for (const field of DECIDING_FIELDS) {
+    const v = r.clinical_variables.find((x) => (x.harmonized_name ?? x.name) === field);
+    if (!v) continue;
+    const values = DECIDING_VALUES[field]?.(r.cohort.demographics);
+    const row =
+      values && Object.keys(values).length > 0
+        ? compositionFromValues(v.label ?? v.name, values, cohortN, { key: field, limit: 2 })
+        : compositionFromVariable(v, {
+            chip: v.is_repeated ? (
+              <Chip title="Several records per case, so this is the share of cases with at least one.">
+                1:n
+              </Chip>
+            ) : undefined,
+          });
+    if (row) rows.push({ ...row, key: field });
+  }
+  return rows;
+}
+
+/** How many measurement types were run, and on what share of the cohort. */
+const DATA_TYPES_SHOWN = 5;
+
+function dataTypeRows(r: DatasetRecord): { rows: CompositionRow[]; more: number } {
+  const sorted = byCoverage(r.assays, r.cohort);
+  const rows = sorted.slice(0, DATA_TYPES_SHOWN).map((a, i) => {
+    const { n, of, unit } = assayCoverage(a, r.cohort);
+    return compositionFromCoverage(a.label, n, of ?? 0, {
+      key: `${a.modality}-${i}`,
+      unit: unit === "samples" ? "samples" : undefined,
+    });
+  });
+  return { rows, more: Math.max(0, sorted.length - DATA_TYPES_SHOWN) };
+}
+
+/**
+ * One cohort, drawn the same way for both sides of the comparison.
+ *
+ * The card leads with what is in the four deciding fields rather than how full they
+ * are, because "recorded for 18,004 cases" and "recorded for 18,004 cases and
+ * informative for none of them" are the same coverage number and opposite answers.
+ */
+function CohortCard({
+  record,
+  verdicts,
+  supported,
+  blurb,
+}: {
+  record: DatasetRecord;
+  verdicts: FitVerdict[];
+  supported: number;
+  blurb: string;
+}) {
+  const cohortN = record.cohort.n_cases ?? null;
+  const rows = decidingRows(record);
+  const { rows: types, more } = dataTypeRows(record);
+  const nModalities = new Set(record.assays.map((a) => a.modality)).size;
+
+  return (
+    <Card className="flex flex-col">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <Link
+          href={`/datasets/${record.id}`}
+          className="text-title font-semibold hover:underline"
+          style={{ color: "var(--accent)" }}
+        >
+          {record.short_title ?? record.title}
+        </Link>
+        <span className="tnum text-meta t-muted">{num(cohortN)} patients</span>
+      </div>
+      <p className="mt-1 text-meta t-muted">{blurb}</p>
+
+      {rows.length > 0 && (
+        <div className="mt-4">
+          <h3 className="mb-2 text-micro font-semibold uppercase tracking-wider t-faint">
+            What the deciding fields hold
+          </h3>
+          <CompositionRows rows={rows} />
+        </div>
+      )}
+
+      {types.length > 0 && (
+        <div className="mt-5">
+          <h3 className="mb-2 flex flex-wrap items-baseline justify-between gap-x-3 text-micro font-semibold uppercase tracking-wider t-faint">
+            <span>What was measured</span>
+            <span className="tnum normal-case tracking-normal">
+              {num(nModalities)} data {nModalities === 1 ? "type" : "types"}
+            </span>
+          </h3>
+          <CompositionRows rows={types} />
+          {more > 0 && (
+            <p className="mt-1.5 text-meta t-faint">
+              and {num(more)} more, none on a larger share
+            </p>
+          )}
+        </div>
+      )}
+
+      <div className="mt-6">
+        <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4">
+          <span className="text-micro font-semibold uppercase tracking-wider t-faint">
+            So the six verdicts read
+          </span>
+          <span
+            className="tnum text-meta font-medium"
+            style={{ color: supported > 0 ? "var(--strong)" : "var(--weak)" }}
+          >
+            {supported} of {verdicts.length} supported
+          </span>
+        </div>
+        <FitStrip verdicts={verdicts} />
+      </div>
+    </Card>
+  );
+}
 
 export default function Home() {
   const stats = getStats();
@@ -112,9 +253,6 @@ export default function Home() {
   const largestFit = largest ? fitVerdicts(largest) : [];
   const fittingSummary = fitSummary(fittingFit);
   const largestSummary = fitSummary(largestFit);
-  const decidingFields = (fitting?.clinical_variables ?? []).filter((v) =>
-    DECIDING_FIELDS.includes(v.harmonized_name ?? v.name),
-  );
   // "85 times larger" is the whole point of the comparison, so it is computed rather
   // than written down - and dropped entirely when either cohort has no case count,
   // where the arithmetic would print a confident 0.
@@ -161,7 +299,7 @@ export default function Home() {
             CD2S &middot; Cancer Data to Science
           </p>
           <h1 className="mx-auto mt-3 max-w-[20ch] text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Which cancer dataset can answer your question?
+            Which cancer dataset can answer your research question?
           </h1>
           <div className="mx-auto mt-8 max-w-[790px] text-left">
             <p className="mb-2 px-1 font-medium">Describe the analysis you want to run</p>
@@ -189,7 +327,7 @@ export default function Home() {
 
       <section className="py-12 sm:py-14">
         <SectionHead
-          eyebrow="Built on what NIH already shares"
+          eyebrow="Built on what NIH-funded research already shares"
           title="Finding the data was never the hard part"
           method={{ href: "/methods", label: "How this was built" }}
         />
@@ -219,80 +357,36 @@ export default function Home() {
             method={{ href: "/methods#clinical", label: "How completeness is measured" }}
           />
 
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
-            <Card className="flex h-full flex-col">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <Link
-                  href={`/datasets/${fitting.id}`}
-                  className="text-title font-semibold hover:underline"
-                  style={{ color: "var(--accent)" }}
-                >
-                  {fitting.short_title ?? fitting.title}
-                </Link>
-                <span className="tnum text-meta t-muted">{num(fittingCases)} patients</span>
-              </div>
-              <p className="mt-1 text-meta t-muted">
-                Cervical cancer in an African cohort. The fields that decide an outcome
-                analysis are filled in, so the work can start.
-              </p>
-              <div className="mt-4">
-                <CoverageLegend />
-                <div className="mt-3">
-                  <CoverageRows variables={decidingFields} />
-                </div>
-              </div>
-              <div className="mt-auto pt-5">
-                <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4">
-                  <span className="text-micro font-semibold uppercase tracking-wider t-faint">
-                    So the six verdicts read
-                  </span>
-                  <span className="tnum text-meta font-medium" style={{ color: "var(--strong)" }}>
-                    {fittingSummary.supported} of {fittingFit.length} supported
-                  </span>
-                </div>
-                <FitStrip verdicts={fittingFit} />
-              </div>
-            </Card>
-
-            <div className="flex h-full flex-col gap-4">
-              {/* The contrast earns its place in three lines, not in a second panel of
-                  crosses: the point is that size is not the signal, and one number
-                  makes it. */}
-              <Card>
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                  <Link
-                    href={`/datasets/${largest.id}`}
-                    className="text-title font-semibold hover:underline"
-                    style={{ color: "var(--accent)" }}
-                  >
-                    {largest.short_title ?? largest.title}
-                  </Link>
-                  <span className="tnum text-meta t-muted">
-                    {num(largestCases)} patients
-                    {timesLarger ? `, ${timesLarger} times larger` : ""}
-                  </span>
-                </div>
-                <p className="mt-1 text-meta t-muted">
-                  The largest cohort in the GDC lists all four of the same fields, and
-                  every value in them reads &ldquo;not reported&rdquo;.
-                </p>
-                <p className="mt-3 flex items-baseline gap-2">
-                  <span className="tnum text-title font-semibold" style={{ color: "var(--weak)" }}>
-                    {largestSummary.supported} of {largestFit.length}
-                  </span>
-                  <span className="text-meta t-muted">of the six supported</span>
-                </p>
-              </Card>
-
-              <p
-                className="flex flex-1 items-center rounded-lg border-l-2 px-4 py-3 text-lede"
-                style={{ borderLeftColor: "var(--accent)", background: "var(--accent-bg)" }}
-              >
-                Size does not predict this, and no catalog reports it. Every record on the
-                site carries the same six verdicts, so you can tell before you download.
-              </p>
-            </div>
+          <div className="mb-4">
+            <CompositionLegend />
           </div>
+
+          {/* Two matching cards rather than one worked example and one footnote: the
+              claim is that size does not predict any of this, and the only way to show
+              it is to draw the same four fields and the same measurement coverage for
+              both cohorts and let the reader compare the bars. */}
+          <div className="grid items-start gap-5 lg:grid-cols-2">
+            <CohortCard
+              record={fitting}
+              verdicts={fittingFit}
+              supported={fittingSummary.supported}
+              blurb="Cervical cancer in an African cohort. The four fields that decide an outcome analysis hold real values, so the work can start."
+            />
+            <CohortCard
+              record={largest}
+              verdicts={largestFit}
+              supported={largestSummary.supported}
+              blurb={`The largest cohort in the GDC${timesLarger ? `, ${timesLarger} times the size` : ""}. It lists all four of the same fields, and holds a usable value in none of them.`}
+            />
+          </div>
+
+          <p
+            className="mt-5 rounded-lg border-l-2 px-4 py-3 text-lede"
+            style={{ borderLeftColor: "var(--accent)", background: "var(--accent-bg)" }}
+          >
+            Size does not predict this, and no catalog reports it. Every record on the
+            site carries the same six verdicts, so you can tell before you download.
+          </p>
         </section>
       )}
 
@@ -353,19 +447,22 @@ export default function Home() {
             <div className="mt-10 mb-6 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
               <div className="max-w-[60ch]">
                 <p className="text-micro font-semibold uppercase tracking-wider" style={{ color: "var(--accent)" }}>
-                  And past the download
+                  Community examples
                 </p>
                 <h3 className="mt-1.5 text-xl font-semibold tracking-tight">
-                  {num(notebooks.length)} notebooks that carry on to a result
+                  {num(notebooks.length)} analyses, and what each one found
                 </h3>
               </div>
-              <Link
-                href="/notebooks"
-                className="rounded-md border px-4 py-2 text-body font-medium"
-                style={{ borderColor: "var(--border-strong)", background: "var(--bg-raised)" }}
-              >
-                All {num(notebooks.length)} notebooks
-              </Link>
+              <div className="flex flex-wrap items-center gap-3">
+                <ShareExample />
+                <Link
+                  href="/notebooks"
+                  className="rounded-md border px-4 py-2 text-body font-medium"
+                  style={{ borderColor: "var(--border-strong)", background: "var(--bg-raised)" }}
+                >
+                  Read all {num(notebooks.length)}
+                </Link>
+              </div>
             </div>
             <NotebookSpotlight hero={hero} others={otherNotebooks} />
           </>
@@ -525,7 +622,7 @@ export default function Home() {
       </section>
 
       <section className="border-t py-12 text-center sm:py-14">
-        <h2 className="text-2xl font-semibold tracking-tight">Start with your question</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Start with your research question</h2>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link href="/ask" className="rounded-md px-4 py-2 font-medium" style={{ background: "var(--accent)", color: "var(--bg-raised)" }}>
             Ask about an analysis
