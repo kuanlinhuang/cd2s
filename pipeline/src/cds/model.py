@@ -36,6 +36,7 @@ def clean_text(v: str | None) -> str | None:
     out = _INLINE_TAG.sub("", html.unescape(v))
     return " ".join(out.split()) or None
 
+
 # --------------------------------------------------------------------------------------
 # Provenance primitives
 # --------------------------------------------------------------------------------------
