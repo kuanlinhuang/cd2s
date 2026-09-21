@@ -9,7 +9,7 @@
   "name": "gdc-rebc-thyr",
   "alternateName": "Comprehensive genomic characterization of radiation-related papillary thyroid cancer in the Ukraine",
   "description": "This cohort characterises papillary thyroid carcinoma arising in people who were children or in utero in Ukraine at the time of the 1986 Chernobyl accident, and it exists because no comparable exposure can ethically be reconstructed. Whole genome sequencing is available on 395 cases, RNA sequencing on 438 and microRNA on 437. The scientific question it was built for - what radiation does to a genome, and whether the resulting tumors differ mechanistically from sporadic ones - is answerable here and almost nowhere else.\nIt is also an object lesson in why a catalog entry is not enough. The harmonized clinical records report a median follow-up of 115 months - but that median rests on just 12 of the 449 cases. They also record vital status for 440 of 449 cases as \"not reported\". A researcher who selected this dataset on the strength of its follow-up figure would discover only after obtaining access that no survival analysis is possible, and that the follow-up figure itself rests on under 3% of the cohort.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-rebc-thyr",
+  "url": "https://cd2s.vercel.app/datasets/gdc-rebc-thyr",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Radiation-related genomic profile of papillary thyroid carcinoma after the Chernobyl accident",
   "version": "as-retrieved",

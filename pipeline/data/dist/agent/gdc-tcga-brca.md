@@ -64,14 +64,22 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Download open derived matrices from the GDC (1 hour)
+1. Download open derived matrices from the GDC [human] (1 hour)
    Expression, copy number, methylation and clinical files need no account.
    https://portal.gdc.cancer.gov/projects/TCGA-BRCA
-2. Add the imaging from the Imaging Data Commons if you need it (1-2 hours)
+2. Add the imaging from the Imaging Data Commons if you need it [human] (1-2 hours)
    Same patients, different repository, also open. Most users never make this join.
    https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=tcga_brca
-3. Request controlled access only if you need sequence-level data (days to a few weeks)
+3. Request controlled access only if you need sequence-level data [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -87,7 +95,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Articles that analyzed these data: 2373
 - 114 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 9914 (attention, not reuse)
-- Reuse gap index: +2.59 (negative means less reused than comparable datasets)
+- Reuse gap index: +2.52 (negative means less reused than comparable datasets)
   - Tumor necrosis associates with aggressive breast cancer features, increased hypoxia signaling and reduced patient survival. (2025) PMID 41310191
   - Exercise-related genes predicts overall survival and tumor immune microenvironment, and identifies the biological role of SLC52A2 in breast cancer. (2026) PMID 42215809
   - Proteasome Assembly Chaperone 3 Defines Metabolic-Immune Programs and Poor Prognosis in Breast Cancer via Multi-Omics Approaches. (2026) PMID 41869439
@@ -98,4 +106,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-brca.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-tcga-brca.json

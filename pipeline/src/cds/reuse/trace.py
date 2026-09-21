@@ -55,6 +55,19 @@ INDEX_FIELDS: dict[ReuseTier, tuple[str, ...]] = {
 INDEX_STRATEGY_ID = "epmc-index-v3"
 
 # Identifier schemes worth searching, in the order we prefer them.
+#
+# An identifier only measures reuse if authors actually write it down. Two schemes the
+# corpus carries do not qualify and are absent here on purpose:
+#
+# - cBioPortal study ids, which name a portal's copy of a study, not the data.
+# - Synapse ids, which name one folder inside an atlas. A reuse of HTAN is written up
+#   as "HTAN", "HTAPP" or the dbGaP accession, never as `syn35558468`, and the evidence
+#   is in the corpus: all fourteen HTAN records scored zero in every tier including
+#   T0 mentions, while their marker papers hold 856, 676 and 611 citations. Fourteen
+#   atlases nobody has ever referenced is not a finding, it is a broken query. Their
+#   only other identifier is the HTAN centre id (`HTA1`), which `is_strong_token`
+#   rejects - too short, and a histone gene besides - so these datasets have no
+#   citable accession at all and now say so instead of reporting a shortfall.
 TOKEN_SCHEMES = [
     IdScheme.GDC_PROJECT,
     IdScheme.PDC_STUDY,
@@ -62,8 +75,6 @@ TOKEN_SCHEMES = [
     IdScheme.DBGAP,
     IdScheme.SRA_BIOPROJECT,
     IdScheme.EGA,
-    IdScheme.SYNAPSE,
-    IdScheme.CBIOPORTAL_STUDY,
 ]
 
 MAX_INDEX_TOKENS = 3
@@ -113,9 +124,6 @@ def tokens_for(
         for v in by_scheme.get(scheme, []):
             v = v.strip()
             if not v or v in out or v in shared:
-                continue
-            # cBioPortal study ids are not accessions authors quote; skip for counting.
-            if scheme == IdScheme.CBIOPORTAL_STUDY:
                 continue
             if epmc.is_strong_token(v):
                 out.append(v)

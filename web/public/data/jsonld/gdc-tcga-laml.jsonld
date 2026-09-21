@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-laml",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-tcga-laml",
   "name": "Acute Myeloid Leukemia",
   "alternateName": [
     "TCGA-LAML"
   ],
   "description": "Acute Myeloid Leukemia",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-laml",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-laml",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-LAML",
     "gdc_program:TCGA",
@@ -49,8 +49,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -61,8 +61,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-laml.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-tcga-laml.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -14,7 +14,7 @@ This layer would translate repository holdings into three things a researcher or
 2. What analyses it cannot support, including the difference between missing, uninformative, and unmeasured fields.
 3. How the output has been reused, with evidence that separates actual analysis from a citation to the originating paper.
 
-We call the working prototype the **Cancer Data Showcase**.
+We call the working prototype **CD2S** - Cancer Data to Science.
 The prototype demonstrates the idea across 602 records from five NCI-supported repositories and investigator-cohort resources.
 It is evidence that this layer is technically feasible, useful, and directly connected to fixable sharing practices.
 
@@ -39,7 +39,7 @@ No survival, treatment-response, or race-stratified analysis can be justified fr
 54,012 of the 54,096 files are controlled access, so a researcher can spend substantial effort and request access before learning that the intended analysis is blocked.
 
 The same pattern is not an isolated data-quality complaint.
-Twenty records in the current corpus have vital status populated but entirely uninformative, race uninformative, and no treatment field populated.
+Thirty-two records in the current corpus have vital status populated but entirely uninformative, race uninformative, and no treatment field populated.
 Twenty of those records are GDC projects, including seventeen NCI-MATCH arms.
 The Chernobyl-exposed thyroid cohort reports a median follow-up of 115 months, but that time is derivable for only 12 of 449 cases and no informative outcome exists to pair with it.
 
@@ -54,9 +54,9 @@ The prototype preserves them instead of collapsing them into a misleading yes or
 Its status `not measured` is never treated as `not supported`.
 
 The same interpretive gap affects reuse measurement.
-Of 602 records, 364 have no citable accession specific enough for literature tracing.
+Of 602 records, 378 have no citable accession specific enough for literature tracing.
 For those records, a short reuse count would mean "not measurable," not "unused."
-One publication in the corpus has 646 citations but no citable data identifier.
+One publication in the corpus has 6,519 citations but no citable data identifier.
 Citation to the originating paper is also not the same as analysis of the data.
 
 The proposed approach is a reusable NCI layer with four parts.
@@ -81,6 +81,9 @@ The prototype already exposes capability filters, an analysis-fit object with si
 It also provides runnable examples for both human researchers and AI agents.
 Six Python workbooks are executed end to end against live public APIs, with receipts and output hashes.
 The same corpus is exported as machine-readable records, constraints-first agent briefs, JSON-LD, Croissant, and an OpenAPI surface so an agent can make the same selection without scraping a page.
+Every dataset page also carries a route from the record to the repository files.
+The route is derived from the dataset's own identifiers, access tier, and repository policy, and it distinguishes the steps a person takes from the API or token steps an agent takes.
+Generated steps carry derived evidence pointing to the policy they apply, while reviewer-written routes remain authoritative.
 Those six are the counted user-facing analysis workbooks, not the total executable surface.
 The pipeline also contains source adapters for GDC, PDC, IDC, HTAN, cBioPortal, and NIH RePORTER, along with cached raw records and rebuild commands.
 
@@ -120,18 +123,19 @@ The prototype's current corpus shows the scale of the opportunity:
 - Clinical completeness measured for 385 records in a shared vocabulary.
 - 206 records with a derivable survival endpoint and 62 with recorded treatment response.
 - 69 curated research questions and six executed workbooks attached to 15 dataset pages.
+- 602 dataset pages with generated or curated access routes, including 2,373 policy-backed generated steps.
 - 796 verified reuse studies where an accession was located in an analysis-relevant article section.
 - 865 distinct NCI awards linked through NIH RePORTER.
 - 349,817 patients or subjects represented across 601 records that report a count.
 
 The larger impact is on which resources get used.
 The prototype fits a transparent robust model of expected reuse using cohort size, years available, modality breadth, and access tier.
-It marks 24 records as materially underexplored after excluding records whose reuse cannot be measured.
+It marks 20 records as materially underexplored after excluding records whose reuse cannot be measured.
 The model ships its coefficients, diagnostics, rejected specification, and worst-case overprediction so the label can be recomputed or challenged.
 
 The underexplored set includes resources with clear scientific value.
 The NSCLC Radiogenomics collection pairs CT and PET imaging with matched expression on 211 patients and has three verified analyzing articles.
-The CPTAC gastric study measures seven analytical fractions on 193 tumors and is openly downloadable.
+The CPTAC gastric study carries five scarce analytical layers on 193 tumors and is openly downloadable.
 Across the Proteomic Data Commons, ubiquitylome data occur in five studies and lipidomics in three.
 These are not simply small or low-quality resources.
 They are difficult to discover as answers to a question.
@@ -151,7 +155,7 @@ We would evaluate it using four indicators:
 
 NCI could also track two upstream sharing indicators that the prototype shows are actionable:
 the proportion of outputs with a stable citable identifier, and the proportion with enough outcome and modality metadata to support capability measurement.
-In the current corpus, 364 of 602 records lack an accession specific enough to trace reuse.
+In the current corpus, 378 of 602 records lack an accession specific enough to trace reuse.
 That is a concrete deposition-time problem, not merely a downstream analytics problem.
 
 The expected scientific return is multiplicative.
@@ -206,15 +210,18 @@ An agent can therefore filter on measured fields, read blocking limitations, and
 This matters because a size-ranked agent selects the 18,004-case FM-AD cohort and then attempts an analysis the data cannot support.
 
 The system is also designed to correct itself.
-Two plausible-looking errors were caught during self-audit.
+Three plausible-looking errors were caught during self-audit.
 One follow-up calculation used a single non-null field and produced an incorrect TCGA-BRCA median.
 One availability-dating pass placed a program before its founding year because a hyphenated accession matched word-wise.
+The third is the most instructive: all fourteen HTAN atlases were being counted on a Synapse folder identifier, which no author writes in a paper, so each scored zero reuse in every tier while their marker papers hold 856, 676, and 611 citations.
+Fourteen atlases nobody had ever referenced was a broken query, not a finding.
+Those records now report that their reuse is unmeasurable instead of publishing a shortfall against an expectation, which is exactly the distinction this proposal asks NCI to make.
 The published calibration, receipts, and verification reports make these failure modes visible instead of hiding them behind a polished interface.
 
 ## Prompt 4: Transferability, sustainability, and feasibility
 
 Feasibility is demonstrated by the working prototype.
-The current build contains 602 records, 385 records with measured clinical completeness, 20 project-curated showcase pages, 24 model-identified underexplored resources, 796 verified reuse studies, 865 linked NCI awards, and six executed workbooks.
+The current build contains 602 records, 385 records with measured clinical completeness, 20 project-curated showcase pages, 20 model-identified underexplored resources, 796 verified reuse studies, 865 linked NCI awards, six executed workbooks, and a generated access route for every supported repository record.
 The workbooks run end to end against public APIs and ship execution receipts containing the run time, package information, and output hash.
 A verification pass found 123 of 123 checked links resolving across the curated pages.
 
@@ -272,7 +279,7 @@ Doing so would make existing cancer research outputs easier to find, safer to se
 
 ## Selected evidence and links
 
-- Working demonstration: <https://cancer-data-showcase.vercel.app>
+- Working demonstration: <https://cd2s.vercel.app>
 - Prototype README: [`README.md`](../README.md)
 - Supporting evidence: [`submission/supporting-evidence.md`](supporting-evidence.md)
 - Methods implementation: [`web/app/methods/page.tsx`](../web/app/methods/page.tsx)

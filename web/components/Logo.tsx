@@ -27,7 +27,7 @@ export default function Logo({
       height={size}
       className={className}
       role="img"
-      aria-label="Cancer Data Showcase"
+      aria-label="CD2S, Cancer Data to Science"
       focusable="false"
     >
       <defs>

@@ -5,14 +5,14 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
   "name": "Reproducible Proteome and Phosphoproteome Workflow BI",
   "alternateName": [
     "Reproducible Proteome and Phosphoproteome Workflow BI - Phosphoproteome",
     "Reproducible Proteome and Phosphoproteome Workflow BI - Proteome"
   ],
   "description": "Reproducible Proteome and Phosphoproteome Workflow BI",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
+  "url": "https://cd2s.vercel.app/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000312",
     "https://pdc.cancer.gov/pdc/study/PDC000309"
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-reproducible-proteome-and-phosphoproteome-workflow-bi.json",
       "encodingFormat": "application/json"
     }
   ],

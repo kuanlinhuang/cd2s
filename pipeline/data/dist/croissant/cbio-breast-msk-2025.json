@@ -9,7 +9,7 @@
   "name": "cbio-breast-msk-2025",
   "alternateName": "Breast Cancer (MSK, Nat Genet 2025)",
   "description": "Targeted sequencing of 3879 breast clinical cases and their matched normals via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-msk-2025",
+  "url": "https://cd2s.vercel.app/datasets/cbio-breast-msk-2025",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

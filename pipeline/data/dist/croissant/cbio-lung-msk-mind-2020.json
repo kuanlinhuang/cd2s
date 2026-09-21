@@ -9,7 +9,7 @@
   "name": "cbio-lung-msk-mind-2020",
   "alternateName": "Lung Adenocarcinoma (MSK Mind,Nature Cancer 2022)",
   "description": "Multimodality tools to predict response to PD-(L)1 blockade in patients with lung adenocarcinoma.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lung-msk-mind-2020",
+  "url": "https://cd2s.vercel.app/datasets/cbio-lung-msk-mind-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

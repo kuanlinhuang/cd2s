@@ -9,7 +9,7 @@
   "name": "gdc-tcga-blca",
   "alternateName": "Bladder Urothelial Carcinoma",
   "description": "The Cancer Genome Atlas-Bladder Endothelial Carcinoma (TCGA-BLCA) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP), with the cooperation of several of the TCGA tissue-contributing institutions, has archived a large portion of the radiological images of the genetically-analyzed BLCA cases. Please see the TCGA-BLCA page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-BLCA collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-blca",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-blca",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Comprehensive molecular characterization of urothelial bladder carcinoma",
   "version": "as-retrieved",

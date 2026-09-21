@@ -54,6 +54,39 @@ export function Reason({ text }: { text: string }) {
   );
 }
 
+/**
+ * All six verdicts as one row of labelled pills.
+ *
+ * For places that need the shape of a dataset's capability rather than the reasoning
+ * behind it - comparing two cohorts at a glance on the home page. Colour is carried on
+ * a left rule and never as a fill, so six pills read as one row and not as six alarms,
+ * and each pill still names its analysis, which is what makes the row legible in
+ * greyscale.
+ */
+export function FitStrip({ verdicts }: { verdicts: FitVerdict[] }) {
+  return (
+    <ul className="flex flex-wrap gap-1.5">
+      {verdicts.map((v) => {
+        const s = STATUS_STYLE[v.status];
+        return (
+          <li
+            key={v.key}
+            className="flex items-center gap-1.5 rounded px-2 py-1 text-micro"
+            style={{ background: "var(--bg-sunken)", borderLeft: `3px solid ${s.fg}` }}
+            title={`${v.label}: ${FIT_STATUS_LABELS[v.status]}. ${v.reason}.`}
+          >
+            <span aria-hidden className="font-mono" style={{ color: s.fg }}>
+              {s.glyph}
+            </span>
+            <span>{v.label}</span>
+            <span className="sr-only">: {FIT_STATUS_LABELS[v.status]}</span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export function FitGrid({ verdicts }: { verdicts: FitVerdict[] }) {
   const summary = fitSummary(verdicts);
   return (

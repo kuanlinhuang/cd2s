@@ -9,7 +9,7 @@
   "name": "cbio-lung-msk-2017",
   "alternateName": "Non-Small Cell Cancer (MSK, Cancer Discov 2017)",
   "description": "Targeted sequencing of 860 patients with metastatic lung adenocarcinoma",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-lung-msk-2017",
+  "url": "https://cd2s.vercel.app/datasets/cbio-lung-msk-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-breast",
+  "@id": "https://cd2s.vercel.app/datasets/idc-qin-breast",
   "name": "QIN-BREAST",
   "alternateName": [
     "qin_breast"
   ],
   "description": "This collection contains longitudinal PET/CT and quantitative MR images collected for the purpose of studying treatment assessment in breast cancer in the neoadjuvant setting. Images were acquired at three time points: prior to the start of treatment (t1), after the first cycle of treatment (t2), and either after the second cycle of treatment or at the completion of all treatments (prior to surgery) (t3). The PET/CT images were acquired with a support device built in-house to allow the patient to be in the prone position to facilitate registration with the MRI data. The value of this collection is to provide clinical imaging data for the development and evaluation of quantitative imaging methods for treatment assessment early in the course of therapy for breast cancer. An extension of this dataset is available via the QIN-BREAST-02 collection. Please see the QIN-Breast wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-breast",
+  "url": "https://cd2s.vercel.app/datasets/idc-qin-breast",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_breast",
     "https://www.cancerimagingarchive.net/collections/",
@@ -45,8 +45,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -57,8 +57,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-qin-breast.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-qin-breast.json",
       "encodingFormat": "application/json"
     }
   ],

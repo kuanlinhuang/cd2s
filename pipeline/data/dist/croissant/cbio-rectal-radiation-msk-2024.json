@@ -9,7 +9,7 @@
   "name": "cbio-rectal-radiation-msk-2024",
   "alternateName": "Colorectal Cancer Radiation (MSK, 2024)",
   "description": "Whole exome and targeted sequencing of 48 Rectal Adenocarcinoma samples via MSK-IMPACT and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-rectal-radiation-msk-2024",
+  "url": "https://cd2s.vercel.app/datasets/cbio-rectal-radiation-msk-2024",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

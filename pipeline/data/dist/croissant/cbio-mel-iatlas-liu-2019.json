@@ -9,7 +9,7 @@
   "name": "cbio-mel-iatlas-liu-2019",
   "alternateName": "Metastatic Melanoma (DFCI, Nat Med. 2019) - iAtlas Harmonized",
   "description": "Whole-exome sequencing and neoantigen landscape analysis of 122 patients with metastatic melanoma treated with anti-PD1 ICB, along with their matched normal samples. The reprocessing of raw sequencing data is coordinated by CRI iAtlas. Related Dataset: This is a harmonized subset of the original 144-sample DFCI study with standardized mutation calling and extended immunogenomics annotations.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-iatlas-liu-2019",
+  "url": "https://cd2s.vercel.app/datasets/cbio-mel-iatlas-liu-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

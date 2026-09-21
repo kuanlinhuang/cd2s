@@ -39,11 +39,34 @@ Populated means a value exists; informative excludes 'not reported'.
 - Race: 42.9% informative
 - Cause of death: 0.0% informative
 
+## How to get the data
+
+1. Open the project in the GDC Data Portal [human] (5 minutes)
+   Check the portal's current case and file counts before requesting anything; the cohort can change after this record was built.
+   https://portal.gdc.cancer.gov/projects/VAREPOP-APOLLO
+   Policy evidence: https://portal.gdc.cancer.gov/projects/VAREPOP-APOLLO
+2. Request controlled access through dbGaP [human] (days to a few weeks after signing official approval)
+   42 controlled-access files require an approved data access request. The request starts at dbGaP, not in the portal. The relevant study is phs001374.
+   https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+   Policy evidence: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+3. Download controlled files with your token [human]
+   An approved request yields a token. The same manifest fetches nothing controlled without it.
+   https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001374
+   Policy evidence: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001374
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
 - 2 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 1 that could be checked were themselves NCI funded.
-- Reuse gap index: -2.53 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.30 (negative means less reused than comparable datasets)
   - FocusedON-BC: A Robust Deep Learning Framework for Automated Body Composition Assessment. (2026) PMID 42124078
 
 ## Provenance
@@ -51,4 +74,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-varepop-apollo.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-varepop-apollo.json

@@ -9,7 +9,7 @@
   "name": "gdc-target-os",
   "alternateName": "Osteosarcoma",
   "description": "Osteosarcoma",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-os",
+  "url": "https://cd2s.vercel.app/datasets/gdc-target-os",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Recurrent somatic structural variations contribute to tumorigenesis in pediatric osteosarcoma",
   "version": "as-retrieved",

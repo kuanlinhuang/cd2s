@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-uw-cirp-mouse-pet-ct-nsclc",
+  "@id": "https://cd2s.vercel.app/datasets/idc-uw-cirp-mouse-pet-ct-nsclc",
   "name": "UW-CIRP-Mouse-PET-CT-NSCLC",
   "alternateName": [
     "uw_cirp_mouse_pet_ct_nsclc"
   ],
   "description": "18F-FDG PET/CT imaging of 14 genetically-engineered mouse models (GEMM) of lung squamous cell carcinoma (LUSQ) from the NCI Co-Clinical Imaging Resource Program (Co-CIRP). 11 animals were imaged before and after a novel combination therapy (anti-PD-L1 + CXCR2 antagonist), with 3 additional baseline-only animals. The dataset includes 25 imaging sessions with 75 DICOM series (25 PT, 25 CT, 25 RTSTRUCT segmentations) acquired on a Siemens Inveon PET/CT system. Please see the UW-CIRP-Mouse-PET-CT-NSCLC Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-uw-cirp-mouse-pet-ct-nsclc",
+  "url": "https://cd2s.vercel.app/datasets/idc-uw-cirp-mouse-pet-ct-nsclc",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=uw_cirp_mouse_pet_ct_nsclc",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-uw-cirp-mouse-pet-ct-nsclc.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-uw-cirp-mouse-pet-ct-nsclc.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "idc-pancreatic-ct-cbct-seg",
   "alternateName": "Pancreatic-CT-CBCT-SEG",
   "description": "The objective of this dataset is to provide a means of evaluating the performance of CT-to-CBCT deformable registration and auto-segmentation algorithms for delineating OARs from 40 patients who received ablative radiation therapy for locally advanced pancreatic cancer.The images (one treatment planning CT and two CBCT scans for each of 40 patients) were acquired during a deep inspiration breath-hold verified with an external respiratory monitor. Please see the Pancreatic-CT-CBCT-SEG wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-pancreatic-ct-cbct-seg",
+  "url": "https://cd2s.vercel.app/datasets/idc-pancreatic-ct-cbct-seg",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Pancreatic-CT-CBCT-SEG",
   "version": "as-retrieved",

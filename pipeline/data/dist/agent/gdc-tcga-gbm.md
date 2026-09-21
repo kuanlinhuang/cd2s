@@ -60,13 +60,21 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Download open derived molecular files from the GDC (1 hour)
+1. Download open derived molecular files from the GDC [human] (1 hour)
    https://portal.gdc.cancer.gov/projects/TCGA-GBM
-2. Add imaging from the Imaging Data Commons (1-2 hours)
+2. Add imaging from the Imaging Data Commons [human] (1-2 hours)
    Openly available for the same patients, and the cohort's most under-used asset.
    https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=tcga_gbm
-3. Request controlled access only for sequence-level work (days to a few weeks)
+3. Request controlled access only for sequence-level work [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -78,7 +86,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Articles that analyzed these data: 1399
 - 112 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 2 of the 9 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 6091 (attention, not reuse)
-- Reuse gap index: +1.37 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.38 (negative means less reused than comparable datasets)
   - Updating TCGA glioma classification through integration of molecular data following the latest WHO guidelines. (2025) PMID 40467633
   - Integrated pathway analysis identifies prognostically relevant subtypes of glioblastoma characterized by abnormalities in multi-omics. (2025) PMID 41292185
   - Tumor Electric Field Therapy Inhibits TGF-β/C1R Signaling Axis-Driven Epithelial-Mesenchymal Transition in Glioblastoma. (2026) PMID 41489302
@@ -89,4 +97,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-gbm.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-tcga-gbm.json

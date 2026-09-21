@@ -60,19 +60,27 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Scope with open derived expression files (1 hour)
+1. Scope with open derived expression files [human] (1 hour)
    https://portal.gdc.cancer.gov/projects/TARGET-AML
-2. Check per-layer coverage before designing a multi-omic analysis (30 minutes)
+2. Check per-layer coverage before designing a multi-omic analysis [human] (30 minutes)
    The assay table on this page shows how sharply coverage drops beyond RNA sequencing.
-3. Submit a dbGaP data access request (days to a few weeks)
+3. Submit a dbGaP data access request [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 137
 - 129 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 3 of the 10 that could be checked had no author in common with the generating team, and 9 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 695 (attention, not reuse)
-- Reuse gap index: -2.00 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.05 (negative means less reused than comparable datasets)
   - Pan-cancer genome and transcriptome analyses of 1,699 paediatric leukaemias and solid tumours. (2018) PMID 29489755
   - The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural alterations and age-specific mutational interactions. (2018) PMID 29227476
   - Genomic Profiling of Pediatric Acute Myeloid Leukemia Reveals a Changing Mutational Landscape from Disease Diagnosis to Relapse. (2016) PMID 26941285
@@ -83,4 +91,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-aml.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-target-aml.json

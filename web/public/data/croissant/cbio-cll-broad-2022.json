@@ -9,7 +9,7 @@
   "name": "cbio-cll-broad-2022",
   "alternateName": "Chronic Lymphocytic Leukemia (Broad, Nature Genetics 2022)",
   "description": "Whole genome and whole exome sequencing of 1,154 samples from 1,148 patients with Chronic Lymphocytic Leukemia and monoclonal B cell lymphocytosis and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cll-broad-2022",
+  "url": "https://cd2s.vercel.app/datasets/cbio-cll-broad-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

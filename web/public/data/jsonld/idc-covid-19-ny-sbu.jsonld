@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-covid-19-ny-sbu",
+  "@id": "https://cd2s.vercel.app/datasets/idc-covid-19-ny-sbu",
   "name": "COVID-19-NY-SBU",
   "alternateName": [
     "covid_19_ny_sbu"
   ],
   "description": "The collection of cases was acquired at Stony Brook University from patients who tested positive for COVID-19. The collection includes images from different modalities and organ sites (chest radiographs, chest CTs, brain MRIs, etc.). Radiology imaging data is extremely important in COVID-19 from both a diagnostic and a monitoring perspective, given the crucial nature of COVID-19 pulmonary disease and its rapid phenotypic changes. Please see the Stony Brook University COVID-19 Positive Cases wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-covid-19-ny-sbu",
+  "url": "https://cd2s.vercel.app/datasets/idc-covid-19-ny-sbu",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=covid_19_ny_sbu",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-covid-19-ny-sbu.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-covid-19-ny-sbu.json",
       "encodingFormat": "application/json"
     }
   ],

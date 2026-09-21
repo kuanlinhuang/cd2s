@@ -9,7 +9,7 @@
   "name": "cbio-difg-msk-2023",
   "alternateName": "IDH-mutated Diffuse Glioma (MSK, Clin Cancer Res 2024)",
   "description": "Targeted sequencing of 73 IDH-mutated low-grade gliomas and their matched normal pairs via MSK-IMPACT. The data is available on Synapse.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-difg-msk-2023",
+  "url": "https://cd2s.vercel.app/datasets/cbio-difg-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

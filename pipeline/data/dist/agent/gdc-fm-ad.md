@@ -65,10 +65,18 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Check your question against the annotation gaps above (15 minutes)
+1. Check your question against the annotation gaps above [human] (15 minutes)
    Almost all files are controlled, so scoping after approval is expensive. The three blocking limitations on this page rule out most reasons people arrive at a cohort of this size.
-2. Submit a dbGaP data access request if the question survives (days to a few weeks)
+2. Submit a dbGaP data access request if the question survives [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+3. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+4. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -79,7 +87,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 6
 - 10 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 9 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 7 that could be checked were themselves NCI funded.
-- Reuse gap index: -2.23 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.71 (negative means less reused than comparable datasets)
   - Functional characterization of SMARCA4 variants identified by targeted exome-sequencing of 131,668 cancer patients. (2020) PMID 33144586
   - Genomic analysis of 63,220 tumors reveals insights into tumor uniqueness and targeted cancer immunotherapy strategies. (2017) PMID 28231819
   - Comprehensive characterization of distinct genetic alterations in metastatic breast cancer across various metastatic sites. (2021) PMID 34272397
@@ -90,4 +98,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-fm-ad.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-fm-ad.json

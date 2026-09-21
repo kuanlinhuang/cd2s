@@ -9,7 +9,7 @@
   "name": "gdc-cgci-htmcp-cc",
   "alternateName": "HIV+ Tumor Molecular Characterization Project - Cervical Cancer",
   "description": "The HIV+ Tumor Molecular Characterization Project (HTMCP) cervical cancer cohort was assembled to study how HIV infection shapes cervical carcinoma in a population where both diseases are common. It is one of very few NCI-supported genomic cohorts whose participants are almost entirely Black African women recruited outside the United States, and that makes it structurally different from every other cervical cancer resource in the portfolio. The cohort carries whole genome sequencing on 124 cases, RNA sequencing on 123, methylation arrays on 120, microRNA on 118, and both histopathology and radiology images on 211 - an unusually complete multimodal picture for a cohort of this size and origin.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-cc",
+  "url": "https://cd2s.vercel.app/datasets/gdc-cgci-htmcp-cc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Analysis of Ugandan cervical carcinomas identifies human papillomavirus clade-specific epigenome and transcriptome landscapes",
   "version": "as-retrieved",

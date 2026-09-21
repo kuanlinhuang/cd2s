@@ -9,7 +9,7 @@
   "name": "gdc-tcga-laml",
   "alternateName": "Acute Myeloid Leukemia",
   "description": "Acute Myeloid Leukemia",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-laml",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-laml",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic and epigenomic landscapes of adult de novo acute myeloid leukemia",
   "version": "as-retrieved",

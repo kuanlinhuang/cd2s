@@ -26,7 +26,7 @@
 #
 # See cds/reuse/markers.py for how this is applied and what it licenses.
 
-reviewer: Cancer Data Showcase project curation
+reviewer: CD2S project curation
 reviewed_at: 2026-09-20
 source: Europe PMC REST API (title, journal and year verified per PMID)
 

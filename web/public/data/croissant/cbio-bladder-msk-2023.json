@@ -9,7 +9,7 @@
   "name": "cbio-bladder-msk-2023",
   "alternateName": "Bladder Cancer (MSK, Clin Cancer Res 2023)",
   "description": "Targeted sequencing of 526 bladder tumors and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bladder-msk-2023",
+  "url": "https://cd2s.vercel.app/datasets/cbio-bladder-msk-2023",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

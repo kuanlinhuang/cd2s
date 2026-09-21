@@ -59,11 +59,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Download the fractions from the PDC portal (1 hour)
+1. Download the fractions from the PDC portal [human] (1 hour)
    Open access, no account required.
    https://pdc.cancer.gov/pdc/browse
-2. Join clinical data from the GDC CPTAC-3 record (2-3 hours)
+2. Join clinical data from the GDC CPTAC-3 record [human] (2-3 hours)
    https://portal.gdc.cancer.gov/projects/CPTAC-3
+3. Resolve the study UUID, then fetch the file manifest [agent]
+   filesPerStudy keys on the study UUID, not on PDC000224: called with the pdc_study_id it returns the right number of rows with every column null. Resolve the UUID first and pass the terms acknowledgement.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+   Policy evidence: https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
 
 ## Verified runnable starting points
 
@@ -74,7 +78,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 22
 - 38 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 4 of the 10 that could be checked were themselves NCI funded.
-- Reuse gap index: -1.02 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.70 (negative means less reused than comparable datasets)
   - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
   - Tryptophan depletion results in tryptophan-to-phenylalanine substitutants. (2022) PMID 35264796
   - Proteogenomic analysis of lung adenocarcinoma reveals tumor heterogeneity, survival determinants, and therapeutically relevant pathways. (2022) PMID 36384096
@@ -85,4 +89,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-cptac-luad-discovery-study.json

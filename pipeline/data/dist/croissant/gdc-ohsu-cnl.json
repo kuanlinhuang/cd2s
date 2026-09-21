@@ -9,7 +9,7 @@
   "name": "gdc-ohsu-cnl",
   "alternateName": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
   "description": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-ohsu-cnl",
+  "url": "https://cd2s.vercel.app/datasets/gdc-ohsu-cnl",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu)",
   "version": "as-retrieved",

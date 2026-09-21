@@ -9,7 +9,7 @@
   "name": "idc-cc-tumor-heterogeneity",
   "alternateName": "CC-Tumor-Heterogeneity",
   "description": "The functional and biological properties of the tumor microenvironment are fundamentally important determinants of tumor response and therapy outcome in cancer. Oxygenation status and vascularity are known to influence radiation response, and molecular energy metabolism and proliferation impact on recurrence and metastatic progression. Please see the Cervical Cancer \u2013 Tumor Heterogeneity: Serial Functional and Molecular Imaging Across the Radiation Therapy Course in Advanced Cervical Cancer Cervical Cancer wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-tumor-heterogeneity",
+  "url": "https://cd2s.vercel.app/datasets/idc-cc-tumor-heterogeneity",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CC-Tumor-Heterogeneity",
   "version": "as-retrieved",

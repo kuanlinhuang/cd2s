@@ -9,7 +9,7 @@
   "name": "cbio-sclc-jhu",
   "alternateName": "Small Cell Lung Cancer (Johns Hopkins, Nat Genet 2012)",
   "description": "Whole exome-sequencing of 80 human SCLCs, including 36 primary SCLC human tumor and adjacent normal sample pairs and 17 paired SCLC cell lines and their patient-matched lymphoblastoid lines, as well as 4 primary SCLC tumors and 23 SCLC cell lines without matched normal controls. Data from Rudin et al., Nat Gene 2012. Sequencing data are publicly available in EGA (EGAS0000100334)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-sclc-jhu",
+  "url": "https://cd2s.vercel.app/datasets/cbio-sclc-jhu",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

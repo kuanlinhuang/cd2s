@@ -63,14 +63,18 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Browse the study in the PDC portal (30 minutes)
+1. Browse the study in the PDC portal [human] (30 minutes)
    No account is required. All seven fractions are openly downloadable.
    https://pdc.cancer.gov/pdc/browse
-2. Pull the study manifest from the PDC GraphQL API (1 hour)
+2. Pull the study manifest from the PDC GraphQL API [human] (1 hour)
    The API is public and needs no key, which makes this cohort unusually easy to script against.
-3. Retrieve the matching clinical and genomic data from the GDC (2-3 hours)
+3. Retrieve the matching clinical and genomic data from the GDC [human] (2-3 hours)
    This is the step people skip. Without it the proteomic layers have no clinical context at all.
    https://portal.gdc.cancer.gov/projects/CPTAC-3
+4. Resolve the study UUID, then fetch the file manifest [agent]
+   filesPerStudy keys on the study UUID, not on PDC000622: called with the pdc_study_id it returns the right number of rows with every column null. Resolve the UUID first and pass the terms acknowledgement.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+   Policy evidence: https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
 
 ## Verified runnable starting points
 
@@ -80,10 +84,10 @@ Populated means a value exists; informative excludes 'not reported'.
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 1
-- Reuse gap index: -1.79 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.75 (negative means less reused than comparable datasets)
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-stad-study.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-cptac-stad-study.json

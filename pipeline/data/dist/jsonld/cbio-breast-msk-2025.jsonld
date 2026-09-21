@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-msk-2025",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-breast-msk-2025",
   "name": "Breast Cancer (MSK, Nat Genet 2025)",
   "alternateName": [
     "breast_msk_2025"
   ],
   "description": "Targeted sequencing of 3879 breast clinical cases and their matched normals via MSK-IMPACT platform.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-breast-msk-2025",
+  "url": "https://cd2s.vercel.app/datasets/cbio-breast-msk-2025",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=breast_msk_2025"
   ],
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-breast-msk-2025.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-breast-msk-2025.json",
       "encodingFormat": "application/json"
     }
   ],

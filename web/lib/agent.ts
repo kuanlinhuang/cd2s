@@ -274,8 +274,8 @@ async function rankWithModel(
       headers: {
         Authorization: `Bearer ${key}`,
         "Content-Type": "application/json",
-        "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL ?? "https://cancer-data-showcase.local",
-        "X-Title": "Cancer Data Showcase",
+        "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL ?? "https://cd2s.local",
+        "X-Title": "CD2S",
       },
       body: JSON.stringify({
         model: agentModel(),

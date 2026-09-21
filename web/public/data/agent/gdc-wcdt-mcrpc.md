@@ -66,13 +66,21 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Read the PNAS marker paper for the clinical annotation (1-2 hours)
+1. Read the PNAS marker paper for the clinical annotation [human] (1-2 hours)
    It carries the outcome and treatment context that the harmonized records lack. Decide from it whether your question is viable.
    https://pubmed.ncbi.nlm.nih.gov/31061129/
-2. Scope with the 200 open-access files (1 hour)
+2. Scope with the 200 open-access files [human] (1 hour)
    https://portal.gdc.cancer.gov/projects/WCDT-MCRPC
-3. Submit a dbGaP data access request (days to a few weeks)
+3. Submit a dbGaP data access request [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -84,7 +92,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Articles that analyzed these data: 27
 - 67 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 3 of the 10 that could be checked had no author in common with the generating team, and 9 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 1206 (attention, not reuse)
-- Reuse gap index: +1.86 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.38 (negative means less reused than comparable datasets)
   - The Polycomb Repressor Complex 1 Drives Double-Negative Prostate Cancer Metastasis by Coordinating Stemness and Immune Suppression. (2019) PMID 31327655
   - The Genomic and Epigenomic Landscape of Double-Negative Metastatic Prostate Cancer. (2023) PMID 37289025
   - Androgen receptor and MYC equilibration centralizes on developmental super-enhancer. (2021) PMID 34911936
@@ -95,4 +103,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-wcdt-mcrpc.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-wcdt-mcrpc.json

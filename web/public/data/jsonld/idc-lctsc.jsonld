@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-lctsc",
+  "@id": "https://cd2s.vercel.app/datasets/idc-lctsc",
   "name": "LCTSC",
   "alternateName": [
     "lctsc"
   ],
   "description": "This Lung CT and Radiation therapy data set was provided in association with an autocontouring challenge competition and related conference session conducted at the AAPM 2017 Annual Meeting Please see the LCTSC wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-lctsc",
+  "url": "https://cd2s.vercel.app/datasets/idc-lctsc",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=lctsc",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-lctsc.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-lctsc.json",
       "encodingFormat": "application/json"
     }
   ],

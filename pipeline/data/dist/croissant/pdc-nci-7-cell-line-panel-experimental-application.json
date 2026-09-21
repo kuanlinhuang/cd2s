@@ -9,7 +9,7 @@
   "name": "pdc-nci-7-cell-line-panel-experimental-application",
   "alternateName": "NCI-7 Cell Line Panel Experimental Application",
   "description": "NCI-7 Cell Line Panel Experimental Application",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-nci-7-cell-line-panel-experimental-application",
+  "url": "https://cd2s.vercel.app/datasets/pdc-nci-7-cell-line-panel-experimental-application",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NCI-7 Cell Line Panel Experimental Application",
   "version": "as-retrieved",

@@ -39,11 +39,26 @@ Populated means a value exists; informative excludes 'not reported'.
 - Ethnicity: 7.8% informative
 - Cause of death: 0.0% informative
 
+## How to get the data
+
+1. Open the study in the PDC portal [human] (5 minutes)
+   Proteomic data are released open; the portal's use guidelines still apply.
+   https://pdc.cancer.gov/pdc/study/PDC000111
+   Policy evidence: https://pdc.cancer.gov/pdc/study/PDC000111
+2. Accept the data use guidelines and download [human] (minutes to hours, by study size)
+   The portal asks for acknowledgement and citation, not a data access request.
+   https://pdc.cancer.gov/pdc/data-use-guidelines
+   Policy evidence: https://pdc.cancer.gov/pdc/data-use-guidelines
+3. Resolve the study UUID, then fetch the file manifest [agent]
+   filesPerStudy keys on the study UUID, not on PDC000111: called with the pdc_study_id it returns the right number of rows with every column null. Resolve the UUID first and pass the terms acknowledgement.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+   Policy evidence: https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 5
 - 8 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 7 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 6 that could be checked were themselves NCI funded.
-- Reuse gap index: +0.27 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.32 (negative means less reused than comparable datasets)
   - Integrated meta-analysis of colorectal cancer public proteomic datasets for biomarker discovery and validation. (2024) PMID 38252632
   - Mutation impact on mRNA versus protein expression across human cancers. (2025) PMID 39775839
   - A multidimensional recommendation framework for identifying biological targets to aid the diagnosis and treatment of liver metastasis in patients with colorectal cancer. (2024) PMID 39449040
@@ -55,4 +70,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-colon-cancer-proteome.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-tcga-colon-cancer-proteome.json

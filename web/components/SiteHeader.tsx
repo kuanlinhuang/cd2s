@@ -27,16 +27,16 @@ export default function SiteHeader({ items }: { items: NavItem[] }) {
         <div className="flex h-16 items-center gap-4 sm:gap-6">
           <Link
             href="/"
-            aria-label="Cancer Data Showcase"
+            aria-label="CD2S, Cancer Data to Science"
             className="flex min-w-0 shrink-0 items-center gap-2.5"
           >
             <Logo size={34} className="shrink-0" />
             <span className="hidden min-w-0 min-[460px]:block">
               <span className="block truncate text-title font-semibold leading-tight tracking-tight">
-                Cancer Data Showcase
+                CD2S
               </span>
               <span className="hidden truncate text-micro leading-tight t-muted md:block">
-                Find cancer data that fits the question
+                Cancer Data to Science
               </span>
             </span>
           </Link>

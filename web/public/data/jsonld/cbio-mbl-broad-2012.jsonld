@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-broad-2012",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-mbl-broad-2012",
   "name": "Medulloblastoma (Broad, Nature 2012)",
   "alternateName": [
     "mbl_broad_2012"
   ],
   "description": "Whole exome sequencing of 92 primary medulloblastoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-broad-2012",
+  "url": "https://cd2s.vercel.app/datasets/cbio-mbl-broad-2012",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=mbl_broad_2012"
   ],
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-mbl-broad-2012.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-mbl-broad-2012.json",
       "encodingFormat": "application/json"
     }
   ],

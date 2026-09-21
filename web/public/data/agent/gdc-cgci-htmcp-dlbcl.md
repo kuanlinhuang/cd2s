@@ -62,10 +62,18 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Scope with the 946 open-access files (1 hour)
+1. Scope with the 946 open-access files [human] (1 hour)
    https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-DLBCL
-2. Request controlled access, naming HIV-related phenotype variables (days to a few weeks)
+2. Request controlled access, naming HIV-related phenotype variables [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+3. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+4. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -76,11 +84,11 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - 2 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, author overlap with the generating team could not be checked for any of them, and none could be checked for NCI funding of their own.
-- Reuse gap index: -0.67 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.35 (negative means less reused than comparable datasets)
   - Three-Dimensional Epigenome Roadmap of Human B-cell Differentiation Uncovers Mechanisms of Humoral Immunity and Oncogenesis (2025) PMID None
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-dlbcl.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-cgci-htmcp-dlbcl.json

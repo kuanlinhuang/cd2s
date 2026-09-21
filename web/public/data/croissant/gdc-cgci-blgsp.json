@@ -9,7 +9,7 @@
   "name": "gdc-cgci-blgsp",
   "alternateName": "Burkitt Lymphoma Genome Sequencing Project",
   "description": "DICOM converted whole slide images of H&E-stained and immunohistochemistry-stained tissue sections from 388 subjects in the Burkitt Lymphoma Genome Sequencing Project (BLGSP), a collaborative effort between NCI and the Foundation for Burkitt Lymphoma Research. The collection includes 1,933 slides with H&E, BCL2, BCL6, CD10, Ki-67, CD20, CD3, and other stains on both formalin-fixed paraffin-embedded and frozen tissue sections. The original Aperio SVS slide images were obtained from the GDC and converted to DICOM Slide Microscopy format. Please see the CGCI-BLGSP Zenodo page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-blgsp",
+  "url": "https://cd2s.vercel.app/datasets/gdc-cgci-blgsp",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Burkitt Lymphoma Genome Sequencing Project",
   "version": "as-retrieved",

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-jhu-proteome",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-prospective-ovarian-jhu-proteome",
   "name": "Prospective Ovarian JHU Proteome",
   "alternateName": [
     "Prospective Ovarian JHU Proteome"
   ],
   "description": "Prospective Ovarian JHU Proteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-prospective-ovarian-jhu-proteome",
+  "url": "https://cd2s.vercel.app/datasets/pdc-prospective-ovarian-jhu-proteome",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000110"
   ],
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-prospective-ovarian-jhu-proteome.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-prospective-ovarian-jhu-proteome.json",
       "encodingFormat": "application/json"
     }
   ],

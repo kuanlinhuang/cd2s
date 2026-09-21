@@ -62,19 +62,27 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Read the CALGB 50303 primary trial report (1-2 hours)
+1. Read the CALGB 50303 primary trial report [human] (1-2 hours)
    https://pubmed.ncbi.nlm.nih.gov/30939090/
-2. Contact the Alliance trial group about arm assignment and trial covariates (weeks)
+2. Contact the Alliance trial group about arm assignment and trial covariates [human] (weeks)
    This is the step that determines whether the cohort's randomization is usable. Do it before the data access request, not after.
-3. Submit a dbGaP data access request for the sequence data (days to a few weeks)
+3. Submit a dbGaP data access request for the sequence data [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
 - 13 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 6 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 333 (attention, not reuse)
-- Reuse gap index: -1.04 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.45 (negative means less reused than comparable datasets)
   - A multiprotein supercomplex controlling oncogenic signalling in lymphoma. (2018) PMID 29925955
   - Genome-wide Screens Identify Lineage- and Tumor-Specific Genes Modulating MHC-I- and MHC-II-Restricted Immunosurveillance of Human Lymphomas. (2021) PMID 33271120
   - Compromised counterselection by FAS creates an aggressive subtype of germinal center lymphoma. (2021) PMID 33237303
@@ -85,4 +93,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-ctsp-dlbcl1.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-ctsp-dlbcl1.json

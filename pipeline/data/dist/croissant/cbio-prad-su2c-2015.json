@@ -9,7 +9,7 @@
   "name": "cbio-prad-su2c-2015",
   "alternateName": "Metastatic Prostate Cancer (SU2C/PCF Dream Team, Cell 2015)",
   "description": "Whole-exome sequencing of 150 metastatic prostate cancer tumor/normal pairs by the SU2C/PCF Dream Team.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-su2c-2015",
+  "url": "https://cd2s.vercel.app/datasets/cbio-prad-su2c-2015",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

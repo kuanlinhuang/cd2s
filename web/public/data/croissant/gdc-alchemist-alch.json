@@ -9,7 +9,7 @@
   "name": "gdc-alchemist-alch",
   "alternateName": "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial",
   "description": "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-alchemist-alch",
+  "url": "https://cd2s.vercel.app/datasets/gdc-alchemist-alch",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial",
   "version": "as-retrieved",

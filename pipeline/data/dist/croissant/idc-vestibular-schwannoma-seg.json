@@ -9,7 +9,7 @@
   "name": "idc-vestibular-schwannoma-seg",
   "alternateName": "Vestibular-Schwannoma-SEG",
   "description": "This collection contains a labelled dataset of MRI images collected on 242 consecutive patients with vestibular schwannoma (VS) undergoing Gamma Knife stereotactic radiosurgery (GK SRS). The structural images included contrast-enhanced T1-weighted (ceT1) images and high-resolution T2-weighted (hrT2) images. Each imaging dataset is accompanied by the patient\u2019s radiation therapy (RT) dataset including the RTDose, RTStructures and RTPlan. Please see the Vestibular-Schwannoma-SEG wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-vestibular-schwannoma-seg",
+  "url": "https://cd2s.vercel.app/datasets/idc-vestibular-schwannoma-seg",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Vestibular-Schwannoma-SEG",
   "version": "as-retrieved",

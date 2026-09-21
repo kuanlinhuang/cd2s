@@ -39,12 +39,39 @@ Populated means a value exists; informative excludes 'not reported'.
 - Treatment given: 92.2% populated (one-to-many)
 - Country of residence: 86.4% informative
 
+## How to get the data
+
+1. Open the project in the GDC Data Portal [human] (5 minutes)
+   Check the portal's current case and file counts before requesting anything; the cohort can change after this record was built.
+   https://portal.gdc.cancer.gov/projects/TCGA-HNSC
+   Policy evidence: https://portal.gdc.cancer.gov/projects/TCGA-HNSC
+2. Download the open files without an account [human] (minutes to hours, by cohort size)
+   13,643 open-access files are marked open access. Add them to a portal cart, export a manifest, and fetch it with the GDC Data Transfer Tool.
+   https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
+   Policy evidence: https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
+3. Request controlled access through dbGaP [human] (days to a few weeks after signing official approval)
+   21,485 controlled-access files require an approved data access request. The request starts at dbGaP, not in the portal. The relevant study is phs000178.
+   https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+   Policy evidence: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Download controlled files with your token [human]
+   An approved request yields a token. The same manifest fetches nothing controlled without it.
+   https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000178
+   Policy evidence: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000178
+5. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+6. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 758
 - 112 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 0 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 3314 (attention, not reuse)
-- Reuse gap index: +1.35 (negative means less reused than comparable datasets)
+- Reuse gap index: +1.27 (negative means less reused than comparable datasets)
   - Drug repurposing targeting miRNA-mRNA networks to mitigate areca nut-induced head and neck cancer. (2026) PMID 40639775
   - Multi-omics analysis to uncover the molecular basis of tumor budding in head and neck squamous cell carcinoma. (2025) PMID 40082664
   - Clinical and molecular characterizations of HNSCC patients with occult lymph node metastasis. (2025) PMID 40652069
@@ -56,4 +83,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-hnsc.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-tcga-hnsc.json

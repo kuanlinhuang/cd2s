@@ -63,11 +63,15 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Download the lipidomic and metabolomic studies from PDC (1 hour)
+1. Download the lipidomic and metabolomic studies from PDC [human] (1 hour)
    Open access, no account required.
    https://pdc.cancer.gov/pdc/browse
-2. Retrieve matching clinical and cytogenetic data from the GDC CPTAC records (2-3 hours)
+2. Retrieve matching clinical and cytogenetic data from the GDC CPTAC records [human] (2-3 hours)
    https://portal.gdc.cancer.gov/projects/CPTAC-3
+3. Resolve the study UUID, then fetch the file manifest [agent]
+   filesPerStudy keys on the study UUID, not on PDC000558: called with the pdc_study_id it returns the right number of rows with every column null. Resolve the UUID first and pass the terms acknowledgement.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+   Policy evidence: https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
 
 ## Verified runnable starting points
 
@@ -82,4 +86,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-aml-study.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-cptac-aml-study.json

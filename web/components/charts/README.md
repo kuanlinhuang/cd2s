@@ -37,6 +37,10 @@ Rules carried by the CSS in `app/globals.css`: bars are 8 to 12px thick with a 4
 Every bar chart carries a scale: hairline gridlines inside the track from `.bar-track.scaled`, and tick labels beneath the bar column from `BarAxis`, both taking the same rounded ceiling.
 A bar without one shows which row is longer and nothing about by how much.
 
+Charts shrink by their own width, not the window's.
+`.bar-axis` and `.coverage-row` in `app/globals.css` are container queries, so a chart in a half-width column on a laptop and the same chart full-width on a phone each drop the parts they have no room for.
+What goes first is fixed: the axis unit, then alternate ticks, then the bar's own width, and the field name last - a reader can work with a shorter bar and cannot work with "Vital s...".
+
 `--viz-mute` is a de-emphasis grey, not a categorical hue, so the palette validator fails it on the lightness band and the chroma floor by design.
 Where it is used as a series - the citation bar in `GroupedBars` - what matters still passes: CVD separation against `--viz-1` is dE 14.1 light and 20.5 dark against a target of 8, and normal vision 19.8 and 22.7 against a floor of 15.
 Its contrast against the card is under 3:1, which obliges visible labels, so every bar in that chart prints its value.
@@ -45,7 +49,7 @@ Two measures never get two axes.
 Both series in `PairedDots` are counts of articles and share one scale; a second axis rescaled to make the shorter series look comparable would assert a relationship that is not in the data.
 
 Bars are linear, always.
-`PairedDots` exists because the cited-against-used comparison needs a decade axis and bars cannot have one: length is read as proportional to value, and on a log scale a dataset with seven articles draws a bar three fifths as long as one with 2,463.
+`PairedDots` exists because the cited-against-used comparison needs a decade axis and bars cannot have one: length is read as proportional to value, and on a log scale a dataset with seven articles draws a bar a quarter as long as one with 2,831, four hundred times its reuse.
 A dot encodes a position instead, which a log axis renders honestly - the same reason `ReuseScatter` can be log-log.
-Ordered by use, this corpus runs from 2,463 articles down to one, so a linear axis leaves everything past the eighth row a two-pixel stub; the decade axis is what lets twenty-eight rows carry a readable mark.
+This corpus runs from 2,831 articles down to one, and the two series on the front page span 641 to 9,914; a linear axis scaled to the larger crowds every reuse mark into the left quarter of the track, while the decade axis gives all fourteen rows a readable mark.
 `logScale` is therefore reached for by dots only, and never passed to `Bars`.

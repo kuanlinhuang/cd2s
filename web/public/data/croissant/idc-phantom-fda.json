@@ -9,7 +9,7 @@
   "name": "idc-phantom-fda",
   "alternateName": "Phantom FDA",
   "description": "A series of CT sets scanned at differing slice thicknesses and exposure parameters of a chest simulating phantom containing lung nodules. It was constructed by an NCI-FDA joint effort to provide data for nodule-detecting CAD processes. Please see the Phantom FDA page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-phantom-fda",
+  "url": "https://cd2s.vercel.app/datasets/idc-phantom-fda",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Phantom FDA",
   "version": "as-retrieved",

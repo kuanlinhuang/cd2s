@@ -9,7 +9,7 @@
   "name": "pdc-broad-institute-medulloblastoma",
   "alternateName": "Broad Institute - Medulloblastoma",
   "description": "Broad Institute - Medulloblastoma",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-broad-institute-medulloblastoma",
+  "url": "https://cd2s.vercel.app/datasets/pdc-broad-institute-medulloblastoma",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Broad Institute - Medulloblastoma",
   "version": "as-retrieved",

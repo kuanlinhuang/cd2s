@@ -38,11 +38,26 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
 
+## How to get the data
+
+1. Open the study in the PDC portal [human] (5 minutes)
+   Proteomic data are released open; the portal's use guidelines still apply. This record spans 3 PDC studies; repeat for each.
+   https://pdc.cancer.gov/pdc/study/PDC000216
+   Policy evidence: https://pdc.cancer.gov/pdc/study/PDC000216
+2. Accept the data use guidelines and download [human] (minutes to hours, by study size)
+   The portal asks for acknowledgement and citation, not a data access request.
+   https://pdc.cancer.gov/pdc/data-use-guidelines
+   Policy evidence: https://pdc.cancer.gov/pdc/data-use-guidelines
+3. Resolve the study UUID, then fetch the file manifest [agent]
+   filesPerStudy keys on the study UUID, not on PDC000216: called with the pdc_study_id it returns the right number of rows with every column null. Resolve the UUID first and pass the terms acknowledgement.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+   Policy evidence: https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 4
 - 8 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 8 are kept as exemplars. Of the 7 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 0 of the 7 that could be checked were themselves NCI funded.
-- Reuse gap index: -1.88 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.66 (negative means less reused than comparable datasets)
   - Human gastric cancer progression and stabilization of ATG2B through RNF5 binding facilitated by autophagy-associated CircDHX8. (2024) PMID 38866787
   - Hyperactivation of mTOR/eIF4E Signaling Pathway Promotes the Production of Tryptophan-To-Phenylalanine Substitutants in EBV-Positive Gastric Cancer. (2024) PMID 38994917
   - Comprehensive landscape of m6A regulator-related gene patterns and tumor microenvironment infiltration characterization in gastric cancer. (2024) PMID 39013954
@@ -54,4 +69,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-proteogenomics-of-gastric-cancer.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-proteogenomics-of-gastric-cancer.json

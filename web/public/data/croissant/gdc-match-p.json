@@ -9,7 +9,7 @@
   "name": "gdc-match-p",
   "alternateName": "Genomic Characterization CS-MATCH-0007 Arm P",
   "description": "Genomic Characterization CS-MATCH-0007 Arm P",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-match-p",
+  "url": "https://cd2s.vercel.app/datasets/gdc-match-p",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Genomic Characterization CS-MATCH-0007 Arm P",
   "version": "as-retrieved",

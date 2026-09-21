@@ -9,7 +9,7 @@
   "name": "pdc-cgu-oscc-apobec3a",
   "alternateName": "CGU OSCC APOBEC3A",
   "description": "CGU OSCC APOBEC3A",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cgu-oscc-apobec3a",
+  "url": "https://cd2s.vercel.app/datasets/pdc-cgu-oscc-apobec3a",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Metabolic gene expression-based stratification and prognostic risk predictive model of head and neck squamous cell carcinoma.",
   "version": "as-retrieved",

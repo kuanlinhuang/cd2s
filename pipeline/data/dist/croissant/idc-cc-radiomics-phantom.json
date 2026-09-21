@@ -9,7 +9,7 @@
   "name": "idc-cc-radiomics-phantom",
   "alternateName": "CC-Radiomics-Phantom",
   "description": "This collection consists of 17 CT scans of the Credence Cartridge Radiomics (CCR) phantom, which was designed for use in studies of texture feature robustness. The scans were acquired at four medical centers using each center\u2019s chest protocol and were taken using GE (7 scans), Philips (5 scans), Siemens (2 scans), and Toshiba (3 scans) scanners. The CCR phantom has 10 cartridges, each with a unique texture Please see the CC-Radiomics-Phantom wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cc-radiomics-phantom",
+  "url": "https://cd2s.vercel.app/datasets/idc-cc-radiomics-phantom",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CC-Radiomics-Phantom",
   "version": "as-retrieved",

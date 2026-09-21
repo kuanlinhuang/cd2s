@@ -9,7 +9,7 @@
   "name": "cbio-mel-iatlas-riaz-nivolumab-2017",
   "alternateName": "Melanoma (MSK, Cell 2017) - iAtlas Harmonized",
   "description": "Whole-exome sequencing and neoantigen landscape analysis of tumors from 64 advanced melanoma patients, profiled before and after nivolumab treatment. The reprocessing of raw sequencing data is coordinated by CRI iAtlas.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
+  "url": "https://cd2s.vercel.app/datasets/cbio-mel-iatlas-riaz-nivolumab-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

@@ -9,7 +9,7 @@
   "name": "idc-naf-prostate",
   "alternateName": "NaF PROSTATE",
   "description": "This is a collection of F-18 NaF positron emission tomography/computed tomography (PET/CT) images in patients with prostate cancer, with suspected or known bone involvement. Please see the NaF PROSTATE page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-naf-prostate",
+  "url": "https://cd2s.vercel.app/datasets/idc-naf-prostate",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "NaF PROSTATE",
   "version": "as-retrieved",

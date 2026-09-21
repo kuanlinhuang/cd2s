@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import DatasetBrowser from "@/components/DatasetBrowser";
 import { getBrowseRows, getFacets, getStats, getSubjects } from "@/lib/data";
@@ -31,8 +32,12 @@ export default async function DatasetsPage({
         <h1 className="mt-2 text-2xl font-semibold tracking-tight">Find data for your analysis</h1>
         <p className="mt-2 max-w-2xl text-lede t-muted">
           {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
-          repositories. Filter by the analysis you need to run, not only by what a repository
-          says a dataset contains. Capability filters are measured from the data fields themselves.
+          repositories. Filter by the analysis you need to run, not by what a repository
+          says a dataset contains.{" "}
+          <Link href="/methods#fit" className="underline">
+            How capability is measured
+          </Link>
+          .
         </p>
       </div>
       <DatasetBrowser

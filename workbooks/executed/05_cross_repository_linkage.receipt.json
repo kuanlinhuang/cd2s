@@ -1,11 +1,11 @@
 {
   "workbook": "05_cross_repository_linkage",
   "executed": true,
-  "executed_at": "2026-09-20T20:50:59.878051+00:00",
-  "runtime_seconds": 6.57,
-  "executor": "nbclient / python 3.14.4 / Darwin 25.5.0 arm64",
+  "executed_at": "2026-09-21T00:43:01.297366+00:00",
+  "runtime_seconds": 4.98,
+  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
   "package_versions": {
-    "python": "3.14.4",
+    "python": "3.12.13",
     "pandas": "3.0.6",
     "numpy": "2.5.3",
     "matplotlib": "3.11.2",

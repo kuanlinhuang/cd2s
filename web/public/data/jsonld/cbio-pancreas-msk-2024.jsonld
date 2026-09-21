@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-pancreas-msk-2024",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-pancreas-msk-2024",
   "name": "Pancreatic Cancer (MSK, Cancer Cell 2024)",
   "alternateName": [
     "pancreas_msk_2024"
   ],
   "description": "Targeted sequencing of 395 early stage pancreatic cancer cases and their matched normals via MSK-IMPACT. This data is available under the Creative Commons BY-NC-ND 4.0 license.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-pancreas-msk-2024",
+  "url": "https://cd2s.vercel.app/datasets/cbio-pancreas-msk-2024",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=pancreas_msk_2024"
   ],
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-pancreas-msk-2024.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-pancreas-msk-2024.json",
       "encodingFormat": "application/json"
     }
   ],

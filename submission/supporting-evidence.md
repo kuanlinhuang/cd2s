@@ -1,6 +1,6 @@
 # Supporting evidence for Track 1
 
-**Project:** Cancer Data Showcase
+**Project:** CD2S - Cancer Data to Science
 
 **Prize:** NCI Office of Data Sharing Impact Prize, Track 1: Research Output Sharing and Reuse Ideas.
 
@@ -22,14 +22,15 @@ They are not estimates from a slide deck.
 | Records with a derivable survival endpoint | 206 | `pipeline/data/dist/stats.json` |
 | Records with recorded treatment response | 62 | `pipeline/data/dist/stats.json` |
 | Project-curated showcase pages | 20 | `pipeline/data/dist/stats.json` |
-| Model-identified underexplored records | 24 | `pipeline/data/dist/stats.json` |
+| Model-identified underexplored records | 20 | `pipeline/data/dist/stats.json` |
 | Curated research questions | 69 | `pipeline/data/dist/questions.json` |
 | Executed workbooks | 6 | `workbooks/executed/` and `stats.json` |
 | Dataset pages with workbook attachments | 15 | `pipeline/data/dist/stats.json` |
+| Dataset pages with generated or curated access routes | 602, including 2,373 policy-backed generated steps | `pipeline/data/dist/stats.json`, `pipeline/src/cds/normalize/access.py` |
 | Verified reuse studies | 796 | `pipeline/data/dist/stats.json` |
 | Distinct NCI awards linked through NIH RePORTER | 865 | `pipeline/data/dist/stats.json` |
 | Patients or subjects represented | 349,817 across 601 records | `pipeline/data/dist/stats.json` |
-| Records without a citable accession specific enough for reuse tracing | 364 | `pipeline/data/dist/stats.json` |
+| Records without a citable accession specific enough for reuse tracing | 378 | `pipeline/data/dist/stats.json` |
 
 The current generated statistics report zero records labeled `expert_reviewed`.
 The 20 showcase pages are `project_curated` records, and machine-only records explicitly state that their interpretations have not been human-reviewed.
@@ -45,6 +46,7 @@ The 20 showcase pages are `project_curated` records, and machine-only records ex
 | Graded reuse evidence | Distinguishes analyzed data from declared availability, accession mentions, and general citations. | `pipeline/src/cds/reuse/` and `web/app/methods/page.tsx` |
 | Funding linkage | Separates awards that generated a dataset from awards attached to downstream reuse. | `pipeline/src/cds/reuse/funding.py` |
 | Agent interoperability | Publishes JSON, JSON-LD, Croissant, Markdown briefs, OpenAPI, and capability-filterable endpoints. | `pipeline/src/cds/export/`, `web/app/agents/page.tsx` |
+| Repository-specific access routes | Derives human and agent steps from each record's identifiers and access tier, while preserving curated routes and attaching policy evidence to generated steps. | `pipeline/src/cds/normalize/access.py`, `pipeline/src/cds/export/agent.py`, dataset JSON |
 | Reproducible starting points | Ships plain Python workbook sources, executed notebooks, execution receipts, and output hashes. | `workbooks/python/`, `workbooks/executed/` |
 
 The six executed workbooks are deliberately split between human and agent use.
@@ -67,13 +69,18 @@ The full record is `pipeline/data/dist/datasets/gdc-fm-ad.json`.
 
 ### Reuse is often unmeasurable, not absent
 
-364 of 602 records have no accession specific enough to search the literature.
+378 of 602 records have no accession specific enough to search the literature.
 The prototype therefore reports no reuse count for those records and explains that absence of a count is not evidence of absence of reuse.
+
+The fourteen HTAN atlases are the clearest case.
+They were previously counted on a Synapse folder id, an identifier no author writes in a paper, so all fourteen scored zero in every tier while their marker papers hold 856, 676, and 611 citations.
+Synapse ids have been dropped from the counting schemes, and those records now state that their reuse is unmeasurable rather than publishing a shortfall against an expectation.
+The comparator set is therefore 132 records, every one with a real accession.
 
 ### Scarce modalities can be hidden in plain sight
 
 The current corpus contains ubiquitylome measurements in five PDC studies and lipidomics in three.
-CPTAC STAD, record `pdc-cptac-stad-study`, measures seven analytical fractions on 193 tumors and is openly downloadable.
+CPTAC STAD, record `pdc-cptac-stad-study`, carries five of those scarce layers on 193 cases and is openly downloadable, though a complete-case analysis across all seven fractions is capped at 153.
 
 ### Cross-repository joins are not visible in individual catalogs
 
@@ -83,10 +90,10 @@ The source is `workbooks/python/05_cross_repository_linkage.py`, with the execut
 
 ### The reuse-gap label is recomputable
 
-The current model fits a Huber robust regression over 142 records with measurable reuse.
+The current model fits a Huber robust regression over 132 records with measurable reuse.
 It uses cohort size, years available, modality breadth, and access tier.
 The underexplored threshold is a reuse-gap index of -1.5 on the log2 scale plus an absolute reuse ceiling of 25.
-The model labels 24 records in the current export.
+The model labels 20 records in the current export.
 Coefficients, diagnostics, the rejected specification, and the model's worst case are in `pipeline/data/dist/reuse_gap_model.json`.
 
 ## Method validation

@@ -9,7 +9,7 @@
   "name": "idc-spie-aapm-lung-ct-challenge",
   "alternateName": "SPIE-AAPM Lung CT Challenge",
   "description": "As part of the 2015 SPIE Medical Imaging Conference, SPIE \u2013 with the support of American Association of Physicists in Medicine (AAPM) and the National Cancer Institute (NCI) \u2013 conducted a \u201cGrand Challenge\u201d on quantitative image analysis methods for the diagnostic classification of malignant and benign lung nodules. The LUNGx Challenge provided a unique opportunity for participants to compare their algorithms to those of others from academia, industry, and government in a structured, direct way using the same data sets. Please see the SPIE-AAPM Lung CT Challenge page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-spie-aapm-lung-ct-challenge",
+  "url": "https://cd2s.vercel.app/datasets/idc-spie-aapm-lung-ct-challenge",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "SPIE-AAPM Lung CT Challenge",
   "version": "as-retrieved",

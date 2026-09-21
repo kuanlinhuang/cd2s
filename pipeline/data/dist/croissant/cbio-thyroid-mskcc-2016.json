@@ -9,7 +9,7 @@
   "name": "cbio-thyroid-mskcc-2016",
   "alternateName": "Poorly-Differentiated and Anaplastic Thyroid Cancers (MSK, JCI 2016)",
   "description": "Targeted sequencing of 341 cancer genes from 117 patient-derived PDTCs and ATCs",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-thyroid-mskcc-2016",
+  "url": "https://cd2s.vercel.app/datasets/cbio-thyroid-mskcc-2016",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",
