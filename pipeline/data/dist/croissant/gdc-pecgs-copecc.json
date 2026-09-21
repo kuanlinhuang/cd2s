@@ -9,7 +9,7 @@
   "name": "gdc-pecgs-copecc",
   "alternateName": "USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies",
   "description": "USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-pecgs-copecc",
+  "url": "https://cd2s.vercel.app/datasets/gdc-pecgs-copecc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies",
   "version": "as-retrieved",

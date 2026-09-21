@@ -38,14 +38,37 @@ Populated means a value exists; informative excludes 'not reported'.
 - Prior malignancy: 0.0% informative
 - Synchronous malignancy: 0.0% informative
 
+## How to get the data
+
+1. Open the project in the GDC Data Portal [human] (5 minutes)
+   Check the portal's current case and file counts before requesting anything; the cohort can change after this record was built.
+   https://portal.gdc.cancer.gov/projects/BEATAML1.0-CRENOLANIB
+   Policy evidence: https://portal.gdc.cancer.gov/projects/BEATAML1.0-CRENOLANIB
+2. Request controlled access through dbGaP [human] (days to a few weeks after signing official approval)
+   547 controlled-access files require an approved data access request. The request starts at dbGaP, not in the portal. The relevant study is phs001628.
+   https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+   Policy evidence: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+3. Download controlled files with your token [human]
+   An approved request yields a token. The same manifest fetches nothing controlled without it.
+   https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001628
+   Policy evidence: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001628
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 0
-- Reuse gap index: -2.30 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.09 (negative means less reused than comparable datasets)
 
 ## Provenance
 
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-beataml1.0-crenolanib.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-beataml1.0-crenolanib.json

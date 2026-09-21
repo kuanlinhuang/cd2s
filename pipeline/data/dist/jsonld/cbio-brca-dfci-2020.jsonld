@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-dfci-2020",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-brca-dfci-2020",
   "name": "Metastatic Breast Cancer (DFCI, Cancer Discov 2020)",
   "alternateName": [
     "brca_dfci_2020"
   ],
   "description": "Whole exome sequencing of 59 CDK4/6i exposed metastatic breast cancer tumors and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-brca-dfci-2020",
+  "url": "https://cd2s.vercel.app/datasets/cbio-brca-dfci-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=brca_dfci_2020"
   ],
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-brca-dfci-2020.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-brca-dfci-2020.json",
       "encodingFormat": "application/json"
     }
   ],

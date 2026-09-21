@@ -22,6 +22,28 @@ function ids(r: DatasetRecord, scheme: string): string[] {
   return [...new Set(r.identifiers.filter((i) => i.scheme === scheme).map((i) => i.value))];
 }
 
+/** The schemes whose starter code runs against a public API with no account at all. */
+const OPEN_SCHEMES = [
+  "gdc_project_id",
+  "pdc_study_id",
+  "idc_collection_id",
+  "cbioportal_study_id",
+];
+
+/**
+ * What it takes to run this record's starter code.
+ *
+ * `open` means the snippet runs as written; `account` means the repository requires a
+ * registration before the first call, which is true of Synapse and so of HTAN. Derived
+ * from the same identifier schemes `starterSnippets` switches on, so the count on the
+ * home page cannot claim coverage the generator does not produce.
+ */
+export function starterAccess(r: DatasetRecord): "open" | "account" | "none" {
+  const schemes = new Set(r.identifiers.map((i) => i.scheme));
+  if (OPEN_SCHEMES.some((scheme) => schemes.has(scheme))) return "open";
+  if (schemes.has("synapse_id")) return "account";
+  return "none";
+}
 
 export function starterSnippets(r: DatasetRecord): Snippet[] {
   const out: Snippet[] = [];
@@ -82,15 +104,30 @@ open("${gdc}_clinical.tsv", "w").write(tsv)`,
       note: pdc.length > 1 ? `This cohort spans ${pdc.length} PDC studies (${pdc.join(", ")}). Repeat for each.` : undefined,
       code: `import requests
 
-STUDY = "${first}"
-query = """query ($id: String!) {
-  filesPerStudy(pdc_study_id: $id, acceptDUA: true) {
+PDC_STUDY = "${first}"
+API = "https://proteomic.datacommons.cancer.gov/graphql"
+
+def gql(query, **variables):
+    r = requests.post(API, json={"query": query, "variables": variables}, timeout=180)
+    r.raise_for_status()
+    body = r.json()
+    if body.get("errors"):
+        raise RuntimeError(body["errors"][0]["message"])
+    return body["data"]
+
+# filesPerStudy only fills its fields when given the study UUID: called with the
+# pdc_study_id it returns the right number of rows with every column null.
+study = gql("""query ($id: String!) {
+  study(pdc_study_id: $id acceptDUA: true) { study_id study_name }
+}""", id=PDC_STUDY)["study"][0]
+
+files = gql("""query ($sid: String!) {
+  filesPerStudy(study_id: $sid acceptDUA: true) {
     file_id file_name file_type data_category md5sum file_size signedUrl { url }
   }
-}"""
-r = requests.post("https://pdc.cancer.gov/graphql", json={"query": query, "variables": {"id": STUDY}}, timeout=120)
-files = r.json()["data"]["filesPerStudy"]
-print(len(files), "files")
+}""", sid=study["study_id"])["filesPerStudy"]
+
+print(study["study_name"], "-", len(files), "files")
 for f in files[:3]:
     print(f["file_name"], f["data_category"], f["file_size"])
 # Each signedUrl.url is a time-limited download link; stream it to disk with requests.get(url, stream=True).`,
@@ -105,10 +142,17 @@ for f in files[:3]:
       note: "pip install idc-index. Images are public; the package uses s5cmd under the hood.",
       code: `from idc_index import IDCClient
 
+COLLECTION = "${idc}"
 client = IDCClient()
-df = client.get_series(collection_id="${idc}")   # one row per DICOM series
-print(len(df), "series;", df["Modality"].value_counts().to_dict())
-client.download_from_selection(collection_id="${idc}", downloadDir="./${idc}")`,
+
+series = client.index[client.index["collection_id"] == COLLECTION]   # one row per DICOM series
+print(len(series), "series,", series["PatientID"].nunique(), "patients,",
+      round(series["series_size_MB"].sum() / 1024, 1), "GB")
+print(series["Modality"].value_counts().to_dict())
+
+# Everything above is an index lookup and costs nothing. Uncomment to pull the pixels;
+# the client refuses up front if the disk cannot hold them.
+# client.download_from_selection(collection_id=COLLECTION, downloadDir="./${idc}")`,
     });
   }
 

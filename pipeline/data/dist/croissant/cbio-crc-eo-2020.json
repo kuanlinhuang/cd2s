@@ -9,7 +9,7 @@
   "name": "cbio-crc-eo-2020",
   "alternateName": "Colorectal Cancer (MSK, JNCI 2021)",
   "description": "Targeted sequencing of 1,516 samples from 818 patients with early onset and 698 patients with average onset colorectal cancer and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-crc-eo-2020",
+  "url": "https://cd2s.vercel.app/datasets/cbio-crc-eo-2020",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

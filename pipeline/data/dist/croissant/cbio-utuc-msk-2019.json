@@ -9,7 +9,7 @@
   "name": "cbio-utuc-msk-2019",
   "alternateName": "Upper Tract Urothelial Carcinoma (MSK, Nat Commun 2020)",
   "description": "Targeted Sequencing of 119 upper tract urothelial carcinoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-utuc-msk-2019",
+  "url": "https://cd2s.vercel.app/datasets/cbio-utuc-msk-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

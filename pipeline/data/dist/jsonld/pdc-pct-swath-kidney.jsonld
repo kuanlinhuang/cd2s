@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-pct-swath-kidney",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-pct-swath-kidney",
   "name": "PCT SWATH Kidney",
   "alternateName": [
     "PCT SWATH Kidney"
   ],
   "description": "PCT SWATH Kidney",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-pct-swath-kidney",
+  "url": "https://cd2s.vercel.app/datasets/pdc-pct-swath-kidney",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000152"
   ],
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-pct-swath-kidney.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-pct-swath-kidney.json",
       "encodingFormat": "application/json"
     }
   ],

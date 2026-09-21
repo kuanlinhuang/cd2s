@@ -27,7 +27,7 @@ from cds.clinical import VERDICT_FIELDS, is_non_answer
 from cds.model import DatasetRecord, ReuseTier
 from cds.paths import DIST_DIR, WEB_DATA_DIR, ensure_dirs
 
-SITE_NAME = "Cancer Data Showcase"
+SITE_NAME = "CD2S"
 LICENSE_CONTENT = "https://creativecommons.org/licenses/by/4.0/"
 LICENSE_CODE = "https://opensource.org/licenses/MIT"
 
@@ -310,6 +310,13 @@ def corpus_stats(records: list[DatasetRecord], rows: list[dict[str, Any]]) -> di
         ),
         "n_distinct_workbooks": len(
             {a.workbook_path for r in records for a in r.analysis_examples if a.workbook_path}
+        ),
+        "n_datasets_with_access_routes": sum(1 for r in records if r.access_steps),
+        "n_derived_access_steps": sum(
+            1
+            for r in records
+            for step in r.access_steps
+            if any(e.method.value == "derived" for e in step.evidence)
         ),
         "n_grants_linked": len(
             {g.core_project_num for r in records for g in r.grants if g.core_project_num}

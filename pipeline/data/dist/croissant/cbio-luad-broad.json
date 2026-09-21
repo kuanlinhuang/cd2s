@@ -9,7 +9,7 @@
   "name": "cbio-luad-broad",
   "alternateName": "Lung Adenocarcinoma (Broad, Cell 2012)",
   "description": "Whole-exome and/or whole-genome sequencing of 183 lung adenocarcinomas and matched normal tissue pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-luad-broad",
+  "url": "https://cd2s.vercel.app/datasets/cbio-luad-broad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

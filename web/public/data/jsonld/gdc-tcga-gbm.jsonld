@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-gbm",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-tcga-gbm",
   "name": "Glioblastoma Multiforme",
   "alternateName": [
     "tcga_gbm"
   ],
   "description": "TCGA glioblastoma is the cohort on which most glioma computational biology was built, and 1,753 articles reference it in methods or results. Its imaging is its least-used asset: radiology exists for 607 of 617 cases and histopathology for 389, held in the Imaging Data Commons rather than the GDC, which is why most analyses treat it as a molecular-only cohort.\nIts follow-up is the fact most likely to trip up a new user. Median recorded follow-up is 12.0 months across 596 of 617 cases, reaching 127 months at the maximum - shorter than many users expect, because it reflects last recorded contact rather than total observation.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-gbm",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-gbm",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-GBM",
     "gdc_program:TCGA",
@@ -66,8 +66,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -78,8 +78,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-gbm.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-tcga-gbm.json",
       "encodingFormat": "application/json"
     }
   ],

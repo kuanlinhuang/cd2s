@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-bladder-columbia-msk-2018",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-bladder-columbia-msk-2018",
   "name": "Bladder Cancer (Columbia University/MSK, Cell 2018)",
   "alternateName": [
     "bladder_columbia_msk_2018"
   ],
   "description": "Targeted sequencing of 130 bladder cancer tumors, organoids and xenografts and their matched normals via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-bladder-columbia-msk-2018",
+  "url": "https://cd2s.vercel.app/datasets/cbio-bladder-columbia-msk-2018",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=bladder_columbia_msk_2018"
   ],
@@ -42,8 +42,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -54,8 +54,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-bladder-columbia-msk-2018.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-bladder-columbia-msk-2018.json",
       "encodingFormat": "application/json"
     }
   ],

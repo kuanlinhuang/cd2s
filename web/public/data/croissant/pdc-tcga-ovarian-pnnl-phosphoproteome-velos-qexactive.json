@@ -9,7 +9,7 @@
   "name": "pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
   "alternateName": "TCGA Ovarian PNNL Phosphoproteome Velos Qexactive",
   "description": "TCGA Ovarian PNNL Phosphoproteome Velos Qexactive",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
+  "url": "https://cd2s.vercel.app/datasets/pdc-tcga-ovarian-pnnl-phosphoproteome-velos-qexactive",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TCGA Ovarian PNNL Phosphoproteome Velos Qexactive",
   "version": "as-retrieved",

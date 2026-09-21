@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { NotebookFindings } from "@/components/NotebookSpotlight";
 import { Chip } from "@/components/ui";
 import { num, shortDate } from "@/lib/format";
 import type { NotebookGuide } from "@/lib/types";
@@ -83,6 +84,15 @@ export default function NotebookGallery({
                       />
                     </figure>
                   )}
+
+                {!compact && guide.findings.length > 0 && (
+                  <div
+                    className="mt-4 rounded-lg border-l-2 px-4 py-3"
+                    style={{ borderLeftColor: "var(--viz-1)", background: "var(--bg-sunken)" }}
+                  >
+                    <NotebookFindings guide={guide} />
+                  </div>
+                )}
 
                 {(guide.problem || guide.lesson) && (
                   <div className="mt-4 space-y-3">

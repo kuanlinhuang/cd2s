@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-aml",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-target-aml",
   "name": "Acute Myeloid Leukemia",
   "alternateName": [
     "TARGET-AML"
   ],
   "description": "TARGET AML is the reference paediatric AML cohort. RNA sequencing covers 2,281 cases and microRNA 1,836, with smaller whole genome, exome, methylation and targeted panel layers. 251 patients are recorded as Black or African American, one of the larger absolute numbers in any cohort here, and vital status is informative for 86.6% with a usable overall survival endpoint.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-aml",
+  "url": "https://cd2s.vercel.app/datasets/gdc-target-aml",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TARGET-AML",
     "gdc_program:TARGET",
@@ -56,8 +56,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -68,8 +68,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-target-aml.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-target-aml.json",
       "encodingFormat": "application/json"
     }
   ],

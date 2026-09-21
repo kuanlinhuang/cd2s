@@ -9,7 +9,7 @@
   "name": "idc-acrin-contralateral-breast-mr",
   "alternateName": "ACRIN-Contralateral-Breast-MR",
   "description": "Even after careful clinical and mammographic evaluation, cancer is found in the contralateral breast in up to 10% of women who have received treatment for unilateral breast cancer. ACRIN 6667 was conducted to determine whether magnetic resonance imaging (MRI) could improve on clinical breast examination and mammography in detecting contralateral breast cancer soon after the initial diagnosis of unilateral breast cancer. Please see the ACRIN Contralateral Breast MR (ACRIN 6667) wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-acrin-contralateral-breast-mr",
+  "url": "https://cd2s.vercel.app/datasets/idc-acrin-contralateral-breast-mr",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "ACRIN-Contralateral-Breast-MR",
   "version": "as-retrieved",

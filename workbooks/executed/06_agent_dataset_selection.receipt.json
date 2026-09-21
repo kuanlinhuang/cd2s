@@ -1,11 +1,11 @@
 {
   "workbook": "06_agent_dataset_selection",
   "executed": true,
-  "executed_at": "2026-09-20T21:10:49.786001+00:00",
-  "runtime_seconds": 3.62,
-  "executor": "nbclient / python 3.14.4 / Darwin 25.5.0 arm64",
+  "executed_at": "2026-09-21T00:43:02.488936+00:00",
+  "runtime_seconds": 1.19,
+  "executor": "nbclient / python 3.12.13 / Darwin 25.5.0 arm64",
   "package_versions": {
-    "python": "3.14.4",
+    "python": "3.12.13",
     "pandas": "3.0.6",
     "numpy": "2.5.3",
     "matplotlib": "3.11.2",
@@ -16,7 +16,7 @@
   },
   "n_cells": 8,
   "n_cells_executed": 8,
-  "output_hash": "698f9c961794f38971560b1eadb5aec6",
+  "output_hash": "dc49bfd688a5ab7ef77292e914fdd645",
   "error": null,
   "notebook_path": "workbooks/executed/06_agent_dataset_selection.ipynb"
 }

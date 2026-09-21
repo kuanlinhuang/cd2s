@@ -9,7 +9,7 @@
   "name": "gdc-trio-cru",
   "alternateName": "Ukrainian National Research Center for Radiation Medicine Trio Study",
   "description": "Ukrainian National Research Center for Radiation Medicine Trio Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-trio-cru",
+  "url": "https://cd2s.vercel.app/datasets/gdc-trio-cru",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Ukrainian National Research Center for Radiation Medicine Trio Study",
   "version": "as-retrieved",

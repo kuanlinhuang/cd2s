@@ -9,7 +9,7 @@
   "name": "cbio-blca-mskcc-solit-2014",
   "alternateName": "Bladder Cancer (MSK, Eur Urol 2014)",
   "description": "Genomic Predictors of Survival in Patients with High-grade Urothelial Carcinoma of the Bladder. Targeted sequencing of 109 tumor samples (MSKCC, European Urology 2014).",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-blca-mskcc-solit-2014",
+  "url": "https://cd2s.vercel.app/datasets/cbio-blca-mskcc-solit-2014",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

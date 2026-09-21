@@ -37,6 +37,10 @@ Rules carried by the CSS in `app/globals.css`: bars are 8 to 12px thick with a 4
 Every bar chart carries a scale: hairline gridlines inside the track from `.bar-track.scaled`, and tick labels beneath the bar column from `BarAxis`, both taking the same rounded ceiling.
 A bar without one shows which row is longer and nothing about by how much.
 
+Charts shrink by their own width, not the window's.
+`.bar-axis` and `.coverage-row` in `app/globals.css` are container queries, so a chart in a half-width column on a laptop and the same chart full-width on a phone each drop the parts they have no room for.
+What goes first is fixed: the axis unit, then alternate ticks, then the bar's own width, and the field name last - a reader can work with a shorter bar and cannot work with "Vital s...".
+
 `--viz-mute` is a de-emphasis grey, not a categorical hue, so the palette validator fails it on the lightness band and the chroma floor by design.
 Where it is used as a series - the citation bar in `GroupedBars` - what matters still passes: CVD separation against `--viz-1` is dE 14.1 light and 20.5 dark against a target of 8, and normal vision 19.8 and 22.7 against a floor of 15.
 Its contrast against the card is under 3:1, which obliges visible labels, so every bar in that chart prints its value.

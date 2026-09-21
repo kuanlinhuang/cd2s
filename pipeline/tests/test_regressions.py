@@ -180,6 +180,22 @@ def test_cbioportal_ids_are_not_treated_as_citable_accessions(record_factory):
     assert trace.tokens_for(rec) == []
 
 
+def test_synapse_folder_ids_are_not_treated_as_citable_accessions(record_factory):
+    """A Synapse id names a folder inside an atlas, and no author cites one.
+
+    Counting them is worse than counting nothing: every HTAN record scored an exact
+    zero in every tier, down to T0 mentions, and the site published fourteen atlases as
+    having a reuse shortfall against papers cited 856, 676 and 611 times. A dataset
+    whose only identifiers are Synapse ids has no citable accession, which the record
+    must say outright - "not measurable" and "unused" are different claims.
+    """
+    rec = record_factory(
+        "htan-x",
+        identifiers=[(IdScheme.SYNAPSE, "syn35558468"), (IdScheme.SYNAPSE, "syn35558474")],
+    )
+    assert trace.tokens_for(rec) == []
+
+
 def test_index_fields_are_fixed_so_counts_stay_comparable():
     """The Reuse Gap Index compares datasets, so every dataset must be measured alike."""
     from cds.model import ReuseTier

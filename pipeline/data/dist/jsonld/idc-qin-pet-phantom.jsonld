@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-pet-phantom",
+  "@id": "https://cd2s.vercel.app/datasets/idc-qin-pet-phantom",
   "name": "QIN PET Phantom",
   "alternateName": [
     "qin_pet_phantom"
   ],
   "description": "This collection consists of positron emission tomography (PET) phantom scans originally utilized by the Quantitative Imaging Network (QIN) PET Segmentation Challenge to assess the variability of segmentations and subsequently derived quantitative analysis results on phantom PET scans with known ground truth. Please see the QIN PET Phantom page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-pet-phantom",
+  "url": "https://cd2s.vercel.app/datasets/idc-qin-pet-phantom",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_pet_phantom",
     "https://www.cancerimagingarchive.net/collections/",
@@ -39,8 +39,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -51,8 +51,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-qin-pet-phantom.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-qin-pet-phantom.json",
       "encodingFormat": "application/json"
     }
   ],

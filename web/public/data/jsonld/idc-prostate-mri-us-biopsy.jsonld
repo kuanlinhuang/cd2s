@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-mri-us-biopsy",
+  "@id": "https://cd2s.vercel.app/datasets/idc-prostate-mri-us-biopsy",
   "name": "Prostate-MRI-US-Biopsy",
   "alternateName": [
     "prostate_mri_us_biopsy"
   ],
   "description": "This dataset was derived from tracked biopsy sessions using the Artemis biopsy system, many of which included image fusion with MRI targets. Patients received a 3D transrectal ultrasound scan, after which nonrigid registration (e.g. \u201cfusion\u201d) was performed between real-time ultrasound and preoperative MRI, enabling biopsy cores to be sampled from MR regions of interest. Most cases also included sampling of systematic biopsy cores using a 12-core digital template. The Artemis system tracked targeted and systematic core locations using encoder kinematics of a mechanical arm, and recorded locations relative to the Ultrasound scan. MRI biopsy coordinates were also recorded for most cases. Please see the Prostate-MRI-US-Biopsy page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-mri-us-biopsy",
+  "url": "https://cd2s.vercel.app/datasets/idc-prostate-mri-us-biopsy",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=prostate_mri_us_biopsy",
     "https://www.cancerimagingarchive.net/collections/",
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-prostate-mri-us-biopsy.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-prostate-mri-us-biopsy.json",
       "encodingFormat": "application/json"
     }
   ],

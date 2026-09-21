@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-spine-mets-ct-seg",
+  "@id": "https://cd2s.vercel.app/datasets/idc-spine-mets-ct-seg",
   "name": "Spine-Mets-CT-SEG",
   "alternateName": [
     "spine_mets_ct_seg"
   ],
   "description": "This collection contains a dataset of 55 CT scans collected on patients with a large range of primary cancers and corresponding bone metastatic lesions obtained for patients with metastatic spine disease. It includes longitudinal CT imaging data set of patients' metastatic spines planned for and treated with radiotherapy and associated radiological delineations of lesion and vertebral features. In addition to the imaging, we provide demographic data, lesion, fracture annotations, and manually and semi-automated vertebral segmentation labels. This dataset may serve to promote automatic analysis of pathologic vertebrae from computed tomography (CT) scans to improve diagnostic management, and the advancement of machine-learning methods to analyze pathologic vertebral fracture risk drivers in patients with metastatic spine disease. Please see the Spine-Mets-CT-SEG page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-spine-mets-ct-seg",
+  "url": "https://cd2s.vercel.app/datasets/idc-spine-mets-ct-seg",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=spine_mets_ct_seg",
     "https://www.cancerimagingarchive.net/collections/",
@@ -51,8 +51,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -63,8 +63,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-spine-mets-ct-seg.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-spine-mets-ct-seg.json",
       "encodingFormat": "application/json"
     }
   ],

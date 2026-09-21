@@ -9,7 +9,7 @@
   "name": "htan-colon-molecular-atlas-project",
   "alternateName": "Colon Molecular Atlas Project",
   "description": "Colon Molecular Atlas Project",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-colon-molecular-atlas-project",
+  "url": "https://cd2s.vercel.app/datasets/htan-colon-molecular-atlas-project",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Differential pre-malignant programs and microenvironment chart distinct paths to malignancy in human colorectal polyps",
   "version": "as-retrieved",

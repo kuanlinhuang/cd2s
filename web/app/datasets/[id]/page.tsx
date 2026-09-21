@@ -294,16 +294,27 @@ function Fit({ record: r }: { record: DatasetRecord }) {
 // ====================================================================================
 
 /** Bars for one demographic breakdown. Uninformative values are drawn in amber. */
-function demographicRows(values: Record<string, number>, limit = 6): BarRow[] {
+/**
+ * A demographic breakdown as bars, with the whole they are parts of.
+ *
+ * The total is returned so the caller can make it the scale ceiling. Left to round up
+ * the largest value instead, a category covering 207 of 212 cases drew a bar 41% of
+ * the track while the label beside it read 98% - the bar and its own number disagreeing
+ * about the same fact.
+ */
+function demographicRows(
+  values: Record<string, number>,
+  limit = 6,
+): { rows: BarRow[]; total: number } {
   const total = Object.values(values).reduce((a, b) => a + b, 0);
-  return Object.entries(values)
+  const rows = Object.entries(values)
     .sort((a, b) => b[1] - a[1])
     .slice(0, limit)
     .map(([label, n]) => ({
       key: label,
       label,
       value: n,
-      tone: isNonAnswer(label) ? "warn" : "primary",
+      tone: isNonAnswer(label) ? ("warn" as const) : ("primary" as const),
       display: (
         <>
           {num(n)}
@@ -312,6 +323,19 @@ function demographicRows(values: Record<string, number>, limit = 6): BarRow[] {
       ),
       title: `${label}: ${num(n)} of ${num(total)} cases`,
     }));
+  return { rows, total };
+}
+
+/** `Bars` for one demographic field, scaled to the cohort rather than to its own tallest row. */
+function DemographicBars({
+  values,
+  labelWidth,
+}: {
+  values: Record<string, number>;
+  labelWidth: number;
+}) {
+  const { rows, total } = demographicRows(values);
+  return <Bars rows={rows} max={total} labelWidth={labelWidth} valueWidth={80} unit="cases" />;
 }
 
 function informativeCount(values: Record<string, number>): number {
@@ -472,11 +496,15 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
         {!anyDemographics ? (
           <EmptyState>The repository&rsquo;s harmonized records carry no demographics for this dataset.</EmptyState>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          // Two columns, not four. At four the bar column in each card collapsed to
+          // about 35px: the bars carried no readable length and the 0/50/100 ticks
+          // printed on top of each other. Half as many cards per row is what makes
+          // the chart a reading rather than a ranking.
+          <div className="grid gap-4 sm:grid-cols-2">
             {hasSex && (
               <Card>
                 <h4 className="mb-2 text-meta font-medium">Sex</h4>
-                <Bars rows={demographicRows(d.sex)} labelWidth={70} valueWidth={80} />
+                <DemographicBars values={d.sex} labelWidth={70} />
               </Card>
             )}
             {hasAge && (
@@ -488,7 +516,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
             {hasRace && (
               <Card>
                 <h4 className="mb-2 text-meta font-medium">Race</h4>
-                <Bars rows={demographicRows(d.race)} labelWidth={110} valueWidth={80} />
+                <DemographicBars values={d.race} labelWidth={110} />
                 {raceInformative === 0 && (
                   <p className="mt-2 text-meta" style={{ color: "var(--weak)" }}>
                     Every value is &ldquo;not reported&rdquo;, so no analysis by race is
@@ -500,7 +528,7 @@ function AtAGlance({ record: r }: { record: DatasetRecord }) {
             {hasVital && (
               <Card>
                 <h4 className="mb-2 text-meta font-medium">Vital status</h4>
-                <Bars rows={demographicRows(d.vital_status)} labelWidth={90} valueWidth={80} />
+                <DemographicBars values={d.vital_status} labelWidth={90} />
                 {vitalInformative === 0 && (
                   <p className="mt-2 text-meta" style={{ color: "var(--weak)" }}>
                     Recorded for every case and informative for none. Survival analysis
@@ -1478,12 +1506,13 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-baseline justify-between gap-2">
-                        <span className="font-medium">{s.action}</span>
-                        {s.est_time && (
-                          <span className="text-meta t-faint">
-                            {s.est_time}
-                          </span>
-                        )}
+                        <span className="font-medium">
+                          {s.action}
+                          {s.audience && (
+                            <Chip>{s.audience === "agent" ? "For agents" : "For people"}</Chip>
+                          )}
+                        </span>
+                        {s.est_time && <span className="text-meta t-faint">{s.est_time}</span>}
                       </div>
                       {s.detail && (
                         <p className="mt-1 text-body t-muted">
@@ -1513,6 +1542,11 @@ function StartHere({ record: r }: { record: DatasetRecord }) {
                         >
                           {s.url}
                         </a>
+                      )}
+                      {s.evidence?.some((e) => e.method === "derived") && (
+                        <p className="mt-2 text-meta t-faint">
+                          Generated from repository policy. Check the linked policy before downloading.
+                        </p>
                       )}
                     </div>
                   </div>
@@ -1555,18 +1589,21 @@ function Provenance({ record: r }: { record: DatasetRecord }) {
                 >
                   {idSchemeLabel(idn.scheme)}
                 </span>
+                {/* An accession is one unbreakable word - a DOI is 29 characters of it -
+                    so it has to be allowed to break, or it pushes the whole page sideways
+                    on a phone. */}
                 {idn.url ? (
                   <a
                     href={idn.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-meta underline"
+                    className="min-w-0 break-all font-mono text-meta underline"
                     style={{ color: "var(--accent)" }}
                   >
                     {idn.value}
                   </a>
                 ) : (
-                  <span className="font-mono text-meta">{idn.value}</span>
+                  <span className="min-w-0 break-all font-mono text-meta">{idn.value}</span>
                 )}
                 <EvidenceChip evidence={idn.evidence} />
               </li>

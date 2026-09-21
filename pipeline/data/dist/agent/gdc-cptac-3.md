@@ -59,19 +59,27 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Decide which half you need first (30 minutes)
+1. Decide which half you need first [human] (30 minutes)
    The proteomic half is open and immediately usable; the genomic half is largely controlled. If your question is proteomic, start at the PDC and avoid the access delay entirely.
-2. Retrieve the matching PDC studies (2-3 hours)
+2. Retrieve the matching PDC studies [human] (2-3 hours)
    https://pdc.cancer.gov/pdc/browse
-3. Submit a dbGaP request for the controlled genomic tier (days to a few weeks)
+3. Submit a dbGaP request for the controlled genomic tier [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 25
 - 51 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 2 of the 10 that could be checked had no author in common with the generating team, and 10 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 688 (attention, not reuse)
-- Reuse gap index: -1.42 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.73 (negative means less reused than comparable datasets)
   - Proteogenomic Characterization Reveals Therapeutic Vulnerabilities in Lung Adenocarcinoma. (2020) PMID 32649874
   - Proteogenomic Characterization of Endometrial Carcinoma. (2020) PMID 32059776
   - A proteogenomic portrait of lung squamous cell carcinoma. (2021) PMID 34358469
@@ -82,4 +90,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cptac-3.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-cptac-3.json

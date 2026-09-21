@@ -1,4 +1,4 @@
-"""Core data model for the Cancer Data Showcase.
+"""Core data model for CD2S.
 
 Design principle: every statement the site makes about a dataset is either (a) pulled
 directly from a machine-readable source, (b) extracted from a document, or (c) asserted
@@ -629,6 +629,11 @@ class UnderexploredLabel(CDSModel):
 # --------------------------------------------------------------------------------------
 
 
+class AccessAudience(str, Enum):
+    HUMAN = "human"
+    AGENT = "agent"
+
+
 class AccessStep(CDSModel):
     order: int
     action: str
@@ -637,6 +642,8 @@ class AccessStep(CDSModel):
     requires: list[str] = Field(default_factory=list)
     est_time: str | None = None
     cli_snippet: str | None = None
+    audience: AccessAudience = AccessAudience.HUMAN
+    evidence: list[Evidence] = Field(default_factory=list)
 
 
 class WorkbookLevel(str, Enum):
@@ -685,6 +692,15 @@ class AnalysisExample(CDSModel):
     inputs: list[str] = Field(default_factory=list)
     outputs: list[str] = Field(default_factory=list)
     steps: list[str] = Field(default_factory=list)
+    findings: list[str] = Field(
+        default_factory=list,
+        description=(
+            "What the notebook actually printed when it last ran, with the numbers. "
+            "Unlike `outputs`, which names the kinds of result the code produces, a "
+            "finding is a result: it is only true of the run its receipt records, so "
+            "it is always shown next to that run's date."
+        ),
+    )
     language: Literal["python", "r", "either", "none"] = "python"
     est_runtime: str | None = None
     est_compute: str | None = None

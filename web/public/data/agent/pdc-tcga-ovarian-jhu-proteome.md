@@ -39,11 +39,26 @@ Populated means a value exists; informative excludes 'not reported'.
 - Ethnicity: 46.8% informative
 - Cause of death: 0.0% informative
 
+## How to get the data
+
+1. Open the study in the PDC portal [human] (5 minutes)
+   Proteomic data are released open; the portal's use guidelines still apply.
+   https://pdc.cancer.gov/pdc/study/PDC000113
+   Policy evidence: https://pdc.cancer.gov/pdc/study/PDC000113
+2. Accept the data use guidelines and download [human] (minutes to hours, by study size)
+   The portal asks for acknowledgement and citation, not a data access request.
+   https://pdc.cancer.gov/pdc/data-use-guidelines
+   Policy evidence: https://pdc.cancer.gov/pdc/data-use-guidelines
+3. Resolve the study UUID, then fetch the file manifest [agent]
+   filesPerStudy keys on the study UUID, not on PDC000113: called with the pdc_study_id it returns the right number of rows with every column null. Resolve the UUID first and pass the terms acknowledgement.
+   https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+   Policy evidence: https://pdc.cancer.gov/data-dictionary/publicapi-documentation/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 6
 - 8 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 7 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 6 that could be checked were themselves NCI funded.
-- Reuse gap index: +0.32 (negative means less reused than comparable datasets)
+- Reuse gap index: +0.37 (negative means less reused than comparable datasets)
   - Automated imaging and identification of proteoforms directly from ovarian cancer tissue. (2023) PMID 37838706
   - Model Cell Lines and Tissues of Different HGSOC Subtypes Differ in Local Estrogen Biosynthesis. (2022) PMID 35681563
   - Machine Learning-Enhanced Extraction of Biomarkers for High-Grade Serous Ovarian Cancer from Proteomics Data. (2024) PMID 38918474
@@ -55,4 +70,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/pdc-tcga-ovarian-jhu-proteome.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/pdc-tcga-ovarian-jhu-proteome.json

@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-chol-icgc-2017",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-chol-icgc-2017",
   "name": "Cholangiocarcinoma (ICGC, Cancer Discov 2017)",
   "alternateName": [
     "chol_icgc_2017"
   ],
   "description": "Whole-exome sequencing and Targeted/Exome sequencing of 489 Cholangiocarcinoma samples from 10 countries.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-chol-icgc-2017",
+  "url": "https://cd2s.vercel.app/datasets/cbio-chol-icgc-2017",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=chol_icgc_2017"
   ],
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-chol-icgc-2017.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-chol-icgc-2017.json",
       "encodingFormat": "application/json"
     }
   ],

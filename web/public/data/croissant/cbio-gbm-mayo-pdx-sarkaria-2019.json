@@ -9,7 +9,7 @@
   "name": "cbio-gbm-mayo-pdx-sarkaria-2019",
   "alternateName": "Brain Tumor PDXs (Mayo Clinic, Clin Cancer Res 2020)",
   "description": "WES on a total of 106 PDXs and 80 PDXs have the matched germline (blood) samples sequenced. A total of 66 PDXs have RNASeq available",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gbm-mayo-pdx-sarkaria-2019",
+  "url": "https://cd2s.vercel.app/datasets/cbio-gbm-mayo-pdx-sarkaria-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

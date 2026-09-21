@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-tgct",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-tcga-tgct",
   "name": "Testicular Germ Cell Tumors",
   "alternateName": [
     "tcga_tgct"
   ],
   "description": "More than 90% of testicular cancer start in the germ cells, which are cells in the testicles and develop into sperm. This type of cancer is known as testicular germ cell cancer. Testicular germ cell cancer can be classified as either seminomas or nonseminomas, which may be identified by microscopy. Nonseminomas typically grow and spread more quickly than seminomas. A testicular germ cell tumor that contains a mix of both these subtypes is classified as a nonseminoma. TCGA studied both seminomas and nonseminomas. Testicular germ cell cancer is rare, comprising 1-2% of all tumors in males. However, it is the most common cancer in men ages 15 to 35. The incidence of testicular germ cell cancer has been continuously rising in many countries, including Europe and the U.S. In 2013, about 8,000 American men were estimated to be diagnosed with the cancer. Of those, 370 are predicted to die from the disease. Men who are Caucasian, have an undescended testicle, abnormally developed testicles, or a family history of testicular cancer have a greater risk of developing testicular cancer. Fortunately, testicular germ cell cancer is highly treatable. Please see the DICOM converted Slide Microscopy images for the TCGA-TGCT collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-tgct",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-tgct",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-TGCT",
     "gdc_program:TCGA",
@@ -60,8 +60,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -72,8 +72,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-tgct.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-tcga-tgct.json",
       "encodingFormat": "application/json"
     }
   ],

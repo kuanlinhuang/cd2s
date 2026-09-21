@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-exceptional_responders-er",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-exceptional_responders-er",
   "name": "Exceptional Responders",
   "alternateName": [
     "EXCEPTIONAL_RESPONDERS-ER"
   ],
   "description": "Exceptional Responders",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-exceptional_responders-er",
+  "url": "https://cd2s.vercel.app/datasets/gdc-exceptional_responders-er",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/EXCEPTIONAL_RESPONDERS-ER",
     "gdc_program:EXCEPTIONAL_RESPONDERS",
@@ -72,8 +72,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -84,8 +84,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-exceptional_responders-er.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-exceptional_responders-er.json",
       "encodingFormat": "application/json"
     }
   ],

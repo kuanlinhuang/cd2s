@@ -9,7 +9,7 @@
   "name": "cbio-mbl-dkfz-2017",
   "alternateName": "Medulloblastoma (DKFZ, Nature 2017)",
   "description": "Whole genome or whole exome sequencing of 491 previously untreated Medulloblastoma tumor/normal pairs.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mbl-dkfz-2017",
+  "url": "https://cd2s.vercel.app/datasets/cbio-mbl-dkfz-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

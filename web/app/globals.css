@@ -529,11 +529,61 @@ textarea {
   box-shadow: 0 0 0 2px var(--bg-raised);
 }
 
-/* Tick labels, positioned along the bar column beneath a chart. */
+/* Coverage rows: field name, bar, percentage. The rows and the scale beneath them
+   share one grid so every tick lands under its track. In a narrow column the bar gives
+   width back to the field name first, because a bar 40px shorter still reads and
+   "Vital s..." does not. */
+.coverage-rows {
+  container-type: inline-size;
+}
+.coverage-row {
+  display: grid;
+  align-items: center;
+  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) minmax(90px, 160px) 44px;
+}
+@container (max-width: 420px) {
+  .coverage-row {
+    gap: 0.5rem;
+    grid-template-columns: minmax(0, 1fr) minmax(64px, 104px) 34px;
+  }
+}
+
+/* Tick labels, positioned along the bar column beneath a chart.
+   They sit at fixed percentages of that column, so how many of them fit is a fact
+   about the column's width and nothing else - the same chart is roomy in a full-width
+   card and four-up in a demographics grid. Sized against the column rather than the
+   viewport, the axis sheds labels instead of printing them on top of each other, which
+   is what "100 50 0" collapsing into an unreadable smudge was. */
 .bar-axis {
   position: relative;
   display: block;
   height: 1.1rem;
+  container-type: inline-size;
+}
+/* The unit is the first thing to go: it widens the right-hand label, which is the one
+   with no room to move. */
+@container (max-width: 340px) {
+  .bar-axis .axis-unit {
+    display: none;
+  }
+}
+@container (max-width: 240px) {
+  .bar-axis > span:nth-child(even) {
+    display: none;
+  }
+}
+@container (max-width: 130px) {
+  .bar-axis > span:not(:first-child):not(:last-child) {
+    display: none;
+  }
+}
+/* Under about 80px the two ends would still touch, and a scale nobody can read is
+   worse than none: the gridlines inside the track carry the quarters on their own. */
+@container (max-width: 80px) {
+  .bar-axis > span {
+    display: none;
+  }
 }
 .bar-axis > span {
   position: absolute;
@@ -550,12 +600,6 @@ textarea {
 }
 .bar-axis > span:last-child {
   transform: translateX(-100%);
-}
-@media (max-width: 640px) {
-  .bar-axis > span:nth-child(even),
-  .bar-axis .axis-unit {
-    display: none;
-  }
 }
 
 /* Segmented (part-to-whole) bar: 2px surface gaps, no strokes. */

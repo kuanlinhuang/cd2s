@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-lusc",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-tcga-lusc",
   "name": "Lung Squamous Cell Carcinoma",
   "alternateName": [
     "tcga_lusc"
   ],
   "description": "The Cancer Genome Atlas-Lung Squamous Cell Carcinoma (TCGA-LUSC) data collection is part of a larger effort to enhance the TCGA http://cancergenome.nih.gov/ data set with characterized radiological images. The Cancer Imaging Program (CIP) with the cooperation of several of the TCGA tissue-contributing institutions are working to archive a large portion of the radiological images of the LUSC cases. Please see the TCGA-LUSC page to learn more about the radiology images and to obtain any supporting metadata for this collection. Please see the DICOM converted Slide Microscopy images for the TCGA-LUSC collection page to learn more about the histopathology images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-tcga-lusc",
+  "url": "https://cd2s.vercel.app/datasets/gdc-tcga-lusc",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/TCGA-LUSC",
     "gdc_program:TCGA",
@@ -65,8 +65,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -77,8 +77,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-lusc.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-tcga-lusc.json",
       "encodingFormat": "application/json"
     }
   ],

@@ -9,7 +9,7 @@
   "name": "cbio-prad-organoids-msk-2022",
   "alternateName": "Prostate Cancer (MSK, Science 2022)",
   "description": "Targeted sequencing and whole exome sequencing of 35 prostate cancer tumors, organoids and cell lines via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-organoids-msk-2022",
+  "url": "https://cd2s.vercel.app/datasets/cbio-prad-organoids-msk-2022",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

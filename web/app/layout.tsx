@@ -13,17 +13,17 @@ const SITE_URL = siteUrl();
 export const metadata: Metadata = {
   ...(SITE_URL ? { metadataBase: new URL(SITE_URL) } : {}),
   title: {
-    default: "Cancer Data Showcase",
-    template: "%s - Cancer Data Showcase",
+    default: "CD2S - Cancer Data to Science",
+    template: "%s - CD2S",
   },
   description:
-    "A guide to NCI-supported cancer datasets: what each one can answer, what it " +
-    "cannot, who has reused it, and a runnable way to start.",
+    "CD2S shows which NCI-supported cancer datasets can answer your question, what " +
+    "would block the analysis, who has already reused them, and runnable code to start.",
   openGraph: {
-    title: "Cancer Data Showcase",
+    title: "CD2S - Cancer Data to Science",
     description:
-      "What research can I do with this dataset? Evidence-backed guides to " +
-      "NCI-supported cancer research outputs, for researchers and their agents.",
+      "Which cancer dataset answers my question, and how do I actually use it? " +
+      "Measured answers for 602 NCI-supported datasets, for researchers and their agents.",
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -118,8 +118,8 @@ export default function RootLayout({
 
         <footer className="border-t py-6 text-meta no-print t-muted">
           <div className="mx-auto flex max-w-[1180px] flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 sm:px-6">
-            <span className="font-medium" style={{ color: "var(--text)" }}>Cancer Data Showcase</span>
-            <span>From a research question to data you can use.</span>
+            <span className="font-medium" style={{ color: "var(--text)" }}>CD2S</span>
+            <span>Cancer Data to Science.</span>
             <span>
               {stats.n_datasets.toLocaleString()} datasets from {stats.n_repositories}{" "}
               repositories, corpus built {shortDate(stats.generated_at)}

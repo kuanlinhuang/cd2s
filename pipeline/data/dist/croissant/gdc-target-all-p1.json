@@ -9,7 +9,7 @@
   "name": "gdc-target-all-p1",
   "alternateName": "Acute Lymphoblastic Leukemia - Phase I",
   "description": "Acute Lymphoblastic Leukemia - Phase I",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-all-p1",
+  "url": "https://cd2s.vercel.app/datasets/gdc-target-all-p1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Acute Lymphoblastic Leukemia - Phase I",
   "version": "as-retrieved",

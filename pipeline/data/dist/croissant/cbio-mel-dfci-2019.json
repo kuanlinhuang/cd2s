@@ -9,7 +9,7 @@
   "name": "cbio-mel-dfci-2019",
   "alternateName": "Metastatic Melanoma (DFCI, Nature Medicine 2019)",
   "description": "Whole-exome sequencing of 144 pre-treatment samples from 144 patients with metastatic melanoma treated with anti-PD1 ICB. Related Dataset: A harmonized version with extended neoantigen annotations (122 samples) is available: iAtlas Harmonized Version.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-mel-dfci-2019",
+  "url": "https://cd2s.vercel.app/datasets/cbio-mel-dfci-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

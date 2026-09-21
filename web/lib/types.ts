@@ -305,6 +305,8 @@ export interface AccessStep {
   requires: string[];
   est_time?: string | null;
   cli_snippet?: string | null;
+  audience?: "human" | "agent";
+  evidence: Evidence[];
 }
 
 export interface ExecutionReceipt {
@@ -331,6 +333,12 @@ export interface AnalysisExample {
   inputs: string[];
   outputs: string[];
   steps: string[];
+  /**
+   * What the notebook printed when it last ran, with the numbers. `outputs` names the
+   * kinds of result the code produces; a finding is a result, true only of the run the
+   * receipt dates, so it is always rendered next to that date.
+   */
+  findings: string[];
   language: "python" | "r" | "either" | "none";
   est_runtime?: string | null;
   est_compute?: string | null;
@@ -606,6 +614,10 @@ export interface CorpusStats {
   n_datasets_with_workbook?: number;
   /** Distinct workbooks, however many pages they appear on. */
   n_distinct_workbooks?: number;
+  /** Dataset pages with at least one human or agent access step. */
+  n_datasets_with_access_routes?: number;
+  /** Generated steps whose policy evidence is marked derived. */
+  n_derived_access_steps?: number;
   n_grants_linked: number;
   n_reuse_studies_verified: number;
 }

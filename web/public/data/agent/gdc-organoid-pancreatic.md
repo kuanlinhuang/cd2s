@@ -59,20 +59,28 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Read the Cancer Discovery paper and retrieve its pharmacotyping supplement (2 hours)
+1. Read the Cancer Discovery paper and retrieve its pharmacotyping supplement [human] (2 hours)
    The drug-response data are the reason to use this resource and they live in the paper, not the repository.
    https://pubmed.ncbi.nlm.nih.gov/29853643/
-2. Scope with the 55 open-access files (30 minutes)
+2. Scope with the 55 open-access files [human] (30 minutes)
    https://portal.gdc.cancer.gov/projects/ORGANOID-PANCREATIC
-3. Submit a dbGaP data access request for the sequence data (days to a few weeks)
+3. Submit a dbGaP data access request for the sequence data [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 3
 - 22 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 10 of the 10 that could be checked had no author in common with the generating team, and 4 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 898 (attention, not reuse)
-- Reuse gap index: +0.60 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.00 (negative means less reused than comparable datasets)
   - Tryptophan-derived microbial metabolites activate the aryl hydrocarbon receptor in tumor-associated macrophages to suppress anti-tumor immunity. (2022) PMID 35139353
   - Systematic determination of the mitochondrial proportion in human and mice tissues for single-cell RNA-sequencing data quality control. (2021) PMID 32840568
   - Bioengineering Approaches for the Advanced Organoid Research. (2021) PMID 34561899
@@ -83,4 +91,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-organoid-pancreatic.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-organoid-pancreatic.json

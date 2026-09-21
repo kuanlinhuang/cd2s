@@ -9,7 +9,7 @@
   "name": "pdc-cptac-non-ccrcc-study",
   "alternateName": "CPTAC non-ccRCC Study",
   "description": "CPTAC non-ccRCC Study",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-non-ccrcc-study",
+  "url": "https://cd2s.vercel.app/datasets/pdc-cptac-non-ccrcc-study",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Comprehensive proteogenomic characterization of rare kidney tumors.",
   "version": "as-retrieved",

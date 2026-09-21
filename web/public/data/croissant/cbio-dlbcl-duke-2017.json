@@ -9,7 +9,7 @@
   "name": "cbio-dlbcl-duke-2017",
   "alternateName": "Diffuse Large B-Cell Lymphoma (Duke, Cell 2017)",
   "description": "Whole-exome sequencing of 1,001 Diffuse Large B Cell Lymphoma (DLBCL) tumors (N = 1001) and paired-normal tissue (N = 400).",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbcl-duke-2017",
+  "url": "https://cd2s.vercel.app/datasets/cbio-dlbcl-duke-2017",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

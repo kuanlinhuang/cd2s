@@ -1,6 +1,6 @@
 id: idc-nsclc-radiogenomics
 is_showcase: true
-reviewer: Cancer Data Showcase project curation
+reviewer: CD2S project curation
 reviewed_at: 2026-09-18
 review:
   status: project_curated
@@ -118,10 +118,11 @@ access_steps:
     cli_snippet: |
       pip install idc-index
       python -c "
-      from idc_index import index
-      c = index.IDCClient()
-      df = c.get_series_size('nsclc_radiogenomics')
-      print(df.head())
+      from idc_index import IDCClient
+      c = IDCClient()
+      s = c.index[c.index['collection_id'] == 'nsclc_radiogenomics']
+      print(len(s), 'series', round(s['series_size_MB'].sum() / 1024, 1), 'GB')
+      c.download_from_selection(collection_id='nsclc_radiogenomics', downloadDir='.')
       "
   - order: 3
     action: Retrieve the matched expression series from GEO and verify the identifier join

@@ -9,7 +9,7 @@
   "name": "cbio-ccle-broad-2019",
   "alternateName": "Cancer Cell Line Encyclopedia (Broad, 2019)",
   "description": "Cancer Cell Line Encyclopedia from the Broad Institute and Novartis, updated 2019. Data downloaded from the Broad CCLE Portal. For more info about the proteomics data, see the README.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-ccle-broad-2019",
+  "url": "https://cd2s.vercel.app/datasets/cbio-ccle-broad-2019",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

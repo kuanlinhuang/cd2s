@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-gct-msk-2016",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-gct-msk-2016",
   "name": "Germ Cell Tumors (MSK, J Clin Oncol 2016)",
   "alternateName": [
     "gct_msk_2016"
   ],
   "description": "Whole-exome and Targeted sequencing of 19 samples and Targeted sequencing of 161 samples from 180 Germ Cell Tumor patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-gct-msk-2016",
+  "url": "https://cd2s.vercel.app/datasets/cbio-gct-msk-2016",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=gct_msk_2016"
   ],
@@ -43,8 +43,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-gct-msk-2016.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-gct-msk-2016.json",
       "encodingFormat": "application/json"
     }
   ],

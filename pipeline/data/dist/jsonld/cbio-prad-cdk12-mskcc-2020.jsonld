@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-cdk12-mskcc-2020",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-prad-cdk12-mskcc-2020",
   "name": "Prostate Adenocarcinoma (MSK, Eur Urol 2020)",
   "alternateName": [
     "prad_cdk12_mskcc_2020"
   ],
   "description": "Targeted sequencing of 1465 prostate adenocarcinoma tumor/normal pairs via MSK-IMPACT.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-prad-cdk12-mskcc-2020",
+  "url": "https://cd2s.vercel.app/datasets/cbio-prad-cdk12-mskcc-2020",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=prad_cdk12_mskcc_2020"
   ],
@@ -45,8 +45,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -57,8 +57,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-prad-cdk12-mskcc-2020.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-prad-cdk12-mskcc-2020.json",
       "encodingFormat": "application/json"
     }
   ],

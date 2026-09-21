@@ -9,7 +9,7 @@
   "name": "pdc-ku-pdac-discovery-study-global-proteome",
   "alternateName": "KU PDAC Discovery Study - Global proteome",
   "description": "KU PDAC Discovery Study - Global proteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-ku-pdac-discovery-study-global-proteome",
+  "url": "https://cd2s.vercel.app/datasets/pdc-ku-pdac-discovery-study-global-proteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "Proteomic-based stemness score measures oncogenic dedifferentiation and enables the identification of druggable targets.",
   "version": "as-retrieved",

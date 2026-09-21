@@ -233,7 +233,7 @@ def apply_all(
 
 
 # Base URL of the published source repository, e.g.
-# "https://github.com/some-org/cancer-data-showcase". Left unset while the repository is
+# "https://github.com/kuanlinhuang/cd2s". Left unset while the repository is
 # local: a "View notebook" button that 404s is worse than no button, and this project
 # claims every link on a page resolves.
 REPO_BASE_URL = os.environ.get("CDS_REPO_URL", "").rstrip("/")
@@ -303,6 +303,7 @@ def attach_workbooks(records: list[DatasetRecord]) -> dict[str, Any]:
                     inputs=entry.get("inputs", []),
                     outputs=entry.get("outputs", []),
                     steps=entry.get("steps", []),
+                    findings=entry.get("findings", []),
                     language=entry.get("language", "python"),
                     est_runtime=entry.get("est_runtime"),
                     workbook_path=f"workbooks/python/{name}.py",
@@ -312,7 +313,7 @@ def attach_workbooks(records: list[DatasetRecord]) -> dict[str, Any]:
                     evidence=[
                         Evidence(
                             method=Method.CURATED,
-                            source_label="Cancer Data Showcase workbook",
+                            source_label="CD2S workbook",
                             retrieved_at=datetime.now(UTC),
                             locator=f"workbooks/python/{name}.py",
                             confidence=Confidence.HIGH,

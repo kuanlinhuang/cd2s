@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-fused-mri-pathology",
+  "@id": "https://cd2s.vercel.app/datasets/idc-prostate-fused-mri-pathology",
   "name": "Prostate Fused-MRI-Pathology",
   "alternateName": [
     "prostate_fused_mri_pathology"
   ],
   "description": "This collection comprises a total of 28 3 Tesla T1-weighted, T2-weighted, Diffusion weighted and Dynamic Contrast Enhanced prostate MRI along with accompanying digitized histopathology (H&Estained) images of corresponding radical prostatectomy specimens. Fused MATLAB objects are also provided combining both the MR and Pathology Images. Please see the Prostate Fused-MRI-Pathology wiki page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-prostate-fused-mri-pathology",
+  "url": "https://cd2s.vercel.app/datasets/idc-prostate-fused-mri-pathology",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=prostate_fused_mri_pathology",
     "https://www.cancerimagingarchive.net/collections/",
@@ -41,8 +41,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-prostate-fused-mri-pathology.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-prostate-fused-mri-pathology.json",
       "encodingFormat": "application/json"
     }
   ],

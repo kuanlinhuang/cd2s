@@ -9,7 +9,7 @@
   "name": "idc-qin-breast-02",
   "alternateName": "QIN-BREAST-02",
   "description": "This data is from a multi-site, multi-parametric quantitative MRI study of adult (18+ years old) females diagnosed with invasive breast cancer. Subjects all had a lesion size >1cm in longest dimension and were undergoing neoadjuvant therapy. Participants were scanned prior to any therapy and then 2-3 times after the initiation of neoadjuvant therapy, depending upon their treatment regimen. All data sets were acquired with a research-only protocol, including: DWI (SE EPI), OGSE, qMT, B0 map, multi-flip T1 map, Bloch-Siegert B1 map, DCE, and a T1-weighted anatomical image. This dataset is an extension of the original QIN-Breast Collection, with updated scan protocols and data collected at both Vanderbilt University Medical Center and the University of Chicago to demonstrate reproducible results at multiple sites (both using Philips 3T MR scanners). Please see the QIN-Breast-02 landing page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-breast-02",
+  "url": "https://cd2s.vercel.app/datasets/idc-qin-breast-02",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "QIN-BREAST-02",
   "version": "as-retrieved",

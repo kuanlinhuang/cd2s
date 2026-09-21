@@ -9,7 +9,7 @@
   "name": "gdc-target-wt",
   "alternateName": "High-Risk Wilms Tumor",
   "description": "High-Risk Wilms Tumor",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-target-wt",
+  "url": "https://cd2s.vercel.app/datasets/gdc-target-wt",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "A Children's Oncology Group and TARGET initiative exploring the genetic landscape of Wilms tumor",
   "version": "as-retrieved",

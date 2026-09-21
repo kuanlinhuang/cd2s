@@ -24,6 +24,11 @@
     - Assay coverage as a percentage of the cohort
     - A yes/no verdict for six common analysis classes
     - A chart contrasting populated with informative coverage, field by field
+  findings:
+    - Four of the six analysis classes pass for CGCI-HTMCP-CC; stage-adjusted modelling and progression-free endpoints are blocked.
+    - Vital status is informative for all 212 cases with 116 deaths, so an overall-survival endpoint is derivable.
+    - Both stage fields and the progression field are informative for 0% of cases, which no case count can fix.
+    - Four fields hold several records per case, so their per-case share cannot be inferred from a facet count at all.
   steps:
     - Fetch project summary and per-assay case counts
     - Request facet counts for the clinical fields that gate common analyses
@@ -52,6 +57,11 @@
     - Log-rank test between stage groups
     - Multivariable Cox model with concordance
     - A Kaplan-Meier plot of overall survival, stratified by stage at diagnosis
+  findings:
+    - 1,076 of 1,098 cases carry a usable endpoint - 150 deaths, 926 censored, median follow-up 25.6 months among the censored.
+    - Survival is 97.9% at 12 months, 89.8% at 36 and 81.9% at 60.
+    - Stage I against stage IV separates sharply - log-rank p = 8.1e-18 on 183 against 20 cases.
+    - The Cox model fits 1,050 cases with 141 events and reaches concordance 0.746; stage IV carries a hazard ratio of 10.6.
   steps:
     - Retrieve case-level clinical fields including all three follow-up locations
     - Derive time and event, guarding against GDC sentinel values
@@ -81,6 +91,10 @@
     - Mann-Whitney comparison of ECOG between response groups
     - Agent frequency table
     - A two-panel chart of response composition and ECOG by response group
+  findings:
+    - "Only 72 of 212 cases carry a usable response label: the follow-up field holds disease status, not response."
+    - ECOG does not separate responders from progressors - Mann-Whitney p = 0.30, median 1 in both groups.
+    - Cisplatin is recorded for 60 cases and paclitaxel for 35, but some agent is named for only 63 of 212.
   steps:
     - Facet the two response-bearing fields and classify their values
     - Collapse one-to-many treatment records to one label per case
@@ -109,6 +123,10 @@
     - Layer overlap bounding a complete-case analysis
     - Citation counts demonstrating that PDC accessions are not quoted
     - A chart of per-layer coverage with the complete-case ceiling marked
+  findings:
+    - Across 255 PDC studies the proteome appears 109 times, the ubiquitylome 5 and the lipidome 3.
+    - CPTAC STAD carries five scarce layers on 193 cases, but a complete-case analysis across all seven is capped at 153.
+    - Each of the six STAD accessions returns one article, so accession tracing is blind to proteomic reuse.
   steps:
     - Enumerate every PDC study through the public GraphQL endpoint
     - Rank analytical fractions by number of studies
@@ -138,6 +156,10 @@
     - Counts of molecular-only, imaging-only and joined patients
     - A map of every cohort present in both repositories
     - A chart comparing molecular and imaging patient counts per linkable cohort
+  findings:
+    - All 1,098 TCGA-BRCA patients appear in both the GDC and the IDC, a 100% join with nothing imaging-only.
+    - 39 cohorts exist in both repositories, covering 15,761 patients.
+    - HCMI-CMDC holds 805 molecular cases but 382 imaging patients, so its multimodal ceiling is 382, not 805.
   steps:
     - Retrieve patient identifiers from the GDC project
     - Query IDC's public SQL endpoint for the collection's patient identifiers
@@ -158,7 +180,7 @@
     Given a research goal, which dataset should an agent choose, and what must it refuse
     to do with it?
   inputs:
-    - The Cancer Data Showcase structured export
+    - The CD2S structured export
     - pandas
   outputs:
     - Contrast between a size-ranked and a capability-ranked selection
@@ -166,6 +188,10 @@
     - Blocking limitations read before committing
     - A machine-readable task brief for the next step
     - A chart of the ranked fit scores with the selected cohort highlighted
+  findings:
+    - A size-ranked agent picks msk_ch_2023 and its 42,714 cases, which record neither treatment response nor a survival endpoint.
+    - Only 51 of 602 datasets record both, measured from field coverage rather than description.
+    - Ranking on fit selects MP2PRT-ALL - 1,510 cases, 100 months of follow-up - and carries its 4 major limitations into the brief.
   steps:
     - Load the structured index
     - Show what a naive size-ranked selection returns

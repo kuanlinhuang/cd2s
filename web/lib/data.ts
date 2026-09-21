@@ -14,6 +14,7 @@ import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 import { num } from "./format";
+import { starterAccess } from "./starter";
 import type {
   BrowseRow,
   CorpusStats,
@@ -446,6 +447,37 @@ export function getModel(): ReuseGapModel | null {
     _model = readJson<ReuseGapModel | null>("reuse_gap_model.json", null);
   }
   return _model;
+}
+
+export interface StarterCoverage {
+  /** Records whose page carries repository-specific starter code. */
+  total: number;
+  /** Of those, the ones whose code runs with no account at all. */
+  open: number;
+  /** Of those, the ones needing a repository registration first. */
+  account: number;
+}
+
+/**
+ * How many dataset pages ship starter code a reader can run, and how many of those need
+ * no account first. Counted from the records through the snippet generator's own rule,
+ * so the number cannot outrun what `starterSnippets` actually emits.
+ */
+let _starter: StarterCoverage | null = null;
+
+export function getStarterCoverage(): StarterCoverage {
+  if (_starter) return _starter;
+  let open = 0;
+  let account = 0;
+  for (const row of getIndex()) {
+    const record = getRecord(row.id);
+    if (!record) continue;
+    const tier = starterAccess(record);
+    if (tier === "open") open += 1;
+    else if (tier === "account") account += 1;
+  }
+  _starter = { total: open + account, open, account };
+  return _starter;
 }
 
 /**

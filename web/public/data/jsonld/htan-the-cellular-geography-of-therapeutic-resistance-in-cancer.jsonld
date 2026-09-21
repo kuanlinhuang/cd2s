@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
+  "@id": "https://cd2s.vercel.app/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
   "name": "The Cellular Geography of Therapeutic Resistance in Cancer",
   "alternateName": [
     "HTA5"
   ],
   "description": "Of the fourteen HTAN atlases, this is the one whose stated purpose is resistance: mapping where in a tumor resistant cells survive treatment. It carries 20,350 files across multiplexed tissue imaging, single-cell RNA sequencing and bulk DNA, and it is the only atlas in the network carrying the extended clinical data tier alongside therapy, follow-up, exposure, family history and molecular test components.\nIt is also the clearest case in this corpus of a resource that is well built and apparently unused. HTAN maintains its own publication manifest, and this atlas has no entry in it - unlike most atlases, which record three to five publications. The combination of a resistance-focused design, unusually complete clinical annotation and no recorded downstream use makes it the strongest reuse opportunity we identified.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
+  "url": "https://cd2s.vercel.app/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer",
   "identifier": [
     "https://humantumoratlas.org/explore?selectedFilters=%5B%7B%22value%22%3A%22HTA5%22%7D%5D",
     "https://www.synapse.org/#!Synapse:syn39259236",
@@ -55,8 +55,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -67,8 +67,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/htan-the-cellular-geography-of-therapeutic-resistance-in-cancer.json",
       "encodingFormat": "application/json"
     }
   ],

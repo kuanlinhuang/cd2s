@@ -66,15 +66,23 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Read the Science paper before requesting access (1-2 hours)
+1. Read the Science paper before requesting access [human] (1-2 hours)
    It states which clinical and dosimetric variables were available to the original investigators. That is the fastest way to learn whether your question is answerable at all, given that the harmonized records carry almost no clinical annotation.
    https://pubmed.ncbi.nlm.nih.gov/33888599/
-2. Scope with the 4,268 open-access files (1-2 hours)
+2. Scope with the 4,268 open-access files [human] (1-2 hours)
    Derived expression and copy number products are open and sufficient to test whether your analysis plan is viable before you commit to an access request.
    https://portal.gdc.cancer.gov/projects/REBC-THYR
-3. Submit a dbGaP request, explicitly asking for dosimetry and outcome variables (days to a few weeks)
+3. Submit a dbGaP request, explicitly asking for dosimetry and outcome variables [human] (days to a few weeks)
    Name the dose reconstruction and vital status variables in your request. They are the difference between a descriptive genomic analysis and the dose-response study most people want this cohort for.
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -86,11 +94,11 @@ Populated means a value exists; informative excludes 'not reported'.
 - Articles that analyzed these data: 1
 - 2 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 1 are kept as exemplars. Of the 1 that analyzed the data, 0 of the 1 that could be checked had no author in common with the generating team, and 1 of the 1 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 138 (attention, not reuse)
-- Reuse gap index: -0.56 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.23 (negative means less reused than comparable datasets)
   - Distinctive molecular features of radiation-induced thyroid cancers. (2025) PMID 40845117
 
 ## Provenance
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-rebc-thyr.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-rebc-thyr.json

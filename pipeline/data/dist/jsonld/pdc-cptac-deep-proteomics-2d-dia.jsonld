@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-deep-proteomics-2d-dia",
+  "@id": "https://cd2s.vercel.app/datasets/pdc-cptac-deep-proteomics-2d-dia",
   "name": "CPTAC Deep Proteomics 2D-DIA",
   "alternateName": [
     "CPTAC Deep Proteomics 2D-DIA"
   ],
   "description": "CPTAC Deep Proteomics 2D-DIA",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-deep-proteomics-2d-dia",
+  "url": "https://cd2s.vercel.app/datasets/pdc-cptac-deep-proteomics-2d-dia",
   "identifier": [
     "https://pdc.cancer.gov/pdc/study/PDC000351"
   ],
@@ -36,8 +36,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -48,8 +48,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/pdc-cptac-deep-proteomics-2d-dia.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/pdc-cptac-deep-proteomics-2d-dia.json",
       "encodingFormat": "application/json"
     }
   ],

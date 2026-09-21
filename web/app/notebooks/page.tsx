@@ -25,10 +25,10 @@ export default function NotebooksPage() {
           <h1 className="mt-3 max-w-[22ch] text-3xl font-semibold tracking-tight sm:text-4xl">
             Do not stop at a download link.
           </h1>
-          <p className="mt-5 max-w-[70ch] text-lede t-muted">
-            These {num(guides.length)} notebooks show the difficult middle of cancer data reuse:
-            choosing data that can answer the question, retrieving it from public APIs, cleaning
-            deceptive fields, joining repositories, and producing an analysis you can inspect.
+          <p className="mt-5 max-w-[62ch] text-lede t-muted">
+            {num(guides.length)} notebooks for the difficult middle: choosing data that
+            can answer the question, retrieving it, cleaning deceptive fields, joining
+            repositories. Each one ran end to end, and shows what it found.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -86,8 +86,7 @@ export default function NotebooksPage() {
             </h2>
           </div>
           <p className="max-w-xl text-meta t-muted">
-            Each example ran end to end against the public data named in its receipt.
-            Adapt the workflow, then recheck its assumptions for your cohort.
+            Adapt the workflow, then recheck its assumptions for your own cohort.
           </p>
         </div>
         <NotebookGallery guides={guides} />

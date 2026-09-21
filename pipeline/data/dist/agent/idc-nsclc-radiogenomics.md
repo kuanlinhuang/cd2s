@@ -34,12 +34,16 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 ## How to get the data
 
-1. Explore the collection in the Imaging Data Commons (30 minutes)
+1. Explore the collection in the Imaging Data Commons [human] (30 minutes)
    Fully open. No account, no data access request.
    https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=nsclc_radiogenomics
-2. Pull DICOM with the idc-index Python package (1-2 hours)
-3. Retrieve the matched expression series from GEO and verify the identifier join (2 hours)
+2. Pull DICOM with the idc-index Python package [human] (1-2 hours)
+3. Retrieve the matched expression series from GEO and verify the identifier join [human] (2 hours)
    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28827
+4. List the series before pulling pixels [agent]
+   List modality and size first so an agent can choose what to fetch.
+   https://learn.canceridc.dev/
+   Policy evidence: https://learn.canceridc.dev/
 
 ## Verified runnable starting points
 
@@ -51,7 +55,7 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 - Articles that analyzed these data: 3
 - 4 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 4 are kept as exemplars. Of the 4 that analyzed the data, 3 of the 4 that could be checked had no author in common with the generating team, and 1 of the 4 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 202 (attention, not reuse)
-- Reuse gap index: -5.97 (negative means less reused than comparable datasets)
+- Reuse gap index: -5.44 (negative means less reused than comparable datasets)
   - Prognostic PET 18F-FDG uptake imaging features are associated with major oncogenomic alterations in patients with resected non-small cell lung cancer. (2012) PMID 22710433
   - Integrative analysis of imaging and transcriptomic data of the immune landscape associated with tumor metabolism in lung adenocarcinoma: Clinical and prognostic implications. (2018) PMID 29556367
   - Synergies of Radiomics and Transcriptomics in Lung Cancer Diagnosis: A Pilot Study. (2023) PMID 36832225
@@ -61,4 +65,4 @@ Summary: 211 non-small cell lung cancers with pre-surgical CT and PET/CT, semant
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/idc-nsclc-radiogenomics.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/idc-nsclc-radiogenomics.json

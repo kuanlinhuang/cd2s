@@ -9,7 +9,7 @@
   "name": "pdc-kncc-glioblastoma-evolution",
   "alternateName": "KNCC Glioblastoma Evolution",
   "description": "KNCC Glioblastoma Evolution",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-kncc-glioblastoma-evolution",
+  "url": "https://cd2s.vercel.app/datasets/pdc-kncc-glioblastoma-evolution",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "KNCC Glioblastoma Evolution",
   "version": "as-retrieved",

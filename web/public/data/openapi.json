@@ -1,10 +1,10 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Cancer Data Showcase API",
+    "title": "CD2S API",
     "version": "0.1.0",
     "summary": "Question-first metadata for NCI-supported cancer datasets.",
-    "description": "A read-only JSON surface over the Cancer Data Showcase corpus. Every endpoint is a static file, so it is cacheable, archivable and has no rate limit. Records expose measured clinical field completeness and graded reuse evidence, not only descriptive metadata.",
+    "description": "A read-only JSON surface over the CD2S corpus. Every endpoint is a static file, so it is cacheable, archivable and has no rate limit. Records expose measured clinical field completeness and graded reuse evidence, not only descriptive metadata.",
     "license": {
       "name": "CC BY 4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/"
@@ -12,7 +12,7 @@
   },
   "servers": [
     {
-      "url": "https://cancer-data-showcase.vercel.app"
+      "url": "https://cd2s.vercel.app"
     }
   ],
   "paths": {

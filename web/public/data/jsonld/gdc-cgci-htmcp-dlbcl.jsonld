@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-dlbcl",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-cgci-htmcp-dlbcl",
   "name": "HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma",
   "alternateName": [
     "cgci_htmcp_dlbcl"
   ],
   "description": "HIV-associated lymphoma is common where HIV is common and rare in the cohorts that define lymphoma genomics. This cohort addresses that gap directly: 70 cases with whole genome sequencing on 66, RNA sequencing on 55 and microRNA on 60, of which 34 patients are recorded as Black or African American and 18 as white.\nClinical annotation is better than the cohort size suggests. Prior treatment is recorded for 81%, ECOG performance status for 71%, treatment outcome for 46%, and named regimens including CHOP-21, COM and COP for 24%.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cgci-htmcp-dlbcl",
+  "url": "https://cd2s.vercel.app/datasets/gdc-cgci-htmcp-dlbcl",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-DLBCL",
     "gdc_program:CGCI",
@@ -60,8 +60,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -72,8 +72,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-dlbcl.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-cgci-htmcp-dlbcl.json",
       "encodingFormat": "application/json"
     }
   ],

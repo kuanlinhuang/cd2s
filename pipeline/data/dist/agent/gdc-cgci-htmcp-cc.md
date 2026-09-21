@@ -69,18 +69,26 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Read the marker publication first (1 hour)
+1. Read the marker publication first [human] (1 hour)
    The Nature Genetics paper describes the recruitment setting, HPV typing approach and the clinical variables that exist outside the harmonized records. It will tell you whether the variables your analysis needs are obtainable at all.
    https://pubmed.ncbi.nlm.nih.gov/32747824/
-2. Explore the open-access files without any approval (1-2 hours)
+2. Explore the open-access files without any approval [human] (1-2 hours)
    2,457 of 7,160 files are open. Derived expression, copy number and methylation products are enough to scope the analysis and check that the cohort fits before you invest in an access request.
    https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-CC
-3. Submit a dbGaP data access request for the controlled tier (days to a few weeks)
+3. Submit a dbGaP data access request for the controlled tier [human] (days to a few weeks)
    Needed for whole genome sequencing and any sequence-level analysis. You will need an eRA Commons account and your institutional signing official. Request the full phenotype file at the same time - that is where stage and HIV-related variables are most likely to live.
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
-4. Download with the GDC client (hours, depending on volume)
+4. Download with the GDC client [human] (hours, depending on volume)
    Once approved, use the GDC Data Transfer Tool with your token. Do not put the token on a command line or into a script that is committed anywhere.
    https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
+5. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+6. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -96,7 +104,7 @@ Populated means a value exists; informative excludes 'not reported'.
 - Articles that analyzed these data: 21
 - 28 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 2 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 70 (attention, not reuse)
-- Reuse gap index: -0.72 (negative means less reused than comparable datasets)
+- Reuse gap index: -1.04 (negative means less reused than comparable datasets)
   - Analysis of Ugandan cervical carcinomas identifies human papillomavirus clade-specific epigenome and transcriptome landscapes. (2020) PMID 32747824
   - Integrated analysis of cervical squamous cell carcinoma cohorts from three continents reveals conserved subtypes of prognostic significance. (2022) PMID 36207323
   - Rearrangements of viral and human genomes at human papillomavirus integration events and their allele-specific impacts on cancer genome regulation. (2025) PMID 39638560
@@ -107,4 +115,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-cc.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-cgci-htmcp-cc.json

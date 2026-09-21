@@ -27,8 +27,8 @@ from tenacity import (
 from cds.paths import CACHE_DIR
 
 USER_AGENT = (
-    "CancerDataShowcase/0.1 (NCI ODS Impact Prize Track 1; "
-    "https://github.com/cancer-data-showcase; contact via repository issues)"
+    "CD2S/0.1 (NCI ODS Impact Prize Track 1; "
+    "https://github.com/kuanlinhuang/cd2s; contact via repository issues)"
 )
 
 # Politeness: minimum seconds between live requests to the same host.

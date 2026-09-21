@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/gdc-cddp_eagle-1",
+  "@id": "https://cd2s.vercel.app/datasets/gdc-cddp_eagle-1",
   "name": "CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2)",
   "alternateName": [
     "CDDP_EAGLE-1"
   ],
   "description": "CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2)",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/gdc-cddp_eagle-1",
+  "url": "https://cd2s.vercel.app/datasets/gdc-cddp_eagle-1",
   "identifier": [
     "https://portal.gdc.cancer.gov/projects/CDDP_EAGLE-1",
     "gdc_program:CDDP_EAGLE",
@@ -48,8 +48,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -60,8 +60,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/gdc-cddp_eagle-1.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/gdc-cddp_eagle-1.json",
       "encodingFormat": "application/json"
     }
   ],

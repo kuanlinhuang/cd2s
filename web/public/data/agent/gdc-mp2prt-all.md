@@ -62,12 +62,20 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Confirm which trial protocols the cohort draws from (2-3 hours)
+1. Confirm which trial protocols the cohort draws from [human] (2-3 hours)
    The regimen field contains protocol arm names. Reading the corresponding COG protocol publications is what turns those strings into an interpretable treatment variable.
-2. Scope with the 7,459 open-access files (1-2 hours)
+2. Scope with the 7,459 open-access files [human] (1-2 hours)
    https://portal.gdc.cancer.gov/projects/MP2PRT-ALL
-3. Submit a dbGaP data access request (days to a few weeks)
+3. Submit a dbGaP data access request [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -80,7 +88,7 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Articles that analyzed these data: 0
 - 6 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 6 are kept as exemplars. Of the 6 that analyzed the data, author overlap with the generating team could not be checked for any of them, and 2 of the 4 that could be checked were themselves NCI funded.
-- Reuse gap index: -1.66 (negative means less reused than comparable datasets)
+- Reuse gap index: -2.37 (negative means less reused than comparable datasets)
   - Molecular and pharmacological heterogeneity of ETV6::RUNX1 acute lymphoblastic leukemia. (2025) PMID 39880832
   - Relapse Thresholds (12/24 Mo) Define Survival Disparity in Pediatric B-ALL. (2026) PMID 42383304
   - Pseudogene Coexpression Networks Reveal a Robust Prognostic Signature for Pediatric B-ALL Survival. (2026) PMID 41802009
@@ -91,4 +99,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-mp2prt-all.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-mp2prt-all.json

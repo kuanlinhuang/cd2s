@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-breast-dce-mri",
+  "@id": "https://cd2s.vercel.app/datasets/idc-qin-breast-dce-mri",
   "name": "QIN Breast DCE-MRI",
   "alternateName": [
     "qin_breast_dce_mri"
   ],
   "description": "This collection of breast dynamic contrast-enhanced (DCE) MRI data contains images from a longitudinal study to assess breast cancer response to neoadjuvant chemotherapy. Images were acquired at four time points: prior to the start of treatment (Visit 1, V1), after the first cycle of treatment (Visit 2, V2), at midpoint of treatment course (Visit 3, V3), and after completion of treatment (prior to surgery) (Visit 4, V4). The value of this collection is to provide clinical imaging data for the development and validation of quantitative imaging methods for assessment of breast cancer response to treatment. Please see the QIN Breast DCE-MRI page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-qin-breast-dce-mri",
+  "url": "https://cd2s.vercel.app/datasets/idc-qin-breast-dce-mri",
   "identifier": [
     "https://portal.imaging.datacommons.cancer.gov/explore/?collection_id=qin_breast_dce_mri",
     "https://www.cancerimagingarchive.net/collections/",
@@ -42,8 +42,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -54,8 +54,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/idc-qin-breast-dce-mri.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/idc-qin-breast-dce-mri.json",
       "encodingFormat": "application/json"
     }
   ],

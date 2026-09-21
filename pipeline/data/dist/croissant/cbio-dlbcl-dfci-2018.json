@@ -9,7 +9,7 @@
   "name": "cbio-dlbcl-dfci-2018",
   "alternateName": "Diffuse Large B cell Lymphoma (DFCI, Nat Med 2018)",
   "description": "Whole-exome sequencing of tumor/matching normal sample pairs from 135 DLBCL patients.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-dlbcl-dfci-2018",
+  "url": "https://cd2s.vercel.app/datasets/cbio-dlbcl-dfci-2018",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",

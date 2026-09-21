@@ -9,7 +9,7 @@
   "name": "pdc-cptac-hcmi-organoids-phase-1",
   "alternateName": "CPTAC-HCMI-Organoids Phase 1",
   "description": "CPTAC-HCMI-Organoids Phase 1",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-cptac-hcmi-organoids-phase-1",
+  "url": "https://cd2s.vercel.app/datasets/pdc-cptac-hcmi-organoids-phase-1",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-HCMI-Organoids Phase 1",
   "version": "as-retrieved",

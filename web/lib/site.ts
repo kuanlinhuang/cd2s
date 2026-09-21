@@ -15,5 +15,5 @@ export function siteUrl(): string | null {
 
 /** The origin, or the placeholder the pipeline uses when nobody set one. */
 export function siteUrlOrPlaceholder(): string {
-  return siteUrl() ?? "https://cancer-data-showcase.example.org";
+  return siteUrl() ?? "https://cd2s.example.org";
 }

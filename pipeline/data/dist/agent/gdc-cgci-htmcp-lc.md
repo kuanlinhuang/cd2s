@@ -61,12 +61,20 @@ Populated means a value exists; informative excludes 'not reported'.
 
 ## How to get the data
 
-1. Scope with the 380 open-access files (30 minutes)
+1. Scope with the 380 open-access files [human] (30 minutes)
    https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-LC
-2. Consider analyzing alongside the cervical and lymphoma HTMCP cohorts (1 hour)
+2. Consider analyzing alongside the cervical and lymphoma HTMCP cohorts [human] (1 hour)
    All three share a collection protocol, and together they are considerably more useful than any one alone.
-3. Submit a dbGaP data access request (days to a few weeks)
+3. Submit a dbGaP data access request [human] (days to a few weeks)
    https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+5. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
 
 ## Verified runnable starting points
 
@@ -84,4 +92,4 @@ Populated means a value exists; informative excludes 'not reported'.
 
 - Review status: project_curated
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-cgci-htmcp-lc.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-cgci-htmcp-lc.json

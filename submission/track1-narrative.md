@@ -14,7 +14,7 @@ This layer would translate repository holdings into three things a researcher or
 2. What analyses it cannot support, including the difference between missing, uninformative, and unmeasured fields.
 3. How the output has been reused, with evidence that separates actual analysis from a citation to the originating paper.
 
-We call the working prototype the **Cancer Data Showcase**.
+We call the working prototype **CD2S** - Cancer Data to Science.
 The prototype demonstrates the idea across 602 records from five NCI-supported repositories and investigator-cohort resources.
 It is evidence that this layer is technically feasible, useful, and directly connected to fixable sharing practices.
 
@@ -81,6 +81,9 @@ The prototype already exposes capability filters, an analysis-fit object with si
 It also provides runnable examples for both human researchers and AI agents.
 Six Python workbooks are executed end to end against live public APIs, with receipts and output hashes.
 The same corpus is exported as machine-readable records, constraints-first agent briefs, JSON-LD, Croissant, and an OpenAPI surface so an agent can make the same selection without scraping a page.
+Every dataset page also carries a route from the record to the repository files.
+The route is derived from the dataset's own identifiers, access tier, and repository policy, and it distinguishes the steps a person takes from the API or token steps an agent takes.
+Generated steps carry derived evidence pointing to the policy they apply, while reviewer-written routes remain authoritative.
 Those six are the counted user-facing analysis workbooks, not the total executable surface.
 The pipeline also contains source adapters for GDC, PDC, IDC, HTAN, cBioPortal, and NIH RePORTER, along with cached raw records and rebuild commands.
 
@@ -120,6 +123,7 @@ The prototype's current corpus shows the scale of the opportunity:
 - Clinical completeness measured for 385 records in a shared vocabulary.
 - 206 records with a derivable survival endpoint and 62 with recorded treatment response.
 - 69 curated research questions and six executed workbooks attached to 15 dataset pages.
+- 602 dataset pages with generated or curated access routes, including 2,373 policy-backed generated steps.
 - 796 verified reuse studies where an accession was located in an analysis-relevant article section.
 - 865 distinct NCI awards linked through NIH RePORTER.
 - 349,817 patients or subjects represented across 601 records that report a count.
@@ -214,7 +218,7 @@ The published calibration, receipts, and verification reports make these failure
 ## Prompt 4: Transferability, sustainability, and feasibility
 
 Feasibility is demonstrated by the working prototype.
-The current build contains 602 records, 385 records with measured clinical completeness, 20 project-curated showcase pages, 24 model-identified underexplored resources, 796 verified reuse studies, 865 linked NCI awards, and six executed workbooks.
+The current build contains 602 records, 385 records with measured clinical completeness, 20 project-curated showcase pages, 24 model-identified underexplored resources, 796 verified reuse studies, 865 linked NCI awards, six executed workbooks, and a generated access route for every supported repository record.
 The workbooks run end to end against public APIs and ship execution receipts containing the run time, package information, and output hash.
 A verification pass found 123 of 123 checked links resolving across the curated pages.
 
@@ -272,7 +276,7 @@ Doing so would make existing cancer research outputs easier to find, safer to se
 
 ## Selected evidence and links
 
-- Working demonstration: <https://cancer-data-showcase.vercel.app>
+- Working demonstration: <https://cd2s.vercel.app>
 - Prototype README: [`README.md`](../README.md)
 - Supporting evidence: [`submission/supporting-evidence.md`](supporting-evidence.md)
 - Methods implementation: [`web/app/methods/page.tsx`](../web/app/methods/page.tsx)

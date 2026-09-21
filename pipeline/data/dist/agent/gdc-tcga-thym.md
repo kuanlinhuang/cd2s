@@ -39,12 +39,39 @@ Populated means a value exists; informative excludes 'not reported'.
 - Progression at follow-up: 9.7% informative
 - Therapeutic agents: 7.3% populated (one-to-many)
 
+## How to get the data
+
+1. Open the project in the GDC Data Portal [human] (5 minutes)
+   Check the portal's current case and file counts before requesting anything; the cohort can change after this record was built.
+   https://portal.gdc.cancer.gov/projects/TCGA-THYM
+   Policy evidence: https://portal.gdc.cancer.gov/projects/TCGA-THYM
+2. Download the open files without an account [human] (minutes to hours, by cohort size)
+   3,189 open-access files are marked open access. Add them to a portal cart, export a manifest, and fetch it with the GDC Data Transfer Tool.
+   https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
+   Policy evidence: https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
+3. Request controlled access through dbGaP [human] (days to a few weeks after signing official approval)
+   4,832 controlled-access files require an approved data access request. The request starts at dbGaP, not in the portal. The relevant study is phs000178.
+   https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+   Policy evidence: https://gdc.cancer.gov/access-data/obtaining-access-controlled-data
+4. Download controlled files with your token [human]
+   An approved request yields a token. The same manifest fetches nothing controlled without it.
+   https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000178
+   Policy evidence: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000178
+5. Query the project from code, with no credentials [agent]
+   The file index is public even where files are not, so an agent can size the cohort before anyone requests access.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+6. Pass the token when the agent needs controlled files [agent]
+   Without a token, an API query may return only the open subset. Compare returned counts with the record before treating them as the whole cohort.
+   https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+   Policy evidence: https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/
+
 ## Evidence of prior reuse
 
 - Articles that analyzed these data: 41
 - 67 articles matching this dataset's accession search were retrieved and graded individually, and the strongest 10 are kept as exemplars. Of the 10 that analyzed the data, 9 of the 10 that could be checked had no author in common with the generating team, and 2 of the 10 that could be checked were themselves NCI funded.
 - Citations to the dataset's publication: 318 (attention, not reuse)
-- Reuse gap index: -0.48 (negative means less reused than comparable datasets)
+- Reuse gap index: -0.71 (negative means less reused than comparable datasets)
   - The Integrated Genomic Landscape of Thymic Epithelial Tumors. (2018) PMID 29438696
   - Myasthenia gravis-specific aberrant neuromuscular gene expression by medullary thymic epithelial cells in thymoma. (2022) PMID 35869073
   - A cfDNA methylation-based tissue-of-origin classifier for cancers of unknown primary. (2024) PMID 38632274
@@ -56,4 +83,4 @@ Populated means a value exists; informative excludes 'not reported'.
 - Review status: machine_only
   This page's interpretation has NOT been human-reviewed. Counts and field coverage are machine-measured and reliable; the absence of a limitations list means nobody has written one, not that there are no limitations.
 - Metadata retrieved: 2026-09-18
-- Full structured record: https://cancer-data-showcase.vercel.app/data/datasets/gdc-tcga-thym.json
+- Full structured record: https://cd2s.vercel.app/data/datasets/gdc-tcga-thym.json

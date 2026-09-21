@@ -1,6 +1,6 @@
-# Cancer Data Showcase
+# CD2S - Cancer Data to Science
 
-A question-first guide to NCI-supported cancer research outputs: what each dataset is actually
+A question-first layer over NCI-supported cancer research outputs: what each dataset is actually
 good for, who has already reused it, what it cannot answer, and a runnable starting point - for
 human researchers and for their agents.
 
@@ -12,24 +12,35 @@ Reuse Ideas). Submission materials are in [`submission/`](submission/).
 NIH and NCI already make valuable cancer data available through the GDC, PDC, IDC, HTAN,
 cBioPortal, dbGaP, and other resources.
 Those repositories answer an important first question: *what data are available?*
-CDS adds the missing research question: *which resource, or combination of resources, can answer
+CD2S adds the missing research question: *which resource, or combination of resources, can answer
 my question, and how do I get from the catalog to a defensible analysis?*
+
+Two costs sit between a researcher and a result, and neither is a search problem.
+Deciding which dataset - or which combination - can answer a specific question takes weeks of
+reading portals, papers and data dictionaries, and it takes expertise a newcomer to the cohort
+does not have.
+Then getting that data downloaded, cleaned and joined takes weeks more, because every repository
+names its fields differently, non-answers look like answers, and a join quietly changes the
+population under study.
+CD2S is built to remove both costs, so that data NIH has already paid to produce reaches more of
+the science it could support.
 
 The hard part is rarely finding one more download link.
 It is knowing which cohort, modality, endpoint, and repository identifiers belong together, then
 learning which files to request, how to clean their fields, and how to join records without
 quietly changing the population being studied.
 That interpretation work is scattered across papers, portal conventions, and expert memory.
-CDS makes it explicit, measurable, and runnable so the existing NIH investment can produce more
+CD2S makes it explicit, measurable, and runnable so the existing NIH investment can produce more
 research.
 
-| Researcher need | What CDS adds on top of existing resources |
+| Researcher need | What CD2S adds on top of existing resources |
 | --- | --- |
 | Choose a dataset before requesting access | Measures field completeness and returns six analysis-fit verdicts, with `not measured` kept distinct from `not supported`. |
 | Combine datasets responsibly | Maps shared identifiers, modality coverage, and patient-level overlap across repositories. |
 | Know whether a resource has worked in practice | Separates verified accession reuse from citations to a marker paper and shows the evidence articles. |
 | Find value that attention has missed | Compares observed and expected reuse and surfaces underexplored datasets with clear limitations. |
 | Get from discovery to analysis | Provides executed notebooks that retrieve, clean, join, visualize, and analyze public records. |
+| Get from discovery to the files | Derives policy-backed human and machine routes from repository identifiers and access tiers, with evidence on every generated step. |
 | Let software make the same decision | Publishes constraints-first Markdown briefs, JSON, JSON-LD, Croissant, OpenAPI, and capability filters. |
 
 The product is therefore a research layer, not a replacement catalog.
@@ -38,7 +49,7 @@ scope legible to a researcher who does not already know the local conventions.
 
 ## The path from a question to a result
 
-CDS is organized around a short, inspectable workflow:
+CD2S is organized around a short, inspectable workflow:
 
 1. **Ask.** Describe the analysis in ordinary language, such as survival with treatment response
    or matched imaging and molecular data.
@@ -53,6 +64,8 @@ CDS is organized around a short, inspectable workflow:
 
 The live interface exposes this path through the question box on the home page, the dataset
 browser, the `/notebooks` library, and the `/underexplored` opportunity view.
+Each dataset page also carries a repository-specific route for a person and, where supported,
+an agent, so the first download step is visible rather than implied by a portal link.
 The implementation lives in [`web/app/`](web/app/) and the generated records live in
 [`pipeline/data/dist/`](pipeline/data/dist/).
 
@@ -88,7 +101,11 @@ For every dataset it ingests:
 - **Links** funding through NIH RePORTER in both directions: the award that paid to create a
   dataset, resolved from its marker paper, and the awards that got a published finding out of
   it afterwards, resolved from the articles that used it
-- **Ships** an executable starting point and a machine-readable package for agents
+- **Ships** starter code on every one of the 602 pages, generated from that record's own
+  identifiers rather than written by hand - 588 of them run against a public API with no
+  account and no access request
+- **Routes** people and agents to repository files using the dataset's own identifiers,
+  access tier, and documented repository policy
 - **Checks itself**: the reuse method's field calibration, the model's own worst case and
   the marker-paper inferences it withdraws are all re-measured and published on every build
 
@@ -123,6 +140,7 @@ a snapshot of the build described there.
 | Datasets with an award credited with creating them | 283, from a repository-supplied or reviewer-supplied marker paper only |
 | Datasets with awards credited with using them | 80; 31 have awards on both sides |
 | Executed workbooks | 6, attached to 15 dataset pages, each with an execution receipt |
+| Datasets with generated or curated access routes | 602, with 2,373 policy-backed generated steps |
 | Datasets with no citable accession | 364 - their reuse cannot be traced at all |
 | People across the corpus | 349,817 patients or subjects, in the 601 records that report a count |
 
@@ -144,6 +162,7 @@ Measurement coverage by repository, because how far it reaches is part of the re
 | `pipeline/src/cds/clinical.py` | The shared clinical vocabulary every adapter reports into |
 | `pipeline/src/cds/sources/` | One adapter per repository (GDC, PDC, IDC, HTAN, cBioPortal, RePORTER) |
 | `pipeline/src/cds/reuse/` | Europe PMC section-scoped reuse tracing and availability dating |
+| `pipeline/src/cds/normalize/access.py` | Repository-specific human and agent access routes with policy evidence |
 | `pipeline/src/cds/metrics/` | The reuse gap model |
 | `pipeline/data/curated/` | Human-reviewed overlays - the expert-judgment source of truth |
 | `pipeline/data/dist/` | Generated artifacts consumed by the site and the agent API |
@@ -151,15 +170,35 @@ Measurement coverage by repository, because how far it reaches is part of the re
 | `web/` | Next.js site: dataset agent, dataset pages, charts, funding flow, comparison view, agent API |
 | `workbooks/python/` | Workbook source as plain `# %%` scripts |
 | `workbooks/executed/` | Executed notebooks plus execution receipts |
-| `workbooks/manifest.yaml` | Human-readable questions, inputs, outputs, steps, and featured notebook flags |
+| `workbooks/manifest.yaml` | Human-readable questions, inputs, outputs, steps, findings, and featured notebook flags |
 | `submission/` | Track 1 narrative and supporting evidence |
+
+## Start here, on every page
+
+Every dataset page ends in a **Start here** section: starter code generated from that record's
+own identifiers, then the documented access steps.
+It covers all 602 records, and 588 of them need no account - the four public APIs behind them
+(GDC, PDC, IDC and cBioPortal) answer unauthenticated.
+The generator is [`web/lib/starter.ts`](web/lib/starter.ts); the access steps come from
+[`pipeline/src/cds/normalize/access.py`](pipeline/src/cds/normalize/access.py) and per-dataset
+curated overlays.
+
+A snippet that has rotted still renders perfectly, so both are pinned by tests
+(`web/tests/starter.test.ts` and `pipeline/tests/test_access_routes.py`) and every runnable one
+was executed against the live API on 2026-09-20.
+That pass found three real breakages, since fixed: the GDC agent query was short a closing brace,
+`filesPerStudy` was keyed on the `pdc_study_id` rather than the study UUID, which returns the
+right number of rows with every column null, and `IDCClient.get_series` does not exist.
 
 ## Notebook library
 
-The six executed Python notebooks are the most concrete bridge from a catalog record to research
-work.
-Each notebook has source code, a committed executed `.ipynb`, an execution receipt, and a figure
-preview used by the site.
+The six executed Python notebooks go past that first download: they are the most concrete bridge
+from a catalog record to finished research work.
+Each notebook has source code, a committed executed `.ipynb`, an execution receipt, a figure
+preview used by the site, and the numbers it printed.
+Those numbers are the `findings` list in `workbooks/manifest.yaml`.
+They are a property of one recorded run, not a standing fact about the data, so the site always
+shows them beside that run's date and they are re-checked whenever a notebook is re-executed.
 
 - [`01_can_i_answer_this`](workbooks/python/01_can_i_answer_this.py) audits clinical completeness
   and returns six analysis-fit verdicts before access is requested.
@@ -245,6 +284,8 @@ See [`/agents`](web/app/agents/page.tsx) on the running site, or the generated f
   free text separately, so the browse page can load it after first paint)
 - `/data/datasets/{id}.json` - full record with evidence on every claim
 - `/data/agent/{id}.md` - plain-language brief, **constraints first**
+- The `How to get the data` section in each brief distinguishes human and agent steps and
+  links generated steps to the repository policy they apply.
 - `/data/croissant/{id}.json` - MLCommons Croissant with per-field completeness
 - `/data/jsonld/{id}.jsonld` - schema.org/Dataset + DCAT
 - `/data/field_calibration.json` - the Europe PMC field comparison, re-measured per build

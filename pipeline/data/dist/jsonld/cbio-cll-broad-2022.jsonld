@@ -5,13 +5,13 @@
     "dct": "http://purl.org/dc/terms/"
   },
   "@type": "Dataset",
-  "@id": "https://cancer-data-showcase.vercel.app/datasets/cbio-cll-broad-2022",
+  "@id": "https://cd2s.vercel.app/datasets/cbio-cll-broad-2022",
   "name": "Chronic Lymphocytic Leukemia (Broad, Nature Genetics 2022)",
   "alternateName": [
     "cll_broad_2022"
   ],
   "description": "Whole genome and whole exome sequencing of 1,154 samples from 1,148 patients with Chronic Lymphocytic Leukemia and monoclonal B cell lymphocytosis and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-cll-broad-2022",
+  "url": "https://cd2s.vercel.app/datasets/cbio-cll-broad-2022",
   "identifier": [
     "https://www.cbioportal.org/study/summary?id=cll_broad_2022"
   ],
@@ -45,8 +45,8 @@
   },
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "Cancer Data Showcase",
-    "url": "https://cancer-data-showcase.vercel.app"
+    "name": "CD2S",
+    "url": "https://cd2s.vercel.app"
   },
   "distribution": [
     {
@@ -57,8 +57,8 @@
     },
     {
       "@type": "DataDownload",
-      "name": "Cancer Data Showcase structured record",
-      "contentUrl": "https://cancer-data-showcase.vercel.app/data/datasets/cbio-cll-broad-2022.json",
+      "name": "CD2S structured record",
+      "contentUrl": "https://cd2s.vercel.app/data/datasets/cbio-cll-broad-2022.json",
       "encodingFormat": "application/json"
     }
   ],

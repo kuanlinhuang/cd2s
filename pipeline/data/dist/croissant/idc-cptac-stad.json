@@ -9,7 +9,7 @@
   "name": "idc-cptac-stad",
   "alternateName": "CPTAC-STAD",
   "description": "This collection contains subjects from the National Cancer Institute's Clinical Proteomic Tumor Analysis Consortium Stomach Adenocarcinoma (CPTAC-STAD) cohort. CPTAC is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. Radiology and pathology images from CPTAC patients are being collected and made publicly available by The Cancer Imaging Archive to enable researchers to investigate cancer phenotypes which may correlate to corresponding proteomic, genomic and clinical data. Please see the CPTAC-STAD page to learn more about the images and to obtain any supporting metadata for this collection.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/idc-cptac-stad",
+  "url": "https://cd2s.vercel.app/datasets/idc-cptac-stad",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "CPTAC-STAD",
   "version": "as-retrieved",

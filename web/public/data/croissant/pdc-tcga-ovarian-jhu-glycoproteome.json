@@ -9,7 +9,7 @@
   "name": "pdc-tcga-ovarian-jhu-glycoproteome",
   "alternateName": "TCGA Ovarian JHU Glycoproteome",
   "description": "TCGA Ovarian JHU Glycoproteome",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/pdc-tcga-ovarian-jhu-glycoproteome",
+  "url": "https://cd2s.vercel.app/datasets/pdc-tcga-ovarian-jhu-glycoproteome",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": "TCGA Ovarian JHU Glycoproteome",
   "version": "as-retrieved",

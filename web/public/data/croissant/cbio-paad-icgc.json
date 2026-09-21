@@ -9,7 +9,7 @@
   "name": "cbio-paad-icgc",
   "alternateName": "Pancreatic Adenocarcinoma (ICGC, Nature 2012)",
   "description": "Whole-exome sequencing of 99 pancreatic samples and their matched normals.",
-  "url": "https://cancer-data-showcase.vercel.app/datasets/cbio-paad-icgc",
+  "url": "https://cd2s.vercel.app/datasets/cbio-paad-icgc",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "citeAs": null,
   "version": "as-retrieved",
