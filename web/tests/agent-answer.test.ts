@@ -158,6 +158,27 @@ describe("a question the corpus can answer", () => {
     expect(a.picks.some((p) => p.verdict === "best")).toBe(false);
   });
 
+  /**
+   * The rules summary is the primary answer on every deployment now, keyed or not, so
+   * its one paragraph has to stay a paragraph. A reviewer's blocking limitation runs to
+   * several sentences and the card below quotes it whole; the lede quotes its opening.
+   *
+   * Asserted as "the opening is there and the rest is not", rather than against a
+   * character budget the code does not enforce or a leading capital this one blocker
+   * happens to have - `sentence()` re-cases the first letter, and plenty of blockers
+   * start lowercase.
+   */
+  it("quotes one sentence of a blocker in the lede, not the whole statement", async () => {
+    const a = await answer("acute myeloid leukemia");
+    const best = a.picks.find((p) => p.verdict === "best")!;
+    const blocker = best.watch_out[0];
+    expect(blocker).toBeDefined();
+    const [opening, ...rest] = blocker.split(/(?<=[.!?])\s+/);
+    expect(rest.length, "this query's leading blocker is no longer multi-sentence").toBeGreaterThan(0);
+    expect(a.summary).toContain(opening.slice(1));
+    expect(a.summary).not.toContain(rest.join(" "));
+  });
+
   it("never returns the same dataset twice", async () => {
     const a = await answer("acute myeloid leukemia");
     expect(new Set(a.picks.map((p) => p.id)).size).toBe(a.picks.length);

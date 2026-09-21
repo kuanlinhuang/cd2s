@@ -730,10 +730,13 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
                 "get": {
                     "summary": "Describe an analysis, get a ranked shortlist",
                     "description": (
-                        "Retrieval and the capability checks are deterministic and always "
-                        "run. When the deployment has a language-model key configured, a "
-                        "model ranks the shortlist and writes the explanations; the "
-                        "response says which happened in `mode`."
+                        "Retrieval, the capability checks and the ranking are deterministic "
+                        "and always run, and they are the whole answer whenever the leading "
+                        "dataset meets every need read from the request. Only a request "
+                        "they cannot settle is handed to a language model to rank and "
+                        "reword, and only where the deployment has one configured. `mode` "
+                        "says which wrote the wording; on a rules answer `note` says why "
+                        "no model did."
                     ),
                     "parameters": [
                         {
@@ -745,7 +748,9 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
                         }
                     ],
                     "responses": {
-                        "200": {"description": "query, mode, model, needs, summary and picks"},
+                        "200": {
+                            "description": "query, mode, model, note, needs, summary and picks"
+                        },
                         "400": {"description": "Query too short"},
                     },
                 },
@@ -764,7 +769,7 @@ def build_openapi(stats: dict[str, Any]) -> dict[str, Any]:
                         },
                     },
                     "responses": {
-                        "200": {"description": "query, mode, model, needs, summary and picks"}
+                        "200": {"description": "query, mode, model, note, needs, summary and picks"}
                     },
                 },
             },

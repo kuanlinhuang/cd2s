@@ -13,7 +13,7 @@ import {
   getStats,
 } from "@/lib/data";
 import { FIT_RULES } from "@/lib/fit";
-import { agentModel } from "@/lib/agent";
+import { AGENT_DEFAULT_MODEL } from "@/lib/agent";
 import { num, shortDate } from "@/lib/format";
 
 const COEFFICIENT_LABELS: Record<string, string> = {
@@ -201,8 +201,8 @@ export default function MethodsPage() {
               <a href="#agent" className="underline">How the ask box works</a>
             </h2>
             <p className="mt-1 t-muted">
-              Deterministic checks against measured fields first. A language model, when
-              one is configured, only writes the wording.
+              Deterministic checks against measured fields decide it. A language model is
+              called only where they name no clear place to start.
             </p>
           </Card>
         </div>
@@ -404,12 +404,21 @@ export default function MethodsPage() {
             a dataset.
           </p>
           <p>
-            When the server is configured with a language model through OpenRouter
-            ({agentModel()} unless configured otherwise), the model ranks the shortlist and
-            rewrites the reasons in the researcher&rsquo;s own terms, using only the measured
-            facts it is given. Without one, the same shortlist is returned with rule-based
-            wording. The answer page says which happened, and the API response carries it as{" "}
-            <code>mode</code> and <code>model</code>. Each line drawn from a measured field links to
+            The deterministic ranking is the answer whenever it settles the request. When
+            the leading dataset meets every need the request stated, and each of those needs
+            was actually measured for it, that shortlist is what comes back - with no model
+            in the path to slow it down or to restate a decision already made on measured
+            facts. Only when nothing clears that bar, because a need fails or nobody
+            measured it, does the order among near-misses become a judgement about which
+            caveat matters most to the analysis described; only then is the shortlist handed
+            to a language model through OpenRouter ({AGENT_DEFAULT_MODEL} unless
+            OPENROUTER_MODEL says otherwise), to rank and rewrite the reasons in the
+            researcher&rsquo;s own terms
+            using only the measured facts it is given. Without a key those requests keep the
+            rule-based wording. The answer page says which happened, and the API response
+            carries it as <code>mode</code> and <code>model</code>, with <code>note</code>{" "}
+            distinguishing the three ways a rules answer can arise. Each line drawn from a
+            measured field links to
             the section of the dataset page that carries it; a line whose wording does not
             identify one carries no source link rather than a guessed one.
           </p>

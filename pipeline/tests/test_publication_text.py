@@ -66,3 +66,28 @@ def test_only_typesetting_is_unwrapped() -> None:
     and a wrong title is worse than an ugly one.
     """
     assert clean_text("A gene named &lt;unknown&gt; here") == "A gene named <unknown> here"
+
+
+@pytest.mark.parametrize(
+    ("raw", "want"),
+    [
+        # `html.unescape` resolves these legacy unterminated references; an author writing
+        # "&not" before a word is far likelier than a title meaning the negation sign.
+        ("Notch signalling &notable in glioma", "Notch signalling &notable in glioma"),
+        ("Cohorts &amped by selection bias", "Cohorts &amped by selection bias"),
+        ("A &ltd trial arm", "A &ltd trial arm"),
+        ("AT&T Labs and R&D spending", "AT&T Labs and R&D spending"),
+        # Terminated references are still decoded, including the numeric forms.
+        ("Tumour &amp; stroma", "Tumour & stroma"),
+        ("5 &#8211; 10 cases", "5 – 10 cases"),
+        ("&#x3b2;-catenin signalling", "β-catenin signalling"),
+    ],
+)
+def test_only_complete_entities_are_decoded(raw: str, want: str) -> None:
+    """A bare ampersand is the author's, not markup.
+
+    The decoder Python ships accepts a character reference with no closing semicolon, so
+    "signalling &notable" came back as "signalling ¬table" - the exact silent edit the
+    tag rule above is written to avoid, arriving through the other half of the function.
+    """
+    assert clean_text(raw) == want

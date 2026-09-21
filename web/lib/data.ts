@@ -1234,24 +1234,6 @@ export function getFundingCandidates(): FundingCandidate[] {
   return _fundingCandidates;
 }
 
-/**
- * The dataset to open the funding view on: the best-documented one that still fits on a
- * screen. A cohort with forty awards a side is the truest picture of TCGA and the worst
- * possible first read of the chart.
- */
-export function defaultFundingDataset(): FundingCandidate | null {
-  const all = getFundingCandidates();
-  return (
-    all.find(
-      (c) =>
-        c.n_generation > 0 && c.n_enabled > 0 && c.n_generation <= 12 && c.n_enabled <= 22,
-    ) ??
-    all.find((c) => c.n_generation > 0 && c.n_enabled > 0) ??
-    all[0] ??
-    null
-  );
-}
-
 /** Corpus-wide totals for the funding view's own caveats. */
 export function getFundingCoverage() {
   const cands = getFundingCandidates();

@@ -17,6 +17,7 @@ import {
   type NetworkScope,
 } from "@/lib/data";
 import { FUNDING_ROLE_LABELS, num } from "@/lib/format";
+import { DATASET_VIEW_LANE_KEYS, LANE_RULE } from "@/lib/lanes";
 
 /**
  * Funding in, findings out.
@@ -51,14 +52,16 @@ const SLICES = new Set<string>(NETWORK_SCOPES.map((s) => s.key));
 
 /**
  * The four stages, shown before a dataset is chosen so the picker is not the only thing
- * on an empty page. Read from the graph's own lane definitions and coloured with the
- * same left rules the cards use, so this preview and the chart it previews cannot drift.
+ * on an empty page. Labels come from the graph's own lane definitions and the rules from
+ * the map the cards themselves read, so the preview and the chart cannot drift. A lane
+ * added to the graph without a kind fails the build here rather than quietly rendering
+ * with no stage rule at all.
  */
-const DATASET_VIEW_STEPS = DATASET_VIEW_LANES.map((lane, i) => ({
-  label: lane.label,
-  hint: lane.hint,
-  rule: ["var(--viz-1)", "var(--accent)", "var(--border-strong)", "var(--viz-mute)"][i],
-}));
+const DATASET_VIEW_STEPS = DATASET_VIEW_LANES.map((lane, i) => {
+  const key = DATASET_VIEW_LANE_KEYS[i];
+  if (!key) throw new Error(`funding lane ${i} ("${lane.label}") has no rule colour`);
+  return { label: lane.label, hint: lane.hint, rule: LANE_RULE[key] };
+});
 
 function usd(n: number | null): string | null {
   if (!n) return null;
@@ -305,7 +308,9 @@ function DatasetView({ datasetParam }: { datasetParam?: string }) {
               id="dataset"
               name="dataset"
               list="dataset-list"
-              defaultValue={chosen?.id ?? ""}
+              // Keeps a mistyped id in the box so one character can be fixed, rather
+              // than clearing it and making the whole id be retyped.
+              defaultValue={chosen?.id ?? datasetParam ?? ""}
               placeholder={`Type a dataset id, or pick from all ${num(coverage.with_any_award)}`}
               className="min-w-0 flex-1 rounded-lg border px-3.5 py-2.5 font-mono text-body"
               style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}

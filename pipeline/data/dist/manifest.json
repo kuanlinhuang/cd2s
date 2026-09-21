@@ -2,7 +2,7 @@
   "site": "CD2S",
   "license_content": "https://creativecommons.org/licenses/by/4.0/",
   "license_code": "https://opensource.org/licenses/MIT",
-  "generated_at": "2026-09-21T15:45:16.633021+00:00",
+  "generated_at": "2026-09-21T19:33:19.215366+00:00",
   "pipeline_version": "0.1.0",
   "n_datasets": 602,
   "n_showcase": 20,
@@ -54,7 +54,7 @@
     "jsonld": 602,
     "croissant": 602,
     "agent": 602,
-    "generated_at": "2026-09-21T15:45:20.664686+00:00"
+    "generated_at": "2026-09-21T19:33:20.196762+00:00"
   },
   "bytes_written": {
     "dist/index.json": 1330283,

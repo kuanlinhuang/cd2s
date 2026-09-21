@@ -271,16 +271,16 @@ so a clean checkout builds without running the pipeline.
 | Variable | Where | Purpose |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Vercel project | absolute URLs in the sitemap, metadata and snippets |
-| `OPENROUTER_API_KEY` | Vercel project | lets a language model rank and explain the dataset agent's shortlist; without it the agent runs on rules and says so |
-| `OPENROUTER_MODEL` | Vercel project, optional | overrides the default `deepseek/deepseek-v4-flash` |
+| `OPENROUTER_API_KEY` | Vercel project | lets a language model rank and explain the dataset agent's shortlist, on the requests the deterministic ranking cannot settle; without it those requests run on rules and say so |
+| `OPENROUTER_MODEL` | Vercel project, optional | overrides the default `deepseek/deepseek-v4.1-flash` |
 | `CDS_SITE_URL` | local shell, before `cds export` | the same origin, baked into the agent packages |
 | `CDS_REPO_URL` | local shell, before `cds curate` | base URL of a **public** source repository; when set, each dataset page links its executed notebook. Left unset the pages name the workbook and its receipt instead of offering a link that would 404 |
 
-The site's dataset agent (the "describe your analysis" box on the home page and
-`/api/v1/agent`) works without any key: retrieval and the capability checks are deterministic.
-Set `OPENROUTER_API_KEY` in the site's environment to have a language model rank and explain the
-shortlist through OpenRouter. The default model is `deepseek/deepseek-v4-flash`; override it with
-`OPENROUTER_MODEL`.
+The site's dataset agent (the "describe your analysis" box on the home page and `/api/v1/agent`) works without any key, and answers most requests without one even when a key is set.
+Retrieval, the capability checks and the ranking are deterministic, and when the leading dataset meets every need the request stated - each of them measured for it - that answer is returned as it stands, with no model call in the path.
+Only requests the rules cannot settle, where nothing clears that bar and the order among near-misses is a judgement, are handed to a language model through OpenRouter.
+Set `OPENROUTER_API_KEY` in the site's environment to enable that; without it those requests keep their rule-based wording and the response's `note` says so.
+The default model is `deepseek/deepseek-v4.1-flash`; override it with `OPENROUTER_MODEL`.
 
 ## For agents
 
