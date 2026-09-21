@@ -58,9 +58,10 @@ export function exactScale(ceiling: number, steps = 4): BarScale {
  * A decade scale, for marks positioned along an axis spanning orders of magnitude.
  *
  * Only for dots, never for bars. A bar's length is read as proportional to its value and
- * on a log axis it is not - a dataset with seven articles would draw a bar three fifths
- * as long as one with 2,463. A dot encodes a position, which a log axis renders
- * honestly, which is why `PairedDots` exists and why this does not feed `Bars`.
+ * on a log axis it is not - a dataset with seven articles would draw a bar a quarter as
+ * long as one with 2,831, four hundred times its reuse. A dot encodes a position, which
+ * a log axis renders honestly, which is why `PairedDots` exists and why this does not
+ * feed `Bars`.
  *
  * The domain runs from 1, not 0, so that each decade takes an equal share of the width
  * and the gridlines drawn at `interval` land exactly on the tick labels. The reuse

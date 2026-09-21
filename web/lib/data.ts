@@ -941,7 +941,7 @@ function awardSub(a: FundingAward): string {
  * paper, or an article that used the data later.
  *
  * Either side can be empty, and the lanes say why rather than rendering a blank column.
- * That is not a shortfall to hide: 364 of the corpus's records carry no accession an
+ * That is not a shortfall to hide: 378 of the corpus's records carry no accession an
  * article could quote, so nothing they enabled is traceable, and a record whose marker
  * paper nobody authoritative names has no attributable generation award at all.
  */

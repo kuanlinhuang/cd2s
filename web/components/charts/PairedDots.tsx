@@ -9,12 +9,12 @@ import { num } from "@/lib/format";
  * take.
  *
  * This is the form the data forced. The obvious chart is two bars per row, and it works
- * beautifully for eight rows and not at all for twenty-four: ordered by how much a
- * dataset has been used, this corpus runs from 2,463 articles down to one, so on a
- * linear axis everything past the eighth row is a two-pixel stub. A log axis rescues the
- * stubs and ruins the bars - length is supposed to be proportional to value, and on a
- * decade scale a dataset with seven articles draws a bar three-fifths as long as one
- * with 2,463. On the front page of a site whose whole argument is that catalogs mislead,
+ * beautifully for eight rows and not at all for fourteen: the two series span 641 to
+ * 9,914, so on a linear axis scaled to the larger every reuse mark crowds into the left
+ * quarter of the track. A log axis rescues the stubs and ruins the bars - length is
+ * supposed to be proportional to value, and on a decade scale a dataset with seven
+ * articles draws a bar a quarter as long as one with 2,831, four hundred times its
+ * reuse. On the front page of a site whose whole argument is that catalogs mislead,
  * that is not a trade worth making.
  *
  * A dot encodes *position*, not length, and position on a log axis is honest - it is how

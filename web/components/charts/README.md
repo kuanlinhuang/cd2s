@@ -49,7 +49,7 @@ Two measures never get two axes.
 Both series in `PairedDots` are counts of articles and share one scale; a second axis rescaled to make the shorter series look comparable would assert a relationship that is not in the data.
 
 Bars are linear, always.
-`PairedDots` exists because the cited-against-used comparison needs a decade axis and bars cannot have one: length is read as proportional to value, and on a log scale a dataset with seven articles draws a bar three fifths as long as one with 2,463.
+`PairedDots` exists because the cited-against-used comparison needs a decade axis and bars cannot have one: length is read as proportional to value, and on a log scale a dataset with seven articles draws a bar a quarter as long as one with 2,831, four hundred times its reuse.
 A dot encodes a position instead, which a log axis renders honestly - the same reason `ReuseScatter` can be log-log.
-Ordered by use, this corpus runs from 2,463 articles down to one, so a linear axis leaves everything past the eighth row a two-pixel stub; the decade axis is what lets twenty-eight rows carry a readable mark.
+This corpus runs from 2,831 articles down to one, and the two series on the front page span 641 to 9,914; a linear axis scaled to the larger crowds every reuse mark into the left quarter of the track, while the decade axis gives all fourteen rows a readable mark.
 `logScale` is therefore reached for by dots only, and never passed to `Bars`.

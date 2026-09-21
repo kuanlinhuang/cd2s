@@ -138,10 +138,10 @@ a snapshot of the build described there.
 | Verified reuse studies | 796 (accession in a methods section, corrected for how Europe PMC indexes hyphenated accessions) |
 | NCI awards linked | 865, resolved through NIH RePORTER |
 | Datasets with an award credited with creating them | 283, from a repository-supplied or reviewer-supplied marker paper only |
-| Datasets with awards credited with using them | 80; 31 have awards on both sides |
+| Datasets with awards credited with using them | 62; 25 have awards on both sides |
 | Executed workbooks | 6, attached to 15 dataset pages, each with an execution receipt |
 | Datasets with generated or curated access routes | 602, with 2,373 policy-backed generated steps |
-| Datasets with no citable accession | 364 - their reuse cannot be traced at all |
+| Datasets with no citable accession | 378 - their reuse is unmeasurable, which is not the same as zero |
 | People across the corpus | 349,817 patients or subjects, in the 601 records that report a count |
 
 Measurement coverage by repository, because how far it reaches is part of the result:
