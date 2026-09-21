@@ -21,13 +21,19 @@ export type { Need } from "@/lib/needs";
  * against those needs, and returns a short ranked list with the reasons and the
  * blockers.
  *
- * Two stages. Retrieval and the capability checks are deterministic and always run,
- * because "vital status is populated for every case and informative for none" is a
- * fact about the data that no language model should be asked to guess. When an
- * OpenRouter API key is configured, a language model (DeepSeek V4 Flash by default)
- * then ranks the shortlist and writes the explanation in the researcher's own terms.
- * Without a key, the same shortlist is returned with rule-based explanations, and the
- * response says so.
+ * The deterministic pass is the answer, not a first draft of one. Retrieval and the
+ * capability checks always run, because "vital status is populated for every case and
+ * informative for none" is a fact about the data that no language model should be asked
+ * to guess. When they settle the request on their own, that answer is returned as it
+ * stands and no model is called: a model given the same facts and the same bar can only
+ * agree a round trip later.
+ *
+ * A language model (DeepSeek V4.1 Flash by default, through OpenRouter) runs on the
+ * requests the rules cannot settle - see `resolvedByRules` for exactly which - where the
+ * order among near-misses turns on which caveat matters most to the analysis described.
+ * It ranks and rewrites the same shortlist and can never add to it. Without a key, or
+ * when the call fails, those requests fall back to rule-based wording; `mode` says which
+ * wrote the wording and `note` says why.
  *
  * THE CLAIM INVARIANT, which every part of this site obeys and which is written down
  * only here. Every function that produces a label, a verdict, a ranking or a link a
@@ -137,7 +143,37 @@ function shortlist(query: string, k: number): { needs: Need[]; scored: Scored[] 
  */
 function verdictFor(s: Scored, rank: number): Verdict {
   if (s.failed.length > 0) return "caution";
-  return rank === 0 && s.unknown.length === 0 ? "best" : "good";
+  return rank === 0 && clearsBar(s) ? "best" : "good";
+}
+
+/**
+ * Whether a candidate clears the absolute bar: every need read from the request is
+ * measured for this record and met by it.
+ *
+ * The verdicts, the decision to call a model and the note explaining a rules answer all
+ * read this one predicate, so that "the rules settled it" and "the card says Start here"
+ * cannot drift apart as the scoring weights are tuned. It is a fact about the record and
+ * the request - never a position in the sorted list, and never a display string parsed
+ * back out of a function that exists to label a card.
+ */
+function clearsBar(s: Scored): boolean {
+  return s.failed.length === 0 && s.unknown.length === 0;
+}
+
+const VERDICT_STRENGTH: Record<Verdict, number> = { caution: 0, good: 1, best: 2 };
+
+/**
+ * The verdict a model-written card is allowed to carry.
+ *
+ * A model may agree with the measured verdict or weaken it; it may never strengthen it.
+ * The claim invariant says the code enforces what a visitor reads, so the prompt asking
+ * the model not to over-claim is a courtesy and this is the guarantee. It matters most
+ * on exactly the requests the model now sees: every one of them has a candidate that
+ * fails or lacks a stated need, and "good fit" on a dataset that fails one is the claim
+ * this whole module exists to refuse.
+ */
+function clampVerdict(claimed: Verdict, measured: Verdict): Verdict {
+  return VERDICT_STRENGTH[claimed] > VERDICT_STRENGTH[measured] ? measured : claimed;
 }
 
 function rulesPick(s: Scored, rank: number): AgentPick {
@@ -182,7 +218,8 @@ function rulesPick(s: Scored, rank: number): AgentPick {
 // ------------------------------------------------------------------------------------
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-const DEFAULT_MODEL = "deepseek/deepseek-v4-flash";
+/** The default the docs quote. Exported so a page can name it without resolving the override. */
+export const AGENT_DEFAULT_MODEL = "deepseek/deepseek-v4.1-flash";
 
 /**
  * How long the model gets before the rules answer instead.
@@ -195,7 +232,7 @@ const DEFAULT_MODEL = "deepseek/deepseek-v4-flash";
 export const AGENT_MODEL_TIMEOUT_MS = 45_000;
 
 export function agentModel(): string {
-  return process.env.OPENROUTER_MODEL?.trim() || DEFAULT_MODEL;
+  return process.env.OPENROUTER_MODEL?.trim() || AGENT_DEFAULT_MODEL;
 }
 
 const RankSchema = z.object({
@@ -220,26 +257,26 @@ You are given a shortlist of candidate datasets with measured facts: cohort size
 Rules:
 - Use only the facts provided. Do not invent fields, counts or capabilities.
 - An analysis verdict of "unknown" means the field was not measured for that record. Say so; never present it as absent.
-- Constraints come first. A dataset that fails a need the analysis depends on cannot be "best" or "good"; mark it "caution" and say why, or leave it out.
-- Prefer datasets that meet every stated need, then larger cohorts, then ones with reviewed research questions.
-- Rank at most four. Put the strongest first and mark exactly one "best" unless nothing qualifies.
+- Constraints come first. A dataset that fails a need the analysis depends on cannot be "good"; mark it "caution" and say why, or leave it out.
+- No dataset in this list meets every need the researcher stated - that is the only reason you are being asked. Never mark one "best", and never open with an unqualified recommendation. Say first what nothing here can do, then which comes closest and what that costs.
+- Order the near-misses by which unmet need matters least to the analysis described, then by cohort size.
+- Rank at most four, closest first.
 - Write for a researcher: short, concrete sentences, no marketing.
 - In prose, name datasets by their title, never by their id. Use ids only in the "id" field.
 - Keep the whole response under 250 words.
 
 Respond with JSON only, matching exactly:
-{"summary": "two or three plain sentences: which dataset to start with and why, and the main thing that could block them",
- "picks": [{"id": "dataset id exactly as given", "verdict": "best" | "good" | "caution",
+{"summary": "two or three plain sentences: what no dataset here can do, which one comes closest and why, and what that choice costs",
+ "picks": [{"id": "dataset id exactly as given", "verdict": "good" | "caution",
             "why": ["two to four short reasons, each grounded in a stated fact"],
             "watch_out": ["zero to three short blockers or caveats, each grounded in a stated fact"]}]}`;
 
 async function rankWithModel(
+  key: string,
   query: string,
   needs: Need[],
   shortlisted: Scored[],
 ): Promise<z.infer<typeof RankSchema> | null> {
-  const key = process.env.OPENROUTER_API_KEY;
-  if (!key) return null;
   const cards = shortlisted.map((s) => {
     const r = s.row;
     const rec = getRecord(r.id);
@@ -337,10 +374,75 @@ async function rankWithModel(
 // entry point
 // ------------------------------------------------------------------------------------
 
+/**
+ * The opening sentence of a reviewer's statement, for the one-paragraph lede.
+ *
+ * A blocking limitation is written to be read in full, and the card below the summary
+ * carries it in full. In the lede it is one clause among three, so quoting all of it -
+ * they run to 345 characters - pushes the shortlist off the screen that the sentence
+ * exists to introduce. The lookahead keeps "0.3% of cases" in one piece.
+ */
+function firstSentence(text: string): string {
+  return text.match(/^.*?[.!?](?=\s|$)/)?.[0] ?? text;
+}
+
 /** A clause as a sentence: capitalised, ending in exactly one full stop. */
 function sentence(clause: string): string {
   const t = clause.trim().replace(/\.+$/, "");
   return t ? t[0].toUpperCase() + t.slice(1) + "." : "";
+}
+
+/**
+ * Whether the deterministic pass answered the request on its own.
+ *
+ * It did when the leading candidate clears the absolute bar this module states: every
+ * need read from the request is measured for that record and met by it, which is
+ * exactly the condition `clearsBar` states. That answer names a place to start
+ * on measured facts alone, and a model handed the same facts and the same bar has
+ * nothing left to decide - it can only restate the answer, seconds later and through a
+ * network call that may fail.
+ *
+ * It did not when candidates exist and none clears the bar. The order among near-misses
+ * then turns on which failed need or unmeasured field matters most to the analysis this
+ * researcher described, and that is a judgement about their words rather than a fact
+ * about the data. It is the one thing here a model is better at, so it is the only thing
+ * it is asked.
+ *
+ * A request naming no subject in the vocabulary reaches no candidate at all, and that is
+ * not an unresolved request but a resolved empty one. Handing an empty shortlist to a
+ * model could only invite it to invent the dataset the corpus does not hold, so that
+ * case never calls one either.
+ */
+function resolvedByRules(scored: Scored[]): boolean {
+  return scored.length === 0 || clearsBar(scored[0]);
+}
+
+/**
+ * What a rules answer says about its own wording, for a caller reading the JSON.
+ *
+ * `mode` already says a model did not write it. The note says why, and only where the
+ * answer to that changes what an identical second call would return: a model that was
+ * asked and could not answer, or none configured for the requests that want one. When
+ * nothing was ranked there is nothing to explain.
+ */
+function rulesNote(hasCandidates: boolean, keyed: boolean, resolved: boolean): string | null {
+  if (!hasCandidates) return null;
+  if (resolved) {
+    // Said whether or not a key exists, because a key would not have changed this
+    // answer. The keyless form still names the variable, since a self-hoster reading
+    // this field is the one person who would otherwise never learn it exists.
+    const settled = "Ranked by rules: the deterministic ranking settled this request, so no model was called.";
+    return keyed
+      ? settled
+      : `${settled} Setting OPENROUTER_API_KEY would not change it; a model is asked only about requests the rules cannot settle.`;
+  }
+  if (!keyed) {
+    return "Ranked by rules. Set OPENROUTER_API_KEY on the server to have a language model rank and explain the requests the rules cannot settle.";
+  }
+  // Reached only after a model was asked and gave back nothing usable. That covers a
+  // refused or timed-out call and a well-formed answer naming datasets the shortlist
+  // does not hold, which look identical from here and are equally not the model's work.
+  return "Ranked by rules this time because the model did not return a usable answer.";
 }
 
 export async function answer(rawQuery: string): Promise<AgentAnswer> {
@@ -350,9 +452,12 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
   const byId = new Map(scored.map((s) => [s.row.id, s]));
   const panCancerCount = getIndex().filter((row) => row.subject_scope === "pan_cancer").length;
 
-  if (process.env.OPENROUTER_API_KEY && scored.length > 0) {
+  const key = process.env.OPENROUTER_API_KEY?.trim();
+  const resolved = resolvedByRules(scored);
+
+  if (!resolved && key) {
     try {
-      const ranked = await rankWithModel(query, needs, scored);
+      const ranked = await rankWithModel(key, query, needs, scored);
       if (ranked) {
         const seen = new Set<string>();
         const picks: AgentPick[] = [];
@@ -360,7 +465,7 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
           const s = byId.get(p.id);
           if (!s || seen.has(p.id)) continue;
           seen.add(p.id);
-          const claimed = p.verdict === "best" && verdictFor(s, 0) !== "best" ? verdictFor(s, 0) : p.verdict;
+          const claimed = clampVerdict(p.verdict, verdictFor(s, 0));
           picks.push({ ...rulesPick(s, 1), verdict: claimed, why: p.why, watch_out: p.watch_out });
         }
         if (picks.length > 0) {
@@ -389,16 +494,14 @@ export async function answer(rawQuery: string): Promise<AgentAnswer> {
       ? "Nothing in the corpus matches that description. Try naming the cancer type or the tissue you are studying."
       : best
         ? `Start with ${best.title}. ${best.why[0] ? sentence(best.why[0]) : ""}${
-            best.watch_out[0] ? ` Check first: ${sentence(best.watch_out[0])}` : ""
+            best.watch_out[0] ? ` Check first: ${sentence(firstSentence(best.watch_out[0]))}` : ""
           }`
         : `Nothing here is a clear place to start. ${picks[0].title} is the closest; ${picks[0].watch_out[0] ?? "read its limitations"}.`;
   return {
     query,
     mode: "rules",
     model: null,
-    note: process.env.OPENROUTER_API_KEY
-      ? "Ranked by rules this time because the model call failed."
-      : "Ranked by rules. Set OPENROUTER_API_KEY on the server to have a language model rank and explain the shortlist.",
+    note: rulesNote(scored.length > 0, Boolean(key), resolved),
     needs: needLabels,
     summary,
     picks,

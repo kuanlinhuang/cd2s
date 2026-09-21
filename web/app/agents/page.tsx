@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Callout, Card } from "@/components/ui";
+import { AGENT_DEFAULT_MODEL } from "@/lib/agent";
 import { getLargestUninformativeCohort, getStats } from "@/lib/data";
 import { num } from "@/lib/format";
 
@@ -159,11 +160,15 @@ export default function AgentsPage() {
           </code>
           <p className="mt-2 text-body t-muted">
             Describe an analysis in plain language. The response is a ranked shortlist with
-            the reasons each dataset fits and the blockers to check first. Retrieval and the
-            capability checks are deterministic; when the server has an{" "}
-            <code>OPENROUTER_API_KEY</code>, a language model (DeepSeek V4 Flash unless{" "}
-            <code>OPENROUTER_MODEL</code> says otherwise) ranks and explains the shortlist,
-            and <code>mode</code> says which happened.
+            the reasons each dataset fits and the blockers to check first. Retrieval, the
+            capability checks and the ranking are deterministic, and that is the whole
+            answer whenever the leading dataset meets every need the request stated. Only
+            when none does, so the order turns on which caveat matters most, is the
+            shortlist handed to a language model to rank and explain - and only if the
+            server has an <code>OPENROUTER_API_KEY</code> (
+            <code>{AGENT_DEFAULT_MODEL}</code> unless <code>OPENROUTER_MODEL</code> says
+            otherwise). <code>mode</code> says which wrote the wording, and on a rules
+            answer <code>note</code> says why no model did.
           </p>
         </Card>
 
