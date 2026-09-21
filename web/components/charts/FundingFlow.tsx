@@ -132,7 +132,7 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
           sits over the column it names - including when the browser has not yet
           measured anything. */}
       <div
-        className="mb-3 hidden gap-x-12 lg:grid"
+        className="mb-3 hidden gap-x-8 lg:grid"
         style={{ gridTemplateColumns: laneTemplate(lanes.length) }}
       >
         {lanes.map((lane, i) => (
@@ -147,9 +147,7 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
               </span>
               <h3 className="text-body font-semibold leading-snug">
                 {lane.label}
-                {byLane[i].length > 1 && (
-                  <span className="tnum t-faint"> ({byLane[i].length})</span>
-                )}
+                <LaneCount drawn={byLane[i].length} more={lane.more} />
               </h3>
             </div>
             {lane.hint && <p className="mt-1 pl-8 text-meta t-muted">{lane.hint}</p>}
@@ -204,7 +202,7 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
         )}
 
         <div
-          className="relative grid gap-y-10 lg:gap-x-12"
+          className="relative grid gap-y-8 lg:gap-x-8"
           style={stacked ? undefined : { gridTemplateColumns: laneTemplate(lanes.length) }}
         >
           {byLane.map((laneNodes, i) => (
@@ -222,9 +220,7 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
               <h3 id={`flow-lane-${i}`} className="mb-2.5 text-body font-semibold lg:sr-only">
                 <span className="t-faint">{i + 1}. </span>
                 {lanes[i].label}
-                {laneNodes.length > 1 && (
-                  <span className="tnum t-faint"> ({laneNodes.length})</span>
-                )}
+                <LaneCount drawn={laneNodes.length} more={lanes[i].more} />
               </h3>
               {laneNodes.length === 0 ? (
                 <p
@@ -234,7 +230,7 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
                   {lanes[i].empty ?? "Nothing recorded."}
                 </p>
               ) : (
-                <ul className="space-y-2.5">
+                <ul className="space-y-2">
                   {laneNodes.map((n) => (
                     <li key={n.id}>
                       <NodeCard
@@ -250,11 +246,10 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
                   ))}
                 </ul>
               )}
+              {/* Which of them these are. How many were left out is on the heading, and
+                  saying it twice cost a second line in the tallest column on the page. */}
               {lanes[i].more ? (
-                <p className="mt-2.5 text-meta t-faint">
-                  and {lanes[i].more?.toLocaleString("en-US")} more, not drawn. The most
-                  connected are shown first.
-                </p>
+                <p className="mt-2 text-micro t-faint">The best connected are shown.</p>
               ) : null}
             </section>
           ))}
@@ -273,6 +268,22 @@ export default function FundingFlow({ data }: { data: NetworkData }) {
         <span className="t-faint">Hover any card to follow its chain</span>
       </div>
     </div>
+  );
+}
+
+/**
+ * How much of a lane is on screen.
+ *
+ * A capped lane says "6 of 20", not "6". The count beside a heading used to be the
+ * cards drawn, which read as the whole column and disagreed with the prose above the
+ * graph - a slice announcing 20 datasets over a column headed "Datasets (6)".
+ */
+function LaneCount({ drawn, more }: { drawn: number; more?: number }) {
+  const held = drawn + (more ?? 0);
+  if (held <= 1) return null;
+  const n = (v: number) => v.toLocaleString("en-US");
+  return (
+    <span className="tnum t-faint"> ({more ? `${n(drawn)} of ${n(held)}` : n(drawn)})</span>
   );
 }
 
@@ -300,22 +311,52 @@ function NodeCard({
 }) {
   const focus = node.focus === true;
   const external = Boolean(node.href && !node.href.startsWith("/"));
+  /**
+   * Every line is clamped, and that is the whole reason this graph fits a screen.
+   *
+   * A card sized by its longest field is what made the old one unreadable: one award
+   * with a five-line project title and a wrapped organisation name set the row height
+   * for the column, and six of them ran past 1,000px. Clamping puts a ceiling on a card
+   * - two lines of name, one of each supporting line - so a lane's height is the cap
+   * times a known maximum rather than whatever the corpus happens to hold. Nothing is
+   * lost by it: the tables under the graph carry every field in full.
+   *
+   * An article's two supporting lines share one, because they are one thing: a byline
+   * and how often the paper has been cited. The citation count is the half a reader is
+   * scanning for and the shorter half, so it holds its width and the byline gives way.
+   * The articles are the tallest cards in any graph and set the height of the whole
+   * figure, so this row is worth the special case - it is 114px off the busiest view.
+   */
+  const oneLine = node.kind === "paper" && Boolean(node.sub && node.meta);
   const body = (
     <>
       <span
-        className={`block font-semibold ${
+        className={`font-semibold line-clamp-2 ${
           node.kind === "award" ? "font-mono " : ""
-        }${focus ? "text-title" : "text-body"}`}
+        }${focus ? "text-body" : "text-meta"}`}
         style={{ color: node.kind === "dataset" ? "var(--accent)" : "var(--text)" }}
       >
         {node.label}
       </span>
-      {node.sub && (
-        <span className="mt-1 block text-meta leading-snug t-muted" style={{ overflowWrap: "anywhere" }}>
-          {node.sub}
+      {oneLine ? (
+        <span className="mt-0.5 flex items-baseline gap-2 text-micro">
+          <span className="truncate t-muted" title={node.sub ?? undefined}>
+            {node.sub}
+          </span>
+          <span className="shrink-0 t-faint">{node.meta}</span>
         </span>
+      ) : (
+        <>
+          {node.sub && (
+            <span className="mt-0.5 line-clamp-1 text-micro t-muted" title={node.sub}>
+              {node.sub}
+            </span>
+          )}
+          {node.meta && (
+            <span className="mt-0.5 line-clamp-1 text-micro t-faint">{node.meta}</span>
+          )}
+        </>
       )}
-      {node.meta && <span className="mt-1 block text-micro t-faint">{node.meta}</span>}
     </>
   );
 
@@ -338,7 +379,7 @@ function NodeCard({
 
   const shared = {
     ref: innerRef as never,
-    className: "block rounded-lg border border-l-4 px-3.5 py-3 transition-opacity",
+    className: "block rounded-lg border border-l-4 px-3 py-2 transition-opacity",
     style,
     onPointerEnter: onEnter,
     onPointerLeave: onLeave,

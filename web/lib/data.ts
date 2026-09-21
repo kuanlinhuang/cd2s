@@ -623,7 +623,7 @@ const AWARD_VIEW_LANES: NetworkLane[] = [
  * one nothing counts, because it is spread across other people's grants: every award
  * that got a paper out of data it did not pay to create.
  */
-const DATASET_VIEW_LANES: NetworkLane[] = [
+export const DATASET_VIEW_LANES: NetworkLane[] = [
   {
     label: "Awards that paid to create this data",
     hint: "Credited on the dataset's own marker paper",
@@ -737,7 +737,7 @@ export function getNetwork(scope: NetworkScope): NetworkData {
     }
   }
 
-  return condense([...nodes.values()], edges, awardViewLanes(award));
+  return fitLanes([...nodes.values()], edges, awardViewLanes(award));
 }
 
 /**
@@ -751,57 +751,86 @@ function awardViewLanes(award: string | null): NetworkLane[] {
 }
 
 /**
- * How many nodes a slice may draw before it is condensed to its cross-links.
+ * How many nodes one lane may draw.
  *
- * Above this the picture stops being one: the whole corpus is 2,125 nodes in three
- * columns, so the tallest column is some nine hundred rows and sixteen thousand pixels
- * tall, and the page shipped 2.2 MB of markup to say nothing a reader could see.
- * Award pages and the reviewed slice sit far below it and are drawn entire.
+ * The page's claim is that you can take in a funding chain at a glance, and a column you
+ * have to scroll is not a glance. Six of the compact cards FundingFlow draws is about
+ * 500px, so every lane, its heading and the legend fit one laptop screen together.
+ *
+ * The cap is what makes the claim true for every slice rather than for the small ones.
+ * Six is also about where a column stops being readable as a shape: past that the eye
+ * is scanning a list, and the tables under the graph are a better list than the graph is.
  */
-const NETWORK_NODE_BUDGET = 600;
+export const FLOW_LANE_CAP = 6;
 
 /**
- * Drop the awards and articles that touch only one dataset, when a slice is too large
- * to read whole.
+ * Keep each lane to the nodes worth drawing, and record how many were set aside.
  *
- * Not an arbitrary truncation, and chosen from the page's own reason for existing: a
- * node shared between two datasets is what makes this a network rather than a list, and
- * a node touching exactly one contributes a single spoke. Of the 787 articles in the
- * whole corpus, 691 touch one dataset. Datasets themselves are never dropped - they are
- * the subject - and the counts are returned so the page can state what it set aside
- * rather than quietly showing less than it claims.
+ * Which ones to keep is not a matter of taste. A node joined to several others is what
+ * makes this a network rather than a list - an award on two datasets paid for both, an
+ * article on two combined them - so a lane is ranked by degree and the best connected
+ * are kept. They are then restored to their original order, because that order was
+ * chosen to keep the connectors from crossing and ranking destroys it.
+ *
+ * Two details earn their lines. Lanes are cut left to right so that by the time the last
+ * one is ranked, every lane it points back to is settled and its degree counts edges
+ * that will really be drawn. And a node whose every neighbour was cut elsewhere is
+ * dropped afterwards: a card wired to nothing is a claim the picture does not support.
+ *
+ * This replaced a rule that dropped only nodes touching exactly one dataset, above a
+ * 600-node budget. It set aside the right nodes and still left 236 awards in one column
+ * 27,000px tall, and did nothing at all to a four-lane dataset view already at 2,000px.
  */
-function condense(
+export function fitLanes(
   nodes: NetworkNode[],
   edges: NetworkEdge[],
   lanes: NetworkLane[],
+  cap = FLOW_LANE_CAP,
 ): NetworkData {
-  if (nodes.length <= NETWORK_NODE_BUDGET) return { nodes, edges, lanes, condensed: null };
-  const datasetsTouched = new Map<string, Set<string>>();
-  for (const e of edges) {
-    const [other, dataset] = e.source.startsWith("dataset:") ? [e.target, e.source] : [e.source, e.target];
-    if (!dataset.startsWith("dataset:")) continue;
-    const seen = datasetsTouched.get(other) ?? new Set<string>();
-    seen.add(dataset);
-    datasetsTouched.set(other, seen);
-  }
-  const keep = new Set<string>();
-  let awardsOmitted = 0;
-  let papersOmitted = 0;
-  for (const n of nodes) {
-    if (n.kind === "dataset" || (datasetsTouched.get(n.id)?.size ?? 0) > 1) {
-      keep.add(n.id);
-    } else if (n.kind === "award") {
-      awardsOmitted += 1;
-    } else {
-      papersOmitted += 1;
+  const cut = new Set<string>();
+  const out = lanes.map((lane) => ({ ...lane }));
+
+  for (let i = 0; i < out.length; i++) {
+    const inLane = nodes.filter((n) => n.lane === i);
+    if (inLane.length <= cap) continue;
+    const degree = new Map<string, number>();
+    for (const e of edges) {
+      if (!cut.has(e.target)) degree.set(e.source, (degree.get(e.source) ?? 0) + 1);
+      if (!cut.has(e.source)) degree.set(e.target, (degree.get(e.target) ?? 0) + 1);
     }
+    const ranked = inLane
+      .map((n, at) => ({ n, at }))
+      .sort(
+        (a, b) =>
+          Number(Boolean(b.n.focus)) - Number(Boolean(a.n.focus)) ||
+          (degree.get(b.n.id) ?? 0) - (degree.get(a.n.id) ?? 0) ||
+          a.at - b.at,
+      );
+    for (const { n } of ranked.slice(cap)) cut.add(n.id);
+    out[i].more = inLane.length - cap;
   }
+
+  const hadEdge = new Set<string>();
+  const stillLinked = new Set<string>();
+  for (const e of edges) {
+    hadEdge.add(e.source);
+    hadEdge.add(e.target);
+    if (cut.has(e.source) || cut.has(e.target)) continue;
+    stillLinked.add(e.source);
+    stillLinked.add(e.target);
+  }
+  for (const n of nodes) {
+    // A node that was never joined to anything stays: that it stands alone is a true
+    // thing about the corpus, not an artefact of the cap.
+    if (cut.has(n.id) || n.focus || !hadEdge.has(n.id) || stillLinked.has(n.id)) continue;
+    cut.add(n.id);
+    out[n.lane].more = (out[n.lane].more ?? 0) + 1;
+  }
+
   return {
-    nodes: nodes.filter((n) => keep.has(n.id)),
-    edges: edges.filter((e) => keep.has(e.source) && keep.has(e.target)),
-    lanes,
-    condensed: { n_awards_omitted: awardsOmitted, n_papers_omitted: papersOmitted },
+    nodes: nodes.filter((n) => !cut.has(n.id)),
+    edges: edges.filter((e) => !cut.has(e.source) && !cut.has(e.target)),
+    lanes: out,
   };
 }
 
@@ -1044,7 +1073,8 @@ export function getDatasetFunding(id: string): DatasetFunding | null {
       lane: 0,
       label: a.num,
       sub: awardSub(a),
-      meta: a.org,
+      // No organisation here. It is a second clamped line saying what the Project
+      // column of the table directly below already spells out in full.
       href: a.reporter_url,
     });
     edges.push({ source: `gen:${a.num}`, target: dId, kind: "generation" });
@@ -1145,9 +1175,9 @@ export function getDatasetFunding(id: string): DatasetFunding | null {
     has_citable_accession: rec.reuse_metrics.has_citable_accession !== false,
     marker_paper_inferred: markerInferred,
     has_marker_paper: rec.primary_publications.length > 0,
-    // One dataset's own funding is always drawn whole - four lanes of at most a few
-    // dozen - so there is never anything to condense away.
-    graph: { nodes, edges, lanes: DATASET_VIEW_LANES, condensed: null },
+    // Capped like every other slice. A well-documented cohort carries a dozen awards
+    // a side, which is a 2,000px column; the tables below this graph list them all.
+    graph: fitLanes(nodes, edges, DATASET_VIEW_LANES),
   };
 }
 

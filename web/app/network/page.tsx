@@ -4,9 +4,9 @@ import Link from "next/link";
 import FundingFlow from "@/components/charts/FundingFlow";
 import { Card, EvidenceChip } from "@/components/ui";
 import {
+  DATASET_VIEW_LANES,
   NETWORK_SCOPES,
   defaultAward,
-  defaultFundingDataset,
   getAwardConnections,
   getAwards,
   getDatasetFunding,
@@ -48,6 +48,17 @@ export const metadata: Metadata = {
 };
 
 const SLICES = new Set<string>(NETWORK_SCOPES.map((s) => s.key));
+
+/**
+ * The four stages, shown before a dataset is chosen so the picker is not the only thing
+ * on an empty page. Read from the graph's own lane definitions and coloured with the
+ * same left rules the cards use, so this preview and the chart it previews cannot drift.
+ */
+const DATASET_VIEW_STEPS = DATASET_VIEW_LANES.map((lane, i) => ({
+  label: lane.label,
+  hint: lane.hint,
+  rule: ["var(--viz-1)", "var(--accent)", "var(--border-strong)", "var(--viz-mute)"][i],
+}));
 
 function usd(n: number | null): string | null {
   if (!n) return null;
@@ -256,12 +267,20 @@ export default async function NetworkPage({
 // the dataset view
 // ------------------------------------------------------------------------------------
 
+/**
+ * Nothing is chosen until the reader chooses it.
+ *
+ * The page used to open on a default dataset, picked as the best-documented cohort that
+ * still fitted on a screen. It read as the page's subject rather than as one of 332
+ * answers, and a reader who did not notice the picker above it had no reason to think
+ * any other dataset was on offer. Opening empty costs one click and buys the only thing
+ * the page needs a reader to understand: that they can ask this of their own data.
+ */
 function DatasetView({ datasetParam }: { datasetParam?: string }) {
   const candidates = getFundingCandidates();
   const coverage = getFundingCoverage();
-  const chosen =
-    (datasetParam && candidates.find((c) => c.id === datasetParam)) || defaultFundingDataset();
-  const unknown = Boolean(datasetParam && !candidates.some((c) => c.id === datasetParam));
+  const chosen = datasetParam ? candidates.find((c) => c.id === datasetParam) : undefined;
+  const unknown = Boolean(datasetParam && !chosen);
   const funding = chosen ? getDatasetFunding(chosen.id) : null;
 
   const bothSided = candidates.filter((c) => c.n_generation > 0 && c.n_enabled > 0).slice(0, 6);
@@ -287,7 +306,7 @@ function DatasetView({ datasetParam }: { datasetParam?: string }) {
               name="dataset"
               list="dataset-list"
               defaultValue={chosen?.id ?? ""}
-              placeholder="Type a dataset id, for example gdc-tcga-brca"
+              placeholder={`Type a dataset id, or pick from all ${num(coverage.with_any_award)}`}
               className="min-w-0 flex-1 rounded-lg border px-3.5 py-2.5 font-mono text-body"
               style={{ background: "var(--bg-raised)", borderColor: "var(--border-strong)" }}
               autoComplete="off"
@@ -316,17 +335,19 @@ function DatasetView({ datasetParam }: { datasetParam?: string }) {
 
         {unknown && (
           <p className="mt-3 text-meta" style={{ color: "var(--weak)" }}>
-            No dataset with resolved funding matches &ldquo;{datasetParam}&rdquo;. Showing{" "}
-            {chosen?.short_title ?? chosen?.id} instead.
+            No dataset with resolved funding matches &ldquo;{datasetParam}&rdquo;. Try one of
+            the examples below, or start typing an id to see what matches.
           </p>
         )}
 
         {bothSided.length > 0 && (
           <div className="mt-4 border-t pt-3.5">
             <p className="mb-2 text-meta t-faint">
-              <span className="font-medium">Datasets with awards on both sides</span> - awards
-              that paid to create it <span aria-hidden>&rarr;</span> awards that funded work
-              using it
+              <span className="font-medium">
+                {chosen ? "Datasets with awards on both sides" : "Or start from one of these"}
+              </span>{" "}
+              - awards that paid to create it <span aria-hidden>&rarr;</span> awards that
+              funded work using it
             </p>
             <div className="flex flex-wrap gap-2">
               {bothSided.map((c) => (
@@ -354,14 +375,49 @@ function DatasetView({ datasetParam }: { datasetParam?: string }) {
 
       {!funding ? (
         <Card>
-          <p className="text-body t-muted">
-            No dataset in this corpus has an NCI award resolved against it yet. Run the
-            pipeline&rsquo;s linkage step, or see{" "}
-            <Link href="/methods" className="underline">
-              Methods
-            </Link>
-            .
-          </p>
+          {candidates.length === 0 ? (
+            <p className="text-body t-muted">
+              No dataset in this corpus has an NCI award resolved against it yet. Run the
+              pipeline&rsquo;s linkage step, or see{" "}
+              <Link href="/methods" className="underline">
+                Methods
+              </Link>
+              .
+            </p>
+          ) : (
+            <>
+              <h2 className="text-lg font-semibold tracking-tight">
+                Pick a dataset to see its funding both ways
+              </h2>
+              <p className="mt-1.5 max-w-[72ch] text-body t-muted">
+                Whichever of the {num(coverage.with_any_award)} you choose, the answer is
+                drawn as one chain: the awards credited on the dataset&rsquo;s own marker
+                paper, the dataset, the articles that went on to quote its accession, and
+                the awards those articles were funded by.
+              </p>
+              <ol className="mt-4 grid gap-2.5 text-body lg:grid-cols-4">
+                {DATASET_VIEW_STEPS.map((step, i) => (
+                  <li
+                    key={step.label}
+                    className="rounded-lg border border-l-4 px-3.5 py-3"
+                    style={{ borderColor: "var(--border)", borderLeftColor: step.rule }}
+                  >
+                    <span className="block text-meta font-semibold">
+                      <span className="tnum t-faint">{i + 1}. </span>
+                      {step.label}
+                    </span>
+                    {step.hint && (
+                      <span className="mt-1 block text-micro t-muted">{step.hint}</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-4 text-meta t-faint">
+                {num(coverage.both_sides)} of them have awards on both sides, which is the
+                fullest version of the picture. The rest say which side is empty and why.
+              </p>
+            </>
+          )}
         </Card>
       ) : (
         <>
@@ -486,13 +542,15 @@ function AwardView({ awardParam, sliceParam }: { awardParam?: string; sliceParam
   const unknownAward = awardParam && !award && !sliceParam;
 
   const data = getNetwork(scope);
-  // A condensed slice draws fewer nodes than it counts, so the totals in the prose add
-  // back what the condenser set aside. Counting the drawn nodes alone understates a
-  // whole-corpus slice by hundreds.
-  const drawn = (kind: string) => data.nodes.filter((nd) => nd.kind === kind).length;
-  const nAwards = drawn("award") + (data.condensed?.n_awards_omitted ?? 0);
-  const nDatasets = drawn("dataset");
-  const nPapers = drawn("paper") + (data.condensed?.n_papers_omitted ?? 0);
+  // Every lane is capped, so the drawn nodes are a floor rather than a total. A lane's
+  // true size is what it drew plus what it says it set aside; counting the cards alone
+  // would report a whole-corpus slice as eighteen awards.
+  const inLane = (i: number) =>
+    data.nodes.filter((nd) => nd.lane === i).length + (data.lanes[i]?.more ?? 0);
+  const nAwards = inLane(0);
+  const nDatasets = inLane(1);
+  const nPapers = inLane(2);
+  const capped = data.lanes.some((lane) => (lane.more ?? 0) > 0);
   const topAwards = awards.filter((a) => a.n_datasets >= 3).slice(0, 8);
   const connections = award ? getAwardConnections(award.num) : [];
   const orgs = [...new Set(connections.map((c) => c.org_name).filter(Boolean))] as string[];
@@ -608,8 +666,8 @@ function AwardView({ awardParam, sliceParam }: { awardParam?: string; sliceParam
           <p className="mb-4 max-w-[80ch] text-body t-muted">
             {num(nAwards)} awards, {num(nDatasets)} datasets and {num(nPapers)} articles in
             this slice.{" "}
-            {data.condensed
-              ? `Drawn without the ${num(data.condensed.n_awards_omitted)} awards and ${num(data.condensed.n_papers_omitted)} articles that touch exactly one dataset: a node shared between two is what makes this a network rather than a list. Pick one award above to see a whole chain.`
+            {capped
+              ? "Each column draws its best-connected few, because a node shared between two datasets is what makes this a network rather than a list. Pick one award above to see a whole chain."
               : "Pick one award above to see a whole chain."}
           </p>
         )}

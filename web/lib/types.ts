@@ -749,11 +749,10 @@ export interface NetworkLane {
 export interface NetworkData {
   nodes: NetworkNode[];
   edges: NetworkEdge[];
-  /** The columns, left to right, with what each holds and why it matters. */
-  lanes: NetworkLane[];
   /**
-   * What a large slice left out, so the page can say so. Null when the whole slice is
-   * drawn, which is every award page and every small scope.
+   * The columns, left to right, with what each holds and why it matters. A lane's
+   * `more` is the only record of what the slice left undrawn, so a reader can always
+   * recover the true size of a column as its drawn nodes plus that count.
    */
-  condensed: { n_awards_omitted: number; n_papers_omitted: number } | null;
+  lanes: NetworkLane[];
 }
